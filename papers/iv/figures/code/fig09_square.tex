@@ -1,0 +1,26 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=3.6cm,y=3.6cm,>=Stealth,
+ every node/.style={font=\small}]
+ \fill[blue!7] (0,0) rectangle (1,1);
+ \draw[thick] (0,0) rectangle (1,1);
+ \draw[->] (-.1,0)--(1.35,0) node[right] {\(s=x_1\)};
+ \draw[->] (0,-.1)--(0,1.3) node[above] {\(t=y_1\)};
+ \foreach \x/\y in {0/0,0/1,1/0,1/1} \fill (\x,\y) circle (.65pt);
+ \node[below left] at (0,0) {\(e_4-e_2\)};
+ \node[above left] at (0,1) {\(e_3-e_2\)};
+ \node[below] at (1,0) {\(e_4-e_1\)};
+ \node[above] at (1,1) {\(e_3-e_1\)};
+ \node at (.5,.52) {Stable directions};
+ \node[rotate=90,below] at (0,.5) {\(x_1=0\)};
+ \node[rotate=90,above] at (1,.5) {\(x_2=0\)};
+ \node[above] at (.5,1) {\(y_2=0\)};
+ \node[below] at (.5,0) {\(y_1=0\)};
+\end{tikzpicture}
+\caption{The square section of the fourfold chamber, in coordinates
+\(z=(-s,-(1-s),t,1-t)\). The four vertices represent extreme rays
+and the four edges represent facets. The proper ideal consisting of
+both minima has sum \(-1\) throughout this section; its equality
+occurs only at the apex of the full cone.}
+\label{fig09:square}
+\end{figure}

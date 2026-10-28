@@ -1,0 +1,23 @@
+[
+  {
+    "paper": "iii",
+    "title": "Uniform Hermitian–Einstein spectra for bipartite two-step extensions",
+    "date": "2026-10-27",
+    "pdf_sha256": "e6b2fe6254e94a4f7178775c649ef71f0ba2730a8f0fad0b957465ec797172a3",
+    "source_sha256": "a26740afe2b84f849d71510315e1949ff504079d0e268137d91561331a032f1e"
+  },
+  {
+    "paper": "iv",
+    "title": "Nonsimplicial local stability chambers of toric tangent bundles",
+    "date": "2026-10-27",
+    "pdf_sha256": "1a9856a2fd573dfe0b0f6df22b2a78027d8f844154406a3fafe652b7fb349dc2",
+    "source_sha256": "148a7e86d6ee51c2537565eb12977051e278b381a2666c92d2a6483b918dd52d"
+  },
+  {
+    "paper": "v",
+    "title": "Metric response and Hermitian Yang–Mills flow for two-step extensions",
+    "date": "2026-10-27",
+    "pdf_sha256": "3d6f4aadd9991a7b26d12ff3bb32dcdfb1ac17b9d4b3724e91b21836231c1a9c",
+    "source_sha256": "cfd3aa8cb94ce3478ea014b12c36a1d22b66f7fb8690b4d8a3828cf10fb3c8f3"
+  }
+]

@@ -1,0 +1,32 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,
+ every node/.style={font=\small},factor/.style={draw,rounded corners,
+ fill=white,minimum width=8mm,minimum height=6mm}]
+\begin{scope}
+ \node at (0,2.9) {Equality poset};
+ \node[factor] (a1) at (-.9,0) {\(R_1\)};
+ \node[factor] (a2) at (.9,0) {\(R_2\)};
+ \node[factor] (b1) at (-.9,2) {\(Q_1\)};
+ \node[factor] (b2) at (.9,2) {\(Q_2\)};
+ \foreach \i in {1,2} \foreach \j in {1,2}
+   \draw (a\i)--(b\j);
+ \node at (0,-.65) {Order increases upward};
+\end{scope}
+\begin{scope}[xshift=6cm]
+ \node at (0,2.9) {Tangent extension};
+ \node[factor] (c1) at (-.9,0) {\(R_1\)};
+ \node[factor] (c2) at (.9,0) {\(R_2\)};
+ \node[factor] (d1) at (-.9,2) {\(Q_1\)};
+ \node[factor] (d2) at (.9,2) {\(Q_2\)};
+ \foreach \i in {1,2} \foreach \j in {1,2}
+   \draw[->] (d\j)--(c\i);
+ \node at (0,-.65) {Every extension component is nonzero};
+\end{scope}
+\end{tikzpicture}
+\caption{The crown fourfold: equality order and extension orientation.
+For general \(X_k\), replace the two upper vertices by \(2k\)
+vertices; every upper vertex is joined to both lower vertices.
+The extension arrows point toward the subbundle factors.}
+\label{fig06:poset}
+\end{figure}

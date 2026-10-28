@@ -1,0 +1,584 @@
+{
+  "status": "exact finite verification; not a geometric or analytic proof",
+  "crown_ideals": [
+    [],
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      2,
+      3
+    ]
+  ],
+  "proper_nonempty_ideal_count": 5,
+  "all_ideal_flags": 18,
+  "integer_zero_sum_demands_checked": 125,
+  "distinct_hn_flags_observed": 18,
+  "hn_flag_dimensions": {
+    "1": 1,
+    "2": 4,
+    "3": 13
+  },
+  "hn_witnesses": [
+    {
+      "flag": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "2",
+        "1",
+        "-1",
+        "-2"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "2",
+        "1",
+        "-2",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 2,
+      "exact_demand_witness": [
+        "2",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "1",
+        "-2",
+        "2",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "1",
+        "-2",
+        "-2",
+        "3"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "1",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "1",
+        "2",
+        "-1",
+        "-2"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "1",
+        "2",
+        "-2",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 2,
+      "exact_demand_witness": [
+        "0",
+        "2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "-2",
+        "1",
+        "2",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          1
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "-2",
+        "1",
+        "-2",
+        "3"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "-2",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 2,
+      "exact_demand_witness": [
+        "1",
+        "1",
+        "0",
+        "-2"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 2,
+      "exact_demand_witness": [
+        "1",
+        "1",
+        "-2",
+        "0"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 1,
+      "exact_demand_witness": [
+        "1",
+        "1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "-1",
+        "0",
+        "2",
+        "-1"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "-2",
+        "-2",
+        "-2",
+        "6"
+      ]
+    },
+    {
+      "flag": [
+        [],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "dimension_in_Z": 3,
+      "exact_demand_witness": [
+        "-2",
+        "-2",
+        "0",
+        "4"
+      ]
+    }
+  ],
+  "greedy_vs_exhaustive_flags": "PASS",
+  "orientation_failure_control": "PASS",
+  "spectrum_determinant_comparisons": [
+    {
+      "sqrt_cross_ratio": "1/3",
+      "eigenvalues": [
+        "0",
+        "1/2",
+        "3/2",
+        "2"
+      ]
+    },
+    {
+      "sqrt_cross_ratio": "1/2",
+      "eigenvalues": [
+        "0",
+        "2/3",
+        "4/3",
+        "2"
+      ]
+    },
+    {
+      "sqrt_cross_ratio": "1",
+      "eigenvalues": [
+        "0",
+        "1",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "sqrt_cross_ratio": "2",
+      "eigenvalues": [
+        "0",
+        "4/3",
+        "2/3",
+        "2"
+      ]
+    },
+    {
+      "sqrt_cross_ratio": "3",
+      "eigenvalues": [
+        "0",
+        "3/2",
+        "1/2",
+        "2"
+      ]
+    },
+    {
+      "sqrt_cross_ratio": "10",
+      "eigenvalues": [
+        "0",
+        "20/11",
+        "2/11",
+        "2"
+      ]
+    }
+  ],
+  "disconnected_failure_control": "PASS; two zero modes",
+  "square_slice_vertices": [
+    [
+      -1,
+      0,
+      1,
+      0
+    ],
+    [
+      -1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      1
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "Exact finite matrix-series algebra; no elliptic, parabolic or invariant-manifold verification",
+  "truncation_order": 10,
+  "rational_block_cases": 12,
+  "noncommuting_cases": 12,
+  "centered_velocity_identity": true,
+  "sliced_solution_and_normal_projection": true,
+  "principal_dexp_coefficient_cancellation": true,
+  "wrong_factor_in_slice_detected": true,
+  "omitted_centering_detected": true
+}

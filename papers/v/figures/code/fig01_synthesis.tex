@@ -1,0 +1,24 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small},
+ block/.style={draw,rounded corners,align=center,text width=3.05cm,
+ minimum height=1.25cm,inner sep=4pt}]
+\node[block] (geometry) at (0,0) {Actual geometry\\\(X_k,\ E=T_{X_k}\)};
+\node[block] (chamber) at (4,0) {Realized chamber\\\(K_{2,d},\ x,y\)};
+\node[block] (finite) at (8,0) {Finite operator\\\(L^0(x,y)\)};
+\node[block] (flow) at (0,-2.6) {Actual HYM flow\\Exact finite evolution};
+\node[block] (metric) at (4,-2.6) {HE metric and inverse\\\(h_{\rm mod},\ \Delta^{-1}\)};
+\node[block] (spectrum) at (8,-2.6) {Spectrum and response\\\(\lambda_j\sim\nu_j,\ s_j\sim\nu_j^{-1}\)};
+\draw[->] (geometry)--(chamber);
+\draw[->] (chamber)--(finite);
+\draw[->] (geometry)--node[left,align=right] {Parabolic\\argument} (flow);
+\draw[->] (chamber)--node[left,align=right] {HE\\construction} (metric);
+\draw[->] (finite)--node[right,align=left] {Relative elliptic\\estimates} (spectrum);
+\end{tikzpicture}
+\caption{The common family in Theorem~\ref{thm01:synthesis}.
+All statements concern the same tangent extension. The finite
+operator includes harmonic extension data; the flow requires
+its separate parabolic argument. The lower assertions do not
+follow from the chamber alone.}
+\label{fig01:synthesis}
+\end{figure}

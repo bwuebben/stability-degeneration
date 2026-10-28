@@ -1,0 +1,63 @@
+{
+  "scope": "exact intersections and finite series, not a numerical HE computation",
+  "wall_r": {
+    "rational": "1/2",
+    "sqrt21_coefficient": "1/6"
+  },
+  "H0_power4": {
+    "rational": "16",
+    "sqrt21_coefficient": "4"
+  },
+  "factor_raw_degrees": [
+    {
+      "rational": "6",
+      "sqrt21_coefficient": "2"
+    },
+    {
+      "rational": "6",
+      "sqrt21_coefficient": "2"
+    },
+    {
+      "rational": "6",
+      "sqrt21_coefficient": "2"
+    },
+    {
+      "rational": "6",
+      "sqrt21_coefficient": "2"
+    }
+  ],
+  "boundary_H1_power4": 20,
+  "e2_over_eps2_series": [
+    "0",
+    "3",
+    "0",
+    "-1",
+    "4",
+    "4",
+    "-8",
+    "-4",
+    "12"
+  ],
+  "e3_over_eps6_series": [
+    "4",
+    "-4",
+    "0",
+    "4",
+    "0",
+    "-4",
+    "0",
+    "4",
+    "0"
+  ],
+  "symmetric_leading_terms": {
+    "e1": "2*eps",
+    "e2": "3*eps^3",
+    "e3": "4*eps^6"
+  },
+  "predicted_ordered_graph_eigenvalues": [
+    "(4/3)*eps^3",
+    "(3/2)*eps^2",
+    "2*eps"
+  ],
+  "actual_elliptic_transfer": "requires the proved analytic theorem"
+}

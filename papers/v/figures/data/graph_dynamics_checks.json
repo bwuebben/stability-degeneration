@@ -1,0 +1,22 @@
+{
+  "scope": "Exact finite graph algebra with a stated cubic remainder; no invariant-manifold or PDE verification",
+  "support_graphs_by_vertex_count": {
+    "2": 1,
+    "3": 2,
+    "4": 7,
+    "5": 40,
+    "6": 337
+  },
+  "support_graphs": 387,
+  "rank_weight_cases": 2322,
+  "perturbed_confinement_cases": 27864,
+  "weight_patterns_per_support": 3,
+  "rank_patterns_per_support": 2,
+  "largest_exact_weight_ratio": "100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "smallest_weight_approximation": "1.000000e-84",
+  "mixed_edge_velocity_with_decreasing_total_detected": true,
+  "wrong_dynamical_sign_detected": true,
+  "missing_factor_two_detected": true,
+  "oversized_parameter_demand_detected": true,
+  "non_bipartite_coercivity_failure_detected": true
+}

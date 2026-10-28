@@ -1,0 +1,146 @@
+{
+  "scope": "Exact rational finite block algebra; not geometric verification",
+  "ranks": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "graph": "K_2,2",
+  "models": [
+    {
+      "q": "1/10",
+      "h": 1,
+      "weight_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "weakest_to_strongest_weight": "1/1000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "90918180909/550000000"
+    },
+    {
+      "q": "1/10",
+      "h": 3,
+      "weight_exponents": [
+        2,
+        8,
+        14,
+        20
+      ],
+      "weakest_to_strongest_weight": "1/1000000000000000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "9000009000018000018000009000009/550000000000000000000"
+    },
+    {
+      "q": "1/10",
+      "h": 7,
+      "weight_exponents": [
+        2,
+        16,
+        30,
+        44
+      ],
+      "weakest_to_strongest_weight": "1/1000000000000000000000000000000000000000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "90000000000000900000000000018000000000000180000000000000900000000000009/550000000000000000000000000000000000000000000"
+    },
+    {
+      "q": "1/10",
+      "h": 15,
+      "weight_exponents": [
+        2,
+        32,
+        62,
+        92
+      ],
+      "weakest_to_strongest_weight": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "9000000000000000000000000000009000000000000000000000000000018000000000000000000000000000018000000000000000000000000000009000000000000000000000000000009/550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "q": "1/100",
+      "h": 1,
+      "weight_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "weakest_to_strongest_weight": "1/1000000000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "900090018001800090009/55000000000000000"
+    },
+    {
+      "q": "1/100",
+      "h": 3,
+      "weight_exponents": [
+        2,
+        8,
+        14,
+        20
+      ],
+      "weakest_to_strongest_weight": "1/1000000000000000000000000000000000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "9000000000009000000000018000000000018000000000009000000000009/55000000000000000000000000000000000000000"
+    },
+    {
+      "q": "1/100",
+      "h": 7,
+      "weight_exponents": [
+        2,
+        16,
+        30,
+        44
+      ],
+      "weakest_to_strongest_weight": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "900000000000000000000000000090000000000000000000000000018000000000000000000000000001800000000000000000000000000090000000000000000000000000009/55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "q": "1/100",
+      "h": 15,
+      "weight_exponents": [
+        2,
+        32,
+        62,
+        92
+      ],
+      "weakest_to_strongest_weight": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "cycle_orbit_identity": true,
+      "mass_correct_inverse_identity": true,
+      "positive_resolvent_identities": 3,
+      "relative_schur_and_almost_isometry_bounds": true,
+      "ordinary_sigma_squared_error_over_weak_cut_energy": "9000000000000000000000000000000000000000000000000000000000009000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000009000000000000000000000000000000000000000000000000000000000009/55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "two_factor_exact_normalization_cases": 32,
+  "all_checks_passed": true,
+  "limits": [
+    "Does not test elliptic estimates or actual HE metrics",
+    "Does not prove harmonic gauge or parameter regularity"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "Exact finite matrix-series algebra only; no elliptic or PDE verification",
+  "truncation_order": 12,
+  "rational_matrix_cases": 12,
+  "noncommuting_quadratic_correction_cases": 8,
+  "conjugation_square_identity": true,
+  "residual_over_k_starts_at_t_squared": true,
+  "wrong_radial_time_factor_detected": true,
+  "omitted_exponential_derivative_detected": true
+}

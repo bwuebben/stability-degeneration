@@ -1,0 +1,35 @@
+\begin{figure}[ht]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tikzpicture}[
+  vertex/.style={circle,draw,minimum size=8mm,inner sep=1pt},
+  edge/.style={-{Latex[length=1.8mm]},thick}]
+\begin{scope}
+\node[vertex] (q1) at (0,1.1) {$Q_1$};
+\node[vertex] (r1) at (2.2,1.1) {$R_1$};
+\node[vertex] (r2) at (0,-1.1) {$R_2$};
+\node[vertex] (q2) at (2.2,-1.1) {$Q_2$};
+\draw[edge] (q1.east)--(r1.west);
+\draw[edge] (q1.south)--(r2.north);
+\draw[edge] (q2.west)--(r2.east);
+\node at (1.1,-1.9) {(a) A non-star tree};
+\end{scope}
+\begin{scope}[xshift=5.3cm]
+\node[vertex] (cq1) at (0,1.1) {$Q_1$};
+\node[vertex] (cr1) at (2.2,1.1) {$R_1$};
+\node[vertex] (cr2) at (0,-1.1) {$R_2$};
+\node[vertex] (cq2) at (2.2,-1.1) {$Q_2$};
+\draw[edge] (cq1.east)--(cr1.west);
+\draw[edge] (cq1.south)--(cr2.north);
+\draw[edge] (cq2.west)--(cr2.east);
+\draw[edge] (cq2.north)--(cr1.south);
+\node at (1.1,-1.9) {(b) A four-cycle};
+\end{scope}
+\end{tikzpicture}
+\end{adjustbox}
+\caption{Two-step supports. Every arrow starts at a quotient factor
+\(Q_j\) and ends at a subbundle factor \(R_i\).
+The undirected path in (a) is not a star; the cycle in (b) has
+no composable arrows.}
+\label{fig06:supports}
+\end{figure}

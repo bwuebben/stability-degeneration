@@ -1,0 +1,24 @@
+{
+  "status": "PASS; exact finite check",
+  "records": [
+    {
+      "k": 1,
+      "ideal_count": 7,
+      "HN_flags": 18,
+      "ordered_Bell_2k": 3
+    },
+    {
+      "k": 2,
+      "ideal_count": 19,
+      "HN_flags": 450,
+      "ordered_Bell_2k": 75
+    },
+    {
+      "k": 3,
+      "ideal_count": 67,
+      "HN_flags": 28098,
+      "ordered_Bell_2k": 4683
+    }
+  ],
+  "method": "dynamic count of ideal chains versus ordered partitions"
+}
