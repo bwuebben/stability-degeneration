@@ -60,8 +60,9 @@ The construction uses exact curvature identities on graph cuts. These
 control the nonlinear error relative to each cut capacity and give an
 actual Hermitian--Einstein metric even when the ordinary inverse of the
 finite Laplacian is unbounded. We also obtain a relative metric
-approximation, coefficient-stability estimates, and a spanning-tree
-formula for the product of the small eigenvalues. Trees have
+approximation, coefficient-stability estimates, and spanning-tree
+formulas for the small-spectrum product and the leading factor of
+the full zeta-regularized determinant. Trees have
 slope-determined leading weights, whereas cyclic supports retain
 harmonic extension data.
 \end{abstract}
@@ -1355,10 +1356,112 @@ as in~\eqref{eq06:fourcycle}. With masses \((1,2,3,5)\)
 and \(\rho=1\), the product instead equals \(11/60\).
 The rank factor in~\eqref{eq06:finiteproduct} is essential.
 
-The product in~\eqref{eq06:actualproduct} concerns only the
-small cluster. It neither computes a zeta-regularized determinant
-of the full elliptic operator nor supplies its high-frequency
-asymptotics.
+\subsection{The full zeta-regularized determinant}
+
+The small-spectrum product also determines the leading vanishing
+factor of the full elliptic determinant. Its remaining factor is
+the determinant of the graded bundle at the current polarization.
+For a positive elliptic operator \(B\), write
+\(\det_\zeta B=\exp(-\zeta'_B(0))\), where \(\zeta_B\)
+is the meromorphic continuation of its spectral zeta function.
+A prime on the determinant means that zero eigenvalues are omitted.
+
+\begin{corollary}\label{cor06:determinant}
+Let \(\Delta_{\mathrm{gr},s}\) be the endomorphism Dolbeault
+Laplacian of \(\bigoplus_vF_v\), with metric \(h_{0,s}\) and
+Kähler form \(\omega_s\), on complex pointwise trace-free
+endomorphisms. Under the hypotheses of Theorem~\ref{thm01:main},
+\begin{equation}\label{eq06:determinant}
+ \det_\zeta\Delta_{h_{\mathrm{HE},s},s}
+ =\det'_\zeta\Delta_{\mathrm{gr},s}\,
+   \frac{R}{\prod_vr_v}\mathcal T_\Gamma(k(s,b(s)))
+                         \bigl(1+O(\sigma(s))\bigr).
+\end{equation}
+The error is uniform through all positive conductance ratios.
+The graded determinant is a smooth positive function of \(s\).
+\end{corollary}
+
+\begin{proof}
+Use the small real amplitudes of~\eqref{eq03:amplitudes} and
+the corrected metric \(h_{0,s}e^{u(s,t)}\) from
+Lemma~\ref{lem03:complement}. Their endomorphism Dolbeault
+Laplacians \(\Delta(s,t)\) form a smooth family of nonnegative
+self-adjoint elliptic differential operators of order two.
+Smooth fiber isometries and volume-density factors identify the
+varying \(L^2\) spaces with one fixed space, preserving the
+pointwise trace-free subbundle. The common operator domain is
+then \(H^2\).
+
+At \(t=0\), the kernel consists of the \(m-1\) complex block
+scalars for every nearby \(s\). Indeed the split holomorphic
+bundle is fixed, and its cross-Hom groups vanish. A fixed small
+contour about zero therefore separates this cluster from the
+remaining spectrum throughout a smaller product neighborhood.
+The resolvent contour integral defines a smooth rank-\(m-1\)
+orthogonal projection \(\Pi(s,t)\); elliptic regularity makes
+it a smooth family of smoothing operators. The complementary
+spectrum has a common positive lower bound. Set
+\[
+ B(s,t)=\Delta(s,t)+\Pi(s,t).
+\]
+This is a smooth, uniformly positive elliptic family of order two,
+with unchanged principal symbol and common spectral cut along
+the negative real axis. The parameter-dependent complex-power
+construction gives a smooth function
+\(f(s,t)=\log\det_\zeta B(s,t)\).
+For this regularity statement, apply the degree-zero,
+trivially graded case of~\cite[\S2, Lemma 0.3]{scott2007}:
+the order is constant, the kernel is zero, and the same spectral
+cut works throughout. The resolvent estimates there hold in
+every parameter \(C^l\) norm on relatively compact sets.
+
+Let \(g\) be \(-1\) on the factors in \(I\) and \(+1\)
+on those in \(J\). It carries \(t\) to \(-t\).
+Lemma~\ref{lem03:complement} shows that it is an isometry
+between the corresponding corrected bundles. Its action on
+endomorphisms unitarily intertwines \(\Delta(s,t)\) and
+\(\Delta(s,-t)\), and hence also \(B(s,t)\) and
+\(B(s,-t)\). Thus \(f(s,-t)=f(s,t)\). Taylor expansion on a
+smaller product neighborhood gives, uniformly in \(s\),
+\[
+ f(s,t)-f(s,0)=O(|t|^2),\qquad
+ \det_\zeta B(s,0)=\det'_\zeta\Delta_{\mathrm{gr},s}.
+\]
+The second equality replaces the \(m-1\) zero modes by ones.
+It also proves the asserted smoothness of the graded determinant.
+
+Now evaluate at the amplitudes \(\widetilde t\) supplied by
+Proposition~\ref{prop04:calibration}, for which
+\(|\widetilde t|^2=O(\sigma)\). The bundle identification and
+pulled-back metric preserve the Dolbeault spectrum, so
+\(\Delta(s,\widetilde t)\) has exactly the spectrum of the
+actual Hermitian--Einstein operator. No parameter derivative of
+the selected finite correction is needed. Simplicity makes this
+trace-free operator invertible. Changing only its small cluster
+changes the zeta function by the entire function
+\[
+ \zeta_\Delta(z)-\zeta_B(z)
+ =\sum_{j=1}^{m-1}
+       \bigl(\lambda_j^{-z}-(1+\lambda_j)^{-z}\bigr).
+\]
+Differentiation at zero consequently gives the exact identity
+\[
+ \det_\zeta\Delta
+ =\det_\zeta B\prod_{j=1}^{m-1}\frac{\lambda_j}{1+\lambda_j}.
+\]
+The graph trace bounds every \(\nu_j\) by
+\(2\sigma/\min_vr_v\), so Theorem~\ref{thm01:main} gives
+\(\lambda_j=O(\sigma)\). Hence
+\(\prod_{j<m}(1+\lambda_j)=1+O(\sigma)\).
+Combining the quadratic determinant estimate with
+\eqref{eq06:actualproduct} proves~\eqref{eq06:determinant}.
+\end{proof}
+
+The graded factor is retained at the current \(s\). Freezing it
+and the harmonic coefficients at zero gives relative error
+\(O(\sigma+|s|)\), as in~\eqref{eq06:frozen}.
+Formula~\eqref{eq06:determinant} does not evaluate that global
+graded determinant or compute analytic torsion.
 
 % ============================================================
 % section_07_geometry.tex
@@ -1695,8 +1798,10 @@ Repeated stable factors replace the scalar parallel space by a
 matrix algebra. Composable arrows require an integrability
 equation, and singular graded sheaves require a different analytic
 setting. The present theorem does not resolve those problems.
-Nor does its finite cluster product compute the determinant of
-the full elliptic operator.
+The full determinant asymptotic in
+Corollary~\ref{cor06:determinant} has the same two-step scope;
+its positive prefactor retains the graded bundle's global
+spectral data.
 
 The tree and cyclic examples distinguish the information needed
 for a quantitative theory. On trees, ranks and slope demands
@@ -1756,6 +1861,12 @@ Iwanami Shoten and Princeton Univ.\ Press, 1987.
 A.~Netser Zernik,
 \emph{Taylor expansion proof of the matrix tree theorem---Part II},
 arXiv:1308.2160v1 (2013).
+
+\bibitem[Sco07]{scott2007}
+S.~Scott,
+\emph{Zeta forms and the local family index theorem},
+Trans. Amer. Math. Soc. \textbf{359} (2007), no.~5, 1925--1957.
+\href{https://doi.org/10.1090/S0002-9947-06-04321-2}{doi:10.1090/S0002-9947-06-04321-2}.
 
 \bibitem[ST24]{sektnantipler2024}
 L.~M.~Sektnan and C.~Tipler,
