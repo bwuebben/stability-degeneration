@@ -4,20 +4,41 @@
     "title": "Uniform Hermitian–Einstein spectra for bipartite two-step extensions",
     "date": "2026-10-27",
     "pdf_sha256": "845cb69126b849b1f562dd161ce4333e7d7f441bc3f60865b3b0ae31d3a0cbbc",
-    "source_sha256": "c7b4b4b89c4a964e8acfc461c524bb6d2afd3385e21e6062e605ba00002cc0e0"
+    "source_sha256": "c7b4b4b89c4a964e8acfc461c524bb6d2afd3385e21e6062e605ba00002cc0e0",
+    "archive": {
+      "id": 23717123,
+      "doi": "10.5281/zenodo.23717123",
+      "conceptdoi": "10.5281/zenodo.23717122",
+      "record_url": "https://zenodo.org/records/23717123",
+      "created": "2026-10-28T01:07:01.137528+00:00"
+    }
   },
   {
     "paper": "iv",
     "title": "Nonsimplicial local stability chambers of toric tangent bundles",
     "date": "2026-10-27",
     "pdf_sha256": "1a9856a2fd573dfe0b0f6df22b2a78027d8f844154406a3fafe652b7fb349dc2",
-    "source_sha256": "148a7e86d6ee51c2537565eb12977051e278b381a2666c92d2a6483b918dd52d"
+    "source_sha256": "148a7e86d6ee51c2537565eb12977051e278b381a2666c92d2a6483b918dd52d",
+    "archive": {
+      "id": 23717178,
+      "doi": "10.5281/zenodo.23717178",
+      "conceptdoi": "10.5281/zenodo.23717177",
+      "record_url": "https://zenodo.org/records/23717178",
+      "created": "2026-10-28T01:01:09.251665+00:00"
+    }
   },
   {
     "paper": "v",
     "title": "Metric response and Hermitian Yang–Mills flow for two-step extensions",
     "date": "2026-10-27",
     "pdf_sha256": "3d6f4aadd9991a7b26d12ff3bb32dcdfb1ac17b9d4b3724e91b21836231c1a9c",
-    "source_sha256": "cfd3aa8cb94ce3478ea014b12c36a1d22b66f7fb8690b4d8a3828cf10fb3c8f3"
+    "source_sha256": "cfd3aa8cb94ce3478ea014b12c36a1d22b66f7fb8690b4d8a3828cf10fb3c8f3",
+    "archive": {
+      "id": 23717290,
+      "doi": "10.5281/zenodo.23717290",
+      "conceptdoi": "10.5281/zenodo.23717289",
+      "record_url": "https://zenodo.org/records/23717290",
+      "created": "2026-10-28T01:12:14.308196+00:00"
+    }
   }
 ]

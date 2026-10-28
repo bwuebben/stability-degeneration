@@ -29,3 +29,11 @@ Each `paper.tex` is self-contained, including figures and bibliography. With a s
 The [Geometry & moduli research guide](https://bwuebben.github.io/research/geometry/) explains the programme and its relation to the other papers.
 
 Copyright © 2026 Bernd Johannes Wuebben. Existing author rights are reserved; this repository does not apply a blanket code license to the manuscripts.
+
+## Archived manuscripts
+
+- III: [doi:10.5281/zenodo.23717123](https://doi.org/10.5281/zenodo.23717123).
+- IV: [doi:10.5281/zenodo.23717178](https://doi.org/10.5281/zenodo.23717178).
+- V: [doi:10.5281/zenodo.23717290](https://doi.org/10.5281/zenodo.23717290).
+
+The Zenodo records preserve these released PDFs. arXiv submissions remain pending.
