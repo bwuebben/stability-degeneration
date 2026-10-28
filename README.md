@@ -32,8 +32,8 @@ Copyright © 2026 Bernd Johannes Wuebben. Existing author rights are reserved; t
 
 ## Archived manuscripts
 
-- III: [doi:10.5281/zenodo.23717123](https://doi.org/10.5281/zenodo.23717123).
-- IV: [doi:10.5281/zenodo.23717178](https://doi.org/10.5281/zenodo.23717178).
-- V: [doi:10.5281/zenodo.23717290](https://doi.org/10.5281/zenodo.23717290).
+- III: [doi:10.5281/zenodo.23717660](https://doi.org/10.5281/zenodo.23717660).
+- IV: [doi:10.5281/zenodo.23717722](https://doi.org/10.5281/zenodo.23717722).
+- V: [doi:10.5281/zenodo.23717742](https://doi.org/10.5281/zenodo.23717742).
 
 The Zenodo records preserve these released PDFs. arXiv submissions remain pending.

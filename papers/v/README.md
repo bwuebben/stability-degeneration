@@ -8,4 +8,4 @@ The Python programs in `figures/code/` reproduce the finite calculations printed
 
 These computations check finite identities and examples. The geometric, elliptic and parabolic theorems rely on the proofs in the manuscript.
 
-Archived version: [doi:10.5281/zenodo.23717290](https://doi.org/10.5281/zenodo.23717290).
+Archived version: [doi:10.5281/zenodo.23717742](https://doi.org/10.5281/zenodo.23717742).
