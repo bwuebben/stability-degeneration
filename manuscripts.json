@@ -17,15 +17,9 @@
     "paper": "iv",
     "title": "Nonsimplicial local stability chambers of toric tangent bundles",
     "date": "2026-10-27",
-    "pdf_sha256": "a70d288bfdc84f9d44d8d4c909301ffd17ab0dafc9f0c9db8225433ca3f2115a",
-    "source_sha256": "b955c6761d8755571c829101f2ce01821f5d3eaa07d30f4bb880191c027786a7",
-    "archive": {
-      "id": 23717722,
-      "doi": "10.5281/zenodo.23717722",
-      "conceptdoi": "10.5281/zenodo.23717177",
-      "record_url": "https://zenodo.org/records/23717722",
-      "created": "2026-10-28T01:43:11.309416+00:00"
-    }
+    "pdf_sha256": "957f9e3efced4948a7fba0f00086e0bc581fe548529daacdac3b78a04079826e",
+    "source_sha256": "6d6991a4807fdf68375c9845abee1b6e9eef865fb1f65d0dcf898e5e98addc64",
+    "revision_date": "2026-10-29"
   },
   {
     "paper": "v",

@@ -5,7 +5,7 @@ import subprocess
 import sys
 
 root = Path(__file__).resolve().parent
-programs = sorted((root / 'papers').glob('*/figures/code/*.py'))
+programs = sorted(p for p in (root / 'papers').glob('*/figures/code/*.py') if p.name != 'exact_linear.py')
 for program in programs:
     print(str(program.relative_to(root)), flush=True)
     subprocess.run([sys.executable, '-B', str(program)], cwd=program.parents[2], check=True)

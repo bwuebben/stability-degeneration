@@ -5,7 +5,7 @@ Three papers by [Bernd Johannes Wuebben](https://bwuebben.github.io/), connectin
 | Paper | Manuscript | Contribution |
 | --- | --- | --- |
 | III | [Uniform Hermitian–Einstein spectra for bipartite two-step extensions](papers/iii/paper.pdf) | Uniform relative asymptotics for every small eigenvalue, including cyclic supports and arbitrarily separated positive scales. |
-| IV | [Nonsimplicial local stability chambers of toric tangent bundles](papers/iv/paper.pdf) | Genuine toric tangent realizations with nonsimplicial chambers, accessible slope parameters and explicit tangent extensions. |
+| IV | [Nonsimplicial local stability chambers of toric tangent bundles](papers/iv/paper.pdf) | Nonsimplicial chambers, positive-spanning slope access without local freeness, a Bott-filtration obstruction and a Calabi–Yau conifold transition. Original version 27 October; this version 29 October 2026. |
 | V | [Metric response and Hermitian Yang–Mills flow for two-step extensions](papers/v/paper.pdf) | Intrinsic metric response, inverse estimates and actual-flow comparisons, with an integrated theorem on the same tangent family. |
 
 III and IV have independent proofs. V combines their inputs with its own analytic arguments. The internal labels III–V refer to the research programme; each paper has its own title and bibliography. Earlier work on [equilibrium spectra near stability walls](https://bwuebben.github.io/papers/small-dolbeault-stability-walls/), [HYM flow spectra](https://bwuebben.github.io/papers/small-dolbeault-eigenvalues/), and [toric local stability chambers](https://bwuebben.github.io/papers/toric-local-stability-chambers/) gives entry points.
@@ -14,7 +14,7 @@ The spectral and analytic results concern specified two-step extensions with pai
 
 ## Reproduce the finite calculations
 
-All 12 Python programs use only the Python standard library. From the repository root:
+All included Python programs use only the Python standard library. From the repository root:
 
 ```sh
 python3 reproduce.py
@@ -33,7 +33,6 @@ Copyright © 2026 Bernd Johannes Wuebben. Existing author rights are reserved; t
 ## Archived manuscripts
 
 - III: [doi:10.5281/zenodo.23717660](https://doi.org/10.5281/zenodo.23717660).
-- IV: [doi:10.5281/zenodo.23717722](https://doi.org/10.5281/zenodo.23717722).
 - V: [doi:10.5281/zenodo.23717742](https://doi.org/10.5281/zenodo.23717742).
 
 The Zenodo records preserve these released PDFs. arXiv submissions remain pending.

@@ -1,0 +1,469 @@
+{
+  "rays": [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "maximal_cones": [
+    [
+      0,
+      4
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "records": [
+    {
+      "t": "-1/2",
+      "vertices": [
+        [
+          "-4",
+          "2"
+        ],
+        [
+          "-4",
+          "5/2"
+        ],
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "13/2"
+        ]
+      ],
+      "divisor_degrees": [
+        "1/2",
+        "13/2",
+        "2",
+        "4",
+        "2"
+      ],
+      "tangent_slope": "15/2",
+      "all_flats": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "slope": "7"
+        },
+        {
+          "members": [
+            2
+          ],
+          "slope": "2"
+        },
+        {
+          "members": [
+            3
+          ],
+          "slope": "4"
+        },
+        {
+          "members": [
+            4
+          ],
+          "slope": "2"
+        }
+      ],
+      "status": "stable",
+      "ray_line_cone_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "condition15_fails_at_cone": null
+    },
+    {
+      "t": "-1/100",
+      "vertices": [
+        [
+          "-4",
+          "2"
+        ],
+        [
+          "-4",
+          "299/100"
+        ],
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "699/100"
+        ]
+      ],
+      "divisor_degrees": [
+        "99/100",
+        "699/100",
+        "2",
+        "4",
+        "2"
+      ],
+      "tangent_slope": "799/100",
+      "all_flats": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "slope": "399/50"
+        },
+        {
+          "members": [
+            2
+          ],
+          "slope": "2"
+        },
+        {
+          "members": [
+            3
+          ],
+          "slope": "4"
+        },
+        {
+          "members": [
+            4
+          ],
+          "slope": "2"
+        }
+      ],
+      "status": "stable",
+      "ray_line_cone_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "condition15_fails_at_cone": null
+    },
+    {
+      "t": "0",
+      "vertices": [
+        [
+          "-4",
+          "2"
+        ],
+        [
+          "-4",
+          "3"
+        ],
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "7"
+        ]
+      ],
+      "divisor_degrees": [
+        "1",
+        "7",
+        "2",
+        "4",
+        "2"
+      ],
+      "tangent_slope": "8",
+      "all_flats": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "slope": "8"
+        },
+        {
+          "members": [
+            2
+          ],
+          "slope": "2"
+        },
+        {
+          "members": [
+            3
+          ],
+          "slope": "4"
+        },
+        {
+          "members": [
+            4
+          ],
+          "slope": "2"
+        }
+      ],
+      "status": "strictly semistable",
+      "ray_line_cone_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "condition15_fails_at_cone": [
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "t": "1/100",
+      "vertices": [
+        [
+          "-4",
+          "2"
+        ],
+        [
+          "-4",
+          "301/100"
+        ],
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "701/100"
+        ]
+      ],
+      "divisor_degrees": [
+        "101/100",
+        "701/100",
+        "2",
+        "4",
+        "2"
+      ],
+      "tangent_slope": "801/100",
+      "all_flats": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "slope": "401/50"
+        },
+        {
+          "members": [
+            2
+          ],
+          "slope": "2"
+        },
+        {
+          "members": [
+            3
+          ],
+          "slope": "4"
+        },
+        {
+          "members": [
+            4
+          ],
+          "slope": "2"
+        }
+      ],
+      "status": "unstable",
+      "ray_line_cone_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "condition15_fails_at_cone": null
+    },
+    {
+      "t": "1",
+      "vertices": [
+        [
+          "-4",
+          "2"
+        ],
+        [
+          "-4",
+          "4"
+        ],
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "8"
+        ]
+      ],
+      "divisor_degrees": [
+        "2",
+        "8",
+        "2",
+        "4",
+        "2"
+      ],
+      "tangent_slope": "9",
+      "all_flats": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "slope": "10"
+        },
+        {
+          "members": [
+            2
+          ],
+          "slope": "2"
+        },
+        {
+          "members": [
+            3
+          ],
+          "slope": "4"
+        },
+        {
+          "members": [
+            4
+          ],
+          "slope": "2"
+        }
+      ],
+      "status": "unstable",
+      "ray_line_cone_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "condition15_fails_at_cone": null
+    },
+    {
+      "t": "3",
+      "vertices": [
+        [
+          "-4",
+          "2"
+        ],
+        [
+          "-4",
+          "6"
+        ],
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "10"
+        ]
+      ],
+      "divisor_degrees": [
+        "4",
+        "10",
+        "2",
+        "4",
+        "2"
+      ],
+      "tangent_slope": "11",
+      "all_flats": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "slope": "14"
+        },
+        {
+          "members": [
+            2
+          ],
+          "slope": "2"
+        },
+        {
+          "members": [
+            3
+          ],
+          "slope": "4"
+        },
+        {
+          "members": [
+            4
+          ],
+          "slope": "2"
+        }
+      ],
+      "status": "unstable",
+      "ray_line_cone_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "condition15_fails_at_cone": null
+    }
+  ],
+  "scope": "Exact finite checks; uniform parameter proof in the manuscript",
+  "source_sha256": "9ad0f7d45b0ca4f4fa830b7fc5bb538c6f45cf5952e9bec58d4e1293955a449e"
+}

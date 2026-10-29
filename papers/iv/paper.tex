@@ -38,7 +38,7 @@
 \subjclass[2020]{14M25 (primary); 14J60, 06A07, 52B20 (secondary)}
 \keywords{toric variety, tangent bundle, slope stability, ample real divisor,
   partially ordered set, Harder--Narasimhan filtration}
-\date{October 27, 2026}
+\date{Original version: October 27, 2026\\This version: October 29, 2026}
 \begin{document}
 \begin{abstract}
 We construct smooth projective toric varieties with nonsimplicial local
@@ -61,6 +61,9 @@ It retains precisely the slope directions realized by polarizations,
 requires no local-freeness assumption on equal-slope subsheaves, and
 localizes every nearby Harder--Narasimhan filtration to their equality
 lattice.
+If the fan rays in each equal-slope subspace positively span that subspace,
+every centered slope direction occurs. A semistable surface satisfies this condition although
+one equal-slope quotient is not locally free.
 \end{abstract}
 \maketitle
 \enlargethispage{5pt}
@@ -579,6 +582,109 @@ It neither asserts that such a nonzero obstruction occurs on a toric
 variety nor proves universal accessibility. Disconnected posets must
 be treated separately: their strict locus is empty even if the block
 classes are independent.
+
+\subsection*{Positive spanning and local freeness}
+
+The cone-wise subbundle condition is stronger than what is needed for
+full numerical access. The following condition uses only the rays in
+each tight subspace, rather than their occurrence in each maximal cone.
+
+\begin{proposition}\label{prop04:positive}
+Suppose that, for every tight subspace $V$, the fan rays contained in
+$V_\RR$ positively span $V_\RR$. Then the classes $C_p$ are linearly
+independent in $N^1(X)_\RR$, so $L_{\rm acc}=Z$. Consequently stable
+ample classes approach $H_0$ if and only if $X$ is not a nontrivial
+toric product. This condition does not assert local freeness of
+equal-slope quotients.
+\end{proposition}
+
+\begin{proof}
+Write a numerical relation $\sum_p a_pC_p=0$ as a principal real
+divisor. Thus some $m\in M_\RR$ takes the value $a_p$ on every ray
+of block $p$. Choose a linear extension $p_1,\ldots,p_s$ of $P$.
+Each initial ideal $I_j$ is tight. Its positive-spanning hypothesis
+gives a relation
+\[
+ \sum_{\rho\in I_j}b_\rho v_\rho=0,\qquad b_\rho>0.
+\]
+Indeed express the negative of each ray as a nonnegative combination
+of the contained rays and add these relations. If the coefficients
+$a_{p_i}$ vanish for $i<j$, pairing with $m$ leaves
+$a_{p_j}\sum_{\rho\in p_j}b_\rho=0$. Induction proves that every
+$a_p$ vanishes. The centered classes therefore have rank $s-1$,
+and Theorem~\ref{thm03:normal} gives the full cone.
+
+By Lemma~\ref{lem03:root}, its strict locus is nonempty exactly when
+$P$ is connected. If $P$ is disconnected, complementary unions of
+components are tight ideals whose ray spans are complementary.
+A maximal-cone lattice basis splits the lattice into these summands;
+completeness then supplies every combination of component cones.
+Thus $X$ is a toric product. Conversely, a toric product splits $T_X$
+into nonzero summands. Semistability forces both summands to have the
+common slope, giving complementary tight ideals and a disconnected
+$P$. This also proves the final equivalence.
+\end{proof}
+
+The independence argument is the positive-relation argument of
+\cite{wuebben2026toricchambers}, with its sufficient hypothesis
+separated from the local-freeness condition. The latter implies
+positive spanning because the cones contained in a tight subspace
+form a complete subfan. The converse fails even for a semistable
+tangent bundle on a toric surface.
+
+\begin{example}\label{ex04:singularquotient}
+Let $X$ have rays
+\[
+ v=(1,0),\quad -v=(-1,0),\quad b=(0,1),\quad
+ b'=(1,-1),\quad w=(1,1),
+\]
+and cyclic maximal cones
+$(v,w),(w,b),(b,-v),(-v,b'),(b',v)$. Each is unimodular.
+This is the blowup $\pi:X\to\mathbb F_1$ of the fixed point of
+$(v,b)$. Let $S$ be the negative section, $f$ a fibre and $E$ the
+exceptional divisor. Set
+\[
+ H_t=\pi^*(4S+(7+t)f)-2E.
+\]
+In the displayed ray order its divisor coefficients can be taken to
+be $(4,0,0,7+t,2)$. The moment polygon is
+\[
+ -4\le x\le0,\qquad 0\le y\le x+7+t,\qquad x+y\ge-2.
+\]
+For $t>-1$ its five vertices are
+$(-4,2),(-2,0),(0,0),(0,7+t),(-4,3+t)$, with precisely the stated
+normal cones. Its invariant divisor degrees are
+\begin{equation}\label{eq04:surfacedegrees}
+ (D_vH_t,D_{-v}H_t,D_bH_t,D_{b'}H_t,D_wH_t)
+       =(1+t,7+t,2,4,2).
+\end{equation}
+Thus $H_t$ is ample exactly for $t>-1$. The line $\RR v$, which
+is the original fibre tangent direction, contains two rays and has
+degree $8+2t$, whereas the other ray lines have degrees $2,4,2$.
+Since $\mu_{H_t}(T_X)=8+t$, these are all the proper ray-flat tests:
+$T_X$ is stable for $-1<t<0$, strictly semistable at $t=0$, and
+unstable for $t>0$.
+
+At $t=0$ the only proper tight subspace is $\RR v$. Its two rays
+positively span it, but the cone $(w,b)$ contains no ray of that line.
+Condition~(15) therefore fails. In its smooth affine chart $v=w-b$,
+and the induced tangent line has inclusion generated by
+$x\partial_x-y\partial_y$. The exact sequence is
+\[
+ 0\longrightarrow\cO\xrightarrow{\,1\mapsto(x,-y)\,}\cO^2
+ \xrightarrow{\,(a,b)\mapsto ya+xb\,}(x,y)\longrightarrow0.
+\]
+The ideal $(x,y)$ is torsion-free but not locally free at the origin.
+Globally the equality subsheaf is
+$\cO_X(\pi^*(2S+f)-E)$ and its quotient is $\mathcal I_p(2f)$
+for this fixed point $p$. Thus the subsheaf is a line bundle but its
+inclusion is not a vector-subbundle inclusion. Full numerical access
+cannot replace the regularity assumptions in an HE application.
+Existence of stable polarizations here is also a consequence of the
+toric surface classification in \cite[Theorem~1.3]{heringnillsuess2022};
+the example separates the geometric hypotheses, rather than providing
+a new surface existence theorem.
+\end{example}
 
 \begin{proposition}\label{prop04:topology}
 Assume that \(H_0\) is strictly semistable and that nearby stable
@@ -1486,9 +1592,278 @@ foliations or Mori contractions. Singular graded sheaves and
 higher-step extension integrability require further analysis.
 
 % ============================================================
+% section_10_obstructions.tex
+% ============================================================
+\section{An obstruction for positive-twist Bott towers}
+\label{sec10:obstruction}
+
+The crown construction does not realize the four-element diamond.
+There is a natural iterated projective-bundle construction with the
+corresponding arrangement of tangent factors, but its slope equations
+already obstruct the proposed realization in a positive-twist family.
+
+For positive integers $t,u$, let
+\[
+ B_t=\PP_{\PP^1}(\cO\oplus\cO(t))
+       \times_{\PP^1}\PP_{\PP^1}(\cO\oplus\cO(t)),\qquad
+ X_{t,u}=\PP_{B_t}\bigl(\cO\oplus\cO(u(x_1+x_2))\bigr).
+\]
+Write $f$ for the base point class, $x_1,x_2$ for the quotient
+tautological classes on $B_t$, and $y$ for the last tautological
+class. Pullbacks are implicit. The relative tangent sequences are
+\[
+ 0\to\cO(C_3)\to T_X\to\pi^*T_{B_t}\to0,\qquad
+ 0\to\cO(C_1)\oplus\cO(C_2)\to T_{B_t}\to\cO(C_0)\to0,
+\]
+where
+\[
+ C_0=2f,\quad C_1=2x_1-tf,\quad C_2=2x_2-tf,\quad
+ C_3=2y-u(x_1+x_2).
+\]
+Inverse images of the two middle line summands give the natural
+diamond-shaped arrangement. This description does not assert that
+it is an equal-slope arrangement, or identify all extension components.
+
+\begin{proposition}\label{prop10:bott}
+For every $t,u\ge1$, no ample real class on $X_{t,u}$ makes all four
+natural tangent line factors have equal slope.
+\end{proposition}
+
+\begin{proof}
+The projective-bundle intersection ring satisfies
+\[
+ f^2=0,\quad x_i^2=tf x_i,\quad
+ y^2=u(x_1+x_2)y,\quad \int_Xfx_1x_2y=1.
+\]
+Every numerical divisor class has a unique expression
+$H=af+bx_1+cx_2+dy$, and it is ample exactly when $a,b,c,d>0$.
+To verify this cone, observe that for a nef line bundle $L$ the nef
+cone of $\PP(\cO\oplus L)$ consists of $q\xi+\pi^*A$ with
+$q\ge0$ and $A$ nef. Necessity follows from a fibre and the section
+of the quotient $\cO$, and sufficiency from nefness of $\xi$.
+Apply this successively, since every twist here is nef, and take
+the interior. These are standard split projective-bundle calculations;
+compare \cite[\S2 and Corollary~3.1.2]{khandasgupta2019}.
+
+For arbitrary ample $H$, the ring gives
+\begin{equation}\label{eq10:middle}
+ (C_1-C_2)H^3=6d(c-b)\bigl(t(b+c+ud)+2a\bigr).
+\end{equation}
+The factor in parentheses is positive, so equality forces $b=c$.
+Put $S=x_1+x_2$. For this forced value, push down to $B_t$:
+\[
+ \pi_*H^3=MfS+NS^2,\quad
+ M=3ad(2b+ud),\quad N=d(3b^2+3bud+u^2d^2).
+\]
+The products $\int_B fS^2=2$, $\int_Bx_1fS=1$ and
+$\int_Bx_1S^2=3t$ then give
+\begin{equation}\label{eq10:base}
+ (C_0-C_1)H^3=-4(t-1)N-2M<0,
+\end{equation}
+contradicting equal slopes. For an explicit derivation of
+\eqref{eq10:middle}, write $A=af+bx_1+cx_2$ and $L=uS$.
+The integrals against $x_1-x_2$ of $A^2,AL,L^2$ are respectively
+$(c-b)(t(b+c)+2a)$, $ut(c-b)$ and $0$; apply
+$\pi_*H^3=3dA^2+3d^2AL+d^3L^2$ and multiply by two.
+\end{proof}
+
+The proposition excludes the natural filtration construction throughout
+this family. It does not exclude every equality poset on these
+fourfolds, arbitrary signed Bott towers, or diamond realizations in
+general. Nor does it assert instability at every polarization.
+These fourfolds are not Fano: the $f$ coefficient of
+\[
+ -K_X=(2-2t)f+(2-u)(x_1+x_2)+2y
+\]
+is nonpositive in the ample cone just computed.
+
+% ============================================================
+% section_11_cy.tex
+% ============================================================
+\appendix
+\section{The fourfold, toric contractions, and a Calabi--Yau transition}
+\label{sec11:cy}
+
+The fourfold of Section~\ref{sec09:fourfold} also permits an explicit
+comparison with anticanonical Calabi--Yau hypersurfaces. This comparison
+does not identify tangent stability walls with toric birational walls.
+It exhibits different tangent stability within one toric chamber while
+the hypersurface and its deformation problem remain fixed.
+
+Let $B=\PP^1\times\PP^1$, $L=\cO_B(1,-1)$, and
+\[
+ X=\PP_B(\cO\oplus L)\times_B\PP_B(\cO\oplus L).
+\]
+Write $f,g$ for the base hyperplane classes, $\xi_1,\xi_2$ for the
+quotient tautological classes, and $\eta_i=\xi_i-(f-g)/2$. Then
+\[
+ H_r=\eta_1+\eta_2+r(f+g),\qquad r>1,\qquad -K_X=2H_1.
+\]
+
+\begin{proposition}\label{prop11:transition}
+The tangent bundle is stable at $H_{5/4}$ and unstable at $H_{3/2}$,
+although both classes lie in one chamber of the toric divisor-class
+GKZ decomposition. The anticanonical model of $X$ has two disjoint
+singular projective lines, each transversely an ordinary threefold node.
+A general anticanonical hypersurface $Y_0$ has eight ordinary double
+points and a projective small crepant resolution $Y\subset X$ with
+Hodge numbers $(h^{1,1},h^{2,1})=(4,60)$. The exceptional curve classes
+have rank two in $H_2(Y,\mathbb Q)$ and a six-dimensional relation
+space. The threefold $Y_0$ admits a smoothing with Hodge numbers
+$(2,66)$.
+\end{proposition}
+
+\begin{proof}
+Number the rays, in order, as
+\begin{equation}\label{eq11:rays}
+ e_1,-e_1,e_2,-e_2,f_0,e_1+e_2-f_0,g_0,-e_1-e_2-g_0.
+\end{equation}
+The fan chooses one ray from each pair, giving sixteen unimodular
+maximal cones. For $H_r$, the four fibre-ray divisor degrees equal
+$A=6r^2-2$ and the four base-ray degrees equal $B=6r$; the tangent
+slope is $A+B$. There are $6,15,11$ proper ray flats of ranks
+$1,2,3$. Their largest unnormalized margins
+$\sum_{v_\rho\in V}D_\rho H_r^3-(\dim V)(A+B)$ at the two
+test points are
+\[
+\begin{array}{c|ccc}
+r&A&B&\text{largest margin}\\\hline
+5/4&59/8&15/2&-1/8\\
+3/2&23/2&9&5.
+\end{array}
+\]
+These are obtained by taking the linear closures of all ray subsets;
+the complete rational lists accompany the paper. In particular all
+tests are strict at $5/4$, while a fibre line already destabilizes at
+$3/2$. Both classes are ample by the support inequalities of
+Section~\ref{sec05:family}. The interior of this ample cone is one
+GKZ chamber for the fixed fan rays, with support numbers considered
+modulo principal linear functions. It is not a secondary fan for a
+different configuration of hypersurface monomials. The two decompositions
+therefore differ; the tangent wall is the interior class
+$r=(3+\sqrt{21})/6$.
+
+For the anticanonical contraction use the polar sign convention
+\[
+ \Delta=\{m:\langle m,v_i\rangle\le1\},\qquad Q=\operatorname{conv}(v_i).
+\]
+In dual coordinates $(x,y,z,w)$ its inequalities are
+\begin{equation}\label{eq11:polar}
+ -1\le x,y\le1,\qquad x+y-1\le z\le1,\qquad
+ -x-y-1\le w\le1.
+\end{equation}
+It has twelve integral vertices. The sixteen cones refine its normal
+fan. The only nonsimplicial maximal cones contain one of the circuits
+\begin{equation}\label{eq11:circuits}
+ \tau_f=\{0,2,4,5\},\quad v_0+v_2=v_4+v_5,
+ \qquad
+ \tau_g=\{1,3,6,7\},\quad v_1+v_3=v_6+v_7,
+\end{equation}
+and one ray of the remaining base pair. For $\tau_f$ the first three
+rays form a basis of its saturated rank-three lattice and the fourth
+is $(1,1,-1)$ in that basis; adjoining either remaining base ray is
+a lattice basis in dimension four. The same statement holds for
+$\tau_g$. Thus the four nonsimplicial affine charts are ordinary
+conifold charts times an affine line, with no finite lattice quotient.
+All other maximal cones are unimodular. The transverse quotient fan
+of each circuit has two opposite primitive rays, giving a singular
+$\PP^1$. The two curves are disjoint: a cone containing both circuits
+would contain $e_1$ and $-e_1$.
+
+Their dual edges in $\Delta$ are
+\[
+ [(1,1,1,-3),(1,1,1,1)],\qquad
+ [(-1,-1,-3,1),(-1,-1,1,1)].
+\]
+Both have lattice length four, so the descended anticanonical bundle
+restricts to $\cO(4)$ on each singular line. All five edge monomials
+occur. A general section has four simple zeros on each line, away
+from the fixed endpoints. Near such a zero its derivative along the
+line is nonzero; eliminating that coordinate leaves the ordinary
+threefold node. Bertini excludes other singularities. The toric
+refinement has no new rays and is small and crepant; its restriction
+gives the projective small resolution $Y\to Y_0$ with eight disjoint
+exceptional curves.
+
+Choose the section simultaneously general and $\Delta$-regular.
+The fan is a smooth projective crepant subdivision using every boundary
+lattice point of $Q$, hence a maximal projective crepant partial
+(MPCP) subdivision in the terminology
+of \cite{batyrev1994}. Direct enumeration in \eqref{eq11:polar} gives
+\[
+ l(\Delta)=69,\quad l(Q)=9,\qquad
+ \begin{array}{c|rrrrr}
+ \text{codimension of the relative interior}&0&1&2&3&4\\\hline
+ \Delta&1&4&22&30&12\\
+ Q&1&0&0&0&8.
+ \end{array}
+\]
+Here the table counts lattice points, not faces. Every dual edge
+contributing to the codimension-two correction is primitive.
+Batyrev's formula \cite[Corollary~4.5.1]{batyrev1994} therefore gives
+$h^{1,1}(Y)=9-5=4$ and $h^{2,1}(Y)=69-5-4=60$.
+Adjunction gives $K_Y\simeq\cO_Y$. The sequence
+$0\to K_X\to\cO_X\to\cO_Y\to0$, toric structure-sheaf vanishing
+and Serre duality give connectedness and
+$H^1(\cO_Y)=H^2(\cO_Y)=0$.
+
+In the divisor basis $(f,g,\xi_1,\xi_2)$ the two contracted ambient
+curve classes have pairing vectors
+\[
+ \Gamma_f=(1,0,0,0),\qquad \Gamma_g=(0,1,-1,-1),
+\]
+by \eqref{eq11:circuits}. To identify their classes on $Y$, put
+$D=-K_X$. The intersection ring
+$f^2=g^2=0$, $\xi_i^2=(f-g)\xi_i$ and
+$\int_Xfg\xi_1\xi_2=1$ gives
+\begin{equation}\label{eq11:gram}
+ \left(\int_X D_iD_jD^2\right)_{i,j}
+ =\begin{pmatrix}
+ 0&8&4&4\\8&0&12&12\\4&12&-8&0\\4&12&0&-8
+ \end{pmatrix},\qquad \det=-16384.
+\end{equation}
+Thus the four divisor restrictions are independent on $Y$ and span
+$H^2(Y,\mathbb Q)$, since $h^{1,1}(Y)=4$ and $H^{2,0}(Y)=0$.
+Their pairings determine rational homology classes. The four curves
+over each singular line have the same class in $H_2(Y,\mathbb Q)$,
+and the two types are independent. The full relation space is therefore
+\begin{equation}\label{eq11:relations}
+ \sum_{i=1}^4a_i=0,\qquad \sum_{i=1}^4b_i=0.
+\end{equation}
+In particular $(1,1,1,-3;1,1,1,-3)$ is a relation with every
+coefficient nonzero. No integral saturation assertion is required.
+
+The threefold $Y_0$ is connected, normal and projective, has trivial
+dualizing bundle by Cartier anticanonical adjunction, and has only
+terminal ordinary double points. Rational singularities transfer
+$H^1(\cO_Y)=0$ to $Y_0$. Namikawa's smoothing criterion
+\cite[Theorem~2.5]{namikawa2002} applies to the displayed relation
+in $H_2(Y,\CC)$ and integrates it to a flat smoothing. With eight
+nodes and exceptional rank two, conifold surgery gives
+$b_2(Y_t)=4-2=2$ and $b_3(Y_t)=122+2(8-2)=134$, hence Hodge
+numbers $(2,66)$.
+\end{proof}
+
+The smoothing in the proposition is an abstract deformation of $Y_0$.
+It generally leaves the fixed toric hypersurface family, whose general
+members still meet the two singular lines four times each. Holding
+$Y_0$ fixed while varying $H_r$ changes tangent stability without
+changing this relation space. The equality-poset square relation, the
+two toric contraction circuits and the six-dimensional CY relation
+space are distinct objects. The example supplies no canonical
+identification among them and asserts no new general smoothing criterion.
+
+The accompanying calculations enumerate all rational polar vertices,
+bounded lattice points and proper ray flats, and evaluate the stated
+intersections. The smoothing conclusion uses the quoted geometric
+theorem, not merely the node count or finite computations.
+
+% ============================================================
 % BIBLIOGRAPHY
 % ============================================================
 \begin{thebibliography}{BFLR12}
+\bibitem[Bat94]{batyrev1994} V.~V.~Batyrev, \emph{Dual polyhedra and mirror symmetry for Calabi--Yau hypersurfaces in toric varieties}, J. Algebraic Geom. \textbf{3} (1994), no.~3, 493--535. \href{https://arxiv.org/abs/alg-geom/9310003}{arXiv:alg-geom/9310003}.
+
 \bibitem[BFLR12]{boussicaultferaylascouxreiner2012} A.~Boussicault, V.~F\'eray, A.~Lascoux, and V.~Reiner, \emph{Linear extension sums as valuations on cones}, J. Algebraic Combin. \textbf{35} (2012), no.~4, 573--610. \href{https://doi.org/10.1007/s10801-011-0316-2}{doi:10.1007/s10801-011-0316-2}; arXiv:1008.3278v2.
 
 \bibitem[GRT16]{grebrosstoma2016} D.~Greb, J.~Ross, and M.~Toma, \emph{Variation of Gieseker moduli spaces via quiver GIT}, Geom. Topol. \textbf{20} (2016), no.~3, 1539--1610. \href{https://doi.org/10.2140/gt.2016.20.1539}{doi:10.2140/gt.2016.20.1539}; arXiv:1409.7564v2.
@@ -1498,6 +1873,8 @@ higher-step extension integrability require further analysis.
 \bibitem[KD19]{khandasgupta2019} B.~Khan and J.~Dasgupta, \emph{Toric vector bundles on Bott tower}, Bull. Sci. Math. \textbf{155} (2019), 74--91. \href{https://doi.org/10.1016/j.bulsci.2019.04.003}{doi:10.1016/j.bulsci.2019.04.003}; arXiv:1802.08803v2.
 
 \bibitem[Kly90]{klyachko1990} A.~A.~Klyachko, \emph{Equivariant bundles on toral varieties}, Math. USSR-Izv. \textbf{35} (1990), no.~2, 337--375. \href{https://doi.org/10.1070/IM1990v035n02ABEH000707}{doi:10.1070/IM1990v035n02ABEH000707}.
+
+\bibitem[Nam02]{namikawa2002} Y.~Namikawa, \emph{Stratified local moduli of Calabi--Yau threefolds}, Topology \textbf{41} (2002), no.~6, 1219--1237. \href{https://doi.org/10.1016/S0040-9383(01)00038-6}{doi:10.1016/S0040-9383(01)00038-6}.
 
 \bibitem[Neu09]{neumann2009} S.~Neumann, \emph{A decomposition of the Moving cone of a projective manifold according to the Harder--Narasimhan filtration of the tangent bundle}, Ph.D. thesis, Albert-Ludwigs-Universit\"at Freiburg im Breisgau, November 2009. \url{https://freidok.uni-freiburg.de/data/7287}.
 

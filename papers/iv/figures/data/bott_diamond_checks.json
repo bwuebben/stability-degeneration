@@ -1,0 +1,222 @@
+{
+  "scope": "Twelve rational checks; uniform proof is in the manuscript.",
+  "cases": [
+    {
+      "t": 1,
+      "u": 1,
+      "H": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "factor_degrees": [
+        "28",
+        "46",
+        "46",
+        "84"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-18"
+    },
+    {
+      "t": 1,
+      "u": 1,
+      "H": [
+        "2/3",
+        "5/4",
+        "5/4",
+        "3/2"
+      ],
+      "factor_degrees": [
+        "603/8",
+        "795/8",
+        "795/8",
+        "173"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-24"
+    },
+    {
+      "t": 1,
+      "u": 1,
+      "H": [
+        "1/2",
+        "2",
+        "3",
+        "4/3"
+      ],
+      "factor_degrees": [
+        "4288/27",
+        "5872/27",
+        "4288/27",
+        "4352/9"
+      ],
+      "middle_difference": "176/3",
+      "symmetric_base_difference": null
+    },
+    {
+      "t": 2,
+      "u": 1,
+      "H": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "factor_degrees": [
+        "28",
+        "74",
+        "74",
+        "138"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-46"
+    },
+    {
+      "t": 2,
+      "u": 1,
+      "H": [
+        "2/3",
+        "5/4",
+        "5/4",
+        "3/2"
+      ],
+      "factor_degrees": [
+        "603/8",
+        "699/4",
+        "699/4",
+        "619/2"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-795/8"
+    },
+    {
+      "t": 2,
+      "u": 1,
+      "H": [
+        "1/2",
+        "2",
+        "3",
+        "4/3"
+      ],
+      "factor_degrees": [
+        "4288/27",
+        "10952/27",
+        "8000/27",
+        "8152/9"
+      ],
+      "middle_difference": "328/3",
+      "symmetric_base_difference": null
+    },
+    {
+      "t": 1,
+      "u": 3,
+      "H": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "factor_degrees": [
+        "84",
+        "114",
+        "114",
+        "492"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-30"
+    },
+    {
+      "t": 1,
+      "u": 3,
+      "H": [
+        "2/3",
+        "5/4",
+        "5/4",
+        "3/2"
+      ],
+      "factor_degrees": [
+        "2007/8",
+        "2343/8",
+        "2343/8",
+        "10327/8"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-42"
+    },
+    {
+      "t": 1,
+      "u": 3,
+      "H": [
+        "1/2",
+        "2",
+        "3",
+        "4/3"
+      ],
+      "factor_degrees": [
+        "1024/3",
+        "1264/3",
+        "1024/3",
+        "1872"
+      ],
+      "middle_difference": "80",
+      "symmetric_base_difference": null
+    },
+    {
+      "t": 4,
+      "u": 2,
+      "H": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "factor_degrees": [
+        "52",
+        "232",
+        "232",
+        "732"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-180"
+    },
+    {
+      "t": 4,
+      "u": 2,
+      "H": [
+        "2/3",
+        "5/4",
+        "5/4",
+        "3/2"
+      ],
+      "factor_degrees": [
+        "1197/8",
+        "1263/2",
+        "1263/2",
+        "7871/4"
+      ],
+      "middle_difference": "0",
+      "symmetric_base_difference": "-3855/8"
+    },
+    {
+      "t": 4,
+      "u": 2,
+      "H": [
+        "1/2",
+        "2",
+        "3",
+        "4/3"
+      ],
+      "factor_degrees": [
+        "6496/27",
+        "30664/27",
+        "23824/27",
+        "33628/9"
+      ],
+      "middle_difference": "760/3",
+      "symmetric_base_difference": null
+    }
+  ],
+  "source_sha256": "2a010f73d3fff18032723074f66993456f03610c2967da83f667229dd9734e50"
+}
