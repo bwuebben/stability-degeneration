@@ -19,7 +19,14 @@
     "date": "2026-10-27",
     "pdf_sha256": "957f9e3efced4948a7fba0f00086e0bc581fe548529daacdac3b78a04079826e",
     "source_sha256": "6d6991a4807fdf68375c9845abee1b6e9eef865fb1f65d0dcf898e5e98addc64",
-    "revision_date": "2026-10-29"
+    "revision_date": "2026-10-29",
+    "archive": {
+      "id": 23774770,
+      "doi": "10.5281/zenodo.23774770",
+      "conceptdoi": "10.5281/zenodo.23717177",
+      "record_url": "https://zenodo.org/records/23774770",
+      "created": "2026-10-29T18:46:11.240880+00:00"
+    }
   },
   {
     "paper": "v",
