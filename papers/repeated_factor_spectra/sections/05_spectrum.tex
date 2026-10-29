@@ -1,0 +1,181 @@
+\section{The full small Dolbeault spectrum}\label{sec:spectrum}
+
+We now compare the elliptic operator with the finite form. The first
+step holds for every sufficiently small simple coefficient array,
+whether balanced or not. All Hilbert spaces in this section are
+complex, and all endomorphisms are pointwise trace-free.
+
+\begin{proposition}\label{prop:schur}
+Let $Z'$ be small with scalar centralizer. Use the split metric
+$h_{0,s}$ on $E_{s,Z'}$, and let $\nu_j(s,Z')$ be the eigenvalues
+of \eqref{eq:finite-form}. There are constants $C,\gamma_1>0$,
+uniform in the fixed background neighborhood, such that the
+ordered Dolbeault eigenvalues $\widetilde\lambda_j$ satisfy
+\begin{equation}\label{eq:schurbound}
+(1-Cq_s(Z'))\nu_j(s,Z')\le\widetilde\lambda_j
+\le\nu_j(s,Z')\quad(1\le j\le N),\qquad
+\widetilde\lambda_{N+1}\ge\gamma_1/2.
+\end{equation}
+In particular exactly $N$ eigenvalues lie below a fixed positive
+threshold for sufficiently small $Z'$.
+\end{proposition}
+
+\begin{proof}
+Write $D_0=\dbar_{\End G}$ and
+$D=D_0+\mathcal A$, where $\mathcal A=[N_s(Z'),\,\cdot\,]$.
+The kernel of $D_0$ is the full parallel space $\HH$ of
+\eqref{eq:finite-space}, by the fixed cross-Hom vanishing.
+Let $P$ be complex $L^2$ projection onto $\HH$, and put $Q=1-P$.
+These are the complex spectral projections, distinct from the
+real metric-coordinate projections of Section~\ref{sec:curvature}.
+The positive spectrum of $D_0^*D_0$ on $Q$ has a uniform lower
+bound $\gamma_0>0$.
+
+For every parallel $X\in\HH$, $\mathcal AX$ is harmonic,
+because it is a constant multiplicity combination of the harmonic
+Hom forms. Thus
+\begin{equation}\label{eq:harmoniccancel}
+D_0^*\mathcal AX=0,\qquad
+V_s^{-1}\|DX\|_{L^2}^2=\mathcal Q_{s,Z'}(X),\qquad
+V_s^{-1}\|X\|_{L^2}^2=\|X\|_r^2.
+\end{equation}
+Let $q=q_s(Z')$. Since the harmonic coefficient space is fixed and
+finite-dimensional, its $C^0$ and $L^2$ norms are uniformly
+equivalent. Consequently
+$\|\mathcal A\|_{L^2\to L^2(0,1)}\le C\sqrt q$.
+For $y\in QH^1$ this gives
+\[
+\|Dy\|_{L^2}\ge(\sqrt{\gamma_0}-C\sqrt q)\|y\|_{L^2}.
+\]
+The complementary compression $C_0=QD^*DQ$, understood initially
+as a closed quadratic form, therefore satisfies $C_0\ge\gamma_1I$
+for some fixed $\gamma_1>0$ and all sufficiently small $q$.
+
+Set $G_0=PD^*DP$ and $B=QD^*DP$. Harmonicity in
+\eqref{eq:harmoniccancel} gives, as equalities of smooth sections,
+\begin{equation}\label{eq:relativecoupling}
+BX=Q\mathcal A^*\mathcal AX,\qquad
+\|BX\|_{L^2}^2\le Cq\|\mathcal AX\|_{L^2}^2
+=Cq\langle X,G_0X\rangle_{L^2}.
+\end{equation}
+The right side is each vector's own finite energy. There is no
+replacement by $q\|X\|^2$ and no division by $\nu_1$.
+
+We specify the form domains to justify the spectral comparison.
+The form domain of $D^*D$ is $H^1(\End_0G)$ and its operator
+domain is $H^2(\End_0G)$. Removing the finite-dimensional smooth
+space $\HH$ preserves these Sobolev spaces; the form and operator
+domains of $C_0$ are $QH^1$ and $QH^2$. In particular $B$ maps
+the finite space into $L^2$, and $(C_0-\lambda)^{-1}$ maps $QL^2$
+into $QH^2$ for $0\le\lambda\le\gamma_1/2$.
+
+For such $\lambda$ define the finite Schur complement
+\begin{equation}\label{eq:schur}
+S_\lambda=G_0-\lambda I-B^*(C_0-\lambda)^{-1}B.
+\end{equation}
+Equation~\eqref{eq:relativecoupling} gives the Hermitian-form bounds
+\begin{equation}\label{eq:schurforms}
+(1-Cq)G_0-\lambda I\le S_\lambda\le G_0-\lambda I.
+\end{equation}
+Completion of the square on $\HH\oplus QH^1$ gives
+\begin{align}
+\mathfrak q_{D^*D-\lambda}(X+y)
+={}&\langle S_\lambda X,X\rangle\notag\\
+&+\left\|(C_0-\lambda)^{1/2}
+\bigl(y+(C_0-\lambda)^{-1}BX\bigr)\right\|^2.\label{eq:inertia}
+\end{align}
+The triangular change of variables here is a bijection of the
+form domain, since its correction lies in $QH^2$. The negative
+index of $D^*D-\lambda$ thus equals the negative index of
+$S_\lambda$.
+
+The norm of $G_0$ is $O(q)$. At $\lambda=\gamma_1/2$ the
+finite Schur complement is strictly negative, whereas the
+complementary operator is positive. Exactly $N$ eigenvalues
+therefore lie below this threshold and the threshold is not an
+eigenvalue. For the indexed lower bound put $\alpha=1-Cq>0$.
+If $\lambda<\alpha\nu_j$, the form $\alpha G_0-\lambda I$
+has at most $j-1$ negative directions. The same is true of
+$S_\lambda$ by \eqref{eq:schurforms}; \eqref{eq:inertia}
+then implies $\widetilde\lambda_j\ge\alpha\nu_j$ by passage
+to the limit. For the upper bound apply ordinary min--max to
+the first $j$ finite eigenvectors inside $\HH$.
+These arguments also apply when eigenvalues coincide. They
+establish \eqref{eq:schurbound} with complex multiplicities.
+\end{proof}
+
+\begin{lemma}\label{lem:gaugespectrum}
+Let $g=e^{Y/2}$ for $Y\in\hh$, put $a=\|Y\|_{\op}$, and let
+$Z'=g\cdot Z$. For all $1\le j\le N$,
+\begin{equation}\label{eq:gaugecomparison}
+e^{-4a}\nu_j(s,Z)\le\nu_j(s,Z')\le e^{4a}\nu_j(s,Z).
+\end{equation}
+This comparison holds for arbitrary positive harmonic Gram matrices.
+\end{lemma}
+
+\begin{proof}
+Conjugation $T_gX=(g_vX_vg_v^{-1})_v$ preserves the full complex
+space $\HH$, since it preserves each block trace. The bounds
+$\|g_v^{\pm1}\|_{\op}\le e^{a/2}$ imply
+\begin{equation}\label{eq:gaugemass}
+e^{-2a}\|X\|_r^2\le\|T_gX\|_r^2\le e^{2a}\|X\|_r^2.
+\end{equation}
+The exact intertwining identity
+\[
+[T_gX,g\cdot Z]_{ij,a}=g_i[X,Z]_{ij,a}g_j^{-1}
+\]
+gives the same factors for the squared energy. For a nondiagonal
+Gram matrix, apply its positive square root to the arrow index.
+Left and right multiplicity operations commute with this change
+because every arrow in the block has the same source and target.
+Thus the same energy bounds hold without changing constants.
+Rayleigh quotients have factors $e^{\pm4a}$, and generalized
+min--max through the invertible complex map $T_g$ proves the lemma.
+\end{proof}
+
+The map $T_g$ need not preserve Hermitian matrices. Its use on
+$\HH$ is one reason to retain the full complex operator throughout
+the argument. At exact central balance there is an additional
+adjoint symmetry, discussed in Section~\ref{sec:scope}, but no
+such symmetry is needed during this comparison.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Proposition~\ref{prop:actual-stability} proves the stability
+equivalence and metric statement. At a stable parameter choose
+the independently balanced $Z$. Theorem~\ref{thm:calibration}
+gives $Z'=e^{Y/2}\cdot Z$ with $\|Y\|_{\op}\le A\sigma$
+and $\|u\|_{C^0}\le C\sigma$. Moreover
+$q_s(Z')\le e^{2A\sigma}\sigma$.
+Proposition~\ref{prop:schur} and Lemma~\ref{lem:gaugespectrum}
+therefore compare the split-metric small eigenvalues at $Z'$
+to $\nu_j(s,Z)$ with a common factor $1+O(\sigma)$.
+
+It remains to pass to the actual metric on the same holomorphic
+bundle $E_{s,Z'}$. If two bundle metrics satisfy
+$e^{-c}h_0\le h_1\le e^ch_0$, their induced squared norms on
+$\End G$ lie between $e^{-2c}$ and $e^{2c}$ times each other.
+The same is true on $\End G$-valued $(0,1)$-forms, since the
+base metric is fixed in this comparison. The differential $D$
+is unchanged. Hence every Rayleigh quotient has comparison
+factors $e^{\pm4c}$ on the common $H^1$ form domain. Apply this
+with $h_1=h_{0,s}e^u$ and $c=C\sigma$.
+
+The trace-free spaces in this argument are invariant for both
+Laplacians. Indeed $\End G=\C I\oplus\End_0G$ is orthogonal
+for every induced endomorphism metric, $D(fI)=(\dbar f)I$, and
+$\tr(D\xi)=\dbar\tr\xi$. This orthogonal splitting also
+holds on one-forms. Both $D$ and its adjoint preserve the
+corresponding summands. Min--max therefore applies to the same
+trace-free domain for each metric.
+
+The additional factor is $1+O(\sigma)$, so it proves
+\eqref{eq:main-spectrum} for $1\le j\le N$. It also leaves a
+fixed positive fraction of the complementary bound in
+Proposition~\ref{prop:schur}. Finally holomorphic pullback,
+with the metric pulled back at the same time, is unitary on
+the relevant $L^2$ spaces and intertwines the Dolbeault
+operators. It identifies these eigenvalues with those on
+the original $E$, regardless of the size of the original
+balancing gauge. Shrinking $\mathcal U$ absorbs all uniform
+exponential factors into the stated constants.
+\end{proof}

@@ -1,0 +1,70 @@
+\section{Scope and reproducibility}\label{sec:scope}
+
+The theorem concerns a fixed compact Kähler background, fixed locally
+free factors, two nonzero layers, and fixed multiplicities. Its
+uniformity includes approaches to faces through the simple stable
+region; it does not include the nonsimple endpoint itself. Higher
+extensions have composable arrows and nonlinear integrability
+relations, so the exact harmonic presentation and parity argument
+used here do not apply without further work. Singular graded sheaves
+and actual Yang--Mills flow estimates require additional analysis.
+
+\subsection{Complex endomorphisms and adjoint symmetry}
+Let $L_Z$ be the finite operator associated with
+$\mathcal Q_{s,Z}$ and the rank mass. In orthonormal arrow
+coordinates, direct expansion gives
+\begin{equation}\label{eq:adjointsymmetry}
+r_v\bigl((L_Z(X^*))_v-(L_ZX)_v^*\bigr)
+=[X_v^*,\mu_s(Z)_v].
+\end{equation}
+At central balance the right side vanishes. Hence the Hermitian
+real fixed space of adjoint complexifies to the full operator,
+with the same eigenvalue multiplicities. This agrees with the
+centralizer identity of~\cite[\S5.2, Proposition~5.3]{hkkp2023}.
+Thus the six-mode example is a failure of scalar-vertex compression,
+not a failure of correctly complexifying the Hermitian operator at
+central balance.
+
+Off balance a Hermitian restriction can lose even the correct
+kernel. Take one target and one source, each of dimension two,
+with arrows $I_2$ and
+$J=\left(\begin{smallmatrix}0&1\\0&0\end{smallmatrix}\right)$.
+The identity arrow forces the two centralizer blocks to agree;
+commutation with $J$ then gives $X=Y=aI+bJ$. On the full
+trace-free complex space the kernel is the line $X=Y=bJ$.
+Its Hermitian part is zero. This representation is not centrally
+balanced: its moments are $\operatorname{diag}(2,1)$ and
+$\operatorname{diag}(-1,-2)$. It illustrates why the intermediate
+gauge comparison in Lemma~\ref{lem:gaugespectrum} is performed
+on the complex space. Likewise a single identity arrow has
+connected support but all simultaneous matrix endomorphisms in
+its centralizer. Connectedness alone never replaces the
+scalar-centralizer condition.
+
+\subsection{Finite calculations}
+The accompanying scripts use the explicit matrices printed in
+Section~\ref{sec:example}. Exact rational computations verify the
+covariances, full centralizer dimension, positive trace-free Gram
+form, characteristic polynomials, and the off-balance kernel
+comparison above. A separate implementation forms the raw complex
+commutator matrix in a Pauli basis and verifies the same six-mode
+polynomial and the coefficient $25/20$. These calculations check
+finite algebra; the proofs of HE existence and relative elliptic
+estimates are those in Sections~\ref{sec:curvature}--\ref{sec:spectrum}.
+
+For the plotted family we solve the two real target balance equations.
+This is valid for these real matrices: uniqueness of the positive
+Hermitian minimizer and invariance under complex conjugation imply
+that it is real symmetric. Small eigenvalues are evaluated as the
+squares of singular values of the commutator map restricted to a
+mass-orthonormal trace-free basis. This avoids forming a rounded
+Gram matrix before computing its weakest eigenvalue.
+The numerical coefficient at $\delta=10^{-10}$ is approximately
+$1.24999999996$, consistent with the proved limit $5/4$.
+
+The source distribution contains the calculation scripts, generated
+data, figure source, dependency versions, and commands for rebuilding
+the figure and this PDF. No partial differential equation is solved
+numerically in these computations. The numerical output is an
+illustration and reproducibility check of the finite model, not an
+additional hypothesis in the theorems.

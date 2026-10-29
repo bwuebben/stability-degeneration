@@ -1,0 +1,62 @@
+{
+  "scope": "Independent exact finite/geometric identities; no verification of elliptic or HE transfer arguments.",
+  "versions": {
+    "python": "3.13.14",
+    "sympy": "1.14.0"
+  },
+  "method": "Square-free intersection ring; raw 18-by-7 complex arrow map in Pauli basis; exact two-source endpoint; universal unit-trace weak perturbation.",
+  "volume": "h1*h2*h3*h4",
+  "curvatures": [
+    "0",
+    "4*pi*(-h1 + h4)/(h1*h4)",
+    "4*pi*(-h2 + h4)/(h2*h4)",
+    "4*pi*(-h3 + h4)/(h3*h4)"
+  ],
+  "ext1_dimensions": [
+    3,
+    3,
+    3
+  ],
+  "polarization_demands": [
+    "a1",
+    "a2",
+    "a3"
+  ],
+  "polarization_jacobian": "Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])",
+  "covariances": [
+    "Matrix([[3/2, 0], [0, 1/2]])",
+    "Matrix([[1, 1/2], [1/2, 1]])",
+    "Matrix([[1/2, -1/2], [-1/2, 3/2]])"
+  ],
+  "operator_pauli_basis": "Matrix([[3, 0, 0, 0, -sqrt(2), -sqrt(2), -sqrt(2)], [0, 3, 0, 0, -sqrt(2)/2, 0, sqrt(2)/2], [0, 0, 3, 0, 0, -sqrt(2)/2, sqrt(2)/2], [0, 0, 0, 3, 0, 0, 0], [-sqrt(2), -sqrt(2)/2, 0, 0, 2, 0, 0], [-sqrt(2), 0, -sqrt(2)/2, 0, 0, 2, 0], [-sqrt(2), sqrt(2)/2, sqrt(2)/2, 0, 0, 0, 2]])",
+  "centralizer_dimension": 1,
+  "complex_trace_free_dimension": 6,
+  "coupling_gram_eigenvalues": [
+    "6",
+    "3/2",
+    "1/2"
+  ],
+  "trace_free_characteristic_polynomial": "(lambda - 5)*(lambda - 3)*(2*lambda**2 - 10*lambda + 9)*(2*lambda**2 - 10*lambda + 11)/4",
+  "scalar_compression_characteristic_polynomial_with_zero": "lambda*(lambda - 5)*(lambda - 2)**2",
+  "boundary_H": "Matrix([[(17/6 + 4*sqrt(6)/3)*sqrt(18 + 15*sqrt(6))/(9*sqrt(3) + 13*sqrt(2)), (-1/6 + sqrt(6)/6)*sqrt(18 + 15*sqrt(6))/(9*sqrt(3) + 13*sqrt(2))], [(-2 + sqrt(6))/(2*sqrt(6 + 5*sqrt(6))), (sqrt(6) + 4)/(2*sqrt(6 + 5*sqrt(6)))]])",
+  "boundary_det_S": "2 + 5*sqrt(6)/3",
+  "boundary_rho_squared": "31/19 - 10*sqrt(6)/19",
+  "boundary_gap": "0.414872817596207549980348107700",
+  "boundary_trace_free_polynomial": "lambda*(lambda - 2)*(lambda - 1)**2*(lambda - rho - 1)*(lambda + rho - 1)",
+  "boundary_positive_eigenvalues": [
+    "1-rho",
+    "1",
+    "1",
+    "1+rho",
+    "2"
+  ],
+  "weak_kernel_mass": "20",
+  "weak_energy_derivative": "25",
+  "weak_eigenvalue_coefficient": "5/4",
+  "source_pins": {
+    "verify_geometry_independent.py": {
+      "sha256": "6117dce8466c1fa99d7ec6cf0e80cfab41c9484652e04203ac70a04d456d444f"
+    }
+  },
+  "all_exact_assertions_passed": true
+}

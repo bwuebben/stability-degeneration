@@ -10,3 +10,5 @@ These computations check finite identities and examples. The geometric, elliptic
 
 Archived version: [doi:10.5281/zenodo.23717660](https://doi.org/10.5281/zenodo.23717660).
 [Abstract and citation](https://bwuebben.github.io/papers/uniform-hermitian-einstein-spectra/) on the author's website.
+
+Related sequel: [Uniform Hermitian–Einstein spectra with repeated stable factors](https://bwuebben.github.io/papers/repeated-factor-he-spectra/) extends stationary metric and spectral comparison to fixed multiplicities.

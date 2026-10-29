@@ -41,5 +41,30 @@
       "record_url": "https://zenodo.org/records/23717742",
       "created": "2026-10-28T01:45:30.235369+00:00"
     }
+  },
+  {
+    "paper": "repeated_factor_spectra",
+    "title": "Uniform Hermitian–Einstein spectra with repeated stable factors",
+    "date": "2026-10-29",
+    "pdf_sha256": "a54528e6aaad77be9ee7bcca8e09b55d9f0bcf444d53ffb52028851d4573a43d",
+    "source_sha256": "11b1ffc091a56d3ef9b8b9364caefd6336d8fcbf983e92e59305675d446929da",
+    "source_files_sha256": {
+      "main.tex": "11b1ffc091a56d3ef9b8b9364caefd6336d8fcbf983e92e59305675d446929da",
+      "references.tex": "dc2ce4344247a09ff7bed84c4bdd39636b1e186dde8382b477cbbbcd161a9cc9",
+      "sections/01_introduction.tex": "7aee66788699338a91c4902461198827d1d2677093e26492adb8145c4fcc0cfb",
+      "sections/02_extensions.tex": "e945d32d32cabf152586695a4ee44bfbdb1fcfaf7180e684d82af2a1d0c82d29",
+      "sections/03_curvature.tex": "d290ca8e9eb0b9363990830e2086794debdbcf7a93350cf79ee1b852b7cfc827",
+      "sections/04_calibration.tex": "c22ace443f58450ce696441af13b5b421b4a511816de156aa22274dc3247b260",
+      "sections/05_spectrum.tex": "6a6f83c52b275cd2bf9268240d35fe11d532a704584b993b1659cd1d0345dc0f",
+      "sections/06_example.tex": "9b61a2671930cc7902bb12cb05fd53db8a391636682d83676412f4b6cff93109",
+      "sections/07_scope.tex": "f5ee8cb7b12ddc352c001ea770bb61a05c5980dcca4bf15da928b7f464622fe5"
+    },
+    "archive": {
+      "id": 23780241,
+      "doi": "10.5281/zenodo.23780241",
+      "conceptdoi": "10.5281/zenodo.23780240",
+      "record_url": "https://zenodo.org/records/23780241",
+      "created": "2026-10-29T21:13:25.971737+00:00"
+    }
   }
 ]

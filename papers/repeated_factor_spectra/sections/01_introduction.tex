@@ -1,0 +1,210 @@
+\section{Introduction}\label{sec:introduction}
+
+Let a holomorphic bundle become strictly semistable as a Kähler polarization
+approaches a wall. On the stable side its Hermitian--Einstein metric may
+diverge in a fixed holomorphic frame. The limiting polystable bundle has
+additional parallel endomorphisms, and these give rise to small eigenvalues
+of the endomorphism Dolbeault Laplacian. When a stable factor is repeated,
+the corresponding parallel endomorphisms form a matrix algebra. The small
+spectrum therefore contains matrix directions that are absent from a
+scalar graph model.
+
+We determine the entire small spectrum for simple extensions of two
+polystable layers, uniformly as positive spectral scales separate. The
+finite operator is specified by the extension class and a quadratic
+moment-map equation. The principal analytical issue is to compare this
+independently specified balance with the actual Hermitian--Einstein metric.
+An ordinary implicit-function estimate for the finite equation would divide
+by its smallest positive eigenvalue. Such an estimate is not uniform near
+a face of a stability chamber. We instead use curvature identities for
+all multiplicity projections and a finite-dimensional degree argument.
+
+\subsection{Geometric data and normalization}
+Let $X$ be a compact connected complex manifold of dimension $d$, and let
+$\omega_s$, for $s$ in a neighborhood of $0$ in $\R^k$, be a smooth family
+of Kähler forms. Put $dV_s=\omega_s^d/d!$ and $V_s=\int_XdV_s$.
+Fix pairwise nonisomorphic locally free bundles $F_v$, of ranks $r_v$,
+which are stable and have the same slope with respect to $\omega_0$.
+The index set is the disjoint union of nonempty sets $I$ and $J$.
+Fix positive multiplicities $m_v$ and a simple holomorphic extension
+\begin{equation}\label{eq:extension}
+0\longrightarrow S=\bigoplus_{i\in I}F_i\otimes\C^{m_i}
+\longrightarrow E\longrightarrow
+U=\bigoplus_{j\in J}F_j\otimes\C^{m_j}\longrightarrow0.
+\end{equation}
+Simple means $H^0(X,\End E)=\C\id_E$. Repetitions are allowed within
+either layer; the same stable isomorphism type does not occur in both.
+At least one $m_v>1$ in the applications of interest.
+
+After shrinking the parameter neighborhood, suppose the factors have
+smoothly varying Hermitian--Einstein metrics $h_{v,s}$. This is the usual
+local continuation of the stable factor metrics; it can also be taken as
+an explicit hypothesis on the chosen family. Fix their scalar
+normalizations. Write $i\Lambda_sF_{h_{v,s}}=\kappa_v(s)\id_{F_v}$ and
+\begin{equation}\label{eq:kappa}
+R_E=\sum_vr_vm_v,\qquad
+\kappa_E(s)=\frac{1}{R_E}\sum_vr_vm_v\kappa_v(s),\qquad
+b_v(s)=-r_v\bigl(\kappa_v(s)-\kappa_E(s)\bigr).
+\end{equation}
+Our curvature convention is $c_1(F)=[i\tr F_h/(2\pi)]$; thus
+\begin{equation}\label{eq:degree}
+\kappa(F)=\frac{2\pi}{\rk(F)V_s}
+\int_Xc_1(F)\wedge\frac{\omega_s^{d-1}}{(d-1)!}.
+\end{equation}
+All slope comparisons have the same sign in this normalization.
+The numbers $b_v$ satisfy $\sum_vm_vb_v=0$. They are coefficients in
+the dual trace pairing, so their definition already includes the factor
+ranks.
+
+Choose fixed bases of $\Ext^1(F_j,F_i)$ and take their current harmonic
+representatives $\beta_{ij,a,s}$. If $Z=(Z_{ij,a})$ is an array of
+$m_i$ by $m_j$ matrices, set
+\begin{equation}\label{eq:harmonic}
+N_s(Z)_{ij}=\sum_a\beta_{ij,a,s}\otimes Z_{ij,a},\qquad
+\dbar_{s,Z}=\dbar_G+N_s(Z),\qquad G=S\oplus U,
+\end{equation}
+and define $q_s(Z)=V_s^{-1}\norm{N_s(Z)}_{L^2}^2$ using
+$h_{0,s}=\bigoplus_vh_{v,s}\otimes I_{m_v}$. We retain the actual
+harmonic Gram matrices. Fixed cohomology coordinates need not be
+orthonormal for varying $s$. The extension $E$ has fixed cohomology
+matrices $Z^0$ in this notation.
+
+The group $\mathcal G=\prod_v\mathrm{GL}(m_v,\C)$ acts by
+$(g\cdot Z)_{ij,a}=g_iZ_{ij,a}g_j^{-1}$; its compact subgroup is
+$K=\prod_v\mathrm U(m_v)$. Define the quadratic moment map by
+\begin{equation}\label{eq:momentdefinition}
+\sum_v\tr\bigl(Y_v\mu_s(Z)_v\bigr)
+=\left.\frac{d}{dt}\right|_{t=0}q_s(e^{tY/2}\cdot Z)
+\quad(Y_v=Y_v^*).
+\end{equation}
+In orthonormal arrow coordinates it is the sum of incoming $ZZ^*$ minus
+outgoing $Z^*Z$. We call $Z$ \emph{balanced} at $s$ if
+$\mu_s(Z)_v=b_v(s)I_{m_v}$. Finite balancing below concerns the orbit
+$\mathcal G\cdot Z^0$, independently of the unknown HE metric.
+
+A collection of subspaces $W_v\subset\C^{m_v}$ is a
+\emph{subrepresentation} if $Z^0_{ij,a}W_j\subset W_i$ for every arrow.
+It is proper and nonzero if it is neither the whole collection nor zero.
+The representation is $b(s)$-stable when
+\begin{equation}\label{eq:finite-stability}
+\sum_vb_v(s)\dim W_v>0
+\quad\text{for every proper nonzero subrepresentation }W.
+\end{equation}
+This is King's positive sign convention. The real-weight balancing theorem
+then supplies a balanced $Z\in\mathcal G\cdot Z^0$, unique up to $K$.
+The details and sign conversion are given in Section~\ref{sec:extensions}.
+
+\subsection{The finite spectrum and the main theorem}
+Consider the full complex vector space
+\begin{equation}\label{eq:finite-space}
+\HH=\left\{X=(X_v)\in\bigoplus_vM_{m_v}(\C):
+\sum_vr_v\tr X_v=0\right\},\qquad
+\norm X_r^2=\sum_vr_v\tr(X_v^*X_v).
+\end{equation}
+Its complex dimension is $N=\sum_vm_v^2-1$. For a balanced $Z$, define
+\begin{equation}\label{eq:finite-form}
+\mathcal Q_{s,Z}(X)=q_s([X,Z]),\qquad
+[X,Z]_{ij,a}=X_iZ_{ij,a}-Z_{ij,a}X_j.
+\end{equation}
+Let $\nu_1(s)\le\cdots\le\nu_N(s)$ be its eigenvalues relative to
+$\|\cdot\|_r^2$.
+Simplicity makes these eigenvalues positive. Compact-unitary invariance
+makes them independent of the choice of balanced representative.
+They are defined from the geometry, extension orbit, and finite balance.
+
+\begin{theorem}\label{thm:main}
+Fix the geometric data above. There are a neighborhood $\mathcal U$ of
+$0$ and constants $C,\gamma>0$ with the following properties.
+For $s\in\mathcal U$, the bundle $E$ is slope-stable with respect to
+$\omega_s$ if and only if its multiplicity representation is
+$b(s)$-stable. At such a parameter let $Z$ be balanced and put
+\begin{equation}\label{eq:sigma}
+\sigma(s)=\sum_{i\in I}m_ib_i(s)=q_s(Z)>0.
+\end{equation}
+Let $h_{\HE,s}$ be the HE metric whose determinant is the product
+determinant metric induced by the fixed factor metrics. The ordered
+eigenvalues, counted with complex multiplicity, of
+$\Delta_s=\dbar_{\End E}^{*,h_{\HE,s}}\dbar_{\End E}$ on
+$L^2(X,\End_0E)$ satisfy
+\begin{equation}\label{eq:main-spectrum}
+\left|\frac{\lambda_j(s)}{\nu_j(s)}-1\right|\le C\sigma(s)
+\quad(1\le j\le N),\qquad \lambda_{N+1}(s)\ge\gamma.
+\end{equation}
+If $h_{\mathrm{bal},s}$ is the pullback of $h_{0,s}$ through a
+determinant-one balancing gauge and the harmonic identification of $E$,
+then
+\begin{equation}\label{eq:main-metric}
+e^{-C\sigma(s)}h_{\mathrm{bal},s}\le h_{\HE,s}
+\le e^{C\sigma(s)}h_{\mathrm{bal},s}.
+\end{equation}
+The constants impose no lower bound on a positive stability margin,
+$\nu_1$, or any positive ratio $\nu_j/\nu_k$. No estimate of the form
+$|s|=O(\sigma(s))$ is required.
+\end{theorem}
+
+The harmonic identification in this statement is fixed by removing the
+exact part of the extension form, as in Lemma~\ref{lem:algebra}.
+Changing the balanced representative by $K$ leaves the pulled-back metric
+unchanged; the remaining common scalar is fixed by the determinant.
+The constants may depend on the fixed factors, multiplicities, harmonic
+spaces, and smooth parameter neighborhood. They are not asserted uniform
+under degeneration of this background or growth of the multiplicities.
+
+The theorem controls endomorphism-valued zero-forms. It is not a statement
+about all degrees of the Dolbeault complex or the entire Yang--Mills
+Hessian. At a nonsplit strictly semistable boundary point the original
+bundle need not admit an HE metric. All occurrences of $h_{\HE,s}$ in
+the theorem are on the stable side.
+
+The example in Section~\ref{sec:example} is a fixed rank-five bundle on
+$(\PP^1)^4$ with one multiplicity-two target and three scalar sources.
+For genuine polarizations depending on $t,\delta>0$, it has
+\begin{equation}\label{eq:intro-example}
+\lambda_1=\frac54t\delta\bigl(1+O(t)+O(\delta)\bigr),\qquad
+\lambda_j\asymp t\ (2\le j\le6),\qquad\lambda_7\ge\gamma.
+\end{equation}
+The constants are uniform for independently small $t$ and $\delta$.
+In particular $\delta=e^{-1/t}$ is allowed.
+
+\subsection{Relation to earlier work and proof structure}
+The correspondence between stable bundles and HE metrics is due to
+Donaldson and Uhlenbeck--Yau; we use the standard formulation and
+endomorphism identities in Kobayashi~\cite{kobayashi1987}.
+King~\cite{king1994} relates subrepresentation stability to moment-map
+balance. Haiden--Katzarkov--Kontsevich--Pandit~\cite[\S5.1,
+Theorem~5.1]{hkkp2023} give the real-weight formulation used here,
+including positive masses on the multiplicity algebra.
+
+Clarke--Tipler~\cite[Propositions~3.1--3.2]{clarketipler2024}
+construct the local elliptic reduction without an abelian restriction;
+their local wall theorem assumes abelian graded automorphisms.
+Delloque~\cite[Proposition~4.2 and Theorems~4.8--4.9]{delloque2025}
+allows nonabelian graded automorphisms and proves continuity and
+quantitative convergence of HYM representatives under metric variation.
+His Proposition~4.7 obtains a zero of the geometrically deformed moment
+map. These results already supply nonabelian local reduction and HYM
+existence. They do not identify that zero, with a relative error tending
+to zero uniformly near weak directions, with a zero of the independently
+specified quadratic moment map. The distinction is essential for
+\eqref{eq:main-spectrum}: an additive error that is small compared with
+the total extension energy may dominate the least positive eigenvalue.
+All Delloque locators refer to the published version, arXiv version~4.
+
+The repeated-factor harmonic quiver also occurs in the flow theory of
+Lam~\cite[Theorems~8.2, 8.7 and Proposition~8.9]{lam2026}; the finite
+iterated-logarithmic asymptotics are developed in
+\cite[Theorem~5.11]{hkkp2023}. Those comparisons concern bounded metric
+distance in a flow problem. The present result is stationary and gives
+a multiplicative error tending to one. It extends the distinct-factor
+spectral theorem of~\cite{wuebben2026uniform}; no result of that paper
+is needed as an unproved step in the argument below.
+
+The new estimate is Proposition~\ref{prop:projection}: the reduced
+curvature residual, paired with any orthogonal multiplicity projection,
+is bounded by total extension energy times the energy crossing that
+projection. Theorem~\ref{thm:calibration} uses this estimate on spectral
+projections of a Hermitian gauge logarithm to exclude zeros on the
+boundary of a small ball. Brouwer degree gives the desired HE correction
+without a uniform inverse for the finite Hessian. Harmonicity then makes
+the Schur-complement coupling proportional to each vector's own finite
+energy, yielding every relative eigenvalue estimate.

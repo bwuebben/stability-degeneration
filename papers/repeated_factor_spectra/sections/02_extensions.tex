@@ -1,0 +1,165 @@
+\section{Harmonic extensions and finite balance}\label{sec:extensions}
+
+We first identify the algebra that enters the finite model. The use of
+the complete algebra, rather than one scalar per stable type, determines
+both the number of small eigenvalues and the correct stability condition.
+
+\begin{lemma}\label{lem:algebra}
+For the extension \eqref{eq:extension}, harmonic representatives of its
+fixed cohomology class give a presentation \eqref{eq:harmonic} for every
+small $s$. In this presentation
+\begin{equation}\label{eq:centralizer}
+H^0(X,\End E)=
+\left\{(X_v)\in\bigoplus_vM_{m_v}(\C):
+X_iZ^0_{ij,a}=Z^0_{ij,a}X_j\text{ for all }i,j,a\right\}.
+\end{equation}
+The two algebras are identified by parallel block endomorphisms.
+Every holomorphic isomorphism between two harmonic presentations is a
+parallel block gauge in $\mathcal G$. In particular simplicity of $E$
+is equivalent to the common centralizer being scalar.
+\end{lemma}
+
+\begin{proof}
+Stable nonisomorphic bundles of a common slope have no nonzero maps
+between them, and each has only scalar endomorphisms; see
+\cite[Chapter~V, \S7]{kobayashi1987}. Hence
+$\Hom(F_v,F_w)=0$ for $v\ne w$ and
+$\End(F_v)=\C\id$. These are statements about the fixed holomorphic
+bundles and do not change with $s$.
+
+A smooth splitting of \eqref{eq:extension} gives a closed off-diagonal
+form $\eta\in\Omega^{0,1}(\Hom(U,S))$. Its harmonic part is
+$N_s(Z^0)$, and $\eta-N_s(Z^0)=\dbar C_s$ for a smooth section
+$C_s$ of $\Hom(U,S)$. An upper-triangular unipotent change of splitting
+removes this exact part. Products of two source-to-target blocks vanish,
+so there is no nonlinear term in this change. The same observation shows
+that $\dbar_{s,Z}^2=0$ for every coefficient array $Z$. Taking $C_s$
+orthogonal to the kernel gives a smooth choice in $s$. This gauge has
+determinant one.
+
+Apply $\Hom(F_i,-)$ to \eqref{eq:extension}. Since
+$\Hom(F_i,U)=0$, one obtains
+$\Hom(F_i,E)=\Hom(F_i,S)=\C^{m_i}$. The evaluation image
+\[
+\operatorname{im}\left(\bigoplus_{i\in I}
+F_i\otimes\Hom(F_i,E)\longrightarrow E\right)=S
+\]
+is the displayed locally free subbundle, fiber by fiber. Every
+endomorphism preserves it. In a harmonic splitting an endomorphism
+therefore has the form $\left(\begin{smallmatrix}A&C\\0&B\end{smallmatrix}\right)$.
+Its diagonal equations make $A$ and $B$ parallel multiplicity blocks.
+Its remaining equation is
+\begin{equation}\label{eq:exact-harmonic}
+\dbar C+N_s(Z^0)B-AN_s(Z^0)=0.
+\end{equation}
+The last two terms are harmonic, since the multiplicity blocks are
+parallel. Exact and harmonic forms are orthogonal, so each term in this
+decomposition vanishes. Now $C$ is holomorphic and
+$\Hom(U,S)=0$, whence $C=0$. Independence of the cohomology bases gives
+\eqref{eq:centralizer}. Conversely those equations plainly define a
+holomorphic endomorphism. The same proof for an isomorphism between two
+presentations gives the asserted gauge statement.
+\end{proof}
+
+The separation of stable types across the layers is natural in this
+simple two-step setting. Indeed, for any extension of two polystable
+layers of equal slope the map
+\[
+\Hom(U,S)\longrightarrow\End(E),\qquad f\longmapsto\iota f\pi
+\]
+is injective and has square-zero image. Simplicity forces this space to
+vanish. If a stable type occurred in both layers, it would give a nonzero
+map from $U$ to $S$. This observation is specific to two polystable
+layers and is not a claim about longer filtrations.
+
+\subsection{The real domain and its dual}
+The Hermitian logarithms used for metric corrections form
+\begin{equation}\label{eq:realspaces}
+\hh=\left\{Y_v=Y_v^*: \sum_vr_v\tr Y_v=0\right\},\qquad
+\mathcal W=\left\{T_v=T_v^*: \sum_v\tr T_v=0\right\}.
+\end{equation}
+They are paired by $\langle Y,T\rangle=\sum_v\tr(Y_vT_v)$.
+The positive definite real inner product on $\hh$ is
+$\langle X,Y\rangle_r=\sum_vr_v\tr(X_vY_v)$; division of the
+$v$-th block of $T$ by $r_v$ identifies $\mathcal W$ with $\hh$.
+Both $\mu_s(Z)$ and $b=(b_vI_{m_v})$ lie in $\mathcal W$.
+Multiplicities $m_v$ and factor ranks $r_v$ have different roles.
+
+For example, at a fixed parameter orthonormalize the harmonic arrow
+basis in the volume-normalized inner product. Then
+\begin{equation}\label{eq:momentcomponents}
+\mu_i(Z)=\sum_{j,a}Z_{ij,a}Z_{ij,a}^*,\qquad
+\mu_j(Z)=-\sum_{i,a}Z_{ij,a}^*Z_{ij,a}.
+\end{equation}
+The rank weights have not disappeared: they occur in $b_v$ and in the
+inner product on the endomorphism algebra. In the original cohomology
+coordinates the same equations use the corresponding positive Gram
+matrices. Changing arrow basis commutes with $\mathcal G$ and preserves
+all subrepresentations.
+
+\begin{proposition}\label{prop:balance}
+If the fixed representation $Z^0$ is $b$-stable, its orbit contains a
+balanced representative. Under the scalar-centralizer hypothesis this
+representative is unique up to $K$. For every such representative
+\begin{equation}\label{eq:amplitude}
+q_s(Z)=\sum_{i\in I}m_ib_i=\sigma.
+\end{equation}
+The stable real weights for this fixed representation form an open
+polyhedral cone in $\{b:\sum_vm_vb_v=0\}$, possibly with empty
+intersection with the accessible parameter image.
+\end{proposition}
+
+\begin{proof}
+The real-weight finite Kempf--Ness theorem
+\cite[\S5.1, Theorem~5.1]{hkkp2023} states that a representation admits
+a balanced metric precisely when it is polystable. Its weight convention
+is $\theta(W)\le0$; setting $\theta_v=-b_v$ gives
+\eqref{eq:finite-stability} and \eqref{eq:momentcomponents}.
+The positive masses in the group metric are $r_v$. Equivalently the
+central endomorphism parameter of that convention is $-b_v/r_v$.
+No second rank factor enters \eqref{eq:finite-stability}.
+The theorem allows real weights through its logarithmic determinant
+potential; no rational approximation is required. The underlying
+integral-character statement is King's
+\cite[Propositions~3.1--3.2 and Theorem~6.1]{king1994}.
+
+For clarity, uniqueness here can be checked directly. If two balanced
+points differ by $g\in\mathcal G$, polar decomposition and a common
+scalar give $g=ke^{Y/2}$, with $k\in K$ and $Y\in\hh$.
+Diagonalize $Y$ blockwise and denote its eigenvalues by $y_p$.
+Writing $w_{pq}$ for the total squared arrow entries from source
+eigenvector $q$ to target eigenvector $p$, the function
+\begin{equation}\label{eq:convexpotential}
+f(t)=q_s(e^{tY/2}\cdot Z)-t\langle Y,b\rangle
+\end{equation}
+satisfies
+\[
+f''(t)=\sum_{p,q}(y_p-y_q)^2e^{t(y_p-y_q)}w_{pq}.
+\]
+For $Y\ne0$ in $\hh$ this is positive: otherwise $Y$ centralizes
+$Z$ and must be scalar, contrary to its weighted trace zero.
+Balance at both endpoints would give $f'(0)=f'(1)=0$.
+Thus $Y=0$. Tracing all target equations in
+\eqref{eq:momentcomponents} proves \eqref{eq:amplitude}.
+Finally only finitely many dimension vectors $(\dim W_v)$ are
+possible, and each gives a linear strict inequality. These define the
+claimed cone. The actual polarization image need not fill that cone.
+\end{proof}
+
+At balance the sign can also be seen without a stability convention.
+If $\Pi_v$ projects onto a subrepresentation, then for each arrow
+\[
+\tr(\Pi_iZZ^*)-\tr(\Pi_jZ^*Z)
+=\|\Pi_iZ(1-\Pi_j)\|_F^2-\|(1-\Pi_i)Z\Pi_j\|_F^2.
+\]
+The second term is zero. Equality after summation would make both
+the subrepresentation and its orthogonal complement invariant; its
+projection would then be a nonscalar centralizer element. Thus balance
+with scalar centralizer implies precisely the strict positive sign.
+
+A common complex scalar can normalize the bundle determinant of any
+balancing gauge to one, since it acts trivially on the arrows and its
+bundle determinant is its $R_E$-th power. Choices of scalar phase do
+not affect the metric. Together with the unipotent identification in
+Lemma~\ref{lem:algebra}, this defines the determinant convention in
+Theorem~\ref{thm:main}.

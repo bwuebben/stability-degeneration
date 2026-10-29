@@ -1,0 +1,168 @@
+\section{Projected curvature and multiplicity projections}\label{sec:curvature}
+
+All estimates in this section hold on the product of a fixed small
+parameter neighborhood and a fixed small ball of coefficient arrays.
+The constants are independent of any positive finite eigenvalue.
+For each $s$ consider pointwise trace-free, $h_{0,s}$-Hermitian
+endomorphisms of $G$. Let $P_s$ be their $L^2$ projection onto the
+entire parallel algebra $\hh$, and put $Q_s=1-P_s$.
+For $u\in Q_s$ define
+\begin{equation}\label{eq:conjugatedcurvature}
+\widehat K(s,Z,u)=e^{u/2}
+\bigl(i\Lambda_sF_{\dbar_{s,Z},h_{0,s}e^u}\bigr)e^{-u/2}
+-\kappa_E(s)I.
+\end{equation}
+This is Hermitian for $h_{0,s}$. Its pointwise trace vanishes:
+the determinant holomorphic structure is the split determinant and
+$\tr u=0$, so the determinant curvature is unchanged and has constant
+contraction $R_E\kappa_E$.
+
+\begin{lemma}\label{lem:complement}
+The equation $Q_s\widehat K(s,Z,u)=0$ has a unique small solution
+$u(s,Z)\in Q_s$, smooth in the finite parameters. For every fixed
+nonnegative integer $a$,
+\begin{equation}\label{eq:uquadratic}
+\norm{u(s,Z)}_{C^a}\le C_aq_s(Z).
+\end{equation}
+It satisfies $u(s,k\cdot Z)=ku(s,Z)k^{-1}$ for $k\in K$.
+\end{lemma}
+
+\begin{proof}
+At $Z=u=0$ the linearization of \eqref{eq:conjugatedcurvature} in
+the real Hermitian metric variable is
+\begin{equation}\label{eq:linearization}
+L_s=\tfrac12(\Delta_{\dbar,s}+\Delta_{\partial,s}).
+\end{equation}
+The conjugation in \eqref{eq:conjugatedcurvature} is included in
+this formula; it gives the symmetric real linearization even when
+the split summands have different mean curvatures. The Kähler
+identities give \eqref{eq:linearization}, and
+\[
+\langle u,L_su\rangle_{L^2}
+=\tfrac12\bigl(\|\dbar u\|_{L^2}^2+\|\partial u\|_{L^2}^2\bigr).
+\]
+Its kernel is the parallel algebra. At $s=0$ this follows from
+stability and vanishing cross-Hom groups. For nearby $s$, a zero
+of the displayed sum is parallel for the same split connection;
+there are no additional parallel maps. Conversely every
+multiplicity block is parallel. The positive spectral gap of
+$L_0$ on the complement therefore persists uniformly in a small
+neighborhood, and so does its elliptic inverse.
+
+Take an integer $\ell>d$, so that the relevant Sobolev spaces are
+algebras on the real $2d$-dimensional manifold. The projected equation
+is a smooth map from $Q_sH^{\ell+2}$ to $Q_sH^\ell$.
+Identify these varying spaces smoothly with those at zero. The
+parameter-dependent implicit-function theorem applies because the
+derivative $Q_sL_sQ_s$ is uniformly invertible. At $Z=0$, the split
+curvature is parallel; hence $u(s,0)=0$.
+
+The first derivative of the contracted curvature in $Z$ vanishes.
+Indeed its off-diagonal linear terms are contractions of covariant
+derivatives of the harmonic forms $\beta_{ij,a,s}$; the Kähler
+identities identify them with their vanishing Dolbeault adjoints.
+Thus $D_Zu(s,0)=0$. Taylor expansion gives the quadratic bound in
+Sobolev norm. Elliptic regularity gives \eqref{eq:uquadratic} for
+each fixed spatial order. The group $K$ preserves the equation,
+the entire parallel algebra, and its orthogonal complement.
+Uniqueness proves the equivariance. It is unnecessary, and generally
+false, that $K$ fix every vector of the parallel algebra.
+\end{proof}
+
+Write $\mathcal F_v(s,Z)$ for the volume-normalized integral of the
+partial trace over $F_v$ of the $v,v$ block of
+$\widehat K(s,Z,u(s,Z))$. Then
+\begin{equation}\label{eq:reducedprojection}
+\bigl(P_s\widehat K\bigr)_v
+=I_{F_v}\otimes\frac{\mathcal F_v(s,Z)}{r_v}.
+\end{equation}
+In particular $\mathcal F\in\mathcal W$, and the full HE equation
+is equivalent to $\mathcal F=0$ once the complement is solved.
+
+\begin{proposition}\label{prop:projection}
+There is a smooth residual $\mathcal R(s,Z)\in\mathcal W$ such that
+\begin{equation}\label{eq:reducedexpansion}
+\mathcal F(s,Z)=-b(s)+\mu_s(Z)+\mathcal R(s,Z),\qquad
+\|D_Z^2\mathcal R(s,Z)\|\le Cq_s(Z).
+\end{equation}
+For every tuple $\Pi=(\Pi_v)$ of orthogonal multiplicity projections,
+\begin{equation}\label{eq:projectionestimate}
+\left|\sum_v\tr\bigl(\Pi_v\mathcal R_v(s,Z)\bigr)\right|
+\le Cq_s(Z)q_s([\Pi,Z]).
+\end{equation}
+One constant works for all projections and all sufficiently small
+$(s,Z)$, including projections of different ranks at different vertices.
+\end{proposition}
+
+The last factor measures the squared norm of precisely those arrow
+blocks crossing between $\operatorname{im}\Pi$ and its orthogonal
+complement. This factor, rather than a norm of $\Pi$ alone, will
+retain control at an arbitrarily weak finite direction.
+
+\begin{proof}
+At $Z=0$, \eqref{eq:reducedprojection} gives $\mathcal F=-b$.
+Harmonicity kills the linear term, as in Lemma~\ref{lem:complement}.
+The direct quadratic term in the Chern curvature is the incoming-minus-
+outgoing expression \eqref{eq:momentcomponents}, with its current
+harmonic Gram form. The quadratic metric correction contributes
+$L_su_2$, where $u_2$ is the quadratic Taylor term of $u$. Its
+pairing with every parallel block vanishes, because $L_s$ is
+self-adjoint and annihilates those blocks. This proves the constant,
+linear, and quadratic parts of \eqref{eq:reducedexpansion}.
+
+The unitary which equals $-I$ at all targets and $I$ at all sources
+sends $Z$ to $-Z$ and acts trivially by conjugation on the parallel
+algebra. Equivariance yields $\mathcal F(s,-Z)=\mathcal F(s,Z)$.
+Consequently the cubic term also vanishes. Joint Taylor expansion,
+with the background parameter restricted to a relatively compact
+neighborhood, gives the Hessian bound in \eqref{eq:reducedexpansion}.
+In particular it holds for each nearby $s$, with no comparison
+between $|s|$ and $q_s(Z)$.
+
+Fix $\Pi$ and decompose each arrow into its preserving and crossing
+parts, writing $Z=A+C$. Explicitly,
+\[
+A_{ij,a}=\Pi_iZ_{ij,a}\Pi_j+(1-\Pi_i)Z_{ij,a}(1-\Pi_j),
+\quad C=Z-A.
+\]
+The two parts are orthogonal in the harmonic Gram norm, and
+$q_s(C)=q_s([\Pi,Z])$. This remains true for nondiagonal arrow
+Gram matrices, since preserving and crossing matrix blocks are
+orthogonal for each pair of arrow indices.
+
+At $C=0$ the harmonic bundle is a holomorphic direct sum
+$G_\Pi\oplus G_{1-\Pi}$. A circle acting scalarly on $G_\Pi$
+and trivially on its complement fixes $A$. Equivariance and
+uniqueness of $u$ force $u(s,A)$ to preserve this sum. Integrated
+Chern--Weil trace on the first summand is its degree, whence
+\begin{equation}\label{eq:projectiondegree}
+\sum_v\tr(\Pi_v\mathcal F_v(s,A))
+=\sum_vr_v\rk(\Pi_v)(\kappa_v-\kappa_E)
+=-\sum_v\tr(\Pi_vb_vI).
+\end{equation}
+Conjugation by $e^{u/2}$ does not change this trace because it
+preserves the summand. The moment-map trace on that summand is
+zero: every remaining arrow begins and ends within the same
+summand. Thus $\langle\Pi,\mathcal R(s,A)\rangle=0$.
+
+The unitary $2\Pi-I$ fixes $A$ and reverses $C$. It commutes with
+$\Pi$, so $\langle\Pi,\mathcal R(s,A+C)\rangle$ is even in $C$.
+Its first derivative at $C=0$ vanishes. Taylor expansion in $C$
+alone, and the Hessian bound along $A+tC$, now give
+\[
+|\langle\Pi,\mathcal R(s,A+C)\rangle|
+\le Cq_s(A+C)q_s(C).
+\]
+Here $q_s(A+tC)\le q_s(A+C)$ for $0\le t\le1$ by orthogonality.
+The finitely many rank choices of $\Pi$ give compact products of
+Grassmannians; unitary invariance and bounded derivatives make
+the constant independent of $\Pi$. This proves
+\eqref{eq:projectionestimate}.
+\end{proof}
+
+Only the auxiliary representation $A$, with its crossing blocks removed,
+was used to form the holomorphic direct summand in the proof.
+The projection $\Pi$ need not define a holomorphic subbundle for the
+original representation $Z$. This is why
+\eqref{eq:projectionestimate} is available for every orthogonal
+projection, including the spectral projections used next.

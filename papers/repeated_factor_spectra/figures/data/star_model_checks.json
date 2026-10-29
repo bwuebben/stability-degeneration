@@ -1,0 +1,179 @@
+{
+  "scope": "Finite exact model checks and floating-point balancing; no PDE verification.",
+  "versions": {
+    "python": "3.13.14",
+    "sympy": "1.14.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "exact": {
+    "covariances": [
+      "Matrix([[3/2, 0], [0, 1/2]])",
+      "Matrix([[1, 1/2], [1/2, 1]])",
+      "Matrix([[1/2, -1/2], [-1/2, 3/2]])"
+    ],
+    "determinants": [
+      "3/4",
+      "3/4",
+      "1/2"
+    ],
+    "noncommuting_covariance_commutator": "Matrix([[0, 1/2], [-1/2, 0]])",
+    "full_trace_free_dimension": 6,
+    "centralizer_dimension": 1,
+    "identity_arrow_centralizer_dimension": 4,
+    "trace_free_characteristic_polynomial": "(lambda - 5)*(lambda - 3)*(2*lambda**2 - 10*lambda + 9)*(2*lambda**2 - 10*lambda + 11)/4",
+    "positive_gram_leading_minors": [
+      "6",
+      "71/4",
+      "105/2",
+      "279",
+      "762",
+      "7425/4"
+    ],
+    "scalar_compression_characteristic_polynomial_including_zero": "lambda*(lambda - 5)*(lambda - 2)**2",
+    "central_balance_adjoint_invariance": true,
+    "off_balance_jordan_control": {
+      "complex_trace_free_dimension": 7,
+      "complex_trace_free_kernel_dimension": 1,
+      "hermitian_real_kernel_dimension": 0,
+      "hermitian_gram_determinant": "1600",
+      "target_moment": "Matrix([[2, 0], [0, 1]])",
+      "source_moment": "Matrix([[-1, 0], [0, -2]])"
+    }
+  },
+  "numerical": [
+    {
+      "weak_demand": 1.0,
+      "gauge_coordinates": [
+        0.0,
+        0.0
+      ],
+      "normalized_balance_residual": 5.551115123125783e-17,
+      "eigenvalues": [
+        0.5885621722338521,
+        0.8169872981077805,
+        1.4999999999999998,
+        1.683012701892219,
+        1.9114378277661481,
+        2.5000000000000004
+      ],
+      "weak_coefficient": 0.5885621722338521,
+      "next_eigenvalue": 0.8169872981077805,
+      "covariance_commutator_norm": 0.1767766952966369
+    },
+    {
+      "weak_demand": 0.1,
+      "gauge_coordinates": [
+        0.24561655413093877,
+        0.04211728868541841
+      ],
+      "normalized_balance_residual": 1.1102230246251565e-16,
+      "eigenvalues": [
+        0.11976206827529944,
+        0.4409073524374768,
+        1.0499999999999998,
+        1.0518605554897038,
+        1.61026998359253,
+        2.0272000402049892
+      ],
+      "weak_coefficient": 1.1976206827529943,
+      "next_eigenvalue": 0.4409073524374768,
+      "covariance_commutator_norm": 0.023445299274115438
+    },
+    {
+      "weak_demand": 0.01,
+      "gauge_coordinates": [
+        0.2789718166775463,
+        0.05084383849936657
+      ],
+      "normalized_balance_residual": 1.2412670766236366e-16,
+      "eigenvalues": [
+        0.012450753914786727,
+        0.4173820746023118,
+        1.0049999999999994,
+        1.0050170413883324,
+        1.5876278771538719,
+        2.0025222529406963
+      ],
+      "weak_coefficient": 1.2450753914786727,
+      "next_eigenvalue": 0.4173820746023118,
+      "covariance_commutator_norm": 0.0023974520621022947
+    },
+    {
+      "weak_demand": 0.0001,
+      "gauge_coordinates": [
+        0.28276020137621866,
+        0.051883917352140256
+      ],
+      "normalized_balance_residual": 0.0,
+      "eigenvalues": [
+        0.00012499510722977763,
+        0.41489781851236,
+        1.0000500000000005,
+        1.000050001686885,
+        1.5851521824650678,
+        2.0000250022284582
+      ],
+      "weak_coefficient": 1.2499510722977762,
+      "next_eigenvalue": 0.41489781851236,
+      "covariance_commutator_norm": 2.4030363709182304e-05
+    },
+    {
+      "weak_demand": 1e-06,
+      "gauge_coordinates": [
+        0.282798206901844,
+        0.05189440240398578
+      ],
+      "normalized_balance_residual": 0.0,
+      "eigenvalues": [
+        1.249999510754673e-06,
+        0.4148730675962995,
+        1.0000004999999998,
+        1.000000500000169,
+        1.5851274324037985,
+        2.0000002500002214
+      ],
+      "weak_coefficient": 1.249999510754673,
+      "next_eigenvalue": 0.4148730675962995,
+      "covariance_commutator_norm": 2.4030919494293005e-07
+    },
+    {
+      "weak_demand": 1e-08,
+      "gauge_coordinates": [
+        0.2827985869692906,
+        0.051894507262971894
+      ],
+      "normalized_balance_residual": 0.0,
+      "eigenvalues": [
+        1.2499999951073423e-08,
+        0.4148728200962076,
+        1.0000000049999995,
+        1.0000000049999995,
+        1.585127184903793,
+        2.0000000024999975
+      ],
+      "weak_coefficient": 1.2499999951073422,
+      "next_eigenvalue": 0.4148728200962076,
+      "covariance_commutator_norm": 2.4030925051876713e-09
+    },
+    {
+      "weak_demand": 1e-10,
+      "gauge_coordinates": [
+        0.28279859076996655,
+        0.0518945083115627
+      ],
+      "normalized_balance_residual": 0.0,
+      "eigenvalues": [
+        1.2499999999591797e-10,
+        0.4148728176212073,
+        1.0000000000499991,
+        1.00000000005,
+        1.5851271824287918,
+        2.000000000024999
+      ],
+      "weak_coefficient": 1.2499999999591798,
+      "next_eigenvalue": 0.4148728176212073,
+      "covariance_commutator_norm": 2.403092510745252e-11
+    }
+  ]
+}

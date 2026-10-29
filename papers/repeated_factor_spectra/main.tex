@@ -1,0 +1,67 @@
+\pdfoutput=1
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{booktabs,adjustbox,graphicx,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdfauthor={Bernd Johannes Wuebben},pdftitle={Uniform Hermitian--Einstein spectra with repeated stable factors}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\HE}{\mathrm{HE}}
+\newcommand{\dbar}{\bar\partial}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\hh}{\mathfrak h}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\title[HE spectra with repeated stable factors]{Uniform Hermitian--Einstein spectra\\with repeated stable factors}
+\author{Bernd Johannes Wuebben}
+\subjclass[2020]{53C07 (primary); 32L05, 58J50, 16G20 (secondary)}
+\keywords{Hermitian--Einstein metrics, stability walls, Dolbeault spectrum,
+quiver representations, repeated stable factors}
+\date{October 29, 2026}
+\begin{document}
+\begin{abstract}
+We prove uniform relative asymptotics for all small positive Dolbeault
+eigenvalues on trace-free endomorphism-valued zero-forms for
+Hermitian--Einstein metrics on simple two-step extensions
+near an equal-slope Kähler polarization. The stable factors may occur with
+arbitrary fixed multiplicities, with distinct isomorphism types in the two
+layers. The finite comparison operator is the commutator Laplacian on the
+full complex multiplicity algebra, evaluated at an independently balanced
+representative of the extension. Every small eigenvalue has relative error
+bounded by a fixed multiple of the total balanced extension energy, and the remaining spectrum
+has a uniform positive lower bound. No lower bound on positive eigenvalue
+ratios or stability margins is imposed. The main estimate bounds the
+curvature residual against every multiplicity projection by its crossing
+energy; a degree argument then compares the actual metric with the balanced
+metric without inverting a degenerating finite Hessian. A fixed rank-five
+bundle on a product of four projective lines exhibits six small modes and
+arbitrarily separated positive scales.
+\end{abstract}
+\maketitle
+\input{sections/01_introduction}
+\input{sections/02_extensions}
+\input{sections/03_curvature}
+\input{sections/04_calibration}
+\input{sections/05_spectrum}
+\input{sections/06_example}
+\input{sections/07_scope}
+\input{references}
+\end{document}

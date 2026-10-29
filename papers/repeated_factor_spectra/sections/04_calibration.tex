@@ -1,0 +1,164 @@
+\section{Comparison with an independently balanced metric}\label{sec:calibration}
+
+The reduced finite equation differs from quadratic balance by the
+residual of Proposition~\ref{prop:projection}. Its derivative may have
+arbitrarily small positive eigenvalues. We obtain the required metric
+correction by excluding zeros on the boundary of a small ball, rather
+than estimating the inverse of that derivative.
+
+\begin{theorem}\label{thm:calibration}
+There are constants $A,\sigma_0>0$ such that the following holds
+uniformly in the fixed background neighborhood. Let $Z$ satisfy
+$\mu_s(Z)=b(s)$, let its complex centralizer be scalar, and suppose
+$0<\sigma=q_s(Z)<\sigma_0$. Then some $Y\in\hh$ satisfies
+\begin{equation}\label{eq:calibration}
+\|Y\|_{\op}\le A\sigma,\qquad
+\mathcal F(s,e^{Y/2}\cdot Z)=0.
+\end{equation}
+For $Z'=e^{Y/2}\cdot Z$, the metric $h_{0,s}e^{u(s,Z')}$ is HE
+on $E_{s,Z'}$, and $\|u(s,Z')\|_{C^a}\le C_a\sigma$ for every
+fixed $a$. The constants do not depend on a positive finite
+eigenvalue or on a ratio of such eigenvalues.
+\end{theorem}
+
+\begin{proof}
+On the real space $\hh$ consider the homotopy into $\mathcal W$
+\begin{equation}\label{eq:homotopy}
+H_\tau(Y)=\mu_s(e^{Y/2}\cdot Z)-b+
+\tau\mathcal R(s,e^{Y/2}\cdot Z),\qquad 0\le\tau\le1.
+\end{equation}
+Use the ball $\|Y\|_{\op}<a$, where $a=A\sigma<1$ and
+$\|Y\|_{\op}=\max_v\|Y_v\|_{\op}$. Write
+$M=\sum_vm_v$. Both layers are nonzero, so $M\ge2$.
+
+Suppose $\|Y\|_{\op}=a$. Diagonalize each block of $Y$ unitarily
+and sort all $M$ eigenvalues as $y_1\le\cdots\le y_M$, retaining
+their vertices. The condition $\sum_vr_v\tr Y_v=0$, with positive
+weights, implies that their oscillation is at least $a$. An adjacent
+gap therefore satisfies
+\begin{equation}\label{eq:gapchoice}
+\delta=y_{\ell+1}-y_\ell\ge\frac{a}{M-1}.
+\end{equation}
+Let $\Pi$ be the tuple of spectral projections onto eigenvectors
+above this gap. It is nonzero and proper and commutes with $Y$.
+
+Use orthonormal arrow coordinates at this fixed $s$. If $p$ is a
+target eigenvector and $q$ a source eigenvector, write $w_{pq}$ for
+the sum of squared arrow entries joining them. The gauge
+$e^{Y/2}$ multiplies $w_{pq}$ by $e^{y_p-y_q}$. Since $\mu_s(Z)=b$,
+\begin{align}
+\langle\Pi,\mu_s(e^{Y/2}\cdot Z)-b\rangle
+&=\sum_{p,q}(\Pi_p-\Pi_q)(e^{y_p-y_q}-1)w_{pq}\notag\\
+&\ge(1-e^{-\delta})q_s([\Pi,Z])\notag\\
+&\ge e^{-2a}\frac{a}{M-1}q_s([\Pi,Z]).\label{eq:boundarypositive}
+\end{align}
+For a high target and low source the exponential difference is
+positive and at least $e^\delta-1$. For a low target and high
+source the projection sign is negative and its product with the
+exponential difference is at least $1-e^{-\delta}$. These are all
+crossing entries; preserving entries contribute zero. The last
+inequality follows from $\delta\le2a$ and
+$1-e^{-\delta}\ge\delta e^{-\delta}$.
+The crossing energy is strictly positive. Otherwise $\Pi$ would
+commute with every arrow and be a nonscalar centralizer element.
+
+Put $Z_Y=e^{Y/2}\cdot Z$. The gauge bounds and $[\Pi,Y]=0$ give
+\begin{equation}\label{eq:crossingbounds}
+q_s(Z_Y)\le e^{2a}\sigma,\qquad
+q_s([\Pi,Z_Y])\le e^{2a}q_s([\Pi,Z]).
+\end{equation}
+Proposition~\ref{prop:projection} consequently yields
+\begin{equation}\label{eq:boundaryerror}
+|\langle\Pi,\mathcal R(s,Z_Y)\rangle|
+\le Ce^{4a}\sigma q_s([\Pi,Z]).
+\end{equation}
+Choose $A>2C(M-1)$, and then choose $\sigma_0$ so small that
+$e^{6A\sigma_0}<2$ and the entire gauge ball stays in the
+coefficient neighborhood. Since $a=A\sigma$,
+\eqref{eq:boundarypositive} strictly dominates
+\eqref{eq:boundaryerror}. Thus $H_\tau$ has no zero on the
+boundary, for any $\tau\in[0,1]$. The projection depends on $Y$;
+only pointwise exclusion of a boundary zero is needed.
+
+At $\tau=0$ the unique zero is $Y=0$. Indeed the function
+\eqref{eq:convexpotential} has $f'(0)=0$ and $f''(t)>0$ for
+nonzero $Y\in\hh$, by the scalar-centralizer hypothesis.
+It follows that $\langle Y,H_0(Y)\rangle=f'(1)>0$.
+The derivative at zero also satisfies
+\begin{equation}\label{eq:finitehessian}
+\langle Y,DH_0(0)Y\rangle=q_s([Y,Z])>0\quad(Y\ne0).
+\end{equation}
+Under the fixed identification $T_v\mapsto T_v/r_v$ from
+$\mathcal W$ to $\hh$, this is a positive definite real Hessian.
+Its local Brouwer degree is $+1$. The operator-norm ball is a
+bounded open subset of a finite-dimensional real vector space;
+smoothness of its boundary is not required for degree. Homotopy
+invariance gives a zero of $H_1$ inside this ball.
+
+At that zero the reduced equation and the complementary equation
+both vanish, so \eqref{eq:conjugatedcurvature} is zero. This is
+the HE equation. Finally \eqref{eq:crossingbounds} and
+Lemma~\ref{lem:complement} give the asserted bounds for $u$.
+\end{proof}
+
+The positivity in \eqref{eq:finitehessian} is used to compute a
+degree at each fixed parameter. No uniform lower bound for this
+Hessian is used. Likewise the crossing energy in
+\eqref{eq:boundarypositive} may be arbitrarily small; it appears
+as the same positive factor in the error bound and cancels in the
+comparison. This gives the uniformity at weak directions.
+
+\begin{proposition}\label{prop:actual-stability}
+After shrinking the parameter neighborhood, $E$ is slope-stable
+exactly at the $b(s)$-stable points of its representation.
+At these points the metric comparison \eqref{eq:main-metric} holds.
+\end{proposition}
+
+\begin{proof}
+Let $W$ be a proper nonzero subrepresentation. The smooth subbundle
+$G_W=\bigoplus_vF_v\otimes W_v$ is preserved by
+$\dbar_{s,Z^0}$ and hence is an actual holomorphic subbundle of $E$
+with locally free quotient. Put $r_W=\sum_vr_v\dim W_v$.
+Its degree is the sum of the degrees of its factor copies, so
+\begin{equation}\label{eq:subbundle-slope}
+\kappa(G_W)-\kappa_E
+=-\frac{\sum_vb_v\dim W_v}{r_W}.
+\end{equation}
+Stability of $E$ forces the inequalities
+\eqref{eq:finite-stability}. This implication uses only the
+displayed subbundles, without asserting that they exhaust all
+subsheaves.
+
+Conversely, finite stability gives a balanced $Z$ by
+Proposition~\ref{prop:balance}. Lemma~\ref{lem:algebra} gives
+its scalar centralizer. Since $b(0)=0$, shrink the background
+neighborhood so that every such $\sigma$ is below the fixed
+threshold of Theorem~\ref{thm:calibration}. That theorem constructs
+an HE metric on $E_{s,Z'}$, and the harmonic and finite gauges pull
+it back to $E$. An HE bundle is polystable
+\cite[Chapter~V]{kobayashi1987}; a simple polystable bundle has
+only one stable summand, and therefore is stable. This argument
+constructs the HE metric before using stability sufficiency.
+
+For the comparison, work first on the independently balanced
+presentation. With $g=e^{Y/2}$ the additional pullback of the
+metric has matrix $g^*e^ug$ in a split unitary frame. Scalar
+Hermitian-form bounds for $e^u$ and for $g^*g=e^Y$ give
+\[
+e^{-C\sigma}h_{0,s}\le g^*(h_{0,s}e^u)
+\le e^{C\sigma}h_{0,s}.
+\]
+No commutation of $u$ and $Y$ is needed. Pullback through the
+same original balancing gauge and harmonic identification
+preserves these inequalities, even if the balancing gauge is
+unbounded. This proves \eqref{eq:main-metric}. The unipotent
+identification and determinant-normalized finite gauges have
+determinant one; $\sum_vr_v\tr Y_v=0$ and $\tr u=0$ preserve
+the fixed determinant metric. The HE metric is unique after
+this normalization.
+\end{proof}
+
+No smooth selection of $Y$ as the parameter approaches a chamber
+face is asserted. The proof supplies a uniformly small correction
+at every stable point. Bounds for derivatives of a selected gauge
+with respect to the parameter are a different question.
