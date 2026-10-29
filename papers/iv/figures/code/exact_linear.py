@@ -39,5 +39,3 @@ def determinant(rows):
             for t in range(j + 1, len(a)):
                 a[i][t] -= c*a[j][t]
     return d
-
-
