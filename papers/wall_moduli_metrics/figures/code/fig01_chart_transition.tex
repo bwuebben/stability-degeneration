@@ -1,0 +1,20 @@
+\begin{figure}[htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tikzpicture}[>=Stealth,box/.style={draw,rounded corners=2pt,align=center,text width=3.6cm,minimum height=1.35cm,font=\small}]
+\node[box] (wall) {Split wall chart\\$83$ coordinates\\$5$ equations, $3$ gauge directions};
+\node[box,right=1.05cm of wall] (finite) {Reduced chart\\$77$ coordinates\\$1$ equation, $1$ gauge direction};
+\node[box,right=1.05cm of finite] (harm) {Actual harmonic chart\\$77$ coordinates\\$1$ equation, $1$ gauge direction};
+\draw[->] (wall.east)--node[above,font=\scriptsize]{$c\sqrt l$}(finite.west);
+\draw[<->] (finite.east)--node[above,font=\scriptsize]{$cl$}(harm.west);
+\node[below=0.25cm of wall,align=center,font=\scriptsize] {Fixed reconstruction domain\\and complementary inverse};
+\node[below=0.25cm of finite,align=center,font=\scriptsize] {Two gauge normalizations\\and four equation eliminations};
+\node[below=0.25cm of harm,align=center,font=\scriptsize] {Endpoint Hodge homotopy\\of size $O(l^{-1/2})$};
+\end{tikzpicture}
+\end{adjustbox}
+\caption{Three descriptions of the same positive-parameter deformation germ.
+The arrow labels are sufficient radii about the endpoint for the indicated
+operations. The left-hand chart itself has a fixed domain as $l\to0$.
+The scalar equations are identified analytically, including higher terms.}
+\label{fig:charts}
+\end{figure}

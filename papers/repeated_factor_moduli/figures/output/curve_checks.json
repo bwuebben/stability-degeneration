@@ -1,0 +1,112 @@
+{
+  "scope": "finite numerical and exact matrix checks; no HE computation",
+  "boundary_mass": 20,
+  "ranks": [
+    5,
+    6
+  ],
+  "weak_ratios": [
+    1.2499667977920355,
+    1.249999667968841,
+    1.2499999966796878
+  ],
+  "curve_checks": [
+    {
+      "t": 0.01,
+      "epsilon": 0.0001,
+      "finite_bundle_squared": 0.00013333597507462512,
+      "polarization_squared": 9.703099792413766e-18,
+      "orthogonal_lower": 5.000099131706007e-05,
+      "unrotated_bundle_squared": 2.554650919371464e-27
+    },
+    {
+      "t": 0.01,
+      "epsilon": 0.05,
+      "finite_bundle_squared": 0.00013355996600026375,
+      "polarization_squared": 2.426779127211313e-12,
+      "orthogonal_lower": 5.0250995874220906e-05,
+      "unrotated_bundle_squared": 2.175824489800483e-33
+    },
+    {
+      "t": 0.01,
+      "epsilon": 0.2,
+      "finite_bundle_squared": 0.00013692634068268434,
+      "polarization_squared": 3.9065155629245044e-11,
+      "orthogonal_lower": 5.400108000718341e-05,
+      "unrotated_bundle_squared": 3.550804491713209e-34
+    },
+    {
+      "t": 0.01,
+      "epsilon": 0.45,
+      "finite_bundle_squared": 0.0001516453907805918,
+      "polarization_squared": 2.0250968849509374e-10,
+      "orthogonal_lower": 7.025146170557662e-05,
+      "unrotated_bundle_squared": 5.221213210577165e-35
+    },
+    {
+      "t": 0.1,
+      "epsilon": 0.0001,
+      "finite_bundle_squared": 0.01335979376166728,
+      "polarization_squared": 9.752978499774736e-14,
+      "orthogonal_lower": 0.005009922727163264,
+      "unrotated_bundle_squared": 2.1993311280721984e-25
+    },
+    {
+      "t": 0.1,
+      "epsilon": 0.05,
+      "finite_bundle_squared": 0.013382252859198087,
+      "polarization_squared": 2.439267337810931e-08,
+      "orthogonal_lower": 0.005034978319880799,
+      "unrotated_bundle_squared": 1.9253945725003808e-30
+    },
+    {
+      "t": 0.1,
+      "epsilon": 0.2,
+      "finite_bundle_squared": 0.013719799451866969,
+      "polarization_squared": 3.9269424750142953e-07,
+      "orthogonal_lower": 0.00541082149854364,
+      "unrotated_bundle_squared": 5.058036155618496e-32
+    },
+    {
+      "t": 0.1,
+      "epsilon": 0.45,
+      "finite_bundle_squared": 0.015195841181031077,
+      "polarization_squared": 2.0364249055859017e-06,
+      "orthogonal_lower": 0.007039647227773543,
+      "unrotated_bundle_squared": 1.9906181761372187e-32
+    },
+    {
+      "t": 0.2,
+      "epsilon": 0.0001,
+      "finite_bundle_squared": 0.05375923474604833,
+      "polarization_squared": 1.5850292274412458e-12,
+      "orthogonal_lower": 0.020159713297514308,
+      "unrotated_bundle_squared": 4.070588248117568e-25
+    },
+    {
+      "t": 0.2,
+      "epsilon": 0.05,
+      "finite_bundle_squared": 0.05384980581766855,
+      "polarization_squared": 3.9643015183290314e-07,
+      "orthogonal_lower": 0.02026060990436249,
+      "unrotated_bundle_squared": 3.0759312396358045e-30
+    },
+    {
+      "t": 0.2,
+      "epsilon": 0.2,
+      "finite_bundle_squared": 0.055211123972837145,
+      "polarization_squared": 6.383681923073387e-06,
+      "orthogonal_lower": 0.02177419120440085,
+      "unrotated_bundle_squared": 1.1616781387866097e-31
+    },
+    {
+      "t": 0.2,
+      "epsilon": 0.45,
+      "finite_bundle_squared": 0.061165960491515084,
+      "polarization_squared": 3.31410687608616e-05,
+      "orthogonal_lower": 0.028335830776232404,
+      "unrotated_bundle_squared": 6.128716743854588e-32
+    }
+  ],
+  "pass": true
+}

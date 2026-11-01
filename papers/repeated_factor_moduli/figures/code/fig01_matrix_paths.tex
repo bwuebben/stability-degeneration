@@ -1,0 +1,27 @@
+\begin{figure}[htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small},
+ line/.style={draw,rounded corners,inner sep=7pt,fill=blue!3}]
+\node[line] (one) at (0,2.7) {$F_1$};
+\node[line,draw=blue!70!black,fill=blue!8] (two) at (-2.5,1.2)
+ {$F_2\otimes\mathbb C^2$};
+\node[line] (three) at (2.5,1.2) {$F_3$};
+\node[line] (four) at (0,-.3) {$F_4$};
+\draw[->,thick] (two) -- node[above left] {row $A$} (one);
+\draw[->,thick] (three) -- node[above right] {scalar $C$} (one);
+\draw[->,thick] (four) -- node[below left] {column $B$} (two);
+\draw[->,thick] (four) -- node[below right] {scalar $D$} (three);
+\draw[->,dashed,blue!70!black] (four) -- node[pos=.5,fill=white,
+ inner sep=2pt,align=center,font=\scriptsize]
+ {quadratic\\correction} (one);
+\node at (0,-1.0) {Harmonic relation: $A_0B_0+A_1B_1=C_0D_0+C_1D_1$};
+\end{tikzpicture}
+\end{adjustbox}
+\caption{The two composable paths in the adjacent-layer subfamily.
+The repeated middle factor retains a full two-by-two matrix action.
+The central correction enforces integrability after the nonzero harmonic
+path classes cancel. The complete deformation space also contains the
+other blocks listed in Lemma~\ref{lem:cohomology}.}
+\label{fig:matrix-paths}
+\end{figure}

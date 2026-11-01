@@ -1,0 +1,46 @@
+{
+  "kind": "exact finite algebra and series; not verification of PDE, Hodge or distance proofs",
+  "slice_division": "PASS",
+  "six_variable_hessian_determinant": -1,
+  "piece_rank_examples": {
+    "S4": {
+      "obstruction_rank": 4,
+      "orbit_rank": 2,
+      "effective_stabilizer_dimension": 1
+    },
+    "S5x": {
+      "obstruction_rank": 5,
+      "orbit_rank": 2,
+      "effective_stabilizer_dimension": 1
+    },
+    "S5y": {
+      "obstruction_rank": 5,
+      "orbit_rank": 2,
+      "effective_stabilizer_dimension": 1
+    },
+    "S11": {
+      "obstruction_rank": 4,
+      "orbit_rank": 3,
+      "effective_stabilizer_dimension": 0
+    },
+    "S16": {
+      "obstruction_rank": 5,
+      "orbit_rank": 3,
+      "effective_stabilizer_dimension": 0
+    }
+  },
+  "moment_demand": [
+    "l",
+    "-2*l/5",
+    "0",
+    "-3*l/5"
+  ],
+  "balanced_energy": "8*l/5",
+  "h_at_zero": "sqrt(15)/5",
+  "h_r2_coefficient": "-4/5",
+  "squared_speed_divided_by_l_at_endpoint": "2*sqrt(15)/5",
+  "finite_distance_coefficient": "sqrt(2*l*sqrt(3/5))",
+  "distance_rate_in_M": "M^(-1/2)",
+  "moment_horizontality": "PASS",
+  "balanced_path_integrability": "PASS"
+}

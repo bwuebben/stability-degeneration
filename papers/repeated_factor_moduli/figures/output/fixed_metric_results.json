@@ -1,0 +1,88 @@
+{
+  "scope": "exact finite algebra and cohomology only; not an elliptic or PDE proof",
+  "cohomology": [
+    6,
+    119,
+    5,
+    0
+  ],
+  "blocks": {
+    "12": [
+      0,
+      16,
+      0,
+      0
+    ],
+    "13": [
+      0,
+      8,
+      0,
+      0
+    ],
+    "14": [
+      0,
+      0,
+      5,
+      0
+    ],
+    "21": [
+      0,
+      16,
+      0,
+      0
+    ],
+    "23": [
+      0,
+      16,
+      0,
+      0
+    ],
+    "24": [
+      0,
+      8,
+      0,
+      0
+    ],
+    "31": [
+      0,
+      8,
+      0,
+      0
+    ],
+    "32": [
+      0,
+      16,
+      0,
+      0
+    ],
+    "34": [
+      0,
+      4,
+      0,
+      0
+    ],
+    "41": [
+      0,
+      27,
+      0,
+      0
+    ]
+  },
+  "finite_rank_at_boundary": 5,
+  "finite_rank_for_positive_parameter": 6,
+  "tracefree_kernel_coordinates": [
+    1,
+    1,
+    0,
+    5,
+    -4,
+    1
+  ],
+  "kernel_mass": 45,
+  "first_variation_energy_in_units_of_a": 50,
+  "weak_coefficient_in_units_of_a": "10/9",
+  "scalar_only_restriction_rank": 4,
+  "rational_direct_checks": 6,
+  "checker_sha256": "6a8ea810a34c73c14cc349263a15cf9e2b55725edbc4be0008715e497281de6d",
+  "pass": true
+}

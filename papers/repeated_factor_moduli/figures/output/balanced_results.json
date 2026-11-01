@@ -1,0 +1,155 @@
+{
+  "method": "exact rational arithmetic; geometric and analytic proof is separate",
+  "cases": [
+    {
+      "z": "3/5",
+      "epsilon_squared": "0",
+      "T": "1/1000",
+      "tracefree_rank": 5,
+      "balance_exact": true,
+      "individual_noncommutation": false
+    },
+    {
+      "z": "3/5",
+      "epsilon_squared": "0",
+      "T": "1/1000000",
+      "tracefree_rank": 5,
+      "balance_exact": true,
+      "individual_noncommutation": false
+    },
+    {
+      "z": "3/5",
+      "epsilon_squared": "0",
+      "T": "1/1000000000000",
+      "tracefree_rank": 5,
+      "balance_exact": true,
+      "individual_noncommutation": false
+    },
+    {
+      "z": "6000000000000000000000000000000000000001/10000000000000000000000000000000000000000",
+      "epsilon_squared": "16000000000000000000000000000000000000001/108000000000000000000000000000000000000008000000000000000000000000000000000000000",
+      "T": "1/1000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "6000000000000000000000000000000000000001/10000000000000000000000000000000000000000",
+      "epsilon_squared": "16000000000000000000000000000000000000001/108000000000000000000000000000000000000008000000000000000000000000000000000000000",
+      "T": "1/1000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "6000000000000000000000000000000000000001/10000000000000000000000000000000000000000",
+      "epsilon_squared": "16000000000000000000000000000000000000001/108000000000000000000000000000000000000008000000000000000000000000000000000000000",
+      "T": "1/1000000000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "61/100",
+      "epsilon_squared": "161/10880",
+      "T": "1/1000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "61/100",
+      "epsilon_squared": "161/10880",
+      "T": "1/1000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "61/100",
+      "epsilon_squared": "161/10880",
+      "T": "1/1000000000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "5/8",
+      "epsilon_squared": "13/352",
+      "T": "1/1000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "5/8",
+      "epsilon_squared": "13/352",
+      "T": "1/1000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "5/8",
+      "epsilon_squared": "13/352",
+      "T": "1/1000000000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "2/3",
+      "epsilon_squared": "5/51",
+      "T": "1/1000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "2/3",
+      "epsilon_squared": "5/51",
+      "T": "1/1000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "2/3",
+      "epsilon_squared": "5/51",
+      "T": "1/1000000000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "3/4",
+      "epsilon_squared": "7/32",
+      "T": "1/1000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "3/4",
+      "epsilon_squared": "7/32",
+      "T": "1/1000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    },
+    {
+      "z": "3/4",
+      "epsilon_squared": "7/32",
+      "T": "1/1000000000000",
+      "tracefree_rank": 6,
+      "balance_exact": true,
+      "individual_noncommutation": true
+    }
+  ],
+  "case_count": 18,
+  "boundary_kernel_mass": "20",
+  "first_variation_on_kernel": "25",
+  "weak_coefficient": "5/4",
+  "boundary_energy_coefficient": "64/15",
+  "pass": true
+}

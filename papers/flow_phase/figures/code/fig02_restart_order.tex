@@ -1,0 +1,24 @@
+\begin{figure}[htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tikzpicture}[>=Stealth,
+ box/.style={draw=blue!60!black,rounded corners,fill=blue!3,
+  align=center,text width=4.5cm,minimum height=1.2cm,font=\small},
+ arr/.style={->,thick,blue!60!black}]
+\node[box] (base) at (0,0) {Fix the initial metric\\and invariant graph};
+\node[box] (accuracy) at (5.7,0) {Choose accuracy\\$\varepsilon$};
+\node[box] (time) at (5.7,-2) {Choose a reference time\\$T_\varepsilon<\infty$};
+\node[box] (domain) at (0,-2) {Then choose small deformation,\\polarization and metric\\neighborhoods};
+\draw[arr] (base.east)--(accuracy.west);
+\draw[arr] (accuracy.south)--(time.north);
+\draw[arr] (time.west)--(domain.east);
+\node[align=center,font=\small] at (2.85,-3.25)
+ {The same $T_\varepsilon$ works throughout the chosen neighborhoods.};
+\end{tikzpicture}
+\end{adjustbox}
+\caption{The order of choices in Theorem~\ref{thm:prescribed-phase}.
+The restart may depend on the prescribed metric and accuracy.
+It is chosen before the small parameters, not uniformly over all
+initial metrics.}
+\label{fig:restart-order}
+\end{figure}

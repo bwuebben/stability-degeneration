@@ -5,10 +5,10 @@ import subprocess
 import sys
 
 root = Path(__file__).resolve().parent
-programs = sorted(p for p in (root / 'papers').glob('*/figures/code/*.py') if p.name != 'exact_linear.py')
+programs = sorted(p for p in (root / 'papers').glob('*/figures/code/*.py') if p.name not in {'exact_linear.py', 'cech_model.py', 'finite_models.py'})
 for program in programs:
     print(str(program.relative_to(root)), flush=True)
-    if program.parents[2].name == 'repeated_factor_spectra':
+    if (program.parents[2] / 'requirements.txt').exists():
         command = ['uv', 'run', '--no-project', '--with-requirements', str(program.parents[2] / 'requirements.txt'), 'python', '-B', str(program)]
     else:
         command = [sys.executable, '-B', str(program)]

@@ -1,0 +1,16 @@
+{
+  "arithmetic": "exact SymPy",
+  "relation_vanishes": true,
+  "regular_jacobian_minor": "1",
+  "regular_rank": 5,
+  "old_example_rank": 4,
+  "complex_orbit_rank": 3,
+  "quotient_complex_dimension": 16,
+  "transverse_tangent_closed": true,
+  "transverse_tangent_orthogonal_to_complex_orbit": true,
+  "rho": "M^2 + 2",
+  "finite_tangent_squared_norm": "(l - delta)/(M^2 + 2)",
+  "weak_rayleigh_quotient": "8 delta / 3",
+  "rho_tau_squared_limit": "3/5",
+  "scope": "Finite algebra only; not the PDE, Hodge projection or gauge-quotient proof."
+}

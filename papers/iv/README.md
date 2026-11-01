@@ -12,3 +12,7 @@ Archived version: [doi:10.5281/zenodo.23774770](https://doi.org/10.5281/zenodo.2
 [Abstract and citation](https://bwuebben.github.io/papers/nonsimplicial-toric-stability-chambers/) on the author's website.
 
 Related sequel: [Uniform Hermitian–Einstein spectra with repeated stable factors](https://bwuebben.github.io/papers/repeated-factor-he-spectra/) extends stationary metric and spectral comparison to fixed multiplicities.
+
+## Three-step extensions, moduli and flow
+
+The [programme guide](../../README.md) also contains the three-step metric and moduli papers, the repeated-factor rank-five model, the initial-condition and wall/unstable-flow theorems, and the singular graded toric surface example. Each result retains its stated geometric scope.

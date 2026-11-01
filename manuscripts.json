@@ -66,5 +66,107 @@
       "record_url": "https://zenodo.org/records/23780241",
       "created": "2026-10-29T21:13:25.971737+00:00"
     }
+  },
+  {
+    "paper": "three_step_metrics",
+    "title": "Hermitian–Einstein metrics and small spectra for three-step extensions",
+    "date": "2026-10-31",
+    "revision_date": "2026-10-31",
+    "website_slug": "three-step-he-metrics",
+    "pages": 28,
+    "pdf_sha256": "a5dc0b5f6f626f5d6b80aa4695b67db3307f8142cff036e1fbc19a8ef1807d8f",
+    "source_sha256": "48a2f6414d10e53288d6a94321410776eb5a6c2dc914901fd879544fb54cb409",
+    "archive": {
+      "id": 23850990,
+      "doi": "10.5281/zenodo.23850990",
+      "conceptdoi": "10.5281/zenodo.23850989",
+      "record_url": "https://zenodo.org/records/23850990",
+      "created": "2026-11-01T02:14:39.319938+00:00"
+    }
+  },
+  {
+    "paper": "wall_moduli_metrics",
+    "title": "L² metrics on Hermitian–Yang–Mills moduli spaces near a stability wall",
+    "date": "2026-10-31",
+    "revision_date": "2026-10-31",
+    "website_slug": "wall-moduli-metrics",
+    "pages": 34,
+    "pdf_sha256": "4285aa1ba043afe94aca43e636f5877ae0201b4cf230d899afb58b6f52a31ee1",
+    "source_sha256": "17057a7824d9f3ee8b34bd1312e80ae0b8d54f6888b23df7e2688921b6c6ba2e",
+    "archive": {
+      "id": 23850992,
+      "doi": "10.5281/zenodo.23850992",
+      "conceptdoi": "10.5281/zenodo.23850991",
+      "record_url": "https://zenodo.org/records/23850992",
+      "created": "2026-11-01T02:14:43.084769+00:00"
+    }
+  },
+  {
+    "paper": "repeated_factor_moduli",
+    "title": "Hermitian–Einstein metrics and moduli of three-step extensions with repeated factors",
+    "date": "2026-10-31",
+    "revision_date": "2026-10-31",
+    "website_slug": "repeated-factor-moduli",
+    "pages": 29,
+    "pdf_sha256": "192e67f9ed40d06f427cc5f939339946db519ddc648d503ec4470404de917ec8",
+    "source_sha256": "4c1068a81ae432edf4556e17e9039d0968d4ea7c025077235408622e5aea8346",
+    "archive": {
+      "id": 23850994,
+      "doi": "10.5281/zenodo.23850994",
+      "conceptdoi": "10.5281/zenodo.23850993",
+      "record_url": "https://zenodo.org/records/23850994",
+      "created": "2026-11-01T02:14:47.682434+00:00"
+    }
+  },
+  {
+    "paper": "flow_phase",
+    "title": "Initial conditions and asymptotic phase for Hermitian–Yang–Mills flow",
+    "date": "2026-10-31",
+    "revision_date": "2026-10-31",
+    "website_slug": "hym-initial-condition-phase",
+    "pages": 30,
+    "pdf_sha256": "c9f27d5667b6f19562826ef09277ca3e0cb8d3ce4fff31ac398eccc79c29dc60",
+    "source_sha256": "64e586efb49cbc82b08752bdd0acf3134346339fc46213fbd401c617684b1a8b",
+    "archive": {
+      "id": 23850996,
+      "doi": "10.5281/zenodo.23850996",
+      "conceptdoi": "10.5281/zenodo.23850995",
+      "record_url": "https://zenodo.org/records/23850996",
+      "created": "2026-11-01T02:14:51.430912+00:00"
+    }
+  },
+  {
+    "paper": "wall_unstable_flow",
+    "title": "Hermitian–Yang–Mills flow at and beyond a stability wall",
+    "date": "2026-10-31",
+    "revision_date": "2026-10-31",
+    "website_slug": "hym-wall-unstable-flow",
+    "pages": 20,
+    "pdf_sha256": "7528024e3d41350758c5c27953ad622047bcda8c061756a048370903588580bc",
+    "source_sha256": "69e46bc34a1e572eb62af0b35886e610c2dbe0d59df7766af0d44877fe89c936",
+    "archive": {
+      "id": 23850998,
+      "doi": "10.5281/zenodo.23850998",
+      "conceptdoi": "10.5281/zenodo.23850997",
+      "record_url": "https://zenodo.org/records/23850998",
+      "created": "2026-11-01T02:14:55.095224+00:00"
+    }
+  },
+  {
+    "paper": "singular_hym_asymptotics",
+    "title": "Singular graded limits and metric growth under Hermitian–Yang–Mills flow",
+    "date": "2026-10-31",
+    "revision_date": "2026-10-31",
+    "website_slug": "singular-hym-metric-growth",
+    "pages": 20,
+    "pdf_sha256": "edbe3d9524b290fd2a4fdfd591e1085a592fc1830cd361b83820d5a60e49239e",
+    "source_sha256": "3f527a4f2ba06d4a13eb0a9555b5e71c12c00bf4a0b568abf7a717874889ff7c",
+    "archive": {
+      "id": 23851000,
+      "doi": "10.5281/zenodo.23851000",
+      "conceptdoi": "10.5281/zenodo.23850999",
+      "record_url": "https://zenodo.org/records/23851000",
+      "created": "2026-11-01T02:14:58.755597+00:00"
+    }
   }
 ]

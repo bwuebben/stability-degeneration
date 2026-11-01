@@ -45,3 +45,7 @@ numerically.
 Copyright © 2026 Bernd Johannes Wuebben. All rights reserved.
 
 Archived version: [doi:10.5281/zenodo.23780241](https://doi.org/10.5281/zenodo.23780241).
+
+## Three-step extensions, moduli and flow
+
+The [programme guide](../../README.md) also contains the three-step metric and moduli papers, the repeated-factor rank-five model, the initial-condition and wall/unstable-flow theorems, and the singular graded toric surface example. Each result retains its stated geometric scope.
