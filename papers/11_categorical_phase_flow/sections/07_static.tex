@@ -1,0 +1,359 @@
+\section{Static cancellation, regularity and a metric primitive}\label{sec:static}
+
+The estimates in this section concern fixed external differential scales
+and varying arrow coordinates. They do not differentiate solutions of the
+phase equation with respect to their initial data.
+
+\subsection{An exact primitive in metric directions}
+Fix reference inner products and determinant volume forms on $V,U,W$,
+and represent positive metrics by $h_V,h_U,h_W$. The matrices in
+\eqref{eq:BCLE} are computed in orthonormal frames for those metrics.
+Define the entire function
+\begin{equation}\label{eq:Ein}
+ \Ein(b)=\int_0^1\frac{1-e^{-sb}}s\,ds,\qquad
+ b\Ein'(b)=1-e^{-b}.
+\end{equation}
+
+\begin{proposition}\label{prop:primitive}
+For arbitrary rectangular $D$, the function
+\begin{equation}\label{eq:primitive}
+ \begin{split}
+ \mathcal S_{\CC}(h)
+ ={}&z_0(\log\det h_V-\log\det h_U)+z_1\log\det h_W\\
+ &+z_0\tr\Ein(B)-\tr(CR(B))
+ \end{split}
+\end{equation}
+satisfies, for $\xi_q=h_q^{-1}\delta h_q$,
+\begin{equation}\label{eq:primitivevariation}
+ d\mathcal S_{\CC}(\xi)=
+ \tr(\Omega_V\xi_V)+\tr(\Omega_U\xi_U)+\tr(\Omega_W\xi_W).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Compute at orthonormal frames, where $\xi_q$ is Hermitian and the
+map variations are those preceding \eqref{eq:mapflow}.
+The Ein term has coefficients $-z_0(\id-P)$ on $V$ and
+$z_0(\id-Q)$ on $U$. Adding the logarithmic terms gives $z_0P$
+and $-z_0Q$.
+
+The Fr\'echet derivative $\mathrm DR_B$ is self-adjoint in the trace
+pairing, since $R$ is real analytic on Hermitian matrices.
+Variation of $-\tr(CR(B))$ on $V$ gives
+\[
+ \tfrac12\{C,R(B)\}+\tfrac12\{B,\mathrm DR_B(C)\}=K_B(C).
+\]
+To verify the identity, diagonalize $B$. Twice the multiplier on
+the left is
+\[
+ R(b_i)+R(b_j)+(b_i+b_j)\frac{R(b_i)-R(b_j)}{b_i-b_j}
+ =2\frac{e^{-b_j}-e^{-b_i}}{b_i-b_j},
+\]
+with continuous values at repeated eigenvalues.
+On $U$ the coefficient is
+$-D\,\mathrm DR_B(C)D^\dagger=J_L(DCD^\dagger)$,
+as follows by differentiating the integral defining $R$.
+On $W$ it is $-\sum_j A_jR(B)A_j^\dagger$.
+These are exactly \eqref{eq:coeff}.
+\end{proof}
+
+Equation~\eqref{eq:primitivevariation} specifies a primitive on the
+space of metrics of each fixed object. By itself it allows an additive
+constant depending on that object. Such dependence can change a
+transverse moduli-space Levi form. Whenever potentials on an arrow
+space are used below, their normalization is the explicit formula
+\eqref{eq:primitive} at the declared reference metrics, with only the
+stated acyclic subtraction. Arbitrary object-dependent functions are
+not part of that normalization. Locally pluriharmonic additions do not
+change the compared forms.
+
+\subsection{Exact static blocks and first derivatives of mass}
+Let $V=H\oplus U$ be an orthogonal decomposition and, at fixed reference
+metrics, set $D=[0,\Lambda\id_U]$, $A_j=[B_j,T_j]$.
+Put
+\[
+ x=\Lambda^2,\quad p=e^{-x},\quad r=R(x)=\frac{1-p}{x},\quad
+ C_H=\sum_jB_j^\dagger B_j,\quad C_A=\sum_jT_j^\dagger T_j,
+\]
+\[
+ E_H=\sum_jB_j^\dagger T_j,\qquad
+ F_T=\sum_jT_jT_j^\dagger,\qquad C_W=\sum_jB_jB_j^\dagger .
+\]
+Formula~\eqref{eq:coeff} becomes
+\begin{equation}\label{eq:staticcoeff}
+ \begin{split}
+ \Omega_V&=\begin{pmatrix}
+ z_0\id+C_H&rE_H\\rE_H^\dagger&p(z_0\id+C_A)
+ \end{pmatrix},\\
+ \Omega_U&=(r-p)C_A-z_0p\id,\qquad
+ \Omega_W=z_1\id-C_W-rF_T .
+ \end{split}
+\end{equation}
+The limiting coefficient $\Omega_H$ has blocks
+$z_0\id+C_H$ and $z_1\id-C_W$.
+
+Use the Euclidean norm on the real and imaginary arrow entries;
+its square is the sum of squared Hilbert--Schmidt norms.
+For every fixed coordinate ball, every nonnegative integer $k$,
+and $\Lambda\geq1$, \eqref{eq:staticcoeff} gives
+\begin{equation}\label{eq:staticCk}
+ \norm{\Omega_\Lambda-(\Omega_H\oplus0_{\ac})}_{C^k}
+ \leq C_k\Lambda^{-2},\qquad
+ |m_\Lambda-m_H|\leq C_0\Lambda^{-2}.
+\end{equation}
+Indeed $p,r=O(\Lambda^{-2})$, and all arrow expressions have degree
+at most two. Constants may depend on the fixed dimensions, charges
+and ball, but not on a surviving stabilizer eigenvalue.
+
+\begin{proposition}\label{prop:massC1}
+On every bounded real arrow-coordinate ball, for fixed charges with
+positive imaginary parts,
+\begin{equation}\label{eq:massC1}
+ \norm{dm_\Lambda-dm_H}\leq C\Lambda^{-1},\qquad\Lambda\geq1.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+All blocks in \eqref{eq:staticcoeff} are invertible at every finite
+$\Lambda$, since their signed imaginary parts are respectively
+$(\Ima z_0)\diag(\id,p\id)$, $(\Ima z_0)p\id$ and
+$(\Ima z_1)\id$. The trace norm $N(Z)=\norm Z_1$ is smooth on
+invertible matrices and convex \cite{lewis95}. Its first derivative satisfies
+$|DN_Z(H)|\leq\norm H_1$, while $D^2N_Z(H,H)\geq0$.
+Along any unit real coordinate direction,
+\[
+ \frac{d^2}{dt^2}N(\Omega(y+tv))
+ \geq-\norm{\Omega''(y+tv)}_1.
+\]
+The second derivatives of the coefficients are uniformly bounded on a
+ball of radius $R+1$. The cohomology mass $m_H$ has a bounded Hessian
+there, because its blocks have uniformly positive imaginary parts.
+Consequently $f_\Lambda=m_\Lambda-m_H$ satisfies
+$D^2f_\Lambda\geq-L_R\id$, uniformly in $\Lambda$.
+
+For $|y|\leq R$, $|v|=1$ and $0<h\leq1$, integrate this lower
+Hessian bound and use \eqref{eq:staticCk} to obtain
+\[
+ df_\Lambda(y)v
+ \leq\frac{f_\Lambda(y+hv)-f_\Lambda(y)}h+\frac{L_Rh}{2}
+ \leq\frac{2C_0}{h\Lambda^2}+\frac{L_Rh}{2}.
+\]
+Take $h=\Lambda^{-1}$ and replace $v$ by $-v$ for the other sign.
+This proves \eqref{eq:massC1}. The proof never estimates the full
+Hessian of the trace norm from above near a singular coefficient.
+\end{proof}
+
+The map-dependent part of the primitive is exactly
+\begin{equation}\label{eq:staticprimitive}
+ z_0\dim U\,\Ein(x)
+ -\sum_j\norm{B_j}_{\HS}^2-r\sum_j\norm{T_j}_{\HS}^2 .
+\end{equation}
+For fixed external $\Lambda$, the first term is independent of $B,T$.
+After its declared subtraction, the primitive has the cohomology limit
+with the same $C^k$ error $O(\Lambda^{-2})$ for each fixed $k$.
+This subtraction is not a constant along a full metric orbit where
+the norm of $D$ changes. It does not alter the phase flow studied above.
+At phase $\pi/2$ and the balanced charges, the map-dependent real
+function at fixed $\Lambda$ is
+$\sum_j\norm{B_j}_{\HS}^2+r\sum_j\norm{T_j}_{\HS}^2$, which is positive as a
+Hermitian quadratic form in the arrow variables. Positivity when the
+differential varies is a different question, addressed below.
+
+\subsection{A shrinking-scale profile and failure of higher derivatives}
+Return to \eqref{eq:balancedfamily}, with its balanced charges, and
+choose the constant nonzero mixing
+\begin{equation}\label{eq:profilemixing}
+ T_1=\id,\qquad T_2=-\sigma_z,\qquad T_3=\id .
+\end{equation}
+All three are invertible and $\sum_j\norm{T_j}_{\HS}^2=6$.
+Here $C_A=F_T=3\id$, $E_H=c\epsilon\sigma_x$ and $m_H=4$.
+The source coefficient is a direct sum, after a constant unitary
+change and permutation, of two unitarily conjugate matrices
+\[
+ Z_\pm=\begin{pmatrix}\ii&\pm u\\\pm u&p(2+\ii)\end{pmatrix},
+ \qquad u=rc\epsilon .
+\]
+Since $\det Z_\pm=-p-u^2+2\ii p$ and
+$\tr(Z_\pm^\dagger Z_\pm)=1+5p^2+2u^2$,
+\begin{equation}\label{eq:exactmassprofile}
+ \begin{split}
+ g_p(y)&=\sqrt{1+5p^2+2y+2\sqrt{5p^2+2py+y^2}},\\
+ m_\Lambda(\epsilon)
+ &=2g_p\left(\frac{r^2\epsilon^2}{2+\epsilon^2}\right)
+   +2\sqrt{(3r-2p)^2+p^2}+2\sqrt{1+9r^2}.
+ \end{split}
+\end{equation}
+All $\epsilon$ derivatives occur in the first summand.
+
+\begin{proposition}\label{prop:profile}
+Let $s_\Lambda=\sqrt{2p}/r$. For each compact real interval $I$
+and each fixed nonnegative integer $k$,
+\begin{equation}\label{eq:profilelimit}
+ \frac{m_\Lambda(s_\Lambda\xi)-m_\Lambda(0)}{2p}
+ \longrightarrow
+ P(\xi):=\xi^2+\sqrt{(1+\xi^2)^2+4}-\sqrt5
+ \quad\text{in }C^k(I).
+\end{equation}
+In particular,
+\begin{align}
+ \partial_\epsilon^3(m_\Lambda-m_H)(s_\Lambda)
+ &\sim\frac34\,\frac{e^{\Lambda^2/2}}{\Lambda^6},\label{eq:C3failure}\\
+ \partial_\epsilon^4(m_\Lambda-m_H)(0)
+ &\sim\frac{24}{5\sqrt5}\,
+              \frac{e^{\Lambda^2}}{\Lambda^8}.\label{eq:C4failure}
+\end{align}
+Thus uniform $C^3$ convergence fails on every fixed interval
+$[0,\epsilon_0]$ with $\epsilon_0>0$.
+\end{proposition}
+
+\begin{proof}
+Put $\eta_\Lambda=p/r^2$,
+$w_\Lambda(\xi)=\xi^2/(1+\eta_\Lambda\xi^2)$ and
+$H(w)=w+\sqrt{5+2w+w^2}$.
+At $\epsilon=s_\Lambda\xi$ the argument of $g_p$ is $pw_\Lambda$.
+Rationalizing the outer square root in \eqref{eq:exactmassprofile}
+gives the exact expression
+\begin{equation}\label{eq:rationalprofile}
+ P_\Lambda(\xi):=\frac{m_\Lambda(s_\Lambda\xi)-m_\Lambda(0)}{2p}
+ =\frac{2H(w_\Lambda(\xi))+5p}
+        {\sqrt{1+2pH(w_\Lambda(\xi))+5p^2}+1}-\sqrt5.
+\end{equation}
+Since $p\to0$ and $\eta_\Lambda\to0$, the right side is a smooth
+function of $(p,\eta_\Lambda,\xi)$ near $(0,0,I)$.
+Its square-root arguments stay bounded away from zero.
+This proves \eqref{eq:profilelimit}; in fact
+$\norm{P_\Lambda-P}_{C^k(I)}
+\leq C_{I,k}(p+\eta_\Lambda)=O_{I,k}(\Lambda^4e^{-\Lambda^2})$.
+
+The exact derivative relation is
+\[
+ \partial_\epsilon^k m_\Lambda(s_\Lambda\xi)
+ =2p\,s_\Lambda^{-k}P_\Lambda^{(k)}(\xi),\qquad k\geq1.
+\]
+Direct differentiation gives $P'''(1)=3\sqrt2/4$.
+For example, for $Q(\xi)=\xi^4+2\xi^2+5$, its value and first three
+derivatives at $1$ are $8,8,16,24$; substituting them in the third
+derivative of $\sqrt Q$ gives the stated value.
+Therefore the third derivative is asymptotic to
+$3r^3/(4\sqrt p)$ at $\epsilon=s_\Lambda$, which proves
+\eqref{eq:C3failure}. This point tends to zero through positive values.
+
+For the derivative at zero set $d=1+\sqrt5p$ and $A_0=1+1/\sqrt5$.
+At fixed $p>0$, expansion of the exact formula gives
+\[
+ g_p(y)=d+\frac{A_0}{d}y+
+ \left(\frac{2}{5\sqrt5pd}-\frac{A_0^2}{2d^3}\right)y^2+O_p(y^3).
+\]
+Since $y=r^2\epsilon^2/(2+\epsilon^2)$, it follows exactly that
+\[
+ \partial_\epsilon^4m_\Lambda(0)
+ =12\left[-\frac{A_0}{d}r^2+
+ \left(\frac{2}{5\sqrt5pd}-\frac{A_0^2}{2d^3}\right)r^4\right].
+\]
+Using $r\sim\Lambda^{-2}$ and $p=e^{-\Lambda^2}$ proves
+\eqref{eq:C4failure}.
+\end{proof}
+
+This is a derivative obstruction in the actual parameter of
+\eqref{eq:balancedfamily}, with fixed reference metrics and fixed mixing.
+The family extends smoothly to negative $\epsilon$, so derivatives at
+zero are unambiguous. It is not asserted that $\epsilon$ is a smooth
+coordinate on a coarse moduli quotient. The analytic singular scale
+comes from the acyclic coefficient approaching zero; a changing
+stabilizer alone is not an explanation of trace-norm singularities.
+The argument neither proves nor disproves a general uniform $C^2$
+estimate.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/output/mass-profile.pdf}
+\caption{The exact normalized mass difference
+$P_\Lambda(\xi)$ in \eqref{eq:rationalprofile} and its limit
+$P(\xi)$ in \eqref{eq:profilelimit}. The coordinate scale is
+$s_\Lambda=\sqrt{2p}/r\sim\sqrt2\Lambda^2e^{-\Lambda^2/2}$.
+The curves illustrate a proved static limit; they are not numerical
+phase-flow trajectories.}\label{fig:profile}
+\end{figure}
+\FloatBarrier
+
+\subsection{A negative ambient Levi direction}\label{subsec:levi}
+For a phase angle $\theta\in(0,\pi)$, the real phase combination in
+\cite[\S5.1]{hkkp26} is
+$-\Rea\mathcal S_{\CC}+\cot\theta\,\Ima\mathcal S_{\CC}$.
+On a complex gauge orbit the logarithmic determinant terms are locally
+pluriharmonic. Its map-dependent candidate potential is therefore
+\begin{equation}\label{eq:realpotential}
+ \mathcal K_\theta(A,D)=\tr(CR(B))+c_\theta\tr\Ein(B),\qquad
+ c_\theta=-\Rea z_0+\cot\theta\,\Ima z_0 .
+\end{equation}
+This formula is a construction from the explicit primitive; it is not
+an assertion that \cite[\S5.4]{hkkp26} proves its ambient positivity.
+
+\begin{proposition}\label{prop:negativelevi}
+For $z_0=-1+\ii$, $z_1=1+\ii$ and $\theta=\pi/2$, the potential
+\eqref{eq:realpotential} has a negative Levi direction on a complex
+gauge orbit of the mixed family, for every $\Lambda>0$ and every
+$\epsilon\in[0,1]$.
+\end{proposition}
+
+\begin{proof}
+On one scalar acyclic summand put $a=|A|^2$, $b=|D|^2$.
+The restriction of the potential is $aR(b)+c\Ein(b)$.
+Its $A\overline A$ Levi entry is $R(b)>0$.
+The Schur complement of that entry is
+\begin{equation}\label{eq:levischur}
+ e^{-b}[c-a\rho(b)],\qquad
+ \rho(b)=\frac{b-1+e^{-b}}{b(1-e^{-b})}.
+\end{equation}
+Indeed the $D\overline D$ entry is
+$a(R'+bR'')+ce^{-b}$, and the squared mixed entry divided by
+$R$ is $ab(R')^2/R$; using $bR'=e^{-b}-R$ gives
+\eqref{eq:levischur}.
+For $b>0$, $\rho(b)>1/2$: the sign of $2\rho-1$ is the sign
+of $b-2+(b+2)e^{-b}$, whose derivative is
+$1-(b+1)e^{-b}>0$ and whose value at zero is zero.
+Thus $c=1$, $a=4$ gives a negative direction for every $b>0$.
+
+Realize this scalar restriction by taking $T_1=2\id$ and $T_2=T_3=0$
+while keeping the balanced $B_j$ fixed. Vary one acyclic diagonal
+entry of $D$ and the corresponding entry of $T_1$.
+Independent nonzero complex rescalings of that acyclic source line
+and its degree-one target line realize these two local variables
+within one complex gauge orbit. Their potential is the scalar
+expression above plus a constant, proving the assertion.
+\end{proof}
+
+An object-dependent additive constant cannot repair this negative
+direction along the same metric orbit. The proposition obstructs a
+generally plurisubharmonic ambient potential with the prescribed
+phase primitive. It does not exclude a positive limiting cohomology
+metric or every possible construction made directly on a quotient.
+
+\subsection{Quantities and derivative domains}
+For clarity, the static estimates concern the following distinct
+objects, all at fixed external $D=[0,\Lambda\id]$ and fixed reference
+metrics:
+
+\begin{center}
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{lll}
+\toprule
+Quantity & Coordinate derivatives & Conclusion\\
+\midrule
+Coefficient $\Omega_\Lambda$ & bounded real $B,T$ coordinates
+ & $C^k$ error $O_k(\Lambda^{-2})$\\
+Relative primitive & the same coordinates
+ & $C^k$ error $O_k(\Lambda^{-2})$\\
+Trace-norm mass & the same coordinates
+ & $C^0$ error $O(\Lambda^{-2})$, $C^1$ error $O(\Lambda^{-1})$\\
+Mass in \eqref{eq:profilemixing} & surviving parameter $\epsilon$
+ & uniform $C^3$ convergence fails\\
+Normalized profile & $\xi=\epsilon/s_\Lambda$ on compact intervals
+ & $C^k$ convergence for every fixed $k$\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+No all-orders derivative conclusion for
+$(\Omega_\Lambda\Omega_\Lambda^\dagger)^{1/2}$, the polar phase,
+or an actual flow trajectory is contained in this table.

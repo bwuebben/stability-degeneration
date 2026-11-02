@@ -1,0 +1,234 @@
+\section{Introduction}\label{sec:introduction}
+
+Haiden, Katzarkov, Kontsevich and Pandit associate a mass and a metric
+phase flow to a complex of quiver representations
+\cite[\S\S4.2 and 5.4]{hkkp26}. Their construction uses a coefficient
+of a superconnection exponential. Acyclic summands should disappear when
+the differential becomes large in the evolving metric, leaving the
+cohomology representation. Question~5.18 of \cite{hkkp26} asks whether
+the mass is nonincreasing along the flow. We give a negative answer for
+the phase determined by their positivity condition and degree branches.
+We then prove that quantitative acyclic cancellation can hold despite
+this failure.
+
+The distinction between dissipation and cancellation is essential.
+The first concerns the sign of a derivative at a finite metric. The
+second requires the differential to escape to infinity under the
+actual equation, together with estimates on the coupled arrows.
+Prescribing a large differential and computing a static limit does not
+establish that a trajectory enters this regime.
+
+\subsection{The complexes and their phase flow}
+Fix a quiver with two vertices and $k$ arrows from the first vertex to
+the second. We consider the two-term complex
+\begin{equation}\label{eq:complex}
+ (V\xrightarrow{(A_1,\ldots,A_k)}W)
+ \xrightarrow{(D,0)}(U\longrightarrow0),
+\end{equation}
+in degrees zero and one. The chain condition is automatic. All vector
+spaces are finite dimensional over $\CC$; the Hermitian metrics vary,
+whereas the complex maps are fixed. The central charges $z_0,z_1$ have
+strictly positive imaginary parts.
+
+Section~\ref{sec:coefficients} derives the coefficient
+$\Omega=\Omega_V\oplus\Omega_U\oplus\Omega_W$ explicitly.
+On a block of degree $q$, the matrix $T=(-1)^q\Omega$ has strictly
+positive imaginary part. If $T=U_T|T|$ is its polar decomposition, set
+\begin{equation}\label{eq:phaseintro}
+ \Phi=\Arg U_T-\pi q\id,\qquad
+ m(h)=\norm{\Omega_V}_1+\norm{\Omega_U}_1+\norm{\Omega_W}_1,
+ \qquad h^{-1}\dot h=-\Phi .
+\end{equation}
+Here $\Arg U_T$ has spectrum in $(0,\pi)$ and
+$\norm{M}_1=\tr(M^\dagger M)^{1/2}$ is the trace norm.
+For a single matrix, an unadorned norm denotes the operator norm.
+Squared lengths of arrow tuples are sums of squared Hilbert--Schmidt
+norms, denoted by the subscript $\HS$ on each arrow.
+This is the unique phase in the specified branch for which
+$\Omega e^{-\ii\Phi}$ is positive definite. In particular, it realizes
+the positivity definition of \cite[\S4.2]{hkkp26}.
+
+The coefficient need not be normal, contrary to the normality assertion
+in \cite[Lemma~5.16]{hkkp26}. We exhibit a small example in
+Section~\ref{sec:coefficients}. This issue is separate from the mass
+counterexample: positivity still defines a smooth Hermitian phase, and
+the metric equation exists for every finite positive time.
+Throughout the paper, the phase means \eqref{eq:phaseintro}, not an
+analytic logarithm of a nonnormal coefficient.
+
+\subsection{Mass increase and cancellation}
+The following two statements describe different properties of the same
+equation.
+
+\begin{theorem}\label{thm:introincrease}
+Let $V=U=\CC^2$, $W=\CC$, $k=1$, and take standard initial metrics with
+\[
+ D=\begin{pmatrix}1/5&0\\0&2\end{pmatrix},\qquad
+ A=\begin{pmatrix}1&2\end{pmatrix},\qquad
+ z_0=1+\ii\epsilon,\quad z_1=4+\ii\epsilon .
+\]
+For every sufficiently small $\epsilon>0$, the initial derivative of
+$m$ along \eqref{eq:phaseintro} is strictly positive.
+\end{theorem}
+
+The proof in Section~\ref{sec:increase} reduces the sign to a finite
+real calculation with a positive interval bound. The endpoint
+$\epsilon=0$ is used only as a one-sided limit; it is not an admissible
+central charge. No particular positive upper endpoint for $\epsilon$
+is needed for the theorem.
+
+\begin{theorem}\label{thm:introcancellation}
+Suppose that $D:V\to U$ is invertible, $\dim V=\dim U=n\geq1$ and
+$\dim W=m_0\geq1$. Allow arbitrary $k$ arrows, arbitrary positive initial
+metrics, and arbitrary $z_0,z_1$ in the strict upper half-plane.
+Put $a=\arg z_1$. The phase flow exists for all $t\geq0$. In moving
+orthonormal frames, with $X_j=A_jD^{-1}$, there are constants $C,C'>0$
+depending on the initial data and charges such that
+\begin{align}
+ \sum_j\norm{X_j(t)}_{\HS}^2
+ &\leq e^{-at}\sum_j\norm{X_j(0)}_{\HS}^2,\label{eq:introX}\\
+ \lambda_{\min}(D^\dagger D)(t)&\geq at-C,\label{eq:introlambda}\\
+ 0\leq m(h(t))-m_0|z_1|&\leq C'e^{-at}.\label{eq:intromass}
+\end{align}
+The acyclic coefficient blocks tend to zero and
+$\Omega_W\to z_1\id_W$ at the same exponential rate in the evolving
+trace norms. In fixed coordinates on $W$, the metric
+$e^{at}h_W(t)$ converges exponentially to a positive definite limit.
+\end{theorem}
+
+The proof uses the exact contraction equation for $A_jD^{-1}$.
+A weighted polar estimate then forces the least singular value of $D$
+to grow. Neither step assumes that the mass decreases.
+No simultaneous diagonalization of $D^\dagger D$ and
+$\sum_j A_j^\dagger A_j$ is imposed.
+
+\subsection{Uniformity when the surviving stabilizer changes}
+When $\ker D$ is nonzero, the cohomology has both a source and a target.
+The contraction equation acquires an additional term. We control it
+on a family for which the surviving automorphism group changes.
+Let $H=U=W=\CC^2$, $V=H\oplus U$, and define
+\begin{equation}\label{eq:balancedfamily}
+ B_1=c\id,\qquad B_2=c\sigma_z,\qquad B_3=c\epsilon\sigma_x,\qquad
+ c=(2+\epsilon^2)^{-1/2},\quad 0\leq\epsilon\leq1,
+\end{equation}
+where
+$\sigma_z=\diag(1,-1)$ and
+$\sigma_x=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
+Both arrow Gram sums equal $\id$. The automorphism algebra is scalar
+for $\epsilon>0$ and diagonal for $\epsilon=0$.
+At the initial standard metrics set
+\begin{equation}\label{eq:mixedinitial}
+ D=[0,\Lambda\id],\qquad A_j=[B_j,T_j],\qquad
+ \sum_{j=1}^3\norm{T_j}_{\HS}^2\leq M^2,\qquad
+ z_0=-1+\ii,\quad z_1=1+\ii .
+\end{equation}
+The mixing matrices $T_j$ are arbitrary subject to the displayed bound.
+
+Along the flow choose the orthogonal splitting
+$V=\ker D\oplus(\ker D)^\perp$ and write $D=[0,F]$, $A_j=[H_j,T_j]$.
+Let $\Omega_H$ be the ordinary degree-zero coefficient of the
+instantaneous surviving arrows $H_j$, and let $m_H$ be its trace-norm
+mass. Its inclusion into the full graded space places zero in the
+acyclic blocks.
+
+Put $q=\sum_j\norm{H_j}_{\HS}^2$ and define the moment-map defects
+\[
+ \mu_s=\sum_jH_j^\dagger H_j-\id,\qquad
+ \mu_w=\sum_jH_jH_j^\dagger-\id,\qquad
+ \norm\mu^2=\norm{\mu_s}_{\HS}^2+\norm{\mu_w}_{\HS}^2.
+\]
+In fixed holomorphic coordinates let $h_s,h_w$ be the induced metrics
+on $\ker D,W$, both multiplied by $e^{\pi t/2}$.
+Using the initial standard determinant volume forms, define the
+cohomology Kempf--Ness function
+\[
+ \mathcal K=q+\log\det h_s-\log\det h_w.
+\]
+Its minimum is $2$, attained at the initial balanced metrics; the
+convexity argument is given in Section~\ref{sec:mixed}.
+
+\begin{theorem}\label{thm:intromixed}
+For every $M\geq0$ there are $\Lambda_*(M)$ and $C(M)$ such that, for
+every $\Lambda\geq\Lambda_*(M)$, every $\epsilon\in[0,1]$ and every
+triple allowed in \eqref{eq:mixedinitial}, the actual phase flow satisfies
+for all $t\geq0$
+\begin{equation}\label{eq:intromixed}
+ \norm{\Omega(t)-(\Omega_H(t)\oplus0_{\ac})}_1+
+ |m(h(t))-m_H(t)|
+ \leq C(M)\Lambda^{-2}e^{-\pi t/32}.
+\end{equation}
+The surviving arrows remain uniformly bounded. Their two moment-map
+defects tend to zero, and $m(h(t))\to4$.
+The excess of the cohomology Kempf--Ness function above its balanced
+minimum, and the time integral of the squared moment-map defect, are
+$O_M(\Lambda^{-4})$.
+\end{theorem}
+
+The constants are uniform as $\epsilon$ tends to zero, when the
+cohomology automorphism algebra increases from scalar to diagonal matrices.
+The parameter $\epsilon$ is fixed along each trajectory, but may approach
+zero independently of $\Lambda$ across the family. We do not assert a
+uniform rate for the final relaxation of the cohomology representation.
+The theorem includes all bounded nonzero mixing, rather than only an
+orthogonal direct sum or a chosen relation between $B_j$ and $T_j$.
+
+In the orthogonal splitting along $\ker D$, the ratio $T_jF^{-1}$
+satisfies a contraction equation with an additional off-diagonal phase
+term. The polar estimate of Section~\ref{sec:polar} controls this term
+using only the nonsingular cohomology block. The ordinary cohomology
+mass bounds the surviving arrows, closing a coupled estimate for the
+mixing. A weighted phase estimate forces growth of the acyclic
+differential. A separate Kempf--Ness inequality then proves decay of
+the moment-map defect without requiring a positive Hessian gap.
+
+\subsection{Static regularity and potentials}
+The same coefficient formulas yield an exact complex primitive in
+metric directions. At a fixed large differential, its relative
+cohomology limit and every fixed derivative in bounded arrow coordinates
+have error $O(\Lambda^{-2})$. The mass has a uniform $C^1$ limit, with
+first-derivative error $O(\Lambda^{-1})$. These assertions concern
+different functions: they do not imply arbitrary derivative bounds for
+the polar positive factor or its phase.
+
+On the balanced family \eqref{eq:balancedfamily}, with fixed nonzero
+mixing, we compute a shrinking-scale mass profile. It implies divergence
+of third derivatives at points approaching $\epsilon=0$, and of the
+fourth derivative at $\epsilon=0$. Thus the static cancellation limit
+does not have unrestricted smooth parameter dependence.
+The real phase combination of the primitive also has a negative
+ambient Levi direction. Section~\ref{sec:geometry} therefore separates
+the positive limiting cohomology potential from a more restricted
+finite-scale positive construction. In that construction the quotient
+comparison is an exact scalar isometry. It is not a metric on the
+full space of arbitrary mixed complexes.
+
+\subsection{Relation to earlier work}
+In the zero-arrow case, the differential rescaling and cancellation
+mechanism already appear in \cite[Example~4.1]{hkkp26}.
+The motivating large-differential discussion in \cite[\S5.4]{hkkp26}
+is a static comparison. Our results concern the actual coupled phase
+equation and prove that its solutions enter the required regime.
+The ordinary quiver metric flow studied in \cite[\S5]{hkkp20}
+has a different vector field; its asymptotic results do not by themselves
+apply to \eqref{eq:phaseintro}.
+
+Superconnection localization to cohomology and heat-transgression
+primitives have classical precedents. Bismut--Lott
+\cite[Theorems~2.13 and 2.16]{bl95} treat cohomology localization and
+transgression under a prescribed graded metric rescaling.
+Paradan--Vergne \cite[\S3.2, Proposition~4 in the preprint]{pv09} give heat-decay
+estimates away from the noninvertibility locus for a prescribed
+superconnection rescaling. We use elementary finite-dimensional
+instances of these analytic ideas. The additional estimates here
+control the noncommuting polar vector field, including coupling to
+a surviving representation without a positive orbit gap.
+The quotient constructions in the last section use classical
+quiver and K\"ahler reduction \cite{king94,sj95,sl91}; their role is
+to identify precisely the geometry supplied by the explicit primitive.
+
+Sections~\ref{sec:coefficients}--\ref{sec:polar} establish the coefficient
+and polar estimates. Section~\ref{sec:invertible} proves invertible-source
+cancellation, Section~\ref{sec:increase} proves mass increase, and
+Section~\ref{sec:mixed} treats surviving source cohomology.
+Sections~\ref{sec:static}--\ref{sec:geometry} concern static regularity
+and potentials.

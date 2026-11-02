@@ -1,0 +1,79 @@
+\pdfoutput=1
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{booktabs,adjustbox,graphicx,xcolor,placeins}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdfauthor={Bernd Johannes Wuebben},
+ pdftitle={Mass increase and acyclic cancellation for phase flows on quiver complexes}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\id}{I}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\ac}{\mathrm{ac}}
+\newcommand{\ii}{\mathrm i}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Ein}{Ein}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\polar}{polar}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inner}[2]{\left\langle#1,#2\right\rangle}
+
+\title[Phase flows on quiver complexes]{Mass increase and acyclic cancellation\\
+for phase flows on quiver complexes}
+\author{Bernd Johannes Wuebben}
+\email{wuebben@gmail.com}
+\subjclass[2020]{16G20, 34D05 (primary); 15A23, 53D20 (secondary)}
+\keywords{Quiver representation, complex, polar decomposition, phase flow,
+acyclic cancellation, K\"ahler quotient}
+\date{November 2, 2026}
+
+\begin{document}
+\begin{abstract}
+For two-term complexes over a two-vertex parallel-arrow quiver, with
+degree-one term supported at the source, trace-norm mass can increase
+along the Haiden--Katzarkov--Kontsevich--Pandit phase flow defined by
+positivity. We give an explicit noncommuting example. Nevertheless, for
+invertible source differential and vertex charges in the strict upper
+half-plane, every positive initial metric yields exponential decay of
+the acyclic coefficients and convergence of the normalized cohomology
+metric. For a balanced rank-two three-arrow family, a sufficiently large
+initial acyclic scale gives quantitative cancellation for arbitrary
+bounded mixing, uniformly through a change of cohomology stabilizer.
+The evolving coefficient approaches its instantaneous cohomology
+coefficient; the proof controls the polar phase using only the
+nonsingular cohomology block. As the differential scale tends to infinity,
+the static mass and its first derivatives in bounded arrow coordinates
+converge uniformly. A rescaled profile forces third derivatives to diverge.
+An explicit primitive
+has a negative Levi direction on a complex gauge orbit and identifies
+the positive limiting cohomology potential.
+\end{abstract}
+\maketitle
+
+\input{sections/01_introduction}
+\input{sections/02_coefficients}
+\input{sections/03_polar}
+\input{sections/04_invertible}
+\input{sections/05_mass_increase}
+\input{sections/06_mixed}
+\input{sections/07_static}
+\input{sections/08_geometry}
+\input{sections/09_questions}
+\input{references}
+\end{document}

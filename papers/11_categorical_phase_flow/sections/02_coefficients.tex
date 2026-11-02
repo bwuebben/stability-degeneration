@@ -1,0 +1,219 @@
+\section{The coefficient and the positive phase}\label{sec:coefficients}
+
+We first compute the coefficient for \eqref{eq:complex}, allowing an
+arbitrary rectangular differential $D$. Adjoint symbols always refer
+to the current Hermitian metrics. Put
+\begin{equation}\label{eq:BCLE}
+ B=D^\dagger D,\quad L=DD^\dagger,\quad
+ C=\sum_j A_j^\dagger A_j,\quad E=DCD^\dagger,
+ \quad P=e^{-B},\quad Q=e^{-L}.
+\end{equation}
+For a nonnegative Hermitian matrix $B$, define
+\begin{align}
+ R(B)&=\int_0^1e^{-sB}\,ds,\label{eq:R}\\
+ K_B(C)&=\int_0^1e^{-(1-s)B}Ce^{-sB}\,ds,\label{eq:K}\\
+ J_L(E)&=\int_{\substack{x,z\geq0\\x+z\leq1}}
+                 e^{-xL}Ee^{-zL}\,dx\,dz.\label{eq:J}
+\end{align}
+In particular $R(0)=1$; no inverse of $B$ is implicit in this notation.
+
+\begin{proposition}\label{prop:coefficient}
+The superconnection coefficient of \cite[\S5.4]{hkkp26} on
+\eqref{eq:complex}, including its degree sign, is
+\begin{equation}\label{eq:coeff}
+ \begin{split}
+ \Omega_V&=z_0P+K_B(C),\\
+ \Omega_U&=J_L(E)-z_0Q,\\
+ \Omega_W&=z_1\id_W-\sum_j A_jR(B)A_j^\dagger.
+ \end{split}
+\end{equation}
+If $n=\dim V$, $r=\dim U$ and $m_0=\dim W$, then
+\begin{equation}\label{eq:central}
+ \tr\Omega=(n-r)z_0+m_0z_1.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:imaginary}
+ \Ima\Omega_V=(\Ima z_0)P,\qquad
+ \Ima(-\Omega_U)=(\Ima z_0)Q,\qquad
+ \Ima\Omega_W=(\Ima z_1)\id_W .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+We specify the graded conventions to fix the signs. In the quiver
+algebra of \cite[Definition~5.13]{hkkp26}, an arrow $\alpha:s\to t$
+and its adjoint have degrees $1$ and $-1$, while the vertex elements
+$e_i,f_i$ have degree zero. The nontrivial two-arrow products are
+$\alpha\alpha^*=\ii f_t$ and
+$\alpha^*\alpha=-\ii f_s$ for a matching arrow; cross-arrow products
+vanish. Products involving an $f_i$ and an arrow, and products of two
+$f_i$'s, vanish. Tensor multiplication has the Koszul sign
+\[
+ (x\otimes T)(y\otimes S)=(-1)^{|T||y|}xy\otimes TS.
+\]
+The involution on an even endomorphism is the ordinary adjoint, and
+on an odd endomorphism it is $\ii$ times that adjoint.
+The source superconnection and curvature are
+\[
+ \mathsf A=\sum_i e_i\otimes d_i+\sum_j\alpha_j\otimes A_j,\qquad
+ F=(\mathsf A-\mathsf A^*)^2+\ii\sum_i f_i\otimes z_i.
+\]
+The coefficient is
+$\Omega=(-1)^{\deg}\exp(-\ii F)_f$, where the subscript means
+coefficient extraction after exponentiation.
+
+Write $X=-\ii F$. Its vertex part is $-B$ on $V$, $-L$ on $U$
+and zero on $W$. Its $f$ coefficients before exponentiation are
+$C+z_0\id$ on $V$, $z_0\id$ on $U$, and
+$z_1\id-\sum_j A_jA_j^\dagger$ on $W$.
+Its mixed arrow terms are $-A_jD^\dagger:U\to W$ and
+$-\ii DA_j^\dagger:W\to U$, with their respective algebra factors.
+Their paired $f$ contribution is $-DCD^\dagger$ on $U$ and
+$\sum_j A_jD^\dagger DA_j^\dagger$ on $W$.
+
+The Duhamel expansion contributing to an $f$ coefficient terminates
+at one $f$ insertion or two arrow insertions. There are no mixed
+paths on $V$, giving $K_B(C)+z_0P$. On $U$, the two-insertion term
+is $-J_L(E)$ before multiplication by the degree-one sign.
+On $W$ the two-insertion contribution is
+\[
+ \sum_j\int_0^1(1-s)A_jD^\dagger e^{-sL}DA_j^\dagger\,ds.
+\]
+Using $D^\dagger e^{-sL}D=Be^{-sB}$ and
+\[
+ -\id+\int_0^1(1-s)Be^{-sB}\,ds=-R(B)
+\]
+proves \eqref{eq:coeff}.
+
+The substitutions $s\mapsto1-s$ and $(x,z)\mapsto(z,x)$ show that
+$K_B(C)$ and $J_L(E)$ are Hermitian. This proves
+\eqref{eq:imaginary}; neither integral operator is asserted to preserve
+positivity. Cyclicity of trace gives
+\[
+ \tr K_B(C)=\tr(CP),\qquad
+ \tr J_L(E)
+ =\tr\left(C\int_0^1sBe^{-sB}\,ds\right)
+ =\tr(C(R(B)-P)).
+\]
+The arrow traces cancel. The nonzero spectra of $B$ and $L$ agree,
+so $\tr P-\tr Q=n-r$, proving \eqref{eq:central}.
+\end{proof}
+
+\begin{lemma}\label{lem:phase}
+If $\Ima T>0$ and $T=U_T|T|$ is its polar decomposition, then
+every eigenvalue of $U_T$ lies in the open upper semicircle.
+On a block of degree $q$, the matrix
+$\Phi=\Arg U_T-\pi q\id$ is the unique Hermitian matrix with spectrum
+in $(-\pi q,\pi(1-q))$ such that
+$(-1)^qT e^{-\ii\Phi}$ is positive definite.
+\end{lemma}
+
+\begin{proof}
+For a unit eigenvector $v$ of $U_T$ with eigenvalue $e^{\ii\theta}$,
+\[
+ 0<\inner{v}{\Ima(T)v}
+   =\sin\theta\,\inner{v}{|T|v}.
+\]
+Thus $0<\theta<\pi$. With the stated branch,
+$(-1)^qT e^{-\ii\Phi}=TU_T^\dagger=(TT^\dagger)^{1/2}>0$.
+Conversely positivity identifies $e^{\ii\Phi}$ as the polar unitary
+of $(-1)^qT$. Uniqueness of polar decomposition and of the branch
+give uniqueness of $\Phi$.
+\end{proof}
+
+For the trace functional $\mathcal L(a)=\tr(\Omega a)$,
+the positivity requirement
+$\mathcal L(e^{-\ii\Phi}a^\dagger a)\geq0$ for all $a$
+is exactly the positivity of $\Omega e^{-\ii\Phi}$.
+Lemma~\ref{lem:phase} therefore identifies the phase required by
+\cite[\S4.2]{hkkp26} without a normality hypothesis.
+The degree convention also respects shifts: the shift $[1]$ moves
+degree $q$ to $q-1$ and increases the phase by $\pi$.
+Orthogonal direct sums give direct sums of coefficients and phases,
+and additive mass.
+
+\begin{example}\label{ex:nonnormal}
+Take $V=U=W=\CC^2$, $z_0=z_1=\ii$,
+$D=\diag(1,\sqrt2)$ and
+$A=\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$.
+Writing $p=e^{-1}$ and $q=e^{-2}$, formula \eqref{eq:coeff} gives
+\[
+ \Omega_V=
+ \begin{pmatrix}(1+\ii)p&p-q\\p-q&(2+\ii)q\end{pmatrix},\qquad
+ [\Omega_V,\Omega_V^\dagger]
+ =2\ii(p-q)^2\begin{pmatrix}0&1\\-1&0\end{pmatrix}\ne0.
+\]
+Thus coefficient extraction does not preserve the normality of an
+element in the graded algebra. This example contradicts the
+normality clause of \cite[Lemma~5.16]{hkkp26}, while retaining the
+strict imaginary-part property and the central-charge trace.
+\end{example}
+
+\subsection{Variation and global existence}
+At an instant choose orthonormal frames. Along the metric phase flow,
+the fixed maps have moving-frame derivatives
+\begin{equation}\label{eq:mapflow}
+ \dot D=\tfrac12(D\Phi_V-\Phi_UD),\qquad
+ \dot A_j=\tfrac12(A_j\Phi_V-\Phi_WA_j).
+\end{equation}
+For example, a variation $\xi_q=h_q^{-1}\delta h_q$ gives
+$\delta D=(\xi_UD-D\xi_V)/2$ and
+$\delta A_j=(\xi_WA_j-A_j\xi_V)/2$ in such frames.
+Substituting $\xi=-\Phi$ gives \eqref{eq:mapflow}.
+
+All coefficient variations can be computed without denominators involving
+eigenvalue differences. Define block matrices
+\[
+ N_V=\begin{pmatrix}-B&C\\0&-B\end{pmatrix},\quad
+ N_U=\begin{pmatrix}-L&E&0\\0&0&\id\\0&0&-L\end{pmatrix},\quad
+ N_R=\begin{pmatrix}-B&\id\\0&0\end{pmatrix}.
+\]
+Then $(e^{N_V})_{11}=P$, $(e^{N_V})_{12}=K_B(C)$,
+$(e^{N_U})_{11}=Q$, $(e^{N_U})_{13}=J_L(E)$ and
+$(e^{N_R})_{12}=R(B)$. The Fr\'echet derivative
+\begin{equation}\label{eq:duhamel}
+ \mathrm D\exp_N(\dot N)=\int_0^1e^{(1-s)N}\dot N e^{sN}\,ds
+\end{equation}
+and the product rule therefore determine every $\dot\Omega_q$.
+In particular,
+\[
+ \dot\Omega_W=-\sum_j\bigl(\dot A_jRA_j^\dagger+
+ A_j\dot R A_j^\dagger+A_jR\dot A_j^\dagger\bigr).
+\]
+
+\begin{lemma}\label{lem:massvariation}
+Let $\Omega_q=U_q|\Omega_q|$ on each homogeneous block. Then
+\begin{equation}\label{eq:massvariation}
+ \dot m=\sum_q\Rea\tr(U_q^\dagger\dot\Omega_q).
+\end{equation}
+The coefficients and phase define a smooth metric vector field, whose
+solutions exist for all $t\geq0$.
+\end{lemma}
+
+\begin{proof}
+For an invertible matrix $\Omega=UH$, differentiation of
+$H^2=\Omega^\dagger\Omega$ and taking trace after multiplication by
+$H^{-1}$ gives
+$\tr\dot H=\Rea\tr(U^\dagger\dot\Omega)$.
+This proves \eqref{eq:massvariation}.
+The polar decomposition and its upper-semicircle logarithm are smooth
+on the domain in Lemma~\ref{lem:phase}.
+If a phase derivative is needed, put
+$S=U^\dagger\dot U$ and $Z=U^\dagger\dot\Omega$; it is determined by
+\[
+ HS+SH=Z-Z^\dagger,\qquad S^\dagger=-S,
+\]
+followed by differentiation of the chosen unitary logarithm.
+The Sylvester operator is invertible because $H>0$.
+
+The branches give $0<\Phi_V,\Phi_W<\pi\id$ and
+$-\pi\id<\Phi_U<0$. In fixed coordinates the metric forms satisfy
+\[
+ e^{-\pi t}h_V(0)\leq h_V(t)\leq h_V(0),\qquad
+ h_U(0)\leq h_U(t)\leq e^{\pi t}h_U(0),
+\]
+and the same degree-zero bounds hold on $W$.
+On every finite time interval these inequalities confine the metrics
+to a compact subset of the positive cone. The smooth ordinary
+differential equation therefore extends past every finite time.
+\end{proof}

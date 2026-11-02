@@ -1,0 +1,168 @@
+\section{Cancellation for an invertible differential}\label{sec:invertible}
+
+We prove Theorem~\ref{thm:introcancellation}. The surviving cohomology
+is $W$ in degree zero. Put $a=\arg z_1\in(0,\pi)$ and, in moving
+orthonormal frames, define
+\begin{equation}\label{eq:invertiblevariables}
+ X_j=A_jD^{-1},\qquad H_X=\sum_jX_j^\dagger X_j,\qquad
+ s=\tr H_X,\qquad \lambda=\lambda_{\min}(D^\dagger D).
+\end{equation}
+
+\begin{lemma}\label{lem:Xcontract}
+Along the phase flow,
+\begin{equation}\label{eq:Xcontract}
+ \dot X_j=\tfrac12(X_j\Phi_U-\Phi_WX_j),\qquad
+ s(t)\leq s(0)e^{-at}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Differentiate $A_jD^{-1}$ using \eqref{eq:mapflow}; the source phase
+cancels. Since $A_j=X_jD$,
+\begin{equation}\label{eq:targetX}
+ \Omega_W=z_1\id-\sum_jX_j(\id-e^{-L})X_j^\dagger .
+\end{equation}
+The subtracted matrix is positive semidefinite. This target block
+is normal, with scalar strictly positive imaginary part, and
+$\arg(z_1-r)\geq\arg z_1$ for $r\geq0$. Thus $\Phi_W\geq a\id$,
+whereas $\Phi_U<0$ on the degree-one branch. Consequently
+\[
+ \dot s=\sum_j\tr(X_j^\dagger X_j\Phi_U)
+          -\tr\left(\sum_jX_jX_j^\dagger\Phi_W\right)
+ \leq-as.
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:heatbounds}
+Let $\kappa=\pi/(2e)$. For an invertible differential of rank $n$,
+the coefficient terms in \eqref{eq:coeff} satisfy
+\begin{equation}\label{eq:heatbounds}
+ \norm{K_B(C)}_1\leq n\kappa s,\qquad
+ \norm{J_L(E)}_1\leq ns,\qquad
+ \norm{\Omega_W-z_1\id}_1\leq s.
+\end{equation}
+The constants do not depend on any singular-value ratio of $D$.
+\end{lemma}
+
+\begin{proof}
+Write $D=U_DB^{1/2}$ and $S=U_D^\dagger H_XU_D$. Then
+$C=B^{1/2}SB^{1/2}$, $S\geq0$ and $\tr S=s$.
+For $u>0$,
+$\norm{B^{1/2}e^{-uB}}\leq(2eu)^{-1/2}$.
+Integration in \eqref{eq:K}, using
+$\int_0^1[s(1-s)]^{-1/2}ds=\pi$, gives
+$\norm{K_B(C)}\leq\kappa s$, hence the first trace-norm bound.
+
+On $U$, $E=LH_XL$. In an eigenbasis of $L$ with eigenvalues $l_i$,
+\[
+ (J_L(E))_{ij}=k_{ij}(H_X)_{ij},\qquad
+ k_{ij}=l_il_j\int_{\substack{x,z\geq0\\x+z\leq1}}
+                  e^{-xl_i-zl_j}\,dx\,dz .
+\]
+Enlarging the integration region to the nonnegative quadrant gives
+$0\leq k_{ij}\leq1$. Positivity of $H_X$ implies
+$|(H_X)_{ij}|\leq\sqrt{(H_X)_{ii}(H_X)_{jj}}$. Therefore
+\[
+ |\inner{v}{J_L(E)v}|
+ \leq\left(\sum_i|v_i|\sqrt{(H_X)_{ii}}\right)^2
+ \leq s\norm v^2.
+\]
+Since $J_L(E)$ is Hermitian, this proves the second estimate.
+Finally the positive semidefinite matrix subtracted in
+\eqref{eq:targetX} has trace at most $s$.
+\end{proof}
+
+\begin{lemma}\label{lem:growinggap}
+There is a constant $C$ depending on the initial data and charges such
+that $\lambda(t)\geq at-C$ for every $t\geq0$.
+\end{lemma}
+
+\begin{proof}
+The least eigenvalue $\lambda$ is locally Lipschitz. At almost every
+time, choose a unit minimum eigenvector $v$ realizing its derivative,
+and set $u=Dv/\sqrt\lambda$. Then $Lu=\lambda u$ and
+\begin{equation}\label{eq:lambdaderivative}
+ \dot\lambda
+ =\lambda\bigl(\inner{v}{\Phi_Vv}-\inner{u}{\Phi_Uu}\bigr)>0.
+\end{equation}
+The same lower estimates hold on every vector in a repeated minimum
+eigenspace, and hence for the corresponding one-sided eigenvalue
+derivatives. In particular $\lambda\geq\lambda_0:=\lambda(0)>0$.
+
+Apply \eqref{eq:weightedscalar} to
+$\Omega_V=z_0e^{-B}+K_B(C)$ and
+$-\Omega_U=z_0e^{-L}-J_L(E)$.
+On $v$ and $u$ the reference heat eigenvalue is $e^{-\lambda}$.
+The reference phases differ by $\pi$ after the degree-one branch
+shift. Lemmas~\ref{lem:Xcontract} and \ref{lem:heatbounds} yield
+\begin{equation}\label{eq:gapineq}
+ \dot\lambda\geq\lambda
+   \left[\pi-C_0e^{(\lambda-at)/2}\right],\qquad
+ C_0=\pi\sqrt{\frac{ns(0)}{|z_0|}}(\sqrt\kappa+1).
+\end{equation}
+Let $L_0=\max\{0,2\log(2C_0/\pi)\}$, taking $L_0=0$ when $C_0=0$.
+Whenever $\lambda\leq at-L_0$, the bracket in \eqref{eq:gapineq}
+is at least $\pi/2$.
+
+For completeness, choose
+\[
+ M_0=\max\{\lambda_0,4a/\pi,1\},\quad
+ T_0=(M_0+L_0)/a,\quad
+ T_1=T_0+\frac2\pi\log(M_0/\lambda_0).
+\]
+For $t\geq T_0$ while $\lambda\leq M_0$,
+$\dot\lambda\geq\pi\lambda/2$, so $\lambda$ reaches $M_0$ by $T_1$.
+The line $b(t)=M_0+a(t-T_1)$ satisfies
+$b(t)-at=M_0-aT_1\leq-L_0$.
+At a contact point $\lambda=b$ for $t\geq T_1$,
+$\dot\lambda\geq\pi b/2\geq2a>\dot b$.
+Scalar comparison gives $\lambda\geq b$ thereafter. Before $T_1$
+we have $\lambda>0$, so $\lambda(t)\geq at-aT_1$ for all $t\geq0$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:introcancellation}]
+Global existence is Lemma~\ref{lem:massvariation}.
+The contraction and gap statements follow from
+Lemmas~\ref{lem:Xcontract} and \ref{lem:growinggap}.
+The latter also gives
+$\norm{e^{-B}}=\norm{e^{-L}}\leq e^{aT_1}e^{-at}$.
+Thus
+\begin{align*}
+ \norm{\Omega_V}_1+\norm{\Omega_U}_1
+ &\leq\bigl(2n|z_0|e^{aT_1}+n(\kappa+1)s(0)\bigr)e^{-at},\\
+ \norm{\Omega_W-z_1\id}_1&\leq s(0)e^{-at}.
+\end{align*}
+The central-charge identity is $\tr\Omega=m_0z_1$.
+The triangle inequality gives the lower mass bound
+$m(h(t))\geq m_0|z_1|$ and, with the last two estimates, the upper
+bound \eqref{eq:intromass}.
+
+It remains to identify convergence of a metric in fixed coordinates.
+For $r\geq0$,
+\[
+ 0\leq\arg(z_1-r)-a
+ =\int_0^r\frac{\Ima z_1}{|z_1-u|^2}\,du
+ \leq\frac r{\Ima z_1}.
+\]
+Spectral calculus in \eqref{eq:targetX} yields
+$0\leq\Phi_W-a\id\leq s(0)e^{-at}(\Ima z_1)^{-1}\id$.
+For $\widehat h_W=e^{at}h_W$, comparison of Hermitian forms gives
+\[
+ e^{-s(0)/(a\Ima z_1)}h_W(0)
+ \leq\widehat h_W(t)\leq h_W(0).
+\]
+The normalized metric is decreasing, and hence has a positive definite
+limit. Its derivative in any fixed coordinate norm is $O(e^{-at})$,
+by the same comparison and the phase bound. Integration proves
+exponential convergence.
+\end{proof}
+
+\begin{remark}\label{rem:zero}
+Zero-dimensional cases have direct descriptions. If $V=U=0$, the only
+coefficient is $z_1\id_W$ and $h_W(t)=e^{-at}h_W(0)$.
+If $W=0$, all arrows vanish; writing $\theta_0=\arg z_0$ gives
+$\Phi_V=\theta_0\id$ and $\Phi_U=(\theta_0-\pi)\id$.
+Consequently $D(t)=e^{\pi t/2}D(0)$ in moving frames and
+$m(h(t))=2|z_0|\tr e^{-e^{\pi t}D(0)^\dagger D(0)}$.
+Thus the acyclic mass decays faster than every fixed exponential.
+\end{remark}

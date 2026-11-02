@@ -1,0 +1,182 @@
+\section{A mass-increasing trajectory}\label{sec:increase}
+
+We prove Theorem~\ref{thm:introincrease} by computing a positive one-sided
+limit of the exact mass derivative. All metric and phase conventions
+remain those of Section~\ref{sec:coefficients}.
+For the initial matrices in that theorem,
+$D^\dagger D=\diag(1/25,4)$ and
+$A^\dagger A=\left(\begin{smallmatrix}1&2\\2&4\end{smallmatrix}\right)$
+do not commute.
+
+\subsection{The real limiting coefficient}
+Put
+\[
+ b_1=1/25,\quad b_2=4,\quad p=e^{-b_1},\quad q=e^{-b_2},
+ \quad R_i=\frac{1-e^{-b_i}}{b_i},\quad f_i=R_i-e^{-b_i},
+\]
+and define
+\[
+ \ell=\frac{p-q}{b_2-b_1},\qquad
+ s_*=\frac{\sqrt{b_1b_2}(R_1-R_2)}{b_2-b_1}.
+\]
+At $\epsilon=0$ the coefficient blocks have the real symmetric limits
+\begin{equation}\label{eq:realblocks}
+ H=\begin{pmatrix}2p&2\ell\\2\ell&5q\end{pmatrix},\quad
+ G=\begin{pmatrix}f_1-p&2s_*\\2s_*&4f_2-q\end{pmatrix},\quad
+ w=4-R_1-4R_2=25p+q-22.
+\end{equation}
+The elementary bounds below give
+\begin{equation}\label{eq:realblocksigns}
+ \begin{gathered}
+ -0.05060<\det H<-0.05059,\qquad
+ -0.85991<\det G<-0.85990,\\
+ 2.03805<w<2.03806 .
+ \end{gathered}
+\end{equation}
+Thus $H$ and $G$ each have one negative and one positive eigenvalue.
+For a real symmetric $2$ by $2$ matrix $M$ with this property,
+\begin{equation}\label{eq:negativeprojection}
+ P_-(M)=\frac12\left(\id-
+ \frac{2M-(\tr M)\id}{\sqrt{(\tr M)^2-4\det M}}\right).
+\end{equation}
+Write $P_V=P_-(H)$ and $P_U=P_-(G)$.
+
+All limiting blocks are invertible. The polar unitary is continuous
+near them. On the degree-zero branch its eigenvalues approach $1$
+and $-1$ through the upper semicircle; the corresponding phases approach
+$0$ and $\pi$. On the degree-one block apply the same observation to
+$-\Omega_U$ and subtract $\pi$. It follows that
+\begin{equation}\label{eq:phaselimit}
+ \Phi_V\longrightarrow\pi P_V,\qquad
+ \Phi_U\longrightarrow-\pi P_U,\qquad
+ \Phi_W\longrightarrow0
+ \quad(\epsilon\downarrow0).
+\end{equation}
+The argument is continuous on the closed upper semicircle with these
+endpoint values. This assertion does not use continuity across a branch
+cut from the lower semicircle.
+
+\subsection{A finite real formula for the derivative}
+Divide the limiting map velocities by $\pi$ and denote this directional
+derivative by a prime. Equation~\eqref{eq:mapflow} becomes
+\begin{equation}\label{eq:realvelocity}
+ D'=\tfrac12(DP_V+P_UD),\qquad A'=\tfrac12AP_V .
+\end{equation}
+Since the central-charge trace is constant, the trace-norm derivative
+formula gives
+\begin{equation}\label{eq:positivelimit}
+ \lim_{\epsilon\downarrow0}\frac{\dot m_\epsilon(0)}{\pi}
+ =-2\tr(P_VH'+P_UG').
+\end{equation}
+Indeed, at the real invertible blocks the polar unitaries are their
+sign matrices $\id-2P_V$, $\id-2P_U$, and $1$.
+The identity contributions sum to the derivative of \eqref{eq:central},
+which vanishes.
+
+Here is a scalar-arithmetic evaluation of the right side of
+\eqref{eq:positivelimit}. It avoids differentiating eigenvectors of
+the coefficient. Let $B=\diag(b_1,b_2)$ and
+$C=\left(\begin{smallmatrix}1&2\\2&4\end{smallmatrix}\right)$.
+Set
+\begin{equation}\label{eq:Bprime}
+ B'=\tfrac12(P_VB+BP_V)+DP_UD,\quad
+ \gamma=\frac{B'_{12}}{b_2-b_1},\quad
+ K=\begin{pmatrix}0&\gamma\\-\gamma&0\end{pmatrix}.
+\end{equation}
+Use instantaneous singular-vector frames for $D$.
+In the source frame, $B'+[B,K]$ is diagonal and
+$b_i'=B'_{ii}$. The arrow Gram derivative is
+\begin{equation}\label{eq:Cprime}
+ \widetilde C'=\tfrac12(P_VC+CP_V)+[C,K].
+\end{equation}
+The corresponding target frame makes $D$ diagonal to first order.
+Frame rotations do not change the traces
+$\tr(P_VH')$ and $\tr(P_UG')$, since the projections commute with
+the respective limiting blocks.
+
+The remaining derivatives are
+\begin{align}
+ R_i'&=-\frac{f_i}{b_i}b_i',\qquad
+ f_i'=\left(-\frac{f_i}{b_i}+e^{-b_i}\right)b_i',\label{eq:Rprime}\\
+ \ell'&=\frac{(-pb_1'+qb_2')(b_2-b_1)
+                    -(p-q)(b_2'-b_1')}{(b_2-b_1)^2},\label{eq:ellprime}\\
+ s_*'&=\frac{s_*}{2}\left(\frac{b_1'}{b_1}+\frac{b_2'}{b_2}\right)\notag\\
+ &\quad+\sqrt{b_1b_2}\,
+  \frac{(R_1'-R_2')(b_2-b_1)-(R_1-R_2)(b_2'-b_1')}
+       {(b_2-b_1)^2}.\label{eq:sprime}
+\end{align}
+In these frames,
+\begin{align}
+ H'_{ii}&=e^{-b_i}\bigl(\widetilde C'_{ii}-(1+C_{ii})b_i'\bigr),
+ &H'_{12}&=\ell\widetilde C'_{12}+C_{12}\ell',\label{eq:Hprime}\\
+ G'_{ii}&=f_i\widetilde C'_{ii}
+ +\left[C_{ii}\left(-f_i/b_i+e^{-b_i}\right)+e^{-b_i}\right]b_i',
+ &&\label{eq:Gprime}\\
+ G'_{12}&=s_*\widetilde C'_{12}+C_{12}s_*'.&&\notag
+\end{align}
+Equations \eqref{eq:realblocks}--\eqref{eq:Gprime} are a finite expression
+using rational operations, two exponentials and positive square roots.
+
+\subsection{Strict positivity}
+The two exponentials lie in the rational intervals
+\begin{equation}\label{eq:expintervals}
+ \begin{split}
+ 0.96078943915232320&<p<0.96078943915232322,\\
+ 0.01831563888873417&<q<0.01831563888873419.
+ \end{split}
+\end{equation}
+To verify them, use the Taylor sums of degrees $31$ and $30$ for
+$e^{-1/25}$, and of degrees $81$ and $80$ for $e^{-4}$.
+The odd and even sums bound the exponential from below and above,
+respectively, by the sign of the Taylor remainder. Each comparison with
+the displayed decimal endpoint is a rational comparison.
+
+Substitution in the finite formulas above, with interval operations,
+gives the enclosures in Table~\ref{tab:intervals}. Each printed matrix
+entry differs from its exact value by less than $10^{-8}$.
+These deliberately coarse enclosures suffice to give
+\begin{equation}\label{eq:coarsepositive}
+ 0.2395<-2\tr(P_VH'+P_UG')<0.2397.
+\end{equation}
+One may verify the table using only rational endpoints: every positive
+square root can be enclosed by rational lower and upper bounds whose
+squares enclose its argument. Thus the sign calculation does not
+depend on a floating-point eigensolver or a finite-difference derivative.
+
+\begin{table}[ht]
+\caption{Enclosures for the sign calculation. For each symmetric matrix,
+the entries are listed in the order $(11,12,22)$; each entry has error
+less than $10^{-8}$.}\label{tab:intervals}
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{lrrr}
+\toprule
+Matrix & $11$ & $12$ & $22$\\
+\midrule
+$H$   & $1.92157888$ & $0.47599687$ & $0.09157819$\\
+$G$   & $-0.94131486$ & $0.14845312$ & $0.89010617$\\
+$P_V$ & $0.05643063$ & $-0.23075142$ & $0.94356937$\\
+$P_U$ & $0.99355619$ & $-0.08001432$ & $0.00644381$\\
+$H'$  & $0.01353176$ & $-0.24643619$ & $-0.29654199$\\
+$G'$  & $0.06216737$ & $0.10644365$ & $0.12306918$\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{proof}[Proof of Theorem~\ref{thm:introincrease}]
+The coefficients, their directional derivatives, and the polar
+unitaries extend continuously to the invertible real limiting blocks.
+Equation~\eqref{eq:phaselimit} gives convergence of the actual flow
+directions from $\epsilon>0$. The trace-norm derivative is consequently
+continuous in this one-sided limit. Equations~\eqref{eq:positivelimit}
+and \eqref{eq:coarsepositive} show that the limit is positive.
+It follows that $\dot m_\epsilon(0)>0$ for all sufficiently small
+$\epsilon>0$, when both central charges are admissible.
+\end{proof}
+
+The example disproves universal mass dissipation for the specified
+positive phase, rather than merely exposing a failure of normality.
+It does not preclude eventual cancellation, which
+Theorem~\ref{thm:introcancellation} proves for these same complexes.
+No change of vector field is used in that theorem.

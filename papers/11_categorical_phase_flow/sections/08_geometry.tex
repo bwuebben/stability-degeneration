@@ -1,0 +1,262 @@
+\section{The limiting quotient and a restricted positive construction}
+\label{sec:geometry}
+
+We first identify the limiting primitive under specified changes of
+presentation. We then give a finite-scale positive construction with
+additional hypotheses. Proposition~\ref{prop:negativelevi} rules out
+extending its ambient positivity to all mixed presentations by the same
+primitive.
+
+\subsection{Relative primitives and elementary cancellations}
+Fix Hermitian reference data on a surviving source $H$ and target $W$.
+Let $C$ be an acyclic source sector and
+$D=[0,F]:H\oplus C\to U$, where $F:C\to U$ is invertible.
+Evaluate the primitive on metrics $h_V=h_H\oplus h_C$ and write
+$A_j=[B_j,T_j]$. The metrics on $C,U$ and the map $F$ are fixed
+throughout the static arrow-coordinate comparison.
+Put $P_F=F^\dagger F$ and
+$\lambda=\lambda_{\min}(P_F)>0$.
+The zero-arrow acyclic primitive is
+\begin{equation}\label{eq:acyclicprimitive}
+ \mathcal S_{\ac}
+ =z_0(\log\det h_C-\log\det h_U)+z_0\tr\Ein(P_F).
+\end{equation}
+With fixed determinant volume forms, subtracting this declared
+expression from \eqref{eq:primitive} gives
+\begin{equation}\label{eq:relativeprimitive}
+ \begin{split}
+ \mathcal S_{\mathrm{rel}}
+ ={}&z_0\log\det h_H+z_1\log\det h_W-q_h(B)\\
+ &-\sum_j\tr\bigl(T_jR(P_F)T_j^\dagger\bigr),\qquad
+ q_h(B)=\sum_j\norm{B_j}_{\HS,h}^2 .
+ \end{split}
+\end{equation}
+For fixed $F$ and acyclic metric data,
+$0\leq R(P_F)\leq\lambda^{-1}\id$.
+Thus the last term has absolute value at most
+$\lambda^{-1}\sum_j\norm{T_j}_{\HS}^2$ and has
+$O(\lambda^{-1})$ bounds for every fixed derivative in bounded
+real $B,T$ coordinates. This is a relative static comparison, not
+a constant subtraction on the full metric orbit.
+
+Several elementary compatibilities follow from this exact formula.
+For mutually orthogonal acyclic sectors with
+$F=\diag_a(\Lambda_a\id)$, the error is
+\begin{equation}\label{eq:sectorerror}
+ -\sum_aR(\Lambda_a^2)\sum_j\norm{T_j^{(a)}}_{\HS}^2.
+\end{equation}
+The subtractions and removals of these sectors commute. Their bound
+depends on $\min_a\Lambda_a$, not on the ratios of the scales.
+This is an assertion for the displayed block decomposition, not
+for interacting acyclic differentials without such a decomposition.
+
+An elementary source shear
+$g_V=\left(\begin{smallmatrix}\id&S\\0&\id\end{smallmatrix}\right)$,
+where $S:C\to H$, leaves $D$ unchanged and replaces
+$T_j$ by $T_j-B_jS$. The cohomology maps remain $B_j$.
+For bounded data the two error terms in \eqref{eq:relativeprimitive}
+both tend to zero, so their limits agree.
+The same holds for every fixed derivative after composition with a
+holomorphic parameter chart whose shear has bounded derivatives.
+The two reference presentations must retain the same cohomology
+Hermitian data, or transport them by a specified holomorphic isometry.
+This does not assert equality at finite scale under a nonunitary shear
+with unchanged ambient metrics.
+
+Constant unitary frame changes preserve the comparison when they
+transport $F$ and $T_j$ together. With unequal scales, a rotation of
+acyclic frames generally changes the displayed matrix of $F$.
+Rotating only the arrows while holding that matrix fixed is not the
+claimed invariance.
+
+Now specialize to $\dim H=\dim W=n>0$, $z_0=-1+\ii$, $z_1=1+\ii$.
+The total cohomology charge is $2n\ii$, of phase $\pi/2$.
+At fixed reference metrics, the limiting real arrow potential is
+\begin{equation}\label{eq:limitpotential}
+ K_H(B)=q(B)=\sum_j\norm{B_j}_{\HS}^2.
+\end{equation}
+Its Levi form is the usual positive flat form. The limiting
+metric-direction function is
+$q_h(B)+\log\det h_H-\log\det h_W$.
+Its critical equations are
+\begin{equation}\label{eq:ordinarybalance}
+ \sum_jB_j^\dagger B_j=\id_H,\qquad
+ \sum_jB_jB_j^\dagger=\id_W.
+\end{equation}
+The equality of dimensions is necessary by taking traces.
+The resulting orbit-type K\"ahler quotients are the ordinary quiver
+quotients. Their existence is classical; the calculation above
+identifies the limiting potential and its normalization for these
+presentations.
+
+\subsection{An explicit finite-scale restriction}
+Let $X=\operatorname{Hom}(H,W)^k$,
+$G=\GL(H)\times\GL(W)$ and $K=\U(H)\times\U(W)$, acting by
+$B_j\mapsto g_WB_jg_H^{-1}$. Take finitely many acyclic copies
+$C_a=U_a=H$. Fix positive external scales $\Lambda_a$ and constant
+matrices $L^{(a)}$ on the arrow-index space $\CC^k$ such that
+\begin{equation}\label{eq:arrowmixing}
+ (L^{(a)})^\dagger L^{(a)}=\kappa_a^2\id_k,\qquad \kappa_a\geq0.
+\end{equation}
+At least one $\kappa_a$ may be positive, so mixing need not vanish.
+Define the holomorphic family of presentations
+\begin{equation}\label{eq:graphfamily}
+ T_j^{(a)}=\sum_lL_{jl}^{(a)}B_l,\qquad
+ D=[0,\diag_a(\Lambda_a\id_H)].
+\end{equation}
+Its equivariance is for the embedding
+\[
+ g_V=\diag(g_H,g_H,\ldots,g_H),\qquad
+ g_U=\diag(g_H,\ldots,g_H),\qquad g_W=g_W.
+\]
+It is not equivariant as a family with fixed graph data under the
+entire presentation gauge group.
+
+Transport $h_H$ to every $C_a$ and $U_a$, and retain $h_W$ on $W$.
+All scales, arrow-index matrices and these fixed copy identifications
+are held constant in the following tangent and metric comparisons.
+Then $D^\dagger D$ on the $a$th copy is $\Lambda_a^2\id$ and
+\[
+ \sum_j\norm{T_j^{(a)}}_{\HS,h}^2
+ =\kappa_a^2 q_h(B),\qquad
+ \log\det h_V-\log\det h_U=\log\det h_H.
+\]
+Consequently the pullback of \eqref{eq:primitive}, after subtraction
+of the constant $z_0n\sum_a\Ein(\Lambda_a^2)$, is exactly
+\begin{equation}\label{eq:graphprimitive}
+ \mathcal S_{\CC,\Lambda}
+ =z_0\log\det h_H+z_1\log\det h_W-\alpha_\Lambda q_h(B),\qquad
+ \alpha_\Lambda=1+\sum_a\kappa_a^2R(\Lambda_a^2)>0.
+\end{equation}
+This subtraction is constant on the specified tied-metric family,
+as well as in $B$ at fixed scales. In contrast, it is not constant
+on the full metric space of the complex.
+The real arrow potential at phase $\pi/2$ is
+$K_\Lambda=\alpha_\Lambda q$. Its metric and form are
+$\alpha_\Lambda g_{\mathrm{flat}}$ and
+$\alpha_\Lambda\omega_{\mathrm{flat}}$.
+Their positivity follows directly from this formula.
+
+\begin{proposition}\label{prop:quotientisometry}
+For each fixed collection of data in
+\eqref{eq:arrowmixing}--\eqref{eq:graphfamily}, the map
+\begin{equation}\label{eq:scaling}
+ \sigma_\Lambda:B\longmapsto\alpha_\Lambda^{-1/2}B
+\end{equation}
+induces an isometry on each connected smooth orbit-type stratum
+from the ordinary balanced K\"ahler quotient to the quotient defined
+by $K_\Lambda$ at the same central moment level.
+It is the identity on the corresponding polystable cohomology
+isomorphism classes.
+The isometry preserves lengths, intrinsic distances and metric
+completions on identically specified path domains.
+\end{proposition}
+
+\begin{proof}
+Identify the Lie algebra dual with pairs of Hermitian matrices using
+the fixed moment-map normalization
+\[
+ \mu_\alpha(B)=
+ \left(-\alpha\sum_jB_j^\dagger B_j,\,
+        \alpha\sum_jB_jB_j^\dagger\right),\qquad
+ \eta=(-\id_H,\id_W).
+\]
+Let $Z=\mu_1^{-1}(\eta)$ and
+$Z_\Lambda=\mu_{\alpha_\Lambda}^{-1}(\eta)$.
+The diagonal scalar circle acts trivially; it may be retained as an
+ineffective subgroup, and $\eta$ annihilates its Lie algebra since
+the dimensions are equal. We do not assume freeness of the action.
+These finite-dimensional holomorphic Hamiltonian reductions have
+the usual smooth K\"ahler structures on connected orbit-type strata
+\cite{sl91,sj95}. The quiver Kempf--Ness correspondence identifies
+their points with polystable representations
+\cite[\S6]{king94}. The hypotheses apply here: the ambient space is
+flat K\"ahler, $K$ is compact, the level is central, and the source
+Gram component controls $q(B)$, making the moment map proper.
+
+The map $\sigma_\Lambda$ is a $K$-equivariant bijection from $Z$
+to $Z_\Lambda$, preserving every stabilizer subgroup. It satisfies
+\[
+ \sigma_\Lambda^*(\alpha_\Lambda g_{\mathrm{flat}})
+ =g_{\mathrm{flat}},\qquad
+ \sigma_\Lambda^*(\alpha_\Lambda\omega_{\mathrm{flat}})
+ =\omega_{\mathrm{flat}}.
+\]
+For clarity, if $v$ is a tangent lift and $\xi_X$ an infinitesimal
+$K$-orbit vector, then
+\[
+ d\sigma_\Lambda(v)=\alpha_\Lambda^{-1/2}v,\qquad
+ \xi_X(\sigma_\Lambda B)=\alpha_\Lambda^{-1/2}\xi_X(B).
+\]
+It follows directly that
+\[
+ \inf_{\xi\in\mathfrak k}
+ \alpha_\Lambda\norm{d\sigma_\Lambda(v)+\xi_X(\sigma_\Lambda B)}^2
+ =\inf_{\xi\in\mathfrak k}\norm{v+\xi_X(B)}^2.
+\]
+These are the squared reduced tangent norms. Stabilizer directions contribute
+zero orbit vectors and cause no inverse estimate.
+Furthermore $\sigma_\Lambda$ is the action of
+$(\id_H,\alpha_\Lambda^{-1/2}\id_W)\in G$, so it leaves the
+representation isomorphism class unchanged.
+
+For the path statement, fix a $K$-invariant subset $\mathcal P\subset Z$
+and use $\sigma_\Lambda(\mathcal P)$ on the other side.
+Choose piecewise smooth paths within connected orbit-type strata,
+with any allowed concatenations specified identically via
+$\sigma_\Lambda$. The equality of tangent norms preserves every
+admissible path length and hence their infimum on each finite-distance
+component. If this convention first produces a pseudometric, divide
+by zero distance on both sides. The resulting metric spaces, and
+therefore their metric completions, are isometric.
+No identification with a separate algebraic compactification is used.
+\end{proof}
+
+The finite-scale identity is elementary after \eqref{eq:graphprimitive};
+it is not a general relative estimate for arbitrary mixing.
+For the rank-two family \eqref{eq:balancedfamily}, scalar rescaling
+preserves its stabilizer jump exactly, so this restricted quotient
+identity remains valid without an orbit gap.
+
+As a concrete example, take one copy and $L=\kappa\id_k$, $\kappa>0$.
+Then $T_j=\kappa B_j$, and the off-diagonal block of the source
+arrow Gram matrix is $E_H=\kappa C_H$.
+It equals $\kappa\id$ on $Z$ and
+$(\kappa/\alpha_\Lambda)\id$ on $Z_\Lambda$.
+In either case it is nonzero, so the full source arrow Gram matrix
+does not commute with $D^\dagger D=\diag(0,\Lambda^2\id)$.
+This is mixing in the specified orthogonal Hermitian presentation.
+The nonunitary shear $S=\kappa\id$ removes it algebraically, so
+the example is not asserted to be an intrinsically nonsplit complex.
+
+For a set $I$ of retained acyclic copies, put
+$\alpha_I=1+\sum_{a\in I}\kappa_a^2R(\Lambda_a^2)$.
+The calibrated map between the $I$ and $J$ levels is multiplication
+by $\sqrt{\alpha_I/\alpha_J}$. These factors telescope under
+successive removals, proving order independence for this construction.
+Constant unitary changes of frames transport the differential and
+arrows together as above.
+
+\subsection{Limits of the comparison}
+The comparison fixes each $\Lambda_a$ and each $L^{(a)}$.
+Varying $\Lambda_a$ in a tangent direction differentiates
+$\alpha_\Lambda^{-1/2}$ and introduces an additional term;
+Proposition~\ref{prop:quotientisometry} makes no metric assertion in
+such total-parameter directions.
+It also does not claim that the full phase flow preserves the
+tied-metric family. Indeed that family keeps the norm of $D$ fixed,
+whereas the cancellation theorems prove its growth.
+
+Theorem~\ref{thm:intromixed} applies to the preceding example only
+when its initial data have the theorem's actual form: three arrows,
+rank two, one acyclic rank-two copy, the ordinarily balanced
+$B(\epsilon)$ at standard metrics, bounded $T$, and
+$\Lambda\geq\Lambda_*(M)$. It does not automatically apply to
+arbitrary graph data, multiple copies, or the rescaled
+finite-balanced representative at standard metrics.
+
+Thus the general result of this section is the relative static
+primitive limit under the declared elementary changes.
+The finite positive metric is a restricted construction.
+Neither result asserts a general metric on the moduli of all
+complexes or an isometry under arbitrary derived equivalences.

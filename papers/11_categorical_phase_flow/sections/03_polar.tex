@@ -1,0 +1,126 @@
+\section{Polar estimates uniform under degeneration of a complementary block}\label{sec:polar}
+
+A bound for the full polar factor based on the least singular values,
+such as \cite{li95}, can deteriorate when a singular value approaches zero.
+Polar approximation and trace-norm variational principles are classical
+\cite{higham86,lewis95}. The acyclic coefficient has
+exponentially small singular values, so such a bound would be unsuitable
+here. The following estimates use only the surviving block or one
+specified reference direction. All Hilbert--Schmidt norms in this
+section are for fixed orthonormal frames.
+
+\begin{lemma}\label{lem:partialpolar}
+Let
+\[
+ T=\begin{pmatrix}A&E\\E^\dagger&C\end{pmatrix},\qquad \Ima T>0,
+\]
+and suppose that the least singular value of $A$ is at least $b>0$.
+Let $U=\polar(T)$, $U_A=\polar(A)$ and $e=\norm{E}_{\HS}$.
+Then
+\begin{equation}\label{eq:polarblocks}
+ \norm{U_{12}}_{\HS}=\norm{U_{21}}_{\HS}\leq4e/b,\qquad
+ \norm{U_{11}-U_A}_{\HS}\leq2e/b.
+\end{equation}
+Writing $\Psi=\Arg U$ and $\psi_A=\Arg U_A$, one has
+\begin{equation}\label{eq:phaseoff}
+ \norm{\Psi_{12}}_{\HS}\leq2\pi e/b.
+\end{equation}
+If $e/b\leq1/8$, then also
+\begin{equation}\label{eq:phasecompressed}
+ \norm{\Psi_{11}-\psi_A}_{\HS}\leq4\pi e/b .
+\end{equation}
+There is no lower bound on the singular values of $C$ or $T$ in these
+estimates.
+\end{lemma}
+
+\begin{proof}
+Put $v=\norm{U_{12}}_{\HS}=\norm{U_{21}}_{\HS}$, where equality follows
+by taking traces in the unitary row and column identities.
+Pinching is contractive for the trace norm, so
+$\norm{T}_1\geq\norm{A}_1+\norm{C}_1$.
+In the maximizing pairing $\norm{T}_1=\Rea\tr(U^\dagger T)$,
+the $C$ contribution is at most $\norm{C}_1$ because $U_{22}$ is
+a contraction, and the two off-diagonal contributions have sum at most
+$2ve$.
+If $A=U_A|A|$ and $d=\norm{U_{11}-U_A}_{\HS}$, the deficit in
+the $A$ contribution is
+\[
+ \tr\bigl(|A|[\id-\Rea(U_{11}^\dagger U_A)]\bigr)
+ \geq \frac b2(d^2+v^2).
+\]
+The bracket is positive semidefinite, and its trace is
+$(d^2+v^2)/2$ by the first-column unitary identity.
+It follows that $d^2+(v-2e/b)^2\leq(2e/b)^2$, proving
+\eqref{eq:polarblocks}.
+
+For $\alpha,\beta\in[0,\pi]$,
+\begin{equation}\label{eq:chord}
+ |\alpha-\beta|\leq\frac\pi2|e^{\ii\alpha}-e^{\ii\beta}|.
+\end{equation}
+Expanding the commutators of $U$ and $\Arg U$ with the first-block
+orthogonal projection in an eigenbasis of $U$ proves
+$\norm{\Psi_{12}}_{\HS}\leq(\pi/2)v$, hence \eqref{eq:phaseoff}.
+The same scalar inequality, expanded in eigenbases of two normal
+matrices, gives the Hilbert--Schmidt estimate
+\begin{equation}\label{eq:logHS}
+ \norm{\Arg U-\Arg U_0}_{\HS}
+ \leq\frac\pi2\norm{U-U_0}_{\HS}
+\end{equation}
+whenever both unitary spectra lie in the closed upper semicircle.
+
+By Lemma~\ref{lem:phase}, $\Ima U>0$; its compression $U_{22}$
+is invertible and its polar unitary $V$ also has upper-semicircle
+spectrum. Since
+$U_{22}^\dagger U_{22}=\id-U_{12}^\dagger U_{12}$,
+\[
+ \norm{U_{22}-V}_{\HS}
+ =\norm{(\id-U_{12}^\dagger U_{12})^{1/2}-\id}_{\HS}
+ \leq\norm{U_{12}^\dagger U_{12}}_{\HS}\leq v^2 .
+\]
+Take $U_0=\diag(U_A,V)$. If $e/b\leq1/8$, then $v\leq1/2$ and
+\[
+ \norm{U-U_0}_{\HS}^2=d^2+2v^2+\norm{U_{22}-V}_{\HS}^2
+ \leq40(e/b)^2<64(e/b)^2.
+\]
+Equation~\eqref{eq:logHS} proves \eqref{eq:phasecompressed}.
+\end{proof}
+
+\begin{lemma}\label{lem:weightedpolar}
+Let $T_0=U_0H_0$ be an invertible reference matrix in polar form,
+and suppose that $T=T_0+E$ has $\Ima T>0$ with polar unitary $U$.
+If $v$ is a unit vector satisfying
+$H_0v=pv$ and $U_0v=e^{\ii\theta}v$, where $p>0$ and $0<\theta<\pi$,
+then
+\begin{equation}\label{eq:weightedphase}
+ \left|\inner{v}{(\Arg U-\theta\id)v}\right|
+ \leq\pi\sqrt{\frac{\norm{E}_1}{p}} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The trace-norm variational principle and triangle inequality imply
+\[
+ \tr\bigl(H_0[\id-\Rea(U^\dagger U_0)]\bigr)\leq2\norm{E}_1.
+\]
+The bracket is positive semidefinite, and
+$H_0-pvv^\dagger\geq0$. Its expectation on $v$ is
+$1-\Rea(e^{-\ii\theta}\inner{v}{Uv})$.
+Writing $\Psi=\Arg U$ and using
+$1-\cos x\geq2x^2/\pi^2$ for $|x|\leq\pi$ therefore gives
+\[
+ \frac{2p}{\pi^2}\inner{v}{(\Psi-\theta\id)^2v}
+ \leq2\norm{E}_1.
+\]
+Cauchy--Schwarz proves the assertion.
+\end{proof}
+
+The frequently used special case is $T=zP+E$, $P>0$, $\Ima z>0$.
+For an eigenvector $Pv=p_0v$, \eqref{eq:weightedphase} becomes
+\begin{equation}\label{eq:weightedscalar}
+ \left|\inner{v}{(\Arg\polar(T)-\arg z)v}\right|
+ \leq\pi\sqrt{\frac{\norm{E}_1}{|z|p_0}}.
+\end{equation}
+The estimate is useful even when no uniform lower bound for all
+eigenvalues of $P$ is available. Later it is applied to a direction
+realizing the least singular value of the differential, for which
+$p_0$ is known exactly.
