@@ -1,11 +1,11 @@
 # Singular graded limits and metric growth under Hermitian–Yang–Mills flow
 
 By [Bernd Johannes Wuebben](https://bwuebben.github.io/), [ORCID](https://orcid.org/0009-0002-4588-3284).
-Preprint. Original date: 31 October 2026. This version: 31 October 2026. 20 pages.
+Preprint. Original date: 31 October 2026. This version: 2 November 2026. 22 pages.
 
-[Read the paper](paper.pdf) · [Abstract and citation](https://bwuebben.github.io/papers/singular-hym-metric-growth/) · [Zenodo:23851000](https://zenodo.org/records/23851000) · [DOI](https://doi.org/10.5281/zenodo.23851000).
+[Read the paper](paper.pdf) · [Abstract and citation](https://bwuebben.github.io/papers/singular-hym-metric-growth/) · [Zenodo:23893608](https://zenodo.org/records/23893608) · [DOI](https://doi.org/10.5281/zenodo.23893608).
 
-A toric surface counterexample to bounded-remainder extensions of weight-filtration metric asymptotics to singular graded sheaves, with a localized stationary curvature defect.
+A general rank-two surface obstruction to bounded-remainder weight-filtration metric asymptotics for singular graded quotients, including nonreduced zeros and repeated factors, with toric and K3 examples. The stationary curvature theorem concerns the toric family.
 
 ## Build and reproduce
 

@@ -28,6 +28,7 @@
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\rk}{\operatorname{rk}}
 \newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\Coh}{\operatorname{Coh}}
 \newcommand{\Vol}{\operatorname{Vol}}
 \newcommand{\HYM}{\operatorname{HYM}}
@@ -36,29 +37,30 @@
 \newcommand{\id}{\operatorname{id}}
 \title[Singular graded limits and metric growth]{Singular graded limits and metric growth\\under Hermitian--Yang--Mills flow}
 \author{Bernd Johannes Wuebben}
-\subjclass[2020]{53C07 (primary); 32Q15, 14M25, 58E15 (secondary)}
+\subjclass[2020]{53C07 (primary); 32Q15, 14J60, 14M25, 58E15 (secondary)}
 \keywords{Hermitian--Yang--Mills flow, singular graded sheaf, weight filtration,
-Hermitian--Einstein metric, curvature concentration, toric surface}
-\date{October 31, 2026\\This version: October 31, 2026}
+Hermitian--Einstein metric, Bochner--Martinelli residue, curvature concentration}
+\date{October 31, 2026\\This version: November 2, 2026}
 
 \begin{document}
 \begin{abstract}
-We construct a semistable toric tangent bundle for which the
-weight-filtration description of Hermitian--Yang--Mills metric growth
-cannot extend to singular graded sheaves with a uniformly bounded
-remainder. The bundle lies on a smooth projective surface, and its
-Jordan--H\"older graded sheaf is singular at one point. For every smooth
-initial metric with fixed Hermitian--Einstein determinant, the induced
-squared norm on its unique saturated equal-slope line subsheaf is
-$o(T^{-1/2})$ as the flow time $T$ tends to infinity, uniformly on compact
-subsets away from that point. The rank-polarized iterated weight
-filtration of Haiden--Katzarkov--Kontsevich--Pandit instead assigns the
-scale $T^{-1/2}$, with no further nonzero weights. A splitting-independent
-local residue forces divergent normalized extension energy, which an
-exact dissipation identity converts into the strict decay estimate.
-Approaching the wall from the stable side, we also identify the
-Hermitian--Einstein limit with the reflexive graded bundle and locate
-its multiplicity-one curvature concentration at the same point.
+We prove that two bounded-remainder extensions of weight-filtration
+asymptotics for Hermitian--Yang--Mills flow fail for rank-two bundles on
+connected compact K\"ahler surfaces with a saturated equal-slope line subsheaf and
+a singular torsion-free quotient. For every smooth initial metric with
+fixed Hermitian--Einstein determinant, the squared $L^2$ norm of the
+inclusion is $o(T^{-1/2})$ as flow time $T$ tends to infinity. The
+pointwise squared norm divided by this integral converges to a positive
+constant away from the finite singular set. In the quotient by sheaves supported at points, the full
+rank-polarized subobject lattice has weights $-1/2,+1/2$ and no subsequent
+iterated weights. Neither relative metric comparability nor a bounded
+ordinary matrix-logarithm remainder realizes this model on any nonempty
+compact subset away from the singularities. A splitting-independent
+Bochner--Martinelli residue, global normalization and an exact dissipation
+identity give the obstruction, including for nonreduced singularities and
+repeated line factors. A projective K3 example realizes both features.
+For a toric tangent-bundle example, we also identify the stable-side
+Hermitian--Einstein limit and its multiplicity-one curvature concentration.
 \end{abstract}
 
 \maketitle
@@ -79,7 +81,8 @@ Haiden--Katzarkov--Kontsevich--Pandit describe these rates for semistable
 quiver representations and for bundles on compact Riemann surfaces by
 an iterated weight filtration \cite{hkkp2023,hkkp2018}. Lam extends this
 description to semistable bundles with locally free Jordan--H\"older
-graded object \cite[Theorems~1.1, 8.2]{lam2026}. In that setting the
+graded object, under the hypotheses of his theorem
+\cite[Theorems~1.1, 8.2 and the setup in \S8]{lam2026}. In that setting the
 weights give an asymptotic model with bounded error. The extension to
 singular graded sheaves is explicitly anticipated in
 \cite[Introduction and Remark~8.3]{lam2026}, using the quotient category
@@ -87,52 +90,56 @@ by sheaves supported in complex codimension at least two. A description
 away from a codimension-two set is also anticipated in
 \cite[Introduction]{hkkp2018}.
 
-We give a smooth rank-two bundle on a compact K\"ahler surface for which
-two precise bounded-remainder versions of that singular extension fail,
-even on compact subsets away from the singular point. The categorical
-weight filtration has only two weights and no later iterated term.
-Nevertheless the logarithm of the induced line metric has an additional
-unbounded negative discrepancy from the prescribed model. A local residue
-at the singular point forces this discrepancy through a global
-holomorphic-section identity.
+We prove a general obstruction for rank-two bundles on compact K\"ahler
+surfaces whose equal-slope graded quotient is singular. The singular
+scheme may be nonreduced, and the two reflexive line factors may be
+isomorphic. The categorical weight filtration has only two weights and
+no subsequent iterated weights. Nevertheless the logarithm of the induced
+line metric has an additional unbounded negative discrepancy from that
+model, even away from the singularities. A local residue forces this
+discrepancy through a global holomorphic-section identity.
 
-\subsection{The flow theorem}
-Let $X$ be the toric blowup of $\mathbb F_1$ with cyclic rays
-\[
- (1,0),\ (1,1),\ (0,1),\ (-1,0),\ (1,-1).
-\]
-Write $S,f$ for the pullback section and fibre classes and $E$ for the
-exceptional divisor. Its tangent bundle $V=T_X$ admits the saturated
-sequence
+\subsection{The general flow theorem}
+Let $(X,\omega)$ be a connected compact K\"ahler surface, and suppose
+that a rank-two holomorphic vector bundle $V$ fits into an exact sequence
 \begin{equation}\label{eq:intro-extension}
- 0\longrightarrow L\xrightarrow{\iota}V
- \longrightarrow\cI_pM\longrightarrow0,
- \qquad
- L=\cO_X(2S+f-E),\quad M=\cO_X(2f),
+ 0\longrightarrow L\xrightarrow{\iota}V\xrightarrow{q}
+ \cI_WM\longrightarrow0,
 \end{equation}
-where $p$ is the fixed point of the cone $((1,1),(0,1))$.
-The ample class $\alpha_0=4S+7f-2E$ gives both factors degree $8$.
-The bundle is strictly semistable, and its graded sheaf is
-$L\oplus\cI_pM$. Its geometry is recalled in full in
-Section~\ref{sec:geometry}.
+where $L,M$ are line bundles of equal $\omega$-degree and $W$ is a
+nonempty zero-dimensional analytic subscheme. The quotient is torsion-free,
+so the inclusion is saturated. Put $\Sigma=\operatorname{Supp}W$ and
+$U=X\setminus\Sigma$. We also write $q$ for the composite
+$V\to\cI_WM\hookrightarrow M$. We assume that this locally free
+extension exists; existence is not asserted for arbitrary prescribed
+triples $(L,M,W)$. No reducedness or distinctness assumption is imposed.
 
-Fix any K\"ahler form $\omega\in\alpha_0$, and Hermitian--Einstein
-metrics $h_L,h_M$ on the two line bundles. Put
-$h_{\det}=h_Lh_M$, $v_0=\int_X\omega^2/2=18$ and
-$\kappa=8\pi/9$. For a smooth Hermitian initial metric $H_{\mathrm{in}}$
-with determinant $h_{\det}$, consider the actual metric flow
+Use the induced determinant identification $\det V=L\otimes M$.
+Choose Hermitian--Einstein line metrics $h_L,h_M$ and set
+\[
+ h_{\det}=h_Lh_M,\qquad dV=\frac{\omega^2}{2},\qquad
+ v_0=\int_XdV,\qquad \kappa=\frac{2\pi\deg_\omega L}{v_0}.
+\]
+Degrees mean $\int_X c_1(\,\cdot\,)\wedge\omega$, without division
+by volume. Both line mean curvatures equal $\kappa$. For any smooth
+Hermitian initial metric $H_{\mathrm{in}}$ with determinant $h_{\det}$,
+consider
 \[
  H^{-1}\partial_T H=-2(i\Lambda_\omega F_H-\kappa I),
  \qquad H(0)=H_{\mathrm{in}}.
 \]
-The ratio $u(T)=\iota^*H(T)/h_L$ is a globally smooth nonnegative
-function, positive on $U=X\setminus\{p\}$ and zero at $p$. Set
-$Z(T)=\int_Xu(T)\,\omega^2/2$.
+Its determinant remains $h_{\det}$. Define
+\[
+ u(T,x)=\frac{\iota^*H(T)}{h_L}(x),\qquad
+ Z(T)=\int_Xu(T,x)\,dV.
+\]
+The function $u$ is globally smooth and nonnegative, positive on $U$
+and zero on $\Sigma$. The integral $Z(T)$ is positive at every finite time.
 
 \begin{theorem}\label{thm:flow}
-For every initial metric just specified and every compact $K\subset U$,
+Under these hypotheses, for every compact $K\subset U$,
 \begin{equation}\label{eq:intro-normalized}
- \frac{u(T)}{Z(T)}\longrightarrow\frac1{18}
+ \frac{u(T)}{Z(T)}\longrightarrow\frac1{v_0}
        \quad\text{in }C^\infty(K),
 \end{equation}
 and
@@ -140,19 +147,22 @@ and
  \frac{-Z'(T)}{Z(T)^3}\longrightarrow+\infty,
  \qquad\sqrt T\,Z(T)\longrightarrow0.
 \end{equation}
-In particular $u(T)=o(T^{-1/2})$ uniformly on $K$. If $K$ is nonempty,
+In particular $\sup_X\sqrt T\,u(T)\to0$. For every nonempty compact
+$K\subset U$,
 \begin{equation}\label{eq:intro-log}
  \sup_K\left(\log u(T)+\frac12\log T\right)\longrightarrow-\infty.
 \end{equation}
 The constants and convergence times may depend on the initial metric.
 \end{theorem}
 
-In the slope-$8$ part of $\Coh(X)/\Coh_0(X)$, the full subobject
-lattice of $V$ is $0<L<V$. Its rank-polarized iterated weights are
-$-1/2$ on $L$ and $+1/2$ on $M$, with all further weights zero
-(Section~\ref{sec:weights}). These are squared-metric weights.
-Thus Theorem~\ref{thm:flow} detects a discrepancy on exactly the line
-to which the categorical model assigns the scale $T^{-1/2}$.
+In the category of semistable objects of slope $\deg_\omega L$ in
+$\Coh(X)/\Coh_0(X)$, the full subobject lattice of $V$ is $0<L<V$.
+Here $\Coh_0(X)$ consists of sheaves supported at finitely many points.
+The rank-polarized iterated weights are $-1/2$ on $L$ and $+1/2$ on $M$,
+with all further weights zero (Section~\ref{sec:weights}). These are
+squared-metric weights. Theorem~\ref{thm:flow} therefore detects a
+discrepancy on exactly the line to which the categorical model assigns
+the scale $T^{-1/2}$.
 
 To state the bounded-remainder consequence precisely, choose a fixed
 smooth splitting $\Psi:L\oplus M\to V|_U$ restricting to $\iota$ on
@@ -194,10 +204,12 @@ coefficient $-1/2$ with an additional unbounded, slower term remains
 possible.
 
 \subsection{Why a point singularity affects the metric away from it}
-Locally at $p$, the inclusion and quotient are $(z_1,-z_2)^{\mathsf t}$
-and $(z_2,z_1)$. On a punctured ball a smooth splitting has a Dolbeault
-extension form $\beta$. Its residue is independent of the splitting and
-nonzero. It follows that, in fixed smooth graded metrics,
+Near any $p\in\Sigma$, the inclusion and quotient have the form
+$(f,-g)^{\mathsf t}$ and $(g,f)$, where $(f,g)$ is a regular sequence
+with an isolated zero. On a punctured ball a smooth splitting has a
+Dolbeault extension form $\beta$. Pulling back the Bochner--Martinelli
+form by $(f,g)$ gives a nonzero residue, equal to $4\pi^2$ times the
+local algebra length and independent of the splitting. It follows that, in fixed smooth graded metrics,
 \begin{equation}\label{eq:intro-residue}
  \int_{\rho<r<R}|\beta|_0^2\,dV
        \ge c(\rho^{-2}-R^{-2}).
@@ -217,15 +229,27 @@ component of this derivative. On every annulus,
 \]
 The normalized section has a uniform scalar bound. The known connection
 limit of Sibley--Wentworth \cite{sibleywentworth2015}, together with
-Hartogs extension, then gives $u/Z\to1/v_0$ off $p$.
+Hartogs extension, and the Bochner identity then give $u/Z\to1/v_0$ off $\Sigma$.
 First let $T\to\infty$ with $\rho$ fixed, and then let $\rho\to0$.
 The residue makes $-Z'/Z^3$ tend to infinity, from which the strict
 little-oh decay follows by integration. The proof requires no estimate
 for the shrinking size of a region of curvature concentration.
 
 \subsection{A complementary stationary limit}
-The same example has a stable side. Set
-$\alpha_t=4S+(7+t)f-2E$ for $-1<t<0$ and choose a smooth K\"ahler
+An explicit application is the tangent bundle $V=T_X$ of the toric
+blowup of $\mathbb F_1$ with cyclic rays
+$(1,0),(1,1),(0,1),(-1,0),(1,-1)$. With pullback section and fibre
+classes $S,f$ and exceptional divisor $E$, its saturated line and
+quotient are
+\[
+ L=\cO_X(2S+f-E),\qquad M=\cO_X(2f),\qquad W=\{p\},
+\]
+where $p$ is the fixed point of the cone $((1,1),(0,1))$.
+At $\alpha_0=4S+7f-2E$, both line degrees are $8$, $v_0=18$ and
+$\kappa=8\pi/9$. Section~\ref{sec:geometry} verifies the construction.
+It also gives a K3 example with repeated factors and a nonreduced double
+point. The following stationary statement concerns only the toric example.
+Set $\alpha_t=4S+(7+t)f-2E$ for $-1<t<0$ and choose a smooth K\"ahler
 family $\omega_t\in\alpha_t$ through $\omega_0=\omega$. Let $D_t$
 be the actual Hermitian--Einstein connections on $V$, presented on one
 fixed Hermitian bundle with smoothly varying determinant, and let
@@ -277,8 +301,11 @@ The toric construction and its stability wall are taken from
 The convergence of the actual flow to the reflexive graded connection,
 including its singular set, is the theorem of Sibley--Wentworth in its
 corrected form. Our flow result adds a quantitative obstruction for the
-metric: its restriction to the canonical line is strictly smaller than
-the categorical two-weight scale. The new use of the residue is uniform
+metric: its restriction to the saturated line is strictly smaller than
+the categorical two-weight scale throughout the class in
+\eqref{eq:intro-extension}. The Bochner--Martinelli degree formula
+\cite[Chapter~IV, \S2]{suwa2005} supplies the local residue even for
+nonreduced zeros. The use of this residue is uniform
 in the changing splitting, which is what allows the connection limit
 to be combined with the global dissipation identity.
 
@@ -288,8 +315,11 @@ paper's Section~3. The present equal-slope extension has no such gap.
 We use its standard flow normalization and mean-curvature estimate,
 not that separate induced-metric theorem.
 
-Sections~\ref{sec:geometry} and \ref{sec:weights} give the example and
-its complete weight calculation. Section~\ref{sec:residue} proves the
+Section~\ref{sec:geometry} gives the toric and K3 examples.
+Sections~\ref{sec:weights}--\ref{sec:obstruction} return to the general
+hypotheses of Theorem~\ref{thm:flow}; they do not assume toricity or
+projectivity. Section~\ref{sec:weights} calculates the complete subobject
+lattice and its weights. Section~\ref{sec:residue} proves the
 local residue estimate and its metric weight.
 Sections~\ref{sec:flow}--\ref{sec:obstruction} prove
 Theorem~\ref{thm:flow} and Corollary~\ref{cor:intro}.
@@ -298,9 +328,11 @@ including its exact projection identity and the curvature measure.
 The final section identifies the remaining quantitative question.
 
 % Source: sections/02_geometry.tex
-\section{A toric surface with a singular graded quotient}\label{sec:geometry}
+\section{Two surface examples}\label{sec:geometry}
 
-We first describe the bundle and its semistability wall. This construction
+We first describe the toric tangent bundle and its semistability wall.
+A K3 construction at the end of the section realizes repeated line
+factors and a nonreduced zero scheme. The toric construction
 appeared in \cite[Example~4.3]{wuebben2026}; the details below fix the local
 maps and normalizations used in both analytic arguments.
 
@@ -445,6 +477,57 @@ $2$ in the metric flow and the energy $8\pi^2$ of an integral point defect.
 The explicitly Euclidean coefficient norm used in the local residue
 calculation will be specified separately.
 
+\subsection{A K3 example with a nonreduced zero}
+\begin{proposition}\label{prop:k3}
+Let $X$ be a projective K3 surface and let $W$ be a length-two
+curvilinear subscheme supported at one point, locally defined by
+$(z_1^2,z_2)$. There is a locally free extension
+\begin{equation}\label{eq:k3}
+0\longrightarrow\cO_X\longrightarrow V\longrightarrow\cI_W
+\longrightarrow0.
+\end{equation}
+For every K\"ahler form on $X$, this example satisfies the hypotheses
+of Theorem~\ref{thm:flow}, with $\det V=\cO_X$, $c_2(V)=2$,
+and $\kappa=0$.
+\end{proposition}
+
+\begin{proof}
+The Serre construction \cite[Theorem~5.1.1]{huybrechtslehn1997} applies because
+$K_X=\cO_X$ and the length-two local complete intersection satisfies
+the Cayley--Bacharach condition for constant sections. Indeed, a constant
+vanishing on a length-one subscheme is zero, hence vanishes on all of $W$.
+
+One can also see the local freeness directly. The ideal sequence gives
+the exact segment
+\[
+\Ext^1(\cI_W,\cO_X)\longrightarrow
+\Ext^2(\cO_W,\cO_X)\longrightarrow H^2(X,\cO_X).
+\]
+Serre duality identifies the last map with the dual of restriction
+$H^0(X,K_X)\to H^0(W,K_X|_W)$. Trivialize $K_X$ and write
+$A=\CC[\epsilon]/(\epsilon^2)$. The restriction is inclusion of constants
+$\CC\to A$, so its dual takes a functional to its value on $1$.
+The functional $\lambda(a+b\epsilon)=b$ belongs to the kernel and
+generates the $A$-module $A^*$, since the pairing
+$(a,b)\mapsto\lambda(ab)$ is nondegenerate. It therefore lifts to an
+extension class which generates the local extension module.
+
+The Koszul resolution identifies
+$\Ext^1((z_1^2,z_2),\cO_{X,p})$ with $A$. A generating class is a unit
+in this module. In the pushout presentation of the extension, that unit
+eliminates the single relation and leaves a free middle module of rank
+two. Away from $W$, local freeness is immediate. This proves
+\eqref{eq:k3}. The determinant and second Chern class follow from the
+sequence. Its two rank-one factors have degree zero for every K\"ahler
+form, proving semistability and the remaining assertions.
+\end{proof}
+
+In this example the two reflexive factors coincide and the single
+singular point has length two. The Jacobian of $(z_1^2,z_2)$ has order
+one, so Remark~\ref{rem:jacobian} gives the lower annular bound
+$c(\rho^{-4}-R^{-4})$. We do not infer a sharper time-decay power.
+
+
 % Source: sections/03_weights.tex
 \section{The categorical weights at the wall}\label{sec:weights}
 
@@ -455,7 +538,7 @@ including nonequivariant subobjects, before calculating its weights.
 
 Let $\Coh_0(X)$ be the Serre subcategory of zero-dimensional coherent
 sheaves. We work in the abelian category $\mathcal C$ of slope-semistable
-objects of slope $8$ in $\Coh(X)/\Coh_0(X)$. Equivalently, one considers
+objects of slope $\deg_\omega L$ in $\Coh(X)/\Coh_0(X)$. Equivalently, one considers
 semistable torsion-free sheaves of that slope, identifying modifications
 at finitely many points and taking kernels and cokernels in the quotient
 category. Divisorial torsion is not set equal to zero. The finite-slope
@@ -464,13 +547,13 @@ function on nonzero objects of $\mathcal C$.
 
 This is the category appropriate to the rank-polarized weight filtration
 in the singular surface case; compare \cite[Remark~8.3]{lam2026} and
-\cite[\S4.1, equation~(4.3)]{hkkp2018}. Formula \eqref{eq:extension} becomes an extension
+\cite[\S4.1, equation~(4.3)]{hkkp2018}. Formula \eqref{eq:intro-extension} becomes an extension
 of $M$ by $L$ in $\mathcal C$.
 
 \begin{lemma}\label{lem:lattice}
 The subobject lattice of $V$ in $\mathcal C$ is the three-element chain
-$0<L<V$. Its simple constituents are the distinct rank-one objects $L$
-and $M$, and the extension does not split in $\mathcal C$.
+$0<L<V$. Its simple constituents are the rank-one objects $L$
+and $M$, which may be isomorphic, and the extension does not split in $\mathcal C$.
 \end{lemma}
 
 \begin{proof}
@@ -478,7 +561,7 @@ A rank-one torsion-free sheaf on a smooth surface has a line bundle as its
 double dual. It differs from that line bundle only at finitely many points,
 so they define the same object in $\mathcal C$. A same-rank subobject of
 the same degree can differ from it only by a zero-dimensional quotient:
-a nonempty effective divisor has positive degree against an ample class.
+a nonempty effective divisor has positive degree against the K\"ahler form.
 It follows that a rank-one object of $\mathcal C$ is simple.
 
 We shall also need the fact that a morphism between vector bundles in
@@ -490,15 +573,10 @@ the missing points by Hartogs' theorem, and the extensions agree by
 uniqueness. This proves the assertion, including uniqueness of the
 representative.
 
-A nonzero map between distinct line bundles of equal degree cannot exist.
-Its zero divisor would be effective of degree zero and hence empty,
-which would make the map an isomorphism. Thus
-$\Hom(L,M)=\Hom(M,L)=0$.
-
 If the extension split in $\mathcal C$, its right inverse would be a map
 $s:M\to V$. By the preceding Hartogs argument it would extend to a
 holomorphic bundle map on $X$. The identity $qs=\id_M$, valid away from
-finitely many points, would then hold everywhere. At $p$ this contradicts
+finitely many points, would then hold everywhere. At any $p\in\Sigma$ this contradicts
 $q_p=0$.
 
 Finally, any proper nonzero subobject $A$ of $V$ has rank one. If
@@ -567,8 +645,8 @@ extension form, measured in these metrics, would acquire a factor $a(T)^2$.
 If its energy relative to the fixed line metrics were a positive finite
 constant $c$, the line-norm dissipation would have cubic size $ca(T)^3$.
 The scalar equation $-a'=ca^3$ gives $a(T)\asymp T^{-1/2}$.
-This explains the scale appearing in the weight calculation. In our
-example every fixed-metric extension form has infinite energy near $p$.
+This explains the scale appearing in the weight calculation. For every extension in \eqref{eq:intro-extension}, a fixed-metric
+extension form has infinite energy near each point of $\Sigma$.
 The next section proves that assertion in a form uniform over all
 splittings, which will allow its use for the moving orthogonal splitting
 of the actual flow.
@@ -576,106 +654,121 @@ of the actual flow.
 % Source: sections/04_residue.tex
 \section{The local extension form and its residue}\label{sec:residue}
 
-The local sequence \eqref{eq:local-resolution} splits smoothly on a punctured
-ball. Its Dolbeault extension form depends on that splitting, but one of
-its integrals does not. This invariant integral is the analytic obstruction
-we shall use.
+We work with the general extension \eqref{eq:intro-extension}. Its
+local sequence splits smoothly away from its zero scheme. The
+Dolbeault extension form depends on the splitting, but the
+Bochner--Martinelli residue does not. Its local mapping degree supplies
+the nonzero invariant needed for the flow argument.
 
-\subsection{An explicit splitting}
-Work on $B_R\subset\CC^2$ in the coordinates of
-\eqref{eq:local-resolution}, and put $r^2=|z_1|^2+|z_2|^2$.
-A smooth right inverse of $q$ on $B_R\setminus\{0\}$ is
-\begin{equation}\label{eq:lift}
- \tau_0=\frac1{r^2}\begin{pmatrix}\overline z_2\\\overline z_1\end{pmatrix}.
+Fix $p\in\Sigma$ and choose a holomorphic coordinate ball $B_R$ with
+no other point of $\Sigma$. In frames compatible with the determinant,
+\begin{equation}\label{eq:general-local}
+\iota=(f,-g)^{\mathsf t},\qquad q=(g,f).
 \end{equation}
-The two-column frame $(\iota,\tau_0)$ has determinant one. Since
-$q\tau_0=1$ and $q$ is holomorphic, $\db\tau_0$ lies in the line
-spanned by $\iota$. Direct differentiation gives
+The pair $(f,g)$ has an isolated common zero at $p$. Indeed the
+determinant quotient map has image $(f,g)M=\cI_WM$ and the quotient in
+\eqref{eq:intro-extension} has no divisorial torsion. In the regular local
+surface ring this is a regular sequence. In particular $W$ is a local
+complete intersection as a consequence of this presentation.
+
+\begin{lemma}\label{lem:residue}
+For every smooth right inverse $\tau$ of $q$ on $B_R\setminus\{p\}$,
+write $\db\tau=\iota\beta_\tau$. There is a constant $c>0$, independent
+of $\tau$ and of $0<\rho<R$, such that
+\begin{equation}\label{eq:residue-energy}
+\int_{\rho<|z|<R}|\beta_\tau|_0^2\,dV
+\ge c(\rho^{-2}-R^{-2}).
+\end{equation}
+Here the base and line metrics are fixed, smooth and positive on a
+neighborhood of the closed ball.
+\end{lemma}
+
+\begin{proof}
+Put $F=(f,g)$, $s=|f|^2+|g|^2$ and
+\[
+\tau_0=s^{-1}(\bar g,\bar f)^{\mathsf t},\qquad
+\beta_0=\frac{\bar f\,d\bar g-\bar g\,d\bar f}{s^2}.
+\]
+Direct differentiation gives $q\tau_0=1$ and
+$\db\tau_0=\iota\beta_0$. Every other right inverse is
+$\tau_0+\iota a$ for a smooth scalar function $a$ on the punctured ball,
+so $\beta_\tau=\beta_0+\db a$.
+
+Give $d\bar z_1,d\bar z_2$ unit coefficient norm and use Euclidean
+volume for the local calculation. The closed three-form
+\[
+\Omega=\frac{dz_1\wedge dz_2\wedge
+(\bar z_1d\bar z_2-\bar z_2d\bar z_1)}{|z|^4}
+\]
+has integral $4\pi^2$ over an outward-oriented sphere. The local
+holomorphic mapping degree $m=\dim_\CC\cO_{X,p}/(f,g)$ is positive.
+The Bochner--Martinelli degree formula gives
+\begin{equation}\label{eq:residue}
+\int_{S_r}df\wedge dg\wedge\beta_0
+=\int_{S_r}F^*\Omega=4\pi^2m.
+\end{equation}
+For the normalization and degree formula see
+\cite[Chapter~II, \S5, Example~5.5; Chapter~IV, \S2, Theorems~2.3--2.4]{suwa2005}.
+The nonreduced case is included: $m$ is local algebra length, not the
+dimension of its fibre at $p$.
+
+The change in the integrand in \eqref{eq:residue} is
+$df\wedge dg\wedge\db a=d(a\,df\wedge dg)$; the $(3,0)$ component
+vanishes. Its sphere integral is zero. Thus the same nonzero integral
+holds for every $\beta_\tau$, without any derivative bound on $a$.
+
+The smooth two-form $df\wedge dg$ is bounded on the fixed ball.
+Restriction to $S_r$ and Cauchy--Schwarz yield
+\[
+4\pi^2m\le C\int_{S_r}|\beta_\tau|\,dA
+\le C(2\pi^2r^3)^{1/2}
+\left(\int_{S_r}|\beta_\tau|^2\,dA\right)^{1/2}.
+\]
+Hence the spherical integral is at least $c_1r^{-3}$. Integrating
+in radius proves \eqref{eq:residue-energy} in Euclidean metrics. Uniform
+equivalence on the closed ball proves the stated fixed-metric version.
+\end{proof}
+
+\begin{remark}\label{rem:jacobian}
+If $df\wedge dg=J(z)\,dz_1\wedge dz_2$ and
+$\nu=\operatorname{ord}_pJ$, the same proof gives a lower bound
+$c(\rho^{-2-2\nu}-R^{-2-2\nu})$. The Jacobian is not identically
+zero because $F$ is a finite holomorphic map germ. This is a lower
+bound in the spatial variable for a fixed presentation. It is not
+asserted to be sharp or to determine any power of flow time.
+\end{remark}
+
+\subsection{The reduced point in the toric example}
+For $(f,g)=(z_1,z_2)$ the formula above reads
 \begin{equation}\label{eq:beta}
- \db\tau_0=\iota\beta_0,
- \qquad \beta_0=\frac{\overline z_1\,d\overline z_2-
-                      \overline z_2\,d\overline z_1}{r^4},
- \qquad \db\beta_0=0.
+ \tau_0=\frac1{r^2}\begin{pmatrix}\overline z_2\\\overline z_1\end{pmatrix},
+ \qquad
+ \beta_0=\frac{\overline z_1\,d\overline z_2-
+                      \overline z_2\,d\overline z_1}{r^4}.
 \end{equation}
-For instance the $d\overline z_1$ coefficient of $\db\tau_0$ is
-$(-z_1\overline z_2,|z_2|^2)^{\mathsf t}/r^4$, which is
-$\iota(-\overline z_2/r^4)$. The other coefficient is obtained in the
-same way.
-
-For this calculation only, give $d\overline z_1,d\overline z_2$ unit
-coefficient norm, and use Lebesgue volume on $\RR^4$. Then
+With unit coefficient norms for $d\overline z_1,d\overline z_2$ and
+Euclidean volume on $\RR^4$,
 \begin{equation}\label{eq:beta-energy}
  |\beta_0|^2=r^{-6},\qquad
  \int_{\rho<r<R}|\beta_0|^2\,dV_{\mathrm{Euc}}
  =\pi^2(\rho^{-2}-R^{-2}).
 \end{equation}
-The divergence is therefore stronger than logarithmic. Merely choosing a
-different splitting might conceivably change this conclusion. The residue
-rules out that possibility.
-
-\begin{lemma}\label{lem:residue}
-For every smooth right inverse $\tau$ of $q$ on $B_R\setminus\{0\}$,
-write $\db\tau=\iota\beta_\tau$. There is $c>0$, independent of $\tau$
-and of $0<\rho<R$, such that
-\begin{equation}\label{eq:residue-energy}
- \int_{\rho<r<R}|\beta_\tau|^2\,dV_{\mathrm{Euc}}
- \ge c(\rho^{-2}-R^{-2}).
-\end{equation}
-The conclusion also holds with fixed smooth base and line metrics that
-extend positively to a neighborhood of the closed ball, with a different
-constant $c$.
-\end{lemma}
-
-\begin{proof}
-On the punctured ball any two right inverses differ by a multiple of
-$\iota$. Thus $\tau=\tau_0+\iota f$ for a smooth function $f$, and
-\begin{equation}\label{eq:change-splitting}
- \beta_\tau=\beta_0+\db f.
-\end{equation}
-Let $S_r$ have the outward boundary orientation. The form
-$dz_1\wedge dz_2\wedge\beta_0$ restricts to twice $r^{-3}$ times the
-oriented Euclidean area form. One can check this at $(r,0)$ and use
-$U(2)$ invariance; the determinant factor of $dz_1\wedge dz_2$ is
-cancelled by the conjugate determinant factor in $\beta_0$. Since
-$\operatorname{area}(S_r)=2\pi^2 r^3$, we obtain
-\begin{equation}\label{eq:residue}
- \int_{S_r}dz_1\wedge dz_2\wedge\beta_0=4\pi^2.
-\end{equation}
-For completeness, at $(r,0)$ the form is
-$r^{-3}dz_1\wedge dz_2\wedge d\overline z_2$; on the positively
-oriented tangent frame in the $y_1,x_2,y_2$ directions it equals
-$2r^{-3}$.
-
-The change in the integrand under \eqref{eq:change-splitting} is
-$d(f\,dz_1\wedge dz_2)$. Its integral over the sphere is zero.
-Hence \eqref{eq:residue} holds with $\beta_\tau$ in place of $\beta_0$.
-Restriction to $S_r$ and Cauchy--Schwarz now give
-\[
- 4\pi^2
- \le C\int_{S_r}|\beta_\tau|\,dA
- \le C(2\pi^2r^3)^{1/2}
-          \left(\int_{S_r}|\beta_\tau|^2\,dA\right)^{1/2}.
-\]
-Thus the spherical integral is bounded below by $c_1r^{-3}$.
-Integration in $r$ proves \eqref{eq:residue-energy}. Fixed smooth positive
-metrics on the closed ball are uniformly equivalent to these Euclidean
-norms and volume, proving the final assertion.
-\end{proof}
-
-In particular there is no smooth splitting whose extension form is
-square-integrable near the origin in fixed smooth graded metrics.
-The uniformity over splittings is essential: the orthogonal splitting
-selected by the evolving metric will vary with time, and we have no
-uniform bound on its derivatives near the singular point.
+The reduced residue has multiplicity one. At $(r,0)$ its three-form
+is $r^{-3}dz_1\wedge dz_2\wedge d\overline z_2$; on the outward-oriented
+tangent frame in the $y_1,x_2,y_2$ directions it equals $2r^{-3}$.
+Unitary invariance and $\operatorname{area}(S_r)=2\pi^2r^3$ give
+its integral $4\pi^2$. The general residue lemma shows that the energy
+divergence cannot be removed by changing the splitting, even for a
+nonreduced zero.
 
 \subsection{The metric factor in the extension energy}
-Fix the metrics $h_L,h_M$ from Section~\ref{sec:geometry}. For a smooth
+Fix the metrics $h_L,h_M$ from Section~\ref{sec:introduction}. For a smooth
 Hermitian metric $H$ on $V$ with determinant $h_{\det}$, define
 \begin{equation}\label{eq:u-metric}
  u_H=\frac{\iota^*H}{h_L}.
 \end{equation}
-This is a smooth nonnegative function on $X$, vanishing precisely at $p$.
-On $U=X\setminus\{p\}$ use the $H$-orthogonal right inverse $\tau_H$
+This is a smooth nonnegative function on $X$, vanishing precisely on $\Sigma$.
+On $U=X\setminus\Sigma$ use the $H$-orthogonal right inverse $\tau_H$
 of $q$. The induced line and quotient metrics in this splitting are
 \begin{equation}\label{eq:orthogonal-metrics}
  u_H h_L,\qquad u_H^{-1}h_M.
@@ -708,8 +801,10 @@ There are three factors of $u_H$: two from the Hom metric and one from
 the norm of the section. This cubic weight is what connects the residue
 to the scalar decay rate.
 
-For each fixed smooth $H$, the local resolution implies $u_H\asymp r^2$
-near $p$, with constants depending on $H$. Thus the fixed-metric
+For each fixed smooth $H$, the local presentation implies
+$u_H\asymp |f|^2+|g|^2$ near $p$, with constants depending on $H$.
+The section $\iota$ and its covariant derivative are smooth on the whole
+ball. Thus the fixed-metric
 divergence of $\beta_H$ does not mean that the actual weighted quantities
 in \eqref{eq:weighted-beta} or \eqref{eq:cubic} are infinite at a finite
 time. The obstruction arises after normalization and passage to the
@@ -718,7 +813,7 @@ large-time limit.
 % Source: sections/05_flow.tex
 \section{The line inclusion along the metric flow}\label{sec:flow}
 
-Let $H(T)$ solve
+For the general data of Theorem~\ref{thm:flow}, let $H(T)$ solve
 \begin{equation}\label{eq:flow}
  H^{-1}\partial_T H=-2\Phi_H,
  \qquad\Phi_H=i\Lambda_\omega F_H-\kappa I,
@@ -726,7 +821,7 @@ Let $H(T)$ solve
 \end{equation}
 where $H_{\mathrm{in}}$ is any smooth positive Hermitian metric with
 $\det H_{\mathrm{in}}=h_{\det}$. Long-time existence is the standard
-Hermitian--Yang--Mills heat-flow theorem \cite{donaldson1985}.
+Hermitian--Yang--Mills heat-flow theorem \cite{donaldson1985,lzz2016}.
 The scalar determinant flow starts at its Hermitian--Einstein metric;
 uniqueness for that scalar equation gives
 $\det H(T)=h_{\det}$ for every $T\ge0$.
@@ -736,7 +831,7 @@ We use the intrinsic functions
  u(T,x)=\frac{\iota^*H(T)}{h_L}(x),
  \qquad Z(T)=\int_X u(T,x)\,dV.
 \end{equation}
-Although the orthogonal splitting is singular at $p$, the section
+Although the orthogonal splitting is singular on $\Sigma$, the section
 $\iota$ is globally smooth and holomorphic. In particular $Z(T)>0$
 for every finite $T$, and its derivative can be computed on the entire
 compact surface without introducing a puncture.
@@ -766,7 +861,7 @@ For a holomorphic section the integrated K\"ahler Bochner identity is
  \int_X\langle i\Lambda F_{V\otimes L^{-1}}\iota,\iota\rangle\,dV
  =\int_X|D'_{H\otimes h_L^{-1}}\iota|^2\,dV.
 \]
-The section and the bundle metric are smooth at $p$, so integration
+The section and the bundle metric are smooth across $\Sigma$, so integration
 introduces no singular boundary term. This proves
 \eqref{eq:dissipation}.
 
@@ -790,7 +885,7 @@ This is \eqref{eq:scalar-bound}.
 \end{proof}
 
 Only the mean curvature is bounded in this argument. The full curvature
-may concentrate at $p$, and the metric need not remain uniformly comparable
+may concentrate on $\Sigma$, and the metric need not remain uniformly comparable
 to a fixed smooth reference metric. The scalar estimate remains uniform
 because its potential is measured in the current bundle metric and the
 base geometry is fixed.
@@ -801,14 +896,18 @@ We use the corrected form of Sibley--Wentworth's convergence theorem
 case it has the following content. After transporting the metric flow
 to a fixed Hermitian bundle, the resulting Yang--Mills connections
 converge modulo unitary gauge smoothly on compact subsets of
-$U=X\setminus\{p\}$ to the Hermitian--Einstein connection on
-$G^{**}=L\oplus M$. The algebraic singular set is $\{p\}$, with
-multiplicity one. For the argument below, the subsequential formulation
+$U=X\setminus\Sigma$ to the Hermitian--Einstein connection on
+$G^{**}=L\oplus M$, where $G=L\oplus\cI_WM$.
+The algebraic singular set is $\Sigma$; its multiplicity at a point is
+the local length of $W$. The analytic argument uses its support,
+not a reducedness assumption. For the argument below, the subsequential formulation
 along any sequence $T_j\to\infty$ suffices.
 
 The hypotheses are satisfied: $X$ is compact K\"ahler, $V$ is a
 holomorphic vector bundle, the initial metric is smooth, and
-\eqref{eq:graded} is its graded sheaf at the fixed wall polarization.
+$G=L\oplus\cI_WM$ is its graded sheaf for the fixed K\"ahler form.
+Indeed both factors of \eqref{eq:intro-extension} are stable of rank
+one and have equal slope, so $V$ is semistable.
 Metric flow and connection flow are related by time-dependent complex
 isometries and unitary gauge transformations. Those identifications
 preserve the scalar norms of sections used here. In the chosen line
@@ -846,27 +945,28 @@ subsequence, we obtain a holomorphic limit
 \[
  j_\infty\in H^0\bigl(U,(L\oplus M)\otimes L^{-1}\bigr).
 \]
-In holomorphic frames near $p$, its coefficients extend across the
-puncture by Hartogs' theorem. It is therefore a global section of
-$\cO_X\oplus(M\otimes L^{-1})$.
+In holomorphic frames near each point of $\Sigma$, its coefficients
+extend across the puncture by Hartogs' theorem. It is therefore a global
+section of $(L\oplus M)\otimes L^{-1}$.
 
-The second summand has no nonzero holomorphic section. Indeed it is a
-nontrivial line bundle of degree zero; any nonzero section would define
-an effective divisor of degree zero and hence trivialize it. It follows
-that $j_\infty$ lies in the first summand and is constant there.
-We still have to show that this constant is nonzero and determine its
-norm. Smooth convergence off $p$ alone would not exclude concentration
-of all the section's mass at $p$.
+The contracted curvature of this extended bundle is zero. Its integrated
+Bochner identity shows that the limiting holomorphic section is parallel,
+so its squared norm is constant on connected $X$. This argument also
+applies when $L\simeq M$. In that case different subsequences may select
+different parallel vectors in the two-dimensional space of sections;
+no choice of a distinguished summand is needed for their scalar norms.
 
-The pointwise bound does exclude that possibility. On any coordinate
-ball $B_r(p)$,
+It remains to determine the constant norm. Smooth convergence away from
+$\Sigma$ alone would not exclude concentration of all section mass there.
+The pointwise bound excludes it: for small disjoint coordinate balls
+$B_r(p)$ about the finitely many points of $\Sigma$,
 \[
- \int_{B_r(p)}|j_{T_j}|^2\,dV\le C\Vol(B_r(p)),
+ \int_{\bigcup_{p\in\Sigma} B_r(p)}|j_{T_j}|^2\,dV
+ \le C\sum_{p\in\Sigma}\Vol(B_r(p)),
 \]
-uniformly in $j$. Pass to the limit on $X\setminus B_r(p)$ and then
-let $r\downarrow0$. Since the global integral is one, the limiting
-section also has integral norm one. Its constant squared norm is
-therefore $1/v_0$.
+uniformly in $j$. Pass to the limit on their complement and then let
+$r\downarrow0$. The limiting section has integral squared norm one,
+so its constant squared norm is $1/v_0$.
 
 Finally, $|j_T|^2=u/Z$ is invariant under every isometry and unitary
 gauge used above. Every sequence of times has a subsequence with the
@@ -903,8 +1003,9 @@ Consequently, for every nonempty compact $K\subset U$,
 \end{proposition}
 
 \begin{proof}
-Choose a coordinate ball whose closure lies in the chart of
-\eqref{eq:local-resolution}. At each finite time, take the $H(T)$-orthogonal
+Choose one point $p\in\Sigma$ and a coordinate ball whose closure
+lies in a chart for \eqref{eq:general-local} and contains no other
+point of $\Sigma$. At each finite time, take the $H(T)$-orthogonal
 right inverse of $q$ on the punctured ball, and denote its extension form
 by $\beta_T$. In the fixed smooth line and base metrics,
 Lemma~\ref{lem:residue} gives
@@ -942,7 +1043,8 @@ Integration yields
 \]
 After division by $T$ and passage to the limit, $\liminf Z(T)^{-2}/T\ge A$.
 As $A$ is arbitrary, $\sqrt T\,Z(T)\to0$.
-The uniform convergence of $u/Z$ on $K$ proves the first part of
+The global scalar bound $\sup_Xu\le CZ$ proves the stronger
+conclusion $\sup_X\sqrt T\,u\to0$, and hence the first part of
 \eqref{eq:compact-decay}. Its logarithm proves the second, since
 $u(T,x)>0$ on $K$.
 \end{proof}
@@ -1013,10 +1115,46 @@ from metric order to the specified ordinary matrix-log formulation.
 The argument does not infer either of those matrix assertions from the
 other; it tests a necessary scalar inequality for each.
 
+\subsection{Comparison of initial metrics}
+\begin{proposition}\label{prop:initial}
+Fix the holomorphic data, the base K\"ahler form and the reference line
+metric. If $Z_1,Z_2$ correspond to two smooth initial
+metrics as above, then
+\begin{equation}\label{eq:comparison}
+C^{-1}Z_1(T)\le Z_2(T)\le CZ_1(T)
+\end{equation}
+for a constant $C$ independent of $T$. Thus any existing limit of
+$\log Z_j(T)/\log T$ is the same for both. If both observables
+admit power and iterated-log-power asymptotic equivalents with finitely
+many such factors, their corresponding exponents agree.
+\end{proposition}
+
+\begin{proof}
+The metric-flow distance comparison
+\cite[Lemma~6.4.5, pp.~190--191]{kobayashi1987} bounds the supremum of the
+invariant fibrewise distance between two solutions by its initial
+supremum. Rescaling the source's time by a factor of two gives
+\eqref{eq:flow}. The relative eigenvalues are therefore bounded above
+and below by positive time-independent constants. Restrict the metric
+inequality to $\iota$ and integrate to obtain \eqref{eq:comparison}.
+It follows that the two logarithms differ by $O(1)$. Divide by $\log T$
+for the first conclusion. For a finite product of iterated-log powers,
+successively compare the logarithms at their strictly decreasing
+divergence scales; any first unequal exponent would contradict $O(1)$.
+\end{proof}
+
+This comparison proves neither existence of an asymptotic equivalent
+nor equality of its leading constants or convergence of
+$Z_1/Z_2$. It says nothing about varying the base
+K\"ahler metric.
+
+
 % Source: sections/07_stationary.tex
 \section{Stationary degeneration and the curvature measure}\label{sec:stationary}
 
-The same line inclusion identifies the limit of Hermitian--Einstein
+In this section $X$ and $V=T_X$ are the toric surface and tangent
+bundle of Section~\ref{sec:geometry}, with $W=\{p\}$, $v_0=18$ and
+$\kappa=8\pi/9$. The line inclusion identifies the limit of Hermitian--Einstein
 connections as the polarization approaches the wall from the stable side.
 Here the parameter is $t\uparrow0$, not flow time. We prove the compactness
 and localization statement independently of the heat-flow convergence
@@ -1233,7 +1371,7 @@ central term.
 
 Thus for every sequence $t_j\uparrow0$ there is a subsequence with
 smooth convergence modulo unitary gauge away from a finite set
-$\Sigma$. Finite-energy removal extends the limiting projective connection
+$\mathcal B$. Finite-energy removal extends the limiting projective connection
 with its determinant to a smooth rank-two bundle $V_\infty$. Restoring
 the determinant term and passing to the limit in \eqref{eq:he-t} gives
 \begin{equation}\label{eq:he-infty}
@@ -1245,8 +1383,8 @@ The compactness theorem also gives
 \begin{aligned}
  |F_{t_j}^0|_{t_j}^2dV_{t_j}
  &\rightharpoonup |F_{D_\infty}^0|_0^2dV
-                     +8\pi^2\sum_{q\in\Sigma}m_q\delta_q,\\
- c_2(V_\infty)&=5-\sum_{q\in\Sigma}m_q,
+                     +8\pi^2\sum_{q\in\mathcal B}m_q\delta_q,\\
+ c_2(V_\infty)&=5-\sum_{q\in\mathcal B}m_q,
  \qquad m_q\in\ZZ_{>0}.
 \end{aligned}
 \end{equation}
@@ -1256,7 +1394,7 @@ bundle on a four-sphere has an $SU(2)$ lift, and its second Chern number
 is integral; this is also the normalization in
 \cite[equations~(2.32)--(2.33), Lemma~4.21]{feehanleness1998}.
 The identities \eqref{eq:unknown-cycle} do not yet identify either
-$V_\infty$ or the points of $\Sigma$.
+$V_\infty$ or the points of $\mathcal B$.
 
 \subsection{The normalized inclusion locates the point}
 Let $g_t:(V,K_t)\to(V,h)$ be the positive isometry defining $D_t$.
@@ -1282,10 +1420,10 @@ input is now \eqref{eq:unknown-cycle}.
 
 In its smooth compactness gauges, interior estimates for the holomorphic
 section equation give a locally smooth limit
-$s_\infty:L\to V_\infty$ on $X\setminus\Sigma$. The uniform bound
+$s_\infty:L\to V_\infty$ on $X\setminus\mathcal B$. The uniform bound
 \eqref{eq:stationary-sup} prevents its norm-one mass from disappearing
 into finitely many shrinking balls. Hence the limit is nonzero.
-Its coefficients in holomorphic frames extend across $\Sigma$ by Hartogs.
+Its coefficients in holomorphic frames extend across $\mathcal B$ by Hartogs.
 On the extended Hom bundle the mean curvature is zero, by
 \eqref{eq:he-infty} and $i\Lambda_0F_L=\kappa$. The integrated Bochner
 identity makes $s_\infty$ parallel. Its image is therefore a parallel
@@ -1298,9 +1436,9 @@ Since $c_2(L\oplus M)=4$, equation \eqref{eq:unknown-cycle} implies
 $\sum m_q=1$. There is exactly one concentration point, of multiplicity one.
 
 To locate it, recall that $s_t(p)=0$ for every $t$. If the unique point
-$q$ of $\Sigma$ were different from $p$, the sections would converge
+$q$ of $\mathcal B$ were different from $p$, the sections would converge
 smoothly near $p$. Their limit would satisfy $s_\infty(p)=0$, which
-contradicts its nonzero parallelism. Therefore $\Sigma=\{p\}$.
+contradicts its nonzero parallelism. Therefore $\mathcal B=\{p\}$.
 This identifies the point by the zero of the original inclusion, rather
 than by the total energy alone.
 
@@ -1398,8 +1536,10 @@ its size. The distinction matters: both a change in the leading power
 and a slower unbounded correction would be consistent with the proved
 little-oh estimate.
 
-\begin{question}
-For the bundle and flow of Theorem~\ref{thm:flow}, what is the asymptotic
+\begin{question}\label{question:sharp-rate}
+For a fixed bundle and flow satisfying Theorem~\ref{thm:flow}, and in
+particular for the toric tangent bundle of Section~\ref{sec:geometry},
+what is the asymptotic
 behavior of $Z(T)$ beyond $Z(T)=o(T^{-1/2})$? Is the limit of
 $\log Z(T)/\log T$ equal to $-1/2$?
 \end{question}
@@ -1421,6 +1561,29 @@ singular extension as well. In this example that effect is visible in
 the residue, although the quotient-category lattice has only the two
 ordinary weights. Determining how such local extension data should
 enter a corrected singular asymptotic description remains open.
+
+The K3 double point shows that the same obstruction occurs with repeated
+reflexive factors and a nonreduced singularity. Its stronger spatial
+residue lower bound does not by itself imply a different time exponent.
+Proposition~\ref{prop:initial} does show that, for fixed holomorphic data
+and fixed base K\"ahler form, any existing logarithmic decay exponent is
+independent of the smooth initial metric.
+
+The general theorem assumes a nonempty singular scheme, a locally free
+middle bundle and equality of slopes. With empty $W$ there is no residue
+obstruction. Allowing a singular middle sheaf admits the split object
+$L\oplus\cI_WM$, whose quotient-category lattice is different. Unequal
+slopes add a scalar term to the dissipation identity. In higher rank,
+fixing the determinant no longer determines the quotient metric from
+one scalar inclusion norm. The stationary theorem also remains specific
+to the toric family: the general flow theorem supplies no stable-side
+family or stationary curvature measure for arbitrary extensions.
+
+The manuscript source and the finite intersection calculations for the
+toric example are available at
+\begin{center}
+\url{https://github.com/bwuebben/stability-degeneration}.
+\end{center}
 
 \begin{thebibliography}{HKKP23}
 
@@ -1474,10 +1637,20 @@ London Math. Soc. Lecture Note Ser., vol.~473, Cambridge University Press,
 2022, pp.~1--25.
 \href{https://doi.org/10.1017/9781108877855.001}{doi:10.1017/9781108877855.001}.
 
+\bibitem[HL97]{huybrechtslehn1997}
+D.~Huybrechts and M.~Lehn, \emph{The Geometry of Moduli Spaces of Sheaves},
+Aspects of Mathematics, vol.~E31, Vieweg, Braunschweig, 1997.
+
 \bibitem[Kly90]{klyachko1990}
 A.~A.~Klyachko, \emph{Equivariant bundles on toral varieties},
 Math. USSR-Izv. \textbf{35} (1990), no.~2, 337--375.
 \href{https://doi.org/10.1070/IM1990v035n02ABEH000707}{doi:10.1070/IM1990v035n02ABEH000707}.
+
+\bibitem[Kob87]{kobayashi1987}
+S.~Kobayashi, \emph{Differential Geometry of Complex Vector Bundles},
+Princeton University Press, Princeton, NJ, 1987.
+The locators refer to the Mathematical Society of Japan's 2013
+re-typesetting: \href{https://www.mathsoc.jp/assets/pdf/publications/pubmsj/Vol15.pdf}{MSJ edition}.
 
 \bibitem[Lam26]{lam2026}
 S.~T.~Lam, \emph{Semistability and asymptotics of geometric flows},
@@ -1499,6 +1672,11 @@ Yang--Mills flow on K\"ahler manifolds},
 Adv. Math. \textbf{279} (2015), 501--531.
 Corrected version with erratum:
 \href{https://arxiv.org/abs/1402.3808v3}{arXiv:1402.3808v3}.
+
+\bibitem[Suwa05]{suwa2005}
+T.~Suwa, \emph{Introduction to Complex Analytic Geometry},
+ICTP lecture notes, Trieste, August 2005.
+\href{https://indico.ictp.it/event/a04204/session/7/contribution/5/material/0/0.pdf}{Author's lecture notes}.
 
 \bibitem[UY86]{uhlenbeckyau1986}
 K.~Uhlenbeck and S.-T.~Yau,

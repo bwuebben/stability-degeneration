@@ -174,18 +174,28 @@
     "paper": "singular_hym_asymptotics",
     "title": "Singular graded limits and metric growth under Hermitian–Yang–Mills flow",
     "date": "2026-10-31",
-    "revision_date": "2026-10-31",
+    "revision_date": "2026-11-02",
     "website_slug": "singular-hym-metric-growth",
-    "pages": 20,
-    "pdf_sha256": "edbe3d9524b290fd2a4fdfd591e1085a592fc1830cd361b83820d5a60e49239e",
-    "source_sha256": "3f527a4f2ba06d4a13eb0a9555b5e71c12c00bf4a0b568abf7a717874889ff7c",
+    "pages": 22,
+    "pdf_sha256": "ce1c491016aee7e64a9d0527682789d4bb90511ad000d5a5bd6dcde98c3de686",
+    "source_sha256": "5e9a9a057040221db4c8b0484e1c247a0a4fd072bc1d785bf65a6df7e79cf450",
     "archive": {
-      "id": 23851000,
-      "doi": "10.5281/zenodo.23851000",
+      "id": 23893608,
+      "doi": "10.5281/zenodo.23893608",
       "conceptdoi": "10.5281/zenodo.23850999",
-      "record_url": "https://zenodo.org/records/23851000",
-      "created": "2026-11-01T02:14:58.755597+00:00"
+      "record_url": "https://zenodo.org/records/23893608",
+      "created": "2026-11-02T18:55:32.211216+00:00"
     },
+    "archive_history": [
+      {
+        "id": 23851000,
+        "doi": "10.5281/zenodo.23851000",
+        "conceptdoi": "10.5281/zenodo.23850999",
+        "record_url": "https://zenodo.org/records/23851000",
+        "created": "2026-11-01T02:14:58.755597+00:00"
+      }
+    ],
+    "download_filename": "singular-hym-metric-growth.pdf",
     "number": 10,
     "directory": "10_singular_hym_asymptotics"
   }
