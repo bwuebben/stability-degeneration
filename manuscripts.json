@@ -204,24 +204,24 @@
     "title": "Mass increase and acyclic cancellation for phase flows on quiver complexes",
     "date": "2026-11-02",
     "website_slug": "mass-increase-acyclic-cancellation",
-    "pages": 25,
-    "pdf_sha256": "05fb75979869f4b481dce91790cab71306fc5fc26fef843fc766dac8affc7a8f",
-    "source_sha256": "1bfa04e1a43b494d23b999f6eff778de26c7249d39046f98d0fb84915ff88e5d",
+    "pages": 27,
+    "pdf_sha256": "40a8503d2ac0a3813056d2978cfcf22c68745833688172e5b24188cfbbe27641",
+    "source_sha256": "1608fe85113c8bb707b25ce2ae12f5b863e9c45cd54f056b8833df8f9bcec159",
     "source_files_sha256": {
-      "paper.tex": "1bfa04e1a43b494d23b999f6eff778de26c7249d39046f98d0fb84915ff88e5d",
+      "paper.tex": "1608fe85113c8bb707b25ce2ae12f5b863e9c45cd54f056b8833df8f9bcec159",
       "references.tex": "e405428f22c2efa67e08e54280805dc44e853bdae33665718f81f7aeb54883b8",
-      "paper.pdf": "05fb75979869f4b481dce91790cab71306fc5fc26fef843fc766dac8affc7a8f",
-      "mass-increase-and-acyclic-cancellation.pdf": "05fb75979869f4b481dce91790cab71306fc5fc26fef843fc766dac8affc7a8f",
+      "paper.pdf": "40a8503d2ac0a3813056d2978cfcf22c68745833688172e5b24188cfbbe27641",
+      "mass-increase-and-acyclic-cancellation.pdf": "40a8503d2ac0a3813056d2978cfcf22c68745833688172e5b24188cfbbe27641",
       "requirements.txt": "bce6d0f25f15ace97ff810d6b93a2dc9edb9952b32c0b189270745951a94af58",
-      "sections/01_introduction.tex": "d32846dfee5f4436d86263b10aa011897b9c0213ebb7861a2504453d8de51f94",
+      "sections/01_introduction.tex": "5601706bf46d60ee0996defb5e74be0c4323c9cf141214a9f3d83ecd67faf50a",
       "sections/02_coefficients.tex": "6a737ec477765968e58f4a803e875b937fdc119f99be0ececa2e3da121c4ef7d",
       "sections/03_polar.tex": "20fbf4ce7c8118e3e9759576c8132ec7d8b6e4b95c05854b7ceca66d03a338cf",
-      "sections/04_invertible.tex": "5685482e09319028836bf403eec7e33b3a11dcde17302901109ea1dfe241359a",
+      "sections/04_invertible.tex": "834626650980be2119e987cd40edb78a6cc50ec885b3030365fac24749391b5d",
       "sections/05_mass_increase.tex": "d10d4d434e4bfdf1fc30de54c4abe64db35af1aba610d593fbe5216c751faccb",
-      "sections/06_mixed.tex": "4f1c69ac0c68242f28df658f55ef17b16ca7a5ff3845d6dc83d268363e59128b",
-      "sections/07_static.tex": "55a48d3c07b2eaa9bf571de9881793bb64929338a81f6972545c608343527795",
-      "sections/08_geometry.tex": "868953f504c090e20201a10f7c35392df325ef56226352be20444274ee4ee72a",
-      "sections/09_questions.tex": "f8feb425d1128a6d7df45a086b837e8a389e98971b22ba5efb5db244bd0df952",
+      "sections/06_mixed.tex": "a9c851f22362a0643677b5783cacb65f38cdd5abc79c42aa4f71d5bf67a8f6dc",
+      "sections/07_static.tex": "8258dac93493077a578df44b45c2bc7ecedd21a6ee23d90770c89151f975dcb3",
+      "sections/08_geometry.tex": "e2c44b2297909923614c6c75bd838fdff5ca66f04b6ab1c5a8fbf3539a7f8255",
+      "sections/09_questions.tex": "f0a4050ce7f8d1015a02ffa05d043b888c994a4b0762e905f4b9d9c6b280fb7d",
       "figures/code/compute05_independent.py": "19ba9e9420987cfcb43a385032cacf7aec369bba0210512800da3f2c701414a3",
       "figures/code/compute05_interval.py": "799986be4edfca6a91d8b6c1f7958c851f92077ab459b78996ec8e00e556b257",
       "figures/code/fig07_mass_profile.py": "9a92421d399e62183d5b514d28c4cc6a834e7d55adb4e5dface18a1811465891",
@@ -233,12 +233,22 @@
     },
     "download_filename": "mass-increase-and-acyclic-cancellation.pdf",
     "archive": {
-      "doi": "10.5281/zenodo.23898280",
+      "doi": "10.5281/zenodo.23917733",
       "conceptdoi": "10.5281/zenodo.23898279",
-      "record_url": "https://zenodo.org/records/23898280",
-      "created": "2026-11-02T21:44:02.918094+00:00",
-      "id": 23898280
+      "record_url": "https://zenodo.org/records/23917733",
+      "created": "2026-11-03T12:34:46.662705+00:00",
+      "id": 23917733
     },
+    "revision_date": "2026-11-03",
+    "archive_history": [
+      {
+        "doi": "10.5281/zenodo.23898280",
+        "conceptdoi": "10.5281/zenodo.23898279",
+        "record_url": "https://zenodo.org/records/23898280",
+        "created": "2026-11-02T21:44:02.918094+00:00",
+        "id": 23898280
+      }
+    ],
     "number": 11,
     "directory": "11_categorical_phase_flow"
   }

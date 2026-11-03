@@ -17,7 +17,9 @@ Add to the source frame velocity the skew-Hermitian generator
 \[
  K_V=\frac12\begin{pmatrix}0&\Phi_{HA}\\-\Phi_{AH}&0\end{pmatrix}.
 \]
-The kernel component of $\dot D$ remains zero: its unrotated term
+The off-diagonal blocks have sizes $n$ by $r$ and $r$ by $n$;
+no equality of their sizes is needed. The kernel component of $\dot D$
+remains zero: its unrotated term
 $F\Phi_{AH}/2$ is canceled by $F(K_V)_{AH}$.
 Equation~\eqref{eq:mapflow} then becomes
 \begin{align}
@@ -68,7 +70,7 @@ negative, so the least-singular-value calculation
 $\lambda$ is nondecreasing.
 
 \subsection{Uniform bounds for the surviving arrows}
-We specialize to \eqref{eq:balancedfamily}--\eqref{eq:mixedinitial}.
+We assume \eqref{eq:initialbalance}--\eqref{eq:mixedinitial}.
 Put $a=\pi/4$ and define the ordinary cohomology phases
 \[
  \phi_s=\arg(-\id+C_s+\ii\id),\qquad
@@ -99,8 +101,9 @@ To bound $q$, use the ordinary cohomology mass
  \mathcal M_H=\tr\sqrt{\id+(C_s-\id)^2}
                 +\tr\sqrt{\id+(C_w-\id)^2}.
 \end{equation}
-Since $\tr C_s=\tr C_w=q$ and both spaces have dimension two,
-$q\leq(\mathcal M_H+4)/2$.
+Since $\tr C_s=\tr C_w=q$ and both surviving spaces have dimension $n$,
+the scalar inequality $\sqrt{1+(x-1)^2}\geq x-1$ gives
+$q\leq(\mathcal M_H+2n)/2$.
 For the ordinary degree-zero phase equation, its derivative in source
 and target phase eigenbases is
 \[
@@ -120,13 +123,14 @@ Only this auxiliary ordinary mass, not the full complex mass, has
 been used in a dissipation inequality.
 
 \begin{proposition}\label{prop:bootstrap}
-Let $Q_0=5$ and suppose that $\lambda_0=\Lambda^2$ satisfies
+Let $Q_0=2n+1$ and suppose that
+$\lambda_0=\lambda_{\min}(F_0^\dagger F_0)$ satisfies
 \begin{equation}\label{eq:threshold}
  \lambda_0\geq\max\left\{
  1,\frac{8\pi Q_0}{a},8\sqrt{Q_0}M,
  \frac{64\pi Q_0^{3/2}M+8Q_0M^2}{a}\right\}.
 \end{equation}
-For all $t\geq0$, one has $q(t)\leq17/4$ and
+For all $t\geq0$, one has $q(t)\leq2n+1/4$ and
 \begin{align}
  s(t)&\leq\frac{M^2}{\lambda_0}e^{-at/2},\label{eq:smixed}\\
  \norm{\delta_s}_{\HS}
@@ -137,7 +141,8 @@ For all $t\geq0$, one has $q(t)\leq17/4$ and
 \end{proposition}
 
 \begin{proof}
-Initially $q=2$, $\mathcal M_H=4$, and $s\leq M^2/\lambda_0$.
+Initially $q=n$, $\mathcal M_H=2n$, and
+$s\leq M^2/\lambda_0$, since $\norm{F_0^{-1}}=\lambda_0^{-1/2}$.
 While $q\leq Q_0$, monotonicity of $\lambda$ and
 \eqref{eq:threshold} give $s'\leq-as/2$.
 This proves \eqref{eq:smixed} on that interval and ensures
@@ -145,17 +150,27 @@ $\sqrt{qs/\lambda}\leq1/8$.
 Equations~\eqref{eq:delta} give \eqref{eq:deltamixed}.
 Integrating \eqref{eq:cohomassineq} yields
 \[
- \mathcal M_H(t)\leq4+
+ \mathcal M_H(t)\leq2n+
  \frac{32\pi Q_0^{3/2}M+4Q_0M^2}{a\lambda_0}
- \leq4+\tfrac12 .
+ \leq2n+\tfrac12 .
 \]
-Hence $q\leq17/4<5$, closing the bootstrap by continuity.
+Hence $q\leq2n+1/4<Q_0$, closing the bootstrap by continuity.
 The metric equation exists for all finite times, so the bounds hold
 for all $t\geq0$.
 \end{proof}
 
+We take $\Lambda_*(n,M)$ to be the square root of the right side
+of \eqref{eq:threshold}. Then
+$\sigma_{\min}(F_0)\geq\Lambda\geq\Lambda_*(n,M)$ implies that
+proposition's hypothesis. In particular, this threshold is independent
+of $r$, $k$ and the largest singular value of $F_0$.
+
 \subsection{Growth and cancellation of the acyclic sector}
 Put $\sigma=a/4=\pi/16$ and $\kappa=\pi/(2e)$.
+For the trace-norm constants put
+\begin{equation}\label{eq:mixedsourceconstant}
+ d=\min(n,r),\qquad A_0=2\sqrt{dQ_0}M+r\kappa M^2.
+\end{equation}
 Compare the source coefficient in \eqref{eq:adaptedcoeff} with
 \[
  \Omega_{V,0}=\diag(z_0\id+C_s,z_0e^{-B}).
@@ -163,13 +178,15 @@ Compare the source coefficient in \eqref{eq:adaptedcoeff} with
 Its error has trace norm at most
 \begin{equation}\label{eq:sourceerror}
  \norm{\Omega_V-\Omega_{V,0}}_1
- \leq\frac{2\sqrt{2Q_0}M+2\kappa M^2}{\lambda_0}e^{-\sigma t}.
+ \leq\frac{A_0}{\lambda_0}e^{-\sigma t}.
 \end{equation}
 Indeed the two off-diagonal blocks contribute at most
-$2\sqrt2\norm{E_R}_{\HS}$, while
-Lemma~\ref{lem:heatbounds} applies to $T_j=X_jF$ on the acyclic block.
+$2\sqrt d\norm{E_R}_{\HS}$, since each has rank at most $d$.
+Lemma~\ref{lem:heatbounds}, with rank $r$, applies to $T_j=X_jF$
+on the acyclic block and gives
+$\norm{K_B(C_T)}_1\leq r\kappa s$.
 Similarly the degree-one error relative to $-z_0e^{-L}$ is at most
-$2M^2\lambda_0^{-1}e^{-at/2}$.
+$rM^2\lambda_0^{-1}e^{-at/2}$.
 
 Apply Lemma~\ref{lem:weightedpolar} to a vector in the acyclic source
 block realizing $\lambda$, and to its image under $F/\sqrt\lambda$.
@@ -181,12 +198,14 @@ Consequently
  \lambda'\geq\lambda
        \left[\pi-C_1e^{(\lambda-\sigma t)/2}\right],
 \end{equation}
-where the following constant is independent of $\Lambda$ and $\epsilon$:
+where the following constant depends only on $n,r,M$:
 \[
  C_1=\frac{\pi}{\sqrt{|z_0|}}
- \left(\sqrt{2\sqrt{2Q_0}M+2\kappa M^2}+\sqrt2M\right).
+ \left(\sqrt{A_0}+\sqrt r M\right).
 \]
 We used $\lambda_0\geq1$ to discard a favorable factor.
+The same estimate holds for every vector in a repeated least
+eigenspace, so it also controls the one-sided derivatives of $\lambda$.
 Set $L_0=\max\{0,2\log(2C_1/\pi)\}$, with $L_0=0$ if $C_1=0$.
 Because $\lambda_0\geq1$, the line $\sigma t-L_0$ lies below
 $\lambda$ up to time $(1+L_0)/\sigma$. At a later contact point,
@@ -208,21 +227,29 @@ $\lambda_0e^{-\lambda_0/2}\leq2/e$.
 Define the instantaneous cohomology coefficient to have blocks
 $z_0\id+C_s$ and $z_1\id-C_w$. Equations
 \eqref{eq:adaptedcoeff}, \eqref{eq:smixed},
-\eqref{eq:sourceerror} and \eqref{eq:mixedheat} show
+\eqref{eq:sourceerror} and \eqref{eq:mixedheat} show that
+\begin{equation}\label{eq:mixedcancelconstant}
+ C_{\mathrm{can}}(n,r,M)=
+ 2\left[A_0+(r+1)M^2+\frac{4r|z_0|}{e}e^{L_0/2}\right]
+\end{equation}
+satisfies
 \[
  \norm{\Omega-(\Omega_H\oplus0_{\ac})}_1
- \leq C(M)\Lambda^{-2}e^{-\pi t/32}.
+ \leq\tfrac12 C_{\mathrm{can}}(n,r,M)\lambda_0^{-1}e^{-\pi t/32}.
 \]
+Here the two acyclic heat blocks each have rank $r$, and the target
+error has trace norm at most $s$. These account for every term in
+\eqref{eq:mixedcancelconstant}.
 The trace norm is $1$-Lipschitz with respect to itself, so the same
 bound holds for $|m-\mathcal M_H|$.
-This proves the quantitative cancellation assertion in
-Theorem~\ref{thm:intromixed}.
+Adding the bounds and using $\lambda_0\geq\Lambda^2$ proves the
+quantitative cancellation assertion in Theorem~\ref{thm:intromixed}.
 
 \subsection{Relaxation of the cohomology representation}
 It remains to show that the surviving moment-map defect tends to zero.
 In fixed holomorphic coordinates, $\ker D$ is a fixed subspace and
-$A_j|_{\ker D}$ is the fixed representation
-\eqref{eq:balancedfamily}. Its induced metrics are the restriction
+$A_j|_{\ker D}$ is the fixed balanced tuple $(B_j)$.
+Its induced metrics are the restriction
 of $h_V$ to $\ker D$ and $h_W$.
 The orthonormal frames in \eqref{eq:adapted1} describe these same
 metrics: the restriction's metric velocity is $-\Phi_{HH}$, not the
@@ -230,14 +257,16 @@ phase of an unrelated representation.
 
 Multiply both induced metrics by $e^{\pi t/2}$ and call them
 $h_s,h_w$. This common scalar rescaling leaves the arrow norms
-unchanged. Fix determinant volume forms and define
+unchanged. The scalar contributions to the two logarithmic determinants
+cancel because both spaces have dimension $n$. Fix the initial
+orthonormal determinant volume forms and define
 \begin{equation}\label{eq:KN}
  \mathcal K(h_s,h_w)
  =q+\log\det h_s-\log\det h_w,\qquad
  \mu_s=C_s-\id,\quad\mu_w=C_w-\id .
 \end{equation}
-The balanced initial standard metrics give $\mathcal K(0)=2$.
-In fact $\mathcal K\geq2$ at every positive metric pair.
+The balanced initial metrics give $\mathcal K(0)=n$.
+In fact $\mathcal K\geq n$ at every positive metric pair.
 To see this directly, write $h_s=e^{S_s}$, $h_w=e^{S_w}$
 and diagonalize $S_s,S_w$. Along
 $(e^{\tau S_s},e^{\tau S_w})$, the squared arrow norm is a sum of
@@ -259,31 +288,60 @@ Variation of \eqref{eq:KN} gives
  =-\tr(\mu_s\arctan\mu_s+\mu_w\arctan\mu_w)
       +\tr(\mu_s\delta_s-\mu_w\delta_w).
 \]
-Because $q\leq5$, the spectra of $\mu_s,\mu_w$ lie in $[-1,4]$,
-where $x\arctan x\geq x^2/17$.
+Because $q\leq Q_0=2n+1$, the spectra of $\mu_s,\mu_w$ lie
+in $[-1,2n]$. Put $J_n=1+4n^2$. Integrating
+$(\arctan x)'=(1+x^2)^{-1}$ from zero shows that
+$x\arctan x\geq x^2/J_n$ on this interval.
 With the squared norm denoting the sum of the two
 Hilbert--Schmidt squares, Young's inequality yields
 \begin{equation}\label{eq:KNderivative}
- \mathcal K'\leq-\frac1{34}\norm\mu^2+\frac{17}{2}\norm\delta^2.
+ \mathcal K'\leq-\frac1{2J_n}\norm\mu^2+\frac{J_n}{2}\norm\delta^2.
 \end{equation}
-The integrable phase bounds \eqref{eq:deltamixed} imply
+The phase bounds \eqref{eq:deltamixed} give
+\[
+ \int_0^\infty\norm{\delta(t)}^2\,dt
+ \leq\frac{32\pi^2Q_0M^2+M^4}{a\lambda_0^2}.
+\]
+Consequently, with
+\begin{equation}\label{eq:mixedenergyconstant}
+ C_{\mathrm{en}}(n,M)=\frac{J_n}{2a}
+                  (32\pi^2Q_0M^2+M^4),
+\end{equation}
+one has
 \begin{equation}\label{eq:KNbound}
- 0\leq\mathcal K(t)-2,\qquad
- \mathcal K(t)-2+\frac1{34}\int_0^t\norm{\mu(u)}^2\,du
- \leq C(M)\Lambda^{-4}.
+ \begin{gathered}
+ 0\leq\mathcal K(t)-n,\\
+ \mathcal K(t)-n+\frac1{2J_n}\int_0^t\norm{\mu(u)}^2\,du
+ \leq C_{\mathrm{en}}(n,M)\lambda_0^{-2}
+ \leq C_{\mathrm{en}}(n,M)\Lambda^{-4}.
+ \end{gathered}
 \end{equation}
 
-The equations for $H_j$ and bounded phases give a uniform bound on
-$\dot H_j$, since $q$ is bounded. Hence $\mu$ is uniformly continuous.
+The adapted equations and phase bounds give
+\[
+ \sum_j\norm{\dot H_j}_{\HS}^2\leq\pi^2q,\qquad
+ \norm{\dot\mu_s}_{\HS},\ \norm{\dot\mu_w}_{\HS}\leq2\pi q.
+\]
+Thus $\mu$ is uniformly continuous, with bounds independent of $k$.
 An integrable nonnegative squared norm with this property tends to zero:
 otherwise uniform continuity would produce infinitely many disjoint
 intervals on which its integral is bounded below.
-It follows that $\mu_s,\mu_w\to0$, so $\mathcal M_H\to4$.
-The acyclic cancellation estimate then gives $m(h(t))\to4$,
-completing the proof of Theorem~\ref{thm:intromixed}.
+It follows that $\mu_s,\mu_w\to0$, so $\mathcal M_H\to2n$.
+The acyclic cancellation estimate then gives $m(h(t))\to2n$.
+One may take the constant in Theorem~\ref{thm:intromixed} to be
+\[
+ C(n,r,M)=\max\{C_{\mathrm{can}}(n,r,M),C_{\mathrm{en}}(n,M),L_0\}.
+\]
+Every arrow estimate uses a sum of squared Hilbert--Schmidt norms,
+and every differential estimate uses only $\lambda_0$ and the rank $r$.
+Balance enters through the initial mass and the lower bound for
+$\mathcal K$; no estimate involves the stabilizer or a positive
+orbit Hessian gap. This proves all the asserted uniformities.
+When $M=0$, one has $A_0=C_1=L_0=C_{\mathrm{en}}=0$, and the same
+proof applies with $s=\delta=\mu=0$.
 
 The exponential bound compares with the instantaneous cohomology
 coefficient and mass. It does not supply an exponential estimate for
-$m(h(t))-4$. Likewise \eqref{eq:KNbound} is an estimate for the
+$m(h(t))-2n$. Likewise \eqref{eq:KNbound} is an estimate for the
 cohomology functional, not a uniform inverse estimate for its Hessian
 at the changing stabilizer.

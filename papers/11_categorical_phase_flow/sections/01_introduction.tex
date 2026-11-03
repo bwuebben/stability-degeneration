@@ -102,27 +102,27 @@ to grow. Neither step assumes that the mass decreases.
 No simultaneous diagonalization of $D^\dagger D$ and
 $\sum_j A_j^\dagger A_j$ is imposed.
 
-\subsection{Uniformity when the surviving stabilizer changes}
+\subsection{Cancellation with balanced surviving cohomology}
 When $\ker D$ is nonzero, the cohomology has both a source and a target.
 The contraction equation acquires an additional term. We control it
-on a family for which the surviving automorphism group changes.
-Let $H=U=W=\CC^2$, $V=H\oplus U$, and define
-\begin{equation}\label{eq:balancedfamily}
- B_1=c\id,\qquad B_2=c\sigma_z,\qquad B_3=c\epsilon\sigma_x,\qquad
- c=(2+\epsilon^2)^{-1/2},\quad 0\leq\epsilon\leq1,
+for every initially balanced surviving representation, with no
+restriction on its automorphism group. Let $H=W=\CC^n$, $U=\CC^r$
+and $V=H\oplus U$, where $n,r\geq1$. In initial adapted orthonormal
+frames take an arbitrary $k$-arrow tuple satisfying
+\begin{equation}\label{eq:initialbalance}
+ \sum_{j=1}^kB_j^\dagger B_j=
+ \sum_{j=1}^kB_jB_j^\dagger=\id_n,
 \end{equation}
-where
-$\sigma_z=\diag(1,-1)$ and
-$\sigma_x=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
-Both arrow Gram sums equal $\id$. The automorphism algebra is scalar
-for $\epsilon>0$ and diagonal for $\epsilon=0$.
-At the initial standard metrics set
+and set
 \begin{equation}\label{eq:mixedinitial}
- D=[0,\Lambda\id],\qquad A_j=[B_j,T_j],\qquad
- \sum_{j=1}^3\norm{T_j}_{\HS}^2\leq M^2,\qquad
- z_0=-1+\ii,\quad z_1=1+\ii .
+ \begin{gathered}
+ D(0)=[0,F_0],\qquad A_j(0)=[B_j,T_j],\qquad
+ \sum_{j=1}^k\norm{T_j}_{\HS}^2\leq M^2,\\
+ F_0\in\GL(r,\CC),\qquad z_0=-1+\ii,\quad z_1=1+\ii .
+ \end{gathered}
 \end{equation}
-The mixing matrices $T_j$ are arbitrary subject to the displayed bound.
+Only the least singular value of $F_0$ will be constrained; its other
+singular values may be arbitrarily large.
 
 Along the flow choose the orthogonal splitting
 $V=\ker D\oplus(\ker D)^\perp$ and write $D=[0,F]$, $A_j=[H_j,T_j]$.
@@ -131,7 +131,13 @@ instantaneous surviving arrows $H_j$, and let $m_H$ be its trace-norm
 mass. Its inclusion into the full graded space places zero in the
 acyclic blocks.
 
-Put $q=\sum_j\norm{H_j}_{\HS}^2$ and define the moment-map defects
+Put
+\[
+ q=\sum_j\norm{H_j}_{\HS}^2,\qquad
+ s=\sum_j\norm{T_jF^{-1}}_{\HS}^2,\qquad
+ \lambda=\lambda_{\min}(F^\dagger F),\quad \lambda_0=\lambda(0),
+\]
+and define the moment-map defects
 \[
  \mu_s=\sum_jH_j^\dagger H_j-\id,\qquad
  \mu_w=\sum_jH_jH_j^\dagger-\id,\qquad
@@ -139,38 +145,46 @@ Put $q=\sum_j\norm{H_j}_{\HS}^2$ and define the moment-map defects
 \]
 In fixed holomorphic coordinates let $h_s,h_w$ be the induced metrics
 on $\ker D,W$, both multiplied by $e^{\pi t/2}$.
-Using the initial standard determinant volume forms, define the
+Using the initial orthonormal determinant volume forms, define the
 cohomology Kempf--Ness function
 \[
  \mathcal K=q+\log\det h_s-\log\det h_w.
 \]
-Its minimum is $2$, attained at the initial balanced metrics; the
+Its minimum is $n$, attained at the initial balanced metrics; the
 convexity argument is given in Section~\ref{sec:mixed}.
 
 \begin{theorem}\label{thm:intromixed}
-For every $M\geq0$ there are $\Lambda_*(M)$ and $C(M)$ such that, for
-every $\Lambda\geq\Lambda_*(M)$, every $\epsilon\in[0,1]$ and every
-triple allowed in \eqref{eq:mixedinitial}, the actual phase flow satisfies
-for all $t\geq0$
+For every $n,r\geq1$ and $M\geq0$ there are
+$\Lambda_*(n,M)$ and $C(n,r,M)$ with the following property.
+For every $k\geq1$ and initial data
+\eqref{eq:initialbalance}--\eqref{eq:mixedinitial} with
+$\sigma_{\min}(F_0)\geq\Lambda\geq\Lambda_*(n,M)$, the phase flow
+exists for all $t\geq0$ and satisfies $q(t)\leq2n+1/4$ and
+\begin{equation}\label{eq:intromixedratios}
+ s(t)\leq M^2\Lambda^{-2}e^{-\pi t/8},\qquad
+ \lambda(t)\geq\max\{\lambda_0,\pi t/16-C(n,r,M)\}.
+\end{equation}
+Moreover,
 \begin{equation}\label{eq:intromixed}
  \norm{\Omega(t)-(\Omega_H(t)\oplus0_{\ac})}_1+
  |m(h(t))-m_H(t)|
- \leq C(M)\Lambda^{-2}e^{-\pi t/32}.
+ \leq C(n,r,M)\Lambda^{-2}e^{-\pi t/32}.
 \end{equation}
-The surviving arrows remain uniformly bounded. Their two moment-map
-defects tend to zero, and $m(h(t))\to4$.
-The excess of the cohomology Kempf--Ness function above its balanced
-minimum, and the time integral of the squared moment-map defect, are
-$O_M(\Lambda^{-4})$.
+Writing $J_n=1+4n^2$, one has
+\begin{equation}\label{eq:intromixedenergy}
+ 0\leq\mathcal K(t)-n,\qquad
+ \mathcal K(t)-n+\frac1{2J_n}\int_0^t\norm{\mu(u)}^2\,du
+ \leq C(n,r,M)\Lambda^{-4}.
+\end{equation}
+Both moment-map defects tend to zero, and $m(h(t))\to2n$.
+The constants are independent of the balanced tuple, its stabilizer,
+the number of arrows and the condition number of $F_0$.
 \end{theorem}
 
-The constants are uniform as $\epsilon$ tends to zero, when the
-cohomology automorphism algebra increases from scalar to diagonal matrices.
-The parameter $\epsilon$ is fixed along each trajectory, but may approach
-zero independently of $\Lambda$ across the family. We do not assert a
-uniform rate for the final relaxation of the cohomology representation.
-The theorem includes all bounded nonzero mixing, rather than only an
-orthogonal direct sum or a chosen relation between $B_j$ and $T_j$.
+An explicit threshold and constants are given in Section~\ref{sec:mixed}.
+No individual arrow is required to be invertible, and the surviving
+representation need not be irreducible. We do not assert a uniform rate
+for its final relaxation or convergence of its normalized metrics.
 
 In the orthogonal splitting along $\ker D$, the ratio $T_jF^{-1}$
 satisfies a contraction equation with an additional off-diagonal phase
@@ -180,6 +194,35 @@ mass bounds the surviving arrows, closing a coupled estimate for the
 mixing. A weighted phase estimate forces growth of the acyclic
 differential. A separate Kempf--Ness inequality then proves decay of
 the moment-map defect without requiring a positive Hessian gap.
+
+The following family makes the stabilizer uniformity explicit. Let
+$n=r=2$, $k=3$, and put
+\begin{equation}\label{eq:balancedfamily}
+ B_1=c\id,\qquad B_2=c\sigma_z,\qquad B_3=c\epsilon\sigma_x,\qquad
+ c=(2+\epsilon^2)^{-1/2},\quad 0\leq\epsilon\leq1,
+\end{equation}
+where
+$\sigma_z=\diag(1,-1)$ and
+$\sigma_x=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
+
+\begin{corollary}\label{cor:pauli}
+For \eqref{eq:balancedfamily}, $F_0=\Lambda\id_2$ and every mixing
+tuple with $\sum_j\norm{T_j}_{\HS}^2\leq M^2$, the conclusions of
+Theorem~\ref{thm:intromixed} hold for $\Lambda\geq\Lambda_*(2,M)$,
+uniformly in $\epsilon\in[0,1]$. The cohomology automorphism algebra
+is scalar for $\epsilon>0$ and diagonal for $\epsilon=0$.
+\end{corollary}
+
+\begin{proof}
+Both Gram sums in \eqref{eq:initialbalance} are $\id_2$.
+Since $B_1=c\id$ is invertible, an automorphism is a common source
+and target matrix commuting with $\sigma_z$ and $\epsilon\sigma_x$.
+The first condition makes it diagonal, and the second makes it scalar
+when $\epsilon>0$. The estimates follow from the theorem.
+\end{proof}
+
+The parameter $\epsilon$ is fixed along each trajectory, but may
+approach zero independently of $\Lambda$ across the family.
 
 \subsection{Static regularity and potentials}
 The same coefficient formulas yield an exact complex primitive in

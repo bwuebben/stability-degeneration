@@ -247,13 +247,23 @@ It also does not claim that the full phase flow preserves the
 tied-metric family. Indeed that family keeps the norm of $D$ fixed,
 whereas the cancellation theorems prove its growth.
 
-Theorem~\ref{thm:intromixed} applies to the preceding example only
-when its initial data have the theorem's actual form: three arrows,
-rank two, one acyclic rank-two copy, the ordinarily balanced
-$B(\epsilon)$ at standard metrics, bounded $T$, and
-$\Lambda\geq\Lambda_*(M)$. It does not automatically apply to
-arbitrary graph data, multiple copies, or the rescaled
-finite-balanced representative at standard metrics.
+Theorem~\ref{thm:intromixed} applies to ordinarily balanced initial
+tuples $B\in Z$ with any finite positive number $\ell$ of these acyclic
+copies. Indeed the combined acyclic rank is $r=\ell n$, and
+\[
+ \sum_{a,j}\norm{T_j^{(a)}}_{\HS}^2
+   =n\sum_a\kappa_a^2=:M^2,\qquad
+ \sigma_{\min}(F_0)=\min_a\Lambda_a.
+\]
+If $\min_a\Lambda_a\geq\Lambda_*(n,M)$, the actual phase flow has
+the theorem's cancellation and relaxation properties, independently
+of the ratios of the initial scales. This applies for arbitrary $k$
+and every stabilizer of the ordinarily balanced tuple.
+The evolving metrics are those of the full phase flow, not metrics
+constrained to remain in the family used for the quotient isometry.
+The rescaled representative $\alpha_\Lambda^{-1/2}B$ is generally
+not ordinarily balanced at the reference metrics, so the dynamical
+theorem does not automatically apply to that representative.
 
 Thus the general result of this section is the relative static
 primitive limit under the declared elementary changes.
