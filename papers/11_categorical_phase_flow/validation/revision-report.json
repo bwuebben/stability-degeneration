@@ -1,0 +1,24 @@
+{
+  "scope": "Independent finite/high-precision transcription checks; not proofs of theorems.",
+  "precision_decimal_digits": 100,
+  "figure_hessian_comparisons": 15,
+  "maximum_absolute_error": 1.3322676295501878e-15,
+  "profile_constants": "Psecond(0)=2+2/sqrt(5); Psecond(1)=2+3/sqrt(2); Pthird(1)=3sqrt(2)/4",
+  "positive_hessian_difference": "1.226893152559726694638863618822036623678",
+  "two_point_checks": [
+    {
+      "lambda": "4.0",
+      "two_point_ratio": "0.999454832363798930614954669916"
+    },
+    {
+      "lambda": "6.0",
+      "two_point_ratio": "0.999999999994327086168849245107"
+    },
+    {
+      "lambda": "8.0",
+      "two_point_ratio": "0.999999999999999999999987608948"
+    }
+  ],
+  "figure_script_sha256": "cc66a75d557edef6878164d71921e6fb136f2e1091f570ce7b37226414e42f00",
+  "validation_script_sha256": "55a30c1492869d52fa2039e41ef461a3406ba2362af2789bc2e6acaaa444eeef"
+}

@@ -141,7 +141,13 @@ These deliberately coarse enclosures suffice to give
 One may verify the table using only rational endpoints: every positive
 square root can be enclosed by rational lower and upper bounds whose
 squares enclose its argument. Thus the sign calculation does not
-depend on a floating-point eigensolver or a finite-difference derivative.
+depend on a floating-point eigensolver or a finite-difference derivative.\footnote{The
+source distribution includes two independent interval computations:
+\path{figures/code/compute05_interval.py} and
+\path{figures/code/compute05_independent.py}. The latter uses only
+integer interval arithmetic from the Python standard library. They
+enclose the one-sided limiting derivative, not a specified positive
+value of $\epsilon$.}
 
 \begin{table}[ht]
 \caption{Enclosures for the sign calculation. For each symmetric matrix,

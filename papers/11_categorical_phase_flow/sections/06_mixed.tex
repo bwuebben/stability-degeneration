@@ -1,6 +1,6 @@
 \section{Uniform cancellation with a surviving source}\label{sec:mixed}
 
-We now prove Theorem~\ref{thm:intromixed}. The extra source cohomology
+We prove Theorems~\ref{thm:intromixed} and~\ref{thm:relaxation}. The extra source cohomology
 prevents direct use of \eqref{eq:Xcontract}. The block estimate of
 Section~\ref{sec:polar} controls the resulting term without an inverse
 of the surviving orbit operator.
@@ -17,7 +17,7 @@ Add to the source frame velocity the skew-Hermitian generator
 \[
  K_V=\frac12\begin{pmatrix}0&\Phi_{HA}\\-\Phi_{AH}&0\end{pmatrix}.
 \]
-The off-diagonal blocks have sizes $n$ by $r$ and $r$ by $n$;
+The off-diagonal blocks have sizes $n_s$ by $r$ and $r$ by $n_s$;
 no equality of their sizes is needed. The kernel component of $\dot D$
 remains zero: its unrotated term
 $F\Phi_{AH}/2$ is canceled by $F(K_V)_{AH}$.
@@ -70,40 +70,43 @@ negative, so the least-singular-value calculation
 $\lambda$ is nondecreasing.
 
 \subsection{Uniform bounds for the surviving arrows}
-We assume \eqref{eq:initialbalance}--\eqref{eq:mixedinitial}.
-Put $a=\pi/4$ and define the ordinary cohomology phases
+Allow arbitrary surviving tuples and charges in the strict upper
+half-plane. Put $b_i=\Ima z_i>0$, $a=\arg z_1\in(0,\pi)$ and define
+the ordinary cohomology phases
 \[
- \phi_s=\arg(-\id+C_s+\ii\id),\qquad
- \phi_w=\arg(\id-C_w+\ii\id),\qquad
+ \phi_s=\arg(z_0\id+C_s),\qquad
+ \phi_w=\arg(z_1\id-C_w),\qquad
  \delta_s=\Phi_{HH}-\phi_s,\quad \delta_w=\Phi_W-\phi_w.
 \]
 These ordinary coefficients are normal. Their source singular values
-are at least one. Lemma~\ref{lem:partialpolar} gives
+are at least $b_0$. Lemma~\ref{lem:partialpolar} gives
 \begin{equation}\label{eq:delta}
- \norm{\delta_s}_{\HS}\leq4\pi\sqrt{qs/\lambda},\qquad
- \norm{\delta_w}_{\HS}\leq s
+ \norm{\delta_s}_{\HS}\leq\frac{4\pi}{b_0}\sqrt{qs/\lambda},\qquad
+ \norm{\delta_w}_{\HS}\leq s/b_1
 \end{equation}
-when $\sqrt{qs/\lambda}\leq1/8$.
+when $\sqrt{qs/\lambda}/b_0\leq1/8$.
 For the target inequality, the scalar function
-$g(x)=\arg(1+\ii-x)$ has derivative at most one.
+$g(x)=\arg(z_1-x)$ has derivative at most $1/b_1$.
 Expanding two Hermitian matrices in their separate eigenbases shows
-$\norm{g(C_w+Y)-g(C_w)}_{\HS}\leq\norm Y_{\HS}$.
+$\norm{g(C_w+Y)-g(C_w)}_{\HS}\leq\norm Y_{\HS}/b_1$.
 No operator monotonicity assertion is needed.
 
 The unconditional off-diagonal estimate
-$\norm{\Phi_{HA}}_{\HS}\leq2\pi\sqrt{qs/\lambda}$,
+$\norm{\Phi_{HA}}_{\HS}\leq(2\pi/b_0)\sqrt{qs/\lambda}$,
 together with $\Phi_W\geq a\id$, gives from \eqref{eq:mixedX}
 \begin{equation}\label{eq:sineq}
- s'\leq\left(-a+\frac{4\pi q}{\lambda}\right)s.
+ s'\leq\left(-a+\frac{4\pi q}{b_0\lambda}\right)s.
 \end{equation}
 To bound $q$, use the ordinary cohomology mass
 \begin{equation}\label{eq:cohomass}
- \mathcal M_H=\tr\sqrt{\id+(C_s-\id)^2}
-                +\tr\sqrt{\id+(C_w-\id)^2}.
+ \mathcal M_H=\norm{z_0\id+C_s}_1+\norm{z_1\id-C_w}_1.
 \end{equation}
-Since $\tr C_s=\tr C_w=q$ and both surviving spaces have dimension $n$,
-the scalar inequality $\sqrt{1+(x-1)^2}\geq x-1$ gives
-$q\leq(\mathcal M_H+2n)/2$.
+The scalar inequalities $|z_0+x|\geq x+\Rea z_0$ and
+$|z_1-x|\geq x-\Rea z_1$, together with
+$\tr C_s=\tr C_w=q$, imply
+\begin{equation}\label{eq:qfrommass}
+ q\leq\tfrac12(\mathcal M_H-n_s\Rea z_0+n_w\Rea z_1).
+\end{equation}
 For the ordinary degree-zero phase equation, its derivative in source
 and target phase eigenbases is
 \[
@@ -122,54 +125,65 @@ $(H_j\delta_s-\delta_wH_j)/2$, so
 Only this auxiliary ordinary mass, not the full complex mass, has
 been used in a dissipation inequality.
 
-\begin{proposition}\label{prop:bootstrap}
-Let $Q_0=2n+1$ and suppose that
-$\lambda_0=\lambda_{\min}(F_0^\dagger F_0)$ satisfies
-\begin{equation}\label{eq:threshold}
- \lambda_0\geq\max\left\{
- 1,\frac{8\pi Q_0}{a},8\sqrt{Q_0}M,
- \frac{64\pi Q_0^{3/2}M+8Q_0M^2}{a}\right\}.
+Let $M_0=\mathcal M_H(0)$ and put
+\begin{equation}\label{eq:Qgeneral}
+ Q=\tfrac12(M_0-n_s\Rea z_0+n_w\Rea z_1)+1.
 \end{equation}
-For all $t\geq0$, one has $q(t)\leq2n+1/4$ and
+Then $Q\geq q(0)+1\geq1$.
+
+\begin{proposition}\label{prop:bootstrap}
+Suppose $\lambda_0=\sigma_{\min}(F_0)^2$ satisfies
+\begin{equation}\label{eq:threshold}
+ \lambda_0\geq L_*:=\max\left\{
+ 1,\frac{8\pi Q}{ab_0},\frac{8\sqrt Q M}{b_0},
+ \frac{64\pi Q^{3/2}M/b_0+8QM^2/b_1}{a}\right\}.
+\end{equation}
+For all $t\geq0$, one has $q(t)\leq Q-3/4$ and
 \begin{align}
  s(t)&\leq\frac{M^2}{\lambda_0}e^{-at/2},\label{eq:smixed}\\
  \norm{\delta_s}_{\HS}
- &\leq\frac{4\pi\sqrt{Q_0}M}{\lambda_0}e^{-at/4},
+ &\leq\frac{4\pi\sqrt Q M}{b_0\lambda_0}e^{-at/4},
  &\norm{\delta_w}_{\HS}
- &\leq\frac{M^2}{\lambda_0}e^{-at/2}.\label{eq:deltamixed}
+ &\leq\frac{M^2}{b_1\lambda_0}e^{-at/2}.\label{eq:deltamixed}
 \end{align}
 \end{proposition}
 
 \begin{proof}
-Initially $q=n$, $\mathcal M_H=2n$, and
-$s\leq M^2/\lambda_0$, since $\norm{F_0^{-1}}=\lambda_0^{-1/2}$.
-While $q\leq Q_0$, monotonicity of $\lambda$ and
+Initially $q\leq Q-1$ and $s\leq M^2/\lambda_0$, since
+$\norm{F_0^{-1}}=\lambda_0^{-1/2}$.
+While $q\leq Q$, monotonicity of $\lambda$ and
 \eqref{eq:threshold} give $s'\leq-as/2$.
 This proves \eqref{eq:smixed} on that interval and ensures
-$\sqrt{qs/\lambda}\leq1/8$.
+$\sqrt{qs/\lambda}/b_0\leq1/8$.
 Equations~\eqref{eq:delta} give \eqref{eq:deltamixed}.
 Integrating \eqref{eq:cohomassineq} yields
 \[
- \mathcal M_H(t)\leq2n+
- \frac{32\pi Q_0^{3/2}M+4Q_0M^2}{a\lambda_0}
- \leq2n+\tfrac12 .
+ \mathcal M_H(t)\leq M_0+
+ \frac{32\pi Q^{3/2}M/b_0+4QM^2/b_1}{a\lambda_0}
+ \leq M_0+\tfrac12 .
 \]
-Hence $q\leq2n+1/4<Q_0$, closing the bootstrap by continuity.
-The metric equation exists for all finite times, so the bounds hold
-for all $t\geq0$.
+Equation~\eqref{eq:qfrommass} gives $q\leq Q-3/4<Q$, closing
+the bootstrap by continuity. Global existence extends the bounds to
+all $t\geq0$.
 \end{proof}
 
-We take $\Lambda_*(n,M)$ to be the square root of the right side
-of \eqref{eq:threshold}. Then
-$\sigma_{\min}(F_0)\geq\Lambda\geq\Lambda_*(n,M)$ implies that
-proposition's hypothesis. In particular, this threshold is independent
-of $r$, $k$ and the largest singular value of $F_0$.
+Take $\Lambda_*=\sqrt{L_*}$. If $q(0)\leq R$, the triangle inequality
+gives $M_0\leq2R+n_s|z_0|+n_w|z_1|$. The same proof therefore works
+with $Q$ replaced by the uniform upper bound
+\begin{equation}\label{eq:QR}
+ Q_R=R+\tfrac12\bigl[n_s(|z_0|-\Rea z_0)
+                         +n_w(|z_1|+\Rea z_1)\bigr]+1.
+\end{equation}
+This gives a threshold uniform on initial surviving-arrow norm balls,
+independent of acyclic rank, arrow count and the largest singular value
+of $F_0$. Charge dependence is explicit in \eqref{eq:threshold}; no
+uniformity near the boundary of the upper half-plane is asserted.
 
 \subsection{Growth and cancellation of the acyclic sector}
-Put $\sigma=a/4=\pi/16$ and $\kappa=\pi/(2e)$.
+Put $\sigma=a/4$ and $\kappa=\pi/(2e)$.
 For the trace-norm constants put
 \begin{equation}\label{eq:mixedsourceconstant}
- d=\min(n,r),\qquad A_0=2\sqrt{dQ_0}M+r\kappa M^2.
+ d=\min(n_s,r),\qquad A_0=2\sqrt{dQ}M+r\kappa M^2.
 \end{equation}
 Compare the source coefficient in \eqref{eq:adaptedcoeff} with
 \[
@@ -198,7 +212,7 @@ Consequently
  \lambda'\geq\lambda
        \left[\pi-C_1e^{(\lambda-\sigma t)/2}\right],
 \end{equation}
-where the following constant depends only on $n,r,M$:
+where the following constant has no condition-number dependence:
 \[
  C_1=\frac{\pi}{\sqrt{|z_0|}}
  \left(\sqrt{A_0}+\sqrt r M\right).
@@ -210,7 +224,7 @@ Set $L_0=\max\{0,2\log(2C_1/\pi)\}$, with $L_0=0$ if $C_1=0$.
 Because $\lambda_0\geq1$, the line $\sigma t-L_0$ lies below
 $\lambda$ up to time $(1+L_0)/\sigma$. At a later contact point,
 \eqref{eq:mixedgapineq} gives
-$\lambda'\geq\pi\lambda/2\geq\pi/2>2\sigma$.
+$\lambda'\geq\pi\lambda/2\geq\pi/2>2\sigma=a/2$.
 The same barrier comparison as before gives
 \begin{equation}\label{eq:mixedgap}
  \lambda(t)\geq\max\{\lambda_0,\sigma t-L_0\}.
@@ -229,13 +243,13 @@ $z_0\id+C_s$ and $z_1\id-C_w$. Equations
 \eqref{eq:adaptedcoeff}, \eqref{eq:smixed},
 \eqref{eq:sourceerror} and \eqref{eq:mixedheat} show that
 \begin{equation}\label{eq:mixedcancelconstant}
- C_{\mathrm{can}}(n,r,M)=
+ C_{\mathrm{can}}=
  2\left[A_0+(r+1)M^2+\frac{4r|z_0|}{e}e^{L_0/2}\right]
 \end{equation}
 satisfies
 \[
  \norm{\Omega-(\Omega_H\oplus0_{\ac})}_1
- \leq\tfrac12 C_{\mathrm{can}}(n,r,M)\lambda_0^{-1}e^{-\pi t/32}.
+ \leq\tfrac12 C_{\mathrm{can}}\lambda_0^{-1}e^{-at/8}.
 \]
 Here the two acyclic heat blocks each have rank $r$, and the target
 error has trace norm at most $s$. These account for every term in
@@ -244,38 +258,30 @@ The trace norm is $1$-Lipschitz with respect to itself, so the same
 bound holds for $|m-\mathcal M_H|$.
 Adding the bounds and using $\lambda_0\geq\Lambda^2$ proves the
 quantitative cancellation assertion in Theorem~\ref{thm:intromixed}.
+Taking $C=\max\{C_{\mathrm{can}},L_0\}$ supplies one constant for its
+growth and cancellation conclusions. All estimates use tuple norms and
+only the least acyclic singular value; no stability hypothesis has entered.
 
-\subsection{Relaxation of the cohomology representation}
-It remains to show that the surviving moment-map defect tends to zero.
-In fixed holomorphic coordinates, $\ker D$ is a fixed subspace and
-$A_j|_{\ker D}$ is the fixed balanced tuple $(B_j)$.
-Its induced metrics are the restriction
-of $h_V$ to $\ker D$ and $h_W$.
-The orthonormal frames in \eqref{eq:adapted1} describe these same
-metrics: the restriction's metric velocity is $-\Phi_{HH}$, not the
-phase of an unrelated representation.
+\subsection{Relaxation from finite initial energy}
+For the rest of this section assume $n_s=n_w=n$ and
+$z_0=-1+\ii$, $z_1=1+\ii$, so $a=\pi/4$ and $b_0=b_1=1$.
+The surviving tuple need not be initially balanced.
+In fixed holomorphic coordinates, $\ker D$ is fixed and
+$A_j|_{\ker D}=B_j$. Its induced metrics are the restriction of
+$h_V$ and the metric $h_W$. The restriction's metric velocity is
+$-\Phi_{HH}$, as represented by \eqref{eq:adapted1}.
 
 Multiply both induced metrics by $e^{\pi t/2}$ and call them
-$h_s,h_w$. This common scalar rescaling leaves the arrow norms
-unchanged. The scalar contributions to the two logarithmic determinants
-cancel because both spaces have dimension $n$. Fix the initial
-orthonormal determinant volume forms and define
+$h_s,h_w$. This leaves the arrow norms unchanged. The common scalar
+contributions to the logarithmic determinants cancel because the
+surviving dimensions agree. Using the initial orthonormal determinant
+volume forms, define on all positive metric pairs
 \begin{equation}\label{eq:KN}
- \mathcal K(h_s,h_w)
- =q+\log\det h_s-\log\det h_w,\qquad
- \mu_s=C_s-\id,\quad\mu_w=C_w-\id .
+ \mathcal K=q+\log\det h_s-\log\det h_w,\qquad
+ \mu_s=C_s-\id,\quad\mu_w=C_w-\id.
 \end{equation}
-The balanced initial metrics give $\mathcal K(0)=n$.
-In fact $\mathcal K\geq n$ at every positive metric pair.
-To see this directly, write $h_s=e^{S_s}$, $h_w=e^{S_w}$
-and diagonalize $S_s,S_w$. Along
-$(e^{\tau S_s},e^{\tau S_w})$, the squared arrow norm is a sum of
-nonnegative coefficients times
-$e^{\tau(\lambda_w-\lambda_s)}$, while the logarithmic terms are
-linear. Thus $\mathcal K$ is convex along this path.
-Balance gives its derivative zero at $\tau=0$, proving the lower
-bound. Strict convexity, and hence a positive stabilizer gap, is not
-required.
+Assume $\mathcal K_*:=\inf\mathcal K> -\infty$ and put
+$E_0=\mathcal K(0)-\mathcal K_*$. The infimum need not be attained.
 
 The normalized metric velocities are
 \[
@@ -288,60 +294,91 @@ Variation of \eqref{eq:KN} gives
  =-\tr(\mu_s\arctan\mu_s+\mu_w\arctan\mu_w)
       +\tr(\mu_s\delta_s-\mu_w\delta_w).
 \]
-Because $q\leq Q_0=2n+1$, the spectra of $\mu_s,\mu_w$ lie
-in $[-1,2n]$. Put $J_n=1+4n^2$. Integrating
-$(\arctan x)'=(1+x^2)^{-1}$ from zero shows that
-$x\arctan x\geq x^2/J_n$ on this interval.
-With the squared norm denoting the sum of the two
-Hilbert--Schmidt squares, Young's inequality yields
+Here $M_0\geq2n$, so $Q\geq2n+1\geq3$. Since $q\leq Q$,
+the moment spectra lie in $[-1,Q-1]$. Set $J_Q=1+(Q-1)^2$.
+Integrating $(\arctan x)'=(1+x^2)^{-1}$ from zero gives
+$x\arctan x\geq x^2/J_Q$ on this interval.
+With squared norms summing source and target Hilbert--Schmidt squares,
+Young's inequality yields
 \begin{equation}\label{eq:KNderivative}
- \mathcal K'\leq-\frac1{2J_n}\norm\mu^2+\frac{J_n}{2}\norm\delta^2.
+ \mathcal K'\leq-\frac1{2J_Q}\norm\mu^2+\frac{J_Q}{2}\norm\delta^2.
 \end{equation}
-The phase bounds \eqref{eq:deltamixed} give
+By \eqref{eq:deltamixed},
 \[
  \int_0^\infty\norm{\delta(t)}^2\,dt
- \leq\frac{32\pi^2Q_0M^2+M^4}{a\lambda_0^2}.
+ \leq\frac{32\pi^2QM^2+M^4}{a\lambda_0^2}.
 \]
 Consequently, with
 \begin{equation}\label{eq:mixedenergyconstant}
- C_{\mathrm{en}}(n,M)=\frac{J_n}{2a}
-                  (32\pi^2Q_0M^2+M^4),
+ C_{\mathrm{en}}(Q,M)=\frac{J_Q}{2a}(32\pi^2QM^2+M^4),
 \end{equation}
 one has
 \begin{equation}\label{eq:KNbound}
  \begin{gathered}
- 0\leq\mathcal K(t)-n,\\
- \mathcal K(t)-n+\frac1{2J_n}\int_0^t\norm{\mu(u)}^2\,du
- \leq C_{\mathrm{en}}(n,M)\lambda_0^{-2}
- \leq C_{\mathrm{en}}(n,M)\Lambda^{-4}.
+ 0\leq\mathcal K(t)-\mathcal K_*,\\
+ \mathcal K(t)-\mathcal K_*+
+ \frac1{2J_Q}\int_0^t\norm{\mu(u)}^2\,du
+ \leq E_0+C_{\mathrm{en}}(Q,M)\lambda_0^{-2}
+ \leq E_0+C_{\mathrm{en}}(Q,M)\Lambda^{-4}.
  \end{gathered}
 \end{equation}
+Only the lower bound for $\mathcal K$ is used. A bound on $E_0$ is
+needed for a uniform numerical energy bound across initial metrics;
+its finiteness suffices for the following qualitative conclusion.
 
 The adapted equations and phase bounds give
 \[
  \sum_j\norm{\dot H_j}_{\HS}^2\leq\pi^2q,\qquad
  \norm{\dot\mu_s}_{\HS},\ \norm{\dot\mu_w}_{\HS}\leq2\pi q.
 \]
-Thus $\mu$ is uniformly continuous, with bounds independent of $k$.
+Thus $\mu$ is uniformly continuous, independently of $k$.
 An integrable nonnegative squared norm with this property tends to zero:
-otherwise uniform continuity would produce infinitely many disjoint
-intervals on which its integral is bounded below.
-It follows that $\mu_s,\mu_w\to0$, so $\mathcal M_H\to2n$.
-The acyclic cancellation estimate then gives $m(h(t))\to2n$.
-One may take the constant in Theorem~\ref{thm:intromixed} to be
-\[
- C(n,r,M)=\max\{C_{\mathrm{can}}(n,r,M),C_{\mathrm{en}}(n,M),L_0\}.
-\]
-Every arrow estimate uses a sum of squared Hilbert--Schmidt norms,
-and every differential estimate uses only $\lambda_0$ and the rank $r$.
-Balance enters through the initial mass and the lower bound for
-$\mathcal K$; no estimate involves the stabilizer or a positive
-orbit Hessian gap. This proves all the asserted uniformities.
-When $M=0$, one has $A_0=C_1=L_0=C_{\mathrm{en}}=0$, and the same
-proof applies with $s=\delta=\mu=0$.
+otherwise disjoint intervals of a fixed positive length would each
+contribute a fixed positive amount to its integral.
+It follows that $\mu_s,\mu_w\to0$, hence $\mathcal M_H\to2n$.
+The cancellation estimate then gives $m(h(t))\to2n$.
+This proves Theorem~\ref{thm:relaxation}.
+When $M=0$, the forcing $\delta$ vanishes, but $\mu$ need not vanish
+at finite times for nonbalanced initial metrics.
 
-The exponential bound compares with the instantaneous cohomology
-coefficient and mass. It does not supply an exponential estimate for
-$m(h(t))-2n$. Likewise \eqref{eq:KNbound} is an estimate for the
-cohomology functional, not a uniform inverse estimate for its Hessian
-at the changing stabilizer.
+\subsection{Balanced minima and an unattained infimum}
+Suppose $(h_s^*,h_w^*)$ is a balanced metric pair.
+In orthonormal frames for that pair, a geodesic of positive metrics
+has the form $(e^{\tau S_s},e^{\tau S_w})$.
+After diagonalizing $S_s,S_w$, the squared arrow norm is a sum of
+nonnegative multiples of $e^{\tau(\lambda_w-\lambda_s)}$;
+the logarithmic terms are affine. Thus $\mathcal K$ is convex along
+the geodesic, and balance makes its derivative zero at $\tau=0$.
+Every positive pair is the other endpoint of such a geodesic, so
+this balanced pair attains the global minimum
+\[
+ \mathcal K_*=n+\log\det h_s^*-\log\det h_w^*.
+\]
+In particular, initially balanced orthonormal metrics give
+$M_0=2n$, $Q=2n+1$, $J_Q=1+4n^2$ and $E_0=0$.
+Equations \eqref{eq:threshold} and \eqref{eq:KNbound} recover
+Corollary~\ref{cor:balanced}, with threshold depending only on $n,M$.
+No strict convexity or positive stabilizer gap is required.
+
+The finite-infimum hypothesis also allows nonattainment.
+Take $B_1=\id_2$ and $B_2=e_{12}$, the matrix with a single nonzero
+entry $1$ in position $(1,2)$.
+For arbitrary positive metrics put
+$X=h_s^{-1/2}h_wh_s^{-1/2}$. Then
+\[
+ \mathcal K=\tr X-\log\det X+\norm{B_2}_{\HS,h}^2>2,
+\]
+since $x-\log x\geq1$ and $B_2\ne0$.
+Along $h_s=h_w=\diag(e^{-t},e^t)$, however,
+$\mathcal K=2+e^{-2t}$. Its infimum is $2$ and is not attained.
+Theorem~\ref{thm:relaxation} applies to this surviving representation
+when the initial acyclic scale is sufficiently large.
+
+Cancellation alone cannot imply relaxation to balance: for zero
+surviving arrows with these charges, $\mathcal M_H=2\sqrt2\,n$ and
+$\mu_s=\mu_w=-\id$, while $\mathcal K$ has no finite lower bound.
+The exponential comparison with instantaneous cohomology remains valid.
+Even under the finite-infimum hypothesis, \eqref{eq:KNbound} supplies
+neither a uniform final relaxation rate nor convergence of normalized
+surviving metrics. It is not an inverse estimate for the Hessian of
+$\mathcal K$ at a changing stabilizer.
