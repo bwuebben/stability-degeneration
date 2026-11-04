@@ -1,0 +1,369 @@
+\section{Local regularity of the minimum}\label{sec:localregularity}
+
+We continue to regard the minimum as a curve in the complete all-norm
+space. Its first regularity properties are metric and spectral; finite
+apartments will be obtained later.
+
+\subsection{Time allocation and strict velocity margins}
+The barrier alone bounds speeds by $\pi/2$. To make local variations,
+we need a strict bound, independent of the number of polygonal segments.
+
+\begin{lemma}\label{lem:timeallocation}
+Fix a compact interval $I=[l,r]$, its length $H>0$, and an ordered
+polygon of action at most $E_0$. Its time allocation can be changed,
+keeping the ordered norm nodes and endpoints, so that its action does
+not increase and every spectral velocity has absolute value at most
+$b<\pi/2$. The constant depends only on $I,E_0,n$, and $q$.
+\end{lemma}
+
+\begin{proof}
+Minimize the exact action over the compact simplex of ordered node
+times. A zero-duration segment has infinite cost unless its endpoints
+coincide; in that case its cost is zero. Every nonzero edge has a
+strictly positive minimum feasible duration and its cost diverges
+at the barrier. Constant segments have continuous potential costs
+as their duration vanishes. Thus the extended objective is lower
+semicontinuous and attains a finite minimum. Delete zero-duration
+segments. All remaining durations are positive, so the derivatives
+with respect to interior node times vanish.
+
+For segment $j$ put $\overline R_j=W_j/\Delta_j$, and let $v_{ji}$
+range over all $2n$ spectral velocities. Define
+\[
+ L_j=\sum_i\ell(v_{ji}),\qquad H_j=\sum_i v_{ji}\tan v_{ji},
+ \qquad Q_j=\tfrac12\overline R_j(H_j-L_j).
+\]
+If $g_j$ is the node determinant gap, then
+$\kappa_j=(g_{j+1}-g_j)/\Delta_j$ is the difference of the two
+velocity sums, hence $|\kappa_j|\le n\pi$. Set
+\[
+ b_{Lj}=\int_{u_j}^{u_{j+1}}R(u)\frac{u_{j+1}-u}{\Delta_j}\,\dd u,
+ \qquad
+ b_{Rj}=\int_{u_j}^{u_{j+1}}R(u)\frac{u-u_j}{\Delta_j}\,\dd u.
+\]
+Differentiating the exact kinetic and potential integrals at an
+interior node, whose norm is held fixed, gives
+\begin{equation}\label{eq:timeallocationidentity}
+ \begin{split}
+ Q_j-Q_{j-1}={}&\tfrac12(R(u_j)-\overline R_j)L_j
+       -\tfrac12(R(u_j)-\overline R_{j-1})L_{j-1}\\
+ &+q(\kappa_{j-1}b_{R,j-1}+\kappa_jb_{Lj}).
+ \end{split}
+\end{equation}
+For example, the right-end kinetic derivative is
+$R(u_{j+1})L_j/2-\overline R_jH_j/2$, and the right-end potential
+derivative is $qR(u_{j+1})g_{j+1}-q\kappa_jb_{Rj}$.
+The corresponding left-end derivatives cancel the endpoint potential
+terms and give \eqref{eq:timeallocationidentity}.
+
+Let $M=\max_I R$ and $S=\max_I|R'|$. Since the potential is
+nonnegative and $R\ge1$, $\sum_j\Delta_jL_j\le2E_0$.
+Using $|R(u_j)-\overline R_j|\le S\Delta_j$ and the analogous
+bound on the preceding segment gives
+\begin{equation}\label{eq:timeallocationvariation}
+ \sum_j|Q_j-Q_{j-1}|\le2SE_0+2qn\pi MH.
+\end{equation}
+Some segment has $L_{j_0}\le 2E_0/H$. Every velocity on it has
+absolute value at most $b_0=\arccos(e^{-2E_0/H})$, so
+$Q_{j_0}\le Mn b_0\tan b_0$. Thus all $Q_j$ have a bound independent
+of the number of segments. The function
+\[
+ f(v)=v\tan v-\ell(v)
+\]
+is even, nonnegative and strictly increasing for $v>0$, and tends
+to infinity as $v\uparrow\pi/2$. Since
+$Q_j\ge\tfrac12 f(v_{ji})$, the asserted strict bound follows.
+\end{proof}
+
+\begin{proposition}\label{prop:localmargin}
+On every compact interval the vertex curves of the whole-line minimum
+are $b$-Lipschitz in $d_\infty$ for some $b<\pi/2$. There is a global
+minimizing sequence with polygonal restriction to that interval and
+the same strict spectral velocity bound there.
+\end{proposition}
+
+\begin{proof}
+Start with split polygonal almost-minima on expanding cutoff intervals,
+attached to their reference tails. Proposition~\ref{prop:finitecutoff}
+and regular-curve recovery make their $J$ values tend to $J_*$, so
+they converge uniformly to $c_*$. For a fixed symmetric compact
+interval $I=[-U,U]$, the truncated identity
+\eqref{eq:renormalization} bounds their local $E_I$ values: their
+truncated nonnegative $J_I$ integrals are bounded by $J$, and their
+endpoint determinant gaps converge. Apply
+Lemma~\ref{lem:timeallocation} only on $I$, leaving its endpoint
+norms and the exterior unchanged. The change in $J$ is the change
+in $E_I$, since all boundary terms cancel. The new curves are still
+in $\calQ$ and still minimize asymptotically. They therefore have
+the same uniform limit by \eqref{eq:globalstability}. Their uniform
+strict bound on $I$ passes to that limit. An arbitrary compact
+interval lies inside such an $I$.
+\end{proof}
+
+\subsection{Exact-endpoint local minimality}
+The endpoints of a compact restriction of $c_*$ might still be nonsplit.
+The following repair allows local competitors with those exact endpoints.
+
+\begin{lemma}\label{lem:endpointrepair}
+Suppose ordered polygons $p_m$ on $I$ converge uniformly to $c$ and
+have a common strict spectral velocity margin. They can be replaced
+by ordered all-norm polygons $\widehat p_m$ with the exact endpoints
+of $c$, such that $\widehat p_m\to c$ uniformly and
+$E_I(\widehat p_m)-E_I(p_m)\to0$.
+Conversely, every fixed finite-action polygon $p$ with the endpoints
+of $c$ has polygonal replacements $z_m$ with the endpoints of $p_m$
+and $E_I(z_m)\to E_I(p)$.
+\end{lemma}
+
+\begin{proof}
+Let $\delta_m$ be the maximum endpoint $d_2$ error. Choose
+$\eta_m\downarrow0$ with $\delta_m/\eta_m\to0$ and
+$2\eta_m<|I|$. Add product-geodesic bridges of length $\eta_m$
+at the two ends, and compress $p_m$ affinely into the middle interval.
+Ordered endpoints give ordered bridges. The middle velocities are
+multiplied by $1+O(\eta_m)$ and retain a fixed strict margin; the
+bridge velocities are bounded by $\delta_m/\eta_m$.
+
+Change variables on the middle interval. Its Jacobian, time weight
+and velocity scaling change by $O(\eta_m)$, while $\ell$ and $\ell'$
+are uniformly bounded on the strict margin. Thus its kinetic change
+is $O(\eta_m)$, independently of the number of segments. Uniformly
+bounded determinant gaps give the same potential bound. Each bridge
+has kinetic cost $O(\delta_m^2/\eta_m)=o(1)$ and potential cost
+$O(\eta_m)$. The uniform Lipschitz bound and small time displacement
+prove uniform convergence. Reverse the bridges and compress the
+fixed polygon $p$ to prove the converse assertion. Its own finite
+partition supplies the strict margin needed for the same estimates.
+\end{proof}
+
+\begin{proposition}\label{prop:localminimality}
+Every compact restriction of $c_*$ is the unique exact-endpoint local
+relaxed minimum of \eqref{eq:localrelaxation}.
+\end{proposition}
+
+\begin{proof}
+Use the sequence from Proposition~\ref{prop:localmargin} on $I$.
+The first endpoint repair gives
+$E_I^*\le\liminf_m E_I(p_m|I)$. The local problem is feasible,
+since the strict metric speed bound makes the endpoint chord have
+finite cost. Take any local polygon $p$ with the exact limiting
+endpoints. The converse repair gives $z_m$ with the split endpoints
+of $p_m|I$ and $E_I(z_m)\to E_I(p)$.
+
+The intermediate nodes of $z_m$ need not be split. Replace it by the
+minimum on its finite partition. Proposition~\ref{prop:finitepartition}
+makes this a split polygon $\widetilde z_m$ with the same endpoints
+and no larger action. It can now be inserted into $p_m$ while retaining
+membership in $\calQ$. Minimality of the whole-line infimum and
+cancellation of the finite boundary terms give
+\[
+ E_I(p_m|I)\le E_I(\widetilde z_m)+J(p_m)-J_*
+             \le E_I(z_m)+J(p_m)-J_*.
+\]
+Taking the upper limit and then the infimum over $p$ proves
+$E_I(p_m|I)\to E_I^*$. Their exact-endpoint repairs have the same
+limiting energy and converge uniformly to $c_*|I$.
+Proposition~\ref{prop:localrelaxedminimum} identifies this curve
+with the unique local minimum.
+\end{proof}
+
+\subsection{An ordered kinetic comparison}
+Work over $L$, where all endpoint norms are split. Fix $I=[l,r]$ and
+ordered endpoint pairs with
+$d_\infty(h_v(l),h_v(r))<\pi|I|/2$. At each vertex choose a common
+endpoint basis, with weights $a_{vi},b_{vi}$. There is a unique real
+$p_{vi}$ satisfying
+\begin{equation}\label{eq:bridgeparameter}
+ \int_l^r\arctan(p_{vi}\sech u)\,\dd u=b_{vi}-a_{vi}.
+\end{equation}
+The left side is strictly increasing from $-\pi|I|/2$ to
+$\pi|I|/2$. Define a split curve $k$ in these endpoint apartments by
+\begin{equation}\label{eq:kineticbridge}
+ w_{vi}(l)=a_{vi},\qquad
+ w_{vi}'(u)=\arctan(p_{vi}\sech u),\qquad
+ R(u)\tan w_{vi}'(u)=p_{vi}.
+\end{equation}
+
+\begin{lemma}\label{lem:kineticbridge}
+The curve $k$ minimizes the pure kinetic action uniquely in its uniform
+polygonal relaxation with these endpoints. It is ordered. If $\gamma$
+is the affine endpoint chord, then
+\begin{equation}\label{eq:bridgechord}
+ \sup_{u\in I}d_2(k_v(u),\gamma_v(u))
+                   \le\frac{\sqrt n}{16}|I|^2.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Project a comparison polygon separately at the two vertices onto
+their respective endpoint apartments using
+Lemma~\ref{lem:blockprojection}. This fixes the endpoints and
+decreases the kinetic cost. In either apartment, the supporting
+inequality for $\ell$ and the constant momenta in
+\eqref{eq:kineticbridge} give
+\[
+ \int_I\frac R2\sum_i\ell(z_i')\,\dd u
+ \ge\int_I\frac R2\sum_i\ell(w_i')\,\dd u
+       +\frac12\sum_i p_i\int_I(z_i'-w_i')\,\dd u.
+\]
+The final term vanishes by the endpoints. This proves the lower
+bound against all polygons and, by recovery, identifies the kinetic
+infimum with $K(k)$.
+
+The midpoint calculation without potential gives, for two
+exact-endpoint polygons $z,z'$,
+\begin{equation}\label{eq:kineticstability}
+ \sup_{u,v}d_2(z_v(u),z'_v(u))^2
+ \le16B_I\left\{\frac{K(z)+K(z')}{2}-K(k)\right\},
+ \qquad B_I=\int_I\sech u\,\dd u.
+\end{equation}
+This follows from \eqref{eq:polygonmidpoint} and
+$\sum\Delta_j^2/W_j\le B_I$. It proves uniqueness of the relaxed
+kinetic minimum.
+
+Sample $k$ on refining partitions and apply $\Pi$ to its nodes.
+The projected polygons have the same ordered endpoints and no larger
+kinetic cost by Lemma~\ref{lem:pairretractions}. Their costs still
+converge to $K(k)$. Inequality~\eqref{eq:kineticstability} forces
+them to converge uniformly to $k$, and closedness of $\Dord$ makes
+$k$ ordered. This argument does not identify a projected geodesic
+with the geodesic joining its projected endpoints.
+
+Finally, differentiating \eqref{eq:kineticbridge} gives
+\[
+ w_{vi}''=-\tanh u\,\sin(w_{vi}')\cos(w_{vi}'),
+ \qquad |w_{vi}''|\le\tfrac12.
+\]
+The scalar interpolation error from the affine chord is at most
+$|I|^2/16$ in each coordinate. Summing squares proves
+\eqref{eq:bridgechord}.
+\end{proof}
+
+\begin{proposition}\label{prop:quadraticchord}
+For $I=[l,r]$, let $\gamma$ be the affine endpoint chord of $c_*|I$.
+With $M=\max_I R$ and $m=\min_I R$,
+\begin{equation}\label{eq:quadraticchord}
+ \sup_{u\in I}d_2((c_*)_v(u),\gamma_v(u))
+ \le\sqrt n\left(16q\frac M m+\frac1{16}\right)|I|^2.
+\end{equation}
+In particular, for $|I|\le1$ the coefficient is bounded by
+$C=\sqrt n(16qe+1/16)$, independently of the location of $I$ and
+the boundary triple.
+\end{proposition}
+
+\begin{proof}
+First work over $L$, using Proposition~\ref{prop:extensionminimum}.
+The strict local margin makes the kinetic bridge $k$ feasible for
+the endpoints of $c_*|I$. Put
+$V(c)=q\int_I Rg(c)\,\dd u$ and
+$\overline K(c)=\overline E_I(c)-V(c)$. This subtracts a continuous
+potential from the relaxation; it does not presume a differential
+action for $c_*$. Exact-endpoint recovery and
+\eqref{eq:kineticstability} give, for
+$D=\max_v\sup_I d_2((c_*)_v,k_v)$,
+\[
+ D^2\le8B_I\{\overline K(c_*)-K(k)\}.
+\]
+Local minimality and the orderedness of $k$ imply
+\[
+ 0\le\overline K(c_*)-K(k)\le V(k)-V(c_*).
+\]
+The determinant logarithm is $\sqrt n$-Lipschitz for $d_2$.
+Thus $|g(k)-g(c_*)|\le2\sqrt n D$, and
+\[
+ D^2\le16q\sqrt n B_I M|I|D.
+\]
+Divide by $D$ if it is nonzero and use $B_I\le |I|/m$.
+Combining with \eqref{eq:bridgechord} proves
+\eqref{eq:quadraticchord}. Since $|\dd(\log R)/\dd u|\le1$,
+$M/m\le e^{|I|}$. Canonical extension is an isometry and preserves
+the endpoint chord, so the result also holds for the original
+$K$-norm curve.
+\end{proof}
+
+\subsection{Intrinsic spectral velocities}
+For relative spectra we shall use the coordinatewise comparison
+\begin{equation}\label{eq:coordinatecontinuity}
+ \norm{\sigma(h,k)-\sigma(h',k')}_\infty
+ \le d_\infty(h,h')+d_\infty(k,k').
+\end{equation}
+For split norms this follows by monotone comparison with scalar
+multiples in the min--max description of each relative spectral
+coordinate; see \cite[Lemma~2.23]{BE21}. Continuity extends it to all
+norms. This estimate is stronger than the partial-sum bound needed
+for earlier convexity arguments.
+
+\begin{proposition}\label{prop:spectralvelocities}
+At each vertex, the oriented relative secants of $c_*$ have a
+common forward and backward decreasing limit $v(u)\in\RR^n$ at
+every time. For $0<H\le1$,
+\begin{equation}\label{eq:secantvelocity}
+ \left\|\frac{\sigma(c_*(u),c_*(u+H))}{H}-v(u)\right\|_\infty
+ \le4CH,
+\end{equation}
+with the same bound for the backward secant whose source is $u-H$
+and target is $u$. The list $v$ is locally Lipschitz, with constant
+$8C$. Its entries have a strict margin inside $(-\pi/2,\pi/2)$
+on every compact interval. The determinant logarithm is $C^{1,1}$
+locally and has derivative $\sum_i v_i$.
+\end{proposition}
+
+\begin{proof}
+Fix a vertex and write $h(u)$ for its curve. Let
+$f_u(H)=\sigma(h(u),h(u+H))/H$. The midpoint case of
+\eqref{eq:quadraticchord}, spectral scaling on geodesics and
+\eqref{eq:coordinatecontinuity} give
+\[
+ \norm{f_u(H/2)-f_u(H)}_\infty\le2CH.
+\]
+Summation on dyadic scales gives a limit and the error $4CH$.
+For $H/2\le h\le H$, comparison with the chord at time $u+h$
+gives $\norm{f_u(h)-f_u(H)}_\infty\le2CH$, identifying the
+same limit along arbitrary scales. The backward secants have the
+same construction. For $0<H\le1/2$, on $[u-H,u+H]$ the two half-chord spectra agree,
+and the actual midpoint differs by at most $4CH^2$. Thus the
+forward and backward secants differ by at most $8CH$, and their
+limits coincide.
+
+For $s<t$ the forward secant from $s$ to $t$ and the backward secant
+at $t$ are identical. Applying their error estimates gives
+$\norm{v(s)-v(t)}_\infty\le8C|s-t|$ for $t-s\le1$.
+The strict margin follows from Proposition~\ref{prop:localmargin}.
+Finally, the sum of the relative spectral coordinates is the
+determinant increment. Its two difference quotients tend to
+$\sum_i v_i(u)$ at every time, proving the last assertion.
+\end{proof}
+
+\begin{proposition}\label{prop:spectralaction}
+On every compact interval the relaxed action of the actual minimum is
+\begin{equation}\label{eq:spectralaction}
+ \overline E_I(c_*|I)=\int_I R(u)
+ \left\{\frac12\sum_{v=A,C}\sum_i\ell(v_{vi}(u))+qg(c_*(u))\right\}\dd u.
+\end{equation}
+The spectral positions $x_{vi}(u)=R(u)\tan v_{vi}(u)$ are locally
+Lipschitz.
+\end{proposition}
+
+\begin{proof}
+On a partition cell of length $\Delta$, its relative spectral
+quotient differs by $O(\Delta)$ from the velocity list at the left
+endpoint, and hence at every time in that cell. The strict compact
+margin makes $\ell$ uniformly continuous on all these lists.
+The partition lower-bound argument in
+Lemma~\ref{lem:regularaction} therefore applies to any polygonal
+sequence converging to $c_*$, without a fixed apartment for the
+limit, and gives the lower bound in \eqref{eq:spectralaction}.
+
+For recovery, sample $c_*$ and interpolate canonically. All-norm
+nodes are permitted in the local relaxation. Order and the strict
+metric speed bound make these finite-action polygons, with exact
+endpoints. The same spectral-quotient estimate and the exact
+segment weights give convergence to the displayed integral. The
+potential converges uniformly as before. The final assertion follows
+from the locally Lipschitz velocity lists and their strict margins.
+\end{proof}
+
+The velocities and positions in these propositions are numerical lists.
+Their regularity alone does not identify embedded subspaces or make the
+positions straight. Those are the remaining algebraic and variational
+steps in the proof.

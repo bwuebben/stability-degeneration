@@ -1,6 +1,6 @@
 # Stability walls and geometric degeneration
 
-Eleven papers by [Bernd Johannes Wuebben](https://bwuebben.github.io/) connect stability chambers, small Dolbeault eigenvalues, Hermitian–Einstein metrics, local moduli geometry, Hermitian–Yang–Mills flow and categorical phase flows.
+Twelve papers by [Bernd Johannes Wuebben](https://bwuebben.github.io/) connect stability chambers, small Dolbeault eigenvalues, Hermitian–Einstein metrics, local moduli geometry, Hermitian–Yang–Mills flow, categorical phase flows and harmonic norm paths.
 
 | No. | Manuscript | Status | Resources |
 | ---: | --- | --- | --- |
@@ -15,10 +15,11 @@ Eleven papers by [Bernd Johannes Wuebben](https://bwuebben.github.io/) connect s
 | 09 | [Hermitian–Yang–Mills flow at and beyond a stability wall](papers/09_wall_unstable_flow/paper.pdf) | Preprint | [Abstract and citation](https://bwuebben.github.io/papers/hym-wall-unstable-flow/) · [Source](papers/09_wall_unstable_flow/) · [doi:10.5281/zenodo.23850998](https://doi.org/10.5281/zenodo.23850998) |
 | 10 | [Singular graded limits and metric growth under Hermitian–Yang–Mills flow](papers/10_singular_hym_asymptotics/paper.pdf) | Preprint | [Abstract and citation](https://bwuebben.github.io/papers/singular-hym-metric-growth/) · [Source](papers/10_singular_hym_asymptotics/) · [doi:10.5281/zenodo.23893608](https://doi.org/10.5281/zenodo.23893608) |
 | 11 | [Mass increase and acyclic cancellation for phase flows on quiver complexes](papers/11_categorical_phase_flow/paper.pdf) | Preprint | [Abstract and citation](https://bwuebben.github.io/papers/mass-increase-acyclic-cancellation/) · [Source](papers/11_categorical_phase_flow/) · [doi:10.5281/zenodo.23921919](https://doi.org/10.5281/zenodo.23921919) |
+| 12 | [Harmonic paths and honeycombs](papers/12_harmonic_paths_and_honeycombs/paper.pdf) | Preprint | [Abstract and citation](https://bwuebben.github.io/papers/harmonic-paths-and-honeycombs/) · [Source](papers/12_harmonic_paths_and_honeycombs/) · [doi:10.5281/zenodo.23947189](https://doi.org/10.5281/zenodo.23947189) |
 
 ## Reading the programme
 
-Directories 01–04 contain the two-step foundations and their repeated-factor extension. Directories 05–07 develop three-step metrics and local moduli geometry; 08–09 form the dynamical pair. Directory 10 proves a general singular-graded obstruction on compact Kähler surfaces. Directory 11 studies mass increase and acyclic cancellation for phase flows on quiver complexes. This numbering follows the development and mathematical dependencies of the programme and supplies a reading order; it is not part of the manuscript titles.
+Directories 01–04 contain the two-step foundations and their repeated-factor extension. Directories 05–07 develop three-step metrics and local moduli geometry; 08–09 form the dynamical pair. Directory 10 proves a general singular-graded obstruction on compact Kähler surfaces. Directory 11 studies mass increase and acyclic cancellation for phase flows on quiver complexes. Directory 12 constructs harmonic norm paths and labelled honeycombs from full boundary norms. This numbering follows the development and mathematical dependencies of the programme and supplies a reading order; it is not part of the manuscript titles.
 
 The bipartite spectral theorem and the toric chamber constructions give independent analytic and geometric starting points. The two-step metric-response paper joins them on the same tangent bundles. The repeated-factor spectral paper replaces scalar graph directions by matrix modes within its two-step class.
 
@@ -28,15 +29,17 @@ For dynamics, the initial-condition paper proves differentiable phase selection 
 
 The categorical phase-flow paper gives an explicit mass-increase example under the positivity-based phase convention, followed by cancellation from arbitrary positive metrics for invertible source differentials. For surjective source differentials and a large least initial acyclic singular value, its general mixed theorem allows arbitrary surviving tuples, unequal dimensions and fixed upper-half-plane charges; constants are uniform in arrow count, stabilizer and acyclic condition number with dimensions and norm bounds fixed. Relaxation follows separately in equal dimensions at charges −1+i and 1+i when the cohomology Kempf–Ness function has finite infimum. The balanced and Pauli cases are corollaries. Static nonscalar estimates and an explicit C2 limit with divergent Hölder Hessian seminorms complement the dynamics. Uniform final relaxation and general quotient geometry remain open.
 
+The harmonic-path paper constructs a finite algebraically labelled path from every full split boundary triple in every finite rank for the specified A₂ representation, Novikov field, symmetric charges and radial area form. Equality uniqueness holds in the finite regular principal-velocity class with intrinsic first-order matching. General boundary continuity and a global Fukaya correspondence remain open.
+
 These theorems retain their stated bundle, polarization and local-domain hypotheses. A general theory for arbitrary filtrations and stable factors remains open, as do repeated-factor dynamics and a replacement asymptotic law for singular graded sheaves. The surface obstruction does not contradict the weight-filtration theorem with locally free graded object.
 
 Earlier work on [equilibrium spectra](https://bwuebben.github.io/papers/small-dolbeault-stability-walls/), [flow spectra](https://bwuebben.github.io/papers/small-dolbeault-eigenvalues/), [toric local chambers](https://bwuebben.github.io/papers/toric-local-stability-chambers/) and [relative metrics near reducible Yang–Mills connections](https://bwuebben.github.io/papers/relative-metrics-reducible-yang-mills/) provides further entry points. The [Stability walls and geometric degeneration guide](https://bwuebben.github.io/research/geometry/quantitative-moduli/) explains the reading routes.
 
 ## Build and reproduce
 
-Each paper has a source and reproduction guide in its directory. Papers 01–03 and 05–10 have assembled, self-contained `paper.tex` files apart from their supplied figures. Paper 11 directly includes its supplied sections and bibliography. Compile with `latexmk -pdf paper.tex`. The earlier repeated-factor spectral paper uses `main.tex` and `sh scripts/build.sh`.
+Each paper has a source and reproduction guide in its directory. Papers 01–03 and 05–10 have assembled, self-contained `paper.tex` files apart from their supplied figures. Papers 11–12 directly include their supplied sections and bibliography. Compile with `latexmk -pdf paper.tex`. The earlier repeated-factor spectral paper uses `main.tex` and `sh scripts/build.sh`.
 
-Run `python3 reproduce.py` from the repository root to regenerate the finite computations and figures. Programs with third-party dependencies use `uv` and the paper's pinned `requirements.txt`; the others use the Python standard library. The finite calculations establish the printed identities and examples, while the geometric, elliptic and parabolic assertions rely on the proofs. Released PDF hashes and archive identities are in `manuscripts.json`.
+Run `python3 reproduce.py` from the repository root to regenerate the finite computations and figures. Programs with third-party dependencies use `uv` and the paper's pinned `requirements.txt` or inline script dependency; the others use the Python standard library. The finite calculations establish the printed identities and examples, while the geometric, elliptic and parabolic assertions rely on the proofs. Released PDF hashes and archive identities are in `manuscripts.json`.
 
 The Zenodo records preserve the released manuscripts. Papers 01–10 await arXiv submission.
 

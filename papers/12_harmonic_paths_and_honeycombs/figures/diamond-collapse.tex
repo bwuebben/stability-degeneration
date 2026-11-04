@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=2cm,y=2cm,line width=.7pt,
+  every node/.style={font=\small},>=Stealth]
+  \begin{scope}
+    \fill[blue!8] (0,0)--(-.5,.5)--(0,1)--(.5,.5)--cycle;
+    \foreach \r in {-1,0,1} {
+      \draw (\r,-.6)--(\r,0);
+      \draw (\r,0)--({\r-1.45},1.45);
+      \draw (\r,0)--({\r+1.45},1.45);
+    }
+    \foreach \x/\y in {-1/0,0/0,1/0,-.5/.5,.5/.5,0/1}
+      \fill (\x,\y) circle (1.4pt);
+    \node[below right] at (-1,0) {$Y_1$};
+    \node[below right] at (0,0) {$Y_2$};
+    \node[below left] at (1,0) {$Y_3$};
+    \node[left] at (-.5,.5) {$P_{12}$};
+    \node[right] at (.5,.5) {$P_{23}$};
+    \node[above] at (0,1) {$P_{13}$};
+    \node at (-1.8,1.35) {$A$};
+    \node at (1.8,1.35) {$C$};
+    \node[left] at (-1,-.45) {$B$};
+    \node at (0,-.9) {$p>0$};
+  \end{scope}
+  \begin{scope}[xshift=7.3cm]
+    \draw (0,-.6)--(0,0)--(-1.05,1.05);
+    \draw (0,0)--(1.05,1.05);
+    \fill (0,0) circle (1.6pt);
+    \node[left] at (0,-.4) {$B^3$};
+    \node[left] at (-.65,.65) {$A^3$};
+    \node[right] at (.65,.65) {$C^3$};
+    \node at (0,-.9) {$p=0$};
+  \end{scope}
+\end{tikzpicture}

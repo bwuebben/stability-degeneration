@@ -13,4 +13,8 @@ for program in programs:
     else:
         command = [sys.executable, '-B', str(program)]
     subprocess.run(command, cwd=program.parents[2], check=True)
-print(f'Completed {len(programs)} finite computations.')
+examples = sorted((root / 'papers').glob('*/reproducibility/check_examples.py'))
+for program in examples:
+    print(str(program.relative_to(root)), flush=True)
+    subprocess.run(['uv', 'run', '--no-project', str(program)], cwd=program.parents[1], check=True)
+print(f'Completed {len(programs) + len(examples)} finite computations.')

@@ -1,0 +1,120 @@
+\section{The matching condition and further questions}\label{sec:comparison}
+
+\subsection{An edgewise switching example}
+The following calculation explains the distinction between the uniqueness
+proved here and the edgewise conditions printed in
+\cite[Definition~7.8]{HKKP26}. It concerns those displayed conditions;
+it is not asserted to define a spectral-network object in the sense of
+\cite{HKS24}.
+
+Fix $p>0$, put $r=(-p,0,p)$ and $\tau=3$, and let
+$I=(-2,-1)$, $J=(1,2)$. Let $\sigma$ exchange indices $1,3$
+and fix $2$. For $L=I$ or $J$ and $t\le\tau$, define
+\begin{equation}\label{eq:switchweights}
+ w_i^L(t)=\int_{-\infty}^t
+ \left[\boldsymbol1_{s\notin L}\lambda(r_i,s)
+       +\boldsymbol1_{s\in L}\lambda(r_{\sigma(i)},s)\right]\,\dd s.
+\end{equation}
+Use these weights at both vertices in the standard basis.
+The identity arrow is an isometry and the norms tend to the
+same standard incoming norm.
+
+The function $\lambda(p,s)$ is even in $s$. Its integrals over
+$I$ and $J$ agree. Since the first and third positions are
+opposites and the second is zero, the two sets of weights in
+\eqref{eq:switchweights} coincide for $2\le t\le3$.
+Write $k_i$ for their common value at $t=\tau$. Continue both
+paths by
+\[
+ w_{vi}(t)=k_i+
+   \int_\tau^t\lambda(r_i+\epsilon_va(s-\tau),s)\,\dd s,
+ \qquad t\ge\tau.
+\]
+The coordinate gaps are positive for $t>\tau$, and the
+outgoing derivatives agree with the incoming derivatives
+at $\tau$. Both normalized outgoing limits exist, by the
+same integrable difference estimate as in
+\eqref{eq:scalarboundarymap}. Since the paths coincide on
+this whole outgoing tail, those full limits are equal.
+
+The two paths are nevertheless different. On $-2<t<-1$,
+\[
+ w_1^I(t)-w_1^J(t)
+       =2\int_{-2}^t\lambda(p,s)\,\dd s>0.
+\]
+Evaluation on $e_1$ detects their difference as actual norms.
+At every regular incoming time the unordered positions of
+either path are $\{-p,0,p\}$, with stable $B$ labels.
+At each switch the coordinate subspaces carrying those
+positions are exchanged. After $\tau$ their supports are
+the same three Ys and their crossings, translated in time
+from \eqref{eq:diamondvertices}. This finite support is
+connected and balanced. Subdivide at the switches and
+crossings; all open edges have stable labels and the required
+straight directions. At a switch both adjacent abstract
+labels are $B$, and numerical charge conservation holds.
+
+At a switch, however, the one-sided coordinate velocity
+vectors in the fixed apartment differ. In the $u$ coordinate,
+if they are $v^-,v^+$ at a switch $u_0$, then the Euclidean
+apartment formula gives
+\[
+ d_2\bigl(y_v(u_0),\midpt(y_v(u_0-h),y_v(u_0+h))\bigr)
+       =\tfrac h2\norm{v^+-v^-}_2+O(h^2).
+\]
+The coefficient is nonzero. Thus both paths fail
+\eqref{eq:matching}. Equality of support, phases, abstract
+edge labels and full ends has not identified the embedded
+velocity subspaces across the exceptional times.
+
+The printed definition describes an edge label as a graded
+object of a velocity filtration. If that phrase is intended
+to include additional transport of its embedding, that
+transport is precisely what must be specified to exclude
+this example. We have made one sufficient intrinsic condition
+explicit and proved the correspondence in the resulting
+finite regular class. The calculation above does not disprove
+an interpretation incorporating stronger categorical gluing.
+
+\subsection{Comparison with categorical networks}
+Proposition~\ref{prop:vertexfiltrations} goes from matched norm
+paths to local residue objects, two increasing-phase filtrations
+and their edge quotients. The reverse implication is a separate
+question: which globally framed network data determine opposite
+first-order norm germs? In particular, the local existence of
+two filtrations of an abstract representation does not by itself
+supply the embedded opposition used in
+\eqref{eq:vertexdecomposition}.
+
+A comparison with the global Fukaya-category construction would
+also have to identify the relevant Novikov-field object and its
+gluing data. The uniqueness theorem of
+\cite[Theorem~4.15]{HKS24}, in its constant-coefficient,
+product-type setting, gives support equality and S-equivalence
+of reductions for networks representing the same object after
+Novikov extension. It does not supply this comparison or assert
+equality of full norm paths. The present variational uniqueness
+uses the specified boundary triple and the midpoint condition
+directly.
+
+\subsection{Dependence on the boundary data}
+Theorem~\ref{thm:main} includes every full split boundary triple,
+and hence includes degenerate inputs. General continuity of the
+assignment remains open here. A natural topology on triples is
+the maximum of the three unnormalized $d_2$ distances. For paths,
+one may use uniform vertexwise $d_2$ distance after applying the
+same prescribed phase scalars on each end. The estimate in
+Proposition~\ref{prop:collapsecontinuity} establishes this
+continuity for one explicit family through a bounded-face
+collapse. A general result would have to control comparisons
+between variational problems with different full reference
+norms, rather than only competitors in one fixed-end problem.
+
+Two other extensions are distinct from that continuity problem.
+First, the theorem fixes the symmetric $A_2$ charges and radial
+area form; its finite-support proof uses the three resulting
+monotone directions. Second, uniqueness has been proved among
+finite regular paths with matching. Extending it to a larger
+intrinsically defined class would require a regularity theorem
+for that class or a suitable direct comparison, even though the
+minimum itself already has a finite algebraic presentation.

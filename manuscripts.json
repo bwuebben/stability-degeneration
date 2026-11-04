@@ -260,5 +260,41 @@
     ],
     "number": 11,
     "directory": "11_categorical_phase_flow"
+  },
+  {
+    "paper": "harmonic_paths_and_honeycombs",
+    "title": "Harmonic paths and honeycombs",
+    "date": "2026-11-04",
+    "website_slug": "harmonic-paths-and-honeycombs",
+    "pages": 45,
+    "pdf_sha256": "fe53affee906d37a5d1388cbfdb2adb4cc8542caa71e708518d7732465335fa9",
+    "source_sha256": "64b5290b59ec83e5e00bd5f4318fdc52f4b94e2f3a77a535fe7c52d58551ac44",
+    "source_files_sha256": {
+      "paper.tex": "64b5290b59ec83e5e00bd5f4318fdc52f4b94e2f3a77a535fe7c52d58551ac44",
+      "paper.pdf": "fe53affee906d37a5d1388cbfdb2adb4cc8542caa71e708518d7732465335fa9",
+      "sections/01_introduction.tex": "afbab1fb7970d77532de5d54b664a98ee7885d33465aa0ac39387c62ad75513f",
+      "sections/02_norm_geometry.tex": "90c369b1d102f23bea70826c50838e5a11548ebf62adbc1ff8603a22252bb964",
+      "sections/03_variational_construction.tex": "820284f0e11eca4f8b157ee2916b3dd4c5375f28ce4fc5c18f43f3fdab3f8655",
+      "sections/04_local_regularity.tex": "07689ec3b4c59e034915077f017e85bdd91473acbee354a52497f77ae6b9722e",
+      "sections/05_algebraic_tails.tex": "b3b74c162e8f29756bcdf0f25d5b21891e4c82e0a4eb79ad202d372c2fcf5ed9",
+      "sections/06_finite_regularity.tex": "2a082c337d46b55eec3870a76a48fcdffaffc639f8e3a76738ba73682765b245",
+      "sections/07_matching_and_uniqueness.tex": "a5dfeda1ce1a098effea51e17228d00c6a2bf54602e323492db376585493c7ff",
+      "sections/08_examples.tex": "bcf55c975bc7dbbadbded8be9901ecc7544fe29ec78dc5942990f4a8b79c701f",
+      "sections/09_comparison.tex": "25d07feffa9020ee62aaf4ca456f568ede56c874b4ec1a75f8380a6b5aa68a96",
+      "sections/99_references.tex": "47288cbac12c4ad28f2d19f23268c3a25ea5eaecffaa26deb041829d32f71709",
+      "figures/diamond-collapse.tex": "534be98928f74ce31d6892bff04eb99ca002ab14c80637d07e76088dcef62b38",
+      "reproducibility/README.md": "2ada7da073859f605b19b59381405b49e813fd74c195698ec97c4a51f7d48780",
+      "reproducibility/check_examples.py": "be6c7b76fcbcaf2b690e6bfa7351d344993a22c9283ade4d172a97988e7685ae",
+      "reproducibility/results.json": "6abbba559c35fc9c68793bd6b10457014d16d8c95820cdde5a85d99a66443a56"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.23947189",
+      "conceptdoi": "10.5281/zenodo.23947188",
+      "record_url": "https://zenodo.org/records/23947189",
+      "created": "2026-11-04T11:59:26.323095+00:00",
+      "id": 23947189
+    },
+    "number": 12,
+    "directory": "12_harmonic_paths_and_honeycombs"
   }
 ]

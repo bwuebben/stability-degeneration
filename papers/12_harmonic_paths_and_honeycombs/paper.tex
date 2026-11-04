@@ -1,0 +1,89 @@
+\pdfoutput=1
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdfauthor={Bernd Johannes Wuebben},
+  pdftitle={Harmonic paths and honeycombs}}
+\setlength{\emergencystretch}{2em}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\mm}{\mathfrak m}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\arsinh}{\operatorname{arsinh}}
+\newcommand{\midpt}{\operatorname{mid}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\Ndiag}{\mathcal N_{\mathrm{diag}}}
+\newcommand{\Nall}{\mathcal N}
+\newcommand{\Dord}{\mathcal D}
+\newcommand{\calQ}{\mathcal Q}
+\newcommand{\calY}{\mathcal Y}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+
+\title{Harmonic paths and honeycombs}
+\author{Bernd Johannes Wuebben}
+\subjclass[2020]{16G20 (primary); 12J25, 51E24, 49J45 (secondary)}
+\keywords{Harmonic norms, quiver representations, Novikov field, Euclidean
+buildings, spectral networks, honeycombs}
+\date{November 4, 2026}
+
+\begin{document}
+\begin{abstract}
+We construct harmonic paths of non-expansive norms on the identity
+representation of the $A_2$ quiver from arbitrary triples of diagonalizable
+boundary norms over the real-exponent Novikov field. We use symmetric
+central charges and a fixed radial area form on the plane. In every finite
+rank, the path has a finite apartment presentation and a finite honeycomb
+support with actual semistable edge labels and compatible filtrations at
+its vertices. It is unique among paths with such presentations whose
+one-sided norm motions agree to first order at each join. The construction
+minimizes a renormalized convex action. Its algebraic regularity follows
+from fixed orthogonal subspaces at gaps in the spectral velocities,
+second-order scalar approximations, and descent of finite norm data from
+the Hahn field. Repeated boundary spectra and collapsed edges are included.
+The result gives existence in the honeycomb specialization of the harmonic-path
+conjecture of Haiden--Katzarkov--Kontsevich--Pandit, with uniqueness under an
+explicit matching condition absent from the printed edgewise definition.
+\end{abstract}
+\maketitle
+
+\input{sections/01_introduction}
+\input{sections/02_norm_geometry}
+\input{sections/03_variational_construction}
+\input{sections/04_local_regularity}
+\input{sections/05_algebraic_tails}
+\input{sections/06_finite_regularity}
+\input{sections/07_matching_and_uniqueness}
+\input{sections/08_examples}
+\input{sections/09_comparison}
+
+\input{sections/99_references}
+\end{document}

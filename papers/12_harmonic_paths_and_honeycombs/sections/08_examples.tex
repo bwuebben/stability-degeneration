@@ -1,0 +1,293 @@
+\section{Examples and a collapsing bounded face}\label{sec:examples}
+
+The following examples serve different purposes. Scalar sums give
+explicit norm paths and a visible change of support topology. The
+subsequent triples lie outside that simultaneous-apartment setting;
+their paths are supplied by the theorem, without an asserted explicit
+formula for their supports.
+
+\subsection{The scalar junction map}
+In the original coordinate put
+\[
+ \lambda(x,t)=\frac{1}{\sqrt{1+t^2}}
+                   \arctan\frac{x}{\sqrt{1+t^2}},\qquad
+ A_\mu(t)=\int_0^t\lambda(\mu s,s)\,\dd s.
+\]
+Thus $A_{\pm a}(t)=\pm F(\arsinh t)$ for $t\ge0$.
+A scalar Y meeting at $(p,\tau)$ has incoming position $p$
+and outgoing positions $p-a(t-\tau)$ and $p+a(t-\tau)$.
+Given incoming logarithmic norm $b_0$, set
+$k=b_0+\int_{-\infty}^\tau\lambda(p,s)\,\dd s$.
+Its common incoming weight is
+$b_0+\int_{-\infty}^t\lambda(p,s)\,\dd s$ up to $\tau$,
+and its outgoing weights are
+\[
+ w_v(t)=k+\int_\tau^t\lambda(p+\epsilon_va(s-\tau),s)\,\dd s.
+\]
+These weights agree to first order at $\tau$, and their gap is
+positive for $t>\tau$. Their normalized outgoing constants are
+$b_0+d_A$ and $b_0+d_C$, where
+\begin{equation}\label{eq:scalarboundarymap}
+ d_v=\int_{-\infty}^\tau\lambda(p,s)\,\dd s
+  +\int_\tau^\infty
+       \bigl[\lambda(p+\epsilon_va(s-\tau),s)
+                    -\lambda(\epsilon_va s,s)\bigr]\,\dd s
+  -A_{\epsilon_va}(\tau).
+\end{equation}
+The integrands at the ends are $O(|s|^{-2})$.
+
+\begin{proposition}\label{prop:scalarjunction}
+The map $(p,\tau)\mapsto(d_A,d_C)$ is a smooth global
+diffeomorphism of $\RR^2$. Thus each scalar full boundary triple
+has one scalar Y, which is the path of Theorem~\ref{thm:main}.
+\end{proposition}
+
+\begin{proof}
+Write $f(x,s)=(1+x^2+s^2)^{-1}=\partial_x\lambda(x,s)$,
+and set
+\[
+ P=\int_{-\infty}^\tau f(p,s)\,\dd s,\quad
+ L=\int_\tau^\infty f(p-a(s-\tau),s)\,\dd s,\quad
+ R_+=\int_\tau^\infty f(p+a(s-\tau),s)\,\dd s.
+\]
+Differentiating the convergent integrals gives
+\[
+ d_{A,p}=P+L,\quad d_{A,\tau}=aL,\qquad
+ d_{C,p}=P+R_+,\quad d_{C,\tau}=-aR_+.
+\]
+Their Jacobian is $-a\{P(L+R_+)+2LR_+\}<0$.
+For a global argument use $y=a\tau$ and output coordinates
+$U=d_A+d_C$, $V=d_A-d_C$. The derivative matrix is
+\[
+ H=\begin{pmatrix}2P+L+R_+&L-R_+\\ L-R_+&L+R_+\end{pmatrix},
+ \qquad
+ z^THz=2Pz_1^2+L(z_1+z_2)^2+R_+(z_1-z_2)^2.
+\]
+It is symmetric positive definite. Hence $(U,V)=\nabla G$
+for a smooth strictly convex function $G$ on $\RR^2$.
+Put $\rho=\sqrt{1+p^2+\tau^2}$. In each integral retain a
+segment of length $\rho$ adjacent to $\tau$. On those segments
+$1+x^2+s^2\le C\rho^2$, with a constant depending only on
+$a$. Thus $P,L,R_+\ge c/\rho$, and
+\[
+ H\ge\frac{c'}{\sqrt{1+p^2+y^2}}I.
+\]
+At the origin $(U,V)=0$. Along every unit ray this implies
+$e\cdot\nabla G(re)\ge c'\arsinh r$. Integration makes
+$G(q)-w\cdot q$ coercive for every $w\in\RR^2$.
+Its unique minimum solves $\nabla G(q)=w$. The inverse
+function theorem gives a smooth inverse everywhere.
+The scalar Y is a finite regular matched path with the prescribed
+ends, so Theorem~\ref{thm:wholelineconverse} identifies it
+with the constructed minimum.
+\end{proof}
+
+\subsection{An explicit degree-three bounded face}
+Fix $p\ge0$ and $(r_1,r_2,r_3)=(-p,0,p)$. In the standard
+basis of $K^3$ define
+\begin{equation}\label{eq:diamondweights}
+ w_{vi}(t;p)=
+ \begin{cases}
+ \displaystyle\int_{-\infty}^t\lambda(r_i,s)\,\dd s,&t\le0,\\[4pt]
+ \displaystyle\int_{-\infty}^0\lambda(r_i,s)\,\dd s
+       +\int_0^t\lambda(r_i+\epsilon_va s,s)\,\dd s,&t\ge0.
+ \end{cases}
+\end{equation}
+Let $h_v(t;p)$ be the corresponding diagonal norms.
+Their full incoming norm is the standard maximum norm $h_0$.
+Their outgoing normalized norms are diagonal in that same basis,
+with weights
+\begin{equation}\label{eq:diamondboundary}
+ b_{vi}(p)=\int_{-\infty}^0\lambda(r_i,s)\,\dd s
+   +\int_0^\infty
+      \bigl[\lambda(r_i+\epsilon_va s,s)
+                     -\lambda(\epsilon_va s,s)\bigr]\,\dd s.
+\end{equation}
+These formulas specify the norms on every vector, including their
+scales. Each coordinate is the scalar Y at $(r_i,0)$.
+The pair is equal for $t\le0$ and ordered for $t\ge0$, since
+\[
+ w_{Ci}(t;p)-w_{Ai}(t;p)
+ =\int_0^t[\lambda(r_i+as,s)-\lambda(r_i-as,s)]\,\dd s>0
+ \quad(t>0).
+\]
+It has first-order matching at zero and smooth weights elsewhere.
+Theorem~\ref{thm:wholelineconverse} identifies it with the
+unique matched path for \eqref{eq:diamondboundary}.
+
+For $p>0$ the Y vertices and crossing vertices are
+\begin{equation}\label{eq:diamondvertices}
+ \begin{gathered}
+ Y_1=(-p,0),\quad Y_2=(0,0),\quad Y_3=(p,0),\\
+ P_{12}=(-p/2,p/(2a)),\quad
+ P_{23}=(p/2,p/(2a)),\quad P_{13}=(0,p/a).
+ \end{gathered}
+\end{equation}
+Indeed $C_i:x=r_i+at$ meets $A_j:x=r_j-at$ for $t>0$
+exactly when $i<j$. There are six vertices, six finite edges
+and nine exterior rays, with every open edge of multiplicity
+one. The unique bounded face has boundary
+\[
+ Y_2\longrightarrow P_{12}\longrightarrow P_{13}
+          \longrightarrow P_{23}\longrightarrow Y_2.
+\]
+The two other finite edges connect $Y_1$ to $P_{12}$ and
+$Y_3$ to $P_{23}$. The finite core is connected with one cycle;
+there are no further crossings, so exactly one face is bounded.
+Its Euclidean area in the $(x,t)$ plane is $p^2/(2a)$.
+This is not its area for the form $\omega$.
+
+The vertex object at $Y_i$ is $B$ on the $i$th coordinate.
+It has incoming factor $B$ and outgoing filtration
+$0\subset A\subset B$, with quotient $C$.
+At $P_{ij}$ the object is $A_j\oplus C_i$ with zero arrow,
+since $i\ne j$. Both filtrations have factors $A_j,C_i$
+in that order. Thus a crossing does not create a $B$ strand.
+These labels and filtrations give an explicit instance of
+Proposition~\ref{prop:vertexfiltrations}.
+
+\begin{figure}[t]
+\centering
+\input{figures/diamond-collapse}
+\caption{The support of \eqref{eq:diamondweights} for $p>0$
+(left) and $p=0$ (right). The left panel uses vertical coordinate
+$a t/p$ and horizontal coordinate $x/p$. Its finite core has six
+vertices and one bounded diamond. At $p=0$ the entire finite core collapses to
+one Y with edge multiplicity three. The four-valent crossings have
+vertex objects $A\oplus C$.}
+\label{fig:diamondcollapse}
+\end{figure}
+
+\begin{proposition}\label{prop:collapsecontinuity}
+For all $p,p'\ge0$,
+\begin{equation}\label{eq:collapsecontinuity}
+ \sup_{t\in\RR}\max_{v=A,C}
+ d_2(h_v(t;p),h_v(t;p'))\le\pi\sqrt2\,|p-p'|.
+\end{equation}
+The same bound holds for each outgoing full boundary norm.
+At $p=0$ all three boundary norms are $h_0$, and the support
+is the single Y with labels $B^3,A^3,C^3$.
+\end{proposition}
+
+\begin{proof}
+Since $0<\partial_x\lambda(x,s)\le(1+s^2)^{-1}$,
+each integral in \eqref{eq:diamondweights} gives
+\[
+ |w_{vi}(t;p)-w_{vi}(t;p')|
+       \le\pi|r_i(p)-r_i(p')|
+\]
+uniformly in $t$. The same basis diagonalizes both norms, so
+summing the squares of the three weight differences proves
+\eqref{eq:collapsecontinuity}. Multiplication by the same
+reference scalar is an isometry; taking normalized limits
+gives the outgoing bound. At $p=0$, the incoming weights are
+zero and the outgoing weights are $A_{\epsilon_va}(t)$.
+Normalization removes the latter exactly. This proves the
+last assertion and displays the collapse explicitly.
+\end{proof}
+
+The estimate proves continuity of the full norm paths through
+this particular topology change. It does not establish uniform
+continuity for arbitrary boundary triples. Although this example
+has a bounded face, its norms are a direct sum of scalar norms;
+bounded faces do not require irreducible boundary data.
+
+\subsection{A triple with no common orthogonal splitting}
+Fix $u>0$. Give the following three bases the weights $(-2u,-u,0)$:
+\begin{equation}\label{eq:irreducibletriple}
+ \begin{split}
+ b^{(1)}&=(e_1,e_2,e_3),\\
+ b^{(2)}&=(e_3,e_2,e_1),\\
+ b^{(3)}&=(e_1+e_2+e_3,\ e_1+2e_2+3e_3,\ e_3).
+ \end{split}
+\end{equation}
+Their basis matrices are invertible over $\CC$. Denote the
+resulting norms by $h_1,h_2,h_3$ and the standard norm by $h_0$.
+They are valid full boundary data $(h_B,h_A^+,h_C^+)$.
+
+We verify that these norms have neither a common apartment nor
+a nontrivial common orthogonal direct-sum decomposition.
+Each is at most $h_0$. In its residue space the vectors on
+which $h_i<h_0$ span the plane generated by the first two
+vectors of $b^{(i)}$. These planes are
+\[
+ P_1=\langle e_1,e_2\rangle,\quad
+ P_2=\langle e_2,e_3\rangle,\quad
+ P_3=\{x_1-2x_2+x_3=0\}.
+\]
+Their common intersection is zero. Rescale any nonzero vector
+to have $h_0$-norm one, using the full real value group.
+Its nonzero residue misses one of the planes, so some $h_i$
+has value one on it. Hence $\max_i h_i=h_0$ pointwise.
+
+If the three norms had a common apartment, their maximum
+would belong to it too. Reducing a common $h_0$-orthonormal
+basis would split all three complete residue flags. The
+first two flags are opposite, with canonical intersection
+lines $\CC e_1,\CC e_2,\CC e_3$. A basis splitting both
+must consist of these lines. The first line of the third
+flag is $\CC(e_1+e_2+e_3)$, a contradiction.
+
+More generally, a common orthogonal decomposition would be
+orthogonal for $h_0$ and would reduce to a decomposition of
+$\CC^3$ splitting the three flags. Its projection preserves
+the first two opposite flags, so it is a diagonal idempotent
+in the coordinate basis. Preserving the third flag's first
+line forces all three diagonal entries to agree. The
+projection is therefore zero or identity, and one residue
+summand, hence one original summand, is zero. This excludes
+a nontrivial decomposition. Theorem~\ref{thm:main} applies
+to these triples without reducing them to scalar paths.
+
+\subsection{Full norm information beyond pairwise spectra}
+Here is a valued family making that distinction numerical.
+Set $u=1$, take $0<s<1$, and put $b=T^s$. Keep the first
+two bases in \eqref{eq:irreducibletriple}, and replace the
+third by the columns of
+\[
+ B_3(s)=\begin{pmatrix}1&1&0\\b&2&0\\1&3&1\end{pmatrix}.
+\]
+Its determinant $2-b$ is a unit. Give all three bases weights
+$(-2,-1,0)$. Every pairwise logarithmic relative spectrum is
+$(2,0,-2)$, independently of $s$. One can see this from the
+exterior minors: after including the norm weights the minimum
+valuations of the entries and of the two-by-two minors are
+both $-2$, while the determinant valuation is zero. Unit
+extremal minors attain these minima; positive-valuation
+entries cannot decrease them.
+
+For an explicit three-norm invariant, use the standard volume
+form and let $L_i=\{v:h_i(v)\le1\}$. Define
+\[
+ D_{111}(h_1,h_2,h_3)
+   =-\min\{\nu\det(v_1,v_2,v_3):v_i\in L_i\}.
+\]
+Each lattice has the finite orthonormal generators
+$T^{-2}b^{(i)}_1,T^{-1}b^{(i)}_2,b^{(i)}_3$.
+Multilinearity and the ultrametric inequality reduce the
+minimum to the finitely many choices of one generator from
+each lattice. Choosing the first generator in each gives
+valuation $-6+s$, because the unscaled determinant is
+$\pm b$. Every other choice has weight sum at least $-5$
+and an integral determinant. Since $s<1$, the minimum is
+$-6+s$, and therefore
+\begin{equation}\label{eq:tripleinvariant}
+ D_{111}=6-s.
+\end{equation}
+Thus the pairwise spectra discard information retained by
+the full norm triple. The general theorem applies to every
+member of this valued family. We do not identify its support
+with the diamond above, or with the dual of a numerical hive
+built from determinant invariants.
+
+
+\subsection{Reproducibility}
+The accompanying source includes the script
+\texttt{check\_examples.py}. It enumerates the nonzero exterior minors of the valued family
+and verifies their affine valuation inequalities on the whole
+interval $0<s<1$. It also computes the triple determinant
+minimum and the rational coordinates, incidence relations and
+area of the normalized diamond. Figure~\ref{fig:diamondcollapse}
+is drawn directly from those coordinates in the accompanying
+TikZ source. The analytic convergence and continuity arguments
+are the proofs above and do not depend on quadrature.

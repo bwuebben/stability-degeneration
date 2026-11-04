@@ -1,0 +1,469 @@
+\section{Vertex filtrations and uniqueness}\label{sec:matchinguniqueness}
+
+We first construct the local residue data at the vertices. We then prove
+a converse: a finite regular harmonic path satisfying first-order matching
+is the variational minimum. Both arguments use the full norm motion,
+rather than only its unordered velocity spectrum.
+
+\subsection{The residue representation at a vertex}
+
+\begin{proposition}\label{prop:vertexfiltrations}
+Let $y$ be a finite regular harmonic path satisfying
+\eqref{eq:matching}. At every support vertex it determines an
+actual reduced $A_2$ representation with two increasing-phase
+filtrations. Their quotients are the incident incoming and
+outgoing edge objects, with their actual arrows. These
+identifications extend along edges and remove artificial
+subdivisions. Changes of apartment bases give isomorphic data.
+\end{proposition}
+
+\begin{proof}
+Fix a subdivision time $u_0$, put $s=u-u_0$, and choose
+$y_v(u_0)$-orthonormal reference bases at the two vertices.
+Normalize the left and right apartment frames in the same way.
+Every transition matrix $P$ lies in $\GL_n(\OO)$, with
+invertible reduction $\overline P\in\GL_n(\CC)$.
+The matrix $\overline P^{-1}P$ is $I+N$, where all nonzero
+entries of $N$ have positive valuation. For the finitely many
+matrices and inverses choose a common positive lower bound
+$\delta$ for those valuations. As in
+Lemma~\ref{lem:taildescent}, replacing $P$ by $\overline P$
+preserves exactly every weighted norm whose weight spread is
+less than $\delta$. Our one-sided weights tend to zero.
+Thus, on a small neighborhood, the two given norm germs are
+exactly norms defined by weighted filtrations of the reference
+residue spaces $V_v=\CC^n$.
+
+Concretely, such a filtration norm is diagonal with real weights
+in a complex basis, extended to the valued space using the
+reference frame. Two finite filtrations admit a simultaneously
+adapted complex basis, obtained by splitting their intersections.
+Their canonical norm geodesic therefore interpolates the weights
+in that basis. Multiplication of all weights by a positive
+number preserves this locus and scales its metric by that number.
+This description concerns the finitely many given germs, not a
+neighborhood of all norms.
+
+Write their first-order expansions as
+\[
+ w_{vi}^+(s)=p_{vi}^+s+O(s^2),\qquad
+ w_{vi}^-(s)=p_{vi}^-s+O(s^2).
+\]
+Scale weights by $1/h$ at $s=-h,h$. The endpoint norms converge
+to coefficient norms $k_v^-,k_v^+$ with weights $-p_{vi}^-$
+and $p_{vi}^+$. Matching and continuity of the midpoint give
+\begin{equation}\label{eq:oppositefirstgerms}
+ \midpt(k_v^-,k_v^+)=1,
+\end{equation}
+where $1$ denotes the norm with zero weights in the reference
+frame. In a simultaneously adapted complex basis, the paired
+weights therefore sum to zero. The two first-derivative lists
+agree with multiplicities, and their filtrations are opposite.
+In particular, if
+\[
+ \begin{aligned}
+ F_v^+(\le p)&=\Span\{\hbox{positive-side first weights }\le p\},\\
+ F_v^-(\ge p)&=\Span\{\hbox{negative-side first weights }\ge p\},
+ \end{aligned}
+\]
+then their intersections give the canonical decomposition
+\begin{equation}\label{eq:vertexdecomposition}
+ V_v=\bigoplus_p V_{v,p},\qquad
+ V_{v,p}=F_v^+(\le p)\cap F_v^-(\ge p).
+\end{equation}
+Here the first flag is the sum of blocks of index at most $p$,
+and the second is the sum of blocks of index at least $p$.
+
+Let $f_0:V_C\to V_A$ be the reduction of the original arrow
+in the reference frames. For $s>0$, nonexpansiveness forces
+$f_0$ to preserve the increasing flag $F^+$; for $s<0$ it
+forces preservation of the decreasing flag $F^-$.
+Indeed a nonzero reduced entry must satisfy $p_A\le p_C$
+on the positive side and $p_A\ge p_C$ on the negative side.
+Hence $f_0$ preserves every summand in
+\eqref{eq:vertexdecomposition}. The object
+\begin{equation}\label{eq:actualvertexobject}
+ E_p=(V_{C,p}\xrightarrow{f_0}V_{A,p})
+\end{equation}
+is an actual subrepresentation of the reduction. Its support
+position is $(x_0,t_0)=(R(u_0)\tan p,\sinh u_0)$.
+
+Fix this $p$ and one side of the vertex. Its finer apartment
+frame induces a frame of the $p$-graded quotient, identified
+with $E_p$ by \eqref{eq:vertexdecomposition}. A branch of
+slope $\alpha\in\{-a,0,a\}$ through $(x_0,t_0)$ has
+\[
+ w_\alpha'(u)
+ =\arctan\frac{x_0+\alpha(\sinh u-\sinh u_0)}{R(u)}.
+\]
+Its second derivative at the vertex is
+\begin{equation}\label{eq:secondvertexweights}
+ r_\alpha=(\alpha-\tanh u_0\tan p)\cos^2p.
+\end{equation}
+This increases strictly with $\alpha$, so its order is $A,B,C$
+on both sides of the vertex. The relevant expansions are
+$ps+r_\alpha s^2/2+O(s^3)$; the square has the same sign on
+both sides.
+
+Inside this $p$ block, a nonzero reduced arrow entry must obey
+$r_{\mathrm{target}}\le r_{\mathrm{source}}$, or its norm
+inequality would fail for every small nonzero $s$ on that side.
+Therefore the spans of blocks with $r\le r_\alpha$ form a
+filtration by subrepresentations of $E_p$. Its successive
+quotients have the actual arrow reductions of the incident edges.
+To see the latter assertion, coordinates with the same $p$ and
+$\alpha$ have exactly the same derivative function and, after
+normalization at $u_0$, the same weight function. Entries inside
+that block retain their reduction. Allowed entries between
+distinct second weights are strictly contracting off the vertex;
+entries with positive initial valuation remain strictly
+contracting on a sufficiently small neighborhood. The same
+observation handles distinct first weights. Thus each graded
+quotient is the actual semistable edge object, not merely an
+object with the same dimension vector. Omitting zero factors
+gives increasing phases $1/6,1/2,5/6$.
+
+Doing this on the two sides gives two filtrations of the same
+$E_p$. On each open piece the normalized residue arrow is
+constant, giving identifications along an edge. At an artificial
+subdivision with one continuing branch, each filtration has
+just the one factor $E_p$, identifying the adjacent labels.
+Coincident branches are treated with their combined multiplicity.
+Finally, the first flags are intrinsic one-sided norm germs;
+the second flags are their graded limits after subtracting $ps$
+and scaling weights by $2/s^2$. The intersection decomposition
+and these limits show independence of presentation, up to
+isomorphism of the objects, filtrations and edge identifications.
+\end{proof}
+
+These are the local residue-category data described in
+\cite[\S4.4]{HKS24}. The proposition does not identify them with a
+specified global Novikov-field Fukaya object or a Maurer--Cartan
+solution. Its input is the norm matching condition; it does not
+prove that abstract vertex filtrations imply that condition.
+
+\subsection{Local variational comparison on open pieces}
+
+\begin{lemma}\label{lem:openpiececonverse}
+A finite regular harmonic path is locally the exact-endpoint
+relaxed minimum away from finitely many times on each compact
+interval. First-order matching is not needed for this assertion.
+\end{lemma}
+
+\begin{proof}
+Its straight branches make the one-sided weight functions
+analytic beyond their finite endpoints. Apply the analytic
+common-basis assertion of Lemma~\ref{lem:finitecommonbases}
+to the two vertex norms on each piece. Refine further at the
+zeros of the analytic coordinate gaps $g_i=w_{Ci}-w_{Ai}$.
+Each gap on a remaining open piece is either identically zero
+or strictly positive. Both vertices now use the same ambient
+basis. Put $P_{vi}=R\tan w_{vi}'$.
+
+A zero gap gives a reduced identity arrow on that coordinate.
+Its semistable block must have type $B$, so
+\[
+ w_{Ai}=w_{Ci},\quad P_{Ai}=P_{Ci},\quad
+ P_{Ai}'=P_{Ci}'=0.
+\]
+At a positive gap the reduced source and target are $C$ and
+$A$ summands. Semistability of their full velocity blocks
+therefore forces
+\[
+ P_{Ai}'=-aR,\qquad P_{Ci}'=aR.
+\]
+These statements use the actual coordinate arrows in the
+common basis.
+
+On a compact subinterval $[l,r]$ of this piece, first compare
+with an ordered curve $z$ in the same apartment and with the
+same endpoints. Write $\delta_{vi}=z_{vi}-w_{vi}$.
+The Bregman identity and integration by parts give
+\begin{equation}\label{eq:scalarcalibration}
+ \begin{split}
+ E(z)-E(y)={}&\frac12\sum_{v,i}[P_{vi}\delta_{vi}]_l^r
+   +\frac12\int_l^r R\sum_{v,i}D_\ell(z_{vi}';w_{vi}')\,\dd u\\
+ &+q\sum_{i:g_i\equiv0}\int_l^r R(z_{Ci}-z_{Ai})\,\dd u.
+ \end{split}
+\end{equation}
+There is no basis-volume offset in the gap because both
+vertices use the same frame. On positive-gap coordinates the
+momentum derivatives cancel the potential; on zero-gap
+coordinates they leave the last displayed term.
+The endpoint term vanishes, and the other terms are nonnegative.
+This proves the comparison for finite action; the infinite
+case is immediate. A strict margin is needed only for the
+reference curve in the linear term.
+
+For an arbitrary ordered comparison polygon, project its nodes
+onto this common apartment at both vertices by the line-sign
+projection. It preserves order, endpoints and determinant gap,
+and decreases the spectral kinetic action. Apply
+\eqref{eq:scalarcalibration} to the resulting polygon.
+Passing to all-norm recovery sequences and using regular-curve
+recovery proves that $y$ is the local relaxed minimum.
+\end{proof}
+
+\subsection{The sign of the boundary terms}
+We record the needed CAT(0) fact with its normalization. For an
+apartment ray $\gamma(s)$ from $o$ with logarithmic velocity
+$d=(d_i)$, put $D=\norm d_2$. Its speed-scaled Busemann function is
+\[
+ B_\gamma(k)=D\lim_{s\to\infty}
+                    \bigl(d_2(k,\gamma(s))-sD\bigr).
+\]
+For $D=0$ set this function to zero. The limit exists by the
+triangle inequality and is finite. If $k$ belongs to the same
+apartment, with weight difference $\delta$ from $o$, the
+Euclidean distance formula gives
+\begin{equation}\label{eq:apartmentbusemann}
+ B_\gamma(k)=-\sum_i d_i\delta_i.
+\end{equation}
+
+\begin{lemma}\label{lem:oppositebusemann}
+Suppose two apartment rays $\gamma_-,\gamma_+$ from $o$ have
+opposite weighted germs and the same speed $D$. Then
+\begin{equation}\label{eq:busemannsum}
+ B_{\gamma_-}(k)+B_{\gamma_+}(k)\ge0
+\end{equation}
+for every norm $k$. At a matched join of a finite regular path,
+the outward momentum germs $-R(u_0)\tan p^-$ and
+$R(u_0)\tan p^+$ satisfy this hypothesis, including repeated
+velocities and the scalar determinant direction.
+\end{lemma}
+
+\begin{proof}
+Opposite germs form a local geodesic through $o$. The
+concatenation of the two rays is a local geodesic everywhere,
+and hence a geodesic line in the CAT(0) norm space.
+Thus $d_2(\gamma_-(s),\gamma_+(s))=2sD$.
+The triangle inequality through $k$, followed by the defining
+limit, proves \eqref{eq:busemannsum}.
+
+For the final assertion, the proof of
+Proposition~\ref{prop:vertexfiltrations} identifies opposite
+first-derivative flags in one common residue frame.
+The odd strictly increasing function $p\mapsto R(u_0)\tan p$
+preserves their order, repetitions and opposite weights.
+Their momentum rays therefore have opposite germs and equal
+Euclidean speed. The finite residue-matrix argument used there
+makes this an exact local geodesic assertion for the given
+apartment rays. No strict Weyl chamber or trace-free
+normalization is required.
+\end{proof}
+
+\subsection{The converse across all joins}
+
+\begin{theorem}\label{thm:finiteintervalconverse}
+A finite regular harmonic path satisfying first-order matching
+is the unique exact-endpoint relaxed minimum on every compact
+interval. Competitors may change apartments and may take values
+in the complete all-norm space.
+\end{theorem}
+
+\begin{proof}
+Let $y$ be the path on $[a,b]$. First let $z$ be an ordered split
+polygon of finite action with the same full endpoints.
+Refine the pieces of $y$ and $z$ at the finitely many exceptions
+in Lemma~\ref{lem:openpiececonverse}. At each vertex separately,
+apply the analytic common-basis lemma to $y_v$ and $z_v$ on
+every closed piece. The weights of $y$ are analytic past the
+endpoints, and those of $z$ are affine in its original frame.
+A further finite subdivision therefore gives common fixed bases
+for $y_v,z_v$, valid at the endpoints as well as in the interior.
+The two quiver vertices need not use the same basis.
+
+Write their weights in these bases as $w_{vi},z_{vi}$ and set
+\[
+ \delta_{vi}=z_{vi}-w_{vi},\qquad P_{vi}=R\tan w_{vi}'.
+\]
+For $0\le s\le1$, canonical pointwise interpolation $y_s$
+between $y$ and $z$ has weights $w_{vi}+s\delta_{vi}$ in
+these bases. It is ordered by convexity of the norm order.
+It is a finite regular comparison curve, with
+\[
+ E(y_s)\le(1-s)E(y)+sE(z).
+\]
+The finitely many compact velocity margins justify
+differentiating at $s=0$:
+\begin{equation}\label{eq:globalfirstvariation}
+ \left.\frac{\dd}{\dd s}\right|_{0+}E(y_s)
+ =\int_a^b L(u)\,\dd u,\qquad
+ L=\frac12\sum_{v,i}P_{vi}\delta_{vi}'
+                   +qR\sum_i(\delta_{Ci}-\delta_{Ai}).
+\end{equation}
+
+On an open cell $I$ put $H=\frac12\sum_{v,i}P_{vi}\delta_{vi}$.
+Take a nonnegative smooth $\phi$ compactly supported in $I$,
+and replace the constant interpolation parameter by
+$\varepsilon\phi(u)$. For small $\varepsilon\ge0$ this stays
+in $[0,1]$, preserves order, and has a strict velocity margin.
+It equals $y$ outside a compact subset of $I$. Local minimality
+from Lemma~\ref{lem:openpiececonverse} gives
+\[
+ 0\le\int_I(\phi L+\phi'H)\,\dd u
+       =\int_I\phi(L-H')\,\dd u.
+\]
+The integrand is continuous, so $L-H'\ge0$ on the cell.
+This uses an admissible variation of the pair and does not
+require the velocity orders at the two vertices to agree.
+
+At an interior subdivision time $u_0$, let
+$o_v=y_v(u_0)$ and $k_v=z_v(u_0)$. In the two respective
+common endpoint apartments choose rays from $o_v$ with outward
+momentum velocities
+\[
+ -P_v(u_0-),\qquad P_v(u_0+).
+\]
+They have opposite germs by Lemma~\ref{lem:oppositebusemann},
+also at artificial refinements inside an original piece.
+Both $o_v$ and $k_v$ belong to each corresponding apartment.
+Formula~\eqref{eq:apartmentbusemann} consequently gives the exact
+identities
+\[
+ B_{v,-}(k_v)=\sum_iP_{vi}(u_0-)\delta_{vi}(u_0-),\qquad
+ B_{v,+}(k_v)=-\sum_iP_{vi}(u_0+)\delta_{vi}(u_0+).
+\]
+The left and right bases can differ. The Busemann inequality,
+not equality of the coordinate expressions, gives
+\begin{equation}\label{eq:joinboundarysign}
+ H(u_0-)-H(u_0+)
+   =\frac12\sum_v\{B_{v,-}(k_v)+B_{v,+}(k_v)\}\ge0.
+\end{equation}
+
+Integrate $L\ge H'$ over every cell and sum. The outer boundary
+terms vanish by equality of the full endpoint norms, and
+\eqref{eq:joinboundarysign} makes all internal contributions
+nonnegative. Thus $\int_a^bL\ge0$. Convexity in $s$ and
+\eqref{eq:globalfirstvariation} imply
+\[
+ E(z)-E(y)\ge
+ \left.\frac{\dd}{\dd s}\right|_{0+}E(y_s)\ge0.
+\]
+This proves comparison with every split polygon.
+
+For a finite-action polygon with arbitrary all-norm nodes,
+replace it by the minimum on its fixed partition. Its endpoints
+are the split norms of $y$, so
+Proposition~\ref{prop:finitepartition} supplies a split polygon
+of no larger action with those exact endpoints. The preceding
+comparison applies. This replacement need not be close to the
+original polygon; only its action and endpoints are used.
+Every polygon in an exact-endpoint recovery sequence therefore
+has action at least $E(y)$. Regular-curve recovery shows that
+$y$ attains the relaxed infimum. Strict midpoint stability
+then gives uniqueness in the complete relaxed domain.
+\end{proof}
+
+\begin{theorem}\label{thm:wholelineconverse}
+Every finite regular harmonic path with first-order matching and
+the normalized ends \eqref{eq:normalizedends} equals $c_*$ as
+an actual full norm path.
+\end{theorem}
+
+\begin{proof}
+Let $y$ be such a path. Its finite apartment partition gives
+one fixed apartment at each vertex on each distant tail.
+A coordinate branch there has
+\begin{equation}\label{eq:candidatetailvelocity}
+ w'(u)=\arctan(\alpha\tanh u+b\sech u),
+ \qquad \alpha\in\{-a,0,a\}.
+\end{equation}
+At the negative end the coordinate weights have finite limits.
+If $\alpha\ne0$, the derivative would tend to the nonzero
+constant $\arctan(-\alpha)$, contradicting those limits.
+Thus all incoming branches have $\alpha=0$ and type $B$.
+The reduced arrow has invertible graded blocks, hence is
+itself invertible. For two ordered split norms, invertibility
+of the reduced identity arrow means that all relative gaps
+vanish. Consequently $y_A=y_C$ on this tail.
+Equation~\eqref{eq:candidatetailvelocity} and the full incoming
+limit give
+\[
+ d_2(y_v(u),h_B)=O(e^u),\qquad w_{vi}'(u)=O(e^u).
+\]
+One common apartment can be used for the equal pair.
+
+On the positive tail, $w_{vi}-\epsilon_vF$ has a finite limit.
+Its derivative tends to $\arctan\alpha-\epsilon_v\pi/3$,
+so $\alpha=\epsilon_va$. The limiting reference norm belongs
+to the same apartment, by closedness after scalar normalization.
+Integrating the derivative difference gives
+\[
+ d_2(y_v(u),r_v(u))=O(e^{-u}),\qquad
+ w_{vi}'(u)-\epsilon_v\beta(u)=O(e^{-u}).
+\]
+These rates show that the nonnegative differential action
+$J_{\mathrm{diff}}(y)$ is finite and its tails outside
+$[-U,U]$ contribute $O(e^{-U})$.
+
+The exact-reference recovery in the proof of
+Theorem~\ref{thm:finitealgebraicminimum} applies verbatim:
+keep $y$ on $[-U,U]$, bridge to the reference tails over
+intervals of length one, and use the references beyond them.
+The resulting $y_U\in\calQ$ converge uniformly to $y$, and
+$J(y_U)\to J_{\mathrm{diff}}(y)$. In particular $y\in\calY$
+and
+\begin{equation}\label{eq:candidaterecovery}
+ J_*\le\overline J(y)\le J_{\mathrm{diff}}(y).
+\end{equation}
+
+Fix any $z\in\calQ$ and choose $V$ beyond its cutoff and the
+tail cutoffs of $y$. Construct $z_V$ by keeping $z$ on
+$[-V,V]$, using $y$ outside $[-V-1,V+1]$, and bridging
+\[
+ y(-V-1)\longrightarrow(h_B,h_B),\qquad
+ r(V)\longrightarrow y(V+1)
+\]
+on the two intervening unit intervals. These are ordered
+product geodesics in the respective tail apartments.
+The same tail estimates, together with $\beta'=O(e^{-2V})$,
+give
+\begin{equation}\label{eq:competitortailcost}
+ J_{\mathrm{diff}}(z_V)\le J(z)+C_y e^{-V}.
+\end{equation}
+The constant is independent of $z$ once $V$ exceeds its cutoff.
+
+On $[-V-1,V+1]$ the two curves $y,z_V$ have exactly the same
+endpoint norms. Theorem~\ref{thm:finiteintervalconverse},
+with regular-curve recovery for $z_V$, gives
+$E(y)\le E(z_V)$ on this compact interval. Convert this
+comparison to truncated $J$ using
+\eqref{eq:renormalization}; the endpoint determinant gaps
+agree, so their finite corrections cancel. Outside the
+interval the two curves are identical. Adding their finite
+common tails yields
+\[
+ J_{\mathrm{diff}}(y)\le J_{\mathrm{diff}}(z_V)
+                      \le J(z)+C_y e^{-V}.
+\]
+Let $V\to\infty$ and take the infimum over $z\in\calQ$.
+Together with \eqref{eq:candidaterecovery}, this proves
+$\overline J(y)=J_{\mathrm{diff}}(y)=J_*$.
+Uniqueness of the whole-line relaxed minimum gives $y=c_*$.
+The argument compares finite renormalized quantities and never
+subtracts divergent whole-line unrenormalized actions.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Theorem~\ref{thm:finitealgebraicminimum} constructs the finite
+regular harmonic path, with its full normalized ends and
+quadratic midpoint estimate. Proposition~\ref{prop:finitesupport}
+gives its balanced support and vertex bound;
+Proposition~\ref{prop:vertexfiltrations} supplies the actual
+vertex objects, filtrations and edge identifications.
+The tail statements are
+Propositions~\ref{prop:outgoingtail} and~\ref{prop:incomingtail}.
+Theorem~\ref{thm:wholelineconverse} proves uniqueness in the
+stated class. Analytic weights follow from
+Proposition~\ref{prop:finitehahnregularity} and the finite
+transfer, which preserves the weight functions.
+
+Finally, simultaneous $\GL_n(K)$ pullback preserves order,
+relative spectra, determinant gaps, the reference curves and
+the relaxed action. It carries $\calQ$ and $\calY$ for one
+triple onto those for the transformed triple. Uniqueness
+therefore makes the constructed path equivariant. This is
+equivariance of full norms with their given framing, without
+passing to a quotient by change of basis.
+\end{proof}

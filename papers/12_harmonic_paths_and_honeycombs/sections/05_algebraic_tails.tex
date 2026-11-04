@@ -1,0 +1,404 @@
+\section{Algebraic tails and full incoming contact}\label{sec:tails}
+
+In this section we prove that the two ends of the minimum have fixed
+apartments and the required algebraic labels. We work over $L$ when
+choosing bases for norms whose splitness is not yet known. The scalar
+extension result identifies every conclusion about the resulting norms
+with a conclusion about the original minimum over $K$.
+
+\subsection{The outgoing tail}
+
+\begin{proposition}\label{prop:outgoingtail}
+For all sufficiently large $u$, each vertex norm of $c_*$ lies in one
+fixed $K$-apartment. In its fixed basis its logarithmic weights satisfy
+\begin{equation}\label{eq:outgoingequation}
+ R(u)\tan w_{vi}'(u)=\epsilon_v a\sinh u+p_{vi},
+ \qquad \epsilon_A=-1,\quad\epsilon_C=1.
+\end{equation}
+The identity arrow is strictly contracting. The associated positions are
+$x_{vi}(t)=\epsilon_v at+p_{vi}$, and their labels are pure sums of $A$
+or $C$. The full normalized norm at each vertex converges to its
+prescribed limit at rate $O(e^{-u})$.
+\end{proposition}
+
+\begin{proof}
+Fix $J_0>J_*$. The tail estimate in the proof of
+Theorem~\ref{thm:relaxedminimum} bounds the distance of every member
+$p$ of a minimizing sequence with $J(p)\le J_0$ from the outgoing
+reference norms by
+\[
+ d_\infty(p_v(u),r_v(u))\le\eta(u),\qquad
+ \eta(u)=2\left(J_0\int_u^\infty\sech s\,\dd s\right)^{1/2}.
+\]
+The same holds for $c_*$. Choose $M$ with $h_A^+\le e^M h_C^+$,
+and choose $U$ so large that $2F(U)>M+2\eta(U)+1$.
+Any pair in these two tubes, at any $u\ge U$, satisfies
+\begin{equation}\label{eq:tailordertube}
+ h_A\le e^{M+2\eta(u)-2F(u)}h_C\le e^{-1}h_C.
+\end{equation}
+
+Over $L$, choose separately at each vertex a common basis for
+$(c_*)_v(U)$ and $h_v^+$. Let $\mathcal A_v$ be its apartment and
+$P_v$ the projection of Lemma~\ref{lem:blockprojection}. It fixes
+both these norms and the entire reference curve $r_v$.
+Choose a global polygonal minimizing sequence $p_m$, with cutoffs
+$U_m\to\infty$, whose velocities have a common strict margin on
+$[U,U+1]$. Project its nodes on $[U,U_m]$ by $P_v$, and interpolate
+on the same partition. Each projected node stays in its reference
+tube, so \eqref{eq:tailordertube} makes the projected pairs ordered.
+Their interpolants are ordered as well. Although the two projections
+can differ, the tube estimate supplies the order required here.
+They preserve both determinant logarithms, hence all endpoint
+corrections in the renormalized action.
+
+Let $D_m\ge0$ be the decrease in $E_{[U,U_m]}$ under this node
+projection. The original norm at $U$ need not be fixed by $P_v$.
+Its distance $\delta_m$ from the respective apartments tends to
+zero. Choose $\tau_m\downarrow0$ with $\delta_m/\tau_m\to0$,
+refine at $U+\tau_m$, and bridge from the original pair $p_m(U)$
+to the projected pair at $U+\tau_m$. The bridge has velocities
+bounded by $b+\delta_m/\tau_m$ for a fixed $b<\pi/2$.
+It is ordered, fixes the original initial endpoint, and costs
+$O(\tau_m)$ more than the projected short interval. Leave the
+curve unchanged before $U$. This gives a member of $\calQ_L$ with
+\[
+ J_*\le J(\widetilde p_m)\le J(p_m)-D_m+O(\tau_m).
+\]
+Thus $D_m\to0$.
+
+Write $a_{vj}=d_2(p_{m,v}(u_j),\mathcal A_v)$. The departure
+estimate of Lemma~\ref{lem:projectionloss} gives
+\[
+ D_m\ge\frac18\sum_{v,j}\frac{W_j}{\Delta_j^2}
+                       (a_{v,j+1}-a_{vj})^2.
+\]
+The departure at the final cutoff is zero. Weighted
+Cauchy--Schwarz, summed backwards from that endpoint, therefore gives
+\[
+ \sup_{u\ge U,v}d_2(p_{m,v}(u),\mathcal A_v)^2
+ \le8\pi D_m,
+\]
+since $\sum\Delta_j^2/W_j\le\int_U^\infty\sech u\,\dd u\le\pi$.
+Convexity of distance to an apartment extends the node bound to the
+segments. Closedness and uniform convergence imply that $(c_*)_v$
+lies in $\mathcal A_v$ on the whole tail.
+
+Its apartment weights are locally $C^{1,1}$. Indeed, in a fixed
+apartment the quadratic chord estimate is the Euclidean estimate
+for the unsorted weight coordinates. The dyadic argument of
+Proposition~\ref{prop:spectralvelocities}, applied to their coordinate
+increments, gives equal forward and backward derivatives and a
+locally Lipschitz derivative. The strict local velocity margin
+persists. Thus both the weights and their smooth compactly
+supported variations are covered by Lemma~\ref{lem:regularaction}. The strict order
+\eqref{eq:tailordertube} allows either sign of a small compactly
+supported variation of each individual weight. Local minimality
+gives, distributionally,
+\[
+ (R\tan w_{vi}')'=\epsilon_v aR.
+\]
+Integration proves \eqref{eq:outgoingequation}. Its right side makes
+the weights smooth. If $b_{vi}$ is the logarithmic weight of $h_v^+$
+in this basis, the full end limit and the elementary bound
+$|\arctan(x+y)-\arctan x|\le |y|$ give
+\begin{equation}\label{eq:outgoingrate}
+ |w_{vi}(u)-\epsilon_vF(u)-b_{vi}|
+ \le |p_{vi}|\int_u^\infty\sech s\,\dd s
+ \le2|p_{vi}|e^{-u}.
+\end{equation}
+The reduction of the strictly contracting arrow is zero. The
+straight branches consequently have pure $A$ or $C$ labels,
+subdivided at their finitely many intersections.
+
+It remains to descend the fixed apartments. The next lemma applies
+to $e^{-\epsilon_vF(u)}(c_*)_v(u)$, whose limit is the split
+$K$-norm $h_v^+$. It gives a fixed $K$-basis on a shorter tail.
+Canonical extension then identifies its restriction with the
+original $K$-minimum. Weights differ only by fixed offsets, so their
+equations, labels and convergence rates are unchanged.
+\end{proof}
+
+\begin{lemma}\label{lem:taildescent}
+Let $h$ be a split $K$-norm. Suppose an $L$-norm curve $k(s)$ lies
+in one fixed apartment and converges to the extension of $h$ as
+$s\to\infty$. On a sufficiently late tail, $k$ is diagonal in one
+fixed $K$-basis.
+\end{lemma}
+
+\begin{proof}
+The limiting norm is diagonal in the same $L$-basis. Rescale its
+vectors by real powers of $T$ to make that basis orthonormal for
+$h$. Its weights $z_i(s)$ for $k(s)$ then tend to zero. Choose an
+orthonormal $K$-basis $f$ for $h$. The change-of-basis matrix
+$P$ lies in $\mathrm{GL}_n(\mathcal O_L)$. Its residue is an
+invertible complex matrix; let $P_0$ be its constant lift. Write
+$P_0^{-1}P=I+Q$. There are only finitely many entries, so all nonzero
+entries of $Q$ have valuation at least some $\delta>0$.
+The inverse has the same property, by the adjugate formula modulo
+the ideal of elements of valuation at least $\delta$.
+
+For large $s$, the weight spread $\max z_i(s)-\min z_i(s)$ is
+less than $\delta$. Both $I+Q$ and its inverse are then
+nonexpansive for the weighted maximum norm: every off-diagonal
+weighted entry has negative logarithm, and the diagonal entries
+are units. Thus replacing $P$ by $P_0$ preserves that norm exactly.
+The basis $fP_0$ is the required fixed $K$-basis. This uses the
+fixed original apartment and the split limit; convergence alone
+would not give the conclusion.
+\end{proof}
+
+\subsection{The equation on a free interval}
+The same scalar equation holds on every interval where the norm
+order is uniformly strict, without any assumption about its
+location relative to the ends.
+
+\begin{proposition}\label{prop:freeinterval}
+Suppose $I=[l,r]$ satisfies $(c_*)_A\le e^{-\kappa}(c_*)_C$
+for some $\kappa>0$. Over $L$, choose at each vertex any common
+basis for the two endpoint norms. The minimum on $I$ lies in
+these fixed apartments and satisfies \eqref{eq:outgoingequation}
+for suitable constants $p_{vi}$.
+\end{proposition}
+
+\begin{proof}
+Let $a_{vi},b_{vi}$ be the endpoint weights. There is a unique
+$p_{vi}\in\RR$ such that
+\[
+ \int_l^r\arctan(\epsilon_v a\tanh u+p_{vi}\sech u)\,\dd u
+       =b_{vi}-a_{vi}.
+\]
+Indeed the left side is strictly increasing with limits
+$\pm\pi|I|/2$, and the strict local margin puts the right side
+between them. Integrate these velocities from $a_{vi}$ to obtain
+a smooth candidate $z$; initially it need not be ordered.
+
+Project any ordered comparison polygon separately onto the two
+endpoint apartments. Its kinetic cost decreases and its determinant
+potential is unchanged. In those apartments, the supporting
+inequality for $\ell$, integrated using
+$(R\tan w_{vi}')'=\epsilon_v aR$, proves that its action is at
+least the differential action $E(z)$. The fixed basis-volume
+constants in the determinant logarithms cancel. This comparison
+does not require the projected pair or $z$ to be ordered.
+It proves $E_I^*\ge E(z)$.
+
+Take exact-endpoint ordered polygonal almost-minima $p_m\to c_*|I$
+and sample $z$ on their refining partitions, obtaining $z_m$.
+For large $m$, $p_{m,A}\le e^{-\kappa/2}p_{m,C}$, whereas
+$z_{m,A}\le e^M z_{m,C}$ for some finite common $M\ge0$.
+Choose $0<\theta<1$ with
+$-(1-\theta)\kappa/2+\theta M\le0$. Interpolate the two
+polygons' nodes by $\theta$, then join those nodes geodesically.
+The resulting polygon $r_m$ is ordered, has the original endpoints,
+and satisfies
+\[
+ E_I^*\le E(r_m)\le(1-\theta)E(p_m)+\theta E(z_m).
+\]
+Taking limits proves $E(z)=E_I^*$ and $E(r_m)\to E_I^*$.
+Local stability makes $r_m\to c_*|I$. Its nodewise limit is
+$[c_*(u),z(u)]_\theta$, where brackets denote canonical geodesic
+interpolation. Refining meshes identify the same limit between
+nodes. Thus $c_*=[c_*,z]_\theta$, which forces $c_*=z$.
+\end{proof}
+
+\subsection{Small incoming speeds}
+We need equality of the two incoming norms at a finite time.
+Contact of only the smallest relative gap would not suffice.
+
+\begin{lemma}\label{lem:smallincoming}
+For $s\to-\infty$, the minimum and a global minimizing sequence
+can be chosen to have spectral metric speeds bounded by
+$O(\cosh(s)^{-1/4})$ on $I_s=[s-1,s+1]$.
+For the sequence this is a bound on every segment velocity.
+\end{lemma}
+
+\begin{proof}
+Refine the time-allocation estimate using a positive weight $\rho$
+on an interval of length $H$, with
+$0<m\le\rho\le M$ and $|\rho'|\le S$. If the action is at most
+$E_0$, the optimized allocation satisfies
+\[
+ \sum_j\Delta_jL_j\le\frac{2E_0}{m},\qquad
+ \sum_j\Delta_j\sum_i v_{ji}^2\le\frac{4E_0}{m}.
+\]
+Consequently
+\[
+ \sum_j\Delta_j|\kappa_j|\le\sqrt{8nHE_0/m}.
+\]
+In \eqref{eq:timeallocationidentity}, the two potential endpoint
+weights of each segment sum to its integrated weight. Summing the
+kinetic and potential errors therefore gives the improved estimate
+\[
+ \sum_j|Q_j-Q_{j-1}|
+ \le\frac{2SE_0}{m}+qM\sqrt{8nHE_0/m}.
+\]
+Some segment has $L_j\le B=2E_0/(mH)$. Put
+$b_0=\arccos(e^{-B})$ and
+\[
+ A(E_0)=Mn b_0\tan b_0+\frac{2SE_0}{m}
+                         +qM\sqrt{8nHE_0/m}.
+\]
+Every segment then has $Q_j\le A(E_0)$. Since
+$f(v)=v\tan v-\ell(v)\ge v^2/2$,
+\[
+ |v_{ji}|\le2\sqrt{A(E_0)/m}=O(E_0^{1/4}).
+\]
+The inverse of $f$ also retains a strict $\pi/2$ margin when
+$E_0$ is not small. None of these bounds depends on the number of
+nodes.
+
+Fix a global minimizing sequence with $J\le J_0$. On $I_s$,
+$s\le-2$, normalize the weight to $\rho_s(u)=R(u)/R(s)$.
+Then $e^{-1}\le\rho_s\le e$, $|\rho_s'|\le e$, and
+$H=2$. Nonnegativity of the negative-half integrand bounds its
+normalized action by $E_0=J_0/R(s)$. Reallocate time on $I_s$,
+keeping the endpoints and the exterior fixed. The global action
+decreases, so the sequence still converges uniformly to $c_*$.
+The preceding bound applies to the sequence and passes to the
+limit.
+\end{proof}
+
+\begin{proposition}\label{prop:fullcontact}
+There is a finite time $U$ at which $(c_*)_A(U)=(c_*)_C(U)$.
+\end{proposition}
+
+\begin{proof}
+Take $I_s=[s-1,s+1]$ on the negative half-line, and let
+$\eta(u)=1-|u-s|$ there, extended by zero outside. Choose a
+polygonal minimizing sequence whose velocities on $I_s$ are
+bounded by $b_s=O(R(s)^{-1/4})$. For any such polygon $p$, apply
+the time-dependent operation
+\[
+ \widetilde p(u)=S_{\varepsilon\eta(u)}(p_A(u),p_C(u)),
+\]
+where $S$ is the balanced operation in \eqref{eq:shrinkandcap}.
+This variation has the original full endpoints and reference tails.
+Lemma~\ref{lem:finitecommonbases} gives a finite common-basis
+subdivision of every original segment. Refine at $s$ and at all
+crossings of the affine gaps $g_i=c_i-a_i$ with
+$\varepsilon\eta$. On each remaining piece the new weights are
+\[
+ (a_i+\varepsilon\eta/2,c_i-\varepsilon\eta/2)
+       \quad\hbox{if }g_i>\varepsilon\eta,
+ \qquad
+ ((a_i+c_i)/2,(a_i+c_i)/2)
+       \quad\hbox{if }g_i<\varepsilon\eta.
+\]
+They agree on equality intervals. Thus the new curve is a finite
+piecewise-apartment member of $\calQ$, remains ordered, and has
+velocities at most $b_s+\varepsilon/2<\pi/2$ for small
+$\varepsilon$.
+
+Write $b=b_s$ and choose $b<b'<\pi/2$. Taylor's inequality,
+with $L_\ell=\sec^2 b'$, bounds the kinetic increase for each
+unclipped pair by
+\[
+ \frac{\varepsilon}{2}\tan b\,|\eta'|
+       +\frac{L_\ell\varepsilon^2}{8}|\eta'|^2.
+\]
+On a clipped pair Jensen's inequality gives no increase. The
+determinant gap drops by $\sum_i\min(g_i,\varepsilon\eta)$.
+If the largest gap is at least $\gamma>\varepsilon$ throughout
+$I_s$, this drop is at least $\varepsilon\eta$. Hence
+\begin{equation}\label{eq:tentdecrease}
+ J(\widetilde p)-J(p)
+ \le-\varepsilon D_s(b)
+       +\frac{nL_\ell\varepsilon^2}{8}\int_{I_s}R|\eta'|^2,
+ \qquad
+ D_s(b)=q\int_{I_s}R\eta-\frac n2\tan b\int_{I_s}R|\eta'|.
+\end{equation}
+The elementary integrals are
+\[
+ \int_{I_s}R\eta=2(\cosh1-1)\cosh s,\qquad
+ \int_{I_s}R|\eta'|=\int_{I_s}R|\eta'|^2=2\sinh1\cosh s.
+\]
+It follows that $D_s(b)>0$ precisely when
+$n\tan b<\sqrt3\tanh(1/2)$. Choose $s$ sufficiently negative
+for this inequality to hold.
+
+If the two norms of $c_*$ were different at every time in $I_s$,
+their continuous largest gap would have a positive minimum
+$\gamma_*$. Uniform convergence gives a largest gap at least
+$\gamma_*/2$ for all sufficiently late polygons. Fix
+$\varepsilon>0$, independent of the polygon, below this bound
+and small enough that the quadratic term in \eqref{eq:tentdecrease}
+is less than $\varepsilon D_s(b)/2$. The transformed sequence
+then lowers $J$ by a fixed positive amount, contradicting its
+convergence to $J_*$. Thus full equality occurs at a finite time.
+\end{proof}
+
+\subsection{The incoming tail}
+
+\begin{proposition}\label{prop:incomingtail}
+The full-contact set is $(-\infty,U_*]$ for some finite $U_*$.
+On a sufficiently negative tail the two norms coincide in one
+fixed $K$-apartment, with weights satisfying
+\begin{equation}\label{eq:incomingequation}
+ R(u)\tan w_i'(u)=p_i.
+\end{equation}
+Their actual common norm converges to $h_B$ at rate $O(e^u)$.
+The positions are horizontal lines $x_i(t)=p_i$, with pure
+semistable $B$ labels.
+\end{proposition}
+
+\begin{proof}
+Suppose full contact holds at $U$. Project a pair to its common
+midpoint, $P_D(h_A,h_C)=(m(h_A,h_C),m(h_A,h_C))$.
+Joint convexity of spectral costs shows that this decreases the
+total kinetic action of node polygons. It is ordered and removes
+the entire nonnegative determinant potential.
+
+Choose a global polygonal minimizing sequence with a common
+strict velocity margin on $[U-1,U]$. Apply $P_D$ to all nodes
+from its negative cutoff to $U$. Its action decrease $D_m$
+satisfies
+\[
+ D_m\ge q\int_{-U_m}^U R(u)g(p_m(u))\,\dd u\ge0.
+\]
+The displacement of the final pair tends to zero. As in the
+outgoing proof, repair the last interval of length $\tau_m$,
+with endpoint displacement $o(\tau_m)$, to the original pair
+$p_m(U)$. The bridge remains ordered and has a strict margin.
+It changes action by $O(\tau_m)$. Keeping the exterior fixed
+and using the truncated renormalization identity gives
+$J_*\le J(p_m)-D_m+O(\tau_m)$, even when $U>0$.
+Thus $D_m\to0$. Uniform convergence on every compact interval
+forces $g(c_*)=0$ at all times before $U$. Ordered norms with
+zero determinant gap are equal, since all their relative gaps
+are nonnegative. Contact therefore propagates to the entire past.
+Nonemptiness follows from Proposition~\ref{prop:fullcontact};
+closedness and strict outgoing order identify its stated form.
+
+Over $L$, choose a common basis for $h_B$ and the common norm
+at $U_*$. Apply its apartment projection at both vertices on
+the negative tail of a minimizing sequence. It preserves order
+and determinant gaps. Repair the last endpoint as above.
+The projection loss tends to zero. Lemma~\ref{lem:projectionloss},
+now summed forwards from zero departure at the negative reference
+endpoint, bounds the squared supremum departure by $8\pi$ times
+that loss. The limiting common norm consequently lies in this
+one apartment on $(-\infty,U_*]$.
+
+As in the outgoing proof, the quadratic chord estimate makes
+the fixed-apartment weights locally $C^{1,1}$. Vary each weight
+equally at both vertices. The pair
+stays equal, its potential is zero, and both signs of the variation
+are admissible. Local minimality and
+Lemma~\ref{lem:regularaction} give
+$(R\tan w_i')'=0$, proving \eqref{eq:incomingequation}.
+The weights are smooth, and the full incoming limit gives
+\[
+ |w_i(u)-\log h_B(e_i)|
+ \le |p_i|\int_{-\infty}^u\sech s\,\dd s
+ \le2|p_i|e^u.
+\]
+Apply Lemma~\ref{lem:taildescent} with time reversed. On a shorter
+tail one fixed $K$-basis works at both vertices. The identity
+arrow is an isometry there, so equal momentum blocks have
+isomorphic reductions and carry precisely the claimed $B$ labels.
+\end{proof}
+
+Both end estimates are $O(|t|^{-1})$ in the original coordinate.
+The unresolved part of the construction is now confined to a
+compact interval. The next section proves that it too has a finite
+algebraic description.

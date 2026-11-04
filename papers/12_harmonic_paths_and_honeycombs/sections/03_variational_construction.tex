@@ -1,0 +1,350 @@
+\section{The renormalized variational problem}\label{sec:variational}
+
+Set $q=a/2$. We first define an exact action on geodesic polygons, then
+relax it in the uniform topology. The construction will not assume that
+a limiting norm is split.
+
+\subsection{Exact polygonal action}
+Let $I=[l,r]$ and fix ordered endpoint pairs. An ordered polygon $c$ is
+a continuous curve in $\Dord$ which is an affinely parametrized product
+geodesic on each interval of a finite partition
+$l=u_0<\cdots<u_N=r$. Its nodes may be arbitrary norms. Write
+\[
+ \Delta_j=u_{j+1}-u_j,\qquad
+ W_j=\int_{u_j}^{u_{j+1}}R(u)\,\dd u,\qquad
+ g(c)=d(c_C)-d(c_A)\ge0.
+\]
+Its action is
+\begin{equation}\label{eq:polygonaction}
+ E_I(c)=\sum_j\left\{
+ \frac{W_j}{2}\sum_{v=A,C}\sum_i
+   \ell\left(\frac{\sigma_i(c_v(u_j),c_v(u_{j+1}))}{\Delta_j}\right)
+ +q\int_{u_j}^{u_{j+1}}R(u)g(c(u))\,\dd u\right\}.
+\end{equation}
+The determinant gap is affine on a geodesic. Its integral on a segment
+is therefore a positive weighted sum of the two endpoint gaps.
+Refining a partition without changing its curve leaves the action
+exactly unchanged: the relative spectra on subsegments scale with
+length and the integrals add.
+
+\begin{proposition}\label{prop:finitepartition}
+On every feasible fixed partition, \eqref{eq:polygonaction} has a unique
+minimum among all ordered nodes with the fixed endpoints. If the endpoints
+are split over $K$, all nodes of this minimum are split over $K$.
+\end{proposition}
+
+\begin{proof}
+The objective is nonnegative, lower semicontinuous and convex by
+Lemma~\ref{lem:spectralconvexity}, and the potential is affine in
+the nodes. Finite cost implies
+\[
+ d_\infty(c_v(u_j),c_v(u_{j+1}))<\tfrac\pi2\Delta_j.
+\]
+The triangle inequality from a fixed endpoint thus bounds every node
+of every finite sublevel set. A proper lower-semicontinuous convex
+function with bounded nonempty sublevel sets on a complete CAT(0)
+space attains its infimum. Here one can see attainment directly:
+project a fixed origin to the nested closed convex sets with objective
+at most the infimum plus $1/m$. The CAT(0) projection inequality gives
+\[
+ d(p_m,p_k)^2\le d(o,p_k)^2-d(o,p_m)^2\qquad(k\ge m).
+\]
+The right-hand side tends to zero, so the projections converge to a
+point in every sublevel set.
+
+For uniqueness, compare two polygons $c,c'$ on the same partition.
+Write $b_{vj}$ for the distance between their $v$-norms at node $j$,
+and interpolate their midpoint nodes to obtain $m$.
+Decompose $\ell(s/\Delta)$ as
+$s^2/(2\Delta^2)$ plus a convex function. Apply
+\eqref{eq:fourpoint} to the quadratic part and spectral convexity to
+the remainder. The potential at the midpoint nodes is affine, giving
+\begin{equation}\label{eq:polygonmidpoint}
+ E_I(m)\le\frac{E_I(c)+E_I(c')}{2}
+   -\frac1{16}\sum_{v,j}\frac{W_j}{\Delta_j^2}
+                         (b_{v,j+1}-b_{vj})^2.
+\end{equation}
+If both curves minimize, every distance difference vanishes. The
+endpoint distances are zero, so every node distance is zero.
+
+If the endpoints are split, apply
+Lemma~\ref{lem:finiterealization} to the finite diagram of time nodes,
+with identity arrows between consecutive nodes and from $C$ to $A$
+at each node. The horizontal spectra preserve the kinetic terms.
+The vertical spectra preserve order and the gap $g$, hence the exact
+potential. The endpoint norms are retained in full. A split tuple
+therefore has the same minimum value, and uniqueness identifies it
+with the minimum already constructed.
+\end{proof}
+
+Let $\mathcal P_I$ be the finite-action polygons with the fixed endpoints,
+and suppose this class is nonempty. Set
+$E_I^*=\inf_{c\in\mathcal P_I}E_I(c)$. On continuous ordered curves
+with these endpoints define
+\begin{equation}\label{eq:localrelaxation}
+ \overline E_I(c)=\inf\left\{\liminf_m E_I(c_m):
+      c_m\in\mathcal P_I,\ c_m\longrightarrow c\text{ uniformly}\right\},
+\end{equation}
+with the value $+\infty$ when there is no such sequence.
+
+\begin{proposition}\label{prop:localrelaxedminimum}
+The functional \eqref{eq:localrelaxation} has a unique minimum $c_I$,
+with value $E_I^*$. Every polygonal minimizing sequence converges
+uniformly to $c_I$. Its vertex curves are $\pi/2$-Lipschitz for
+$d_\infty$ and $\sqrt n\pi/2$-Lipschitz for $d_2$.
+If the endpoints are split, a minimizing sequence can be chosen with
+all its nodes split.
+\end{proposition}
+
+\begin{proof}
+For two finite-action polygons use a common refinement. Since
+$W_j\ge\Delta_j$, \eqref{eq:polygonmidpoint}, the zero endpoint
+distances and Cauchy--Schwarz give
+\begin{equation}\label{eq:localstability}
+ \sup_{u\in I,v}d_2(c_v(u),c'_v(u))^2
+ \le16|I|\left(\frac{E_I(c)+E_I(c')}{2}-E_I^*\right).
+\end{equation}
+The node bound extends to every time by Busemann convexity of the
+geodesics. Thus any minimizing sequence is uniformly Cauchy in the
+complete space of continuous ordered curves. The same inequality
+identifies the limits of any two such sequences. The relaxation
+attains value $E_I^*$ at this limit, and a diagonal sequence in the
+definition of the relaxation proves uniqueness. The barrier bounds
+the speed of every finite-action polygon on each segment; the stated
+Lipschitz constants pass to the limit. For split endpoints, replace
+each polygon by the minimum on its own partition. Its action decreases
+and its nodes are split by Proposition~\ref{prop:finitepartition}.
+\end{proof}
+
+The final replacement in the proof is an energy comparison. It need
+not approximate the original polygon at its interior nodes. It also
+does not imply that the uniform limit is split.
+
+\begin{lemma}\label{lem:regularaction}
+Suppose $c$ has finitely many fixed-apartment pieces on $I$, with
+$C^1$ weights up to their endpoints and all their derivatives in a
+compact subinterval of $(-\pi/2,\pi/2)$. Then
+\begin{equation}\label{eq:differentialaction}
+ \overline E_I(c)=\int_I R(u)
+       \left\{\frac12\sum_{v,i}\ell(w'_{vi}(u))+qg(c(u))\right\}\dd u.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For an arbitrary norm polygon on a subinterval of length $D$,
+\eqref{eq:trianglemajorization} and Jensen's inequality imply
+\begin{equation}\label{eq:endpointkineticlower}
+ D\sum_i\ell\left(\frac{\sigma_i(h(l),h(r))}{D}\right)
+ \le\sum_j\Delta_j\sum_i\ell\left(\frac{\sigma_{ji}}{\Delta_j}\right).
+\end{equation}
+Consider polygons converging uniformly to $c$. For a fixed subdivision
+of $I$, multiply \eqref{eq:endpointkineticlower} on each interval by
+its minimum value of $R$ and sum, with the factor $1/2$ and both
+vertices. Spectral continuity and lower semicontinuity pass this
+endpoint lower bound to the limit. The potential integrals converge
+because determinant logarithms are Lipschitz on the compact interval.
+Refine the subdivision inside the finitely many apartments of $c$.
+Its endpoint spectral quotients are the increments of its weights,
+up to permutation, and converge uniformly to their derivatives on
+each piece. The strict velocity margin gives convergence of the
+lower bounds to the right-hand side of \eqref{eq:differentialaction}.
+This proves the lower inequality. This argument also permits converging,
+rather than identically fixed, endpoints in the approximating sequence.
+
+Conversely, join the sampled values of $c$ on refining subdivisions
+by product geodesics. Within each piece these are the linear
+interpolants of the weights. They remain ordered, keep the strict
+velocity margin, converge uniformly, and their exact actions converge
+to the integral. This proves the upper inequality.
+\end{proof}
+
+\subsection{Whole-line comparison curves}
+Fix the full boundary triple and set
+\[
+ r_A(u)=e^{-F(u)}h_A^+,\qquad r_C(u)=e^{F(u)}h_C^+\qquad(u\ge0).
+\]
+For sufficiently large $u$ this pair is ordered. Let $\calQ$ be the
+continuous ordered split curves for which, for some $U>0$,
+\begin{equation}\label{eq:exactreferencetails}
+ c_A=c_C=h_B\quad(u\le-U),\qquad c_v=r_v\quad(u\ge U),
+\end{equation}
+and whose restriction to $[-U,U]$ has finitely many fixed-apartment
+$C^1$ pieces with strict velocity margins. Derivative jumps at the
+finitely many joins are allowed in this comparison class.
+
+This class is nonempty for every triple. Since
+$F(U)=(\pi/3)U+O(1)$, the $d_\infty$ distances of $r_A(U),r_C(U)$
+from $h_B$ are at most $(\pi/3)U+O(1)$. On $[-U,U]$ the product
+geodesic from $(h_B,h_B)$ to $(r_A(U),r_C(U))$ therefore has spectral
+speeds less than $\pi/4$ for large $U$. It is ordered by geodesic
+convexity. Appending the reference tails gives an element of $\calQ$.
+
+Define the Bregman difference
+\[
+ D_\ell(v;s)=\ell(v)-\ell(s)-\ell'(s)(v-s),
+ \qquad s_A(u)=-\beta(u),\quad s_C(u)=\beta(u).
+\]
+On $\calQ$ define
+\begin{equation}\label{eq:wholelineaction}
+ \begin{split}
+ J(c)={}&\int_{-\infty}^0 R(u)
+   \left\{\frac12\sum_{v,i}\ell(w'_{vi}(u))+qg(c(u))\right\}\dd u\\
+ &+\frac12\int_0^\infty R(u)
+           \sum_{v,i}D_\ell(w'_{vi}(u);s_v(u))\,\dd u.
+ \end{split}
+\end{equation}
+All integrands are nonnegative, and they vanish outside a compact
+interval. The velocity multisets and determinant gap are intrinsic,
+so the value does not depend on the apartment presentations.
+
+The renormalization has an exact finite-interval identity. If $J_U$
+denotes the two integrals in \eqref{eq:wholelineaction} restricted to
+$[-U,U]$, then for every finite regular ordered curve on that interval,
+\begin{equation}\label{eq:renormalization}
+ J_U(c)=E_{[-U,U]}(c)-\frac{a\sinh U}{2}g(c(U))+C_n(U),
+\end{equation}
+where the differential action is used and
+\[
+ C_n(U)=n\int_0^U R(u)
+                \{\beta(u)\tan\beta(u)-\ell(\beta(u))\}\,\dd u.
+\]
+Indeed, $R\ell'(s_C)=a\sinh u=-R\ell'(s_A)$ and
+$(a\sinh u)'=aR$. Integration by parts cancels the potential on the
+positive half-line. The term at zero vanishes, and the interior
+boundary terms cancel by continuity of determinant norms.
+No reference endpoint is needed for this truncated identity.
+For a curve in $\calQ$ and a cutoff containing its nonreference part,
+$J_U(c)=J(c)$. The endpoint term in \eqref{eq:renormalization} then
+depends only on the fixed boundary triple and $U$.
+
+\subsection{Existence, uniqueness and the ends}
+Let $J_* =\inf_{c\in\calQ}J(c)$. Fix $c_0\in\calQ$ and take the
+uniform closure $\calY$ of $\calQ$ among continuous ordered all-norm
+curves at finite uniform distance from $c_0$. Use
+$\sup_u\max_v d_2$ for this distance. The ambient space, and hence
+$\calY$, is complete. Define
+\begin{equation}\label{eq:globalrelaxation}
+ \overline J(c)=\inf\{\liminf_m J(c_m):c_m\in\calQ,
+                                  \ c_m\to c\text{ uniformly}\}.
+\end{equation}
+
+\begin{theorem}\label{thm:relaxedminimum}
+The functional $\overline J$ has a unique minimum $c_*$ on $\calY$,
+with value $J_*$. Every minimizing sequence in $\calQ$ converges
+uniformly to $c_*$. Its vertex curves are globally $\pi/2$-Lipschitz
+in $d_\infty$. It has the full normalized limits
+\eqref{eq:normalizedends} and is equivariant under simultaneous
+$\GL_n(K)$ change of basis.
+\end{theorem}
+
+\begin{proof}
+Take $c,c'\in\calQ$ and a common cutoff $U$. By
+Lemma~\ref{lem:regularaction}, they can be approximated on $[-U,U]$
+by ordered split polygons on common refinements, with exact endpoints,
+uniform convergence and convergence of action. Attach the common
+reference tails. For two such polygons retain the coefficients $W_j$
+in \eqref{eq:polygonmidpoint}. The midpoint polygon, with reference
+tails, belongs to $\calQ$. By \eqref{eq:renormalization}, its action
+is at least $J_*$ and the endpoint corrections cancel. Moreover,
+\[
+ \sum_j\frac{\Delta_j^2}{W_j}
+ \le\int_{-U}^U\frac{\dd u}{R(u)}\le\pi.
+\]
+Weighted Cauchy--Schwarz, starting from the zero endpoint distances,
+and Busemann convexity on each segment therefore give, after recovery,
+\begin{equation}\label{eq:globalstability}
+ \sup_{u,v}d_2(c_v(u),c'_v(u))^2
+ \le16\pi\left\{\frac{J(c)+J(c')}{2}-J_*\right\}.
+\end{equation}
+Thus every minimizing sequence is uniformly Cauchy. Completeness and
+the definition of $\calY$ give a limit. The same inequality identifies
+all such limits. A diagonal sequence for \eqref{eq:globalrelaxation}
+proves that its minimum value is $J_*$ and that the minimum is unique.
+The Lipschitz bound follows from the barrier on every regular piece
+and passes to the uniform limit.
+
+Since $\ell''\ge1$, one has
+$\ell(v)\ge v^2/2$ and $D_\ell(v;s)\ge(v-s)^2/2$.
+On a regular apartment piece the metric speed is the Euclidean norm
+of the weight derivatives. Integrate this speed from the constant
+negative tail, or integrate the speed of the scalar-normalized curve
+from the positive reference tail. Weighted Cauchy--Schwarz gives,
+for $c\in\calQ$,
+\begin{equation}\label{eq:preliminarytailbounds}
+ \begin{aligned}
+ d_2(c_v(u),h_B)^2
+   &\le4J(c)\int_{-\infty}^u\sech s\,\dd s &&(u\le0),\\
+ d_2(e^{-\eps_vF(u)}c_v(u),h_v^+)^2
+   &\le4J(c)\int_u^\infty\sech s\,\dd s &&(u\ge0),
+ \end{aligned}
+\end{equation}
+where $\eps_A=-1$ and $\eps_C=1$. These estimates pass to a minimizing
+sequence with $J(c)$ replaced by $J_*$. They prove the full norm
+limits, initially with rate $O(e^{-|u|/2})=O(|t|^{-1/2})$.
+Finally, simultaneous change of basis preserves order, relative spectra,
+the determinant gap and the reference curves. It preserves $J$ and
+its relaxed domain. Uniqueness proves equivariance.
+\end{proof}
+
+At this stage $c_*$ is an all-norm curve; splitness and harmonicity
+have not been used to obtain its uniqueness. Both will be proved
+below, together with the stronger tail rates.
+
+\begin{proposition}\label{prop:finitecutoff}
+For large $U$, let $c_U$ be the exact-endpoint relaxed minimum on
+$[-U,U]$ with endpoints $(h_B,h_B)$ and $(r_A(U),r_C(U))$, extended
+by the reference tails. Put
+\[
+ j(U)=E_{[-U,U]}^*-\frac{a\sinh U}{2}g(r_A(U),r_C(U))+C_n(U).
+\]
+Then $j(U)$ decreases to $J_*$, $c_U\in\calY$, and
+\begin{equation}\label{eq:finitecutoffconvergence}
+ \sup_{u,v}d_2((c_U)_v(u),(c_*)_v(u))^2
+       \le8\pi\{j(U)-J_*\}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $\calQ_U$ be the curves in $\calQ$ with the exact reference tails
+outside $[-U,U]$. The classes increase with $U$ and their union is
+$\calQ$. Regular-curve recovery shows that
+$j(U)=\inf_{\calQ_U}J$. In the reverse comparison needed for this
+equality, an arbitrary all-norm polygon can be replaced by its
+split minimum on the same partition, with the same split endpoints
+and no larger action. Hence $j(U)\downarrow J_*$.
+
+The split polygonal minimizing sequence for $c_U$, extended by its
+reference tails, lies in $\calQ_U$, converges uniformly and has action
+tending to $j(U)$. This puts $c_U$ in $\calY$. Apply
+\eqref{eq:globalstability} to that sequence and a whole-line
+minimizing sequence, then pass to both limits.
+\end{proof}
+
+\begin{proposition}\label{prop:extensionminimum}
+Canonical scalar extension identifies the whole-line minima over $K$
+and over $L$:
+\[
+ J_K^*=J_L^*,\qquad c_{*,L}(u)=(c_{*,K}(u))_L
+ \quad\text{for every }u\in\RR.
+\]
+\end{proposition}
+
+\begin{proof}
+Extension preserves relative spectra, determinant gaps and regular
+apartment weights, so it carries $\calQ_K$ into $\calQ_L$ with the
+same action. This proves $J_L^*\le J_K^*$.
+Conversely, approximate a curve of $\calQ_L$ by polygons on a fixed
+cutoff interval, with its exact split $K$ endpoint norms extended to
+$L$. The finite formula in the proof of
+Lemma~\ref{lem:finiterealization} applies directly to this $L$-diagram,
+using the fixed $K$ endpoint matrices and real monomials in $K$ as
+parameters. It gives a $K$-polygon preserving all horizontal and
+vertical profiles. Its order, exact potential, kinetic action and
+full endpoints are therefore preserved. Append the $K$ reference
+tails and pass to the infimum. This proves the reverse inequality.
+
+A minimizing sequence over $K$ extends isometrically to a minimizing
+sequence over $L$. Its uniform limit is the canonical extension of
+$c_{*,K}$. The uniqueness in Theorem~\ref{thm:relaxedminimum}, now
+over $L$, identifies that limit with $c_{*,L}$.
+\end{proof}

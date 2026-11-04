@@ -1,0 +1,671 @@
+\section{Finite algebraic regularity}\label{sec:finiteregularity}
+
+We now pass from numerical spectral velocities to fixed algebraic
+subspaces. Work first over $L$, where every norm is split. No common
+apartment for the three boundary norms is assumed.
+
+\subsection{Radial spectra and strict velocity gaps}
+
+\begin{lemma}\label{lem:radialderivatives}
+Fix a reference norm $o$, and let $h(u)$ be either vertex curve
+of $c_*$. At every differentiability point of
+$\lambda(u)=\sigma(o,h(u))$, its derivative is a permutation of
+the intrinsic velocity list $v(u)$. For every $k$, the function
+$u\mapsto S_k(o,h(u))$ is locally semiconvex.
+\end{lemma}
+
+\begin{proof}
+We first give a uniform finite bound for the number of affine
+pieces of the radial spectrum along any apartment geodesic
+$\gamma$, of constant spectral velocity $v$. Apply the weighted
+elimination in Lemma~\ref{lem:finitecommonbases} to the constant
+norm $o$ and $\gamma$. A complete pivot sequence has at most
+$(n!)^2$ possibilities, since there are at most $j^2$ choices at
+residual size $j$. The validity set of each sequence is an interval,
+defined by affine weight inequalities. Their endpoints subdivide
+the parameter interval into at most $2(n!)^2+1$ open pieces.
+On each, one fixed common basis works. Its relative weights have
+derivatives that permute $v$. Ordering these affine weights adds
+at most $n(n-1)/2$ cuts per piece. Thus a sufficient uniform bound is
+\[
+ N(n)=\bigl(2(n!)^2+1\bigr)\bigl(n(n-1)/2+1\bigr).
+\]
+This bound is independent of the basis, weights and interval length.
+
+Fix a differentiability point $u_0$ of $\lambda$. Let $\gamma_h$
+be the chord of $h$ on $[u_0-h,u_0+h]$, parametrized on that
+interval, and put
+\[
+ v_h=\frac{\sigma(h(u_0-h),h(u_0+h))}{2h}.
+\]
+The quadratic chord estimate and
+\eqref{eq:coordinatecontinuity} give $v_h\to v(u_0)$ and,
+uniformly for $|s|\le h$,
+\[
+ \sigma(o,\gamma_h(u_0+s))
+ =\lambda(u_0+s)+O(h^2)
+ =\lambda(u_0)+s\lambda'(u_0)+o(h).
+\]
+The left side has an affine piece of length at least $2h/N(n)$.
+Subtract the displayed equation at its endpoints and divide by
+that length. For a permutation $P_h$ it follows that
+$P_hv_h=\lambda'(u_0)+o(1)$. Finiteness of the permutation group
+proves the assertion. This uses differentiability for one fixed
+reference $o$; no common full-measure set for all reference norms
+is needed.
+
+The function $h\mapsto S_k(o,h)$ is geodesically convex by
+Lemma~\ref{lem:spectralconvexity}, and is $k$-Lipschitz for
+$d_\infty$. Comparison with the midpoint of the endpoint chord
+therefore gives, locally uniformly,
+\[
+ S_k(o,h(u))\le\tfrac12\{S_k(o,h(u-h))+S_k(o,h(u+h))\}
+                         +4kCh^2.
+\]
+Adding a sufficiently large quadratic makes this continuous
+function midpoint convex, hence convex. This proves local
+semiconvexity.
+\end{proof}
+
+\begin{lemma}\label{lem:topsaturation}
+Suppose $v_k>v_{k+1}$ throughout an open interval $I$.
+For every $s<t$ in $I$,
+\begin{equation}\label{eq:topsaturation}
+ S_k(h(s),h(t))=\int_s^t\sum_{i\le k}v_i(u)\,\dd u.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We use a scalar consequence of semiconvexity. Let $F$ be semiconvex,
+and suppose that almost everywhere its derivative belongs to a
+finite collection of continuous functions $g_j$. Suppose their
+maximum $M$ is locally Lipschitz and, on a compact interval, each
+branch either equals $M$ identically or stays below $M-\delta$
+for some $\delta>0$. If $F'_+(s)=M(s)$ at its left endpoint,
+then $F'=M$ on that interval.
+
+Indeed $G=F-\int_s^uM$ is semiconvex. Its right derivative is
+right-continuous, has left limits, and obeys
+$G'_-(u)\le G'_+(u)$. Approaching from the right through the
+full-measure differentiability set, and taking a constant-index
+subsequence, gives
+\[
+ G'_+(u)\in\{0\}\cup(-\infty,-\delta].
+\]
+At $s$ it is zero. Right-continuity makes the zero state persist
+to the right. If the negative set had a first infimum after this
+initial interval, its left limit there would be zero, so its right
+derivative would be nonnegative and hence zero. Right-continuity
+would again exclude negative values immediately afterwards,
+a contradiction. Thus $G'_+=0$ throughout, and absolute
+continuity proves the scalar assertion.
+
+Apply this to $F(u)=S_k(h(s),h(u))$. By
+Lemma~\ref{lem:radialderivatives}, its derivative almost everywhere
+is a $k$-element subset sum of $v(u)$. The largest such sum is
+$M_k=\sum_{i\le k}v_i$, and every other subset sum is smaller by
+at least $v_k-v_{k+1}$. This has a positive minimum on any compact
+subinterval of $I$. The forward secant limit gives
+$F'_+(s)=M_k(s)$. The scalar assertion proves
+\eqref{eq:topsaturation}.
+\end{proof}
+
+\begin{proposition}\label{prop:fixedgapsubspaces}
+Suppose $v_k>v_{k+1}$ on an open interval containing $[l,r]$.
+Choose a common orthogonal basis of $h(l),h(r)$, ordered by their
+decreasing relative weights. Its first $k$ and last $n-k$ vectors
+span subspaces $U,W$ for which
+\begin{equation}\label{eq:fixedgapdecomposition}
+ h(u)=h(u)|_U\oplus h(u)|_W\qquad(l\le u\le r).
+\end{equation}
+For every $l\le s<t\le r$, the relative spectrum on $U$ is the
+first $k$ entries of the full spectrum. The block velocity lists
+are therefore $(v_1,\ldots,v_k)$ and $(v_{k+1},\ldots,v_n)$.
+Several strict cuts give one simultaneous fixed orthogonal block
+decomposition, using the same endpoint basis.
+\end{proposition}
+
+\begin{proof}
+Let $\tau_U$ be the wedge of the first $k$ endpoint basis vectors.
+It realizes the top exterior operator norm between the endpoints.
+For an intermediate $u$, exterior norm comparison gives
+\[
+ \begin{split}
+ \log\frac{\det(h(u)|_U)(\tau_U)}{\det(h(l)|_U)(\tau_U)}
+      &\le S_k(h(l),h(u)),\\
+ \log\frac{\det(h(r)|_U)(\tau_U)}{\det(h(u)|_U)(\tau_U)}
+      &\le S_k(h(u),h(r)).
+ \end{split}
+\]
+The two left sides sum to $S_k(h(l),h(r))$. By
+\eqref{eq:topsaturation}, the right sides have the same sum.
+Both inequalities are equalities.
+
+Apply the same argument to the wedge $\tau_W$ in the reverse
+direction. The identity
+\[
+ S_{n-k}(h(t),h(s))
+   =S_k(h(s),h(t))-d(h(t))+d(h(s))
+\]
+shows that this reverse partial sum is also saturated along the
+chain. With the determinant generators from the endpoint basis,
+we obtain
+\[
+ \begin{split}
+ d(h(u)|_U)-d(h(l)|_U)&=S_k(h(l),h(u)),\\
+ d(h(u)|_W)-d(h(l)|_W)&=d(h(u))-d(h(l))-S_k(h(l),h(u)).
+ \end{split}
+\]
+The direct-sum norm $g_u=h(u)|_U\oplus h(u)|_W$ consequently has
+the same determinant as $h(u)$, because the decomposition is
+orthogonal at $l$. The ultrametric triangle inequality gives
+$h(u)\le g_u$. Equal determinant and order force equality, proving
+\eqref{eq:fixedgapdecomposition}.
+
+Insert the chain $l,s,t,r$ in the exterior norm comparison. The
+same saturation makes each inequality an equality. Thus the fixed
+wedge $\tau_U$ realizes $S_k(h(s),h(t))$ for every pair.
+Orthogonality makes the full spectrum the union of the two block
+spectra, so the $U$ spectrum consists of its top $k$ entries,
+including multiplicities. Secant limits identify the block
+velocities. Their squared $d_2$ distances add to the full squared
+distance, so the restricted curves are locally Lipschitz.
+Finally, the same endpoint basis supplies nested prefix and suffix
+subspaces for several cuts. Their intersections give the asserted
+simultaneous decomposition.
+\end{proof}
+
+\subsection{Second-order scalar approximation}
+A good time will mean a time $u_0$ where all $2n$ global velocity
+entries are differentiable and where equal entries have equal
+derivatives, also across the two vertices. These times have full
+measure: a Lipschitz function has derivative zero almost everywhere
+on its zero set, and there are only finitely many differences to
+consider.
+
+\begin{proposition}\label{prop:scalarjets}
+At a good time, group all velocity entries by their value $p_g$.
+Let $r_g$ be their common derivative, and set
+$f_g(s)=p_gs+r_gs^2/2$, where $s=u-u_0$. There are fixed orthogonal
+subspaces for these groups near $u_0$, and reference block norms
+$h_{vg}$, such that
+\begin{equation}\label{eq:scalarjets}
+ \begin{split}
+ \sup_{|s|\le h}d_2\bigl((c_*)_v(u_0+s),Q_v(u_0+s)\bigr)&=o(h^2),\\
+ Q_v(u_0+s)&=\bigoplus_g e^{f_g(s)}h_{vg}.
+ \end{split}
+\end{equation}
+In each group the intrinsic velocities are $f_g'(s)+o(h)$,
+uniformly for $|s|\le h$. The reference pair $Q$ is ordered for
+small $h$. Its reduced arrow is a direct sum over the common
+values $p_g$ and is the actual reduced velocity decomposition at
+$u_0$.
+\end{proposition}
+
+\begin{proof}
+The gaps between the distinct values at $u_0$ persist nearby.
+Proposition~\ref{prop:fixedgapsubspaces} gives fixed orthogonal
+subspaces for these coarse groups, even when velocities within a
+group separate at nearby times. Differentiability at $u_0$ gives,
+for every entry in group $g$,
+\[
+ |v_{vgi}(u_0+s)-p_g-r_gs|\le\eta(h)|s|,
+ \qquad |s|\le h,\qquad\eta(h)\to0.
+\]
+Normalize the restricted block curve by $e^{-f_g(s)}$. Its metric
+speed is exactly the Euclidean norm of the block velocity entries
+minus $f_g'(s)$, by the spectral secant formula for $d_2$.
+The length bound for a locally Lipschitz metric curve therefore
+bounds its distance from its value at $u_0$ by
+$\sqrt{\dim V_{vg}}\eta(h)s^2/2$. Summing over the orthogonal
+blocks proves \eqref{eq:scalarjets} and the velocity assertion.
+The determinant logarithm of each block is $C^1$, with derivative
+the sum of its continuous velocity entries.
+
+Choose orthonormal $L$-bases for the reference block norms. In
+these bases the original arrow matrix is integral. If a valuation-zero
+entry connected distinct velocities $p_C\ne p_A$, the arrow
+inequality for $Q$ would fail linearly on one side of $u_0$.
+The $o(s^2)$ norm error in \eqref{eq:scalarjets} cannot repair
+such a failure for the actual ordered curve. Thus every nonzero
+cross-group entry has strictly positive valuation. There are only
+finitely many entries, so these strict gaps persist for small $s$.
+Within a common group the scalar functions $f_g$ at both vertices
+agree, including their quadratic term. All its arrow inequalities
+are those at $u_0$. Hence $Q$ is ordered. Its tangent agrees with
+that of the actual curve, so its reduced summands are the actual
+velocity blocks.
+\end{proof}
+
+\begin{lemma}\label{lem:cubicrepair}
+At a good time, the reference $Q$ in
+Proposition~\ref{prop:scalarjets} can be repaired at the endpoints
+of $[u_0-h,u_0+h]$ to an ordered finite piecewise-apartment curve
+$Q_h$ with the exact endpoints of $c_*$, such that $Q_h=Q$ on
+$[u_0-h/2,u_0+h/2]$ and
+\begin{equation}\label{eq:cubicrepair}
+ E(Q_h)-\overline E(c_*|_{[u_0-h,u_0+h]})=o(h^3).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Choose $\delta_h\downarrow0$ bounding the norm errors in
+\eqref{eq:scalarjets} by $\delta_hh^2$ and the block velocity
+errors by $\delta_hh$. Put $\ell_h=\sqrt{\delta_h}h<h/4$.
+Keep $Q$ on the central interval and join it to the exact
+$c_*$ endpoints by canonical bridges of length $\ell_h$.
+The endpoints of each bridge are ordered and have the same fixed
+block decomposition. The bridge respects that decomposition,
+since its locus of orthogonal sums is geodesically convex.
+Each pair of block endpoint norms has a common $L$-basis, so this
+is a finite piecewise-apartment comparison curve.
+
+After subtracting $f_g$, a bridge velocity differs from $f_g'$
+by
+\[
+ O(\delta_hh^2/\ell_h+\ell_h)=O(\sqrt{\delta_h}h).
+\]
+The first term is the endpoint error divided by the bridge length;
+the second compares the average quadratic slope to its derivative.
+The original normalized block speed is $O(\delta_hh)$.
+Throughout the interval $Q_h$ and $c_*$ are $O(\delta_hh^2)$
+apart, including the quadratic chord error
+$O(\ell_h^2)$ on the bridges. Both curves have a common strict
+velocity margin for small $h$.
+
+Use, separately in each block, the identity
+\[
+ \ell(z)=\ell(f_g')+\tan(f_g')(z-f_g')+D_\ell(z;f_g').
+\]
+On the strict margin the Bregman remainder is bounded by a
+constant times $(z-f_g')^2$. Its integral for $c_*$ is
+$O(\delta_h^2h^3)$; the bridges of $Q_h$ contribute
+$O(\delta_h^{3/2}h^3)$, and its central part contributes zero.
+The linear term is $R\tan(f_g')$ times the derivative of the
+block determinant difference. Integrate it by parts. Its boundary
+term vanishes separately in each block, because the repaired
+endpoints are exact, and its integral is $O(\delta_hh^3)$.
+The potential difference has the same bound. The original action
+is its spectral integral by Proposition~\ref{prop:spectralaction};
+the repaired curve has its ordinary differential action by
+Lemma~\ref{lem:regularaction}. Combining these estimates proves
+\eqref{eq:cubicrepair}.
+\end{proof}
+
+\subsection{Almost-everywhere semistability and straight directions}
+
+\begin{proposition}\label{prop:aeharmonicity}
+At almost every time the actual reduced velocity blocks are
+semistable. A block has type $A^m$, $B^m$ or $C^m$, and its
+position has derivative $-a$, $0$ or $a$, respectively, in the
+coordinate $t=\sinh u$. In a mixed block the actual reduced arrow
+is an isomorphism.
+\end{proposition}
+
+\begin{proof}
+Work at a good time $u_0$ and use the quadratic reference and
+repair above. For a group $g$, let $c_g,a_g$ be its source and
+target dimensions, $d_g=c_g+a_g$, and let $R_0=R(u_0)$.
+Choose a smooth function $\eta$ supported in $(-1/2,1/2)$.
+On the central part of $Q_h$, vary all weights of this group by
+$\varepsilon h^2\eta(s/h)$. Both signs are admissible for small
+$h$: within the group the arrow ratios stay fixed, while the
+strict cross-group gaps persist. The bridges are unchanged.
+
+Expand the differential action, divide by $h^3$, and let
+$h\to0$ with $\varepsilon$ fixed. The linear term is
+\[
+ \varepsilon\left\{
+ -\frac{d_g}{2}\bigl(R_0\sec^2p_g\,r_g+R_0'\tan p_g\bigr)
+       +qR_0(c_g-a_g)\right\}\int\eta.
+\]
+For the kinetic term, integrate $R\tan(f_g')$ against the
+weight derivative; its constant part integrates to zero and its
+first-order part gives the displayed derivative at $u_0$.
+The remainder after division is $O(\varepsilon^2)+o(1)$,
+uniformly for $\varepsilon$ in a fixed bounded interval.
+Local minimality and \eqref{eq:cubicrepair}, followed by
+$\varepsilon\to0$ from both sides, imply
+\begin{equation}\label{eq:blockeuler}
+ \frac{d_g}{2}\bigl(R_0\sec^2p_g\,r_g+R_0'\tan p_g\bigr)
+       =qR_0(c_g-a_g).
+\end{equation}
+
+Let $S$ be a nonzero subrepresentation of the reduced block,
+with dimensions $c_S,a_S$ and $d_S=c_S+a_S$. Choose integral
+basis lifts of $S$ and complements at both vertices. Such changes
+preserve the scalar reference $Q$ exactly. Reduced entries from
+$S$ to its complement vanish, so their actual entries are zero
+or have strictly positive valuation. Entries in the other
+direction become more contracting when the weights on $S$
+decrease. Thus, for $\eta\ge0$ and $\varepsilon\ge0$, the
+following variation is ordered for small $h$: add
+$(d_S/d_g)\varepsilon h^2\eta(s/h)$ to the whole group and
+subtract $\varepsilon h^2\eta(s/h)$ on $S$.
+
+All unperturbed group velocities are $f_g'$, and the total
+weight shift, with dimension multiplicities, is zero. Its kinetic
+first variation therefore vanishes pointwise. The potential
+coefficient after division by $h^3$ is
+\[
+ \varepsilon qR_0
+ \left\{\frac{d_S}{d_g}(c_g-a_g)-(c_S-a_S)\right\}\int\eta.
+\]
+Again the remainder is $O(\varepsilon^2)+o(1)$. If the bracket
+were negative, choose $\varepsilon>0$ small enough that its
+linear term dominates, then let $h\to0$. This contradicts local
+minimality and \eqref{eq:cubicrepair}. Hence
+\begin{equation}\label{eq:semistableslope}
+ \frac{c_S-a_S}{c_S+a_S}\le\frac{c_g-a_g}{c_g+a_g}
+ \quad\hbox{for every nonzero subrepresentation }S.
+\end{equation}
+For the charges in \eqref{eq:charges}, this is precisely the
+semistability inequality: the phase increases strictly with the
+ratio $(c-a)/(c+a)$.
+
+Every finite-dimensional $A_2$ representation is the direct sum
+of its kernel copies of $C$, image copies of $B$, and cokernel
+copies of $A$, by choosing complements to the kernel and image.
+Since their phases are distinct, semistability permits only one
+of these types. Thus a shared velocity block is actually $B^m$,
+with invertible reduced arrow, rather than only equal dimensions.
+Finally, the derivative in $t$ of $x=R\tan v$ is, at the good
+time,
+\[
+ \frac{\dd x}{\dd t}
+ =\frac{R_0'\tan p_g+R_0\sec^2p_g\,r_g}{R_0}
+ =a\frac{c_g-a_g}{c_g+a_g}.
+\]
+This gives $-a,0,a$ for the three types. Good times have full
+measure, which proves the assertion.
+\end{proof}
+
+\subsection{Finiteness of the support}
+
+\begin{proposition}\label{prop:finitesupport}
+The spectral positions of $c_*$ form a finite balanced weighted
+straight graph. It has at most $2n^2$ distinct finite event times
+and at most $n^2$ essential geometric vertices.
+\end{proposition}
+
+\begin{proof}
+Write $A_i(t)$ and $C_j(t)$ for the two ordered position lists.
+They are locally Lipschitz. Proposition~\ref{prop:aeharmonicity}
+gives, on one common set of full measure,
+\[
+ A_i'\in\{-a,0\},\qquad C_j'\in\{0,a\}.
+\]
+An $A$ position absent from the $C$ list has derivative $-a$,
+and an unshared $C$ position has derivative $a$. At a shared
+position the two multiplicities agree and the derivative is zero.
+
+Each difference $C_j-A_i$ is nondecreasing. Its zero set is an
+interval, possibly empty, a point, a ray or the whole line.
+Moreover, if $s<t$ lie in that zero set, then
+\[
+ A_i(s)\ge A_i(t)=C_j(t)\ge C_j(s)=A_i(s),
+\]
+so both positions are constant between them. Let $D$ be the set
+of finite endpoints of these $n^2$ zero sets. Then $|D|\le2n^2$.
+On a component of $\RR\setminus D$, each opposite-type pair
+either coincides throughout or never coincides. A paired branch
+is constant; an unpaired $A$ branch has derivative $-a$ almost
+everywhere and hence is exactly affine, and an unpaired $C$
+branch is similarly affine of slope $a$.
+
+These pieces define the graph with coincident positions combined
+and their multiplicities retained. A constant branch is counted
+once as a $B$ edge, with its common multiplicity. Parallel branches
+of one free type do not intersect; a free branch cannot meet a
+constant branch in the interior of a component, since that would
+be an opposite-type contact. There are therefore no additional
+crossings to insert there. The known tails supply its exterior
+rays. This proves finiteness before any appeal to honeycomb
+combinatorics.
+
+At a vertex isolate its position from the other finitely many
+positions at that time. Continuity implies that the same $A$
+indices and the same $C$ indices enter and leave this neighborhood.
+Writing $m_X^-$ and $m_X^+$ for the incoming and outgoing
+multiplicities of type $X$, we obtain
+\[
+ m_A^-+m_B^-=m_A^++m_B^+,\qquad
+ m_C^-+m_B^-=m_C^++m_B^+.
+\]
+The upward direction vectors
+\[
+ z_A=(-a/2,1/2),\qquad z_B=(0,1),\qquad z_C=(a/2,1/2)
+\]
+satisfy $z_B=z_A+z_C$. The preceding identities give their
+weighted balance. There are no finite univalent vertices, and
+the tails have degree $n$.
+
+We may now apply the finite honeycomb construction of
+\cite[\S3.1, Lemmas~4 and 6--8, and Theorem~1]{KT99}.
+Its dual is a subdivision of the lattice triangle of side $n$.
+The two-dimensional cells correspond to essential geometric
+vertices, with each cell a union of elementary triangles.
+The entire triangle has $n^2$ elementary triangles. Every cell
+contains at least one, proving the bound $n^2$.
+Degenerate or crossing vertices correspond to larger cells;
+artificial bivalent subdivisions are removed. This last count
+bounds vertices, whereas the earlier direct estimate bounds
+only their distinct time coordinates.
+\end{proof}
+
+\subsection{From finite support to finite apartments}
+
+\begin{proposition}\label{prop:finitehahnregularity}
+The Hahn minimum has a finite fixed-apartment presentation. On each
+closed finite piece its weights extend real analytically beyond the
+endpoints. On every open piece its actual reduced velocity blocks
+are semistable and have the straight directions prescribed by their
+charges.
+\end{proposition}
+
+\begin{proof}
+Choose finite cutoffs in the known algebraic tails and subdivide
+between them at the support event times. On an open piece $(b,c)$,
+the ordered position branches are affine in $t$. Distinct branches
+do not intersect there, and coincident branches agree throughout.
+Thus the velocity groups have constant multiplicities and functions
+\begin{equation}\label{eq:analyticvelocities}
+ p_g(u)=\arctan(\alpha_g\tanh u+\beta_g\sech u),
+ \qquad \alpha_g\in\{-a,0,a\}.
+\end{equation}
+Each extends analytically beyond the closed piece. The gaps
+between distinct groups are positive in its interior but may
+vanish at either endpoint.
+
+For each cut $k$ between distinct groups,
+\eqref{eq:topsaturation} holds for all $b<s<t<c$.
+Continuity of the norms, spectra and velocities extends it to
+$b\le s<t\le c$. Choose one common endpoint basis, ordered by
+relative weights. The extremal-wedge proof of
+Proposition~\ref{prop:fixedgapsubspaces} uses only these saturated
+identities on closed chains. It therefore gives one simultaneous
+orthogonal block decomposition on the whole closed interval,
+even when a velocity gap vanishes at an endpoint. No lower bound
+for that endpoint gap is needed. If there is only one group,
+take the entire space as its block.
+
+In block $g$ all velocities equal $p_g$. Fix an interior time
+$u_*$, set $f_g(u)=\int_{u_*}^u p_g(s)\,\dd s$, and let
+$h_g$ be the block norm at $u_*$. The normalized block curve
+$e^{-f_g(u)}c_*(u)|_{V_g}$ has metric speed zero. Its local
+Lipschitz continuity and the metric length bound make it constant.
+Hence
+\[
+ c_*(u)|_{V_g}=e^{f_g(u)}h_g
+\]
+throughout the interior and, by continuity, at both endpoints.
+Choose an orthogonal basis for each split norm $h_g$. Their union
+is one fixed apartment on the entire closed piece, and its weights
+are $f_g$ plus constant offsets. This proves the claimed analytic
+extension without taking a limit of bases on an exhaustion.
+
+In these fixed bases, equal-velocity coordinates have constant
+relative weights, so their normalized reduced arrow matrix is
+constant. A nonzero entry between distinct groups has strictly
+positive norm gap at every interior time: an interior zero of
+its nonnegative smooth gap would have zero derivative and would
+force the two velocities to agree. Thus these fixed groups are
+the actual reduced blocks everywhere on the open piece.
+Their almost-everywhere semistability from
+Proposition~\ref{prop:aeharmonicity}, together with the constant
+reduced matrices, proves semistability throughout. Adjoin the
+finitely many tail apartments to complete the presentation.
+\end{proof}
+
+\subsection{Finite descent and identification of the original minimum}
+The preceding presentation is finite, but its matrices lie in $L$.
+The following finite realization preserves more than spectra: it
+retains the actual reduced arrows and the full endpoint norms.
+
+\begin{lemma}\label{lem:finitecurvetransfer}
+Let an ordered continuous $L$-norm pair on a compact interval have
+finitely many fixed-apartment pieces, with prescribed real $C^1$
+weights and strict velocity margins. Suppose its endpoint norms
+are extensions of specified split $K$-norms. There is a continuous
+ordered $K$-norm pair with the same partition and weights, exactly
+those full endpoints, the same determinant functions, the same
+normalized reduced arrow matrices on all pieces, and the same
+normalized reduced transition matrices at their joins. In
+particular its differential action is unchanged.
+\end{lemma}
+
+\begin{proof}
+Use the same ambient $K$-frame at both quiver vertices. Let
+$P_{vj}$ be the finitely many original apartment basis matrices.
+Choose orthonormal $K$-frames $F_{v,-},F_{v,+}$ for the prescribed
+outer endpoint norms. Introduce matrix variables $Q_{vj}$ and
+$R_{vj}$ with $Q_{vj}R_{vj}=R_{vj}Q_{vj}=I$. Consider the finite
+list consisting of the entries of
+\[
+ \begin{gathered}
+ R_{Aj}Q_{Cj},\qquad
+ R_{vj}Q_{v,j+1},\quad R_{v,j+1}Q_{vj},\\
+ R_{v,\mathrm{first}}F_{v,-},\quad
+ F_{v,-}^{-1}Q_{v,\mathrm{first}},\quad
+ R_{v,\mathrm{last}}F_{v,+},\quad
+ F_{v,+}^{-1}Q_{v,\mathrm{last}},
+ \end{gathered}
+\]
+and of the determinants $\det Q_{vj}$. Evaluate them at the
+original matrices $P_{vj}$ and their inverses. Preserve every
+zero by an exact equation. For a nonzero value $x$, put
+$\rho=\nu(x)$ and $a_x=\operatorname{res}(T^{-\rho}x)$, and
+impose the valued-field condition
+\begin{equation}\label{eq:leadingresiduecondition}
+ T^{-\rho}x-a_x\in\mm.
+\end{equation}
+All parameters lie in $K$, including the finitely many real
+monomials and complex residues. The original $L$-matrices satisfy
+this finite formula, so elementarity gives invertible $K$-matrices
+satisfying it. It preserves each entry valuation and leading
+residue, and each determinant valuation.
+
+For a matrix $M$ from a source basis of weights $w_j$ to a target
+basis of weights $z_i$, nonexpansiveness is the finite collection
+of inequalities
+\begin{equation}\label{eq:matrixorder}
+ \nu(M_{ij})+w_j-z_i\ge0
+\end{equation}
+for its nonzero entries. The valuations and weight functions are
+unchanged. Thus the transferred arrow is nonexpansive at every
+time. Both directions of each transition were included, so their
+inequalities prove equality of the two norm descriptions at each
+join. The same two-way argument with the fixed endpoint frames
+proves equality with the full prescribed endpoint norms, on every
+vector. It is stronger than preservation of their spectra.
+
+A normalized arrow entry is $T^{w_j-z_i}M_{ij}$. If its valuation
+is positive, its reduction is zero; if it is zero, its reduction
+is the leading residue preserved in
+\eqref{eq:leadingresiduecondition}. Hence all the reduced matrices
+agree in the indexed bases, both on pieces and at joins.
+Equation~\eqref{eq:detnorm} shows that the determinant functions
+are unchanged. The weights and their derivatives are also
+unchanged, so the differential actions agree. No time variable
+or infinite family of norm inequalities was quantified: the finite
+entry data imply them for the fixed weight functions.
+\end{proof}
+
+\begin{theorem}\label{thm:finitealgebraicminimum}
+For every full split boundary triple, the original $K$-minimum
+$c_*$ has a finite regular harmonic presentation as in
+Definition~\ref{def:regularharmonic}. It has the finite weighted
+support of Proposition~\ref{prop:finitesupport}, satisfies the
+normalized ends, and obeys the stronger $O(h^2)$ midpoint estimate
+at every join.
+\end{theorem}
+
+\begin{proof}
+Choose $l<0<r$ inside the established fixed $K$-apartment tails.
+Proposition~\ref{prop:finitehahnregularity} gives a finite Hahn
+presentation on $[l,r]$. Apply
+Lemma~\ref{lem:finitecurvetransfer} to its exact split $K$
+endpoint norms, and append the actual known $K$ tails outside
+this interval. Call the resulting curve $z_K$.
+It is ordered and has the same weights, determinant functions
+and reduced labels as the Hahn minimum in the middle. Its tails
+are unchanged. We show that it is the actual $K$-minimum,
+rather than merely a curve with the same numerical data.
+
+For either finite presentation, its differential $J$ is finite.
+On the negative tail the gap is zero and the velocities are
+$O(e^u)$, so the integrand is $O(e^u)$. On the positive tail the
+velocity difference from $\epsilon_v\beta$ is $O(e^{-u})$,
+so the Bregman integrand is $O(e^{-u})$ as well. The norm errors
+from the reference tails have the same rates.
+
+Cut the actual tails at $\pm V$, keep the middle curve, and
+join to the exact reference tails on intervals of length one.
+At the negative end the common norms can be bridged together,
+so their gap stays zero and their velocities are $O(e^{-V})$.
+At the positive end both endpoint pairs are ordered; each
+vertex bridge is in its fixed tail apartment. Relative to the
+reference velocity its error is $O(e^{-V})$, since the endpoint
+norm errors have that size and $\beta'=O(e^{-2V})$.
+The bridge and removed tail costs are $O(e^{-V})$. These curves
+belong to $\calQ$ and converge uniformly to the given finite
+presentation. In particular,
+\[
+ J_*^L\le J_{\mathrm{diff}}(c_*^L).
+\]
+
+For the reverse inequality, take a global polygonal minimizing
+sequence converging uniformly to $c_*^L$. On each fixed
+$[-V,V]$, the partition lower bound gives
+\[
+ E_{\mathrm{diff},[-V,V]}(c_*^L)
+       \le\liminf_m E_{[-V,V]}(p_m).
+\]
+The endpoint determinant terms converge. Subtracting the finite
+correction in \eqref{eq:renormalization} gives the same lower
+bound for truncated $J$. Since its integrands are nonnegative,
+$J_{\mathrm{diff},[-V,V]}(c_*^L)\le J_*^L$.
+Monotone convergence as $V\to\infty$ proves
+$J_{\mathrm{diff}}(c_*^L)=J_*^L$.
+
+Scalar extension equates the two field infima. The transferred
+compact actions and the identical tails now give
+\[
+ J_{\mathrm{diff}}(z_K)=J_{\mathrm{diff}}(c_*^L)=J_*^K.
+\]
+The same exact-tail recovery over $K$ places $z_K$ in $\calY_K$
+and gives $\overline J(z_K)\le J_*^K$. Uniqueness in
+Theorem~\ref{thm:relaxedminimum} forces $z_K=c_*^K$ as actual
+norm curves. Thus the original minimum has the finite $K$
+presentation and actual semistable labels asserted here.
+Its midpoint estimate is Proposition~\ref{prop:quadraticchord};
+it does not depend on the transferred coordinates. The already
+proved tails give precisely the full normalized end limits.
+\end{proof}
+
+The construction has supplied algebraic edge labels on a finite
+support. To finish the path correspondence in
+Theorem~\ref{thm:main}, we must construct the local vertex
+filtrations and prove that every finite regular path with
+first-order matching is this minimum. Those are distinct uses
+of the matching condition, addressed next.

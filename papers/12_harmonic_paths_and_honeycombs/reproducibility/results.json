@@ -1,0 +1,94 @@
+{
+  "scope": "Exact finite algebra for every 0<s<1; normalized support for p>0",
+  "pairwise_spectra": {
+    "12": [
+      2,
+      0,
+      -2
+    ],
+    "13": [
+      2,
+      0,
+      -2
+    ],
+    "21": [
+      2,
+      0,
+      -2
+    ],
+    "23": [
+      2,
+      0,
+      -2
+    ],
+    "31": [
+      2,
+      0,
+      -2
+    ],
+    "32": [
+      2,
+      0,
+      -2
+    ]
+  },
+  "nonzero_minor_candidates_checked": 74,
+  "triple_determinant_candidates_checked": 14,
+  "D111": "6-s",
+  "vertices": {
+    "Y1": [
+      "-1",
+      "0"
+    ],
+    "Y2": [
+      "0",
+      "0"
+    ],
+    "Y3": [
+      "1",
+      "0"
+    ],
+    "P12": [
+      "-1/2",
+      "1/2"
+    ],
+    "P13": [
+      "0",
+      "1"
+    ],
+    "P23": [
+      "1/2",
+      "1/2"
+    ]
+  },
+  "finite_edges": [
+    [
+      "P12",
+      "P13"
+    ],
+    [
+      "P12",
+      "Y1"
+    ],
+    [
+      "P12",
+      "Y2"
+    ],
+    [
+      "P13",
+      "P23"
+    ],
+    [
+      "P23",
+      "Y2"
+    ],
+    [
+      "P23",
+      "Y3"
+    ]
+  ],
+  "exterior_rays": 9,
+  "bounded_faces": 1,
+  "normalized_euclidean_area": "1/2",
+  "status": "passed; no analytic theorem is certified by this calculation"
+}

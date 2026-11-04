@@ -1,0 +1,438 @@
+\section{Norm geometry and finite realization}\label{sec:normgeometry}
+
+We use the complete space of all norms to construct a minimum and return
+to split norms only after establishing finite regularity. This section
+records the spectral convexity, finite realization and projection results
+needed for that argument.
+
+\subsection{Relative spectra and the completion}
+For a finite-dimensional space $W$ over a complete non-Archimedean field,
+write $\Ndiag(W)$ for the split norms and $\Nall(W)$ for all norms.
+The Goldman--Iwahori distance is
+\[
+ d_\infty(h,k)=\sup_{z\ne0}\left|\log\frac{k(z)}{h(z)}\right|.
+\]
+If $h,k$ are split, choose a common orthogonal basis and arrange the
+logarithms $\log(k(e_i)/h(e_i))$ in decreasing order:
+\[
+ \sigma(h,k)=(\sigma_1(h,k),\ldots,\sigma_n(h,k)).
+\]
+Put $S_j(h,k)=\sum_{i=1}^j\sigma_i(h,k)$ and $S_0=0$.
+Equivalently, $S_j$ is the logarithm of the operator norm of the identity
+on the $j$th exterior power, with its induced determinant norms.
+This characterization extends $S_j$ continuously to all norms. Indeed,
+if $d_\infty(h,h')\le\eps$ and $d_\infty(k,k')\le\eta$, comparison of
+exterior norms gives
+\begin{equation}\label{eq:spectralcontinuity}
+ |S_j(h,k)-S_j(h',k')|\le j(\eps+\eta).
+\end{equation}
+We define the spectral coordinates on all norms by $\sigma_j=S_j-S_{j-1}$.
+
+Fix a nonzero volume vector $\xi\in\bigwedge^nW$ and let $d(h)$ be the
+logarithm of its determinant norm. For a basis matrix $P$ relative to a
+fixed frame with volume $\xi$, and weights $w_i$, this is
+\begin{equation}\label{eq:detnorm}
+ d(h)=\sum_iw_i+\nu(\det P).
+\end{equation}
+Thus
+\begin{equation}\label{eq:detspectrum}
+ S_n(h,k)=d(k)-d(h),\qquad
+ d_2(h,k)^2=\sum_i\sigma_i(h,k)^2,
+ \qquad d_\infty\le d_2\le\sqrt n\,d_\infty.
+\end{equation}
+Changing $\xi$ adds the same constant to all determinant logarithms.
+Only differences with a common volume convention will occur.
+
+The canonical geodesic between two split norms interpolates their
+logarithmic weights in a common orthogonal basis. Split norms are dense
+in $\Nall(W)$; the geodesics and the spectral metric extend to the
+completion. The space $(\Nall(W),d_2)$ is complete and CAT(0), and these
+are its unique geodesics \cite[Theorem~1.19 and Corollary~3.3]{BE21}.
+We always mean these geodesics, even when discussing a different
+spectral metric. Determinant logarithms are affine along them.
+The existence of a common basis for two split norms, as well as the
+restriction and quotient properties of split norms, is given in
+\cite[Lemma~1.13 and Proposition~1.14]{BE21}.
+
+For $W=V$, use the product metric
+$d((h_A,h_C),(k_A,k_C))^2=d_2(h_A,k_A)^2+d_2(h_C,k_C)^2$ when applying
+CAT(0) arguments. Suprema in time will be taken with the equivalent
+maximum of the two vertexwise distances. Let
+\[
+ \Dord=\{(h_A,h_C)\in\Nall(V)^2:h_A\le h_C\}.
+\]
+
+\begin{lemma}\label{lem:spectralconvexity}
+Let $h_\theta,k_\theta$ be canonical geodesics. Then
+\begin{equation}\label{eq:jointmajorization}
+ \sigma(h_\theta,k_\theta)
+ \prec(1-\theta)\sigma(h_0,k_0)+\theta\sigma(h_1,k_1),
+ \qquad 0\le\theta\le1,
+\end{equation}
+where $\prec$ denotes majorization with equality of total sums.
+Consequently, for every lower-semicontinuous convex function
+$\phi:\RR\to\RR\cup\{+\infty\}$,
+\begin{equation}\label{eq:costconvexity}
+ (h,k)\longmapsto\sum_i\phi(\sigma_i(h,k))
+\end{equation}
+is jointly geodesically convex and lower semicontinuous.
+The set $\Dord$ is closed and geodesically convex. Moreover,
+\begin{equation}\label{eq:trianglemajorization}
+ \sigma(h,l)\prec\sigma(h,k)+\sigma(k,l).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+First suppose the endpoints are split. Fix one basis for the geodesic
+$h_\theta$ and another for $k_\theta$. The logarithm of the norm of an
+exterior power of the identity is the maximum of finitely many affine
+functions of the two sets of weights, indexed by its nonzero minors.
+Thus every $S_j(h_\theta,k_\theta)$ is convex; this is the minor proof
+of \cite[Lemma~6.16]{HKKP26}. For $j=n$, the determinant identity gives
+affineness. The weighted sum on the right of
+\eqref{eq:jointmajorization} is decreasing, so these are exactly the
+majorization inequalities. The convex-hull characterization of
+majorization and scalar Jensen's inequality give
+\eqref{eq:costconvexity}. Neither monotonicity nor evenness of $\phi$
+is needed. If $\phi$ is finite only on an interval, finite endpoint
+costs and majorization keep the intermediate spectra in that interval;
+the extended-real inequality follows as well.
+
+Approximate the endpoints by split norms. Continuity of geodesics and
+\eqref{eq:spectralcontinuity} extend majorization to all norms. The
+convexity conclusion follows from the same majorization inequality,
+and lower semicontinuity follows from that of $\phi$.
+The order condition is equivalent to $\sigma_1(h_C,h_A)\le0$, so its
+sublevel set is closed and convex. Finally, submultiplicativity of
+exterior operator norms gives
+$S_j(h,l)\le S_j(h,k)+S_j(k,l)$; equality for $j=n$ follows from
+\eqref{eq:detspectrum}. This proves \eqref{eq:trianglemajorization}.
+\end{proof}
+
+We also use the following quantitative CAT(0) inequality. For arbitrary
+$x,x',y,y'$ and their respective midpoints $m_x,m_y$,
+\begin{equation}\label{eq:fourpoint}
+ d(m_x,m_y)^2\le
+ \frac{d(x,y)^2+d(x',y')^2}{2}
+ -\frac{\bigl(d(x,x')-d(y,y')\bigr)^2}{4}.
+\end{equation}
+It is a form of the energy convexity inequality of
+Korevaar--Schoen \cite[Proposition~1.3, equation~(1.3.2)]{KS97}. To see the coefficient,
+write $b=d(x,x')$, $c=d(y,y')$. Two applications of the CAT(0)
+midpoint inequality bound $4d(m_x,m_y)^2$ by
+\[
+ d(x,y)^2+d(x,y')^2+d(x',y)^2+d(x',y')^2-b^2-c^2.
+\]
+The CAT(0) quadrilateral inequality bounds the two cross terms by
+$d(x,y)^2+d(x',y')^2+2bc$, giving \eqref{eq:fourpoint}.
+No local compactness is required.
+
+\subsection{Scalar extension and finite realization}
+The field $K$ is algebraically closed
+\cite[Appendix~A, Lemma~A.1]{FOOO10}. Let
+\[
+ L=\CC((T^\RR))
+\]
+now denote the Hahn field, whose supports are arbitrary well-ordered
+subsets of $\RR$. It is algebraically closed and spherically complete
+\cite[Lemma~4, Theorem~1 and Corollary~4]{Poonen93}. The natural inclusion $K\subset L$ preserves the
+value group and residue field. Model completeness of algebraically
+closed valued fields makes this inclusion elementary. In particular,
+a finite existential condition over $K$ holding in $L$ holds in $K$;
+see \cite[Definitions~2.1--2.2 and Theorem~3.10]{Yin10} for the valued-field
+language and quantifier-elimination statement.
+
+For $h\in\Nall(W)$, its canonical extension to $W_L$ is
+\begin{equation}\label{eq:scalarextension}
+ h_L(z)=\inf_{z=\sum_i b_i z_i}\max_i |b_i|h(z_i),
+ \qquad b_i\in L,\quad z_i\in W.
+\end{equation}
+This is a norm, restricts to $h$, is isometric for $d_\infty$, and
+preserves orthogonal bases and their weights
+\cite[Definition~1.24 and Proposition~1.25]{BE21}.
+Every finite-dimensional $L$-norm is split \cite[Lemma~1.12]{BE21}. Approximating a pair of
+$K$-norms by split norms and using a common basis for the approximants
+shows, by \eqref{eq:spectralcontinuity}, that canonical extension
+preserves their entire relative spectrum. The same argument applies
+to an invertible $K$-linear arrow by pullback. Consequently extension
+is an isometry for $d_2$ and preserves canonical geodesics and order.
+
+\begin{lemma}[Finite realization]\label{lem:finiterealization}
+Let a finite directed graph have an $n$-dimensional $K$-space $V_v$ at
+each vertex and a fixed $K$-linear isomorphism $T_e$ on each edge.
+Give each $V_v$ an arbitrary norm $h_v$, and specify a subset of
+vertices at which the norms are split. There are split $K$-norms $k_v$
+which agree exactly with the prescribed norms at those vertices and
+preserve the entire logarithmic singular-value list of every $T_e$.
+\end{lemma}
+
+\begin{proof}
+Extend the diagram canonically to $L$, preserving every spectrum.
+Choose orthonormal $L$-basis matrices $P_v$, using fixed orthonormal
+$K$-basis matrices at the specified vertices. Orthonormal bases exist
+because the norms are split over $L$ and both value groups are $\RR$.
+Introduce matrices $Q_v$ with equations $P_vQ_v=Q_vP_v=I$.
+The arrow in these bases is $M_e=Q_{t(e)}T_eP_{s(e)}$.
+
+For each $1\le j\le n$ set
+$c_{e,j}=-\sum_{i=1}^j\sigma_i(T_e)$. Preserving the first $j$
+singular values in sum means precisely that every $j$-minor of $M_e$
+has valuation at least $c_{e,j}$ and one such minor has valuation
+exactly $c_{e,j}$. These are finite valued-field conditions with the
+parameters $T^{c_{e,j}}\in K$: every normalized minor belongs to
+$\OO$, and at least one is a unit. The boundary matrices and their
+inverses are fixed, not merely the lengths of their columns.
+
+The chosen $L$-matrices solve this finite formula. Elementarity gives
+$K$-matrices solving the same formula. Declare their columns
+orthonormal. The resulting norms have the required full spectra by
+the exterior-minor formula, and the fixed boundary matrices give
+exactly the prescribed boundary norms.
+\end{proof}
+
+Only finitely many real exponents are parameters in this argument.
+It does not quantify over norm functions or over a continuum of time
+values. Nor does it assert proximity between the newly realized norm
+and the original norm at an unspecified vertex. These distinctions
+will matter when passing to a limit of polygons.
+
+\subsection{Projections associated with a decomposition}
+Fix a direct sum $V=V_1\oplus\cdots\oplus V_m$. Let $\mathcal F$ be
+the set of norms for which this decomposition is orthogonal:
+\begin{equation}\label{eq:orthogonalblocks}
+ h(z_1+\cdots+z_m)=\max_i h(z_i),\qquad z_i\in V_i.
+\end{equation}
+This permits arbitrary norms on the summands and does not require each
+summand norm to be split. If the summands are lines, $\mathcal F$ is
+the corresponding complete apartment.
+
+\begin{lemma}\label{lem:blockprojection}
+The nearest-point projection $P:\Nall(V)\to\mathcal F$ preserves
+norm order and determinant logarithms, sends split norms to split norms,
+and satisfies
+\begin{equation}\label{eq:projectioncost}
+ \sum_i\phi\bigl(\sigma_i(Ph,Pk)\bigr)
+ \le\sum_i\phi\bigl(\sigma_i(h,k)\bigr)
+\end{equation}
+for every lower-semicontinuous convex scalar function $\phi$.
+\end{lemma}
+
+\begin{proof}
+Let $G$ be generated by the signs $s_i$ which act as $-1$ on $V_i$
+and as $1$ on the other summands. Since $|2|=1$, a $G$-invariant
+norm makes the coordinate projection $(I-s_i)/2$ non-expansive.
+Together with the ultrametric triangle inequality this proves
+\eqref{eq:orthogonalblocks}. The converse is immediate. Thus
+$\mathcal F$ is the common fixed set of a finite group of isometries;
+it is nonempty, closed and convex.
+
+The unique barycenter of the orbit $\{g_*h:g\in G\}$ belongs to
+$\mathcal F$ by invariance. On $\mathcal F$ its squared-distance
+objective is $|G|d_2(z,h)^2$, so it is precisely $Ph$.
+A finite squared-distance barycenter of points in a closed convex set
+lies in that set. Indeed, projection to the set decreases every squared
+distance by at least the squared distance of the barycenter to its
+projection. This would strictly decrease the objective unless the
+barycenter already belonged to the set.
+
+If $h_A\le h_C$, the orbit pairs belong to the closed convex order
+set $\Dord$. Their product barycenter is $(Ph_A,Ph_C)$, so order is
+preserved. The determinant level set through $h$ is closed and convex
+and contains its orbit, because $|\det g|=1$. Hence $d(Ph)=d(h)$.
+By Lemma~\ref{lem:spectralconvexity}, every finite sublevel set of
+\eqref{eq:costconvexity} is closed and convex. The orbit pairs
+$(g_*h,g_*k)$ have the same relative spectra and belong to this set.
+Taking their barycenter proves \eqref{eq:projectioncost}. The case of
+infinite right-hand side is automatic.
+
+Finally suppose $h$ is split. Its orbit norms are split. Apply
+Lemma~\ref{lem:finiterealization} to the unknown norm $Ph$, the fixed
+orbit norms, and the identity arrows joining it to each orbit norm.
+There is a split norm with the same distances to all orbit norms and
+therefore the same barycenter objective. Uniqueness identifies it
+with $Ph$.
+\end{proof}
+
+The contraction concerns the full convex spectral cost, rather than
+only $d_2$. We shall also need its quantitative part. Extend
+$\ell(v)=-\log\cos v$ by $+\infty$ for $|v|\ge\pi/2$.
+For $\Delta,W>0$ set
+\[
+ \mathcal K_{\Delta,W}(h,k)
+       =\frac W2\sum_i\ell\bigl(\sigma_i(h,k)/\Delta\bigr).
+\]
+
+\begin{lemma}\label{lem:projectionloss}
+For a finite-cost pair $h,k$, the projection of
+Lemma~\ref{lem:blockprojection} satisfies
+\begin{equation}\label{eq:projectionloss}
+ \mathcal K_{\Delta,W}(h,k)-\mathcal K_{\Delta,W}(Ph,Pk)
+ \ge\frac{W}{8\Delta^2}
+       \bigl(d_2(h,\mathcal F)-d_2(k,\mathcal F)\bigr)^2.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For any nearest-point projection onto a closed convex subset of a
+complete CAT(0) space, the projection is constant along the segment
+from a point to its projection. To check this, let $q=Px$ and let
+$z\in[q,x]$ satisfy $d(z,q)=\theta d(x,q)$. For $w$ in the convex set,
+\[
+ d(z,w)\ge d(x,w)-d(x,z)\ge\theta d(x,q)=d(z,q).
+\]
+Uniqueness gives $Pz=q$. Projection non-expansiveness and
+\eqref{eq:fourpoint}, applied to the midpoints of $[x,Px]$ and
+$[y,Py]$, now imply
+\[
+ d(x,y)^2-d(Px,Py)^2
+   \ge\tfrac12\bigl(d(x,\mathcal F)-d(y,\mathcal F)\bigr)^2.
+\]
+The function $\psi(s)=\ell(s/\Delta)-s^2/(2\Delta^2)$ is convex,
+since its second derivative on its finite domain is
+$\Delta^{-2}\tan^2(s/\Delta)$. Decompose the kinetic cost as
+\[
+ \mathcal K_{\Delta,W}(h,k)
+ =\frac{W}{4\Delta^2}d_2(h,k)^2
+       +\frac W2\sum_i\psi(\sigma_i(h,k)).
+\]
+Use the preceding distance inequality for the quadratic term and
+\eqref{eq:projectioncost} for the remainder.
+\end{proof}
+
+When applying these lemmas to a polygon, we project its nodes and then
+join the projected nodes by geodesics. We do not require projection to
+commute with geodesic interpolation. Fixed endpoint comparisons are
+valid only when the endpoint norms belong to $\mathcal F$, unless the
+changed endpoints are separately restored.
+
+\subsection{Common bases and order retractions}
+The next finite-dimensional observation permits spectral comparisons for
+operations on a pair of norms whose apartments need not agree.
+
+\begin{lemma}\label{lem:finitecommonbases}
+Let $h(s)$ and $k(s)$, $0\le s\le1$, be split geodesics, each in its
+own fixed apartment. There is a finite subdivision on each closed piece
+of which both curves are diagonal in one fixed basis, with affine weights.
+The same statement holds with real-analytic weights defined on a
+neighborhood of $[0,1]$, with analytic weights in the common bases.
+\end{lemma}
+
+\begin{proof}
+Write the two fixed bases as $e,f=eM$, with weights $a_i(s),c_j(s)$.
+At a given parameter choose a nonzero pivot maximizing
+\[
+ \log|M_{ij}|+a_i(s)-c_j(s).
+\]
+Its column inequalities say
+$|M_{kj}/M_{ij}|e^{a_k}\le e^{a_i}$.
+Thus replacing $e_i$ by
+$e_i+\sum_{k\ne i}(M_{kj}/M_{ij})e_k$ is an isometric triangular
+change of the $h$-basis, and makes $f_j=M_{ij}e_i^{\rm new}$.
+The row inequalities similarly give
+$|M_{il}/M_{ij}|e^{c_j}\le e^{c_l}$; replacing
+$f_l$ by $f_l-(M_{il}/M_{ij})f_j$ for $l\ne j$ is an isometric
+change of the $k$-basis and eliminates the pivot row. The inverses
+satisfy the same inequalities. Continue on the constant invertible
+Schur complement.
+
+There are finitely many complete pivot sequences. Each produces
+constant basis matrices; its validity is a finite list of inequalities
+in the original weights plus constants. For affine weights each
+validity set is an interval, possibly empty or a point. Their union
+covers $[0,1]$, and subdivision at the finitely many endpoints gives
+the assertion. At completion the two final bases differ by a
+permutation and a diagonal matrix, so the new weights differ from
+the original weights only by fixed constants and permutation.
+
+For analytic weights the differences defining validity are analytic
+on a neighborhood of the closed interval. Each is either identically
+zero or has finitely many zeros there. Subdivide at these zeros for
+all the finitely many pivot sequences. Validity is constant on each
+open piece and extends to its endpoints by non-strict inequalities.
+This proves the analytic assertion as well. Ties require no separate
+choice of a limiting basis.
+\end{proof}
+
+For two norms define their maximum and infimal convolution by
+\[
+ (h\vee k)(z)=\max\{h(z),k(z)\},\qquad
+ (h\wedge k)(z)=\inf_{z=x+y}\max\{h(x),k(y)\}.
+\]
+The latter is a norm: equivalence to a fixed finite-dimensional norm
+gives a positive lower bound on nonzero vectors, and approximate
+minimizing decompositions give the ultrametric triangle inequality.
+In a common orthogonal basis these operations are coordinatewise
+maximum and minimum of logarithmic weights. Both are jointly
+non-expansive for the maximum $d_\infty$ distance, as is clear from
+multiplicative comparison of their defining formulas.
+
+For an arbitrary pair $H=(h_A,h_C)$ define
+\begin{equation}\label{eq:orderretraction}
+ \Pi H=\bigl(\midpt(h_A,h_A\wedge h_C),
+             \midpt(h_C,h_A\vee h_C)\bigr).
+\end{equation}
+For an ordered pair and $s\ge0$, also define
+\begin{equation}\label{eq:shrinkandcap}
+ \begin{aligned}
+ \mathsf S_sH&=\bigl(\midpt(h_A,h_C\wedge e^s h_A),
+                    \midpt(h_C,h_A\vee e^{-s}h_C)\bigr),\\
+ \mathsf C_sH&=\bigl(\midpt(h_A,h_A\vee e^{-s}h_C),
+                    \midpt(h_C,h_C\wedge e^s h_A)\bigr).
+ \end{aligned}
+\end{equation}
+These formulas are intrinsic. In a common basis with weight pair
+$(a_i,c_i)$, $\Pi$ leaves the pair unchanged when $a_i\le c_i$
+and otherwise replaces it by its common average. For the two ordered
+operations, put $m_i=(a_i+c_i)/2$ and $g_i=c_i-a_i\ge0$.
+They retain $m_i$ and replace $g_i$, respectively, by
+\begin{equation}\label{eq:gapoperations}
+ (g_i-s)_+\quad\text{and}\quad\min\{g_i,s\}.
+\end{equation}
+
+\begin{lemma}\label{lem:pairretractions}
+The map $\Pi$ retracts all norm pairs onto $\Dord$. The maps
+$\mathsf S_s,\mathsf C_s$ preserve $\Dord$ and do not increase its
+determinant gap. All three preserve $d(h_A)+d(h_C)$, preserve
+splitness, and are continuous in the maximum $d_\infty$ metric.
+For any one of these maps $T$, with $s$ fixed where applicable,
+\begin{equation}\label{eq:totalcostcontraction}
+ \sum_{v,i}\phi\bigl(\sigma_i((TH)_v,(TH')_v)\bigr)
+ \le\sum_{v,i}\phi\bigl(\sigma_i(h_v,h'_v)\bigr)
+\end{equation}
+for every lower-semicontinuous convex $\phi$. The same scalar function
+is used at both vertices.
+\end{lemma}
+
+\begin{proof}
+The pointwise assertions follow from the common-basis formulas.
+Joint $d_\infty$ continuity follows from the maximum, infimal
+convolution and canonical midpoint formulas, and extends the assertions
+to all norms by split approximation. Ordered pairs can be approximated
+by split ordered pairs: after sufficiently close split approximation,
+a vanishing opposite scalar shift restores order.
+
+For the cost inequality first join $H$ to $H'$ by a product geodesic
+on $[0,1]$. By Lemma~\ref{lem:finitecommonbases} it has finitely many
+fixed common-basis pieces. Subdivide further where a signed gap is
+zero, or where an ordered gap equals $s$. On every resulting piece
+the transformed weights are affine and their derivatives either stay
+unchanged or are replaced by their pairwise average. Jensen's
+inequality gives
+\[
+ \sum_{v,i}\phi((Th)'_{vi})\le\sum_{v,i}\phi(h'_{vi}).
+\]
+The right-hand side is the constant endpoint spectral cost of the
+original product geodesic. Apply the spectral triangle majorization
+and Jensen's inequality to the transformed finite path. Its endpoint
+cost is at most the integral of its derivative cost, proving
+\eqref{eq:totalcostcontraction} for split inputs. For all-norm inputs
+first pass to the limit for finite continuous convex $\phi$. A general
+lower-semicontinuous convex function is the increasing supremum of
+finite maxima of affine minorants; this gives the extended-valued
+assertion without assuming continuity at a barrier.
+\end{proof}
+
+In particular the three maps contract the total log-cosine kinetic
+cost between two nodes. The parameter $s$ in this statement is constant.
+A time-dependent shrink introduces additional velocities, which will
+be estimated separately in the proof of finite incoming contact.

@@ -1,0 +1,274 @@
+\section{Introduction}\label{sec:introduction}
+
+A triple of non-Archimedean norms contains more information than the
+three relative spectral lists. The harmonic-path problem of
+Haiden--Katzarkov--Kontsevich--Pandit asks for a geometric reconstruction
+that retains this additional information: a path of non-expansive norms
+whose spectral velocities trace a labelled network in the plane
+\cite[\S\S7.2--7.3]{HKKP26}. We construct such paths for the identity
+representation of the $A_2$ quiver, for every full boundary triple and in
+every finite rank. The principal point is finite algebraic regularity of
+a variational minimum in a completed norm space. A separate converse
+identifies that minimum among paths satisfying an explicit first-order
+matching condition.
+
+\subsection{The boundary problem}
+Let $K$ be the real-exponent Novikov field over the trivially valued field
+$\CC$. Thus its elements are formal sums
+\[
+ f=\sum_{\lambda\in\RR}a_\lambda T^\lambda
+\]
+whose support is bounded below and has finite intersection with
+$(-\infty,b]$ for every $b\in\RR$. For $f\ne0$ set
+$\nu(f)=\min\{\lambda:a_\lambda\ne0\}$ and $|f|=e^{-\nu(f)}$.
+We write $\OO=\{|f|\le1\}$ and $\mm=\{|f|<1\}$; the residue field is
+$\OO/\mm=\CC$. This field is complete but not spherically complete.
+Its spherically complete Hahn extension will be used in the proof; the
+path constructed by the theorem is defined over $K$.
+
+Fix $V=K^n$ and consider the quiver with one arrow from its vertex $C$
+to its vertex $A$. We use the representations
+\begin{equation}\label{eq:ABC}
+ A=(0\longrightarrow K),\qquad
+ B=(K\xrightarrow{\id}K),\qquad
+ C=(K\longrightarrow0),\qquad E=B^n,
+\end{equation}
+and the central charges
+\begin{equation}\label{eq:charges}
+ Z(A)=e^{\pi i/6},\qquad Z(B)=i,\qquad Z(C)=e^{5\pi i/6}.
+\end{equation}
+A norm $h$ on $V$ is \emph{diagonalizable}, or \emph{split}, if there are
+a basis $e_1,\ldots,e_n$ and real weights $w_1,\ldots,w_n$ such that
+\begin{equation}\label{eq:splitnorm}
+ h\Bigl(\sum_i b_i e_i\Bigr)=\max_i e^{w_i}|b_i|.
+\end{equation}
+The norms diagonalized by a fixed basis form an apartment. We retain their
+scales; norms are not taken modulo multiplication by a positive scalar.
+Two split norms admit a common orthogonal basis. Their $d_2$ distance
+is the Euclidean norm of the differences of their logarithmic weights
+in such a basis. In particular, this is the unnormalized metric, including
+the determinant direction.
+
+A norm on $E$ is a pair $c=(c_A,c_C)$. The identity arrow is non-expansive
+exactly when
+\begin{equation}\label{eq:order}
+ c_A\le c_C
+\end{equation}
+pointwise on $V$. For a split norm $h$, put
+$\overline V_h=\{h\le1\}/\{h<1\}$. A non-expansive pair induces an
+arrow $\overline V_{c_C}\to\overline V_{c_A}$ over $\CC$.
+The harmonicity condition for a norm in \cite[Definition~7.3]{HKKP26}
+is semistability of this reduced representation. Every representation
+of this one-arrow quiver over $\CC$ is a direct sum of $A$, $B$ and $C$.
+Their phases are distinct, so the nonzero semistable objects are precisely
+$A^m$, $B^m$ and $C^m$.
+
+The boundary datum in this paper is an arbitrary triple of split norms
+\begin{equation}\label{eq:boundarytriple}
+ (h_B,h_A^+,h_C^+)\quad\text{on the fixed space }V.
+\end{equation}
+It determines the trivial negative-end filtration of $E$ and the
+positive-end filtration $0\subset A^n\subset E$, with quotient $C^n$.
+Indeed, a non-expansive norm on $B^n$ is harmonic precisely when its
+reduced arrow is invertible. In a common orthogonal basis for its two
+norms, this says that every relative weight is zero, hence that the two
+norms agree. Thus $h_B$ is exactly a harmonic norm on the negative-end
+object, while $h_A^+$ and $h_C^+$ are independent harmonic norms on the
+two positive-end factors. No initial comparison between these three
+norms is required.
+
+We fix the area form and its transverse coordinate
+\begin{equation}\label{eq:area}
+ \omega=\frac{\dd x\wedge\dd t}{1+x^2+t^2},\qquad
+ \lambda(x,t)=\frac{1}{\sqrt{1+t^2}}
+                  \arctan\frac{x}{\sqrt{1+t^2}}.
+\end{equation}
+Let
+\begin{equation}\label{eq:utime}
+ \begin{gathered}
+ a=\sqrt3,\qquad t=\sinh u,\qquad R(u)=\cosh u,\\
+ \beta(u)=\arctan(a\tanh u),\qquad F(u)=\int_0^u\beta(s)\,\dd s.
+ \end{gathered}
+\end{equation}
+We require the following limits in $d_2$:
+\begin{equation}\label{eq:normalizedends}
+ \begin{aligned}
+ c_A(u),c_C(u)&\longrightarrow h_B &&(u\longrightarrow-\infty),\\
+ e^{F(u)}c_A(u)&\longrightarrow h_A^+ &&(u\longrightarrow+\infty),\\
+ e^{-F(u)}c_C(u)&\longrightarrow h_C^+ &&(u\longrightarrow+\infty).
+ \end{aligned}
+\end{equation}
+These are the HKKP normalizations. In fact, for
+$A_\mu(t)=\int_0^t\lambda(\mu s,s)\,\dd s$, one has
+$A_a(\sinh u)=F(u)$ and $A_{-a}=-A_a$. The conjugate-charge direction
+convention in \cite[Definition~7.8]{HKKP26} gives slopes $-a,0,a$
+for the labels $A,B,C$, respectively.
+
+\subsection{First-order matching and the main theorem}
+We specify the comparison class in the uniqueness statement. This is
+necessary because edge directions and abstract edge labels do not by
+themselves identify the embeddings of the velocity subspaces at a join.
+
+\begin{definition}\label{def:regularharmonic}
+A \emph{finite regular harmonic path} is a continuous ordered pair of
+split norms on the whole $u$-line with the following properties.
+There is a finite subdivision into intervals on each of which both norms
+lie in fixed apartments, with weight functions smooth up to the finite
+endpoints. After subdivision at the intersections of the support branches,
+the weights are grouped by their derivative functions
+$p_g(u)\in(-\pi/2,\pi/2)$, and
+\begin{equation}\label{eq:branch}
+ R(u)\tan p_g(u)=\alpha_g\sinh u+b_g,
+ \qquad \alpha_g\in\{-a,0,a\},\quad b_g\in\RR.
+\end{equation}
+Within each group the relative weights and reduced arrow are constant.
+The actual reduced object is semistable, of type $A^{m_g}$, $B^{m_g}$ or
+$C^{m_g}$, according as $\alpha_g=-a,0,a$. The closure of these labelled
+branches is the support of the path.
+
+The path satisfies \emph{first-order matching} if, at every finite
+subdivision time $u_0$ and for $v=A,C$,
+\begin{equation}\label{eq:matching}
+ d_2\bigl(c_v(u_0),\midpt(c_v(u_0-h),c_v(u_0+h))\bigr)=o(h)
+ \qquad(h\downarrow0).
+\end{equation}
+Here $\midpt$ is the midpoint of the canonical norm geodesic. This
+condition is independent of bases and of artificial subdivisions.
+\end{definition}
+
+In a single apartment, \eqref{eq:matching} is equality of the two
+one-sided first derivatives. More generally, it requires the one-sided
+norm motions to fit to first order in the metric space of norms.
+The groups in Definition~\ref{def:regularharmonic} retain their actual
+reduced arrows, not merely their dimensions. In particular, a group with
+both source and target is of type $B^{m_g}$ only when its reduced arrow
+is an isomorphism.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge1$. For every triple \eqref{eq:boundarytriple} of split norms
+over $K$, there is a unique finite regular harmonic path satisfying
+first-order matching and the normalized ends \eqref{eq:normalizedends}.
+It has the following properties.
+\begin{enumerate}
+\item Its support is a finite balanced weighted honeycomb with incoming
+$B$-multiplicity $n$ and outgoing $A$- and $C$-multiplicities $n$ each.
+It has at most $n^2$ essential geometric vertices.
+\item At every support vertex there is an actual reduced quiver
+representation with two increasing-phase filtrations. Their successive
+quotients are the incident incoming and outgoing edge objects. These
+identifications agree along the edges and remove artificial subdivisions.
+\item Each tail lies in fixed $K$-apartments. The two norms agree for
+all sufficiently negative times. All three normalized limits have
+$d_2$ error $O(|t|^{-1})$.
+\item The path is equivariant under simultaneous $\GL_n(K)$ change
+of basis of the three boundary norms.
+\end{enumerate}
+The path has analytic one-sided weights and satisfies the stronger
+$O(h^2)$ estimate in \eqref{eq:matching}.
+\end{theorem}
+
+The multiplicities in the theorem specify the degree of the honeycomb;
+they do not prescribe the valence of its vertices. In particular, crossing
+vertices can be four-valent. The $n^2$ count is the standard finite
+honeycomb bound from the finite dual subdivision in Knutson--Tao theory
+\cite[Lemmas~4 and 6--8 and Theorem~1]{KT99}. The analytic content
+is that the variational construction has finite support to which this
+bound applies, and then a finite apartment description over the original
+Novikov field. The theorem includes repeated boundary spectra,
+coincident edges and collapsed bounded edges. Its estimates need not
+be uniform over all boundary triples.
+
+The uniqueness is equality of the actual norms at every time. It is
+stronger than equality of support or S-equivalence within the stated
+class. The theorem does not claim that every honeycomb with the same
+boundary spacings gives the same path. Nor does the inclusion of degenerate
+inputs by itself assert continuous dependence on arbitrary boundary data.
+An explicit rank-three family below has a bounded face that collapses,
+with a uniform Lipschitz estimate for its full norm paths.
+
+\subsection{Relation to the harmonic-path conjecture}
+HKKP conjecture a correspondence between harmonic paths and pairs of
+ascending-phase filtrations with harmonic norms on their quotients
+\cite[Conjecture~7.10]{HKKP26}. Their honeycomb example identifies the
+boundary data with triples of diagonalizable norms
+\cite[\S7.3]{HKKP26}. Theorem~\ref{thm:main} gives existence for every
+such triple in the present field and area form. Its uniqueness statement
+uses the finite regular class and the explicit condition
+\eqref{eq:matching}.
+
+The displayed conditions of \cite[Definition~7.8]{HKKP26} do not explicitly
+impose this matching. They permit coordinate velocity subspaces to switch
+at finitely many times while the support and abstract edge labels remain
+unchanged. We give two rank-three examples with the same full normalized
+ends and the same connected balanced support that differ by such switches.
+They fail \eqref{eq:matching}. This explains why we do not state
+Theorem~\ref{thm:main} as an unqualified proof of Conjecture~7.10.
+The construction also supplies the local residue-category vertex data,
+but we do not prove that abstract vertex filtrations alone imply
+\eqref{eq:matching}, or identify every globally framed categorical network
+with the norm paths in the theorem.
+
+Haiden--Katzarkov--Simpson construct the category of spectral networks with
+vertex filtrations and edge identifications
+\cite[\S4.4]{HKS24}. In their constant-coefficient, product-type setting, the uniqueness
+theorem gives the same support and S-equivalent reductions for networks
+representing the same object after Novikov-field extension
+\cite[Theorem~4.15]{HKS24}. Their regular-hexagon theorem supplies spectral
+network representatives in a specified $A_2$ setting
+\cite[Theorem~6.1]{HKS24}. These are different assertions from reconstruction
+of the full framed norm path from arbitrary boundary norms. The family-Floer
+comparison discussed in \cite[Remark~7.9]{HKKP26} is not used in our
+existence or uniqueness proof.
+
+The relation between honeycombs and feasible spectral triples is classical
+\cite{KT99}; Moitra--Postnikov--Woodruff give an axiomatic treatment of
+that relation \cite{MPW26}. Appleby--Whitehead construct real-valued Littlewood--Richardson
+fillings from matrix pairs over valuation rings and hives from pairs
+of full lattices \cite{AW13,AW18}. These constructions also retain
+information beyond pairwise spectra. Our claim concerns the harmonic norm
+path for the specified area form, rather than a first construction of
+numerical honeycombs from valued linear algebra. Ben-Bassat's split
+attainment theorem \cite[Theorem~1.1]{BB26} concerns the stationary harmonic-norm
+potential of HKKP. Split attainment at each individual time does not supply
+a coherent path or finite apartment structure; those require the
+regularity argument below.
+
+\subsection{The variational argument}
+HKKP suggest a variational approach based on a convex function of the
+velocity \cite[p.~85]{HKKP26}. For \eqref{eq:area}, its scalar kinetic
+term in the $u$ coordinate is
+\[
+ \ell(v)=-\log\cos v,\qquad |v|<\pi/2.
+\]
+In a product apartment the local action is
+\begin{equation}\label{eq:introlocalaction}
+ \int_I R(u)\left\{\frac12\sum_{v=A,C}\sum_i\ell(w_{vi}'(u))
+       +\frac a2\bigl(d(c_C(u))-d(c_A(u))\bigr)\right\}\dd u,
+\end{equation}
+where $d(h)$ is the logarithmic determinant norm in a common fixed volume
+normalization. The positive-end reference velocities are
+$-\beta$ and $\beta$. Subtracting their supporting affine terms gives a
+nonnegative renormalized action on the whole line. A weighted strict
+convexity estimate makes every minimizing sequence uniformly Cauchy.
+The limit is first constructed in the complete space of all norms.
+
+The main difficulty is to prove that this limit is a finite algebraic
+path. Short ordered replacements give quadratic approximation by endpoint
+geodesics and locally Lipschitz spectral velocities. Where groups of
+velocities are separated, equality in the relevant Ky Fan inequalities
+forces fixed orthogonal subspaces. At almost every time, scalar
+normalization on these subspaces gives second-order norm approximations.
+An endpoint repair with action error $o(h^3)$ permits variations by actual
+residue subrepresentations. The resulting equations force semistability
+and the three honeycomb directions.
+
+The direction laws imply that each opposite-type pair of spectral
+positions has at most one contact interval. There are consequently only
+finitely many support events. On every interval between them the fixed
+subspaces have scalar norm motion, giving a single apartment. A finite
+valued-field transfer preserves the full endpoint norms, the reduced
+arrows and the action, and identifies the resulting $K$-path with the
+original minimum. Finally, opposite momentum directions at a matched
+join give nonnegative Busemann boundary terms. This proves the converse
+across all joins and yields the equality uniqueness in
+Theorem~\ref{thm:main}.
