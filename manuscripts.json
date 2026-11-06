@@ -326,6 +326,13 @@
       "reproducibility/k3_model.py": "669ec33ffde319a43709a7c3adfa1f0d5688d28d482ed169c0b2ff540af3993d",
       "reproducibility/plot_distance_profile.py": "bd9fa9928fc6b1db9d971efab34126b40954a745c2014b64339cf98e91f5b707"
     },
+    "archive": {
+      "doi": "10.5281/zenodo.24021822",
+      "conceptdoi": "10.5281/zenodo.24021821",
+      "record_url": "https://zenodo.org/records/24021822",
+      "created": "2026-11-06T20:46:58.224847+00:00",
+      "id": 24021822
+    },
     "number": 13,
     "directory": "13_k3_metric_wall_crossing"
   }

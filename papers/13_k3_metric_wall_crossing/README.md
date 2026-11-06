@@ -3,7 +3,7 @@
 By [Bernd Johannes Wuebben](https://bwuebben.github.io/), [ORCID](https://orcid.org/0009-0002-4588-3284).
 Paper 13. Preprint, 6 November 2026. 21 pages.
 
-[Read the paper](k3-metric-wall-crossing.pdf) · [Full abstract and citation](https://bwuebben.github.io/papers/k3-metric-wall-crossing/) · Zenodo archive pending.
+[Read the paper](k3-metric-wall-crossing.pdf) · [Full abstract and citation](https://bwuebben.github.io/papers/k3-metric-wall-crossing/) · [Zenodo:24021822](https://zenodo.org/records/24021822) · [DOI](https://doi.org/10.5281/zenodo.24021822)
 
 The paper compares actual harmonic L² metrics on a complex twelve-dimensional
 rank-three K3 bundle-moduli neighborhood with the hyperkähler quotient metrics
