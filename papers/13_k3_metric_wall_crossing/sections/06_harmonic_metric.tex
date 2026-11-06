@@ -1,0 +1,196 @@
+\section{The actual harmonic metric}\label{sec:harmonic}
+
+We now identify the form required in Corollary~\ref{cor:quotient-transfer}
+with harmonic cohomology. The uniformly invertible operator in this
+argument is the infinite-dimensional complementary gauge operator.
+The possibly small finite orbit directions are retained until the
+last minimization.
+
+\subsection{The complementary projection}
+
+On the uncorrected holomorphic family $\ddbar_0+a(x)$, put
+\begin{equation}\label{eq:transported-metric}
+H_{t,x}=h_0e^{2\sigma(t,x)}.
+\end{equation}
+The gauge $e^{\sigma(t,x)}$ is an isometry from this metric to $h_0$
+on the corrected presentation. At an integrable zero of the corrected
+moment, $H_{t,x}$ is the actual projectively HE metric; the scalar
+determinant adjustment has no effect on endomorphism norms. Away
+from that locus it is a smooth positive auxiliary metric.
+
+Let $\mathfrak g$ be the full parallel complex trace-free algebra, and
+let $Q$ be its fixed $L^2$ complement in trace-free zero-forms.
+We write $QW^{1,2}=Q\cap W^{1,2}$.
+At the central bundle, ellipticity and removal of the kernel give
+\begin{equation}\label{eq:complement-gap}
+\|\eta\|_{W^{1,2}}\le C\|d\eta\|_{L^2},\qquad
+\eta\in QW^{1,2}.
+\end{equation}
+Since $a(x)$ is small in $C^0$, this persists with $D_x$ in place
+of $d$. The norms for $H_{t,x},\omega_t$ remain uniformly equivalent.
+
+\begin{proposition}\label{prop:ambient-harmonic}
+There is a smooth positive $K$-equivariant Hermitian form
+$\mathcal B_{t,x}$ on the whole ambient coefficient space satisfying
+\begin{equation}\label{eq:B-estimate}
+(1-C(|t|+|x|^2))g^{\rm amb}
+\le\mathcal B_{t,x}\le
+(1+C(|t|+|x|^2))g^{\rm amb},
+\end{equation}
+such that
+\begin{equation}\label{eq:full-infimum}
+\inf_{\zeta}\|J_xv-D_x\zeta\|_{H_{t,x},\omega_t}^2
+=\inf_{\xi\in\mathfrak g}
+\mathcal B_{t,x}(v-C_x\xi,v-C_x\xi).
+\end{equation}
+On an integrable HE point and a tangent to a smooth reduced quotient
+piece, the left side is its actual harmonic Kodaira--Spencer norm.
+\end{proposition}
+
+\begin{proof}
+Define the form by polarization of
+\begin{equation}\label{eq:B-definition}
+\mathcal B_{t,x}(v,v)
+=\inf_{\eta\in QW^{1,2}}\|J_xv-D_x\eta\|_{H_{t,x},\omega_t}^2.
+\end{equation}
+The range $D_xQW^{1,2}$ is closed by~\eqref{eq:complement-gap}.
+More explicitly, on the fixed Hilbert space $\mathcal H=QW^{1,2}$
+the normal operator is
+\[
+L_{t,x}:\mathcal H\to\mathcal H^*,\qquad
+\langle L_{t,x}\eta,\nu\rangle
+=\langle D_x\eta,D_x\nu\rangle_{H_{t,x},\omega_t}.
+\]
+It is uniformly bounded and coercive. Its inverse varies smoothly
+by the bounded-inverse identity. The minimizing $\eta_v$ solves
+$L_{t,x}\eta_v(\nu)=\langle J_xv,D_x\nu\rangle$.
+Thus the orthogonal projection, and hence $\mathcal B$, are smooth
+on the full ambient ball, without a rank condition on an obstruction
+map or finite orbit map.
+
+At $(0,0)$, harmonic orthogonality gives
+$\mathcal B_{0,0}=g^{\rm amb}$, so it is positive nearby.
+All ingredients are compact-equivariant, including the fixed complement.
+The automorphism acting by $-I$ on $\cV$ gives
+$\mathcal B_{t,-x}(-v,-w)=\mathcal B_{t,x}(v,w)$.
+Its coefficient matrix is therefore even in $x$. Taylor's theorem
+gives~\eqref{eq:B-estimate}. This parity argument is a simplification
+available in the present representation.
+
+Split every complex zero-form gauge as $\zeta=\xi+\eta$ with
+$\xi\in\mathfrak g$, $\eta\in Q$. Equation~\eqref{eq:equivariance}
+permits the first minimization over $\eta$ to be performed exactly,
+leaving $\mathcal B(v+C_x\xi,v+C_x\xi)$. Replace $\xi$ by $-\xi$
+to obtain~\eqref{eq:full-infimum}. No inverse of the finite orbit
+operator has been used.
+
+At an integrable point and for a tangent along its reduced integrability
+piece, $D_xJ_xv=0$. Hodge theory identifies the least norm in this
+Dolbeault cohomology class with its harmonic norm. Changing to the
+corrected presentation by a varying gauge $g$ changes the representative
+to
+\[
+g(J_xv)g^{-1}-D'_x(\dot g g^{-1}).
+\]
+Conjugation is an isometry for the transported metric, and the second
+term is exact. Thus derivatives of $\sigma$ do not enter the norm
+identity. The interpretation concerns genuine tangent classes, not
+arbitrary Zariski tangent vectors at a singular coarse quotient.
+\end{proof}
+
+Together, Proposition~\ref{prop:corrected-slice},
+Theorem~\ref{thm:balancing} and
+Proposition~\ref{prop:ambient-harmonic} meet every hypothesis of
+Corollary~\ref{cor:quotient-transfer}. They prove the tensor estimate
+\eqref{eq:main-tensor} on the corrected quotient, with constants
+independent of the positive eigenvalues of $A^*A+BB^*$.
+
+\subsection{The full actual moduli neighborhood}
+
+\begin{proposition}\label{prop:actual-neighborhood}
+The corrected integrable solution quotient describes an open
+neighborhood in actual fixed-determinant HYM moduli. Combined with
+Theorem~\ref{thm:balancing}, it gives the maps $f_t$ of
+Theorem~\ref{thm:main}, on a common radius domain. The nonzero
+chambers consist of stable bundles, and the rank-one wall piece
+consists of $L_1\oplus F$ with $F$ stable of vector $(2,H,0)$.
+\end{proposition}
+
+\begin{proof}
+The harmonic slice is a complete local deformation family, with local
+complex-orbit classification \cite[Proposition~4.3]{Del25}.
+On the integrable locus, the corrected finite solution quotient has
+an open image in actual HYM moduli
+\cite[Lemma~7.3 and Theorem~7.4]{Del25}.
+We spell out why our fixed-density and complementary normalization
+describes that same full neighborhood.
+
+Put any sufficiently close integrable solution into the harmonic
+family by complex Coulomb gauge. The small gauge taking a harmonic
+representative to the actual solution has polar decomposition $ke^s$.
+The unitary part does not change the moduli point. Move the harmonic
+base point by a small positive parallel gauge $e^h$ and polar-decompose
+$e^se^{-h}$. The projection onto the parallel Hermitian algebra of
+the logarithm of its positive factor has derivative $-I$ in $h$
+at $(s,h)=(0,0)$. The finite implicit-function theorem therefore
+makes that logarithm complementary. Uniqueness of the complementary
+equation in Proposition~\ref{prop:corrected-slice} identifies it
+with $\sigma(t,x)$. All operations are continuous on common
+parameter and coefficient neighborhoods. Conversely, every
+integrable zero of this corrected slice is an actual solution.
+Thus the normalization changes the slice, not its solution quotient.
+
+Local complex-orbit classification and the compact-orbit uniqueness
+in Theorem~\ref{thm:balancing} give a well-defined continuous inverse.
+The inverse coverage in that theorem permits a fixed shrinking of
+the radius. Work inside a larger common chart; the image of any
+smaller strict radius domain is open. The finite-regularity slice
+topology agrees here with the smooth connection quotient topology:
+the finite representatives depend continuously in every fixed spatial
+norm by elliptic bootstrapping, and their inverse is already continuous
+in a fixed sufficiently high regularity. No weak compactification
+topology is used.
+
+We also identify stabilizers. If a small reconstructed bundle has a
+holomorphic trace-free endomorphism $\xi+\eta$, with
+$\xi\in\mathfrak g$ and $\eta\in Q$, then
+$D_x\eta=J_xC_x\xi$. Equation~\eqref{eq:B-definition} gives
+$\mathcal B(C_x\xi,C_x\xi)=0$. Positivity forces $C_x\xi=0$,
+and complementary coercivity gives $\eta=0$. Thus the actual
+infinitesimal automorphisms are exactly the finite stabilizer
+directions. At nonzero level the effective finite action is free;
+the bundle is simple and polystable, hence stable by the
+Hermitian--Einstein correspondence \cite{Don85,UY86}.
+
+The complete holomorphic deformation family induces the usual
+holomorphic classifying map to stable-bundle moduli. Its
+Kodaira--Spencer map after quotienting is an isomorphism, so the
+local bijection is biholomorphic. Restriction to a fixed stabilizer
+piece gives the same conclusion there at the wall. The reduced
+analytic wall quotient is the invariant quotient of the exact
+quadratic germ, with coordinate $N=AB$, as established in
+Propositions~\ref{prop:finite-geometry} and
+\ref{prop:analytic-coordinates}.
+
+At a rank-one point of the zero-level quotient, the unused multiplicity line
+defines a holomorphic idempotent. Equivariance preserves the splitting
+in the harmonic reconstruction and in the complementary correction.
+The corresponding line is $L_1$, since it has no self-deformations.
+The other summand has vector $(2,H,0)$ and no trace-free
+automorphisms on its effective support. It is therefore stable.
+Its dimension is $H^2+2=8$, in agreement with the rank-one stratum.
+At the vertex the effective stabilizer is $U(2)$.
+
+Finally, the zero section at nonzero parameter has radius
+$\sqrt{2|\tau|}$, so its whole compact fibre lies in the common
+chart for small $t$. The incidence maps now give the stated local
+stratified Mukai flop. Section~\ref{sec:k3} identifies the nearby
+integral-polarization chambers with the locally free open loci in
+ordinary Gieseker moduli. No global wall-Gieseker morphism has
+entered the argument.
+\end{proof}
+
+This proves the topological and tensor assertions of
+Theorem~\ref{thm:main}. The remaining issue is intrinsic distance:
+a comparison on a coordinate domain alone does not prevent an ambient
+path from leaving it and returning at smaller cost.

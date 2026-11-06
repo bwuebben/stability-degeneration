@@ -1,0 +1,295 @@
+\section{Introduction}\label{sec:introduction}
+
+Variation of stability changes the birational geometry of moduli spaces
+of sheaves on a K3 surface. Near a polystable sheaf, an Ext-quiver can
+describe the analytic contraction and its exceptional strata. On the
+locally free locus, the Hermitian--Einstein correspondence gives another
+geometric structure: a tangent vector has the $L^2$ norm of its harmonic
+Kodaira--Spencer representative. An analytic quiver description does not
+identify this metric. In particular, it does not determine its behavior
+when several exceptional strata approach one another at different rates.
+
+We establish such a metric comparison for a rank-three wall crossing whose
+local complex geometry is the stratified Grassmannian Mukai flop. The wall
+contains an eight-dimensional stratum with projective-plane fibres and a
+more reducible point with a Grassmannian fibre. The comparison holds on a
+full neighborhood containing both strata. It gives relative asymptotics
+for intrinsic distances, the complete metric obtained by rescaling the
+contracting region, and a quantitative comparison with the surrounding
+wall metric.
+
+\subsection{The moduli problem and metric convention}
+
+Section~\ref{sec:k3} constructs a smooth genus-four K3 surface $X$ containing
+smooth rational curves $D_1,D_2$ such that
+\begin{equation}\label{eq:intersection-intro}
+D_1^2=D_2^2=-2,\qquad D_1D_2=5,\qquad H=D_1+D_2\ \text{is ample}.
+\end{equation}
+Put $L_i=\cO_X(D_i)$ and
+\[
+E_0=(L_1\otimes\CC^2)\oplus L_2,\qquad
+v=(3,2D_1+D_2,0),\qquad D=D_1-D_2.
+\]
+We fix the holomorphic determinant $L_1^2L_2$. The Mukai vector $v$ is
+primitive, $v^2=10$, and $c_2(E_0)=8$. At the polarization $H$, the
+bundle $E_0$ is both slope-polystable and Gieseker-polystable.
+
+Choose a smooth path of K\"ahler forms $\omega_t$ in $H+tD$, for $|t|$
+small, with $\omega_0$ Ricci-flat, whose existence in $H$ follows from
+Yau's theorem \cite{Yau78}. Let
+$\cM_t^{\rm bun}$ be the moduli space of slope-polystable locally free
+bundles of vector $v$ and the specified determinant. We use its
+Hermitian--Yang--Mills connection topology. On each smooth orbit-type
+stratum, where the conjugacy class of the effective compact stabilizer
+is fixed, its metric $g_t$ is the harmonic Dolbeault metric, with
+\begin{equation}\label{eq:dolbeault-norm}
+\|a\|_{\omega_t,h}^2
+=\int_X\tr(i a^\dagger\wedge a)\wedge\omega_t .
+\end{equation}
+There is no division by volume. The real connection variation $a-a^\dagger$
+has squared norm twice~\eqref{eq:dolbeault-norm}. The determinant line has
+its $\omega_t$-Hermitian--Einstein metric; changing a scalar bundle metric
+does not affect the endomorphism norms in~\eqref{eq:dolbeault-norm}.
+
+The length distance $d_t$ is defined using continuous paths that are
+piecewise smooth on the smooth orbit-type strata, with local gauge
+lifts. Finite-length limiting endpoints at lower strata are allowed.
+Paths used to define $d_t$ may leave any prescribed coordinate
+neighborhood; they remain in the locally free moduli component. We do
+not impose this metric on non-locally-free sheaves.
+
+\subsection{The comparison theorem}
+
+We first specify the finite-dimensional quotient metric appearing in the result. Let
+\[
+\cV=\Hom(\CC^2,\CC^5)\oplus\Hom(\CC^5,\CC^2),\qquad x=(A,B),
+\]
+with Euclidean Hermitian norm $\|x\|^2=\tr A^*A+\tr BB^*$.
+The group $G=GL_2(\CC)$ acts by
+$(A,B)\mapsto(Ag^{-1},gB)$, with compact form $K=U(2)$. Define
+\begin{equation}\label{eq:model-intro}
+M_\tau=\{BA=0,\ A^*A-BB^*=\tau I_2\}/K,\qquad
+\tau=\tau(t)=-\frac{28\pi}{3}t .
+\end{equation}
+Write $g_\tau^{\rm q}$ and $d_\tau^{\rm q}$ for its flat quotient metric
+and length distance, and $r_\tau([A,B])=(\|A\|^2+\|B\|^2)^{1/2}$.
+At $\tau=0$ these are understood on the stratified quotient.
+
+The invariant $N=AB$ takes values in
+\begin{equation}\label{eq:nilpotent-cone}
+\cN=\{N\in\End(\CC^5):N^2=0,\ \rank N\le2\}.
+\end{equation}
+For $\tau>0$, $M_\tau=T^*\Gr(2,5)$; for $\tau<0$,
+$M_\tau=T^*\Gr(3,5)$; and $M_0=\cN$. The quotient maps
+$\pi_\tau:M_\tau\to\cN$ are the two incidence resolutions. Their fibres
+are points over rank two, $\PP^2$ over rank one, and the full
+Grassmannians over zero. Section~\ref{sec:model} recalls these
+identifications with their metric normalizations.
+
+\begin{theorem}\label{thm:main}
+There are $R,t_0,C>0$ such that, for $|t|<t_0$, there are
+homeomorphisms
+\[
+f_t:\{r_{\tau(t)}<R\}\subset M_{\tau(t)}
+\longrightarrow U_t\subset\cM_t^{\rm bun}
+\]
+onto open subsets. They are smooth and biholomorphic on the corresponding
+smooth complex orbit-type strata. The vertex maps to $[E_0]$ at
+$t=0$, and the whole zero section is included for all sufficiently small
+nonzero $t$. Every point of $U_t$ is slope-stable when $t\ne0$.
+
+On every smooth piece and for every tangent vector,
+\begin{equation}\label{eq:main-tensor}
+(1-C(|t|+r_\tau^2))g_\tau^{\rm q}
+\ \le\ f_t^*g_t\ \le\
+(1+C(|t|+r_\tau^2))g_\tau^{\rm q}.
+\end{equation}
+The constants are independent of the positive singular values of $AB$
+and of their ratios to each other and to $|t|$.
+
+For some $c,C'>0$, if $r_\tau(p),r_\tau(q)\le\rho\le cR$, then
+\begin{equation}\label{eq:main-distance}
+(1-C'(|t|+\rho^2))d_\tau^{\rm q}(p,q)
+\le d_t(f_t(p),f_t(q))
+\le(1+C'(|t|+\rho^2))d_\tau^{\rm q}(p,q).
+\end{equation}
+The middle distance allows paths throughout the locally free moduli
+component.
+\end{theorem}
+
+The parameter in~\eqref{eq:model-intro} follows from the Chern degrees and
+the harmonic pairing; it is not a choice of scaling exponent. Since
+$r_\tau^2\ge2|\tau|$, the error in~\eqref{eq:main-tensor} is also $O(r_\tau^2)$.
+At the wall, the rank-one piece parametrizes bundles $L_1\oplus F$, where
+$F$ is stable of Mukai vector $(2,H,0)$. It meets the more reducible
+bundle $E_0$. Thus the uniformity includes a genuine change from effective
+circle symmetry to effective $U(2)$ symmetry.
+
+For the integral ample classes $mH\pm D$, with $m$ sufficiently large,
+$c_1(E_0)(mH\pm D)=9m\mp7$ is coprime to three. Slope and Gieseker
+stability therefore coincide for these invariants. The two chamber
+neighborhoods occur in the locally free loci of the ordinary projective
+sheaf moduli spaces. The contraction diagram asserted here is local
+and analytic. It does not require a global morphism to the ordinary
+$H$-Gieseker wall moduli space.
+
+\subsection{Distances and rescaled geometry}
+
+Let $s_1\ge s_2\ge0$ be the singular values of $N=AB$. For $\kappa>0$ set
+\begin{equation}\label{eq:profile-intro}
+b_i^2=\frac{\sqrt{\kappa^2+4s_i^2}-\kappa}{2},\qquad
+F_\kappa(b)=\int_0^b
+\sqrt{\frac{\kappa+2u^2}{\kappa+u^2}}\,du.
+\end{equation}
+For $\kappa=0$ put $b_i=\sqrt{s_i}$ and $F_0(b)=\sqrt2\,b$.
+Take a slightly larger chart than the one in Theorem~\ref{thm:main},
+so that closed radius subsets are defined. Let
+\[
+\cE_t=f_t(\pi_\tau^{-1}(0)),\qquad
+\cD_t=f_t(\pi_\tau^{-1}\{\rank N\le1\}\cap\{r_\tau\le R\}).
+\]
+These are the deepest fibre and the local contracted locus; at $t=0$
+they become the vertex and the closure of the reducible stratum.
+
+\begin{theorem}\label{thm:distances}
+For $x$ of radius $r=r_\tau(x)\le cR$, with $\kappa=|\tau|$,
+\begin{align}
+d_t(f_t(x),\cE_t)
+&=(1+O(|t|+r^2))
+\sqrt{F_\kappa(b_1)^2+F_\kappa(b_2)^2},\label{eq:distance-zero}\\
+d_t(f_t(x),\cD_t)
+&=(1+O(|t|+r^2))F_\kappa(b_2).\label{eq:distance-rank}
+\end{align}
+The errors are multiplicative and uniform in all the indicated scales.
+At zero distance the formulas mean equality to zero.
+
+The metric induced on $\cE_t$ is $|\tau|$ times the standard
+Grassmannian quotient metric, with relative error $O(|t|)$.
+On the $\PP^2$ fibre over a rank-one matrix of singular value $s>0$,
+the induced metric is $|\tau|$ times the Hopf-quotient Fubini--Study
+metric, with relative error $O(|t|+s)$.
+\end{theorem}
+
+In particular,
+\[
+d_0(f_0(N),\cD_0)=(1+O(r_0^2))\sqrt{2s_2}.
+\]
+For nonzero $\tau$, the exact model profile crosses from
+$s_2/\sqrt{|\tau|}$ when $s_2\ll|\tau|$ to $\sqrt{2s_2}$ when
+$|\tau|\ll s_2$. Formula~\eqref{eq:distance-rank} controls the
+intermediate ratios and remains relative even if this distance is
+arbitrarily small compared with $r$. Fibre metrics in the theorem are
+induced metrics; their intrinsic distances are not identified with
+unrestricted ambient distances between fibre points.
+
+\begin{corollary}\label{cor:limits}
+Fix a zero-section point in $M_{+1}$ or $M_{-1}$. On the corresponding
+side of the wall, dividing $g_t$ by $\kappa=|\tau(t)|$ gives the complete
+pointed length-space limit
+$(M_{+1},g_{+1}^{\rm q})$ or $(M_{-1},g_{-1}^{\rm q})$.
+More precisely, the maps
+$\iota_t(\widehat x)=f_t(\sqrt\kappa\,\widehat x)$ satisfy
+\begin{equation}\label{eq:inner-intro}
+(1-C\kappa(1+\widehat r^2))g_{\pm1}^{\rm q}
+\le\kappa^{-1}\iota_t^*g_t
+\le(1+C\kappa(1+\widehat r^2))g_{\pm1}^{\rm q}.
+\end{equation}
+This holds on expanding domains $\widehat r\le R_t$ whenever
+$R_t\to\infty$ and $\kappa R_t^2\to0$, and implies pointed
+Gromov--Hausdorff convergence on every bounded pointed ball.
+
+On the common rank-two locus, using $N$ to identify the chamber with
+the wall, the actual chamber and wall metrics have relative difference
+\begin{equation}\label{eq:outer-intro}
+O\left(|t|+r_0^2+\frac{|\tau|}{s_2}\right)
+\end{equation}
+when $|\tau|/s_2$ is sufficiently small.
+\end{corollary}
+
+The abstract Riemannian spaces $M_{+1}$ and $M_{-1}$ are isometric
+by adjoint interchange. Their contractions over the fixed matrix $N$
+are different. The complete metrics in the corollary are classical;
+the assertion identifies them as limits of the actual harmonic metric.
+Neither the corollary nor the tensor estimate asserts smooth convergence
+or curvature bounds.
+
+\subsection{Relation to previous work and the analytic argument}
+
+The complex geometry uses established K3 deformation theory. Budur--Zhang
+\cite[Theorem~1.2]{BZ19} prove formality for a sheaf polystable with
+respect to any ample polarization. Arbarello--Sacc\`a
+\cite[Propositions~4.4 and~6.1]{AS18} give the equivariant analytic
+quadratic germ and its quiver interpretation. Their adjacent-polarization
+wall-crossing theorem concerns pure one-dimensional sheaves; it is not
+used for the rank-three bundles here. Buchdahl--Schumacher
+\cite{BS21,BS22} construct harmonic analytic deformation quotients.
+Delloque's simultaneous deformation theory
+\cite[Propositions~4.3--4.6 and Theorem~7.4]{Del25}
+supplies corrected HYM equations and an open actual moduli neighborhood
+on the integrable locus, without an abelian-stabilizer assumption.
+
+Local metric comparison in reduction is also not new. Sjamaar
+\cite[arXiv version, Lemma~2.13 and its proof]{Sja95} compares the reduced
+K\"ahler metric with its flat holomorphic slice metric on the top stratum
+near a chosen quotient point. Sjamaar--Lerman's singular-reduction theory
+\cite{SL91}, using the classical symplectic normal form, and Mayrand's
+complex Hamiltonian normal form \cite[Theorems~1.3 and~1.4]{May22}
+preserve structures different from the full Riemannian metric. A real symplectic
+coordinate change need not preserve an independently imposed complex
+integrability equation. Namikawa--Odaka \cite[Remark~6.14]{NO26}
+discuss the stronger metric comparison problem in the setting of
+symplectic singularities; their isolated-singularity and finite
+hyperk\"ahler quotient results do not directly give the simultaneous
+estimate in Theorem~\ref{thm:main}.
+
+The complete cotangent-Grassmannian metric and its quotient description
+are classical \cite{BG96}. Qualitative Gromov--Hausdorff continuity
+through suitable projective Calabi--Yau flops is proved by Rong--Zhang
+\cite[Theorem~1.2]{RZ11}. Actual Weil--Petersson forms on bundle moduli
+and their extensions are studied in \cite{BS21,BS23}; explicit metrics
+and degenerations for framed bundles on the blown-up plane appear in
+\cite{BS26}. Gauge slices and reduction by the residual finite-dimensional
+group are part of the earlier Yang--Mills moduli theory
+\cite{GP89}. We do not claim these constructions or the finite
+Grassmannian scaling as new.
+
+The additional issue is to compare the \emph{actual} real moment levels
+on the exact obstructed complex locus, with an error independent of the
+smallest positive infinitesimal gauge direction. A usual implicit-function
+bound can lose that direction. We replace it by a projection estimate.
+If $\mu=A^*A-BB^*$ and $\rho$ is the centered corrected moment map,
+then for every orthogonal projection $P$ on $\CC^2$,
+\[
+|\tr(P(\rho-\mu))|
+\le\epsilon\bigl(\|AP\|^2+\|PB\|^2\bigr).
+\]
+The right side is the squared norm of the circle action generated by
+$P$. Testing this estimate on spectral projections of the positive
+Hermitian factor of a complex gauge transformation bounds that factor
+uniformly through rank loss. Projection-relative curvature estimates and
+finite-dimensional balancing by spectral projections were developed for
+repeated stable factors in \cite{Wue26a,Wue26c}. Here we adapt this method
+to the exact obstructed K3 deformation locus and compare different real
+moment levels. Section~\ref{sec:balancing} gives the required argument
+in full.
+
+The harmonic norm requires a separate identification. We first minimize
+over the uniformly coercive complement of the parallel gauge algebra,
+as in the complementary-gauge method of \cite{Wue26b}. The result is a
+smooth positive Hermitian form on the full deformation space. A central
+automorphism acting by minus the identity removes its linear term.
+Only then do we minimize over the remaining complex orbit directions.
+Derivatives of the real balancing transformation are exact gauge terms
+and disappear from that infimum. Finally, a radius estimate excludes
+shorter paths leaving the chart. These steps give the actual intrinsic
+conclusions, rather than merely a comparison of norms on an assumed
+common locus.
+
+The result is local and concerns locally free bundles. It gives no
+global completion theorem, no bubbling description, and no general
+metric normal-form theorem for hyperk\"ahler singularities.
+
+The polynomial calculations of Section~\ref{sec:k3} and the distance
+profile in Figure~\ref{fig:distance} can be reproduced from the
+source accompanying this paper at
+\url{https://github.com/bwuebben/stability-degeneration}.

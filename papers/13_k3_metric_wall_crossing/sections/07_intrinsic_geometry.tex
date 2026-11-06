@@ -1,0 +1,133 @@
+\section{Intrinsic geometry of the contraction}\label{sec:intrinsic}
+
+\subsection{Excluding paths outside the chart}
+
+Choose the radius $R$ inside a larger common chart and small enough
+that~\eqref{eq:main-tensor} compares lengths by factors between
+$1/2$ and $2$. The closed model set $\{r_\tau\le R\}$ is compact:
+it is the compact quotient of a closed bounded finite-dimensional
+moment level. Its image in the Hausdorff unitary-gauge moduli space
+is compact and closed. A continuous path leaving the open radius-$R$
+image must therefore first meet its radius-$R$ boundary.
+
+Until this first exit, Lemma~\ref{lem:short-paths} and the tensor
+estimate give
+\begin{equation}\label{eq:radial-cost}
+|r_\tau(q)-r_\tau(p)|\le2\,\operatorname{length}_{g_t}(\gamma).
+\end{equation}
+These inequalities extend through finite-length lower-stratum
+endpoints by continuity.
+
+\begin{proof}[Proof of \eqref{eq:main-distance}]
+Let both endpoints have radius at most $\rho$. Their model
+connecting path from Lemma~\ref{lem:short-paths} has length at most
+$L\rho$ and stays inside that radius. It gives an actual competitor
+of length at most $2L\rho$. An escaping path pays at least
+$(R-\rho)/2$ by~\eqref{eq:radial-cost}. For $\rho\le cR$ with
+$c$ sufficiently small, such a path cannot improve the infimum.
+Every remaining actual near-minimizer can be taken of length at
+most $4L\rho$ and hence stays at radius at most $(1+8L)\rho$.
+
+Conversely, a global model near-minimizer can be chosen with length
+at most $2L\rho$. The model radius inequality keeps it within
+$(1+2L)\rho$. On these enlarged but small domains the sharp
+relative tensor error is $O(|t|+\rho^2)$. Apply it to both sets
+of paths and take infima, obtaining~\eqref{eq:main-distance}.
+No minimizer need exist: use paths within an arbitrary positive
+tolerance and pass to zero tolerance.
+
+For arbitrarily close endpoints, the coarse radius bound first
+confines all candidates; the sharp multiplicative comparison is
+then applied to their entire lengths. Thus there is no additive
+$O(\rho)$ error and no division by their possibly tiny distance.
+The model distance separates points, so the actual distance also
+separates points in this neighborhood.
+\end{proof}
+
+\subsection{Distances to the exceptional loci}
+
+\begin{proof}[Proof of Theorem~\ref{thm:distances}]
+The model paths of Proposition~\ref{prop:model-distances} decrease
+radius and have length at most the starting radius $r$. Applying
+\eqref{eq:main-tensor} gives the upper bounds in
+\eqref{eq:distance-zero}--\eqref{eq:distance-rank}; their endpoints
+lie in the stated local target sets.
+
+Any actual competitor capable of lowering these bounds can be
+taken of length at most $2r$. For $r\le cR$ it cannot leave the
+chart, by the same exit-cost argument, and
+\eqref{eq:radial-cost} confines it to radius $5r$. Its inverse
+image ends in the appropriate model rank locus, so its model
+length is bounded below by the \emph{global} distance in
+\eqref{eq:model-distances}. The sharp tensor comparison on
+radius $5r$ proves the lower bounds. This remains multiplicative
+when the smaller distance is arbitrarily small compared with $r$.
+
+On the zero section, $r_\tau^2=2|\tau|$, so the induced metric
+comparison has relative error $O(|t|)$. On the rank-one fibre
+over singular value $s$, equation~\eqref{eq:radius} gives
+$r_\tau^2=\sqrt{\tau^2+4s^2}+|\tau|=O(|t|+s)$.
+The exact induced fibre metrics computed in
+Section~\ref{sec:model} therefore give the asserted
+Grassmannian and projective-plane formulas.
+\end{proof}
+
+The collapse length scale is consequently
+$\sqrt{|\tau|}=\sqrt{28\pi|t|/3}$. Both the deepest Grassmannian
+and the $\PP^2$ fibres over rank one have this scale, even while
+the rank-one point approaches the vertex at an unrelated rate.
+The error in the actual metric remains controlled by the total
+deformation radius, without requiring a positive lower bound for
+the smaller transverse distance.
+
+\subsection{The complete inner metric and outer overlap}
+
+\begin{proof}[Proof of Corollary~\ref{cor:limits}]
+Put $\kappa=|\tau|$ and write $x=\sqrt\kappa\,\widehat x$.
+The model homothety gives
+$g_\tau^{\rm q}=\kappa g_{\pm1}^{\rm q}$ and
+$r_\tau^2=\kappa\widehat r^2$. Since
+$|t|=3\kappa/(28\pi)$, substitution into
+\eqref{eq:main-tensor} proves~\eqref{eq:inner-intro}.
+Each bounded-radius region of the complete model is eventually
+included; the same holds on any expanding radius $R_t$ with
+$\kappa R_t^2\to0$.
+
+For the pointed metric statement, fix a zero-section base point.
+The physical cost of leaving the radius-$R$ chart stays bounded
+below independently of $t$. After division of lengths by
+$\sqrt\kappa$, that cost diverges. Equation~\eqref{eq:radial-cost}
+also bounds $\widehat r$ on every bounded rescaled actual ball
+about the base point. Thus all such balls lie in controlled
+compact subcharts. On them~\eqref{eq:main-distance} has relative
+error $O(\kappa)$, and every fixed bounded model ball is covered.
+These estimates give pointed Gromov--Hausdorff convergence of
+bounded balls. If balls of exactly equal radius are used, the
+$1+O(\kappa)$ distance distortion changes radius only by
+$O(\kappa)$; move along a model minimizing geodesic to obtain
+the usual correspondence. Properness and completeness of the
+model were proved in Proposition~\ref{prop:finite-geometry}.
+No completeness of the full actual bundle-moduli component
+is required.
+
+On the common rank-two complex locus, Lemma~\ref{lem:outer-model}
+gives relative error $O(|\tau|/s_2)$. If that ratio is bounded
+and small, then~\eqref{eq:radius} gives $r_\tau^2=O(r_0^2)$.
+Composition with~\eqref{eq:main-tensor} proves
+\eqref{eq:outer-intro} first relative to $g_0^{\rm q}$.
+Applying~\eqref{eq:main-tensor} also at $t=0$ compares the
+actual chamber and actual wall metrics in their common $N$
+coordinates. The overlap region
+$|\tau|\ll s_2\le s_1\ll1$ matches the complete inner model
+to the wall. At $s_2$ comparable to or smaller than $|\tau|$,
+the inner estimate and full distance profile apply instead.
+\end{proof}
+
+All convergence and matching assertions above are statements about
+quadratic forms, lengths and metric spaces. Differentiated estimates
+would be needed for curvature or smooth convergence. The argument
+also uses a fixed smooth bundle near its reducible splitting; it
+does not include a non-locally-free or bubbling boundary. Within
+this neighborhood, however, the entire contraction and its change
+of stabilizer are described by the actual harmonic metric with
+the same relative error.

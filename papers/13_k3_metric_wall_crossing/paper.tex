@@ -1,0 +1,73 @@
+\pdfoutput=1
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{booktabs,adjustbox,graphicx,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdfauthor={Bernd Johannes Wuebben},
+pdftitle={Metric wall crossing in rank-three K3 bundle moduli}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\ddbar}{\bar\partial}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Vol}{Vol}
+\title[Metric wall crossing in K3 bundle moduli]{Metric wall crossing in rank-three K3 bundle moduli}
+\author{Bernd Johannes Wuebben}
+\subjclass[2020]{14J60, 53C07 (primary); 14J28, 14D20, 53C26 (secondary)}
+\keywords{K3 surface, bundle moduli, Hermitian--Einstein metric, stability wall,
+hyperk\"ahler quotient, stratified Mukai flop}
+\date{November 6, 2026}
+\begin{document}
+\begin{abstract}
+We determine the local harmonic $L^2$ metric near a stability wall in a
+complex twelve-dimensional moduli space of rank-three bundles on a
+projective K3 surface. The central bundle is the sum of two copies of one
+spherical line bundle and a second spherical line bundle, with
+five-dimensional cross-extension spaces; the central K\"ahler metric is
+Ricci-flat. We compare the actual chamber metrics with the standard
+hyperk\"ahler quotient metrics on $T^*\Gr(2,5)$ and $T^*\Gr(3,5)$, with
+relative error quadratic in the deformation size. The comparison is
+uniform through changes of stabilizer and permits unrelated rates of
+approach to the wall and its singular strata. It gives the exceptional-fibre
+collapse scale, complete pointed Gromov--Hausdorff limits after rescaling,
+quantitative matching to the wall metric, and intrinsic distance
+asymptotics to the contracted loci. The proof corrects the real moment
+equation within complex orbits with a bound that remains uniform at the
+reducible strata.
+\end{abstract}
+\maketitle
+\input{sections/01_introduction}
+\input{sections/02_k3_wall}
+\input{sections/03_quotient_geometry}
+\input{sections/04_deformation_coordinates}
+\input{sections/05_real_balancing}
+\input{sections/06_harmonic_metric}
+\input{sections/07_intrinsic_geometry}
+\input{sections/99_references}
+\end{document}

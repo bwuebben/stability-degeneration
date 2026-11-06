@@ -1,0 +1,17 @@
+{
+  "mathematical_source": "Section 3, distance to the rank-one locus, with kappa=1",
+  "quantity": "F_1(sqrt((sqrt(1+4*z^2)-1)/2))",
+  "sampling_interval": [
+    0.0001,
+    10000.0
+  ],
+  "sample_count": 401,
+  "quadrature_orders": [
+    256,
+    512
+  ],
+  "maximum_relative_refinement_difference": 7.235786206487512e-16,
+  "numpy": "2.3.2",
+  "matplotlib": "3.10.5",
+  "status": "illustration of an analytic theorem, not proof by numerical fit"
+}

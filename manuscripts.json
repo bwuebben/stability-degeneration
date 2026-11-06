@@ -296,5 +296,37 @@
     },
     "number": 12,
     "directory": "12_harmonic_paths_and_honeycombs"
+  },
+  {
+    "paper": "k3_metric_wall_crossing",
+    "title": "Metric wall crossing in rank-three K3 bundle moduli",
+    "date": "2026-11-06",
+    "website_slug": "k3-metric-wall-crossing",
+    "pages": 21,
+    "pdf_sha256": "41324dcb2bbea577163eb8ac49403d69cf5cffb44872556b9f18d6da8c3944a9",
+    "source_sha256": "5c579e28969dc41206ec533ba44504f817f4c9fbb9e3c13f43277fe721fce4a6",
+    "download_filename": "k3-metric-wall-crossing.pdf",
+    "source_files_sha256": {
+      "paper.tex": "5c579e28969dc41206ec533ba44504f817f4c9fbb9e3c13f43277fe721fce4a6",
+      "k3-metric-wall-crossing.pdf": "41324dcb2bbea577163eb8ac49403d69cf5cffb44872556b9f18d6da8c3944a9",
+      "sections/01_introduction.tex": "e740cdf1e2e5cc583773461f455a0f215cc41214a43721ec0a41ef9f15e0ff18",
+      "sections/02_k3_wall.tex": "e2f6e2f7ac5042847fdfcd9f047b46771628fd289b8bea7c23ed0536711d6bb7",
+      "sections/03_quotient_geometry.tex": "386fc9f41e396979392082016174d8be27b8be386dbbab9b1b6889d3efda77f4",
+      "sections/04_deformation_coordinates.tex": "487f1f5c39822e23f9ddf6676b0efb3b8283deb50e3b374af1553b7b358ee5fc",
+      "sections/05_real_balancing.tex": "df0aced366332557b4ac1296c3fb519e158cff714d36fb0383dd2b5db43f62bb",
+      "sections/06_harmonic_metric.tex": "76db84b87583c031e140cc0b05eb9377b9297f89a747f30d1e015cbfd3f93178",
+      "sections/07_intrinsic_geometry.tex": "a0a5ef36fda56faa75405612db8542c4f51a5793be116f75f7a86325ebf0172c",
+      "sections/99_references.tex": "68155888ddacbb7e3942223f1eb19d8de7f134571634af0dda098e79c67aaecd",
+      "figures/distance-profile.pdf": "45e2f94825b10432f3d3590b6093f3bbb68a28ed1e3d03d2212c3cfec17a2e6c",
+      "figures/distance-profile.png": "4604e31a5dc5b9dab841120d79bc8c577992fe5f853b5732105ff7535d24e46a",
+      "figures/distance-profile.svg": "8e6842d6f46828ce8b2c4d176d07d70ca63c07fdf5eea27d7e0cd2cc5de88114",
+      "reproducibility/README.md": "fe65dd89a545ff82422b6c930c75861561c303ad96cca16ca8493d844d554e19",
+      "reproducibility/distance-profile.json": "2e3c2a5f9b509acf22d8f3aeeda1fd3a96ca7a42fe8582bd606baa044855e222",
+      "reproducibility/k3-model.json": "5675aecace42b442b11ee741463fee5e12a90018090ef2de3029ac06b716f61b",
+      "reproducibility/k3_model.py": "669ec33ffde319a43709a7c3adfa1f0d5688d28d482ed169c0b2ff540af3993d",
+      "reproducibility/plot_distance_profile.py": "bd9fa9928fc6b1db9d971efab34126b40954a745c2014b64339cf98e91f5b707"
+    },
+    "number": 13,
+    "directory": "13_k3_metric_wall_crossing"
   }
 ]

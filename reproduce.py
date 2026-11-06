@@ -17,4 +17,8 @@ examples = sorted((root / 'papers').glob('*/reproducibility/check_examples.py'))
 for program in examples:
     print(str(program.relative_to(root)), flush=True)
     subprocess.run(['uv', 'run', '--no-project', str(program)], cwd=program.parents[1], check=True)
-print(f'Completed {len(programs) + len(examples)} finite computations.')
+k3_programs = sorted((root / 'papers').glob('*/reproducibility/k3_model.py')) + sorted((root / 'papers').glob('*/reproducibility/plot_distance_profile.py'))
+for program in k3_programs:
+    print(str(program.relative_to(root)), flush=True)
+    subprocess.run(['uv', 'run', '--no-project', str(program)], cwd=program.parents[1], check=True)
+print(f'Completed {len(programs) + len(examples) + len(k3_programs)} finite computations.')
