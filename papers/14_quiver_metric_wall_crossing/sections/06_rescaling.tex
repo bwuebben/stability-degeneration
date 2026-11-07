@@ -1,0 +1,300 @@
+\section{Rescaling, contraction and matching}\label{sec:rescaling}
+
+Let $f_t$ be the local actual-moduli comparison of
+Theorem~\ref{thm:harmonic-comparison}. Write $g_t^{L^2}$ for the
+actual harmonic metric and $g_{\zeta(t)}$ for the finite quotient metric.
+We use the estimate
+\begin{equation}\label{eq:actual-relative}
+ (1-C(|t|+r^\alpha))g_{\zeta(t)}
+ \le f_t^*g_t^{L^2}
+ \le(1+C(|t|+r^\alpha))g_{\zeta(t)},\qquad r=\|x\|,
+\end{equation}
+where $\alpha=1$ in general and $\alpha=2$ under that theorem's
+verified parity hypothesis. Actual distances use the corresponding
+finite-stratum curve class in the full bundle-moduli space.
+Global completeness of that space is not assumed.
+
+\subsection{Localization and distances to wall strata}
+Shrink the common chart so that it contains $r<2R$ and has coarse
+squared-metric bounds $1/2$ and $2$. Each closed radial sublevel
+is compact in the quotient topology, so its image is compact and
+closed in the Hausdorff actual moduli space.
+A path starting at radius $\rho<R$ and escaping the image of $r<R$
+must first reach radius $R$. Its initial segment has length at
+least $(R-\rho)/\sqrt2$, by the $1$-Lipschitz radius.
+While a path of length $L$ stays in the chart, its lifted radius
+is at most $\rho+\sqrt2L$. These observations exclude short paths
+that leave the local model.
+
+\begin{proposition}\label{prop:stratum-distance}
+At $t=0$, let $\Sigma\subset M_0$ be a closed conical union of
+representation-type strata containing the vertex. Suppose the
+specified actual target has intersection with the chart equal to
+$f_0(\Sigma)$. Then, as $r(x)\to0$,
+\[
+ d^{L^2}_0(f_0(x),f_0(\Sigma))
+  =(1+O(r(x)^\alpha))d_0(x,\Sigma).
+\]
+For the vertex this is
+$d^{L^2}_0(f_0(x),[E_0])=r(x)(1+O(r(x)^\alpha))$.
+\end{proposition}
+\begin{proof}
+The finite distance to $\Sigma$ is at most $r(x)$, using the vertex.
+An admissible near-minimizer of length at most $d_0(x,\Sigma)+\delta$
+stays within radius $2r(x)+\delta$. Its actual image is a competitor.
+Any shorter actual competitor has length $O(r(x))$, cannot escape
+the larger chart, and stays within radius $C_0r(x)$ by the preceding
+barrier. Its endpoint cannot lie in a portion of the target outside
+the chart without paying that exit cost.
+Apply \eqref{eq:actual-relative} on these paths and let $\delta\downarrow0$.
+The estimate is multiplicative even when the target distance is much
+smaller than $r(x)$. The vertex formula uses \eqref{eq:cone-radius}.
+\end{proof}
+The target identification is a geometric hypothesis: a tensor estimate
+alone does not identify a named singular stratum.
+
+\subsection{Arbitrary directions and complete actual limits}
+Assume the finite complex zero fiber contains a module-simple point,
+as in Section~\ref{sec:intrinsic}.
+\begin{theorem}\label{thm:actual-limits}
+Let $t_n\to0$ and $\delta_n\downarrow0$, with
+$\eta_n=\zeta(t_n)/\delta_n^2\to\eta_*$.
+Let balanced base representatives $p_n\in A_{\eta_n}$ converge to $p_*$.
+With base point $f_{t_n}([\delta_np_n])$ and distances divided by
+$\delta_n$, the actual moduli have complete pointed local limit
+$(M_{\eta_*},d_{\eta_*},[p_*])$.
+On each bounded rescaled ball, the intrinsic comparison with
+$M_{\eta_n}$ is relative with error
+$O_L(|t_n|+\delta_n^\alpha)$.
+\end{theorem}
+\begin{proof}
+Homogeneity identifies $M_{\delta_n^2\eta_n}$ with
+$\delta_nM_{\eta_n}$, multiplying distances by $\delta_n$.
+The fixed chart has an exit cost bounded below independently of $n$
+from starting radius $O(\delta_n)$. Any actual path of length
+$O(\delta_n)$ stays inside it, and its finite radius is $O(\delta_n)$
+by the coarse comparison.
+Conversely, admissible finite near-minimizers between points in a
+bounded model ball have uniformly bounded radial coordinate by
+the $1$-Lipschitz radius and their length bound. They scale into
+the actual chart. On both types of paths \eqref{eq:actual-relative}
+has the claimed error. Taking infima gives both intrinsic inequalities,
+including pairs at distances arbitrarily smaller than $\delta_n$.
+
+Full inverse coverage puts every actual radius-$\delta_nL$ ball
+inside the image of a model radius-$L+o(1)$ ball, and gives the
+reverse inclusion with radius $L-o(1)$.
+The model balls are compact; local distance comparison makes these
+actual balls compact as well. Theorem~\ref{thm:varying-parameters}
+now proves convergence to the entire complete target. No global
+properness of the actual bundle-moduli space is used.
+\end{proof}
+
+Along a fixed ray $\zeta(t_\kappa)=\kappa\eta$ this gives the scale
+$\sqrt\kappa$ and error $O_L(|t_\kappa|+\kappa^{\alpha/2})$.
+For any specified compact subset $C\subset M_\eta$ of positive diameter,
+\begin{equation}\label{eq:fixed-core-scale}
+ \operatorname{diam}_{L^2}
+ f_{t_\kappa}(\sqrt\kappa C)
+ =\sqrt\kappa\bigl(1+O(|t_\kappa|+\kappa^{\alpha/2})\bigr)
+      \operatorname{diam}_{d_\eta}C.
+\end{equation}
+Identifying $C$ with a contracted set is a separate geometric step.
+
+\subsection{Normal representations and moving centers}
+\begin{lemma}\label{lem:normal-simple}
+If the complex zero fiber contains a module-simple representation,
+the full normal Ext-quiver at
+every point of every $M_\eta$ also has a module-simple representation
+in its complex zero fiber.
+\end{lemma}
+\begin{proof}
+The common module-simple locus gives a dense open subset of the
+complex quotient, hence of $M_\eta$ by
+Corollary~\ref{cor:fixed-face}. Choose balanced representatives
+$x_j\to x_*$ from it. The common-parameter inverse in
+Theorem~\ref{thm:metric-slice}, at fixed parameter $\eta$, gives
+$w_j\to0$ in the full normal $W$ with both normal moments zero.
+The full equivariant slice and its complex corrections identify
+stabilizers up to conjugacy. Thus $H_{w_j}$ is exactly the single
+common scalar circle, since this is the stabilizer of $x_j$.
+Proposition~\ref{prop:real-polystability} complexifies it.
+At zero level, that proposition decomposes the representation
+into module-simple summands: zero-stability means that there are
+no proper subrepresentations. More than one summand or a repeated
+summand would give a nonscalar endomorphism. Hence $w_j$ is
+module-simple.
+\end{proof}
+
+Apply all quiver statements to the full $W$, not to $W'$ in
+\eqref{eq:normal-product}. Properness and parameter convergence
+for $W'///_\nu H$ follow from the exact product and restriction
+to points with $U$-coordinate zero.
+
+\begin{theorem}\label{thm:moving-centers}
+Let $\eta_n\to\eta_*$ and $p_n\in M_{\eta_n}$ approach $[x_*]$.
+In the common slice of Theorem~\ref{thm:metric-slice}, write their
+balanced normal coordinates as $(u_n,z_n)\to0$ in $U\oplus W'$.
+Set
+\[
+ \zeta_{H,n}=\eta_n|_{\mathfrak h}
+ =(\eta_n-\eta_*)|_{\mathfrak h}.
+\]
+For any $\sigma_n\downarrow0$ such that
+\[
+ \zeta_{H,n}/\sigma_n^2\to\nu,\qquad z_n/\sigma_n\to z
+\]
+after unitary adjustment, the complete pointed limit with distances
+$d_{\eta_n}/\sigma_n$ and base $p_n$ is
+\[
+ U\times(W'///_\nu H),\qquad\text{with base }(0,[z]).
+\]
+The same conclusion holds inside the actual family of
+Theorem~\ref{thm:actual-limits}, at physical scale $\delta_n\sigma_n$.
+\end{theorem}
+\begin{proof}
+The exact model coordinate change is
+\[
+ (u,z')\longmapsto(u_n+\sigma_nu,\sigma_nz').
+\]
+Translation in $U$ does not affect the moments. It identifies the
+rescaled normal model with $U\times(W'///_{\nu_n}H)$, where
+$\nu_n=\zeta_{H,n}/\sigma_n^2$.
+On a fixed bounded radial region its relative squared-metric error
+in the original finite space is
+\begin{equation}\label{eq:moving-error}
+ O_{x_*}(|\eta_n-\eta_*|+|u_n|+\sigma_nR)=o(1).
+\end{equation}
+In particular this error is not divided by $\sigma_n$.
+
+Choose a fixed radius $\rho$ whose twice-sized sublevel lies in
+the slice. Compact sublevels and the coarse metric comparison give
+exit cost at least $(\rho-\|(u_n,z_n)\|)/\sqrt2$.
+After division by $\sigma_n$ this tends to infinity.
+Every competing path of length $O(\sigma_n)$ remains in the chart,
+and the radius of its translated coordinate $(u-u_n,z')$ is bounded
+by $\|z_n\|+\sqrt2$ times its length, hence is $O(\sigma_n)$.
+Conversely, admissible normal-model near-minimizers on bounded
+rescaled balls stay in bounded translated radial regions.
+Equation~\eqref{eq:moving-error} therefore compares both intrinsic
+infima relatively; the common inverse supplies full ball coverage.
+Lemma~\ref{lem:normal-simple} and
+Theorem~\ref{thm:varying-parameters}, applied to full $W$, give the
+whole complete product limit.
+
+In the actual family the outer error is
+$O(|t_n|+\delta_n^\alpha R^\alpha)$ on a bounded region of the
+first rescaled model. The inner error is \eqref{eq:moving-error}.
+Both are multiplicative, so they add to first order and are not
+amplified by the smaller scale. The outer chart and the fixed inner
+slice each have diverging exit cost after rescaling by
+$\delta_n\sigma_n$. The same inverse-coverage and path argument
+therefore proves the actual conclusion.
+\end{proof}
+
+Tangential motion $u_n$ may be arbitrarily large compared with
+$\sigma_n$ while tending to zero. There is no comparability
+assumption between independent stability parameters.
+For example, when nonzero,
+$\sigma_n=\max(\|z_n\|,\sqrt{\|\zeta_{H,n}\|})$ gives bounded
+rescaled normal parameters and representatives, hence convergent
+subsequences. Smaller scales are allowed whenever the stated
+boundedness conditions hold.
+
+\begin{corollary}\label{cor:iterated-limits}
+Theorem~\ref{thm:moving-centers} can be iterated through any fixed
+finite succession of convergent centers and positive scales tending
+to zero. At each stage require convergence of the retained parameter
+divided by the square of its scale and of the rescaled normal base
+representatives. The physical scale is the product of all stage
+scales, and the complete limit is the corresponding full normal
+quotient with its trivial Euclidean factors.
+\end{corollary}
+\begin{proof}
+Lemma~\ref{lem:normal-simple} preserves the existence of a module-simple point in the complex zero fiber
+at every stage. Apply the preceding theorem at each fixed limiting
+center, with that center's own constants and radius.
+For finitely many stages the relative errors sum to $o(1)$;
+successive first-exit bounds and inverse charts give full ball
+coverage. No uniform radius over all possible centers or convergence
+of an infinite tower is asserted.
+\end{proof}
+
+\subsection{The size of the affine contracted fiber}
+Let $C_\eta$ be the fiber over the affine vertex under
+$Q_F\to Q_0$. It is nonempty and compact by the surjective projective
+face map.
+\begin{corollary}\label{cor:uniform-core}
+There is $C$ such that
+$\operatorname{diam}_{d_\eta}C_\eta\le C\sqrt{\|\eta\|}$
+for every central $\eta$.
+The same upper bound holds for its actual image $f_t(C_{\zeta(t)})$
+when $\zeta(t)\to0$ and $t\to0$.
+\end{corollary}
+\begin{proof}
+Lemma~\ref{lem:invariant-properness} bounds representative radii
+uniformly on $\|\eta\|=1$.
+If the corresponding intrinsic diameters were unbounded, choose
+endpoints and parameters, pass to convergent representatives, and
+apply \eqref{eq:distance-continuity}, a contradiction.
+Homogeneity gives the asserted scale, including the zero fiber,
+which is the vertex. The actual assertion follows by localization
+and \eqref{eq:actual-relative}.
+\end{proof}
+There is no uniform lower diameter estimate in this argument;
+secondary contractions can occur on smaller scales.
+The actual statement concerns the displayed image of the finite
+core. A global contraction is not identified by this estimate alone.
+
+\subsection{Matching to the surrounding zero-level metric}
+At a zero-level point $x$ with scalar stabilizer, let $\lambda(x)>0$
+be the least eigenvalue of $C_x^*C_x$ on the total-trace-zero
+Hermitian vertex algebra, using its Hilbert--Schmidt norm.
+\begin{proposition}\label{prop:outer-matching}
+If $\|\zeta\|/\lambda(x)$ is sufficiently small, the same complex
+orbit has a $\zeta$-balanced representative $e^Sx$ with
+\[
+ \|S\|_{\rm op}\le A\frac{\|\zeta\|}{\lambda(x)}.
+\]
+On the corresponding free quotient loci,
+\[
+ g_\zeta=\left(1+O\left(\frac{\|\zeta\|}{\lambda(x)}\right)\right)g_0
+\]
+as two-sided Hermitian-form inequalities.
+The relative comparison with the actual metric has error
+$O(|t|+\|x\|^\alpha+\|\zeta\|/\lambda(x))$.
+\end{proposition}
+\begin{proof}
+Use the degree homotopy $\mu(e^Sx)-s\zeta$ on the operator-norm
+ball $a=A\|\zeta\|/\lambda(x)$.
+For a strict spectral cut $P$ put
+$P_0=P-(\operatorname{tr}P/M)I$. Then
+\[
+ \|P_0\|^2=\frac{k(M-k)}M\ge\frac{M-1}M,\qquad
+ q_P(x)\ge\lambda(x)\|P_0\|^2.
+\]
+The boundary estimate \eqref{eq:cut-lower} is at least
+$2e^{-4a}a\lambda(x)\|P_0\|^2/(M-1)$, whereas the target pairing
+has absolute value at most $\|\zeta\|\|P_0\|$.
+Choose $A$ large depending only on $M$ and then $a$ small.
+The homotopy has no boundary zeros and initial degree $+1$, giving
+the correction. No stronger inverse-function condition involving
+$\|\zeta\|\|x\|^2/\lambda(x)^2$ is used.
+
+A zero-balanced point with scalar stabilizer is module-simple:
+\eqref{eq:subrepresentation-trace} makes any invariant subspace
+reducing and hence produces a nonscalar stabilizer if proper.
+Thus these orbits belong to the common stable open and determine
+the same affine quotient point.
+On local holomorphic quotient tangents the derivative of the
+complex correction is vertical. Removing it by the full complex
+orbit infimum leaves only the action of $e^S$ on ambient norms,
+whose squared distortion is $e^{\pm4\|S\|_{\rm op}}$.
+This proves the finite metric estimate. Compose with
+\eqref{eq:actual-relative} for the actual estimate.
+\end{proof}
+The matching statement applies when $\|\zeta\|/\lambda(x)\to0$.
+The complete normal models above describe regimes where this
+outer condition fails. None of these local stationary results
+implies bubbling control or an HYM evolution theorem.
+

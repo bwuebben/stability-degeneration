@@ -335,5 +335,33 @@
     },
     "number": 13,
     "directory": "13_k3_metric_wall_crossing"
+  },
+  {
+    "paper": "quiver_metric_wall_crossing",
+    "title": "Quantitative metric wall crossing for K3 bundle moduli",
+    "date": "2026-11-06",
+    "website_slug": "quiver-metric-wall-crossing",
+    "pages": 30,
+    "pdf_sha256": "70bca12dae324e04a62fe5c606037e01e684e96e84cc0c61671290c9465e580a",
+    "source_sha256": "882533d8f39892e4e75b6ac581912bc5852ee31395416e998f8fbc33b7d48ecb",
+    "download_filename": "quiver-metric-wall-crossing.pdf",
+    "source_files_sha256": {
+      "paper.tex": "882533d8f39892e4e75b6ac581912bc5852ee31395416e998f8fbc33b7d48ecb",
+      "preamble.tex": "d1bc212a206319f6977470da2728af9b89daffd2a23afd5686c4475ee78a7cbc",
+      "sections/01_introduction.tex": "261cd5cbba2ea58ee538a00e17d903584e9978bb88bc50bf25b6d5a243d1e1e6",
+      "sections/02_balancing.tex": "1c6576b4285445651dc68c7d5cafd5e5bb8a2c1d42e56f4c14948b82bcee271f",
+      "sections/03_harmonic.tex": "66b06d384246ea90261729661eb90ec822ebcbbc5f6bb2468c6fd8317e4bfe34",
+      "sections/04_slices.tex": "d6f1b35183e8a4132593f1b35c2550ae12c562bbd4331057390d240672f8964d",
+      "sections/05_intrinsic.tex": "790e24985038da6266655e91939a2626ede569887988d426af8b49b8269d8315",
+      "sections/06_rescaling.tex": "45ed0f8b0c88f45955e999ffe7c5c5b0a9c65faf07868de27f43c7c1853417c3",
+      "sections/07_application.tex": "600fc86e1decb0b56e4413adf406bcb6d381749e69f423112ffb8b4e4cf98ac6",
+      "sections/99_references.tex": "c8593a62c7b0259624356effe11310a2fabf9fdaa8c8a4d6a0d88d6201df3f83",
+      "figures/walls.tex": "db9d8e0eab7add2c0daf3f59fcf3db404c556a154e57e92c42d6ea34185c5099",
+      "figures/code/check_quiver_geometry.py": "6adbb63dbc0d22946c9fe44f054c262cd351e73e6d75f57312f1d2cc0613e262",
+      "checks/quiver_geometry.json": "d88a84f6d489808389503e2f5e7b5fa515f6fc5343dd8740bed4758f50a0404b",
+      "quiver-metric-wall-crossing.pdf": "70bca12dae324e04a62fe5c606037e01e684e96e84cc0c61671290c9465e580a"
+    },
+    "number": 14,
+    "directory": "14_quiver_metric_wall_crossing"
   }
 ]

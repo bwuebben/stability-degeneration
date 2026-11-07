@@ -1,0 +1,429 @@
+\section{Harmonic coordinates and the metric on K3 bundle moduli}
+\label{sec:harmonic}
+
+Let $X$ be a projective K3 surface and $H$ an integral ample class.
+Let $F_1,\ldots,F_l$ be pairwise nonisomorphic locally free
+$H$-slope-stable sheaves with the same reduced $H$-Hilbert polynomial.
+Fix positive multiplicities $m_i$ and put
+\[
+ E_0=\bigoplus_i F_i\otimes W_i,\qquad W_i=\CC^{m_i}.
+\]
+For the central analytic background choose a real K\"ahler class
+$\omega_*$ for which the same $F_i$ are slope-stable of a common slope,
+and use its Ricci-flat K\"ahler metric. One may take $\omega_*=H$.
+These are separate hypotheses: $H$ supplies algebraic formality,
+whereas $\omega_*$ supplies the Hermitian--Einstein background.
+Choose its direct-sum Hermitian--Einstein metric $h_0$ on $E_0$.
+Fix the determinant, and let $\omega_t$ be a smooth finite-dimensional
+family of K\"ahler forms with $\omega_0=\omega_*$.
+
+Give $V=\Ext^1(E_0,E_0)$ its central harmonic Hermitian norm.
+Serre duality identifies it unitarily with a doubled-quiver
+representation for $K=\prod_iU(W_i)$; self-extensions give paired
+loops, as proved below. Let $\mu_{\CC},\mu$ be its complex and real
+moments with the normalization of \eqref{eq:moment-normalization},
+and put $Z=\mu_{\CC}^{-1}(0)$.
+For $r_i=\rank F_i$ and $N=\sum_i r_im_i$, define
+\begin{equation}\label{eq:geometric-parameter}
+ \zeta_i(t)=2\pi\bigl(r_i\mu_{\omega_t}(E_0)
+                  -\deg_{\omega_t}F_i\bigr),
+ \qquad \sum_i m_i\zeta_i(t)=0.
+\end{equation}
+Degrees mean $\int_Xc_1(F_i)\wedge\omega_t$ and slope is degree
+divided by rank. In particular \eqref{eq:geometric-parameter}
+has no volume denominator.
+This sign agrees with the incoming-minus-outgoing convention:
+a subbundle of smaller slope has positive total $\zeta$-weight.
+
+At a balanced quiver point, decompose the representation into
+pairwise nonisomorphic stable summands. Its \emph{representation type}
+is the unordered list of their dimension vectors and multiplicities.
+Stability here means strictly positive $\zeta$-weight on every
+nonzero proper subrepresentation; Proposition~\ref{prop:real-polystability}
+justifies this decomposition. The connected strata of a fixed type
+are the orbit-type strata for the compact group action. We use
+these strata, including singular types, throughout the metric statements.
+
+\begin{theorem}\label{thm:harmonic-comparison}
+Under these hypotheses there are common nested neighborhoods in
+which the finite quotients
+\[
+ M_{\zeta(t)}=(Z\cap\mu^{-1}(\zeta(t)))/K
+\]
+identify with open neighborhoods in the actual fixed-determinant
+Hermitian--Yang--Mills bundle moduli. Every sufficiently small actual
+solution for sufficiently small $t$ is covered. The maps $f_t$ are
+homeomorphisms, smooth on representation-type strata, and preserve
+their complex structures. On genuine stratum tangents at a finite
+representative $x$, with $r=\|x\|$,
+\begin{equation}\label{eq:harmonic-comparison}
+ (1-C(|t|+r))g_{\zeta(t)}
+ \le f_t^*g_t^{L^2}
+ \le(1+C(|t|+r))g_{\zeta(t)}.
+\end{equation}
+The constants are independent of stabilizer type and of ratios of
+positive eigenvalues of the finite orbit operator.
+
+If a central unitary automorphism acts as $-I$ on all of $V$, the
+spatial error in \eqref{eq:harmonic-comparison} improves to $Cr^2$.
+At the central value the construction identifies the full reduced
+analytic quotient germ, including its singular locus.
+\end{theorem}
+
+Here a neighborhood of actual solutions means solutions represented
+by small deformations of the fixed smooth bundle and central
+Dolbeault operator, uniformly in $t$. The central holomorphic bundle
+itself need not remain polystable when $t\ne0$.
+The proof combines a fixed elliptic inverse with
+Theorem~\ref{thm:uniform-balancing}. The elliptic inverse removes the
+whole parallel algebra; no potentially small finite symmetry is
+included in that inverse. The complementary minimization method
+of \cite{Wue26b,Wue26c,Wue26d} then yields the metric estimate.
+
+\subsection{Unitary quiver coordinates}
+Write $d=\bar\partial_0$ on $\End E_0$ and identify $V$ with its
+harmonic degree-one forms. Fix a parallel holomorphic two-form
+$\Omega_X$ with normalization compatible with the harmonic norm.
+In unitary coframes and factor frames define
+\[
+ J_{ij}(A_1\bar\theta^1+A_2\bar\theta^2)
+       =-A_2^*\bar\theta^1+A_1^*\bar\theta^2.
+\]
+This is frame-independent, antiunitary, and maps the $(i,j)$ factor
+space to the $(j,i)$ space, with $J_{ji}J_{ij}=-I$.
+Choose the orientation of the Serre pairing
+$Q(\alpha,\gamma)=\int_X\Omega_X\wedge\tr(\alpha\wedge\gamma)$
+so that
+\[
+ Q(\alpha,J\beta)=\langle\alpha,\beta\rangle_{L^2}.
+\]
+Pointwise this is the identity
+$\tr(A_1B_1^*+A_2B_2^*)$.
+If $\beta$ is harmonic, its orthogonality to exact forms and Stokes'
+formula show $dJ\beta=0$. Apply the opposite pairing, $J^2=-I$ and
+Stokes' formula to show that $J\beta$ is orthogonal to exact forms
+as well. Thus $J$ preserves harmonicity; flat factor connections
+are not assumed.
+
+Paired orthonormal bases identify off-diagonal extension spaces
+with opposite arrows. Each diagonal $\Ext^1(F_i,F_i)$ is
+quaternionic; choose pairs $\alpha,J\alpha$, each giving loop
+coefficients $A,B\in\End W_i$. The quadratic Yoneda contribution
+of this pair is $[A,B]$. In the Serre-dual target paired with the
+parallel algebra by ordinary multiplicity trace, the total quadratic
+obstruction is exactly $\mu_{\CC}$.
+If $\eta_X$ generates $H^{0,2}(\mathcal O_X)$ with
+$\int_X\Omega_X\wedge\eta_X=1$, its literal harmonic block
+representative is instead
+\begin{equation}\label{eq:rank-dual}
+ \bigoplus_i r_i^{-1} I_{F_i}\otimes\mu_{\CC,i}\,\eta_X.
+\end{equation}
+The factors $r_i^{-1}$ compensate for tracing $I_{F_i}$.
+The ordinary finite dual and these harmonic block coefficients
+must not be interchanged.
+
+\subsection{Convergent quadratic integrability coordinates}
+The harmonic Kuranishi embedding on a full ball is the convergent
+solution of
+\begin{equation}\label{eq:kuranishi-embedding}
+ \Phi(b)=b-d^*G_2(\Phi(b)\wedge\Phi(b)),\qquad D\Phi(0)=\iota.
+\end{equation}
+Here $G_2$ is the Green operator for the degree-two Dolbeault
+Laplacian at the central bundle. The elliptic contraction construction is holomorphic, and its
+Green operators commute with the parallel multiplicity action.
+Its integrability locus has a reduced analytic germ $S\subset V$.
+Reduced analytic semiuniversality is provided by
+\cite[\S5 and Remark~4]{BS21}.
+
+The bundle $E_0$ is $H$-Gieseker polystable. Budur--Zhang
+\cite[Theorem~1.2]{BZ19} gives formality of its derived
+endomorphism algebra. The equivariant analytic result of
+Arbarello--Sacc\`a \cite[Proposition~4.4]{AS18}, with the quiver
+identification in their Proposition~6.1, identifies the reduced
+Quot slice with the quadratic germ $Z$, tangent to the identity.
+This is a fixed-bundle germ result. We do not invoke their
+dimension-one sheaf wall-crossing theorem for vector bundles.
+
+We record the analytic comparison with the harmonic family,
+because formality alone would not supply controlled harmonic
+coordinates. Twist the harmonic family by a sufficiently large
+multiple of $H$. Analytic base change makes its spaces of sections
+a vector bundle with surjective evaluation map
+\cite[Corollaries~1.4--1.5 and Theorem~3.1]{Gro61a}.
+Average a holomorphic frame over $K$; it remains a frame near the
+origin and makes the evaluation equivariant.
+The analytic Quot construction \cite[Theorem~1.1]{Gro61b} gives a
+classifying map. An equivariant complement to the stabilizer in
+the ambient general linear algebra, followed by Luna's slice
+\cite{Lun73}, gives a $K$-equivariant germ map
+$h:S\to Z_{\rm Quot}$ with identity Kodaira--Spencer derivative.
+
+The reduced tangent space of $Z$ is all of $V$: every subspace
+supported on a single arrow, including a single loop with its
+paired loop zero, lies in $Z$, and these subspaces span $V$.
+First apply reduced semiuniversality to the Quot family to obtain
+a reverse map $g:Z_{\rm Quot}\to S$. Its Kodaira--Spencer derivative,
+followed by harmonic inclusion, is the identity on $V$.
+Thus the reduced tangent of $S$ is also $V$.
+This argument does not assert that an arbitrary matrix-valued
+harmonic self-extension squares to zero as a differential form.
+
+Both compositions have invertible tangent maps and are analytic
+germ isomorphisms. For completeness, lift a self-map with invertible
+tangent map to an ambient local biholomorphism in a minimal embedding.
+Its pullback on the germ's local ring is surjective.
+A surjective endomorphism of a Noetherian ring is injective:
+the ascending kernels of its powers stabilize, and surjectivity
+then forces its first kernel to vanish. This proves the assertion,
+and hence $h$ is an isomorphism.
+
+Extend the resulting coordinate functions to an ambient holomorphic
+map and average over $K$. We obtain an equivariant local
+biholomorphism $F$ satisfying
+\begin{equation}\label{eq:ambient-coordinates}
+ \begin{aligned}
+ F(x)&=x+O(\|x\|^2),& DF(x)&=I+O(\|x\|),\\
+ a(x)&=\Phi(F(x)),& D_x&=d+[a(x),\cdot],\qquad J_x=Da(x).
+ \end{aligned}
+\end{equation}
+Its integrable locus is exactly $Z$ on suitably small representatives.
+Compact equivariance complexifies locally, and for every parallel
+complex endomorphism $\xi$ gives the exact identity
+\begin{equation}\label{eq:exact-gauge-derivative}
+ D_x\xi=-J_xC_x\xi.
+\end{equation}
+For a genuine tangent $v$ to an integrable stratum,
+$D_x(J_xv)=0$, by differentiation of integrability.
+
+If formality or the convergent analytic comparison is unavailable,
+one must retain the full higher-order Kuranishi obstruction.
+Neither a quadratic tangent obstruction nor a formal equivalence
+alone justifies the homogeneous quotient and its rescalings.
+
+\subsection{The fixed complementary gauge equation}
+Use $h_0$ and its density $dV_0$ to define the Hermitian moment
+\[
+ \mathcal M_t=i(F^0\wedge\omega_t)/dV_0,
+\]
+where $F^0$ is the trace-free curvature of the unitary connection
+determined by a Dolbeault operator. Let $Q_0$ be the fixed
+$L^2$-orthogonal complement of the entire parallel trace-free
+Hermitian algebra. The derivative in $s$ at the origin of
+\[
+ (t,x,s)\longmapsto
+ Q_0\mathcal M_t\bigl(e^s\cdot(\bar\partial_0+a(x))\bigr)
+\]
+is a fixed nonzero multiple of the covariant Laplacian on $Q_0$.
+All of its kernel has been removed. On fixed Sobolev spaces
+$W^{k+2,2}\to W^{k,2}$, $k>2$, the implicit-function theorem gives
+a unique small smooth $\sigma(t,x)\in Q_0$.
+Harmonicity and the K\"ahler identities kill its first $x$ derivative
+at $(0,0)$. Elliptic regularity gives, for every fixed $j$,
+\begin{equation}\label{eq:complementary-correction}
+ \|\sigma(t,x)\|_{C^j}\le C_j(|t|+\|x\|^2).
+\end{equation}
+Uniqueness gives $K$-equivariance.
+Only this fixed elliptic complement is inverted.
+
+Put $\Psi_t(x)=e^{\sigma(t,x)}\cdot(\bar\partial_0+a(x))$.
+For $S\in\bigoplus_i\Herm W_i$ use the trace-free lift
+\[
+ \widehat S=\bigoplus_i I_{F_i}\otimes(S_i-c(S)I_{W_i}),
+ \qquad c(S)=\frac{\sum_i r_i\tr S_i}{N}.
+\]
+Define the finite moment $m_t$ in the ordinary multiplicity dual by
+\[
+ \sum_i\tr(m_{t,i}(x)S_i)
+   =\int_X\tr(\mathcal M_t(\Psi_t(x))\widehat S)\,dV_0.
+\]
+Its vanishing is equivalent to vanishing of the remaining parallel
+component. This is not the rank-and-volume-weighted coefficient
+of the orthogonal parallel projection. The determinant character
+on $G$ is $\prod_i(\det g_i)^{r_i}$; using the ineffective common
+scalar and this lift avoids an incorrect unweighted determinant
+normalization.
+
+Pullback of the affine unitary-connection symplectic form gives
+a smooth closed invariant two-form $\Omega_t$ on the full ball.
+In Dolbeault tangent coordinates our affine form is
+$\operatorname{Im}\langle\alpha,\beta\rangle_{L^2(\omega_t)}$,
+where the Hermitian pairing is linear in its first argument.
+Thus the $+iF^0$ convention gives the quadratic moment $+\mu$
+and $\Omega_{0,0}(iC_xS,C_xS)=\|C_xS\|^2$.
+The exact moment identity is
+$d\langle m_t,S\rangle=2\Omega_t(\xi_S,\cdot)$.
+Since $D\Psi_0(0)$ is harmonic inclusion,
+\begin{equation}\label{eq:ambient-form-estimate}
+ \Omega_{0,0}=\omega_0,\qquad
+ \|\Omega_{t,x}-\omega_0\|\le C(|t|+\|x\|).
+\end{equation}
+This proves positivity on the ordered orbit pairs used in
+Section~\ref{sec:balancing}; compatibility with the original
+complex structure is not needed.
+
+At $x=0$, equivariance makes $\sigma(t,0)$ lie in
+$\bigoplus_i\End F_i\otimes I_{W_i}$. It need not be scalar on $F_i$,
+but preserves the factor decomposition. Chern--Weil therefore gives
+\[
+ \langle m_t(0),S\rangle
+ =2\pi\sum_i\deg_{\omega_t}F_i\,
+       \tr(S_i-c(S)I_{W_i})
+ =-\sum_i\zeta_i(t)\tr S_i.
+\]
+The normalized moment $\rho_t=m_t-m_t(0)$ has target
+$\rho_t=\zeta(t)$. Its complement has already been solved, so this
+is exactly the remaining projective HYM equation.
+The sign can also be checked on a single extension arrow
+$A:F_i\to F_j$. Its moment is negative at $i$ and positive at $j$.
+The corresponding extension $0\to F_j\to E\to F_i\to0$
+can be stable only when $\mu(F_j)<\mu(E)$, precisely the sign
+$\zeta_j>0$ in \eqref{eq:geometric-parameter}.
+The scalar determinant equation is solved separately.
+On a K3 surface $H^1(\mathcal O_X)=0$, so fixed determinant removes
+no scalar degree-one deformation; its Hermitian metric does not
+alter the endomorphism-valued norm.
+
+Theorem~\ref{thm:uniform-balancing}, applied on a ball proportional
+to $\|x\|$, now gives forward and reverse corrections of norm
+$O(|t|+\|x\|)$ in the full multiplicity group.
+They remain in $Z$ and work for every stabilizer.
+
+\subsection{Complementary minimization and harmonic lengths}
+Transport the metric to the uncorrected holomorphic family by
+$H_{t,x}=h_0e^{2\sigma(t,x)}$.
+Let $\mathfrak g_0$ be the full parallel complex trace-free algebra
+and $Q$ its fixed $L^2$-orthogonal complement in zero-forms.
+At the central point,
+$\|\eta\|_{W^{1,2}}\le C\|d\eta\|_{L^2}$ on $Q$.
+Smallness of $a(x)$ in $C^0$ preserves this bound with $D_x$;
+nearby Hermitian and K\"ahler norms are uniformly equivalent.
+Define by polarization
+\begin{equation}\label{eq:complementary-minimum}
+ \mathcal B_{t,x}(v,v)
+ =\inf_{\eta\in QW^{1,2}}
+        \|J_xv-D_x\eta\|_{H_{t,x},\omega_t}^2.
+\end{equation}
+The minimizing normal operator has coercive bilinear form
+$\langle D_x\eta,D_x\nu\rangle$ on a fixed Hilbert space.
+Its bounded inverse varies smoothly. Thus $\mathcal B$ is smooth,
+positive near the origin and equivariant, and harmonic orthogonality
+gives $\mathcal B_{0,0}=g_{\rm flat}$. Consequently
+\begin{equation}\label{eq:complementary-metric}
+ (1-C(|t|+\|x\|))g_{\rm flat}
+ \le\mathcal B_{t,x}
+ \le(1+C(|t|+\|x\|))g_{\rm flat}.
+\end{equation}
+
+Split every gauge zero-form into its parallel and complementary
+parts. Equation~\eqref{eq:exact-gauge-derivative} gives
+\begin{equation}\label{eq:full-gauge-minimum}
+ \inf_\gamma\|J_xv-D_x\gamma\|^2
+ =\inf_{\xi\in\mathfrak g_0}
+       \mathcal B_{t,x}(v-C_x\xi,v-C_x\xi).
+\end{equation}
+At an integrable HYM point and a genuine stratum tangent,
+Hodge theory identifies the left side with the harmonic
+Kodaira--Spencer norm. A changing gauge adds an exact $D_x$ term
+and conjugates isometrically, so its derivative disappears from
+this minimum. We do not identify arbitrary Zariski tangent vectors
+at a singular coarse point with metric tangent vectors.
+
+For a tangent lift at a flat balanced point, differentiating the
+real moment equation gives orthogonality to Hermitian orbit
+directions. At a central value, Hermitian and unitary orbit
+directions are orthogonal. Hence the usual quotient norm equals
+\[
+ \inf_{\xi\in\mathfrak g}\|v-C_x\xi\|^2
+\]
+on these balanced stratum tangents.
+If the correction is locally $y=g(x)x$, its derivative is
+$g(x)v$ plus a complex vertical vector, which disappears under
+this infimum. At the point we may take the bounded $g=e^S$
+from Theorem~\ref{thm:uniform-balancing}. Its squared ambient
+norm distortion is between $e^{-4\|S\|_{\rm op}}$ and
+$e^{4\|S\|_{\rm op}}$, and it maps complex orbit directions onto
+complex orbit directions. Equations~\eqref{eq:complementary-metric}
+and \eqref{eq:full-gauge-minimum} therefore yield
+\eqref{eq:harmonic-comparison} without estimating $Dg$ or
+inverting a small orbit eigenvalue.
+
+A smooth local correction on each stratum exists as follows.
+Fix a balanced $x_0$ with compact stabilizer $H$ and bounded
+correction $S_0\in\mathfrak p_H$, and set $y_0=e^{S_0}x_0$.
+Polar convexity gives $G_{x_0}=H^\CC$.
+Because $S_0$ commutes with $H^\CC$, we have
+$G_{y_0}=H^\CC$ and $K_{y_0}=H$.
+On $V^H$ the map
+\[
+ (T,u)\longmapsto\rho_t(e^Te^{S_0}u)-\zeta(t),
+ \qquad T\in\mathfrak p_H,
+\]
+takes values in that fixed space. Its derivative in $T$ at
+$(0,x_0)$ has quadratic form
+$2\Omega_{t,y_0}(iC_{y_0}T,C_{y_0}T)>0$ for $T\ne0$.
+It is invertible at this point. The finite implicit-function
+theorem gives a smooth local choice, and a compact orbit-type
+slice and uniqueness identify the choices on overlaps.
+At $x_0$ it is the bounded correction already used.
+The local domains may shrink as orbit eigenvalues vanish; the
+pointwise relative constant does not. The same argument applies
+to the inverse. The holomorphic harmonic/Quot map and correction
+within complex orbits preserve the complex quotient structures
+on these strata.
+
+\subsection{Full coverage and the analytic quotient}
+The slice must cover all nearby actual solutions, not merely
+construct a family of examples. We use the integrable HYM branch
+of Delloque \cite{Del25}: the HYM subsolution condition is automatic
+in \S3.2; Proposition~4.3 gives harmonic local classification,
+Proposition~4.5 the complementary equation, Corollary~5.2 the
+nearby morphism identification, and Proposition~5.6 the
+common-parameter inverse. Lemma~7.3 and Theorem~7.4 give an
+open-image homeomorphism for the integrable solution quotient.
+The central solution is integrable; stable factors are simple
+with vanishing cross-Hom, as required.
+The possible nonintegrable failure of openness is not used.
+
+To match its gauge normalization with ours, let $e^s$ be the
+positive part of a small gauge from a harmonic representative
+to an actual solution. Change the harmonic base by $e^h$ with
+$h$ parallel. The new positive logarithm is
+\[
+ L(s,h)=\tfrac12\log(e^{-h}e^{2s}e^{-h}).
+\]
+Its parallel projection has derivative $-I$ in $h$ at zero.
+The finite implicit-function theorem makes $L$ complementary
+on a common parameter neighborhood. After unitary gauge,
+uniqueness identifies it with $\sigma(t,x')$.
+The reverse finite correction then provides a flat balanced
+representative. Conversely every integrable zero of the corrected
+moment is projectively HYM, and the determinant equation makes
+it HYM. High-Sobolev classification and elliptic regularity give
+the asserted smooth topology and full inverse coverage.
+Nested neighborhoods are essential; no same-radius truncation
+or identification of a whole noncompact quotient with a small
+actual chart is claimed.
+
+At the central value, the equivariant harmonic-to-Quot analytic
+germ isomorphism descends through the analytic good quotient.
+Invariant holomorphic functions pull back to invariant holomorphic
+functions, so the universal property gives an isomorphism of
+full reduced complex-space germs, not just their strata.
+The forward and reverse moment correction identify the closed
+orbits with actual HYM classes. This also applies with $H$ and
+$\omega_*$ distinct under the stated hypotheses.
+At a generic nonzero level the entire source chart is stable
+and smooth, so the stratumwise holomorphic identification already
+identifies its full complex structure.
+No global comparison of nearby slope and Gieseker stability
+is assumed: the latter is used at the central point for its
+analytic germ.
+
+Finally suppose a central unitary acts by $-I$ on $V$.
+All ambient constructions are equivariant. The map $F$ is odd
+and the coefficient matrices of $\Omega_t$ and $\mathcal B_{t,x}$
+are even in $x$. Taylor expansion improves both errors to
+$O(|t|+\|x\|^2)$; the same balancing and minimization proofs give
+the improved rate. This completes the proof of
+Theorem~\ref{thm:harmonic-comparison}.
+

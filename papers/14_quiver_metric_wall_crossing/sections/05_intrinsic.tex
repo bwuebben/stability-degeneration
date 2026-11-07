@@ -1,0 +1,318 @@
+\section{Intrinsic metrics and varying parameters}\label{sec:intrinsic}
+
+Let $V$ be a finite doubled-quiver representation and suppose
+$Z=\mu_{\mathbb C}^{-1}(0)$ contains a module-simple representation
+of dimension $m$. Loops and divisible dimension vectors are allowed.
+Set $A_\eta=Z\cap\mu^{-1}(\eta)$ and $M_\eta=A_\eta/K$.
+An \emph{admissible path} in $M_\eta$ is continuous on a compact
+interval with finite subdivision, smooth on each open subinterval
+in a representation-type stratum, and of finite one-sided stratum
+length at every endpoint. Let $d_\eta$ be the infimum of these
+lengths. We include all singular strata.
+
+\begin{theorem}\label{thm:varying-parameters}
+Every $(M_\eta,d_\eta)$ is a nonempty proper geodesic space, with
+its compact-quotient topology. If $\eta_n\to\eta_*$ and balanced
+representatives satisfy $x_n\to x_*$, $y_n\to y_*$, then
+\begin{equation}\label{eq:distance-continuity}
+ d_{\eta_n}([x_n],[y_n])\longrightarrow
+ d_{\eta_*}([x_*],[y_*]).
+\end{equation}
+Every target point is a limit of balanced representatives at
+$\eta_n$, after unitary adjustment. For convergent balanced base
+representatives $p_n\to p_*$, the complete pointed spaces
+$(M_{\eta_n},d_{\eta_n},[p_n])$ converge to
+$(M_{\eta_*},d_{\eta_*},[p_*])$ in pointed Gromov--Hausdorff distance.
+\end{theorem}
+
+The upper distance bound needs two separate facts: uniformly short
+paths near a singular point and almost isometric paths along strata.
+
+\subsection{Semialgebraic paths and inner distances}
+\begin{lemma}\label{lem:uniform-semialgebraic-paths}
+For a fixed semialgebraic family
+$\mathcal A\subset P\times\mathbb R^N$ of nonempty compact connected
+fibers, there is $C$ such that any two points in $\mathcal A_p$
+have a continuous semialgebraic joining path of length at most
+$C\operatorname{diam}_{\rm Eucl}\mathcal A_p$.
+\end{lemma}
+\begin{proof}
+Semialgebraic triviality partitions the base into finitely many
+pieces with fixed compact model fibers. Triangulate each model.
+By a finite ordered rule choose simplices containing the endpoints,
+join each endpoint to a vertex, and join the vertices along a
+spanning tree of the connected one-skeleton. Transport these paths
+through the trivializations. The resulting function of parameter,
+endpoints and time is semialgebraic and continuous in time; joint
+endpoint continuity is unnecessary.
+Uniform monotonicity bounds by an integer $J$ the number of
+monotonicity intervals of every coordinate of every path. Thus
+\[
+ \operatorname{Length}(\gamma)
+ \le\sum_{\ell=1}^N\operatorname{Var}(\gamma_\ell)
+ \le NJ\operatorname{diam}_{\rm Eucl}\mathcal A_p.
+\]
+The finiteness, triangulation and triviality statements used here
+are recalled in \cite[pp.~116, 130, 133, 135]{vdD98}.
+\end{proof}
+
+For a closed connected semialgebraic set $A$, its full Euclidean
+inner distance $\delta_A$ is finite, since semialgebraic arcs join
+its points. It induces the Euclidean topology locally. At $x\in A$,
+the component $C$ of $A\cap\overline B_R(x)$ containing $x$ is
+compact and connected and contains a relative neighborhood of $x$:
+the finitely many other compact components have positive distance
+from $x$. Kurdyka--Orro's inner-metric inequality gives
+\[
+ \delta_C(x,y)\le C_0\|x-y\|^\beta,\qquad 0<\beta\le1
+\]
+on $C$ \cite[Corollary~2]{KO97}.
+Since $\|x-y\|\le\delta_A(x,y)\le\delta_C(x,y)$, the assertion
+follows. Closed $\delta_A$-balls are Euclidean bounded and compact:
+every Euclidean convergent subsequence converges also in $\delta_A$.
+
+We also require finite-stratum approximations. Apply the near-straight
+decomposition of \cite[Proposition~3, pp.~176--178]{KO97} separately
+to the finitely many prescribed semialgebraic pieces in a bounded
+truncation of $A$. For each $\varepsilon>0$ it yields finitely many
+analytic pieces $\Gamma_a$, each in one prescribed piece, whose
+closures $F_a$ cover the truncation and admit $C^1$ joining arcs
+with interior in $\Gamma_a$ and length at most
+$(1+\varepsilon)$ times Euclidean endpoint distance.
+
+For a rectifiable path, start at its first time, choose a member
+of the finite closed cover containing that point and visited later,
+and jump to its last visit. Repeat until the endpoint. Finiteness
+and closedness ensure a choice exists, and no member can recur
+after its last visit. The resulting finite chain has total chord
+length no greater than the original length. Replace each chord by
+its near-straight arc. Smooth each $C^1$ arc inside $\Gamma_a$ on
+its open interval, using tolerances tending to zero at its endpoints
+and arbitrarily small integrated derivative error.
+This preserves endpoints and adds arbitrarily little length.
+Finite smooth-stratum paths therefore approximate the full inner
+distance, even for an original path with infinitely many crossings.
+We do not require geodesics themselves to have finite subdivisions.
+
+\subsection{Fixed singular levels}
+The existence of a module-simple representation makes $Z$ reduced, irreducible and
+generically module-simple \cite[Theorem~1.2]{CB01}.
+A module-simple representation is stable for every parameter,
+so Proposition~\ref{prop:real-polystability} gives nonemptiness.
+The complex quotient $Q_F$ is irreducible and normal
+\cite[Proposition~3.21]{BeSc24}; hence $M_\eta$ is connected by
+Corollary~\ref{cor:fixed-face}. The compact quotient
+$A_\eta\to M_\eta$ is proper and has connected fibers, since $K$
+is connected. Thus $A_\eta$ is connected: a separation of its
+domain projects to a separation of the base, because each connected
+fiber lies in one part and the quotient is closed.
+Properness here also follows by bounding the descended Euclidean
+norm over a compact subset of the quotient.
+
+Let $\delta_\eta$ denote the full Euclidean inner metric on $A_\eta$.
+The preceding local argument makes it proper and topologically
+compatible.
+\begin{lemma}\label{lem:quotient-inner-identity}
+For $x,y\in A_\eta$,
+\begin{equation}\label{eq:quotient-inner-identity}
+ d_\eta([x],[y])=\min_{k\in K}\delta_\eta(x,ky).
+\end{equation}
+The metric $d_\eta$ is proper, complete and geodesic.
+\end{lemma}
+\begin{proof}
+Smooth prequotient representation-type pieces map by Riemannian
+submersions to quotient strata
+\cite[Theorem~1.1(i), \S2.5]{May22}.
+Finite-stratum approximation and projection give the upper bound
+for $d_\eta$ in \eqref{eq:quotient-inner-identity}.
+
+Conversely lift each open smooth segment of an admissible quotient
+path horizontally, initializing at an interior time.
+The lift extends over every compact subinterval: the quotient image
+is compact in one smooth stratum and its preimage is compact,
+since $K$ is compact and radius is bounded.
+The lifted speed equals the quotient speed. Finite endpoint lengths
+give Euclidean Cauchy limits in the closed moment level, lying in
+the prescribed endpoint orbits. Constant unitary adjustments align
+successive segments and the first initial endpoint with $x$.
+The concatenation ends at some $ky$ and has exactly the quotient
+length, proving the reverse inequality.
+
+The right side is the metric quotient of a proper inner space by
+a compact isometric group. It is proper and has the compact-quotient
+topology. The subarc inequality and admissible near-minimizers show
+it is a length metric. Proper length-space Hopf--Rinow gives
+geodesicity and completeness.
+\end{proof}
+In particular $r([x])=\|x\|$ is $1$-Lipschitz.
+At zero level radial paths are horizontal, so
+\begin{equation}\label{eq:cone-radius}
+ d_0([x],0)=\|x\|.
+\end{equation}
+This concerns the full quotient, not the completion of its regular
+locus alone.
+
+\subsection{Connected neighborhoods in nearby levels}
+Pass to a subsequence on which every $\eta_n$ belongs to one face
+$F$ of the finite sign arrangement in Section~\ref{sec:slices}.
+The face $F_*$ containing $\eta_*$ lies in its closure.
+The semistable inclusion gives a projective morphism
+\begin{equation}\label{eq:face-map}
+ \pi:Q_F\longrightarrow Q_{F_*}
+\end{equation}
+by \cite[Lemma~2.4]{BeSc24}, with the sign of its character reversed
+to match our convention.
+The common dense module-simple locus is stable for every character.
+Its common geometric quotient is a dense open on which $\pi$ is
+an isomorphism. Thus $\pi$ is birational and surjective by properness.
+Normality of the integral target gives connected fibers
+\cite[Lemma~37.53.6, Tag 0AY8]{Stacks}.
+These deductions use the existence of a module-simple point in the complex zero fiber.
+
+Fix $p_*=[x_*]$ and its image $q_*\in Q_{F_*}$.
+In a closed algebraic embedding of an affine open chart containing
+$q_*$, let $U_s$ be the component of the closed radius-$s$ ball
+intersection containing $q_*$. These are compact connected
+semialgebraic sets, nested as $s$ decreases, with intersection
+$\{q_*\}$. Each contains a relative open neighborhood of $q_*$:
+the other finitely many compact components are separated from it.
+Their family is semialgebraic by triviality and uniform finiteness
+of connected components.
+
+For the fixed algebraic quotient map $q_{F_*}$ on its semistable
+open set, put
+\begin{equation}\label{eq:balanced-neighborhood}
+ B_{\eta,s}=\{x\in A_\eta:q_{F_*}(x)\in U_s\},\qquad\eta\in F.
+\end{equation}
+The domain contains $A_\eta$, and this is a semialgebraic family
+in the original representative space. No inverse balancing map
+is assumed semialgebraic or jointly continuous.
+Its compact quotient is $\pi^{-1}(U_s)$, which is compact and
+connected: a proper surjection with connected fibers has connected
+inverse image of a compact connected set, by the closed-map
+separation argument. Applying the same argument to connected
+$K$-orbits makes $B_{\eta,s}$ compact and connected.
+
+Furthermore
+\begin{equation}\label{eq:orbit-collapse}
+ \sup_{x\in B_{\eta,s}}\operatorname{dist}_{\rm Eucl}(x,Kx_*)
+ \longrightarrow0\quad\text{as }(\eta,s)\to(\eta_*,0),\quad\eta\in F.
+\end{equation}
+Estimate \eqref{eq:invariant-properness} bounds the representatives,
+since their affine invariants range in the compact image of one
+$U_{s_0}$. Any contrary sequence has a convergent subsequence with
+limit $x\in A_{\eta_*}$. This point is $F_*$-polystable, so the
+quotient map is defined near it and gives $q_{F_*}(x)=q_*$.
+Balanced-orbit uniqueness forces $x\in Kx_*$, a contradiction.
+
+Taking representatives over any point of $\pi^{-1}(q_*)$ also
+proves coverage of the target: they are bounded at $\eta_n$ and
+every limiting orbit is $Kx_*$. Unitary adjustment yields
+representatives converging to $x_*$.
+
+\begin{lemma}\label{lem:shrinking-diameter}
+As $(\eta,s)\to(\eta_*,0)$ with $\eta\in F$,
+$\operatorname{diam}_{d_\eta}(B_{\eta,s}/K)\to0$.
+\end{lemma}
+\begin{proof}
+The stabilizer $H=K_{x_*}$ is a connected product of unitary groups.
+A small Euclidean normal tube to $Kx_*$ is
+$K\times_HN_\varepsilon$, where $N=(T_{x_*}Kx_*)^\perp$,
+under $[k,n]\mapsto k(x_*+n)$.
+This tube is semialgebraic: its group, orbit, normal space and
+action are semialgebraic, and the nearest-point inverse is given
+by polynomial quantifiers.
+For nearby parameters \eqref{eq:orbit-collapse} puts $B_{\eta,s}$
+in the half-sized tube. The slice
+$S_{\eta,s}=B_{\eta,s}\cap(x_*+N_\varepsilon)$ is compact and
+semialgebraic with $B_{\eta,s}=K\times_HS_{\eta,s}$.
+It is connected: connected $H$ preserves each of its finitely
+many open-and-closed components, and multiple components would
+separate the associated bundle.
+Its Euclidean diameter tends to zero by the nearest-point property
+and \eqref{eq:orbit-collapse}.
+Lemma~\ref{lem:uniform-semialgebraic-paths} gives joining paths
+in this fixed family with length tending uniformly to zero.
+Projection and \eqref{eq:quotient-inner-identity} give the assertion.
+\end{proof}
+No connectedness of arbitrary moving moment-level ball intersections
+has been assumed.
+
+\subsection{Sharp distance bounds and complete pointed limits}
+\begin{proof}[Proof of Theorem~\ref{thm:varying-parameters}]
+For the lower bound choose a subsequence with finite liminf of
+the distances, and admissible near-minimizers. Lift them from $x_n$
+to $k_ny_n$ as in Lemma~\ref{lem:quotient-inner-identity}.
+Constant-speed parametrization on $[0,1]$ gives bounded Lipschitz
+constants and radius. After subsequences $k_n\to k$ and
+Arzel\`a--Ascoli gives a uniform limiting curve in $A_{\eta_*}$
+from $x_*$ to $ky_*$. Lower semicontinuity of length gives
+\[
+ d_{\eta_*}([x_*],[y_*])
+ \le\liminf_n d_{\eta_n}([x_n],[y_n]).
+\]
+
+For the upper bound take an admissible limit path of length at most
+$d_{\eta_*}([x_*],[y_*])+\varepsilon$.
+At an interior point of any stratum piece,
+Theorem~\ref{thm:metric-slice} identifies the stratum with
+$U\times\{0\}$ in \eqref{eq:normal-product}.
+Choose the chart radius so that the squared-metric error is less
+than $\varepsilon$ at $\eta_*$. Coverage, followed by the common
+slice inverse, supplies nearby normal balanced points
+$(u_n,z_n)\to0$. Since the moment ignores $U$, $(0,z_n)$ is balanced.
+
+For a compact limit segment $(u(t),0)$ use $(u(t),z_n)$ at
+$\eta_n$ and apply the slice map. Its model length is the Euclidean
+length of $u$, so comparison on both levels gives, for large $n$,
+\[
+ \operatorname{Length}(\gamma_n)
+ \le\sqrt{\frac{1+2\varepsilon}{1-2\varepsilon}}\,
+        \operatorname{Length}(\gamma),\qquad\varepsilon<1/4.
+\]
+Its stabilizer is independent of $u(t)$, so it lies in one stratum.
+Endpoints converge by parameter continuity of the slice and
+complementary correction: the bounded retained correction acts
+trivially on $U$ as $z_n\to0$.
+No weak-eigenvalue inverse or derivative estimate is used.
+
+Around each original junction choose $U_s$ with nearby intrinsic
+diameter as small as prescribed by Lemma~\ref{lem:shrinking-diameter}.
+Truncate the incident open pieces so their remaining endpoints
+are in its relative interior. Continuity and the neighborhood
+property permit this; finite endpoint lengths make the removed
+total length arbitrarily small. Cover the remaining compact
+smooth pieces by finitely many small slice charts and subdivide.
+Use the sharp length bound on each segment.
+
+At new subdivision points the two nearby endpoints converge to
+the same target point, so their quotient images lie in some
+$U_{s_n}$ with $s_n\to0$ by a diagonal choice of nested neighborhoods.
+The diameter lemma joins them at cost tending to zero.
+At original junctions the truncated endpoints and nearby
+approximations lie in the previously chosen $U_s$, giving the
+prescribed small cost. The same construction joins to $[x_n]$
+and $[y_n]$. Constant or wholly truncated pieces use only these
+joins; a constant whole limit path follows from the diameter lemma.
+There are finitely many joins, so assign total cost at most
+$\varepsilon$. Letting $\varepsilon\to0$ proves the upper bound.
+Finite faces and the subsequence principle prove
+\eqref{eq:distance-continuity} for the full sequence.
+
+A bounded ball about $[p_n]$ has representatives in a fixed
+Euclidean ball because radius is $1$-Lipschitz.
+Every sequence in these balls has a subsequence of convergent
+representatives, with all limiting distances determined by
+\eqref{eq:distance-continuity}. Conversely coverage supplies
+nearby representatives for every target point.
+Choose a finite $\varepsilon$-net in the compact target ball
+of radius $L+1$. Its nearby representatives form an asymptotic
+$2\varepsilon$-net of the varying radius-$L$ balls: an uncovered
+sequence would have a convergent representative and contradict
+distance continuity. Finite distance distortions tend to zero.
+Ball inclusions hold with radii $L\pm o(1)$; boundary points can
+be approached from inside using geodesics on either side.
+This proves pointed convergence on every bounded ball to the
+whole proper geodesic target.
+\end{proof}
+

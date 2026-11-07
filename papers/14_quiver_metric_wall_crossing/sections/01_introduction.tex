@@ -1,0 +1,222 @@
+\section{Introduction}\label{sec:introduction}
+
+Near a reducible polystable bundle, deformation theory gives a finite
+quotient description of the moduli germ. The harmonic $L^2$ metric
+contains further information. It is obtained by solving the
+Hermitian--Einstein equation and then taking harmonic representatives
+of deformations. When the stabilizer changes, the finite orbit
+operator develops small eigenvalues, so an inverse estimate that
+treats all gauge directions together is not uniform. This distinction
+is especially relevant when several stability parameters approach
+different walls at different rates.
+
+We prove a local comparison between the actual harmonic metric and
+the flat quiver quotient metric that remains relative through these
+degenerations. The geometric setting is a projective K3 surface with
+a polystable locally free sheaf
+$E_0=\bigoplus_iF_i\otimes\CC^{m_i}$.
+The factors are pairwise nonisomorphic slope-stable bundles with
+equal reduced Hilbert polynomial for an integral ample class.
+The central analytic metric is Ricci-flat in a K\"ahler class for
+which the factors are stable of a common slope; the two classes
+may coincide. These hypotheses are verified directly in the
+application below, including at its selected noncentral wall points.
+
+The central harmonic norm and Serre duality identify
+$V=\Ext^1(E_0,E_0)$ with a unitary doubled-quiver representation.
+Its complex moment zero locus gives the convergent integrability
+model. For nearby K\"ahler forms $\omega_t$, the real central
+parameter is the degree difference
+\[
+ \zeta_i(t)=2\pi\bigl(\rank(F_i)\mu_{\omega_t}(E_0)
+              -\deg_{\omega_t}F_i\bigr).
+\]
+Theorem~\ref{thm:harmonic-comparison} identifies full local
+neighborhoods of actual HYM solutions with the corresponding
+finite quotients. On each genuine smooth-stratum tangent space,
+at a representative of harmonic norm $r$, it proves
+\[
+ f_t^*g_t^{L^2}=(1+O(|t|+r))g_{\zeta(t)}
+\]
+in the sense of two-sided inequalities of Hermitian forms.
+The constant does not depend on stabilizer type or ratios among
+positive finite orbit eigenvalues. A verified central sign symmetry
+improves $r$ to $r^2$; no such cancellation is assumed otherwise.
+
+\subsection{The analytic argument}
+All parallel automorphisms are retained in the finite-dimensional
+problem. On their fixed infinite-dimensional orthogonal complement,
+the gauge equation has a uniformly coercive elliptic inverse.
+The remaining finite moment map is the moment of a smooth closed
+invariant two-form close to the flat form.
+
+The decisive finite estimate is relative to each orthogonal
+vertex projection $P$:
+\[
+ |\langle\rho(x)-\mu(x),P\rangle|
+       \le\varepsilon\|C_xP\|^2.
+\]
+Here $\mu$ is the flat moment, $\rho$ the perturbed normalized
+moment, and $C_x$ the infinitesimal action. The same crossing
+energy appears in the positive moment increment across a spectral
+cut. Working in the Hermitian centralizer of the actual compact
+stabilizer, orthogonal to its infinitesimal stabilizer, makes this
+crossing energy strictly positive at every nonzero boundary
+correction. It cancels from the estimate. A degree argument gives
+a bounded complex-orbit correction and a reverse correction
+without assuming a uniform positive orbit gap.
+
+For the metric, first minimize over the fixed complementary
+gauge directions. The resulting smooth finite Hermitian form
+has the flat harmonic norm as its value at the origin. Minimizing
+next over the retained finite algebra gives exactly the actual
+harmonic Kodaira--Spencer norm. Derivatives of the orbit correction
+are complex vertical and disappear in this infimum. This yields
+relative quotient estimates without bounding those derivatives.
+A separate stratum implicit-function argument and a full local
+inverse supply the differentiability and coverage needed in this
+calculation.
+
+These steps develop methods from the preceding stability-degeneration
+papers. The spectral-cut calibration is from
+\cite{Wue26a}, and its repeated-factor form is developed in
+\cite{Wue26c}. Relative moduli-metric comparison by complementary
+minimization is developed in \cite{Wue26b,Wue26c}.
+The projection-relative moment estimate and the harmonic
+coordinate argument were used for the two-factor K3 example in
+\cite{Wue26d}. Here the finite correction treats arbitrary
+quiver stabilizers, including loops, and its reverse direction
+covers the full nearby solution space. We give the required
+proofs rather than import conclusions restricted to those earlier
+representations.
+
+\subsection{Intrinsic consequences}
+A comparison of tangent norms alone does not determine intrinsic
+distances or a complete rescaled limit: short competing paths
+could leave the chart, and an image of a fixed model ball need
+not cover the corresponding actual ball. We establish both
+path localization and inverse coverage.
+
+The finite-dimensional result is also useful independently.
+For any doubled quiver whose complex zero fiber contains a
+module-simple representation, meaning one with no nonzero proper
+subrepresentation, Theorem~\ref{thm:varying-parameters}
+proves that the full stratified length quotient at every real
+central parameter is a proper geodesic space.
+Arbitrary converging real parameters give converging distances
+for converging balanced representatives, and convergence to the
+whole complete pointed quotient, including singular levels.
+The proof uses connected fibers of projective face maps to
+construct shrinking neighborhoods, uniform semialgebraic paths
+for short joins, and a quantitative Hamiltonian slice to retain
+asymptotically exact lengths along strata. Horizontal lifting
+gives the opposite distance inequality.
+
+Combining this result with the harmonic comparison gives complete
+actual rescaled limits whenever $\zeta(t_n)/\delta_n^2$ converges.
+At a moving wall point, the full normal Ext-quiver again has a
+module-simple zero representation. Translation in its trivial
+factor and another rescaling identify finer limits.
+The result can be iterated through any fixed finite succession
+of convergent centers and scales, under the explicit bounded
+normal-parameter and base-point hypotheses of
+Theorem~\ref{thm:moving-centers}. No comparability of the successive
+positive scales is imposed.
+We also obtain relative distances to specified conical strata,
+the square-root contraction profile of compact cores, and
+matching to the surrounding free wall metric in the regime
+$\|\zeta\|/\lambda\to0$, where $\lambda$ is the least positive
+finite orbit eigenvalue.
+
+\subsection{The K3 application}
+We realize a projective K3 surface with
+$\operatorname{NS}(X)=\langle2\rangle\oplus A_2(-2)$ and an ample
+class $H$. Three spherical line bundles with classes $a,b,-a-b$
+have four cross-extension directions for every pair. With
+multiplicities $(2,2,1)$ their direct sum has primitive Mukai
+vector $(5,a+b,-5)$ of square $46$.
+The resulting local moduli have complex dimension $48$.
+The real polarization family $H+ta+ub$ realizes two independent
+stability parameters.
+
+The finite representation is a doubled triangle on which two
+matrix groups $U(2)$ act nontrivially and interact.
+Five realized wall lines meet at the central bundle and divide
+the parameter plane into ten chambers.
+Explicit adjoint-paired arrow matrices prove the existence of simple
+representations at zero moment level for the full vector and every required wall
+summand. At selected actual two-factor wall strata, the transverse
+contractions have models $T^*\PP^9$, $T^*\PP^{11}$ and
+$T^*\PP^{17}$, with complete product metric limits and precise
+square-root contraction scales. At the wall the distance to the
+two-factor stratum is $(1+O(r))\sqrt{2s}$, where $s$ is the nonzero
+singular value of the rank-one square-zero transverse invariant.
+Theorem~\ref{thm:k3-application} states these conclusions for the
+actual harmonic metric.
+
+The cycle, interacting matrix symmetries, and independent
+parameters are essential features of this application.
+There is no vertex-scalar sign acting as $-I$ on every edge,
+and approaches to its intersecting walls require the singular
+and iterated limit arguments. The comparison is therefore used
+beyond a change of matrix size in a two-factor quotient.
+
+\subsection{Relation to the literature and scope}
+The quadratic K3 deformation model is classical in origin.
+Budur--Zhang prove the required formality \cite{BZ19};
+Arbarello--Sacc\`a give the equivariant analytic quadratic
+identification and its quiver description
+\cite[Propositions~4.4 and 6.1]{AS18}.
+Their dimension-one sheaf wall-crossing theorem is not used
+to identify this rank-five bundle problem.
+Their later treatment of Bridgeland moduli compares nearby stability
+conditions with local quiver VGIT, away from totally semistable walls
+and for sufficiently close conditions with the same heart
+\cite[\S6, Claim~6.1, Proposition~6.3 and Corollary~6.4]{AS25}.
+This broader local comparison concerns algebraic stability and does
+not supply the harmonic metric estimates studied here.
+King's quotient theory \cite{King94}, Crawley-Boevey's
+moment-fiber theorem \cite{CB01}, and Bellamy--Schedler's
+normality and projective face maps \cite{BeSc24} supply the
+algebraic geometry used here. Mayrand's full Hamiltonian slice
+\cite{May22} supplies the analytic local form; we additionally
+prescribe its isometric normal first jet and compare its
+real quotient metric.
+
+Buchdahl--Schumacher's analytic GIT and Weil--Petersson work
+\cite{BS21,BS23,BS26} provides analytic metric antecedents.
+Clarke--Tipler prove local HYM wall variation for simple sufficiently
+smooth semistable bundles with abelian graded automorphism group
+\cite[Proposition~1.1 and Theorem~1.2]{CT24}.
+Delloque removes the abelian restriction and proves continuity of
+HYM connection classes under metric variation
+\cite[Theorems~4.8--4.9]{DelCont25}.
+These results concern connections and graded bundles; the relative
+harmonic moduli-metric estimates require the additional arguments here.
+We use Delloque's later parameter-dependent local solution theory
+\cite{Del25} on its integrable HYM branch for full local
+classification and inverse coverage, and prove separately the
+uniform estimates through the retained symmetry directions.
+Namikawa--Odaka establish metric tangent-cone asymptotics under
+their reduction hypotheses \cite[Setup~1, Proposition~6.10 and
+Corollary~6.13]{NO26}. Their Remark~6.14 distinguishes
+the metric tangent cone from the flat symplectic-slice reduction
+metric, and the derivative estimate in Corollary~6.13(ii)
+has an isolated-singularity hypothesis. Our conclusions concern
+the stated quiver and bundle settings, with nonisolated strata
+and varying real parameters; they are not a general hyperk\"ahler
+equivalence theorem for arbitrary symplectic singularities.
+Xu--Zhuang, with an appendix by Guenancia, prove formal conicality
+and derive analytic conicality in their symplectic-singularity
+setting \cite[Theorem~1.2 and Appendix~A]{XZ26}; general
+hyperk\"ahler-cone existence remains their Conjecture~1.3.
+These algebraic and analytic conclusions do not by themselves
+give the quantitative harmonic-metric comparison proved here.
+
+All moduli identifications and contraction maps asserted here
+are local. In particular we do not identify a global metric
+completion, a bubbling compactification, or an HYM evolution.
+The full stratified length metric is specified explicitly;
+identifying it with the completion of the regular locus alone
+would be a further statement.
+

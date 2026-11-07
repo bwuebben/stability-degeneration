@@ -1,0 +1,339 @@
+\section{Metric slices and real stability}\label{sec:slices}
+
+We first identify the complex quotients at arbitrary real parameters.
+This also gives a properness estimate for the whole family, which will
+be needed for intrinsic metric convergence. We then prove a quantitative
+slice theorem at an arbitrary singular point.
+
+\subsection{Balancing at arbitrary real parameters}
+For a quiver representation $x$ of dimension $m$, a collection
+$D=(D_i\subset W_i)$ is a subrepresentation if
+$x_aD_{t(a)}\subset D_{h(a)}$ for every arrow.
+Let $\eta\in\mathbb R^{Q_0}$ satisfy $\eta\cdot m=0$.
+We call $x$ $\eta$-semistable if $\eta\cdot\dim D\ge0$ for every
+subrepresentation, and $\eta$-stable if the inequality is strict for
+every nonzero proper subrepresentation. It is $\eta$-polystable if
+it is a direct sum of $\eta$-stable representations, each of total
+$\eta$-weight zero. These definitions use arbitrary real $\eta$.
+
+\begin{proposition}\label{prop:real-polystability}
+An orbit $Gx$ meets $\mu^{-1}(\eta)$ if and only if $x$ is
+$\eta$-polystable. The intersection is one $K$-orbit.
+For a balanced point, $G_x$ is the complexification of $K_x$.
+A stable representation has only scalar endomorphisms.
+\end{proposition}
+\begin{proof}
+For stable $x$, consider the left $K$-invariant function
+\[
+ \mathcal F(g)=\|gx\|^2-2\sum_i\eta_i\log|\det g_i|.
+\]
+Multiplying by a common positive scalar does not change it.
+Polar decomposition therefore reduces minimization to
+\[
+ F(S)=\|e^Sx\|^2-2\langle\eta,S\rangle,\qquad
+ S\in\mathfrak a,\quad \operatorname{tr}S=0.
+\]
+This function is proper. Indeed, let $\|S_n\|=r_n\to\infty$ and
+pass to a subsequence with $S_n/r_n\to T$, $\|T\|=1$.
+Diagonalize vertexwise and pass to convergent unitary eigenbases and
+normalized eigenvalues. If a nonzero coefficient of $x$ in the limiting
+bases goes from a $T$-eigenvalue $\tau$ to a larger $\tau'$, its
+contribution to $\|e^{S_n}x\|^2$ grows at least exponentially in $r_n$,
+whereas the trace term is linear.
+
+Otherwise every cumulative lower eigenspace of $T$ is invariant.
+For its distinct global eigenvalues $\tau_1<\cdots<\tau_l$, let
+$D_j=W_{\le\tau_j}$ and let $P_j$ be the corresponding projection.
+There are at least two distinct eigenvalues, since $T$ is nonzero
+and trace-free. Thus
+\[
+ T=\tau_l I-\sum_{j<l}(\tau_{j+1}-\tau_j)P_j,\qquad
+ \langle\eta,T\rangle
+ =-\sum_{j<l}(\tau_{j+1}-\tau_j)\eta\cdot\dim D_j<0.
+\]
+It follows that $F(S_n)\ge-2r_n\langle\eta,S_n/r_n\rangle\to\infty$.
+These subsequence alternatives prove properness. A minimum exists,
+and varying $\mathcal F$ by $g\mapsto e^{tA}g$ gives
+$2\langle\mu(gx)-\eta,A\rangle=0$ for every Hermitian $A$.
+The scalar equation vanishes identically, so $\mu(gx)=\eta$.
+
+For a balanced representation and an invariant $D$, compression of the
+moment equations by the orthogonal projection $P_D$ gives
+\begin{equation}\label{eq:subrepresentation-trace}
+ \eta\cdot\dim D
+ =\sum_a\|P_{D_{h(a)}}x_a(1-P_{D_{t(a)}})\|^2\ge0.
+\end{equation}
+Equality means that $D$ is reducing. Split orthogonally whenever
+equality occurs for a proper nonzero $D$ and induct on total dimension.
+This gives stable summands of zero total weight. Conversely balance
+each stable summand by the preceding minimization and take their
+orthogonal direct sum.
+
+Uniqueness follows from polar decomposition and convexity as in
+Theorem~\ref{thm:uniform-balancing}: for balanced $x,e^Sx$ the function
+$\|e^{tS}x\|^2-2t\langle\eta,S\rangle$ has zero endpoint derivatives
+and second derivative $4\|C_{e^{tS}x}S\|^2$, so $e^Sx=x$.
+If $g$ stabilizes $x$, its compact and positive polar factors
+therefore both stabilize $x$, proving $G_x=(K_x)^{\mathbb C}$.
+
+Finally, a nonzero singular endomorphism of a stable representation
+would have nonzero proper kernel and image, both of positive weight,
+while their weights add to zero. Every nonzero endomorphism is
+therefore invertible. Subtracting an eigenvalue proves it scalar.
+\end{proof}
+
+The proposition is the polystable form of the real Kempf--Ness
+criterion. Its direct proof avoids any genericity restriction.
+In particular, a balanced orbit with a positive-dimensional stabilizer
+is not incorrectly declared stable.
+
+\subsection{Invariant properness and fixed faces}
+From now on $V$ is a doubled-quiver representation, with
+$Z=\mu_{\mathbb C}^{-1}(0)$ given its reduced structure.
+Choose positive-degree homogeneous generators $f_1,\ldots,f_q$ of
+$\mathbb C[Z]^G$, of degrees $d_j$, and set
+$a(x)=\max_j|f_j(x)|^{1/d_j}$; set $a=0$ if there are no generators.
+Finite generation is the standard reductive invariant-theory theorem
+\cite[\S1.6]{KP96}.
+
+\begin{lemma}\label{lem:invariant-properness}
+There is a constant $C$ such that
+\begin{equation}\label{eq:invariant-properness}
+ \|x\|\le C\bigl(\|\mu(x)\|^{1/2}+a(x)\bigr),\qquad x\in Z.
+\end{equation}
+Consequently the family of balanced compact quotients maps properly
+to the product of the central real parameter space and $Z/\!/G$.
+Representatives in the affine fiber over the origin satisfy
+$\|x\|\le C\sqrt{\|\eta\|}$.
+\end{lemma}
+\begin{proof}
+The right-hand parenthesis is strictly positive on the unit sphere
+in $Z$. A zero there would be balanced at zero and have all invariant
+coordinates equal to those of the origin. Zero-character Kempf--Ness
+makes its complex orbit closed, and the affine quotient fiber has
+the origin as its unique closed orbit
+\cite[\S2 and Theorem~6.1]{King94}, a contradiction.
+Its positive minimum and real homogeneity prove the estimate.
+Bounded parameter and invariant coordinates then bound all balanced
+representatives. Their inverse image of a compact set is closed
+before quotienting, hence compact. The last assertion follows when
+all $f_j$ vanish.
+\end{proof}
+
+Partition $\Theta=\{\eta:\eta\cdot m=0\}$ by the signs of $\eta\cdot d$
+for every integral $0\le d\le m$, excluding $0,m$. Each relatively
+open face $F$ is rational polyhedral and contains a rational parameter;
+clear denominators to choose an integral $\theta_F\in F$.
+Our character is
+$\chi_{\theta_F}(g)=\prod_i\det(g_i)^{(\theta_F)_i}$.
+This is King's positive subrepresentation convention
+\cite[Propositions~3.1 and 3.2]{King94}.
+All stable, semistable and polystable objects are constant on $F$:
+the sign list includes dimensions of every possible summand and
+its subrepresentations.
+
+\begin{corollary}\label{cor:fixed-face}
+For $\eta\in F$, the fixed algebraic quotient map induces a
+homeomorphism
+\[
+ M_\eta=(Z\cap\mu^{-1}(\eta))/K
+       \ \longrightarrow\ Q_F=Z/\!/_{\chi_{\theta_F}}G.
+\]
+\end{corollary}
+\begin{proof}
+King's description of the closed semistable orbits and
+Proposition~\ref{prop:real-polystability} give a continuous bijection.
+Over a compact subset of $Q_F$, affine invariant coordinates are
+bounded, so Lemma~\ref{lem:invariant-properness} bounds representatives.
+Every convergent sequence of them has an $\eta$-balanced limit,
+which is still $\theta_F$-polystable. The quotient map is therefore
+defined at the limit and takes it into the same compact set.
+The bijection is proper, hence a homeomorphism.
+\end{proof}
+We shall use the fixed algebraic quotient maps on representative
+spaces. The corollary does not by itself give a jointly continuous
+inverse as the real parameter varies.
+
+\subsection{A quantitative Hamiltonian slice}
+Fix $x_*$ with $\mu_{\mathbb C}(x_*)=0$ and $\mu(x_*)=\eta_*$
+central, and let $H=K_{x_*}$.
+The quaternionic normal representation is
+\[
+ W=(L\oplus JL)^\perp,\qquad L=T_{x_*}(Gx_*),
+\]
+where $J$ is the antiunitary quaternionic structure on $V$.
+The complex orbit tangent $L$ is holomorphically symplectic isotropic,
+$L\perp JL$, and $L\oplus JL$ is quaternionic. Thus $W$ inherits
+its Hermitian and holomorphic symplectic forms.
+
+\begin{theorem}\label{thm:metric-slice}
+There are nested common neighborhoods, for $\eta$ near $\eta_*$,
+identifying $M_\eta$ near $[x_*]$ with the quotient of the full normal
+representation $W$ at central value $\eta|_{\mathfrak h}$.
+Here $\mathfrak h$ denotes the Hermitian stabilizer and restriction
+is dual to its actual embedding in the vertex algebra.
+The identifications are homeomorphisms onto open neighborhoods,
+smooth on strata, and their quotient metrics satisfy
+\begin{equation}\label{eq:slice-metric}
+ (1-C(|\eta-\eta_*|+\|w\|))g^W_{\eta|_{\mathfrak h}}
+ \le f_\eta^*g_\eta
+ \le(1+C(|\eta-\eta_*|+\|w\|))g^W_{\eta|_{\mathfrak h}}.
+\end{equation}
+Constants depend on the fixed center $x_*$, but not on positive
+eigenvalues of the retained $H$-orbit operator at $w$.
+The representation $W$ is unitarily a doubled Ext-quiver representation,
+including paired loops.
+\end{theorem}
+\begin{proof}
+Shift the real moment by $\eta_*$ and apply the full holomorphic
+Hamiltonian slice theorem of Mayrand
+\cite[Theorem~1.3, Proposition~3.1 and (3.5)]{May22}.
+The ambient model is
+\[
+ G\times_{H^{\mathbb C}}(\mathfrak h^\circ\times W),
+ \qquad
+ [g,\xi,w]\longmapsto
+ \operatorname{Ad}_g^*(\xi+\mu_{\mathbb C,W}(w)).
+\]
+The two target summands are complementary, so the complex zero
+locus is exactly $\xi=0$, $\mu_{\mathbb C,W}(w)=0$.
+The theorem applies in the shifted semistable open neighborhood;
+closedness of $Gx_*$ in the original affine space is unnecessary.
+
+We need the slice differential to be the isometric normal inclusion.
+Identify the orbit directions with $L$, their symplectic cotangent dual
+with $JL$ by the fixed orbit Gram pairing, and the normal with the
+actual $W$ by the identity. This is an $H$-equivariant symplectic
+linear identification of full tangents, isometric on $W$.
+It can be prescribed in the holomorphic slice: the derivative of an
+initial slice differs by $(a,n)\mapsto(a+An,Bn)$, and the local
+map $[g,n]\mapsto[g\exp(An),Bn]$ realizes this change
+\cite[Theorem~3.9 and \S3.5]{May22}.
+The pulled-back and model symplectic forms now agree as full tensors
+along the zero orbit. Relative radial homotopy produces a primitive
+of their difference vanishing to second order in normal variables;
+the equivariant Moser vector field has the same order. Its flow has
+identity first jet on the zero section and preserves the prescribed
+normal isometry. This is the relative Moser construction of
+\cite[Theorem~3.3 and Remark~3.4]{May22}, with the order of vanishing
+made explicit. Restricting to $[1,0,w]$ gives a full-ball holomorphic
+map $F$ with $F(0)=x_*$ and $DF(0)$ the isometric inclusion.
+
+For the representation claim, decompose the finite-dimensional star
+algebra generated by vertex projections, arrows of $x_*$ and their
+adjoints:
+\[
+ E_i=\bigoplus_a D_i^a\otimes N_a,\qquad
+ (x_*)_e=\bigoplus_a(x^a)_e\otimes I_{N_a},\qquad
+ H=\prod_aU(N_a).
+\]
+Proposition~\ref{prop:real-polystability} identifies its complexification
+with the full complex stabilizer. The factors are stable objects at
+$\eta_*$, not necessarily simple modules.
+The moment deformation complex splits into factor complexes tensored
+with $\operatorname{Hom}(N_a,N_b)$. Its orthogonal first cohomology is
+\[
+ W=\bigoplus_{a,b}\mathcal E_{ab}\otimes\operatorname{Hom}(N_a,N_b),
+\]
+with product Hermitian norm. Quaternionic duality pairs
+$\mathcal E_{ab}$ with $\mathcal E_{ba}$ antiunitarily and makes each
+$\mathcal E_{aa}$ quaternionic. Paired orthonormal bases give the
+unitary doubled Ext quiver, including pairs of loops. This is the
+metric realization of the usual Ext-quiver slice
+\cite[\S3.2]{BeSc24}. If $d_i^a=\dim D_i^a$, restriction of a central
+covector gives precisely
+\begin{equation}\label{eq:normal-level}
+ \zeta_a=\sum_i d_i^a\eta_i.
+\end{equation}
+
+Let $\mathfrak q=\mathfrak h^\perp$ be the fixed Hermitian complement.
+Solve
+\[
+ P_{\mathfrak q}\bigl(\mu(e^TF(w))-\eta\bigr)=0,\qquad
+ T\in\mathfrak q.
+\]
+Its derivative at $(\eta_*,0,0)$ has positive quadratic form
+$2\|C_{x_*}T\|^2$, invertible on $\mathfrak q$.
+The implicit-function theorem gives a unique small equivariant
+$\sigma(\eta,w)$ with
+$\sigma=O(|\eta-\eta_*|+\|w\|^2)$; the linear $w$ term vanishes
+by normal orthogonality. Put $\Psi_\eta=e^\sigma F$.
+At $w=0$ this is $H$-fixed. The original homogeneous moment paired
+with $\mathfrak h$ vanishes on the entire $H$-fixed subspace.
+Also $\eta_*|_{\mathfrak h}=0$, since
+$\langle\mu(x_*),S\rangle=\operatorname{Re}\langle C_{x_*}S,x_*\rangle$.
+Thus the remaining moment $\rho_\eta=\mu(\Psi_\eta)|_{\mathfrak h}$
+is normalized at zero, with target
+$\eta|_{\mathfrak h}=(\eta-\eta_*)|_{\mathfrak h}$.
+
+The form $\Omega_\eta=\Psi_\eta^*\omega_0$ is closed and invariant,
+has this exact moment map, and differs from the flat form on $W$ by
+$O(|\eta-\eta_*|+\|w\|)$. Apply
+Theorem~\ref{thm:uniform-balancing} to the full retained $H$ quiver.
+This gives both directions of the finite correction uniformly in its
+weak orbit eigenvalues.
+
+For the metric, transport the ambient Hermitian norm through
+$e^\sigma$ and define on the full tangent space to $W$
+\[
+ B_{\eta,w}(v,v)=
+ \inf_{T\in\mathfrak q^{\mathbb C}}
+       \|DF(w)v-C_{F(w)}T\|_{e^\sigma}^2.
+\]
+The complementary Gram matrix is invertible at the center and nearby,
+so $B$ is smooth, equals the flat normal norm at the center, and has
+error $O(|\eta-\eta_*|+\|w\|)$.
+Exact equivariance of $F$ and splitting of the full orbit algebra give
+\[
+ \inf_{\gamma\in\mathfrak g}
+       \|DF(w)v-C_{F(w)}\gamma\|_{e^\sigma}^2
+ =\inf_{\xi\in\mathfrak h^{\mathbb C}}
+       B_{\eta,w}(v-C_w\xi,v-C_w\xi).
+\]
+On genuine integrability-stratum tangents the left side is the
+quotient norm. Derivatives of $\sigma$ and of the retained complex
+correction are orbit directions and disappear in this infimum.
+The correction has norm $O(|\eta-\eta_*|+\|w\|)$, so its action
+distorts squared norms by $1+O(|\eta-\eta_*|+\|w\|)$.
+This proves \eqref{eq:slice-metric}.
+
+For clarity, smoothness on a fixed stratum follows from a separate
+implicit-function argument. At a balanced point with compact
+stabilizer $J$, the correction commutes with $J$, and its complex
+stabilizer remains $J^{\mathbb C}$. On the fixed subspace $W^J$ the
+remaining moment takes values in the commutant of $J$ orthogonal to
+its Hermitian algebra. Its derivative in that positive-gauge space has
+quadratic form $2\Omega(iC_yT,C_yT)>0$ for $T\ne0$.
+The implicit-function theorem gives a smooth local correction there.
+A compact orbit-type slice and uniqueness identify its local maps
+on overlaps. Only the inverse at the fixed point is used.
+
+Finally the full complex Hamiltonian slice classifies every nearby
+integrable orbit. Write its small complex gauge in polar form. Its
+positive logarithm can be normalized to lie in $\mathfrak q$ by
+varying the positive $H$ factor: if the original logarithm is $s$,
+the derivative at zero of the $\mathfrak h$ projection of
+\[
+ \frac12\log(e^{-h}e^{2s}e^{-h})
+\]
+with respect to $h\in\mathfrak h$ is $-I$.
+The finite implicit-function theorem supplies this normalization.
+Uniqueness of the complementary solution identifies it with $\sigma$;
+the reverse part of Theorem~\ref{thm:uniform-balancing} then gives a
+flat normal-balanced representative. All constructions hold on common
+nested parameter neighborhoods. Compact-quotient uniqueness proves
+continuity of the inverse, giving full local coverage.
+\end{proof}
+
+Write $U=W^H$ and $W=U\oplus W'$ orthogonally. These are symplectic
+summands; the moments ignore $U$. The normal quotient is therefore
+the exact metric product
+\begin{equation}\label{eq:normal-product}
+ W///_\zeta H=U\times(W'///_\zeta H).
+\end{equation}
+The stratum through the center is $U$ times the normal vertex.
+In particular, holding a balanced $z\in W'$ fixed while following a
+path in $U$ has exactly its Euclidean $U$-length in the model.
+The full $W$ is a doubled-quiver representation; $W'$ alone may
+contain traceless loop spaces and need not be one.
+

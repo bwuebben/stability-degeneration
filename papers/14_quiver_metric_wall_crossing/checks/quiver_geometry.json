@@ -1,0 +1,379 @@
+{
+  "status": "exact finite calculations only; geometric and analytic proofs separate",
+  "embedding": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -2,
+      2
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      -2
+    ]
+  ],
+  "gram": [
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      -4,
+      2
+    ],
+    [
+      0,
+      2,
+      -4
+    ]
+  ],
+  "line_squares": [
+    -4,
+    -4,
+    -4
+  ],
+  "difference_squares": [
+    -12,
+    -12,
+    -12
+  ],
+  "mukai_vector": [
+    5,
+    [
+      0,
+      1,
+      1
+    ],
+    -5
+  ],
+  "c2": 8,
+  "mukai_square": 46,
+  "expected_moduli_dimension": 48,
+  "extension_space_complex_dimension": 64,
+  "effective_group_complex_dimension": 8,
+  "slope_matrix": [
+    [
+      "-18/5",
+      "12/5"
+    ],
+    [
+      "12/5",
+      "-18/5"
+    ],
+    [
+      "12/5",
+      "12/5"
+    ]
+  ],
+  "geometric_parameter_matrix_in_units_of_2pi": [
+    [
+      "18/5",
+      "-12/5"
+    ],
+    [
+      "-12/5",
+      "18/5"
+    ],
+    [
+      "-12/5",
+      "-12/5"
+    ]
+  ],
+  "two_factor_extension_sign_test": {
+    "degrees_in_units_of_t": [
+      -4,
+      2
+    ],
+    "mean_slope_in_units_of_t": "-1",
+    "parameter_in_units_of_2pi_t": [
+      "3",
+      "-3"
+    ],
+    "destabilizing_forward_arrow_excluded": true
+  },
+  "potential_wall_normals": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "number_of_chambers": 10,
+  "wall_splits": [
+    {
+      "first": [
+        1,
+        0,
+        0
+      ],
+      "second": [
+        1,
+        2,
+        1
+      ],
+      "mukai_pairing": 10,
+      "first_square": -2,
+      "second_square": 28,
+      "tangent_dimension": 30,
+      "transverse_dimension": 18,
+      "projective_dimension": 9
+    },
+    {
+      "first": [
+        0,
+        1,
+        0
+      ],
+      "second": [
+        2,
+        1,
+        1
+      ],
+      "mukai_pairing": 10,
+      "first_square": -2,
+      "second_square": 28,
+      "tangent_dimension": 30,
+      "transverse_dimension": 18,
+      "projective_dimension": 9
+    },
+    {
+      "first": [
+        1,
+        1,
+        0
+      ],
+      "second": [
+        1,
+        1,
+        1
+      ],
+      "mukai_pairing": 12,
+      "first_square": 4,
+      "second_square": 18,
+      "tangent_dimension": 26,
+      "transverse_dimension": 22,
+      "projective_dimension": 11
+    },
+    {
+      "first": [
+        1,
+        2,
+        0
+      ],
+      "second": [
+        1,
+        0,
+        1
+      ],
+      "mukai_pairing": 18,
+      "first_square": 6,
+      "second_square": 4,
+      "tangent_dimension": 14,
+      "transverse_dimension": 34,
+      "projective_dimension": 17
+    },
+    {
+      "first": [
+        2,
+        1,
+        0
+      ],
+      "second": [
+        0,
+        1,
+        1
+      ],
+      "mukai_pairing": 18,
+      "first_square": 6,
+      "second_square": 4,
+      "tangent_dimension": 14,
+      "transverse_dimension": 34,
+      "projective_dimension": 17
+    }
+  ],
+  "stable_but_not_module_simple_example": {
+    "real_level": [
+      -3,
+      1,
+      4
+    ],
+    "complex_moment_zero": true,
+    "proper_subrepresentation": [
+      0,
+      0,
+      1
+    ],
+    "off_all_five_walls": true
+  },
+  "simple_balanced_representations": [
+    {
+      "dimension_vector": [
+        0,
+        1,
+        0
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 0,
+      "endomorphism_variables": 1
+    },
+    {
+      "dimension_vector": [
+        0,
+        1,
+        1
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 1,
+      "endomorphism_variables": 2
+    },
+    {
+      "dimension_vector": [
+        1,
+        0,
+        0
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 0,
+      "endomorphism_variables": 1
+    },
+    {
+      "dimension_vector": [
+        1,
+        0,
+        1
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 1,
+      "endomorphism_variables": 2
+    },
+    {
+      "dimension_vector": [
+        1,
+        1,
+        0
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 1,
+      "endomorphism_variables": 2
+    },
+    {
+      "dimension_vector": [
+        1,
+        1,
+        1
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 2,
+      "endomorphism_variables": 3
+    },
+    {
+      "dimension_vector": [
+        1,
+        2,
+        0
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 4,
+      "endomorphism_variables": 5
+    },
+    {
+      "dimension_vector": [
+        1,
+        2,
+        1
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 5,
+      "endomorphism_variables": 6
+    },
+    {
+      "dimension_vector": [
+        2,
+        1,
+        0
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 4,
+      "endomorphism_variables": 5
+    },
+    {
+      "dimension_vector": [
+        2,
+        1,
+        1
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 5,
+      "endomorphism_variables": 6
+    },
+    {
+      "dimension_vector": [
+        2,
+        2,
+        1
+      ],
+      "real_moment_zero": true,
+      "complex_moment_zero": true,
+      "endomorphism_dimension": 1,
+      "equation_rank": 8,
+      "endomorphism_variables": 9
+    }
+  ]
+}
