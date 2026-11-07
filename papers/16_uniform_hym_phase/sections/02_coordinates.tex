@@ -1,0 +1,221 @@
+\section{Exact metric coordinates}\label{sec:coordinates}
+
+\subsection{Moving backgrounds and the full deformation space}
+We first justify the geometric identifications used in the theorem.
+For each fixed stable factor $F_i$, solve the HE equation on its
+determinant line with a normalized scalar potential. On trace-free
+Hermitian endomorphisms of $F_i$, the HE linearization has no kernel:
+a kernel element is holomorphic and hence scalar, and its pointwise
+trace is zero. The implicit-function theorem and elliptic regularity
+therefore give a smooth family $h_i(p)$ of factor HE metrics.
+These metrics make the factors polystable; their unchanged scalar
+holomorphic endomorphism algebras exclude a nontrivial polystable
+decomposition. They consequently remain stable. This is the
+moving-factor construction of \cite[Proposition~5.1]{wuebben15}.
+The HE existence and polystability correspondence used here are the
+classical ones \cite{donaldson,uy,kobayashi}.
+
+The underlying Dolbeault complex remains fixed as $p$ varies.
+Its cohomology dimensions are constant, so its harmonic projections
+and Green operators vary smoothly. On a smaller parameter
+neighborhood their complementary positive spectra have a common
+gap. Project a basis of each central harmonic factor to the moving
+harmonic space and normalize by the positive square root of its
+Gram matrix. Tensor these identifications with the multiplicity
+Hom spaces. This gives the smooth $G$-equivariant maps $\iota_p$
+used in \eqref{eq:kuranishi}, preserving the trace constraint.
+Every uniform assertion below is at a prescribed finite spatial
+and parameter regularity order on a common smaller neighborhood.
+
+Smooth positive bundle isometries from $h_p$ to $h_0$ identify the
+Hermitian endomorphism bundles. They commute with multiplicity
+automorphisms. The range $\ha$ of $P_p$ is therefore fixed.
+Since $P_pP_0=P_0$ and $P_0P_p=P_p$, the map
+\begin{equation}\label{eq:complement-trivialization}
+ T_p=Q_p|_{Q_0},\qquad T_p^{-1}=Q_0|_{Q_p},
+\end{equation}
+identifies the complementary spaces. These are smooth,
+$K$-equivariant identity-plus-finite-rank maps, bounded in every
+H\"older space used in the proof.
+
+The convergent construction \eqref{eq:kuranishi} is defined on an
+ambient ball, including nonintegrable points. On its zero locus
+$d+a_p(x)$ is integrable. We use the full construction as in
+\cite[Theorem~8.7]{lam} and \cite[Lemma~2.1]{wuebben15}.
+One consequence needed for large reconstructing gauges deserves
+an explicit proof.
+
+\begin{lemma}\label{lem:endpoint}
+Whenever $x$ and $gx$ belong to the common reconstruction ball,
+\[
+ a_p(gx)=g\,a_p(x)g^{-1}.
+\]
+This holds for every $g\in G$, without a bound on its norm.
+In particular, integrability is preserved between these endpoints.
+\end{lemma}
+
+\begin{proof}
+Parallel multiplicity automorphisms commute with the Hodge operators,
+including nonunitary automorphisms. Expand the convergent solution
+of \eqref{eq:kuranishi} into homogeneous terms
+$a_p(x)=\sum_{j\ge1}a_{p,j}(x)$. Each term is obtained recursively
+from the equivariant bilinear operation
+$-d_p^*G_{2,p}(\,\cdot\,\wedge\,\cdot\,)$, and is therefore
+$G$ equivariant for every $g$. At the two endpoints both series
+converge. The fixed linear operator $\Ad_g$ commutes with their
+sum, proving the identity. The same argument applies to
+$\kappa_p$; alternatively the identity conjugates the two
+Dolbeault operators. No intermediate point on a group path is
+required to lie in the small ball.
+\end{proof}
+
+Every sufficiently small integrable deformation has such a harmonic
+presentation. Impose $d_p^*a'=0$ by a small determinant-one complex
+gauge orthogonal to the full parallel algebra. The linearized
+Coulomb equation on that complement is $-d_p^*d$, with a uniformly
+bounded inverse. Its right side already lies in the complement.
+The implicit-function theorem gives a common local slice.
+Integrability and Hodge decomposition then give
+$a'=x-d_p^*G_{2,p}(a'\wedge a')$, so contraction uniqueness identifies
+$a'$ with $a_p(x)$. This construction uses a fixed elliptic
+complement, not the varying tangent space to a finite orbit.
+
+\subsection{The exact sliced equation}
+For small $u\in Q_p h^{19/8}(\Herm_0E_0)$ put $h(u)=h_pe^u$.
+Even when $d_x=d+a_p(x)$ is not integrable, it determines a unique
+compatible unitary connection with this $(0,1)$ part.
+In the holomorphic presentation its $(1,0)$ part is
+\begin{equation}\label{eq:chern}
+ D'_{0,p}+e^{-u}D'_{0,p}(e^u)
+                    -e^{-u}a_p(x)^{*h_p}e^u.
+\end{equation}
+Define the centered curvature
+\begin{equation}\label{eq:centered}
+ \M(p,x,u)=e^{u/2}
+       \bigl(i\Lambda_pF_{d_x,h(u)}-\kappa_E(p)I\bigr)e^{-u/2}.
+\end{equation}
+It is Hermitian and pointwise trace free, because the determinant
+connection remains the fixed HE determinant. At $x=u=0$,
+$\M=-b_p$.
+
+For clarity, write $\mathsf C_u,\mathsf S_u,\mathsf B_u$ for
+functions of the pointwise commutator $\ad_u$, reserving $C_x$
+for the infinitesimal group action:
+\begin{equation}\label{eq:exponential-functions}
+ \mathsf C_u=\cosh(\ad_u/2),\qquad
+ \mathsf S_u=\frac{\sinh(\ad_u/2)}{\ad_u/2},\qquad
+ \mathsf B_u=\mathsf S_u^{-1}\mathsf C_u,\qquad
+ R_p(u)=P_p\mathsf B_u|_{\ha}.
+\end{equation}
+The removable singularities have value one. In a unitary basis
+diagonalizing $u$, the multipliers of $\mathsf S_u$ and
+$\mathsf B_u$ on an off-diagonal entry are $\sinh(a)/a$ and
+$a\coth(a)$, where $a=(u_i-u_j)/2$. These are positive and
+$a\coth(a)\ge1$. Thus $\mathsf B_u\ge I$ and
+\begin{equation}\label{eq:R-inverse}
+ R_p(u)\ge I,\qquad \|R_p(u)^{-1}\|_{L^2(\ha)\to L^2(\ha)}\le1.
+\end{equation}
+This inverse is unrelated to the spectrum of $C_x^*C_x$.
+
+\begin{proposition}\label{prop:slice}
+Define
+\begin{equation}\label{eq:slice}
+ \begin{split}
+ \beta(p,x,u)&=-R_p(u)^{-1}P_p\mathsf S_u^{-1}\M(p,x,u),\\
+ \dot x&=C_x\beta(p,x,u),\\
+ \dot u&=-2\mathsf S_u^{-1}\M(p,x,u)-2\mathsf B_u\beta(p,x,u),\\
+ \dot g&=\beta(p,x,u)g.
+ \end{split}
+\end{equation}
+For classical solutions, these equations preserve $P_pu=0$,
+trace and determinant. If $x(0)=g(0)x_b$ and $x_b\in Z_p$,
+then $x(s)=g(s)x_b$ and $x(s)\in Z_p$ as long as the
+coefficients stay in the reconstruction domain. The metric
+$H(s)=g(s)^*(h_pe^{u(s)})$ on $d_{x_b}$ satisfies exactly
+\begin{equation}\label{eq:hym}
+ H^{-1}\partial_sH=-2(i\Lambda_pF_H-\kappa_E(p)I).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Projection of $\dot u$ onto $\ha$ is zero by the definition of
+$R_p$ and $\beta$. The coefficient $\beta$ is Hermitian and has
+weighted trace zero, so the last equation remains in $G$.
+Uniqueness for the linear representation equation gives
+$x(s)=g(s)x_b$. Lemma~\ref{lem:endpoint} gives
+$d_{x(s)}=g(s)d_{x_b}g(s)^{-1}$ and exact integrability.
+
+Transport the metric velocity by $g^{-1}$ and center by
+$e^{-u/2}$. Since $\dot gg^{-1}=\beta=\beta^{*h_p}$, the two
+gauge derivatives contribute $2\mathsf C_u\beta$. The exponential
+derivative contributes
+\[
+ e^{-u/2}(d\exp)_u(\dot u)e^{-u/2}
+   =\int_{-1/2}^{1/2}e^{t\ad_u}\dot u\,dt
+   =\mathsf S_u\dot u.
+\]
+Their sum is $-2\M$ by \eqref{eq:slice}. Curvature transforms by
+the same bundle isometry, proving \eqref{eq:hym}.
+The calculation uses neither commutativity of $u$ and $\beta$
+nor commutativity of successive values of $\beta$.
+\end{proof}
+
+The classical calculation requires one time derivative and two
+spatial derivatives of $u$. The parabolic realization below
+supplies this regularity for positive times and continuity at
+the initial time in $h^{17/8}$.
+For constant $k\in K$, the transformation
+$(x,u,g)\mapsto(kx,kuk^{-1},kg)$ preserves \eqref{eq:slice}
+and reconstructs the same metric. This is the unitary redundancy
+of these coordinates. Removing $g$ instead would identify
+distinct parallel positive metrics at $x=0$.
+
+\subsection{Relative metrics and large gauges}
+A right-invariant Riemannian metric on the finite-dimensional
+group $G$ is complete. Its distance satisfies
+\[
+ d_R(g,g_*)=d_R(gg_*^{-1},I).
+\]
+The order of the two factors matters. This right quotient,
+rather than $g_*^{-1}g$, is what cancels the absolute gauge
+size in the comparison of metrics.
+
+\begin{lemma}\label{lem:relative}
+Let $\Psi:B_r(V)\to Q_ph^\tau(\Herm_0E_0)$ be a $C^1$ map,
+where $\tau>0$ is nonintegral, with
+$\|\Psi(x)\|_{h^\tau}\le Cr^2$ and
+$\|D\Psi(x)\|_{V\to h^\tau}\le Cr$.
+Consider metrics on the same $d_{x_b}$,
+\[
+ H=g^*(h_pe^{\Psi(x)+v}),\qquad
+ H_*=g_*^*(h_pe^{\Psi(x_*)}),\qquad x=gx_b,\quad x_*=g_*x_b,
+\]
+with $x,x_*\in B_r$ and $\|v\|_{h^\tau}$ and $d_R(g,g_*)$
+sufficiently small. The centered logarithm
+\[
+ \log\!\left(e^{-\Psi(x_*)/2}q^{*h_p}
+             e^{\Psi(x)+v}q e^{-\Psi(x_*)/2}\right),
+ \qquad q=gg_*^{-1},
+\]
+has $h^\tau$ norm at most
+$C(\|v\|_{h^\tau}+d_R(g,g_*))$. In particular,
+$e^{-\eta}H_*\le H\le e^\eta H_*$ for this same bound $\eta$.
+The constants are independent of the absolute gauge norms
+and of the stabilizers.
+\end{lemma}
+
+\begin{proof}
+In an identity chart, $\|q-I\|\le C d_R(g,g_*)$.
+Since $x=qx_*$, it follows that
+$|x-x_*|\le Cr\,d_R(g,g_*)$, without inverting $C_x$.
+The segment between $x$ and $x_*$ lies in the ambient ball,
+so the graph derivative bound gives
+$\|\Psi(x)-\Psi(x_*)\|_{h^\tau}\le Cr^2d_R(g,g_*)$.
+The matrix $q$ is parallel for the split connection, with
+uniformly bounded spatial norms in the identity chart.
+Multiplication, exponential and logarithm are smooth operations
+in the little-H\"older algebra. The displayed logarithm vanishes
+at $q=I,v=0$, which gives its norm estimate. Its $C^0$
+operator bound implies the metric-order statement after
+pullback by $g_*$. No estimate on $g$ or $g_*$ enters.
+\end{proof}

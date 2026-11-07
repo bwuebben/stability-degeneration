@@ -1,0 +1,214 @@
+\section{Geometric tracking and initial metrics}\label{sec:geometric}
+
+\subsection{Verification of the phase hypotheses}
+Choose the graph of Proposition~\ref{prop:graph} on $B_{4r}(V)$.
+Set $v=u-\Psi(p,x)$ and define
+\begin{equation}\label{eq:geometric-perturbations}
+ \begin{split}
+ h_g(p,x,v)&=\beta(p,x,\Psi(p,x)+v)-\beta_0(p,x),\\
+ h_x(p,x,v)&=C_xh_g(p,x,v),\\
+ \F_p(x,v)&=\N_p(x,\Psi+v)-\N_p(x,\Psi)
+                         -D_x\Psi(p,x)C_xh_g(p,x,v).
+ \end{split}
+\end{equation}
+The last subtraction follows from the invariance equation
+\eqref{eq:invariance}. In these variables the exact normal equation is
+$\dot v=-A_pv+\F_p(x,v)$. Its remainder contains no second
+spatial derivative of $v$. All three functions in
+\eqref{eq:geometric-perturbations} vanish at $v=0$.
+Smoothness and \eqref{eq:vanishing-jets} imply, on smaller
+coefficient and normal balls,
+\begin{equation}\label{eq:geometric-smallness}
+ \|D_vh\|+\|D_v\F_p\|\le\epsilon,\qquad
+ \|D_xh\|+\|D_x\F_p\|\le K_r\|v\|_{E_\alpha}.
+\end{equation}
+Normal remainders are measured from $E_\alpha$ to $E_0$.
+Uniform bounds through order two follow from H\"older
+multiplication and composition estimates on these balls;
+compactness of an infinite-dimensional normal ball is not used.
+
+For phase selection we need a complete finite extension.
+Choose a $K$-invariant smooth coefficient cutoff $\chi_r$
+equal to one on $B_{2r}$ and supported in $B_{3r}$, and put
+\begin{equation}\label{eq:cutoff}
+ \widehat\beta_0=b_p+\chi_r(\beta_0-b_p),\qquad
+ \widehat h_g=\chi_rh_g,\qquad
+ \widehat h_x=C_x\widehat h_g,\qquad
+ \widehat\F_p=\chi_r\F_p.
+\end{equation}
+The supported differences are extended by zero.
+The central drift outside the support is retained.
+To see the relevant bounds explicitly, let $B(x)=\beta_0(p,x)-b_p$.
+Proposition~\ref{prop:moment} gives, on the support,
+\[
+ |B|\le Cr^2,\qquad |DB|\le Cr,\qquad |D^2B|\le C.
+\]
+Since $|D^j\chi_r|\le C_jr^{-j}$, the same bounds hold
+for $\widehat\beta_0-b_p$ through order two.
+For $\widehat f(x)=C_x\widehat\beta_0(x)$,
+$|D\widehat f|\le C(|p|+r^2)$.
+The full right-trivialized group derivative also contains
+$D\widehat\beta_0$, and hence admits the bound
+\begin{equation}\label{eq:finite-L}
+ L\le C(|p|+r).
+\end{equation}
+The bracket term in \eqref{eq:finite-linearization} obeys
+the same bound. Outside the support the finite field is
+the complete central linear drift, and the group coefficient
+is bounded everywhere.
+
+Multiplication by $\chi_r$ preserves the small normal
+derivative bounds in \eqref{eq:geometric-smallness}.
+Coefficient derivatives of the cutoff introduce powers
+of $r^{-1}$, but their factors vanish at $v=0$, so the
+first coefficient derivatives remain bounded by
+$K_r\|v\|$. Second derivative constants are finite for
+the chosen radius. Proposition~\ref{prop:phase} does not
+require these constants to remain bounded as $r\to0$.
+There is no dependence on a finite orbit rank or spectral
+ratio. We can therefore choose the parameter and coefficient
+radii to make $L$ small relative to $\sigma$, then the
+normal radius to make $\epsilon$ small, and finally the
+initial displacement threshold $\delta$.
+
+\subsection{Proof of the main theorem}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Propositions~\ref{prop:graph} and \ref{prop:moment} give
+part~(i). Equations~\eqref{eq:semigroup},
+\eqref{eq:geometric-perturbations} and
+\eqref{eq:cutoff} verify Proposition~\ref{prop:phase}
+with $\alpha=7/8$, uniformly in $p$.
+It supplies a global solution of the extended system,
+normal exponential decay and a group-valued phase.
+
+Before any exit from the geometric domain, uniqueness
+identifies this solution with the sliced HYM system.
+Confinement prevents coefficient exit. The quadratic
+graph bound and
+$\|v(s)\|_{h^{17/8}}\le CD e^{-cs}$ prevent normal exit
+after reducing $r$ and $\delta$. The group coefficient
+is bounded, so $g$ and $g^{-1}$ cannot escape in finite
+time. The mild continuation argument with the integrable
+smoothing kernel excludes a remaining finite-time exit
+in the initial H\"older space. Thus the geometric
+coordinate interval is infinite.
+
+The phase estimate gives $|x(s)-x_*(s)|\le CD e^{-cs}$.
+Require $C\delta<r/2$. Since $|x(s)|\le r$, the
+selected trajectory remains inside $B_{2r}$, where
+the finite extension agrees with the exact graph field.
+The orbit-preserving conclusion of Proposition~\ref{prop:phase}
+gives $x_*(s)=g_*(s)x_b$. Lemma~\ref{lem:endpoint}
+then preserves the entire integrability equation for
+both trajectories. Proposition~\ref{prop:slice}
+reconstructs actual HYM flows on the same $d_{x_b}$.
+
+For initial data in $h^{17/8}$, the common parabolic
+realization gives classical equations at positive
+times and continuity in that space at time zero.
+The reconstructed metric equation and its initial
+value follow by this continuation. Smooth initial
+metrics are included.
+Lemma~\ref{lem:relative}, applied on the larger
+coefficient ball, gives \eqref{eq:relative-log}
+and \eqref{eq:order-main}. The remaining estimates
+are those of Proposition~\ref{prop:phase}.
+Its $C^1$ statement combines with the smooth change
+$v_0=u_0-\Psi(p,x_0)$ to prove part~(iii).
+Its uniqueness class and uniformity give the final
+assertions. Proposition~\ref{prop:metric-charts}
+below supplies the stated interpretation in initial
+metric charts.
+\end{proof}
+
+\subsection{Coverage of nearby metrics}
+\begin{proposition}\label{prop:metric-charts}
+There is $r_{\mathrm{in}}\in(0,r/2)$ such that for
+$|x_b|<r_{\mathrm{in}}$ every fixed-determinant
+metric sufficiently close to $h_p$ in $h^{17/8}$
+has a unique local representation
+\begin{equation}\label{eq:metric-chart}
+ H^{\mathrm{in}}=(e^{a_0})^*(h_pe^{u_0}),\qquad
+ a_0\in\ha,\quad u_0\in Q_ph^{17/8},
+\end{equation}
+with $a_0,u_0$ small,
+$x_0=e^{a_0}x_b\in B_r$, and
+$\|u_0-\Psi(p,x_0)\|_{h^{17/8}}<\delta$.
+The representation and its inverse are smooth with
+uniform local derivative bounds in $p$, independent
+of the stabilizer of $x_b$.
+
+The same conclusion holds in a relative chart about
+a possibly large gauge $\bar g$ provided
+$|\bar g x_b|<r_{\mathrm{in}}$.
+The chart uses the metric pulled back by $\bar g^{-1}$
+and has constants independent of the absolute norm
+of $\bar g$.
+\end{proposition}
+
+\begin{proof}
+In an $h_p$-unitary presentation consider
+\[
+ \mathcal J_p(a,u)=\log(e^a e^u e^a):
+ \ha\oplus Q_ph^{17/8}\longrightarrow h^{17/8}(\Herm_0E_0).
+\]
+The matrix product is positive Hermitian with
+determinant one. Smooth composition in the H\"older
+algebra makes $\mathcal J_p$ smooth. Its derivative
+at zero is $(a,u)\mapsto2a+u$, with uniformly bounded
+inverse $z\mapsto(\frac12P_pz,Q_pz)$.
+The parameter-dependent inverse-function theorem
+gives a common metric neighborhood.
+
+The representation action near the identity sends
+$B_{r_{\mathrm{in}}}$ into $B_{2r_{\mathrm{in}}}$.
+Choose $r_{\mathrm{in}}$ after the tracking threshold
+so that $C(2r_{\mathrm{in}})^2<\delta/2$ in the graph
+bound. Reduce the metric neighborhood to ensure
+$\|u_0\|<\delta/2$. The triangle inequality gives
+the required initial normal displacement.
+For a large gauge, apply the same factorization to
+the pulled-back metric at coefficient $\bar g x_b$,
+and return to the original bundle with
+$g_0=e^{a_0}\bar g$. The estimates are in the relative
+frame and introduce no factor $\|\bar g\|$.
+\end{proof}
+
+For integrable $x_b$, restriction of the ambient
+phase map to these metric charts is $C^1$.
+Confinement remains the hypothesis needed for its
+all-time geometric interpretation.
+
+\subsection{Special cases and scope}
+For diagonal multiplicity groups, the slice equations
+reduce to those used in the two-step metric response
+and four-line phase constructions
+\cite[Section~6]{wuebben3},
+\cite[Sections~3--5]{wuebben8}.
+In a positive diagonal frame $g=e^Y$, right group
+differences become differences of $Y$.
+Theorem~\ref{thm:main} therefore recovers their basic
+confined phase and relative metric estimates when
+the same graph construction is chosen. Their sharper
+size factors and differentiated refinements remain
+separate estimates.
+
+The confined wall and triangular unstable trajectories
+of \cite[Sections~3--5]{wuebben9} also fit the present
+regime after the stated radius reductions. Their
+gauges may diverge, while their harmonic coefficients
+stay small. The relative reconstruction lemma explains
+why this does not obstruct metric tracking in the
+general noncommuting setting. Acyclic-support coercivity,
+global entry and confinement, and precise logarithmic
+or linear drift require the additional arguments of
+those special families.
+
+The stationary balancing and harmonic quotient comparisons
+of \cite{wuebben14,wuebben15} do not supply a parabolically
+invariant graph. The present proof uses the full Kuranishi
+construction and moving stable-factor geometry, but
+constructs its dynamical graph and phase independently
+of those stationary comparisons. No assertion about
+an evolving moduli-space metric follows merely from
+the relative metric estimate proved here.

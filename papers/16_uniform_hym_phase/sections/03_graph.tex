@@ -1,0 +1,253 @@
+\section{The complementary equation and its invariant graph}\label{sec:graph}
+
+\subsection{The real elliptic operator}
+Write $D_{0,p}=D'_p+d$ for the split Chern connection. On
+trace-free Hermitian zero-forms set
+\begin{equation}\label{eq:real-operator}
+ L_p=\tfrac12(\Delta_{D'_p}+\Delta_d).
+\end{equation}
+Its real quadratic form is half the sum of the two derivative
+energies. Its kernel therefore consists of parallel Hermitian
+endomorphisms and equals $\ha$. Indeed, a parallel endomorphism
+is holomorphic, the cross-Hom spaces between the distinct stable
+factors vanish, and each stable factor has only scalar holomorphic
+endomorphisms. Conversely, all multiplicity endomorphisms are
+parallel. The restriction of $L_p$ to $Q_p$ has a common positive
+gap for small $p$.
+
+\begin{lemma}\label{lem:first-jet}
+On the ambient coefficient ball the exact expression
+\begin{equation}\label{eq:first-jet}
+ \mathsf S_u^{-1}\M(p,x,u)
+     =L_pu-b_p+\mathcal G_p(x,u,\nabla u)
+\end{equation}
+has a smooth remainder depending only on the first spatial jet
+of $u$. For every $p$,
+$\mathcal G_p(0,0)=0$ and
+$D_{(x,u)}\mathcal G_p(0,0)=0$.
+\end{lemma}
+
+\begin{proof}
+In \eqref{eq:chern}, second spatial derivatives occur only when
+$e^{-u}D'_p(e^u)$ is differentiated. If $W$ denotes the
+contracted second jet, its centered coefficient is
+$e^{-u/2}(d\exp)_u(W)e^{-u/2}=\mathsf S_uW$.
+Multiplying by $\mathsf S_u^{-1}$ cancels this coefficient
+exactly. Every remaining derivative of $u$ has order at most one.
+The finite form $a_p(x)$ and its spatial derivatives are smooth
+and uniformly controlled on the chosen coefficient ball.
+
+The constant term is $-b_p$. Put
+$K_p=i\Lambda_pF_{D_{0,p}}$. Direct differentiation and the
+zero-form K\"ahler identity give
+\begin{align}
+ D_u\M(p,0,0)u
+ &=i\Lambda_p\ddbar D'_pu+\tfrac12[u,K_p]\notag\\
+ &=\Delta_{D'_p}u-\tfrac12[K_p,u]
+   =\tfrac12(\Delta_{D'_p}+\Delta_d)u. \label{eq:centered-linear}
+\end{align}
+Here $\Delta_d=\Delta_{D'_p}-[K_p,\cdot]$. The commutator
+is needed when the factor slopes differ. Since
+$\mathsf S_u^{-1}=I+O(u^2)$, it does not alter the
+linearization, including in the presence of the constant $b_p$.
+The coefficient derivative vanishes: contraction of
+$D_{0,p}(x-x^*)$ is a combination of $d_p^*x$ and its adjoint,
+which vanish for harmonic $x$. Subtracting the constant and
+linear parts proves the statement.
+\end{proof}
+
+Substitution in \eqref{eq:slice} yields
+\begin{equation}\label{eq:normal-system}
+ \begin{split}
+ \beta(p,x,u)&=R_p(u)^{-1}(b_p-P_p\mathcal G_p),\\
+ \dot u&=-2L_pu+\N_p(x,u),\\
+ \N_p&=-2\mathcal G_p+
+       2(I-\mathsf B_uR_p(u)^{-1})b_p
+       +2\mathsf B_uR_p(u)^{-1}P_p\mathcal G_p .
+ \end{split}
+\end{equation}
+In the middle term $I$ includes $\ha$ in all sections.
+The projection identity in Proposition~\ref{prop:slice}
+shows that $\N_p$ takes values in $Q_p$.
+Both $\mathsf B_u-I$ and $R_p(u)-I$ are quadratic, so
+\begin{equation}\label{eq:vanishing-jets}
+ D\N_p(0,0)=0,\qquad D_u\beta(p,0,0)=0.
+\end{equation}
+The finite linearization is $\Lambda_px=C_xb_p$, with norm
+tending to zero as $p\to0$.
+
+\subsection{A common parabolic domain}
+Use \eqref{eq:complement-trivialization} to work on the fixed pair
+\[
+ \mathcal X_0=V_{\R}\oplus Q_0h^{3/8},\qquad
+ \mathcal X_1=V_{\R}\oplus Q_0h^{19/8}.
+\]
+The continuous interpolation spaces needed below are
+\begin{equation}\label{eq:interpolation}
+ \begin{split}
+ \mathcal X_\beta
+  &=(\mathcal X_0,\mathcal X_1)^0_{5/8,\infty}
+        =V_{\R}\oplus Q_0h^{13/8},\\
+ \mathcal X_\alpha
+  &=(\mathcal X_0,\mathcal X_1)^0_{7/8,\infty}
+        =V_{\R}\oplus Q_0h^{17/8}.
+ \end{split}
+\end{equation}
+We use the interpolation convention of
+\cite[Proposition~2.2(c)]{shaosimonett}. One derivative of
+$h^{13/8}$ belongs to the multiplication algebra $h^{5/8}$,
+which embeds in $h^{3/8}$. Smooth multiplication and composition
+therefore make the first-jet nonlinearities smooth
+$\mathcal X_\beta\to\mathcal X_0$ maps. No restriction on
+$\dim_{\R}X$ is required for this H\"older algebra estimate.
+Smooth finite-rank projections preserve these interpolation spaces.
+The exponents fix a convenient interpolation scale; no sharp
+regularity threshold is asserted.
+
+The transported operator
+$\diag(0,2L_p|_{Q_p})$ on $\mathcal X_1\subset\mathcal X_0$
+has continuous maximal regularity. We spell out the bundle
+realization of the result used here. Complexify the real bundle
+and choose a smooth complementary bundle making their sum trivial.
+Extend $2L_p$ by a connection Laplacian on that complement with
+the same scalar principal symbol. The resulting normally elliptic
+system has domain $h^{19/8}$ on $h^{3/8}$ by the local resolvent
+construction and Banach-valued extension of
+\cite[Remark~3.3, Theorem~3.6 and Proposition~3.7]{shaosimonett}.
+The original summand is reducing. Projection away from the
+parallel kernel commutes with the operator, so its linear
+solutions restrict to the required complement. A finite-dimensional
+zero block also has maximal regularity. Uniform ellipticity and
+smooth dependence on a compactly contained parameter neighborhood
+give common constants.
+
+In particular, on
+$E_{0,p}=Q_ph^{3/8}$ and $E_{\alpha,p}=Q_ph^{17/8}$,
+the semigroup of $A_p=2L_p|_{Q_p}$ satisfies
+\begin{equation}\label{eq:semigroup}
+ \|e^{-sA_p}\|_{E_\alpha\to E_\alpha}\le Me^{-\sigma s},
+ \qquad
+ \|e^{-sA_p}\|_{E_0\to E_\alpha}
+       \le M(1+s^{-7/8})e^{-\sigma s}.
+\end{equation}
+Elliptic regularity identifies its spectrum with the smooth
+$L^2$ spectrum. A common resolvent contour gives the exponential
+bound from the fixed complementary gap; interpolation gives the
+smoothing factor. The restricted semigroup is strongly continuous
+on the little-H\"older initial space. The parameter-dependent
+second-order term has remained in $L_p$ throughout this argument.
+
+\subsection{The invariant graph}
+\begin{proposition}\label{prop:graph}
+For each prescribed finite $m\ge6$, after shrinking the parameter
+and coefficient neighborhoods there is a jointly $C^m$,
+$K$-equivariant map $\Psi(p,x)\in Q_ph^{19/8}$ whose graph
+is locally invariant for \eqref{eq:slice}, and
+\begin{equation}\label{eq:graph-bounds}
+ \Psi(p,0)=D_x\Psi(p,0)=0,\qquad
+ \|\Psi(p,x)\|_{h^{19/8}}\le C|x|^2,\qquad
+ \|D_x\Psi(p,x)\|_{V\to h^{19/8}}\le C|x|.
+\end{equation}
+Its exact coefficient field is \eqref{eq:effective}, with
+$\beta_0(p,x)=\beta(p,x,\Psi(p,x))$.
+Every integrable trajectory, lifted by
+$\dot g=\beta_0(p,x)g$, reconstructs an exact HYM solution.
+\end{proposition}
+
+\begin{proof}
+At $p=0$, the finite space $V_{\R}$ is the entire center
+space of the $(x,u)$ equation. The complementary linearization
+$-2L_0|_{Q_0}$ is strictly stable. The equations
+\eqref{eq:normal-system}--\eqref{eq:semigroup} verify the common
+domain, smoothness, interpolation and continuous maximal-regularity
+hypotheses of \cite[Theorem~2.1]{simonett1994}.
+That parameter-dependent theorem gives a chosen $C^m$ graph
+with values in the stable domain. The equilibrium $(x,u)=(0,0)$
+exists for each parameter, and its construction gives
+$\Psi(p,0)=0$.
+
+Tangency for every nearby parameter requires an additional
+argument. Set $T=D_x\Psi(p,0)$. Differentiating the exact
+invariance equation, using \eqref{eq:vanishing-jets}, gives
+\[
+ T\Lambda_p=-2L_pT.
+\]
+The finite operator $\Lambda_p$ is diagonalizable with real
+eigenvalues equal to differences of central block constants
+in $b_p$. They tend to zero. Apply the displayed identity to
+each eigenvector; the disjoint finite and normal spectra force
+$T=0$. Taylor estimates on a smaller parameter product give
+\eqref{eq:graph-bounds}.
+
+Choose invariant norms and a $K$-invariant coefficient cutoff
+in the fixed-point construction. Acting by $k\in K$ gives
+another fixed point in the same uniqueness class, hence the
+same graph. This proves equivariance without averaging
+invariant graphs. Substitution gives the exact coefficient
+field, and Proposition~\ref{prop:slice} gives reconstruction.
+\end{proof}
+
+The graph depends on the construction and on the chosen finite
+regularity order. We use only its stated $C^m$ regularity.
+Its invariance equation is
+\begin{equation}\label{eq:invariance}
+ D_x\Psi(p,x)C_x\beta_0(p,x)
+          =-2L_p\Psi(p,x)+\N_p(x,\Psi(p,x)).
+\end{equation}
+The left side distinguishes it from a solution of a stationary
+complementary curvature equation.
+
+\subsection{The leading moment field}
+\begin{proposition}\label{prop:moment}
+The graph field satisfies \eqref{eq:effective-expansion},
+with the moment convention \eqref{eq:moment}.
+\end{proposition}
+
+\begin{proof}
+Transfer the connection of $h_pe^\Psi$ isometrically to $h_p$.
+Its $(0,1)$ perturbation has the expansion
+\[
+ \widetilde a=x+a_2(x)-\tfrac12d\Psi_2(p,x)+O(|x|^3),
+ \qquad a_2(x)=-d_p^*G_{2,p}(x\wedge x).
+\]
+The quadratic correction is orthogonal to every harmonic
+one-form: its two terms are coexact and exact, respectively.
+For a parallel Hermitian endomorphism $\xi$, integration of
+curvature gives the exact identity
+\begin{equation}\label{eq:projected-curvature}
+ \langle P_p\M(p,x,\Psi),\xi\rangle
+ =-\langle b_p,\xi\rangle+
+          \operatorname{Re}\langle[\xi,\widetilde a],\widetilde a\rangle.
+\end{equation}
+The derivative term integrates to zero because $\xi$ is
+parallel. In a unitary coframe the remaining term is a sum
+of $[A_j,A_j^*]$, and
+$\tr(\xi[A_j,A_j^*])
+ =\operatorname{Re}\tr([\xi,A_j]A_j^*)$.
+This also verifies the sign and requires no integrability
+assumption on the ambient coefficient.
+
+The action $[\xi,\cdot]$ preserves harmonic forms and is
+self-adjoint for the real one-form inner product. Consequently
+both cubic cross terms between $x$ and the quadratic correction
+vanish. Equation~\eqref{eq:projected-curvature} becomes
+$P_p\M=-b_p+\mu_p^\sharp+O(|x|^4)$.
+Moreover $\mathsf S_\Psi^{-1}-I$ and $R_p(\Psi)^{-1}-I$
+are $O(|x|^4)$, whereas
+$\M(p,x,\Psi)=O(|p|+|x|^2)$ in the required spatial norm.
+The formula for $\beta$ in \eqref{eq:slice} therefore retains
+the quartic remainder. The vanished jets and the $C^m$ bounds
+give its first two differentiated estimates.
+
+Finally,
+$d\langle\mu_p^\sharp,\xi\rangle[v]
+ =2\operatorname{Re}\langle C_x\xi,v\rangle$.
+Differentiating $\frac14\|\mu_p^\sharp-b_p\|^2$ gives
+the leading field in Theorem~\ref{thm:main}.
+\end{proof}
+
+The factor-rank and volume weights are part of the Riesz
+identification in \eqref{eq:moment}. Changing the moment
+normalization changes the scalar time factor. In all
+tracking statements we use the exact field $\beta_0$,
+including its remainder.

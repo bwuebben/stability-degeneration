@@ -1,0 +1,246 @@
+\section{Differentiable phase in the reconstruction group}\label{sec:phase}
+
+The invariant graph controls the distance to the graph above the
+evolving coefficient. To select one exact trajectory on it, we
+retain the reconstruction group. The following phase argument is
+formulated for a finite representation coupled to an exponentially
+stable equation. It is a concrete version of the asymptotic-phase
+mechanism; its group-valued estimates are what will be used for
+relative HYM metrics.
+
+\subsection{The finite extension and its derivatives}
+Let $V$ be a finite-dimensional real inner-product space carrying
+a representation of a closed matrix group $G$. Give $G$ a
+complete right-invariant Riemannian metric. A tangent variation
+$\delta g$ is measured by $\xi=\delta g\,g^{-1}$ in a fixed
+Lie algebra norm. Let $\beta:V\to\g$ be bounded and $C^2$, and
+put $f(x)=C_x\beta(x)$. Suppose $f$ is globally Lipschitz and
+the right-trivialized linearization
+\begin{equation}\label{eq:finite-linearization}
+ \mathcal A(x)(w,\xi)
+       =(Df(x)w,D\beta(x)w+[\beta(x),\xi])
+\end{equation}
+satisfies $\|\mathcal A(x)\|\le L$ and
+$\|D_x\mathcal A(x)\|\le K_0$.
+The small quantity needed below is the upper bound $L$,
+not a positive lower spectral bound.
+
+The complete finite flow has the form
+\[
+ \Phi_s(x,g)=(\phi_s(x),B_s(x)g).
+\]
+Global Lipschitz growth controls $x$, and bounded $\beta$
+controls both the matrix and its inverse on every finite time
+interval. For a variation, $w=\delta x$ and
+$\xi=\delta g\,g^{-1}$ satisfy
+\[
+ \dot w=Df(x)w,\qquad
+ \dot\xi=D\beta(x)w+[\beta(x),\xi].
+\]
+Thus the right-trivialized derivative $T_s(x)$ depends on $x$
+but not on $g$. The fundamental matrix equation, and then its
+$x$ derivative, give for either sign of $s$
+\begin{equation}\label{eq:finite-derivatives}
+ \|T_s(x)\|\le e^{L|s|},\qquad
+ \|D_xT_s(x)\|\le K_0|s|e^{2L|s|}.
+\end{equation}
+For the second inequality, variation of constants uses
+$\|D\phi_s\|\le e^{L|s|}$; for negative times apply the
+same argument to the reversed equation. Integration along
+paths gives the corresponding Lipschitz bound for $\Phi_s$
+in the product distance on $V\times G$.
+
+\subsection{Statement of the phase estimate}
+Let $E_1\subset E_\alpha\subset E_0$ be continuously embedded
+Banach spaces, $0<\alpha<1$. Suppose $-A$ generates a
+$C_0$ semigroup on $E_0$ whose restriction is also $C_0$
+on $E_\alpha$, and
+\begin{equation}\label{eq:abstract-semigroup}
+ \|e^{-sA}\|_{E_\alpha\to E_\alpha}\le Me^{-\sigma s},
+ \qquad
+ \|e^{-sA}\|_{E_0\to E_\alpha}
+       \le M(1+s^{-\alpha})e^{-\sigma s}.
+\end{equation}
+On $V\times B_{E_\alpha}(\rho)$ let
+$h=(h_x,h_g)$ and $\F$ be $C^2$, with values in
+$V\oplus\g$ and $E_0$, respectively, and uniform bounds
+through order two. Assume
+\begin{equation}\label{eq:perturbation-assumptions}
+ \begin{gathered}
+ h(x,0)=0,\quad \F(x,0)=0,\quad
+ \|D_vh\|+\|D_v\F\|\le\epsilon,\\
+ \|D_xh(x,v)\|+\|D_x\F(x,v)\|
+                      \le K_0\|v\|_{E_\alpha}.
+ \end{gathered}
+\end{equation}
+Consider
+\begin{equation}\label{eq:abstract-system}
+ \dot x=f(x)+h_x(x,v),\qquad
+ \dot g=(\beta(x)+h_g(x,v))g,\qquad
+ \dot v=-Av+\F(x,v).
+\end{equation}
+These bounds are in fixed finite and Banach operator norms;
+none is a bound in the absolute matrix coordinates of $g$.
+
+\begin{proposition}\label{prop:phase}
+Fix the constants in \eqref{eq:abstract-semigroup} and the
+uniform $C^2$ bounds. If $L,\epsilon$ are sufficiently small,
+there is $\delta>0$ such that for
+$D=\|v_0\|_{E_\alpha}<\delta$, \eqref{eq:abstract-system}
+has a global mild solution and a phase
+\begin{equation}\label{eq:phase-limit}
+ \Pi(x_0,g_0,v_0)
+        =\lim_{T\to\infty}\Phi_{-T}(x(T),g(T))
+          \quad\hbox{in } V\times G.
+\end{equation}
+The map $\Pi$ is $C^1$ with uniform derivative bounds in
+right-trivialized norms. For $a=\sigma/2$ and
+$Y_*(s)=\Phi_s\Pi$,
+\begin{equation}\label{eq:abstract-tracking}
+ \|v(s)\|_{E_\alpha}\le CD e^{-as},\qquad
+ d((x(s),g(s)),Y_*(s))\le C\epsilon D e^{-as}.
+\end{equation}
+The selected trajectory is unique among complete finite
+trajectories tracking at $O(e^{-qs})$ for some $q>L$.
+If $v_0=0$, its phase is $(x_0,g_0)$.
+The constants are uniform for families with the same assumptions,
+independent of $g_0$ and of finite spectral gaps.
+
+If $h_x=C_xh_g$ and $x_0=g_0x_b$, then
+$x_*(s)=g_*(s)x_b$.
+\end{proposition}
+
+\begin{proof}
+\emph{Normal decay and continuation.}
+The weighted convolution constant
+\[
+ J_a=M\int_0^\infty(1+t^{-\alpha})e^{-(\sigma-a)t}\,dt
+\]
+is finite. Duhamel's formula implies
+\[
+ \sup_{s\le T}e^{as}\|v(s)\|
+ \le MD+\epsilon J_a\sup_{s\le T}e^{as}\|v(s)\|.
+\]
+Choose $\epsilon J_a\le1/2$ and $2M\delta<\rho/2$.
+Then $\|v(s)\|\le2MD e^{-as}$, so the solution never
+reaches the normal boundary. The globally Lipschitz finite
+field and bounded perturbations exclude finite-time escape
+of $x$ or $g$. Local mild existence and continuation follow
+by contraction with the integrable smoothing kernel
+$t^{-\alpha}$. The same argument gives local $C^1$
+dependence in the stated initial topology.
+
+\smallskip
+\emph{Convergence in the group and tracking.}
+Write $Y(s)=(x(s),g(s))$ and $p_T=\Phi_{-T}Y(T)$.
+Its velocity in the invariant frames at $p_T$ is
+\begin{equation}\label{eq:phase-velocity}
+ \dot p_T=T_{-T}(x(T))h(x(T),v(T))=:w_T.
+\end{equation}
+By \eqref{eq:finite-derivatives},
+$\|w_T\|\le2M\epsilon D e^{-(a-L)T}$.
+For $L<a$, the curve $p_T$ has finite length, so
+completeness of $V\times G$ gives \eqref{eq:phase-limit}.
+Its distance from $(x_0,g_0)$ is at most
+$2M\epsilon D/(a-L)$.
+
+For fixed $s$, differentiate $\Phi_{s-T}Y(T)$ for
+$T\ge s$. The velocity bound is
+\[
+ 2M\epsilon D e^{L(T-s)}e^{-aT}.
+\]
+Integration gives
+\[
+ d(Y(s),\Phi_s\Pi)
+       \le \frac{2M\epsilon D}{a-L}e^{-as}.
+\]
+If two finite trajectories have distance $O(e^{-qs})$
+with $q>L$, applying $\Phi_{-s}$ forces their initial
+distance to be zero. A second trajectory tracking the
+actual solution at such a rate differs from the selected
+one at rate $\min(a,q)>L$, proving the stated uniqueness.
+Existence at every rate $q>L$ is not asserted.
+
+\smallskip
+\emph{Differentiability of the limit.}
+The $(x,v)$ system is independent of $g$. Set
+$\gamma=\sigma/16$ and require $L<\gamma/4$.
+For variations of its initial data write $W=\delta x$
+and $Z=\delta v$. Then
+\[
+ \dot W=(Df+D_xh_x)W+D_vh_xZ
+\]
+and
+\[
+ Z(s)=e^{-sA}Z_0+\int_0^s e^{-(s-t)A}
+       (D_x\F\,W+D_v\F\,Z)(t)\,dt.
+\]
+Define
+$U_T=\sup_{s\le T}e^{-\gamma s}|W(s)|$ and
+$V_T=\sup_{s\le T}e^{(a-\gamma)s}\|Z(s)\|$.
+The normal convolution estimate, with $\epsilon$ smaller
+if necessary, gives
+\[
+ V_T\le C\|Z_0\|+CK_0D U_T.
+\]
+Variation of constants for $W$ uses
+$\int_0^\infty\|v(t)\|dt\le2MD/a$, so
+$D_xh_x$ has integrable norm. It gives
+$U_T\le C|W_0|+C\epsilon V_T$.
+Choose $\delta$ so that the resulting
+$C\epsilon K_0D U_T$ term is absorbed. Uniformly in $T$,
+\begin{equation}\label{eq:initial-variations}
+ \begin{split}
+ |W(s)|&\le Ce^{\gamma s}(|W_0|+\epsilon\|Z_0\|),\\
+ \|Z(s)\|&\le Ce^{-(a-\gamma)s}(\|Z_0\|+D|W_0|).
+ \end{split}
+\end{equation}
+The convolution is finite because $a-\gamma<\sigma$.
+
+Differentiate the right-trivialized velocity
+\eqref{eq:phase-velocity} with respect to $(x_0,v_0)$:
+\begin{equation}\label{eq:phase-velocity-derivative}
+ \delta w_T=(D_xT_{-T})(x(T))[W(T)]h(x(T),v(T))
+       +T_{-T}(x(T))(D_xh\,W+D_vh\,Z).
+\end{equation}
+Its norm is bounded by a constant times
+\begin{multline}\label{eq:integrable-derivative}
+ \bigl[\epsilon D(1+T)e^{-(a-2L-\gamma)T}
+       +D e^{-(a-L-\gamma)T}
+       +\epsilon e^{-(a-L-\gamma)T}\bigr]\\
+ {}\cdot(|W_0|+\|Z_0\|).
+\end{multline}
+This bound is integrable, uniformly on a smaller initial
+normal ball.
+
+To pass from this estimate to derivatives of $p_T$, use
+its Euclidean component and an identity chart for its
+group component after right translation by $g_0^{-1}$.
+The phase-length estimate keeps
+$q_T=p_T^Gg_0^{-1}$ inside that chart for small $\delta$.
+It satisfies $\dot q_T=w_T^Gq_T$ and
+\[
+ \partial_T(\delta q_Tq_T^{-1})
+       =[w_T^G,\delta q_Tq_T^{-1}]+\delta w_T^G.
+\]
+Integrability of $w_T$ and $\delta w_T$ implies uniform
+convergence of these derivatives. The limits are continuous
+by dominated convergence and finite-time continuous
+dependence. Thus the limiting phase is $C^1$ in $(x_0,v_0)$.
+For arbitrary $g_0$, right equivariance gives
+\[
+ \Pi^G(x_0,g_0,v_0)=\Pi^G(x_0,I,v_0)g_0.
+\]
+Its derivative in $g_0$, in right-trivialized norms, is
+conjugation by an element in the same fixed identity
+chart, and is uniformly bounded.
+
+\smallskip
+\emph{Preservation of the orbit.}
+When $h_x=C_xh_g$, both perturbed and unperturbed
+equations preserve $x=gx_b$. Every finite-time phase
+point satisfies $p_T^V=p_T^Gx_b$. Since the limit
+converges in the group itself, this equality passes
+to the limit and then along the finite flow.
+No inverse of $C_x$ occurs.
+\end{proof}

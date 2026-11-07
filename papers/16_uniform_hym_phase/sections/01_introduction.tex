@@ -1,0 +1,254 @@
+\section{Introduction}\label{sec:intro}
+
+The Hermitian--Yang--Mills flow relates stability of a holomorphic bundle
+to the geometry of its Hermitian metrics. In a deformation slice near a
+polystable bundle, the flow has finitely many neutral directions and an elliptic
+complement with a positive spectral gap. The neutral directions contain
+the deformation and automorphism data. They may acquire arbitrarily
+small positive scales after deformation, and their stabilizers may change.
+The question considered here is whether an exact finite-dimensional
+trajectory can be selected from the initial metric so that the remaining
+metric error decays at the rate of the fixed elliptic complement.
+
+There are two distinctions in this question. First, the selected
+trajectory must solve the corrected finite equation on a parabolically
+invariant graph. Its leading moment-map approximation need not give a
+uniformly accurate comparison for all time. Second, harmonic deformation
+coordinates alone do not determine a metric on a fixed holomorphic bundle.
+At the undeformed point they are zero for an entire family of parallel
+stationary metrics. The reconstructing complex automorphism must therefore
+be retained. We prove phase selection in that group, with estimates in a
+right-invariant metric, and then obtain an exponentially vanishing relative
+error between actual HYM metrics.
+
+\subsection{Geometric data and the local regime}
+Let $(X,\omega_0)$ be a compact connected K\"ahler manifold, and let
+\begin{equation}\label{eq:split}
+ E_0=\bigoplus_{i=1}^\ell F_i\otimes W_i
+\end{equation}
+be a locally free polystable holomorphic bundle. The stable factors $F_i$
+are mutually nonisomorphic and have the same slope at $\omega_0$;
+the finite-dimensional multiplicity spaces $W_i$ are arbitrary.
+Fix a direct-sum Hermitian--Einstein metric. Let $\omega_p$ be a smooth
+finite-dimensional family of nearby K\"ahler forms, with $p=0$
+corresponding to $\omega_0$. The parameter is constant along every flow.
+Section~\ref{sec:coordinates} constructs smooth factor HE metrics $h_i(p)$.
+We write $h_p=\bigoplus_i h_i(p)\otimes I$, and fix its HE determinant
+metric throughout the flow. The factor HE constants are $\kappa_i(p)$;
+the determinant-normalized constant for $E_0$ is $\kappa_E(p)$.
+
+Put $r_i=\operatorname{rk}F_i$ and let
+\begin{equation}\label{eq:group}
+ G=\left\{(g_i)\in\prod_i\mathrm{GL}(W_i):
+                  \prod_i\det(g_i)^{r_i}=1\right\}^{0},
+ \qquad K=G\cap\prod_i\mathrm U(W_i).
+\end{equation}
+These are parallel automorphisms of the split bundle.
+Write $\ha=i\ka$ for the Hermitian real subspace of $\g$.
+It has dimension $\sum_i(\dim W_i)^2-1$, independent of the
+stabilizer of a deformation. Let $P_p$ be the $L^2(h_p,\omega_p)$
+projection from trace-free Hermitian endomorphisms onto $\ha$, and
+let $Q_p=I-P_p$.
+
+Let $d=\ddbar_{E_0}$. Smooth equivariant identifications of its harmonic
+spaces give a fixed complex vector space $V$, with harmonic inclusion
+$\iota_p:V\longrightarrow\Omega^{0,1}(\End_0E_0)$.
+The canonical convergent Kuranishi reconstruction and obstruction are
+\begin{equation}\label{eq:kuranishi}
+ \begin{split}
+ a_p(x)&=\iota_p x-d_p^*G_{2,p}\bigl(a_p(x)\wedge a_p(x)\bigr),\\
+ \kappa_p(x)&=H_{2,p}\bigl(a_p(x)\wedge a_p(x)\bigr),\qquad
+ Z_p=\kappa_p^{-1}(0).
+ \end{split}
+\end{equation}
+Here $H_{2,p}$ and $G_{2,p}$ are the harmonic projection and Green
+operator in degree two. We retain the full convergent equations.
+The notation $gx$ denotes the induced representation of $G$, and
+$C_x\xi=[\xi,x]$ its infinitesimal action. Unless an inclusion is needed,
+we also write $x$ for $\iota_p x$.
+
+For nonintegral $s>0$, $h^s$ denotes the closure of smooth sections in
+the $C^s$ norm. All section norms use the split connection and metric;
+the identifications in Section~\ref{sec:coordinates} make them uniformly
+equivalent for small $p$. On $G$ fix a right-invariant Riemannian metric
+whose inner product at the identity is $\Ad K$ invariant, and denote its
+distance by $d_R$.
+
+On a fixed holomorphic bundle $d_{x_b}=d+a_p(x_b)$, where $x_b\in Z_p$,
+our coordinates for the metric are
+\begin{equation}\label{eq:metric-coordinates}
+ H=g^*(h_p e^u),\qquad x=gx_b,\qquad
+ u\in Q_p h^{17/8}(\Herm_0E_0).
+\end{equation}
+The exact evolution of these coordinates is derived in
+Proposition~\ref{prop:slice}. The coefficient $x$ may stay small while
+$g$ and $g^{-1}$ become unbounded.
+
+\begin{definition}\label{def:confined}
+For a coefficient radius $r$, a solution is \emph{confined} if its
+exact sliced harmonic coefficient satisfies $|x(s)|\le r$
+throughout its maximal interval in the domain of the geometric
+coordinate equations. The normal coordinate is initially small.
+There is no bound on the reconstructing gauge.
+\end{definition}
+
+Confinement is an assumption on the actual coefficient trajectory.
+The theorem below proves continuation in the geometric domain under
+this assumption. It does not assert confinement for every nearby metric.
+
+\subsection{Main theorem}
+Use the geometric $L^2$ inner products on $V$ and $\ha$ to define
+the Riesz representative of the quadratic moment map by
+\begin{equation}\label{eq:moment}
+ \langle\mu_p^\sharp(x),\xi\rangle_{\ha,p}
+       =\operatorname{Re}\langle C_x\xi,x\rangle_{V,p}.
+\end{equation}
+This convention has no factor $1/2$. Define the central slope difference
+by
+\begin{equation}\label{eq:central}
+ b_p|_{F_i\otimes W_i}=(\kappa_E(p)-\kappa_i(p))I.
+\end{equation}
+It belongs to $\ha$ and $b_0=0$.
+
+\begin{theorem}\label{thm:main}
+For every prescribed finite $m\ge6$, there are a parameter neighborhood,
+a radius $r>0$, a chosen jointly $C^m$, $K$-equivariant map
+\[
+ \Psi(p,\cdot):B_{4r}(V)\longrightarrow Q_p h^{19/8}(\Herm_0E_0),
+\]
+and positive constants $\delta,C,c$ with the following properties.
+
+\smallskip\noindent
+\textup{(i) Invariant graph.} The graph $u=\Psi(p,x)$ is locally invariant for the
+exact sliced HYM equation, and
+$\Psi(p,0)=D_x\Psi(p,0)=0$. Its exact finite evolution is
+\begin{equation}\label{eq:effective}
+ \dot x=C_x\beta_0(p,x),\qquad
+ \dot g=\beta_0(p,x)g,
+\end{equation}
+where $\beta_0(p,x)\in\ha$ and
+\begin{equation}\label{eq:effective-expansion}
+ \beta_0(p,x)=b_p-\mu_p^\sharp(x)+E_p(x),\qquad
+ |D_x^jE_p(x)|\le C|x|^{4-j}\quad(0\le j\le2).
+\end{equation}
+The leading coefficient field is
+$-\nabla_V\bigl(\frac14\|\mu_p^\sharp-b_p\|_{\ha,p}^2\bigr)$.
+
+\smallskip\noindent
+\textup{(ii) Asymptotic phase and metric tracking.}
+Fix $x_b\in Z_p\cap B_r(V)$ and initial data
+\[
+ g_0\in G,\quad x_0=g_0x_b\in B_r(V),\quad
+ u_0\in Q_p h^{17/8},\quad
+ D=\|u_0-\Psi(p,x_0)\|_{h^{17/8}}<\delta.
+\]
+Assume confinement in the sense of Definition~\ref{def:confined}.
+The normalized HYM flow starting at $H^{\mathrm{in}}=g_0^*(h_pe^{u_0})$
+then exists in these coordinates for all $s\ge0$. There is a selected
+exact trajectory $(x_*,g_*)$ of \eqref{eq:effective}, with
+$x_*(s)=g_*(s)x_b\in Z_p\cap B_{2r}(V)$, such that
+\[
+ H_*(s)=g_*(s)^*(h_pe^{\Psi(p,x_*(s))})
+\]
+is an exact HYM flow on $d_{x_b}$ and
+\begin{align}
+ \|u(s)-\Psi(p,x(s))\|_{h^{17/8}}&\le CD e^{-cs},\label{eq:normal-main}\\
+ |x(s)-x_*(s)|+d_R(g(s),g_*(s))&\le CD e^{-cs},\label{eq:lift-main}\\
+ e^{-CD e^{-cs}}H_*(s)\ \le H(s)&\le e^{CD e^{-cs}}H_*(s).
+                                                        \label{eq:order-main}
+\end{align}
+More precisely, with $q(s)=g(s)g_*(s)^{-1}$ and
+$v(s)=u(s)-\Psi(p,x(s))$, the centered relative logarithm
+\begin{equation}\label{eq:relative-log}
+ \log\!\left(
+ e^{-\Psi(p,x_*)/2}q^{*h_p}e^{\Psi(p,x)+v}q
+ e^{-\Psi(p,x_*)/2}\right)
+\end{equation}
+has $h^{17/8}$ norm at most $CD e^{-cs}$.
+
+\smallskip\noindent
+\textup{(iii) Dependence on initial data.} For fixed $p$, the selected initial phase
+$(x_*(0),g_*(0))$ is the restriction of a $C^1$ map of the ambient
+sliced initial data $(x_0,g_0,u_0)$, with uniform derivative bounds in
+the indicated H\"older and right-trivialized group norms. These bounds
+are uniform for small $p$. Nearby fixed-determinant metrics are covered
+by the smooth charts of Proposition~\ref{prop:metric-charts}.
+
+\smallskip\noindent
+The constants use the fixed complementary elliptic gap and smooth
+local bounds. They are independent of positive finite-dimensional spectral lower
+bounds, ratios of positive eigenvalues of $C_x^*C_x$, and stabilizer
+changes. They may depend on the fixed smooth background, $m$, the
+parameter neighborhood and the confinement radii. The chosen finite
+field has a complete extension agreeing with it on $B_{2r}$ whose
+right-trivialized derivative bound is $L<c$. The selected lifted
+trajectory is unique among trajectories of this extension that track
+the actual lifted trajectory at some exponential rate faster than $L$.
+\end{theorem}
+
+The graph and its complete extension are choices. The theorem does not
+assert a canonical phase independent of those choices, or differentiability
+on a singular coarse moduli space. Its regularity statements are made
+before quotienting, in ambient harmonic and metric coordinates.
+The exponentially decaying quantity is the error transverse to the
+selected finite motion. The finite trajectory itself may relax slowly.
+
+\subsection{Predecessors and proof strategy}
+Finite-dimensional models already play a substantial role in HYM
+asymptotics. Haiden--Katzarkov--Kontsevich--Pandit
+\cite{hkkp2018,hkkp2023} establish order comparison and algebraically
+determined asymptotics in their curve and quiver settings. Lam
+\cite[Theorem~8.2 and Proposition~8.6]{lam}
+proves locally free graded asymptotics for semistable bundles,
+under his stated rationality hypothesis, and bounded-distance
+comparison with a reduced flow. His Kuranishi
+construction retains the full nonabelian automorphism group and the
+complete obstruction \cite[Theorem~8.7]{lam}. These aspects of the local
+model are not additional assertions of the present theorem.
+
+The comparison proved here selects an exact flow on a parabolically
+invariant graph, depends $C^1$ on the initial metric, and has relative
+error tending exponentially to zero. It does not supply the algebraic
+iterated-filtration asymptotics of the corrected finite field, and thus
+does not replace Lam's asymptotic classification. The two results
+address different parts of the dynamics.
+
+The abstract principles are also established. Simonett's
+parameter-dependent invariant-manifold theorem \cite{simonett1994}
+provides the graph after a common parabolic realization is verified.
+Johnson--Latushkin--Schnaubelt \cite{jls} prove exact exponentially
+tracking center trajectories in a parabolic setting. Differentiable
+stable foliations and noncompact normally hyperbolic manifolds have
+their own general theory \cite{psw,blz2000,blz2008}.
+Our task is the geometric realization of these principles with the
+entire parallel group retained, including uniform estimates on the
+lifted phase and its reconstruction as a metric.
+Equivariant local bundle models and nearby-polarization HYM theory
+are developed by Buchdahl--Schumacher and Delloque
+\cite{bs22,delloque2024,delloque2025}.
+
+The proof has three main steps. We first derive an exact noncommuting
+metric equation. Centering the derivative of the exponential removes
+the variable second-order coefficients, and leaves a fixed elliptic
+operator on the complement of all parallel Hermitian endomorphisms.
+Its gap persists under the allowed parameters. This gives a chosen
+invariant graph on the ambient harmonic space, while equivariance
+preserves the full integrable locus.
+
+We next retain the group variable in the asymptotic-phase argument.
+Pulling the perturbed finite trajectory backward by the exact reduced
+flow gives a curve of finite length in $V\times G$. Slow derivative
+growth of the reduced flow and fast normal decay make both this curve
+and its initial-data derivatives converge. The limiting phase lies
+in $G$ itself, so it preserves the original holomorphic orbit without
+inverting its possibly rank-changing differential.
+
+Finally, the right quotient $gg_*^{-1}$ cancels the possibly large
+reconstructing gauges in the relative metric. The same estimate
+keeps the selected coefficient trajectory inside the geometric domain.
+An inner-radius argument then covers nearby initial metrics.
+The noncommuting bicubic example in Section~\ref{sec:application}
+shows how full obstruction, multiplicities, changing stabilizers and
+separated finite scales occur in one smooth geometric background.
+Singular graded sheaves and collapsing backgrounds require additional
+analytic estimates; no complementary-gap assertion for them is used here.

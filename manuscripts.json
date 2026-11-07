@@ -404,5 +404,39 @@
     },
     "number": 15,
     "directory": "15_local_hym_reduction"
+  },
+  {
+    "paper": "uniform_hym_phase",
+    "title": "Uniform asymptotic phase for Hermitian–Yang–Mills flow near a polystable bundle",
+    "date": "2026-11-07",
+    "website_slug": "uniform-hym-phase",
+    "pages": 19,
+    "pdf_sha256": "274975c113249ebd625899b7955c4b7b8ea05e18fe6dfaf2e89b0cd424f66c70",
+    "source_sha256": "55ad326967de8c4a594646b0fff188700e8a272b01e678210309a4d8baf473ae",
+    "download_filename": "uniform-hym-phase.pdf",
+    "source_files_sha256": {
+      "paper.tex": "55ad326967de8c4a594646b0fff188700e8a272b01e678210309a4d8baf473ae",
+      "preamble.tex": "12471508b55e72aae7656348354db92ab57636e1a22083ecdcfe7481442c82da",
+      "uniform-hym-phase.pdf": "274975c113249ebd625899b7955c4b7b8ea05e18fe6dfaf2e89b0cd424f66c70",
+      "build.sh": "796d6f695170ec3ba1a1420134eed9d05a3ce94ebe8ff0856c932cc13983df55",
+      "sections/01_introduction.tex": "be5705980f36cad7190bcebcf56abe32a5e0caca689bd318a7c2e74d2d716d58",
+      "sections/02_coordinates.tex": "24f229240593586ce98d51fb06e5dfd0f6b56510992c6c4cf478b6612e3ba890",
+      "sections/03_graph.tex": "3a7c36b5caf244340f51cd70786fa0a8bbb081ec0536092de9a901f07f6dd8c0",
+      "sections/04_phase.tex": "8bb3446ff0188c208db864f1e60d53a5b8c81a2cbcc8973dcd8206a0017811a6",
+      "sections/05_geometric.tex": "33d918f939cebfccf718295f723828b54feb0db3b1488841ef3380986974f05c",
+      "sections/06_application.tex": "7b18b1868e558913bc650be8d68b314c54da15a8c1dd4af1b53b6884735251c7",
+      "sections/99_references.tex": "8fef76d95b9537dcce3d952009f2a43b831c8f680a4acb400d9c87b1e27692fa",
+      "figures/code/compute06_spectrum.py": "f5c07129cf0bce8dec65683c85a116890bb9fe9819a3f33dab9cb6c3c159efed",
+      "checks/finite_spectrum.json": "4d169952fbcbdbb6e62649b70601cd3174e3e2f97d2bd8e55d026933d23c6e9a"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.24038504",
+      "conceptdoi": "10.5281/zenodo.24038503",
+      "record_url": "https://zenodo.org/records/24038504",
+      "created": "2026-11-07T15:06:49.700011+00:00",
+      "id": 24038504
+    },
+    "number": 16,
+    "directory": "16_uniform_hym_phase"
   }
 ]
