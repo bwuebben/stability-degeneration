@@ -3,7 +3,7 @@
 By [Bernd Johannes Wuebben](https://bwuebben.github.io/), [ORCID](https://orcid.org/0009-0002-4588-3284).
 Paper 14. Preprint, 6 November 2026. 30 pages.
 
-[Read the paper](quiver-metric-wall-crossing.pdf) · [Full abstract and citation](https://bwuebben.github.io/papers/quiver-metric-wall-crossing/) · Zenodo archive pending.
+[Read the paper](quiver-metric-wall-crossing.pdf) · [Full abstract and citation](https://bwuebben.github.io/papers/quiver-metric-wall-crossing/) · [Zenodo:24024998](https://zenodo.org/records/24024998) · [DOI](https://doi.org/10.5281/zenodo.24024998)
 
 The paper proves a uniform local comparison between actual harmonic L² metrics
 and finite quiver quotient metrics near polystable bundles on a projective K3

@@ -361,6 +361,13 @@
       "checks/quiver_geometry.json": "d88a84f6d489808389503e2f5e7b5fa515f6fc5343dd8740bed4758f50a0404b",
       "quiver-metric-wall-crossing.pdf": "70bca12dae324e04a62fe5c606037e01e684e96e84cc0c61671290c9465e580a"
     },
+    "archive": {
+      "doi": "10.5281/zenodo.24024998",
+      "conceptdoi": "10.5281/zenodo.24024997",
+      "record_url": "https://zenodo.org/records/24024998",
+      "created": "2026-11-07T00:30:23.100812+00:00",
+      "id": 24024998
+    },
     "number": 14,
     "directory": "14_quiver_metric_wall_crossing"
   }
