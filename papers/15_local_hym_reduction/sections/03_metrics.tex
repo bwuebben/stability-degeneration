@@ -1,0 +1,231 @@
+\section{Finite balancing and Hermitian--Einstein metrics}\label{sec:metrics}
+
+\subsection{The finite correction}
+We recall the finite-dimensional result used below. Its independence
+from weak orbit directions is the reason that the ambient estimate
+of Proposition~\ref{prop:quadratic-form} suffices.
+
+\begin{lemma}[{\cite[Theorem~2.1]{wuebben14}}]\label{lem:balancing}
+Let $V$ be a finite quiver representation with compact group
+$K=\prod_i\mathrm U(W_i)$ and flat moment map $\mu$ as in
+\eqref{eq:moment}. On a ball suppose $\Omega$ is closed and invariant,
+$\rho(0)=0$,
+\[
+ d\langle\rho,S\rangle=2\Omega(iC_xS,\cdot),\qquad
+ \|\Omega-\omega_{\mathrm{flat}}\|\le\varepsilon .
+\]
+For sufficiently small $\varepsilon$, depending only on the fixed
+multiplicity dimensions, a point with $\mu(x)=\zeta$ has a correction
+$y=e^Sx$ with $\rho(y)=\zeta$ and $\|S\|_{\mathrm{op}}\le A\varepsilon$.
+Conversely, a point with $\rho(y)=\zeta$ has a correction of the same
+size to the flat level. Here $\zeta$ is central, and the starting
+point lies in a smaller ball so that the correction stays in the domain.
+Both assertions restrict to any locally $G$-invariant analytic subset.
+They identify the two local compact quotients continuously, including
+changes of stabilizer.
+\end{lemma}
+
+\begin{proof}
+We recall the projection estimate and degree argument.
+For an orthogonal vertex projection tuple $P$, write $x=n+u$, with
+$n$ preserving and $u$ crossing the projected subspaces. On $u=0$
+the infinitesimal field of $P$ vanishes, so both normalized moment
+components paired with $P$ vanish. Integration along $n+su$ gives
+\begin{equation}\label{eq:projection-error}
+ |\langle\rho(x)-\mu(x),P\rangle|
+                      \le\varepsilon\|C_xP\|^2 .
+\end{equation}
+The integration is in the ambient representation; its intermediate
+points need not satisfy the obstruction equations.
+
+Put $H=K_x$. Work in the Hermitian centralizer of $H$, perpendicular
+to its Hermitian stabilizer algebra:
+\[
+ \p_H=\Herm\cap\operatorname{Cent}(H)\cap\mathfrak h^\perp.
+\]
+The pairing here is ordinary multiplicity trace.
+On the connected $H$-fixed ball, the normalized moments annihilate
+$\mathfrak h$ and are invariant under $H$, hence lie in $\p_H$.
+The central target belongs to this space if either moment attains it
+at the starting point.
+
+Let $M=\sum_i m_i$. If $S\in\p_H$ has operator norm $a>0$, a
+spectral projection above a global eigenvalue gap of size at least
+$a/(M-1)$ satisfies $C_xP\ne0$. Otherwise $P$ and $I-P$ would fix
+$x$ and be in $\mathfrak h$, while their trace pairings with $S$
+vanish, contradicting the strict spectral gap. The identity is in
+$\mathfrak h$, so $\tr S=0$. If $\p_H=0$ no correction is needed;
+this also handles the trivial $M=1$ action.
+
+Diagonalize $S$. A crossing coefficient of squared norm $w$ and
+eigenvalue difference $d$ changes its squared norm by $e^{2d}w$.
+Consequently
+\begin{equation}\label{eq:spectral-cut}
+ \begin{split}
+ \langle\mu(e^Sx)-\mu(x),P\rangle
+       &\ge 2e^{-4a}\frac{a}{M-1}\|C_xP\|^2,\\
+ |\langle(\rho-\mu)(e^Sx),P\rangle|
+       &\le\varepsilon e^{4a}\|C_xP\|^2 .
+ \end{split}
+\end{equation}
+For $a=2M\varepsilon$ and sufficiently small $\varepsilon$, the
+first expression dominates. Thus the homotopy
+\[
+ \mu(e^Sx)-\zeta+s(\rho-\mu)(e^Sx),\qquad 0\le s\le1,
+\]
+has no zero on the boundary of that ball in $\p_H$. At $s=0$ its
+only zero is $S=0$, with positive derivative, since
+\[
+ \frac{d}{d\tau}\langle\mu(e^{\tau T}x),T\rangle
+                   =2\|C_{e^{\tau T}x}T\|^2 .
+\]
+Its degree is one. The derivative is inverted only at this fixed
+point to define degree; no uniform lower eigenvalue bound is used.
+This proves forward correction. Starting from $\rho(y)=\zeta$,
+use the homotopy
+$\mu(e^Sy)-\mu(y)-s(\rho-\mu)(y)$ and the same estimate for reverse
+correction.
+
+The corrections stay in any locally invariant analytic subset.
+For uniqueness on compact quotients, polar decomposition reduces two
+representatives in the same complex orbit to $y$ and $e^Ty$. The
+squared norm along $e^{sT}y$ is convex, so the path stays in the
+ambient ball. Positivity gives
+\[
+ \frac{d}{ds}\langle\rho(e^{sT}y),T\rangle
+        \ge2(1-\varepsilon)\|C_{e^{sT}y}T\|^2 .
+\]
+The endpoint moment values agree by centrality; hence $T$ fixes $y$.
+The same argument works for $\mu$. Bounded correcting matrices,
+compactness of $K$, and uniqueness of the resulting classes give
+continuous inverse maps on nested local quotients.
+\end{proof}
+
+\subsection{Reconstruction of the metric}
+The complementary equation makes $\M_t(\Psi_t(y))$ parallel.
+By \eqref{eq:central-value}, its vanishing is equivalent to
+\[
+ \rho_t(y)=\zeta(t).
+\]
+Proposition~\ref{prop:quadratic-form} and Lemma~\ref{lem:balancing}
+apply on the full representation $V$, then restrict to $Z$.
+For $x\ne0$, use an ambient ball whose radius is a fixed multiple
+of $\|x\|$. Its form error is at most $C(|t|+\|x\|^2)$.
+We obtain
+\begin{equation}\label{eq:S-bound}
+ y=e^Sx\in Z,\qquad \rho_t(y)=\zeta(t),\qquad
+             \|S\|_{\mathrm{op}}\le C\delta.
+\end{equation}
+At $x=0$, flat balance forces $\zeta=0$; the normalized corrected
+moment also vanishes there, so take $S=0$.
+
+Use the trace-free parallel lift $S^0$ in \eqref{eq:tracefree-lift}.
+It acts on $x$ as $S$ does, preserves the determinant, and has norm
+at most a fixed multiple of $\|S\|$. The actual metric is
+\begin{equation}\label{eq:actual-metric}
+ h^{\mathrm{HE}}_{t,x}
+    =b_t(e^{S^0})^*\bigl(h_0e^{2\sigma(t,y)}\bigr).
+\end{equation}
+The star is pullback of a metric by the holomorphic isomorphism
+$e^{S^0}:E_x\to E_y$.
+The complementary estimate and $\|y\|\le e^{2\|S\|}\|x\|$
+give \eqref{eq:metric-main}. Multiplication by $b_t$ supplies the
+scalar determinant equation, hence the full HE equation.
+
+\subsection{Coverage of nearby HYM solutions}\label{subsec:coverage}
+We specify the qualitative inputs and their compatibility with the
+quantitative construction. In the integrable HYM specialization of
+\cite{delloque}, Section~3.2 makes the subsolution condition automatic.
+Proposition~4.3 gives the convergent harmonic slice and local
+classification; Proposition~4.5 gives the complementary equation.
+Corollary~5.2 identifies nearby holomorphic morphisms with parallel
+intertwiners. Proposition~5.6 supplies a common-parameter inverse,
+Lemma~7.3 its open integrable image, and Theorem~7.4 the local
+quotient topology. These results permit the complete multiplicity
+algebra in \eqref{eq:split}.
+
+Use a sufficiently small $W^{k,2}$ neighborhood of the central
+operator, with $W^{k+1,2}$ gauges. The usual elliptic slice argument
+gives the same maps in these Sobolev spaces; alternatively one may
+apply the cited smooth or H\"older slice at higher regularity and
+then use elliptic regularity. All actual reconstructed solutions
+are smooth. On the fixed Hermitian bundle $h_0$, the representative
+of a full solution is
+\begin{equation}\label{eq:scalar-corrected}
+ \widehat\Psi_t(y)=b_t^{1/2}\cdot\Psi_t(y),\qquad
+       y\in Z,\quad \rho_t(y)=\zeta(t).
+\end{equation}
+Its determinant connection is the normalized HE determinant connection
+at $\omega_t$, transported to $\det h_0$, and is independent of $y$.
+We use determinant-preserving unitary gauges, up to the ineffective
+constant scalar. Removing the known central gauge $b_t^{1/2}$
+before taking the projective slice and restoring it afterward is
+essential: $\det h_0$ itself need not be HE for $\omega_t$.
+The scalar correction is smooth in $t$ and invisible on $\End E_0$.
+
+For completeness, the passage from an arbitrary nearby positive
+gauge to our complementary one uses no varying small eigenvalue.
+If its logarithm is $s$, change the harmonic representative by a
+parallel $e^h$ and consider
+\begin{equation}\label{eq:positive-normalization}
+ L(s,h)=\tfrac12\log(e^{-h}e^{2s}e^{-h}).
+\end{equation}
+The derivative in $h$ of its parallel projection at the origin is
+$-I$. The finite implicit-function theorem therefore makes $L$
+complementary on a common neighborhood. Uniqueness in
+Lemma~\ref{lem:complement} identifies it with $\sigma(t,y)$ after
+unitary gauge. The local slice inverse cited above then identifies
+the actual solution with \eqref{eq:scalar-corrected}. Reverse
+finite balancing supplies a flat-balanced $x$ in the same orbit.
+
+Choose successive coefficient radii, for example
+$R_0/16,R_0/8,R_0/4,R_0/2$, inside the common ambient $R_0$ ball.
+After shrinking the parameter and actual neighborhoods, every
+construction stays inside its domain. This proves coverage of an
+open neighborhood of actual solutions, not only existence for
+a prescribed family. Parallel-intertwiner classification identifies
+isomorphic harmonic representatives with the same local $G$-orbit.
+Uniqueness of the unitary HE class and the finite uniqueness argument
+identify precisely the same equivalence classes. The common slice
+inverse and finite quotient continuity prove the local homeomorphism
+in Theorem~\ref{thm:main}.
+
+\subsection{Smooth local pieces}\label{subsec:pieces}
+Fix a flat-balanced point $x_0$ and put $H=K_{x_0}$.
+Polar convexity gives $G_{x_0}=H^{\C}$.
+The correction $S_0$ in Lemma~\ref{lem:balancing} lies in the
+centralizer of $H$, so $y_0=e^{S_0}x_0$ has the same stabilizer.
+On the $H$-fixed subspace the map
+\begin{equation}\label{eq:piece-ift}
+ (T,u)\longmapsto\rho_t(e^Te^{S_0}u)-\zeta(t),
+                       \qquad T\in\p_H,
+\end{equation}
+takes values in $\p_H$. Its $T$ derivative at $(0,x_0)$ has positive
+quadratic form
+$2\Omega_t(iC_{y_0}T,C_{y_0}T)$, hence is invertible at that point.
+The finite implicit-function theorem gives a smooth local correction.
+Its domain may shrink with the least positive orbit eigenvalue;
+the uniform estimate uses only the bounded value $S_0$, not the
+derivative of this correction.
+
+The ambient holomorphic slice theorem
+\cite[Proposition~1.6 and Theorems~1.12, 1.20]{sjamaar}
+applies to $V$ at a central moment value. Indeed the symplectic form
+on the compact orbit is the pairing of $\zeta$ with Lie brackets,
+so the orbit is isotropic. This works also at nonzero irrational
+central values. Intersect the ambient slice with the reduced
+analytic space $Z$. In the unchanged-stabilizer locus, the quotient
+germ is represented by the $H$-fixed part of the transverse slice.
+That analytic subset can still be singular. Refine it into smooth
+analytic pieces and refine their boundaries by a local Whitney
+stratification. These pieces have smooth lifts; the compact slice
+and \eqref{eq:piece-ift} give balanced lifts.
+
+Repeating at the other stabilizers yields a local cover by such
+pieces, using the finite orbit types of the ambient compact linear
+action and a locally finite analytic refinement.
+Both quotient constructions use the same complex orbits and the
+same pieces. This proves their smooth identification. It neither
+identifies stabilizer type with smoothness nor asserts a uniform
+lower radius for these individual charts.
+

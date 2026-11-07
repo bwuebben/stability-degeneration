@@ -1,0 +1,19 @@
+{
+  "finite_identities": "PASS",
+  "hilbert_ideal": [
+    "a^2*b",
+    "a*b^2"
+  ],
+  "degrees_at_N_2": [
+    18,
+    30,
+    12
+  ],
+  "parallel_tracefree_dimension": 8,
+  "kernel_dimensions": [
+    2,
+    4,
+    8
+  ],
+  "limitations": "Exact polynomial and matrix-unit identities only; no PDE or geometric smoothness proof."
+}

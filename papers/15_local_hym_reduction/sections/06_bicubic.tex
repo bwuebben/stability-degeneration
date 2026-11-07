@@ -1,0 +1,355 @@
+\section{A stable bundle with cubic deformation equations}\label{sec:bicubic}
+
+We construct a compact locally free example for which the full obstruction
+in Theorem~\ref{thm:main} is essential. The method is the
+curve-to-bundle construction of Thomas \cite{thomas}, with a different
+bicubic and a triple-line fiber.
+
+\subsection{The compact geometry and the Hilbert germ}
+On $B=\PP^2$ choose smooth cubic curves defined by $R,P,Q$, with
+pairwise transverse intersections and no common point. Such triples
+form a nonempty open set: choose transverse smooth $P,Q$, then a
+general smooth $R$ avoiding their finite intersection and transverse
+to both. Choose $p\in\{P=Q=0\}$, so $R(p)\ne0$. In
+$\mathcal P=\PP^2_{[x:y:z]}\times B$ put
+\begin{equation}\label{eq:bicubic}
+ X=\{x^3R+y^3P+z^3Q=0\},\qquad C=\{x=0\}\times\{p\}.
+\end{equation}
+Write $\omega_1,\omega_2$ for the restrictions of the two hyperplane
+classes.
+
+\begin{lemma}\label{lem:bicubic-smooth}
+The threefold $X$ is smooth and connected, $K_X\simeq\OO_X$,
+$H^1(X,\OO_X)=H^2(X,\OO_X)=0$, and
+$\operatorname{Pic}X=\Z\omega_1\oplus\Z\omega_2$.
+The fiber over $p$ is the triple line $x^3=0$.
+\end{lemma}
+
+\begin{proof}
+At a singular point the fiber derivatives imply
+$x^2R=y^2P=z^2Q=0$. If all three fiber coordinates are nonzero,
+all three coefficient cubics vanish, a contradiction.
+If only one is nonzero, the corresponding smooth cubic has a
+nonzero base differential. If two are nonzero, the corresponding
+two cubics vanish transversely, and the nonzero coefficients
+multiplying their independent differentials cannot cancel.
+In both cases the total defining differential is nonzero.
+Thus $X$ is smooth. Adjunction gives $K_X\simeq\OO_X$.
+The hypersurface is ample, so Lefschetz gives the Picard assertion.
+The restriction sequence of the bicubic gives connectedness and
+the stated structure-sheaf cohomology. The fiber assertion follows
+from $P(p)=Q(p)=0$ and $R(p)\ne0$.
+\end{proof}
+
+Near $p$, the functions $U=Q/R$ and $V=P/R$ are analytic coordinates.
+The local equation is exactly
+\begin{equation}\label{eq:local-bicubic}
+ x^3+Vy^3+Uz^3=0.
+\end{equation}
+
+\begin{proposition}\label{prop:hilbert}
+The normal bundle of $C$ in $X$ is
+$\OO_C(1)\oplus\OO_C(-3)$, and its analytic Hilbert germ is
+\begin{equation}\label{eq:hilbert-ring}
+ \Specan\C\{a,b\}/(a^2b,ab^2).
+\end{equation}
+Its tangent dimension is two. Every first-order direction extends
+to second order, whereas a direction with both coordinates nonzero
+is obstructed at order three.
+\end{proposition}
+
+\begin{proof}
+The ambient normal bundle is
+$\OO_C(1)\oplus\OO_C\oplus\OO_C$.
+The normal map to $\OO_C(3)$, obtained from
+\eqref{eq:local-bicubic}, is
+\[
+ (s,c,d)\longmapsto cz^3+dy^3.
+\]
+It is surjective, with kernel $\OO_C(1)\oplus\OO_C(-3)$.
+Since $H^1(N_{C/\mathcal P})=0$, the ambient Hilbert scheme is
+smooth of dimension four at $C$. The natural family of lines in
+nearby fibers has tangent isomorphism onto $H^0(N_{C/\mathcal P})$,
+so it gives the full analytic Hilbert chart, including infinitesimal
+deformations:
+\[
+ x=ay+bz,\qquad U=c,\qquad V=d.
+\]
+Substitution in \eqref{eq:local-bicubic} gives the four coefficients
+\begin{equation}\label{eq:four-coefficients}
+ a^3+d,\qquad 3a^2b,\qquad 3ab^2,\qquad b^3+c
+\end{equation}
+of $y^3,y^2z,yz^2,z^3$. Their vanishing is the exact relative
+Hilbert condition. Eliminate $d=-a^3$ and $c=-b^3$ to obtain
+\eqref{eq:hilbert-ring}.
+
+The ideal has primary decomposition
+\begin{equation}\label{eq:primary}
+ (a^2b,ab^2)=(a)\cap(b)\cap(a,b)^3.
+\end{equation}
+Its radical is $(ab)$, and its nonzero minimal defining ideal lies
+in the cube of the maximal ideal. The embedding dimension is two.
+The order of this ideal is invariant under analytic changes of
+minimal coordinates, so the full germ cannot be defined by
+quadratic equations. In particular $a=b=\tau$ defines a deformation
+over $\C[\tau]/(\tau^3)$ but cannot extend to
+$\C[\tau]/(\tau^4)$ with the same first derivative: higher
+coefficients of $a,b$ cannot cancel the leading cubic products.
+\end{proof}
+
+The reduced germ consists of two transverse smooth axes, with an
+embedded component at their intersection in the full analytic germ.
+Higher-order curve obstructions occur in other compact Calabi--Yau
+examples; for instance \cite[Section~5.2]{ashok} computes fifth-order
+initial equations for lines on the Fermat quintic. Here the cubic
+germ will be realized by a stable locally free bundle.
+
+\subsection{The Serre bundle and its stability}
+Set $L=\OO_X(-2,2)$. Its restriction to $C$ equals
+$\det N_{C/X}=\OO_C(-2)$. The ambient restriction sequence
+\begin{equation}\label{eq:restriction}
+ 0\longrightarrow\OO_{\mathcal P}(i-3,j-3)
+ \longrightarrow\OO_{\mathcal P}(i,j)
+ \longrightarrow\OO_X(i,j)\longrightarrow0
+\end{equation}
+shows that both $L$ and $L^*$ are acyclic.
+For $L$, the ambient bundles are $\OO_{\mathcal P}(-2,2)$ and
+$\OO_{\mathcal P}(-5,-1)$; for $L^*$ they are
+$\OO_{\mathcal P}(2,-2)$ and $\OO_{\mathcal P}(-1,-5)$.
+Each is acyclic by the line-bundle cohomology of $\PP^2$.
+
+The Hartshorne--Serre construction \cite{hartshorne,thomas} gives
+a rank-two locally free bundle with a section:
+\begin{equation}\label{eq:serre}
+ 0\longrightarrow\OO_X\xrightarrow{s}E
+       \longrightarrow I_CL\longrightarrow0 .
+\end{equation}
+Indeed the local extension generator is a nowhere-zero section of
+$\det N_{C/X}\otimes L^*|_C=\OO_C$, and
+$H^1(L^*)=H^2(L^*)=0$ gives its unique global lift, up to the
+usual scalar choice. This generator ensures local freeness along
+$C$; away from $C$ one has an extension of line bundles.
+Put
+\[
+ A=E(1,-1),\qquad \det A=\OO_X .
+\]
+Since $L|_C=\OO_C(-2)$, \eqref{eq:serre} and the restriction
+sequence give
+\begin{equation}\label{eq:section-cohomology}
+ h^0(E)=1,\qquad H^1(E)=0 .
+\end{equation}
+
+\begin{proposition}\label{prop:stability}
+The bundles $E$ and $A$ are slope-stable for
+\[
+ H_N=N\omega_1+\omega_2,\qquad 1<N<1+\sqrt3.
+\]
+In particular $A$ is stable of slope zero for the integral ample
+class $H=2\omega_1+\omega_2$.
+\end{proposition}
+
+\begin{proof}
+The double dual of a saturated rank-one subsheaf of $E$ is a line
+bundle with the same first Chern class, and its map to the locally
+free bundle extends across codimension two. By the Picard
+description, it is $\OO_X(-k,-l)$ for some integers $k,l$.
+It therefore suffices to show that every twist $E(k,l)$ with a
+nonzero section has positive slope.
+
+For all integers $i,j$ the ambient group
+$H^1(\OO_{\mathcal P}(i-3,j-3))$ vanishes. Thus
+\[
+ H^0(\OO_X(i,j))\ne0\quad\Longleftrightarrow\quad i,j\ge0 .
+\]
+Moreover
+\[
+ H^0(I_C(i,j))\ne0
+ \quad\Longleftrightarrow\quad i,j\ge0,\quad i+j\ge1.
+\]
+For $i\ge1$, use a polynomial divisible by $x$; for $j\ge1$,
+use a base polynomial vanishing at $p$. Constants do not vanish on
+$C$. Twisting \eqref{eq:serre} shows that a section of $E(k,l)$
+can occur only in the union of the coordinatewise upper quadrants
+based at
+\[
+ (0,0),\qquad (2,-1),\qquad (3,-2).
+\]
+The mixed triple intersections are
+$\omega_1^2\omega_2=\omega_1\omega_2^2=3$, and the pure cubes
+vanish. Writing degrees here without the common factor $1/2!$,
+one obtains
+\begin{equation}\label{eq:three-degrees}
+ \begin{aligned}
+ c_1(E)\cdot H_N^2&=6(N^2-1),\\
+ c_1(E(2,-1))\cdot H_N^2&=6(2N+1),\\
+ c_1(E(3,-2))\cdot H_N^2&=6(2+2N-N^2).
+ \end{aligned}
+\end{equation}
+All are positive on the stated interval.
+Adding a nonnegative twist increases degree since $H_N$ is ample.
+Thus $\mu_{H_N}(E(k,l))>0$ whenever it has a section, equivalently
+$\mu_{H_N}(\OO_X(-k,-l))<\mu_{H_N}(E)$.
+This proves stability. Twisting preserves stability and gives
+the result for $A$.
+\end{proof}
+
+The third quadrant is necessary for this proof. It accounts for
+sections of $I_C(i,0)$ with $i\ge1$.
+The argument proves the sufficient interval above independently of
+any broader stability assertion for a different bicubic.
+
+\subsection{Equality of the bundle and curve deformation germs}
+
+\begin{theorem}\label{thm:cubic-bundle}
+The fixed-$X$, fixed-determinant analytic deformation germ of $A$
+is \eqref{eq:hilbert-ring}, including its nonreduced structure.
+In particular $\dim\Ext^1(A,A)=2$, the quadratic Kuranishi
+obstruction vanishes, and the cubic obstruction is nonzero in
+minimal coordinates. Each reduced axis gives a genuine
+one-parameter family of pairwise nonisomorphic stable locally
+free bundles near $A$.
+\end{theorem}
+
+\begin{proof}
+We compare the deformation functors, not only their tangent
+dimensions. Let $T$ be a local Artin $\C$-algebra.
+Every deformation of $E$ over $X\times\operatorname{Spec}T$
+has a section lifting $s$: induction over small extensions
+places the section-lifting obstruction in $H^1(E)$ tensored
+with the square-zero kernel, which vanishes by
+\eqref{eq:section-cohomology}. The same induction and $h^0(E)=1$
+show that its module of sections is free of rank one.
+The lifted section is unique up to a unit of $T$.
+Since its closed-fiber zero is a regular codimension-two zero,
+its zero scheme is a flat local complete intersection deformation
+of $C$. Its determinant remains $L$, as
+$H^1(X,\OO_X)=0$ and the determinant is fixed.
+
+Conversely, every embedded deformation $C_T$ belongs to the ambient
+line chart used in Proposition~\ref{prop:hilbert}. It is relatively
+$\PP^1$, and its relative normal determinant equals $L|_{C_T}$
+by adjunction: $K_X$ is trivial and
+$\OO_{\mathcal P}(-2,2)|_{C_T}$ has relative degree $-2$.
+The possible line from the local base is trivial.
+The fixed acyclicity of $L^*$ persists after tensoring with $T$.
+The relative Serre construction therefore extends the local normal
+generator uniquely to a vector bundle $E_T$ with regular section.
+Changing that generator by a unit only rescales the section and
+gives an isomorphic bundle. These two constructions are inverse
+on isomorphism classes and commute with base change.
+
+Twisting by $\OO_X(1,-1)$ preserves the deformation functor.
+Stability makes $A$ simple; scalar automorphisms act trivially on
+its deformation base. The completed local ring is therefore the
+completion of \eqref{eq:hilbert-ring}.
+The constructions also apply to small analytic families:
+vanishing of $H^1(E)$, the one-dimensional space of sections,
+analytic base change and regularity of the zero scheme give
+inverse analytic germ maps. Thus the assertion includes the
+convergent structure and nilpotents, not only the completed ring.
+
+The defining ideal has order three in minimal embedding dimension
+two. Hence a minimal Kuranishi map has zero quadratic part and
+nonzero cubic part. The two reduced axes give distinct points of
+the simple-bundle deformation germ. Stability and local freeness
+persist in a small neighborhood.
+\end{proof}
+
+Thomas's corrected example \cite[Addendum]{thomas} has ring
+$\C[\varepsilon,\eta]/(\varepsilon^2,\eta^2)$.
+The triple-line geometry \eqref{eq:bicubic} instead gives a
+one-dimensional germ with cubic initial ideal. The use of the
+Serre method is common to both constructions.
+
+\subsection{The full repeated-factor application}
+Choose a K\"ahler form in $H=2\omega_1+\omega_2$ and the normalized
+HE metric on $A$. Set $E_0=A\otimes\C^3$.
+Then
+\[
+ V=\Ext^1(A,A)\otimes\End\C^3,\qquad \dim_\C V=18,\qquad N=8.
+\]
+Since $H^1(X,\OO_X)=0$, the determinant condition removes no
+degree-one harmonic direction.
+
+\begin{corollary}\label{cor:full-application}
+The full local HYM problem at $A\otimes\C^3$, with all eighteen
+harmonic coordinates and the complete convergent matrix obstruction,
+satisfies every conclusion of Theorem~\ref{thm:main}.
+At fixed polarization the relative error is $O(\|x\|^2)$.
+There are eight small trace-free endomorphism eigenvalues, including
+their exact changing kernel, a uniform complementary gap, and the
+same relative harmonic metric comparison on genuine smooth pieces.
+Every sufficiently nearby actual solution is represented.
+\end{corollary}
+
+\begin{proof}
+Lemmas and propositions above verify compact smooth K\"ahler
+geometry, local freeness, stability, determinant and the analytic
+deformation germ. Thus all background hypotheses of
+Theorem~\ref{thm:main} hold. Ext additivity gives the eighteen
+coordinates and the full multiplicity algebra gives the eight
+trace-free zero-form directions. Apply the theorem to this entire
+family. Small polarization variations are covered as well, by the
+theorem or by Proposition~\ref{prop:moving} in its moving coordinates.
+\end{proof}
+
+The scalar slice $u\otimes I_3$ retains the cubic obstruction of
+$A$ by the blockwise canonical recursion. Its quadratic obstruction
+is zero, so a quadratic truncation would admit false actual
+deformations. No claim identifies the complete matrix relations
+by substituting noncommuting matrices into the two scalar equations.
+
+There is an explicit spectral family with arbitrary scale
+separation. Parametrize one reduced axis in canonical harmonic
+coordinates by
+\[
+ f(z)=ze+h(z),\qquad \|e\|=1,\quad h(z)\perp e,\quad h(z)=O(z^2).
+\]
+Use the harmonic linear coordinate along $e$ as parameter.
+Holomorphic divided differences give
+\begin{equation}\label{eq:divided-difference}
+ \|f(z)-f(w)\|^2
+   =|z-w|^2\bigl(1+O((|z|+|w|)^2)\bigr).
+\end{equation}
+Indeed $\|h(z)-h(w)\|\le C(|z|+|w|)|z-w|$, and the two
+summands are orthogonal. The estimate remains relative when
+$z-w$ is arbitrarily small.
+
+For any three nearby parameters put
+$x=\diag(f(z_1),f(z_2),f(z_3))$.
+The harmonic reconstruction is blockwise, hence integrable.
+Every loop coefficient is diagonal and normal, so $\mu(x)=0$.
+The bundle is $A_{z_1}\oplus A_{z_2}\oplus A_{z_3}$.
+On each off-diagonal matrix unit the mass is $2\Vol(\omega_0)$
+and the commutator energy is $\|f(z_i)-f(z_j)\|^2$.
+Thus for every unordered pair the finite eigenvalue is
+\begin{equation}\label{eq:pair-spectrum}
+ \nu_{ij}=\frac{\|f(z_i)-f(z_j)\|^2}{2\Vol(\omega_0)}
+\end{equation}
+with complex multiplicity two. Distinct parameters give trace-free
+kernel dimension two; one double collision gives dimension four;
+a triple collision gives dimension eight.
+The corresponding compact stabilizers before removing the
+ineffective scalar are $\mathrm U(1)^3$,
+$\mathrm U(1)\times\mathrm U(2)$ and $\mathrm U(3)$.
+
+Take $(z_1,z_2,z_3)=(0,s,s+\varepsilon)$, where
+$0<\varepsilon\le s\to0$. Equations
+\eqref{eq:divided-difference}--\eqref{eq:pair-spectrum} and
+Theorem~\ref{thm:main} give two exact trace-free zeros and six
+positive eigenvalues, with two entries at each scale
+\begin{equation}\label{eq:separated-spectrum}
+ \frac{\varepsilon^2}{2\Vol(\omega_0)}(1+O(s^2)),\quad
+ \frac{s^2}{2\Vol(\omega_0)}(1+O(s^2)),\quad
+ \frac{(s+\varepsilon)^2}{2\Vol(\omega_0)}(1+O(s^2)).
+\end{equation}
+This means comparison of ordered lists with repetitions, not
+exact equality of perturbed pairs. The constant is independent
+of $\varepsilon/s$, and the ninth trace-free eigenvalue has a
+fixed positive lower bound. The kernel dimensions at collisions
+are exact. The quotient metric conclusion holds on the full local
+family, with additional analytic refinement at the crossing of
+the reduced axes. The smooth-branch calculation in
+\eqref{eq:separated-spectrum} tests relative uniformity; it does
+not assign a spectral exponent to the nilpotent structure.
+

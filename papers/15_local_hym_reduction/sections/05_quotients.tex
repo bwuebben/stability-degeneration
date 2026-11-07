@@ -1,0 +1,167 @@
+\section{Harmonic quotient metrics and varying backgrounds}\label{sec:quotients}
+
+\subsection{The quotient comparison}
+We now prove \eqref{eq:quotient-main}. Let $v$ be a tangent to one
+of the smooth pieces, represented at a flat-balanced point $x$.
+Section~\ref{subsec:pieces} gives a locally smooth correction
+$y=g(x)x$. At the point under consideration choose its value
+$g=e^S$ with $\|S\|\le C\delta$.
+Differentiating this change of presentation gives $gv$ plus a
+complex orbit vector. The latter is removed by the finite minimum.
+Similarly, a varying holomorphic gauge in the infinite-dimensional
+presentation contributes an exact $D_a$ term, removed by the
+harmonic minimum.
+
+More explicitly, Proposition~\ref{prop:positive-form} at $y$ gives
+\[
+ \inf_{\gamma}\|J_yw-D_a\gamma\|^2
+       =\inf_{\xi\in\g_0}\B_{t,y}(w-C_y\xi,w-C_y\xi).
+\]
+The bounded value of $g$ sends finite orbit directions bijectively
+to those at $y$, with norm distortion $1+O(\delta)$.
+Apply \eqref{eq:B-comparison} before taking the infimum, and then
+set $w=gv$ modulo the vertical term. This proves
+\[
+ (1-C\delta)\inf_{\xi}\|v-C_x\xi\|^2
+ \le\|[v]\|_{L^2,t}^2
+ \le(1+C\delta)\inf_{\xi}\|v-C_x\xi\|^2.
+\]
+No estimate for $Dg$ is required. A large derivative of a local
+balancing gauge near a stabilizer change thus does not affect
+the tensor constant.
+
+At a flat-balanced point, differentiating $\mu=\zeta$ makes a
+balanced tangent perpendicular to Hermitian orbit directions.
+Centrality of $\zeta$ makes Hermitian and unitary orbit directions
+perpendicular. Hence the full complex-orbit minimum agrees with
+the compact K\"ahler quotient metric on such tangents.
+Positivity of $\B$ also identifies the infinitesimal kernel on
+integrable vectors with $\im C_x$. Together with the actual
+coverage and smooth pieces already proved, this completes
+Theorem~\ref{thm:main}.
+
+The order of minimization is the one in
+\cite[Section~8]{wuebben6}: remove the uniformly coercive
+infinite-dimensional directions before minimizing over the
+possibly singular finite orbit. Taking an inverse of the finite
+orbit Hessian first would lose the stated uniformity.
+There is also no assertion about arbitrary untransported tangent
+limits. For the weight-one action on $\C$, for example, the quotient
+seminorm of $v=1$ is zero at $x\ne0$ and one at $x=0$.
+
+\subsection{Moving harmonic backgrounds}\label{subsec:moving}
+The additive parameter error in Theorem~\ref{thm:main} can be
+removed by choosing the finite model at the current polarization.
+
+\begin{proposition}\label{prop:moving}
+Keep the holomorphic factors $F_i$ fixed and let $\omega_t$ vary
+near $\omega_0$. There are smooth determinant-normalized HE metrics
+$h_i(t)$ with $h_i(0)=h_{i0}$. Form
+\[
+ h_{\mathrm{gr},t}=\bigoplus_i h_i(t)\otimes I_{W_i},
+\]
+and use its harmonic spaces $V_t$, norms, Green operators and full
+canonical obstruction $\kappa_t$. In these coordinates all
+conclusions of Theorem~\ref{thm:main} hold uniformly with error
+$C\|x\|_t^2$. The reference metric is $h_{\mathrm{gr},t}$,
+the spectral mass is
+\[
+ \Vol(\omega_t)\sum_i r_i\tr(\xi_i^*\xi_i),
+\]
+and the central target is still $\zeta(t)$.
+The factors may have unequal slopes for $t\ne0$.
+\end{proposition}
+
+\begin{proof}
+Each central factor is stable and simple. After separately solving
+its scalar determinant equation, its trace-free HE linearization
+is invertible. The parameter implicit-function theorem gives the
+smooth family $h_i(t)$. HE existence implies polystability, and
+simplicity of the fixed holomorphic factor then implies stability.
+This argument supplies nearby factor stability without assuming a
+uniform chamber-size statement.
+
+The holomorphic Dolbeault complexes do not change, so all cohomology
+dimensions are fixed. Smooth elliptic perturbation gives smooth
+harmonic projections and Green operators, with uniformly positive
+complementary gaps on a smaller parameter neighborhood.
+Projection followed by the positive Gram square root gives smooth
+orthonormal bases in each factor Ext space. Tensoring with
+$\Hom(W_i,W_j)$ makes the trivialization $G$-equivariant.
+The zero-form kernel is the same multiplicity algebra: cross-Hom
+vanishing is a fixed holomorphic fact, and the scalar endomorphisms
+of each stable factor are parallel for every $h_i(t)$.
+
+For this construction use the moving density $dV_t$ and moment
+representative
+\begin{equation}\label{eq:moving-moment}
+ \M_t^{\mathrm{mov}}=i\Lambda_{\omega_t}F^0,
+ \qquad Q_{H,t}\text{ defined by the moving }L^2\text{ product}.
+\end{equation}
+At the split connection the mean curvature is a constant on each
+factor block, so
+$Q_{H,t}\M_t^{\mathrm{mov}}(0)=0$ exactly.
+The fixed-density representative \eqref{eq:curvature-moment}
+would multiply this block endomorphism by $dV_t/dV_0$; when slopes
+differ that generally has a nonzero complementary projection.
+Nevertheless the integrated moment is unchanged, because
+\[
+ \M_t^{\mathrm{mov}}dV_t
+       =iF^0\wedge\frac{\omega_t^{n-1}}{(n-1)!}.
+\]
+Thus the central target and rank conventions remain those of
+\eqref{eq:moment}.
+
+Identify the smoothly moving Hermitian complements with a fixed
+Sobolev space. The derivative of the complementary equation at
+$t=0$ is invertible, and its small perturbation remains uniformly
+invertible. At unequal slopes it need not equal a scalar multiple
+of a Dolbeault Laplacian on the whole Hermitian endomorphism bundle;
+continuity of the actual derivative suffices.
+For each fixed $t$, the linear coefficient derivative of contracted
+curvature vanishes on a current harmonic one-form. This follows
+from the Chern-connection K\"ahler identities, which express the
+contraction in terms of $d_t^*x$ and its adjoint and do not require
+the entire mean curvature to be central.
+Consequently the complementary solution satisfies
+\begin{equation}\label{eq:moving-sigma}
+ \sigma(t,0)=0,\qquad D_x\sigma(t,0)=0,\qquad
+ \|\sigma(t,x)\|_{C^j}\le C_j\|x\|_t^2 .
+\end{equation}
+Uniform bounds for second coefficient derivatives on a smaller
+product neighborhood give the same constant for all small $t$.
+
+At every $t$, the quadratic Kuranishi term is current-coexact and
+the quadratic gauge term is current-exact. Both are orthogonal to
+the current harmonic space. The proof of
+Proposition~\ref{prop:quadratic-form} therefore gives
+$\Omega_{t,x}-\omega_{\mathrm{flat},t}=O(\|x\|_t^2)$.
+The complementary minimum has the same quadratic error, by
+Proposition~\ref{prop:positive-form} in the current norms.
+Parallel equivariance and $d_t^*J_{t,x}=0$ give the same
+energy-relative Schur bound with uniformly controlled background
+gaps. Lemma~\ref{lem:balancing} in the orthonormal quiver coordinates
+then gives $\|S\|\le C\|x\|_t^2$, and the actual metric, spectral and
+quotient transfers preserve that error. The product determinant
+is already HE, since the sum of its constant factor mean curvatures
+is constant.
+
+Finally these moving coordinates retain common local coverage.
+Impose moving Coulomb gauge on an integrable operator using the
+complement of the unchanged holomorphic zero-form algebra.
+Its linearization is the moving positive zero-form Laplacian,
+uniformly invertible. The parameter slice theorem gives a common
+gauge neighborhood. For an integrable Coulomb representative $a$,
+Hodge decomposition gives
+\[
+ a=H_{1,t}a-d_t^*G_{2,t}(a\wedge a),
+\]
+so contraction uniqueness identifies it with the moving canonical
+representative. Positive-gauge normalization and the reverse
+finite correction apply as before. Smooth changes between the
+unitary presentations for $h_0$ and $h_{\mathrm{gr},t}$ transfer
+nested neighborhoods. All quadratic comparisons remain in the
+specified moving harmonic coordinates; no arbitrary nonlinear
+coordinate change is used to preserve their order.
+\end{proof}
+

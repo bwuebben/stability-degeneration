@@ -1,0 +1,247 @@
+\section{Introduction}\label{sec:introduction}
+
+The local deformation theory of a polystable holomorphic bundle is
+finite dimensional, whereas its Hermitian--Einstein metric is obtained
+from a nonlinear elliptic equation. Near a bundle with additional
+automorphisms, the linearized equation develops small eigenvalues.
+Several of these eigenvalues can tend to zero at unrelated rates.
+An absolute error estimate for the curvature or the operator then gives
+no relative information about the weakest directions. The same issue
+arises when comparing the harmonic metric on bundle moduli with a
+finite-dimensional quotient metric.
+
+We prove that canonical harmonic Kuranishi coordinates provide one
+finite-dimensional model for all three comparisons near any fixed
+locally free polystable compact-K\"ahler background. No formality
+hypothesis is imposed. The complete convergent obstruction is retained,
+and the estimates remain uniform when the stabilizer type changes.
+The essential geometric observation is that the quadratic terms of both
+the Kuranishi reconstruction and the complementary Hermitian gauge are
+orthogonal to harmonic one-forms. This gives a quadratic estimate for
+the ambient symplectic form and for the complementary quotient form.
+The finite balancing theorem of \cite[Theorem~2.1]{wuebben14}, the
+relative spectral reduction, and minimization over gauge directions
+then apply on the same entire local family.
+
+\subsection{The finite data}
+Let $(X,\omega_0)$ be a compact connected K\"ahler manifold of complex
+dimension $n$, and fix a locally free polystable bundle
+\begin{equation}\label{eq:split}
+ E_0=\bigoplus_{i=1}^{\ell}F_i\otimes W_i
+\end{equation}
+with pairwise nonisomorphic stable factors of equal slope. Put
+$r_i=\operatorname{rank}F_i$, $m_i=\dim W_i$, and
+$R=\sum_i r_im_i$. Fix a direct-sum Hermitian--Einstein metric $h_0$.
+Let $\omega_t$ be a smooth finite-dimensional family of K\"ahler forms,
+with $\omega_0$ its central value. We fix the determinant holomorphic
+structure. Degrees and slopes are normalized by
+\[
+ \deg_\omega F=\int_Xc_1(F)\wedge\frac{\omega^{n-1}}{(n-1)!},
+ \qquad \mu_\omega(F)=\frac{\deg_\omega F}{\operatorname{rank}F}.
+\]
+Write $d=\ddbar_0$ on $\End E_0$, and use the unnormalized
+$(h_0,\omega_0)$ inner products. Denote the harmonic projections and
+Green operators by $H_q$ and $G_q$.
+
+The harmonic space $V=H^1(X,\End E_0)$ is the full Ext-quiver
+representation of $G=\prod_i\mathrm{GL}(W_i)$; its compact form is
+$K=\prod_i\mathrm U(W_i)$. Orthonormal harmonic bases in each
+$\Ext^1(F_i,F_j)$ give the arrow coordinates $x_a$. Loops and all
+multiplicities are included. Set
+\[
+ V_{\det}=\ker\bigl(\tr:V\longrightarrow H^1(X,\OO_X)\bigr).
+\]
+For small $x\in V$ the canonical harmonic recursion defines
+\begin{equation}\label{eq:recursion-intro}
+ a(x)=x-d^*G_2(a(x)\wedge a(x)),\qquad
+ \kappa(x)=H_2(a(x)\wedge a(x)).
+\end{equation}
+Put $Z=\kappa^{-1}(0)\cap V_{\det}$ and
+$E_x=(E_0,\ddbar_0+a(x))$ for $x\in Z$.
+The full analytic structure of $Z$ is relevant to deformation theory.
+For quotient metrics we use its underlying reduced analytic space.
+
+The flat moment map and central target are
+\begin{equation}\label{eq:moment}
+ \begin{split}
+ \mu_i(x)&=\sum_{h(a)=i}x_ax_a^*-\sum_{t(a)=i}x_a^*x_a,\\
+ \zeta_i(t)&=2\pi\bigl(r_i\mu_{\omega_t}(E_0)-\deg_{\omega_t}F_i\bigr),
+ \qquad \sum_i m_i\zeta_i(t)=0 .
+ \end{split}
+\end{equation}
+Here $h(a)$ and $t(a)$ denote the head and tail of an arrow.
+The ordinary multiplicity trace pairs the moment covector with
+Hermitian matrices. The spectral mass has different rank weights:
+\begin{equation}\label{eq:finite-spectrum}
+ \begin{gathered}
+ \g_0=\left\{(\xi_i)\in\bigoplus_i\End W_i:
+                  \sum_i r_i\tr\xi_i=0\right\},\qquad
+ C_x\xi=[\xi,x],\\
+ q_x(\xi)=\|C_x\xi\|^2,\qquad
+ \|\xi\|_0^2=\Vol(\omega_0)\sum_i r_i\tr(\xi_i^*\xi_i).
+ \end{gathered}
+\end{equation}
+Let $\nu_1(x)\le\cdots\le\nu_N(x)$ be its eigenvalues, with complex
+multiplicity and zeros included, where $N=\sum_i m_i^2-1$.
+
+Locally near the origin consider
+\[
+ \Q_t=(Z\cap\mu^{-1}(\zeta(t)))/K .
+\]
+Its neighborhoods are images of small balanced neighborhoods; a bounded
+ball is not declared invariant under $G$. Refine the reduced complex
+quotient into smooth local pieces with locally constant stabilizer type
+and smooth lifts, refining also at analytic singularities. Their existence
+is explained in Section~\ref{subsec:pieces}. On a tangent represented by a
+balanced lift $v$ define
+\begin{equation}\label{eq:finite-metric}
+ g_{\mathrm{fin},x}([v],[v])
+       =\inf_{\xi\in\g_0}\|v-C_x\xi\|^2.
+\end{equation}
+This is the flat K\"ahler quotient metric restricted to the chosen piece.
+The tangents in this formula are genuine tangents to those pieces, not
+arbitrary Zariski tangents of a singular coarse space.
+
+\subsection{The local comparison theorem}
+Let $b_t$ be the $R$th root of the ratio of the normalized
+$\omega_t$-Hermitian--Einstein determinant metric to $\det h_0$.
+We normalize it by $\int_X\log b_t\,dV_0=0$, where
+$dV_0=\omega_0^n/n!$.
+Then $b_0=1$ and $\|\log b_t\|_{C^j}\le C_j|t|$.
+
+\begin{theorem}\label{thm:main}
+For the fixed data above, there are a parameter neighborhood, nested
+coefficient neighborhoods, and an open neighborhood of the central
+actual Hermitian--Yang--Mills class with the following properties.
+Write $\delta=|t|+\|x\|^2$ and shrink the neighborhoods so that
+$C\delta<1/2$.
+\begin{enumerate}
+\item Every $x\in Z\cap\mu^{-1}(\zeta(t))$ in the inner neighborhood
+has a Hermitian--Einstein metric with the prescribed normalized
+determinant and
+\begin{equation}\label{eq:metric-main}
+ e^{-C\delta}b_th_0\le h^{\mathrm{HE}}_{t,x}
+                         \le e^{C\delta}b_th_0.
+\end{equation}
+The construction identifies neighborhoods in $\Q_t$ and the actual
+fixed-determinant HYM quotient, uniformly for small $t$, and covers
+every sufficiently nearby actual solution. Metrics are unique modulo
+determinant-preserving holomorphic automorphisms; the unitary HE class
+is unique.
+
+\item The Dolbeault Laplacian on $\End_0E_x$, for
+$h^{\mathrm{HE}}_{t,x}$ and $\omega_t$, has exactly $N$ eigenvalues
+below a fixed $\gamma>0$, and
+\begin{equation}\label{eq:spectrum-main}
+ (1-C\delta)\nu_j(x)\le\lambda_j(t,x)\le
+ (1+C\delta)\nu_j(x)\quad(1\le j\le N).
+\end{equation}
+Its kernel is naturally identified with $\ker C_x$, and its next
+eigenvalue is at least $\gamma$. For full $\End E_x$, add the one
+exact scalar zero; all other scalar modes have a uniform positive gap.
+
+\item The local identification $f_t$ is a homeomorphism, preserves the
+local complex-orbit description, and is smooth on the smooth pieces
+specified above. Their harmonic Kodaira--Spencer metric satisfies
+\begin{equation}\label{eq:quotient-main}
+ (1-C\delta)g_{\mathrm{fin}}\le f_t^*g_t^{L^2}
+                                      \le(1+C\delta)g_{\mathrm{fin}} .
+\end{equation}
+The same comparison constant works through changes of stabilizer.
+\end{enumerate}
+Constants and radii may depend on the fixed background, ranks,
+multiplicities, harmonic dimensions, positive background elliptic
+gaps, Sobolev and elliptic constants, the selected regularity order,
+and bounds for the given family $\omega_t$. They are independent of
+every positive $\nu_j(x)$, ratios of positive finite eigenvalues,
+positive singular values of $C_x$ or $D\kappa_x$, and stabilizer type.
+\end{theorem}
+
+For $N=0$ and $R>1$, the trace-free assertion is a uniform gap on the
+entire zero-form spectrum. For $R=1$, $\End_0E_0=0$ and that assertion
+is vacuous; the full endomorphism statement retains its scalar zero.
+The theorem asserts no uniform radius for separate charts on smooth
+pieces, nor a continuous tensor on untransported tangent vectors when
+their dimension changes.
+
+The error can be sharpened when the harmonic coordinates move with the
+polarization. Continue the HE metric of each fixed stable factor
+smoothly to $h_i(t)$ and use the harmonic construction for
+$h_{\mathrm{gr},t}=\bigoplus_i h_i(t)\otimes I_{W_i}$ and $\omega_t$.
+Proposition~\ref{prop:moving} proves all three comparisons with error
+$C\|x\|_t^2$, relative to that background and its spectral mass.
+The split bundle need not remain polystable for $t\ne0$.
+This distinction preserves the stronger rates of the earlier extension
+theorems when a polarization moves predominantly along a stability wall.
+
+\subsection{An application with cubic obstruction}
+We construct a stable rank-two bundle $A$, with trivial determinant,
+on a smooth bicubic threefold in $\PP^2\times\PP^2$, whose analytic
+deformation germ is
+\begin{equation}\label{eq:cubic-intro}
+ \Specan\C\{a,b\}/(a^2b,ab^2).
+\end{equation}
+Its quadratic obstruction vanishes, but mixed directions are obstructed
+at order three. Section~\ref{sec:bicubic} proves smoothness of the compact
+geometry, stability, and equality of the complete curve and bundle
+deformation germs. The construction modifies the bicubic Serre method
+of Thomas \cite{thomas}; its deformation equations differ from his
+corrected quadratic example.
+
+Theorem~\ref{thm:main} applies to the entire $18$-dimensional harmonic
+deformation problem at $A\otimes\C^3$, retaining its full matrix-valued
+obstruction. The trace-free finite algebra has dimension eight.
+An explicit diagonal subfamily has two eigenvalues on an arbitrarily
+weak positive scale and four on a larger scale, with changing exact
+kernel dimensions. This subfamily illustrates spectral uniformity;
+the application concerns the whole local moduli problem.
+The reduced space of \eqref{eq:cubic-intro} is the node $ab=0$.
+The harmonic metric is defined on reduced smooth pieces and does not
+measure its embedded nilpotent structure.
+
+\subsection{Relation to earlier work and proof strategy}
+The Donaldson--Uhlenbeck--Yau correspondence gives the qualitative
+existence of HE metrics \cite{donaldson,uy}; see also \cite{kobayashi}.
+Buchdahl--Schumacher develop the equivariant Kuranishi and automorphism
+description \cite{bs22}. Their Proposition~6.2 and Lemma~6.3 already
+give a quadratic complementary correction and a quartic finite moment
+remainder. Their Theorems~7.2 and~8.1 provide quantitative raywise
+correction and common existence neighborhoods. The present comparison
+requires relative control in each weak orbit direction, which does
+not follow from an absolute quartic remainder.
+Their treatment of harmonic moduli metrics also includes obstructed
+spaces under the hypotheses of \cite[Theorem~11]{bs21}.
+Delloque's local correspondence supplies the common-parameter slices,
+morphism description and quotient topology used here
+\cite[Section~3.2, Propositions~4.3, 4.5, 5.6,
+Corollary~5.2 and Theorem~7.4]{delloque}.
+Convergent Ext-quiver relations are also part of Toda's local
+description of sheaf moduli \cite[Theorem~1.1]{toda}.
+
+Several quantitative mechanisms are available in earlier special
+geometries. The complete multiplicity algebra and relative spectral
+reduction occur in \cite{wuebben4}; complementary minimization and
+nonabelian quotient estimates occur in \cite{wuebben6,wuebben7}.
+The finite balancing theorem of \cite{wuebben14} already applies to
+arbitrary quivers and locally invariant analytic subsets.
+The additional result here is the general geometric verification
+that permits these mechanisms to act simultaneously on the entire
+convergent Kuranishi family, without formality or a positive scale
+ratio bound. The cubic compact example provides a locally free
+application beyond the earlier extension and K3 settings.
+
+The proof begins with the two orthogonal quadratic jets
+\[
+ -d^*G_2(x\wedge x),\qquad -d\sigma_2(x).
+\]
+Their pairing with harmonic forms vanishes, giving the quadratic
+ambient estimate. Finite balancing then solves the remaining moment
+equation with a small parallel gauge. For spectra, the distinct identity
+$D_a\xi=-D_xa(C_x\xi)$ controls the off-diagonal Schur term by the
+finite energy of the same vector. For quotient metrics, minimizing
+first over the uniformly coercive infinite-dimensional complement
+gives a positive form close to the harmonic form; only then is the
+finite orbit minimum taken. Derivatives of the balancing gauge are
+vertical and disappear. These separate arguments explain why one
+relative constant survives arbitrarily weak finite directions.
+

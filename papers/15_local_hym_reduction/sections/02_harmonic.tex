@@ -1,0 +1,264 @@
+\section{Canonical harmonic coordinates}\label{sec:harmonic}
+
+We use the full endomorphism complex until imposing the determinant
+equation. At the HE background, the holomorphic zero-forms are parallel,
+so
+\[
+ P=H^0(X,\End E_0)=\bigoplus_i I_{F_i}\otimes\End W_i.
+\]
+Its trace-free part is identified with $\g_0$ in
+\eqref{eq:finite-spectrum}. Write $Q_0$ for the orthogonal complement
+of $P_0=P\cap\End_0E_0$ in trace-free zero-forms, and $Q_H$ for the
+corresponding projection on Hermitian trace-free zero-forms.
+All complements in this section are fixed at $(h_0,\omega_0)$.
+Choose an integer $k>n+2$ and use $W^{k,2}$ for one-forms and
+$W^{k+1,2}$ for complex gauges.
+
+\subsection{Convergent reconstruction and exact equivariance}
+
+\begin{lemma}\label{lem:kuranishi}
+The recursion \eqref{eq:recursion-intro} has a unique analytic solution
+on a small ball in $V$, smooth in the spatial variables. Writing
+$r=\|x\|$ and $J_x=D_xa$, one has, in every fixed $C^j$ norm,
+\begin{equation}\label{eq:canonical-estimates}
+ \begin{gathered}
+ a=x+O(r^2),\qquad J_x=\iota+O(r),\\
+ H_1a=x,\qquad d^*a=0,\qquad H_1J_x=I,\qquad d^*J_x=0 .
+ \end{gathered}
+\end{equation}
+Here $\iota$ is harmonic inclusion. The reconstructed operator is
+integrable exactly when $\kappa(x)=0$, and $\tr a=\tr x$.
+The maps are locally $G$-equivariant. With
+$D_a=d+[a,\cdot]$ on endomorphism forms,
+\begin{equation}\label{eq:exact-action}
+ D_a\xi=-J_xC_x\xi\qquad(\xi\in P).
+\end{equation}
+The identity holds on the whole ambient ball.
+\end{lemma}
+
+\begin{proof}
+Sobolev multiplication and the bounded map
+$d^*G_2:W^{k,2}\to W^{k+1,2}$ make the right side of
+\eqref{eq:recursion-intro} a contraction on a small ball.
+Analytic parameter differentiation gives the first two estimates.
+The nonlinear term is coexact, proving the harmonic and co-closed
+identities. Bootstrapping the equation gives spatial smoothness and
+the estimates in any specified finite regularity order.
+
+Put $\mathcal R=da+a\wedge a$. Hodge decomposition gives
+\[
+ \mathcal R=H_2(a\wedge a)+d^*dG_2(a\wedge a),\qquad
+ d^*\mathcal R=0,\qquad H_2\mathcal R=\kappa.
+\]
+The Bianchi identity is $d\mathcal R+[a,\mathcal R]=0$.
+When $\kappa=0$, Hodge decomposition of $\mathcal R$ therefore implies
+\[
+ \mathcal R=d^*G_3d\mathcal R,\qquad
+ \|\mathcal R\|_{W^{k-1,2}}\le Cr\|\mathcal R\|_{W^{k-1,2}}.
+\]
+For sufficiently small $r$ this forces $\mathcal R=0$.
+In complex dimension less than three the degree-three term is absent,
+with the same conclusion. Conversely, integrability implies $\kappa=0$
+by harmonic projection. Since $\tr(a\wedge a)=0$ and trace commutes
+with the scalar Hodge operators, $\tr a=\tr x$.
+
+Every element of $G$ is parallel. Its action commutes with the Hodge
+operators, even though the action need not be unitary. Uniqueness of
+the contraction gives $a(gx)=ga(x)g^{-1}$ whenever the local expressions
+are defined. Differentiation gives
+$J_x[\xi,x]=[\xi,a]=-D_a\xi$, proving \eqref{eq:exact-action}.
+\end{proof}
+
+In particular the entire scalar harmonic deformation is removed by
+$V_{\det}$, also when $H^1(X,\OO_X)\ne0$.
+This subspace need not itself be a full quiver representation.
+We apply finite balancing on the full representation $V$ and impose
+$V_{\det}$ as an additional invariant analytic equation.
+Neither the construction nor any later estimate replaces $\kappa$
+by its quadratic term.
+
+\subsection{The complementary Hermitian--Einstein equation}
+
+On the fixed Hermitian bundle define the curvature moment with fixed
+density $dV_0=\omega_0^n/n!$ by
+\begin{equation}\label{eq:curvature-moment}
+ \M_t(A)=
+ \frac{iF_A^0\wedge\omega_t^{n-1}}{(n-1)!\,dV_0}.
+\end{equation}
+The superscript denotes trace-free curvature. A possibly nonintegrable
+$(0,1)$-operator determines a unitary connection by its adjoint
+$(1,0)$-part, so the following equation is defined on the ambient ball.
+
+\begin{lemma}\label{lem:complement}
+There is a unique small
+$\sigma(t,x)\in Q_HW^{k+1,2}(\Herm_0E_0)$ satisfying
+\begin{equation}\label{eq:complement-equation}
+ Q_H\M_t\bigl(e^{\sigma(t,x)}\cdot(\ddbar_0+a(x))\bigr)=0.
+\end{equation}
+It is smooth and $K$-equivariant, and
+\begin{equation}\label{eq:sigma-estimate}
+ \|\sigma(t,x)\|_{C^j}\le C_j(|t|+r^2),\qquad
+ \|D_x\sigma(0,x)\|_{V\to C^j}\le C_jr .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+At $(t,x,s)=(0,0,0)$ the derivative in $s$ of the left side is a
+fixed nonzero multiple of the endomorphism Dolbeault Laplacian on
+$Q_H$, from $W^{k+1,2}$ to $W^{k-1,2}$.
+It is invertible by the fixed complementary elliptic estimate.
+The parameter implicit-function theorem gives $\sigma$.
+The linear $x$ derivative vanishes at the origin: the linear curvature
+variation is contracted to an expression in $d^*x$ and its adjoint
+by the K\"ahler identities, and $x$ is harmonic.
+Taylor's theorem gives \eqref{eq:sigma-estimate}; elliptic regularity
+gives the indicated spatial norms. Uniqueness gives $K$-equivariance.
+\end{proof}
+
+Set
+\[
+ \Psi_t(x)=e^{\sigma(t,x)}\cdot(\ddbar_0+a(x)),\qquad
+ H_{t,x}=h_0e^{2\sigma(t,x)} .
+\]
+The latter is the transported metric on the original holomorphic
+presentation when $x\in Z$. The determinant equation is separate:
+multiplication of a bundle metric by $b_t$ solves it and leaves the
+induced endomorphism metric unchanged.
+
+For a Hermitian multiplicity tuple $S=(S_i)$ write
+\begin{equation}\label{eq:tracefree-lift}
+ S^0=\bigoplus_i I_{F_i}\otimes S_i-c(S)I,\qquad
+ c(S)=\frac{\sum_i r_i\tr S_i}{R}.
+\end{equation}
+Define the finite covector by
+\begin{equation}\label{eq:finite-curvature}
+ \langle m_t(x),S\rangle
+   =\int_X\tr\bigl(S^0\M_t(\Psi_t(x))\bigr)dV_0 .
+\end{equation}
+At $x=0$, equivariance makes $\sigma(t,0)$ scalar on each multiplicity
+space, preserving the factor decomposition. Chern--Weil on each
+factor and the lift \eqref{eq:tracefree-lift} give
+\begin{equation}\label{eq:central-value}
+ m_t(0)=-\zeta(t),\qquad \rho_t=m_t-m_t(0).
+\end{equation}
+The pairing in \eqref{eq:finite-curvature} is the ordinary
+multiplicity trace, not the spectral mass in \eqref{eq:finite-spectrum}.
+
+\subsection{The quadratic ambient estimate}
+
+Use the Hermitian $L^2$ pairing linear in the first variable, and
+$\omega_{\mathrm{flat}}(v,w)=\operatorname{Im}\langle v,w\rangle$.
+The affine space of unitary connections has its constant symplectic
+form determined by $\omega_t$. Its pullback under $\Psi_t$ is denoted
+$\Omega_t$, with the normalization
+\begin{equation}\label{eq:moment-identity}
+ d\langle\rho_t,S\rangle=2\Omega_t(iC_xS,\cdot),\qquad \rho_t(0)=0 .
+\end{equation}
+This is the gauge moment identity, using the $K$-equivariance of
+$\Psi_t$. The form is closed and invariant on the ambient ball;
+it need not have type $(1,1)$ for the finite complex structure.
+
+\begin{proposition}\label{prop:quadratic-form}
+In the canonical harmonic coordinates,
+\begin{equation}\label{eq:quadratic-form}
+ \|\Omega_{t,x}-\omega_{\mathrm{flat}}\|
+                 \le C(|t|+\|x\|^2)
+\end{equation}
+as real bilinear forms on the entire ambient representation.
+\end{proposition}
+
+\begin{proof}
+It suffices to prove vanishing of the spatial first derivative at
+$(t,x)=(0,0)$. Write the homogeneous quadratic terms as
+\[
+ a(x)=x+a_2(x)+O(r^3),\qquad
+ \sigma(0,x)=\sigma_2(x)+O(r^3).
+\]
+Here
+\[
+ a_2(x)=-d^*G_2(x\wedge x)\in\im d^* .
+\]
+For the action $g\cdot\ddbar=g\ddbar g^{-1}$, the $(0,1)$ component is
+\begin{equation}\label{eq:two-jets}
+ \Psi_0(x)-\ddbar_0
+        =x+a_2(x)-d\sigma_2(x)+O_{C^j}(r^3).
+\end{equation}
+Both displayed quadratic terms are orthogonal to harmonic one-forms.
+Their real parameter derivatives are also orthogonal to the entire
+harmonic space. Every term linear in $x$ in the pullback of the
+constant affine form pairs a harmonic tangent with such a derivative,
+so vanishes. The remaining error is $O(r^2)$ in operator norm.
+Smooth dependence on $t$ contributes $O(|t|)$.
+\end{proof}
+
+This is a statement about the canonical recursion, not all analytic
+coordinates tangent to the identity. A change $x\mapsto x+F_2(x)+\cdots$
+can introduce a harmonic quadratic term, leaving only an $O(r)$
+estimate in the new coordinates. The distinction will matter for the
+formality coordinates in Section~\ref{sec:recovery}.
+
+\subsection{A positive form before the finite quotient}
+
+For $x,v\in V_{\det}$ define
+\begin{equation}\label{eq:complement-minimum}
+ \B_{t,x}(v,v)=\inf_{\eta\in Q_0W^{1,2}}
+       \|J_xv-D_a\eta\|^2_{H_{t,x},\omega_t}.
+\end{equation}
+The fixed estimate $\|\eta\|_{W^{1,2}}\le C\|d\eta\|$ on $Q_0$
+and multiplication by $a=O(r)$ give, by absorption,
+\begin{equation}\label{eq:complement-coercive}
+ \|\eta\|_{W^{1,2}}\le C\|D_a\eta\|_{H_{t,x},\omega_t}.
+\end{equation}
+Thus the normal equation for this minimum has a uniformly coercive
+operator on the fixed Hilbert space $Q_0W^{1,2}$.
+
+\begin{proposition}\label{prop:positive-form}
+The form $\B_{t,x}$ is smooth, Hermitian and positive on a common
+neighborhood, and
+\begin{equation}\label{eq:B-comparison}
+ (1-C\delta)\|v\|^2\le\B_{t,x}(v,v)\le(1+C\delta)\|v\|^2,
+ \qquad \delta=|t|+r^2.
+\end{equation}
+For a genuine integrable tangent $v$ the full gauge minimum is
+\begin{equation}\label{eq:full-minimum}
+ \inf_{\gamma\in W^{1,2}(\End_0E_0)}
+       \|J_xv-D_a\gamma\|^2
+ =\inf_{\xi\in\g_0}\B_{t,x}(v-C_x\xi,v-C_x\xi).
+\end{equation}
+All norms in the minima use $H_{t,x},\omega_t$.
+\end{proposition}
+
+\begin{proof}
+First let $t=0$. Since $H_1J_x=I$, harmonic orthogonality gives
+\[
+ \|J_xv\|^2=\|v\|^2+O(r^2)\|v\|^2 .
+\]
+The metric $H_{0,x}$ changes squared endomorphism norms by
+$1+O(r^2)$. In the reference norm, $d^*J_xv=0$, so
+\[
+ |\langle J_xv,D_a\eta\rangle_{H_{0,x},\omega_0}|
+             \le Cr\|v\|\|\eta\|_{W^{1,2}}.
+\]
+Indeed the $d\eta$ term is zero before metric variation, the
+$[a,\eta]$ term is $O(r)$, and the metric variation contributes
+$O(r^2)$. Coercivity bounds the minimizer by $Cr\|v\|$ in
+$W^{1,2}$. The removed energy is at most $Cr^2\|v\|^2$.
+This proves \eqref{eq:B-comparison} at $t=0$. Smooth dependence
+of the uniformly coercive inverse contributes $O(|t|)$.
+The inverse also proves smoothness of $\B$.
+
+Every gauge zero-form splits uniquely as $\xi+\eta$, with
+$\xi\in P_0$ and $\eta\in Q_0W^{1,2}$. Substitute
+\eqref{eq:exact-action}, minimize over $\eta$, and replace $\xi$ by
+$-\xi$ to obtain \eqref{eq:full-minimum}.
+For an integrable tangent, differentiating the full integrability
+equation gives $D_aJ_xv=0$. Hodge minimization therefore identifies
+the left side with the harmonic Kodaira--Spencer squared norm.
+\end{proof}
+
+The same construction on all of $V$ uses the full complement of $P$,
+including gapped scalar zero-forms. On $V_{\det}$ it agrees with
+\eqref{eq:complement-minimum}, since trace and trace-free forms are
+orthogonal and preserved by $D_a$. No inverse of $C_x^*C_x$ or
+$D\kappa_x$ enters the proof.
+

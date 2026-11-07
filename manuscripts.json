@@ -370,5 +370,39 @@
     },
     "number": 14,
     "directory": "14_quiver_metric_wall_crossing"
+  },
+  {
+    "paper": "local_hym_reduction",
+    "title": "Quantitative local models for Hermitian–Einstein metrics",
+    "date": "2026-11-07",
+    "website_slug": "local-hym-reduction",
+    "pages": 22,
+    "pdf_sha256": "02cb19f3e8e2c1637476bc1a49dc803972cb7924c081288b10cb680a293bc9cc",
+    "source_sha256": "8923632d18fbc3cdebd984446142902874df0c978bac11fe7ebb18d874abb222",
+    "download_filename": "local-hym-reduction.pdf",
+    "source_files_sha256": {
+      "paper.tex": "8923632d18fbc3cdebd984446142902874df0c978bac11fe7ebb18d874abb222",
+      "preamble.tex": "3ddd7b7681b9d4101414514b0fae1806c8aa4810c624f81cac5823605b37edb6",
+      "sections/01_introduction.tex": "10f8d2312454792892e5e6ecb98deab026a7b057e8a550b218c4facffad93239",
+      "sections/02_harmonic.tex": "cbad474a64070be6d5dcd9caa676d06777c257f9e2d3ae2352f3e5be303f6f18",
+      "sections/03_metrics.tex": "3a636e2ef32409b304a72e8a2484e3faa4a9d8d587838282df33cbc7322fa7cd",
+      "sections/04_spectrum.tex": "1bb644e8ab8b7d264ae649966e2c83f83f022be5bf12796d3fc7c39d635490b9",
+      "sections/05_quotients.tex": "4650b209223c43917cd6539c1b2ee45580091779c358cd023eb22920b583ea1c",
+      "sections/06_bicubic.tex": "633f44ef482f3d7309c9f6d248da30c7fd273973a4e8a3636e1d37d10d506ae9",
+      "sections/07_recovery.tex": "6db60f982c952e415d916a9987ce006057d298b67fa22601b8a54531c3afdb6a",
+      "sections/99_references.tex": "0b1f69a45f435a00752700e6ab8e8bce8886fb33da86bfd79d248e623da88d56",
+      "local-hym-reduction.pdf": "02cb19f3e8e2c1637476bc1a49dc803972cb7924c081288b10cb680a293bc9cc",
+      "figures/code/compute06_bicubic.py": "d13ac5f7c76ad8d2d2ad638bd6b400ec34eaddae24616ebe11bed366086af9e5",
+      "reproducibility/finite_identities.json": "69ecb36614fec23a36056c1abfaa114a9e8f0fe2d227741c2d19abfda5354d23"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.24029090",
+      "conceptdoi": "10.5281/zenodo.24029089",
+      "record_url": "https://zenodo.org/records/24029090",
+      "created": "2026-11-07T06:05:49.462282+00:00",
+      "id": 24029090
+    },
+    "number": 15,
+    "directory": "15_local_hym_reduction"
   }
 ]

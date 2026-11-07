@@ -1,0 +1,118 @@
+\section{The complete small endomorphism spectrum}\label{sec:spectrum}
+
+The spectral argument uses the exact equivariance identity
+\eqref{eq:exact-action}, separately from the moment estimate.
+We first keep the reference metric, allowing nonintegrable ambient
+coefficients.
+
+\begin{proposition}\label{prop:reference-spectrum}
+For every sufficiently small $x\in V_{\det}$, the self-adjoint
+zero-form operator $D_a^*D_a$ in the reference metric has exactly $N$
+eigenvalues below one fixed threshold $\gamma>0$ and
+\begin{equation}\label{eq:reference-spectrum}
+ (1-Cr^2)\nu_j(x)\le\lambda_j^0(x)\le
+               (1+Cr^2)\nu_j(x),\qquad 1\le j\le N.
+\end{equation}
+Its kernel is exactly $\ker C_x$ inside $P_0$, and the remaining
+spectrum is bounded below by $\gamma$. At an integrable point this
+is the endomorphism Dolbeault spectrum.
+\end{proposition}
+
+\begin{proof}
+Put $A=[a,\cdot]$ and $D=d+A$. The decomposition of zero-forms is
+$P_0\oplus Q_0L^2$. On $P_0$,
+\[
+ D\xi=-J_xC_x\xi,\qquad d^*D\xi=0.
+\]
+Let
+\[
+ G_f=P_0D^*DP_0,\qquad B_f=Q_0D^*DP_0,\qquad
+ L_Q=Q_0D^*DQ_0 .
+\]
+Harmonic orthogonality and \eqref{eq:canonical-estimates} imply
+\begin{equation}\label{eq:relative-block}
+ q_x\le G_f\le(1+Cr^2)q_x,\qquad
+ B_f=Q_0A^*DP_0,\qquad
+ \|B_f\xi\|^2\le Cr^2\langle G_f\xi,\xi\rangle .
+\end{equation}
+The last inequality is relative to the energy of the same vector.
+An absolute bound by $Cr^4\|\xi\|^2$ would be insufficient.
+
+By \eqref{eq:complement-coercive}, $L_Q$ has a fixed positive
+lower bound $\gamma_0$. Its form domain is $Q_0W^{1,2}$ and its
+operator domain is $Q_0W^{2,2}$. Its resolvent is uniformly bounded
+from $L^2$ to $W^{2,2}$ for $0\le\lambda\le\gamma_0/2$.
+The finite Schur form is
+\[
+ S_\lambda=G_f-\lambda I
+              -B_f^*(L_Q-\lambda)^{-1}B_f,
+\]
+and \eqref{eq:relative-block} gives
+\begin{equation}\label{eq:schur}
+ (1-Cr^2)G_f-\lambda I\le S_\lambda\le G_f-\lambda I .
+\end{equation}
+Completion of the square on $P_0\oplus Q_0W^{1,2}$ identifies the
+negative index of $D^*D-\lambda$ with that of $S_\lambda$.
+The triangular change is a bijection on this form domain, since the
+resolvent correction lies in $Q_0W^{2,2}$.
+
+As $\|G_f\|=O(r^2)$, the form $S_{\gamma_0/2}$ is negative
+definite for small $r$. Hence exactly $N$ eigenvalues lie below
+$\gamma=\gamma_0/2$. The two form inequalities in \eqref{eq:schur},
+negative-index counting and finite min--max give
+\eqref{eq:reference-spectrum}. This reasoning counts multiplicities
+and includes zeros; it never divides by $\nu_j$.
+
+If $C_x\xi=0$, exact equivariance gives $D\xi=0$.
+Conversely a kernel element has parallel part $\xi$ with $q_x(\xi)=0$
+by \eqref{eq:schur} at $\lambda=0$. Then $B_f\xi=0$, and positivity
+of the complementary operator forces its complementary part to vanish.
+The kernel is therefore literally $\ker C_x\subset P_0$.
+\end{proof}
+
+This is the relative Schur mechanism used for repeated-factor
+extensions in \cite[Section~5]{wuebben4} and the full local model
+of \cite[Section~5]{wuebben7}. Here canonical harmonic equivariance
+supplies its hypotheses on a general background.
+
+\subsection{Transfer to the actual HE metric}
+Let $y=gx$ be the correction in \eqref{eq:S-bound}, with $g=e^S$.
+Conjugation $T_g\xi=g\xi g^{-1}$ preserves the complex rank-weighted
+trace-free algebra and satisfies
+\[
+ C_yT_g\xi=g(C_x\xi)g^{-1}.
+\]
+Both energy and mass are therefore bounded in both directions by
+factors $e^{\pm4\|S\|}$, and generalized min--max gives
+\begin{equation}\label{eq:finite-transfer}
+ e^{-8\|S\|}\nu_j(x)\le\nu_j(y)\le e^{8\|S\|}\nu_j(x).
+\end{equation}
+The spectral algebra is complex. There is no requirement that
+nonunitary conjugation preserve its Hermitian real subspace.
+
+Changing from $h_0$ to $H_{t,y}$ changes squared endomorphism norms
+by $1+O(\delta)$. Changing $\omega_0$ to $\omega_t$ changes both
+zero-form masses and one-form energies by $1+O(|t|)$.
+Their common form domain is $W^{1,2}$, and the differential is unchanged.
+The Rayleigh quotient and min--max therefore transfer all ordered
+eigenvalues relatively. The scalar determinant correction has no
+effect on endomorphism norms. Finally, holomorphic pullback of both
+bundle and metric in \eqref{eq:actual-metric} is an exact isometry
+intertwining the Laplacians. Proposition~\ref{prop:reference-spectrum}
+and \eqref{eq:finite-transfer} prove
+\eqref{eq:spectrum-main}, with a common complementary gap after
+decreasing the cutoff. The kernel identification is transported by
+the same maps.
+
+For every induced endomorphism metric the splitting
+\[
+ \End E_x=\C I\oplus\End_0E_x
+\]
+is orthogonal and preserved by the differential and its adjoint.
+On the scalar part $D_a(fI)=(\ddbar f)I$.
+The scalar Dolbeault Laplacian on the compact connected
+$(X,\omega_t)$ has a one-dimensional constant kernel and a
+uniformly positive first nonzero eigenvalue for small $t$.
+Taking the smaller of the scalar and trace-free cutoffs completes
+the full endomorphism statement of Theorem~\ref{thm:main}.
+
