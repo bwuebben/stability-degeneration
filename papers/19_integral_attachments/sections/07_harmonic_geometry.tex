@@ -1,0 +1,276 @@
+\section{The calculated cycles in harmonic geometry}\label{sec:metrics}
+
+The wall correspondences identify integral classes. Their metric
+interpretation uses the harmonic metrics of the same compact
+bundle moduli, with the normalization in
+\cite{wuebben17,wuebben18}. We first calculate exact periods,
+then state precisely which existing degeneration results apply.
+
+\subsection{Periods, volumes and specialization}
+Let $\omega_\eta$ be the smoothly varying Ricci-flat representative
+of $H+sD_1+tD_2$. Fix the holomorphic determinant and use its
+smoothly varying Hermitian--Einstein connections, together with the
+real Dolbeault harmonic $L^2$ metric, unnormalized by the volume of $X$.
+Its K\"ahler class is
+\begin{equation}\label{eq:harmonic-class}
+ [\Omega_\eta]=2\pi^2\theta_v(b_\eta),\qquad
+ b_\eta=(0,[\omega_\eta],c_1(v)\cdot[\omega_\eta]/3),
+\end{equation}
+by \cite[\S2.4]{wuebben17}. Hence the period of a curve
+functional $c$ is $2\pi^2(c,b_\eta)$ and a surface volume is
+half its pairing with $[\Omega_\eta]^2$.
+
+In chamber $A$ put $a=\zeta_0>0$, $b=\zeta_2>0$. Equations
+\eqref{eq:levels}, \eqref{eq:curves} and
+\eqref{eq:harmonic-class} give
+\begin{equation}\label{eq:periods}
+ \begin{gathered}
+ \Area(c_0)=\pi a,\qquad \Area(c_2)=\pi b,\qquad
+ \Area(f)=\pi(a+b),\\
+ \Vol(P_0)=\tfrac12\pi^2a^2,\qquad
+ \Vol(P_2)=\tfrac12\pi^2b^2.
+ \end{gathered}
+\end{equation}
+The equality $f=c_0+c_2$ is the actual proper reduced
+specialization from \cite[\S5.1]{wuebben17}. It is
+preserved, with the signs of Table~\ref{tab:cycles}, by
+the compact wall maps. In a ruled row the plane line and
+common section have area $\pi|\zeta_k|$, and the ruling
+has area $\pi|\zeta_1|$. The class $p_j-p_k$ therefore has
+volume
+\begin{equation}\label{eq:ruled-volumes}
+ \Vol(\Sigma)=
+ \begin{cases}
+ \tfrac12\pi^2(\zeta_0^2-\zeta_2^2),&\sigma=B,E,\\
+ \tfrac12\pi^2(\zeta_2^2-\zeta_0^2),&\sigma=C,F.
+ \end{cases}
+\end{equation}
+Both expressions are positive in their sectors. Alternatively,
+restrict $[\Omega_\eta]$ using
+\eqref{eq:ruled-restriction} and compute its square on
+$\FF_1$; this gives the same values.
+
+For a wall action $h=\id$ or $s_{a_1}$ the exact period
+identity is
+\begin{equation}\label{eq:period-action}
+ 2\pi^2(hc,b_{\eta'})=2\pi^2(c,h^{-1}b_{\eta'}).
+\end{equation}
+This is a pairing identity, not an assertion that the wall
+map is a metric isometry. In particular $h^{-1}b_{\eta'}$
+need not be a polarization covector in the chosen two-parameter
+family.
+
+\subsection{Hypotheses of the metric comparison}
+The analytic results used here have the following hypotheses,
+verified for this family in \cite[\S9.1]{wuebben18}.
+They are the conditions (G1)--(G3) of that paper:
+\begin{enumerate}
+\item The finitely many smooth projective chamber spaces equal
+their generic Gieseker moduli and have proper surjective
+maps to the connected normal projective central target.
+There is a connected dense stable open, a finite Whitney
+refinement of factor types, and agreement of the projective
+and fixed-wall gauge topologies. The maps are isomorphisms
+over the stable open. Every chamber object is $H$-semistable;
+the central map assigns its $H$-graded class, and its complex
+morphism is constant within a chamber.
+\item Every central semistable sheaf is a bundle and every
+central ideal HYM object has zero lost charge. Varying-metric
+surface compactness gives smooth gauge subsequences and
+excludes nearby charge.
+\item The full convergent doubled Ext-quiver charts retain
+all tangent factors, loops and multiplicities. Each complex
+moment-zero fibre contains a module-simple point, meaning
+a simple representation of its quiver with relations.
+The classifying germs commute with the projective-to-affine
+quotient and the central graded-class maps.
+\end{enumerate}
+The norm on every Ext space is its actual central harmonic
+norm. At a central bundle $E_b=\bigoplus_iF_i\otimes\C^{m_i}$,
+let $W_b=\Ext^1(E_b,E_b)$ be the full harmonic representation
+and $K_b=(\prod_i\mathrm U(m_i))/\mathrm U(1)$ its effective
+compact stabilizer. Denote the full quotient and its intrinsic
+stratified length metric by
+\[
+ \cQ_{b,\nu}=\{\mu_{\C}=0,\ \mu_{\R}=\nu\}/K_b,
+ \qquad d_{b,\nu}.
+\]
+Paths may be finitely piecewise smooth across representation-type
+strata. Its radius $r_\nu$ is the norm of a balanced representative.
+The moment levels use ordinary multiplicity trace:
+\begin{equation}\label{eq:general-levels}
+ \zeta_{b,i}(\eta)=2\pi\bigl(r_i\mu_\eta(v)-\deg_\eta F_i\bigr),
+ \qquad r_i=\rank F_i,\qquad \sum_i m_i\zeta_{b,i}=0.
+\end{equation}
+For $L_1\oplus F$ the transverse two-arrow level is
+$2\pi(2\mu_\eta(v)-\deg_\eta F)=-\zeta_1$.
+Ordinary multiplicity trace is distinct from the rank-weighted
+mass in small-spectrum statements.
+
+For each fixed background the actual classifying chart
+$\Phi_{b,\eta}$ satisfies the squared-metric estimate
+\begin{equation}\label{eq:relative-metric}
+ (1-\varepsilon_b)g_{b,\zeta_b(\eta)}
+ \le\Phi_{b,\eta}^*g_\eta
+ \le(1+\varepsilon_b)g_{b,\zeta_b(\eta)},\qquad
+ \varepsilon_b=C_b(|\eta|+\|x\|^2).
+\end{equation}
+This is \cite[Corollary~2.2]{wuebben17}, with whole-preimage
+coverage as in \cite[Proposition~5.1]{wuebben18}. The
+constant depends on the fixed background and complementary
+elliptic gap, but not on ratios of positive finite orbit
+eigenvalues. A fixed deeper chart handles degeneration of
+shallower backgrounds. No uniform gap is assumed for
+separate backgrounds approaching a reducible bundle.
+
+\subsection{Ambient collapse and complete rescalings}
+The diameter statements in \cite[\S8]{wuebben17} use
+ambient distances in the full compact moduli, not only
+the intrinsic metrics of the exceptional surfaces. If
+$\rho=a+b$ in chamber $A$, they give
+\begin{equation}\label{eq:diameters}
+ \diam_{g_\eta}P_i=\sqrt\rho\,(1+O(\rho))
+                  D_i(a/\rho,b/\rho),
+\end{equation}
+where $D_i$ is the ambient diameter of the corresponding
+plane in the complete normalized quotient. The finite
+quotient diameters obey, uniformly in the positive ratio,
+\[
+ \sqrt{2a}\le\diam_{\mathrm{model}}P_0
+          \le\frac{\pi}{\sqrt2}\sqrt a,
+\]
+and the same inequalities hold with $b$ for $P_2$.
+The actual diameter has relative factor $1+O(\rho)$.
+As $\eta\to0$, if $a/b\to0$, then $\diam P_0/\sqrt a\to\pi/2$;
+the reciprocal statement holds for $P_2$.
+For moving $\PP^1$ fibres over any compact subset of
+$S^\circ$, $\diam/\sqrt{|\zeta_1|}\to\pi/2$ uniformly as
+$\eta\to0$ through nonzero transverse levels $\zeta_1$.
+
+The passage to ambient distances is an analytic input.
+With squared-metric bounds $1/2,2$, a path starting at
+radius $r_0<R$ costs at least $(R-r_0)/\sqrt2$ before
+exiting radius $R$. This first-exit estimate confines
+short competitors to the appropriate chart; comparison
+of both length infima then yields the relative errors
+even for a much smaller plane. These arguments apply
+to our computed classes because their cycle realization
+and classifying charts are the same ones.
+
+We state the complete rescaling hypotheses to specify
+the meaning of this compatibility. Fix a central chart
+and suppress $b$. Suppose $\eta_n\to0$ is generic,
+$\delta_n\downarrow0$, and
+\begin{equation}\label{eq:normalized-level}
+ \nu_n:=\zeta_b(\eta_n)/\delta_n^2\longrightarrow\nu.
+\end{equation}
+Choose balanced representatives $p_n$ at these normalized
+levels which converge to $p$ after compact group adjustment.
+Then \cite[\S8.3 and Theorem~8.1]{wuebben17} gives
+\begin{equation}\label{eq:complete-limit}
+ (M_{\sigma(\eta_n)},\delta_n^{-1}d_{g_{\eta_n}},
+       \Phi_{b,\eta_n}([\delta_np_n]))
+ \longrightarrow(\cQ_{b,\nu},d_{b,\nu},[p])
+\end{equation}
+in complete pointed Gromov--Hausdorff topology. On bounded
+rescaled balls the relative error against the current
+finite quotient is $O_L(|\eta_n|+\delta_n^2)$. This is
+not a rate for $\cQ_{b,\nu_n}\to\cQ_{b,\nu}$.
+
+For a further scale, let $x_*$ represent the limiting
+point at level $\nu_* =\lim\nu_n$, with stabilizer $K$.
+Decompose its full hyperk\"ahler normal representation as
+$W=T\oplus W'$, where $T=W^K$ and $W'=T^\perp$ for the
+retained invariant inner product. In this slice write
+the current centers as $(u_n,z_n)\to0$ and require
+\begin{equation}\label{eq:successive}
+ \sigma_n\downarrow0,\qquad
+ \frac{(\nu_n-\nu_*)|_{\Lie K}}{\sigma_n^2}\longrightarrow\lambda,
+ \qquad z_n/\sigma_n\longrightarrow z_*.
+\end{equation}
+At physical scale $\delta_n\sigma_n$ the complete limit
+is $T\times(W'\!\mathbin{/\!\!/\!/}_{\lambda}K)$,
+based at $(0,[z_*])$. Tangential translation removes $u_n$;
+no bound on $|u_n|/\sigma_n$ is required. The additional
+slice error on a fixed bounded ball is
+$O_{x_*}(|\nu_n-\nu_*|+|u_n|+\sigma_n R)$.
+Inverse coverage and the outer and inner exit costs
+give whole actual balls at each stage. This is the
+finite-stage theorem of \cite[Theorem~8.1]{wuebben17}
+and \cite[Proposition~8.3]{wuebben18}; any fixed finite
+iteration must retain the same normalized-level and
+normal-basepoint data at every stage.
+
+At a nonzero $\zeta_0$ or $\zeta_2$ wall the normal
+resolution is $T^*\PP^2$. At a nonzero $\zeta_1$ wall
+the full model has a harmonic $\C^2$ tangent factor
+and the $A_1$ transverse quotient, resolved by the
+Eguchi--Hanson metric at nonzero level. An $\FF_1$
+component belongs to the interacting quotient; it is
+not asserted to have a complete cotangent-$\FF_1$
+limit. Table~\ref{tab:cycles} identifies the effective
+cycles in each of these inherited models.
+
+\subsection{Global convergence with the same contractions}
+Under the three stated hypotheses, $(Z,d_0)$ is the
+compact completion of the central harmonic metric on
+$U$. We recall the quantitative form of
+\cite[Theorem~5.5]{wuebben18}, since it applies to the
+same $\pi_\eta$ used in our integral calculation.
+Choose $\varepsilon_j\downarrow0$, $\varepsilon_j<1/8$.
+For each accuracy choose a finite central chart cover
+with outer radii $16r_{ji}$, inner radii $r_{ji}/4$,
+and squared-metric error at most $\varepsilon_j$.
+Then shrink a parameter neighborhood $\mathcal P_j$
+so that whole-preimage coverage holds.
+
+For a finite quotient contraction $q_\zeta:\cQ_\zeta\to\cQ_0$
+retain the distance discrepancy
+\[
+ b_{i,r}(\eta)=\sup_{\substack{r_0(z),r_0(z')\le r\\
+                    q_\zeta(x)=z,\ q_\zeta(x')=z'}}
+       |d_\zeta(x,x')-d_0(z,z')|
+\]
+and both radial discrepancies
+\[
+ \begin{aligned}
+ a_{i,r}(\eta)&=\sup_{\substack{q_\zeta(x)=z\\r_0(z)\le r}}
+                     |r_\zeta(x)-r_0(z)|,\\
+ \widetilde a_{i,r}(\eta)&=\sup_{r_\zeta(x)\le r}
+                     |r_0(q_\zeta(x))-r_\zeta(x)|.
+ \end{aligned}
+\]
+The symbols $d_0,r_0$ in these formulas are the finite
+zero-quotient distance and radius. Properness and
+intrinsic parameter continuity make all three finite
+and tending to zero. Arrange $a,\widetilde a<r/16$
+and $b<r$. Choose
+\[
+ 0<\ell_j<\min_i\frac{r_{ji}}{16\sqrt2},\quad
+ \alpha_j=\sqrt{\frac{1+\varepsilon_j}{1-\varepsilon_j}}-1,
+ \quad\beta_j(\eta)=\sqrt{1+\varepsilon_j}
+                         \max_i b_{i,r_{ji}}(\eta).
+\]
+A fixed finite central cover supplies
+$D_*\ge\diam(Z,d_0)$. The stated theorem then gives
+\begin{equation}\label{eq:global-distortion}
+ \dis(\operatorname{graph}\pi_\eta)
+ \le\inf_{j:\eta\in\mathcal P_j}
+ \left[\left(\alpha_j+\frac{\beta_j(\eta)}{\ell_j}\right)D_*
+                  +\beta_j(\eta)\right]\longrightarrow0.
+\end{equation}
+The Gromov--Hausdorff distance is bounded by half this
+quantity. The proof uses the two radial discrepancies
+to compare short ambient pairs in both directions,
+and then subdivides paths into lengths at most $\ell_j$.
+For fixed $j$, first let $\eta\to0$; then let the
+accuracy index tend to infinity. No universal power
+law is asserted for this modulus.
+
+The period calculation and the cycle table identify
+the integral classes entering these metric results.
+They leave the harmonic norms, no-charge compactness,
+convergent charts and normalized basepoint data as
+analytic hypotheses. Bubbling, unrestricted HYM
+dynamics and genuine complex smoothings require
+additional results.

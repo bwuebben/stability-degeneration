@@ -21,4 +21,8 @@ k3_programs = sorted((root / 'papers').glob('*/reproducibility/k3_model.py')) + 
 for program in k3_programs:
     print(str(program.relative_to(root)), flush=True)
     subprocess.run(['uv', 'run', '--no-project', str(program)], cwd=program.parents[1], check=True)
-print(f'Completed {len(programs) + len(examples) + len(k3_programs)} finite computations.')
+wrappers = sorted((root / 'papers').glob('*/reproducibility/run_all.py'))
+for program in wrappers:
+    print(str(program.relative_to(root)), flush=True)
+    subprocess.run([sys.executable, '-B', str(program)], cwd=program.parents[1], check=True)
+print(f'Completed {len(programs) + len(examples) + len(k3_programs) + len(wrappers)} finite computations or suites.')

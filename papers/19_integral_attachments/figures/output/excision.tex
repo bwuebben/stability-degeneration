@@ -1,0 +1,30 @@
+\documentclass[border=6pt]{standalone}
+\usepackage{amsmath,amssymb,tikz,adjustbox}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\id}{\operatorname{id}}
+\begin{document}
+\begin{adjustbox}{max width=440pt,center}
+\begin{tikzpicture}[>=Stealth,font=\small,
+ box/.style={draw,rounded corners=2pt,fill=blue!3,align=center,
+             minimum height=12mm,minimum width=31mm},
+ label/.style={fill=white,inner sep=2pt,font=\footnotesize}]
+\node[box] (M) at (0,0) {$R=H^*(M_A,\Z)$};
+\node[box] (W) at (6.2,0) {$H^*(W,\Z)$\\two-plane wedge ring};
+\node[box] (V) at (0,-2.1) {$H^*(V,\Z)$\\$R/(p_0,p_2)$};
+\node[box] (L) at (6.2,-2.1) {$H^*(L,\Z)$\\$H^4(L)=\Z/8$};
+\draw[->,thick] (M) -- node[label,above] {restriction} (W);
+\draw[->,thick] (M) -- node[label,left] {quotient} (V);
+\draw[->,thick] (W) -- node[label,right] {restriction} (L);
+\draw[->,thick] (V) -- node[label,above] {$\rho$} (L);
+\node at (3.1,-3.0) {$\rho^4([z])=\int z(p_0-3p_2)\bmod8$};
+\node[align=center] at (3.1,-3.9)
+ {$\partial_{\rm MV}(\eta_i)=-\ell_i,\qquad
+   \partial_{\rm MV}(\omega)=-[\mathrm{pt}]$\\[2pt]
+  ordered difference $r_V-r_W$, outward boundary orientation};
+\end{tikzpicture}
+
+\end{adjustbox}
+\end{document}

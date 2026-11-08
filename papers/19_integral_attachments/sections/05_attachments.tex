@@ -1,0 +1,369 @@
+\section{The complement and its integral attachments}\label{sec:attachments}
+
+All coordinates in this section refer to the ring $R$ of
+Section~\ref{sec:ring}. In particular the ambient multiplication
+and the exceptional classes have already been calculated. We use
+excision to determine the complement and its maps, with integral
+coefficients throughout.
+
+\subsection{The exceptional ideal}
+First work in chamber $A$, with $E=P_0\cup P_2$ and $V=M_A\setminus E$.
+The planes meet at one point, so a regular neighborhood retracts
+to $\PP^2\vee\PP^2$. Integral Poincar\'e--Lefschetz duality on the regular neighborhood,
+followed by excision \cite[Theorem~3.43]{hatcher}, gives
+\begin{equation}\label{eq:relative}
+ H^k(M_A,V)\simeq H_{8-k}(E).
+\end{equation}
+The only nonzero relative groups are in degrees $4,6,8$, with
+ranks $2,2,1$. Their maps to the absolute cohomology are the
+plane, line and point inclusions, respectively.
+
+\begin{proposition}\label{prop:complement}
+Restriction is a surjective ring homomorphism with kernel
+$(p_0,p_2)$. Hence $H^*(V,\Z)=R/(p_0,p_2)$, with free ranks
+$1,23,274,21$ in degrees $0,2,4,6$ and no other groups.
+\end{proposition}
+
+\begin{proof}
+The witnesses \eqref{eq:witness-restrictions} show that the
+relative plane and line maps in \eqref{eq:relative} are
+primitive injections. The point map is an isomorphism. The
+long exact sequence of the pair therefore gives surjectivity
+of restriction, vanishing of odd groups, and the stated free
+quotients. It remains to identify its kernel as an ideal,
+rather than merely as three additive subgroups.
+
+The projection formula on the two planes gives
+\begin{equation}\label{eq:ideal-products}
+ p_i a=d_i(a)\ell_i\quad(a\in R^2),\qquad
+ p_i z=\left(\int_Yp_i z\right)[\pt]\quad(z\in R^4).
+\end{equation}
+Each $d_i$ takes the value one, and each plane evaluation
+takes the value one, by the same unimodular witnesses. Thus
+the ideal contains $\ell_0,\ell_2$ and $[\pt]$. Its degree-four
+part is exactly the span of $p_0,p_2$ and it has no further
+possible degrees. This is the entire restriction kernel
+computed from \eqref{eq:relative}, proving the ring statement.
+\end{proof}
+
+For every normalized index, restriction to $V$ is consequently
+the class $c_k(\widehat J_z)$ of Proposition~\ref{prop:indices}
+reduced modulo this explicit ideal. No complement multiplication
+is an additional input to that formula.
+
+\subsection{The two-plane neighborhood and its boundary}
+Choose a smoothed closed regular neighborhood $W$ of $E$ and
+put $L=\partial W$, with the outward boundary orientation from
+the complex orientation of $W$. It is the plumbing of the
+cotangent normal disk bundles of the two planes. Their normal
+Euler numbers are three and their transverse intersection is
+positive one. The middle intersection matrix is therefore
+\begin{equation}\label{eq:B}
+ B=\begin{pmatrix}3&1\\1&3\end{pmatrix}.
+\end{equation}
+A deleted collar retracts to $L$, so $L$ models the actual
+overlap in the cover of $M_A$ by $V$ and an open enlargement
+of $W$. It is a boundary inside the resolution. The singular
+surface of the target passes through $o$; $L$ is not the link
+of an isolated target singularity.
+
+Let $h_i$ be the positive hyperplane classes of the two
+components and $t_i=h_i^2$. The neighborhood ring is the
+wedge ring
+\begin{equation}\label{eq:W-ring}
+ h_0h_2=0,\qquad h_i^2=t_i,
+\end{equation}
+with all products of degree greater than four zero.
+Restriction from $R$ is
+\begin{equation}\label{eq:W-restrictions}
+ a\longmapsto d_0(a)h_0+d_2(a)h_2,\qquad
+ z\longmapsto\left(\int_Yzp_0\right)t_0+
+                    \left(\int_Yzp_2\right)t_2
+\end{equation}
+in degrees two and four. It preserves the unit and is zero
+in higher positive degrees.
+
+The Poincar\'e--Lefschetz sequence for $(W,L)$ gives
+\begin{equation}\label{eq:L-groups}
+ H^k(L,\Z)=
+ \begin{cases}
+ \Z,&k=0,7,\\
+ \Z^2,&k=2,5,\\
+ \Z/8,&k=4,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\end{equation}
+Indeed its only nontrivial even map in the middle is $B$,
+whose determinant is eight and whose entries have gcd one.
+The quotient map $\Z^2/B\Z^2\to\Z/8$ is
+$(n_0,n_2)\mapsto n_0-3n_2$.
+Write $x_i$ for the images of $h_i$ and $\tau$ for the
+image of $t_0$. If $\omega$ is the oriented degree-seven
+generator, choose $\eta_0,\eta_2\in H^5(L,\Z)$ dual to $x_0,x_2$.
+The complete nonzero positive products are
+\begin{equation}\label{eq:L-products}
+ x_0^2=\tau,\quad x_2^2=-3\tau,\quad
+ x_i \eta_j=\delta_{ij}\omega,\qquad 8\tau=0,
+\end{equation}
+and $x_0x_2=0$. Degree and \eqref{eq:L-groups} make all
+other positive products zero. The free pairings follow from
+oriented Poincar\'e duality; the torsion products follow by
+restricting \eqref{eq:W-ring}. These statements describe the
+ordinary ring, without asserting an additional torsion linking form.
+
+\begin{proposition}\label{prop:boundary}
+With the preceding choices, restriction $\rho:H^*(V)\to H^*(L)$
+is
+\begin{equation}\label{eq:rho}
+ \rho^2(a)=d_0(a)x_0+d_2(a)x_2,\qquad
+ \rho^4([z])=\kappa([z])\tau,\quad
+ \kappa([z])=\int_Yz(p_0-3p_2)\pmod8.
+\end{equation}
+It preserves the unit, and its other positive-degree maps vanish.
+For the ordered cover $(V,W)$ with alternating map $r_V-r_W$,
+the Mayer--Vietoris connecting homomorphisms are
+\begin{equation}\label{eq:MV}
+ \partial_{\mathrm{MV}}\eta_i=-\ell_i,\qquad
+ \partial_{\mathrm{MV}}\omega=-[\pt].
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Restrictions from $M_A$ to the overlap agree whether taken
+through $V$ or $W$. Surjectivity in
+Proposition~\ref{prop:complement} and
+\eqref{eq:W-restrictions} therefore give \eqref{eq:rho}.
+It is well-defined: evaluation of $p_0-3p_2$ against
+$p_0,p_2$ gives $0,-8$. Multiplicativity may also be checked
+without referring back to the geometric map. For $a,b\in R^2$,
+\[
+ \int_Yabp_i=d_i(a)d_i(b),
+\]
+which is exactly the product prescribed by
+\eqref{eq:L-products}. All further positive products have
+zero target. This checks the map on the complete integral
+basis and every ring relation.
+
+For signs, the pair boundary of $(W,L)$ sends the degree-five
+classes dual to $h_i$ to the positive relative line classes,
+and its oriented top class to the positive relative point
+class, by Stokes' convention with outward boundary. Excision
+identifies their images in $M_A$ with $\ell_i,[\pt]$.
+In the ordered alternating restriction $r_V-r_W$, a
+cochain supported on the $W$ side has the negative of that
+pair boundary. This yields \eqref{eq:MV}.
+\end{proof}
+
+\begin{figure}[htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\input{figures/code/excision.tex}
+\end{adjustbox}
+\caption{The computed restriction square in chamber $A$.
+The lower map in degree four is $\kappa$ and the right map
+is the cokernel of $B$. The signed connecting maps belong
+to the ordered Mayer--Vietoris sequence and are separate
+from these ring homomorphisms.}
+\label{fig:excision}
+\end{figure}
+
+In degree four the square recovers the additive compatibility
+description
+\begin{equation}\label{eq:fiber-product}
+ R^4\simeq
+ \left\{([z],n_0,n_2):\ n_0-3n_2\equiv
+          \int_Yz(p_0-3p_2)\pmod8\right\},
+\end{equation}
+where $[z]\in(R/(p_0,p_2))^4$. The ambient ring was already
+constructed in Section~\ref{sec:ring};
+\eqref{eq:fiber-product} is not a separate derivation of
+multiplication from an additive sequence.
+
+For the normalized indices, \eqref{eq:index-plane} gives
+\begin{equation}\label{eq:index-kappa}
+ \begin{aligned}
+ \kappa(c_2(I_z^y))&=\binom{m_0(z)}2-3\binom{m_2(z)}2\pmod8,\\
+ \kappa(c_1(I_z^y)c_1(I_{z'}^y))
+     &=m_0(z)m_0(z')-3m_2(z)m_2(z')\pmod8.
+ \end{aligned}
+\end{equation}
+These reproduce the earlier binomial attachment of
+\cite[\S6.4]{wuebben17}. The present formula also calculates
+its full domain: evaluate on $A,T_i,C_{ij},Q_i$ using
+\eqref{eq:gram}, with $p_i$ expanded by
+\eqref{eq:degree2-products}. This is a specified integral
+generating set with all its products, not a test on a
+possibly proper sublattice of degree four.
+
+\subsection{A uniform formula for all six chambers}
+In chamber $D$ the two planes have the same surface classes
+and the negative line classes. Thus use the preceding formulas
+with degree-two restriction $a\mapsto\epsilon d_0(a)h_0+
+\epsilon d_2(a)h_2$, where $\epsilon=1$ in $A$ and $-1$ in
+$D$. The relative maps in degrees $4,6,8$ are
+\begin{equation}\label{eq:two-plane-relative}
+ (p_0,p_2),\qquad (\epsilon\ell_0,\epsilon\ell_2),\qquad[\pt].
+\end{equation}
+The boundary ring and degree-four functional are unchanged,
+and the connecting maps are the negatives of the displayed
+line and point maps.
+
+For the four ruled configurations use
+\begin{equation}\label{eq:ruled-template}
+ \begin{array}{c|rrrr}
+ \sigma&B&C&E&F\\\hline
+ (k,j,\epsilon)&(2,0,-1)&(0,2,1)&(2,0,1)&(0,2,-1).
+ \end{array}
+\end{equation}
+The surfaces are $p_k$ and $p_j-p_k$. Write $e_\Sigma$ for
+the negative section and $r_\Sigma$ for the ruling in
+$\Sigma\simeq\FF_1$. Their global curve classes are
+\begin{equation}\label{eq:ruled-curves}
+ [e_\Sigma]=\epsilon c_k,\qquad
+ [r_\Sigma]=-\epsilon(c_0+c_2),\qquad
+ e_\Sigma^2=-1,\quad e_\Sigma r_\Sigma=1,\quad r_\Sigma^2=0.
+\end{equation}
+Let $\xi,\upsilon\in H^2(W_\sigma)$ take values $(1,0)$
+and $(0,1)$ on $(e_\Sigma,r_\Sigma)$. Their restrictions
+to the plane are $h,0$ and to $\Sigma$ are
+$r_\Sigma,e_\Sigma+r_\Sigma$, respectively. With
+$t_P,t_\Sigma$ dual to the two surface components, the ring is
+\begin{equation}\label{eq:ruled-W}
+ \xi^2=t_P,\qquad \xi\upsilon=\upsilon^2=t_\Sigma,
+\end{equation}
+with higher positive products zero. This follows from the
+Mayer--Vietoris ring of the two components meeting along
+their common curve, or directly from the two restrictions.
+
+For $a\in R^2$ set $s=\epsilon d_k(a)$ and
+$t=-\epsilon(d_0(a)+d_2(a))$. The complete positive
+restrictions to the neighborhood are
+\begin{equation}\label{eq:ruled-restriction}
+ \begin{aligned}
+ a|_{W_\sigma}&=s\xi+t\upsilon,&
+ a|_\Sigma&=t e_\Sigma+(s+t)r_\Sigma,\\
+ z|_{W_\sigma}&=\left(\int_Yzp_k\right)t_P+
+                   \left(\int_Yz(p_j-p_k)\right)t_\Sigma.
+ \end{aligned}
+\end{equation}
+The relative middle matrix is
+$B'=\bigl(\begin{smallmatrix}3&-2\\-2&4\end{smallmatrix}\bigr)$
+from \eqref{eq:ruled-matrix}. Its cokernel map is
+$(n_P,n_\Sigma)\mapsto6n_P+n_\Sigma\pmod8$.
+The boundary has the groups \eqref{eq:L-groups}.
+Write $\tau_k$ for the image of $t_\Sigma$ and retain the
+symbols $\xi,\upsilon$ for their boundary images. Its nonzero
+positive products are
+\begin{equation}\label{eq:ruled-L}
+ \xi^2=6\tau_k,\quad \xi\upsilon=\upsilon^2=\tau_k,
+ \quad \xi \eta_\xi=\upsilon \eta_\upsilon=\omega,\quad8\tau_k=0,
+\end{equation}
+where $\eta_\xi,\eta_\upsilon$ are the dual degree-five basis.
+Their cross pairings are zero. Every other positive product
+vanishes.
+
+\begin{proposition}\label{prop:all-attachments}
+In every ruled row of \eqref{eq:ruled-template}, restriction
+from the complement is
+\begin{equation}\label{eq:ruled-rho}
+ \rho^2(a)=s\xi+t\upsilon,\qquad
+ \rho^4([z])=\left(\int_Yz(p_j+5p_k)\right)\tau_k\pmod8.
+\end{equation}
+Its relative maps in degrees $4,6,8$ are
+\begin{equation}\label{eq:ruled-relative}
+ (p_k,p_j-p_k),\qquad
+ (\epsilon\ell_k,-\epsilon(\ell_0+\ell_2)),\qquad[\pt].
+\end{equation}
+For the ordered difference $r_V-r_W$, the connecting maps
+on $\eta_\xi,\eta_\upsilon,\omega$ are the negatives of the
+corresponding line and point maps. All six complement
+rings are $R/(p_0,p_2)$.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:compact-walls} and
+\eqref{eq:surface-transform} give these as the actual
+adjacent compact configurations. The two surface classes
+generate the same ideal $(p_0,p_2)$, and their line pair
+is a unimodular change of $\ell_0,\ell_2$.
+The relative groups and primitive maps therefore give
+the same quotient proof as in
+Proposition~\ref{prop:complement}. Their regular
+neighborhoods have the computed component ring and
+intersection matrix, so Poincar\'e--Lefschetz duality
+gives \eqref{eq:ruled-L} and \eqref{eq:ruled-rho}.
+The actual compact maps identify the exteriors, and
+regular levels outside the exceptional core identify
+their outward boundaries. Thus these are the overlap
+maps of the given geometric gluing.
+
+To check integrality and multiplicativity explicitly,
+evaluation of $p_j+5p_k$ against $p_j,p_k$ gives $8,16$,
+so the degree-four map kills the ideal. For $a,b\in R^2$,
+\[
+ \int_Yabp_k=d_k(a)d_k(b),\qquad
+ \int_Yab(p_j-p_k)=d_j(a)d_j(b)-d_k(a)d_k(b).
+\]
+Substitution of $s,t$ in \eqref{eq:ruled-L} gives
+$6s_as_b+s_at_b+t_as_b+t_at_b$, which is the same
+value modulo eight. All other positive products have
+zero target. The relative maps are the geometric
+component, line and point inclusions. Their connecting
+signs follow from the same outward Stokes convention as
+\eqref{eq:MV}.
+\end{proof}
+
+For $k=2$ the functional in \eqref{eq:ruled-rho} is
+$\kappa$, while for $k=0$ it is $5\kappa$. This change
+records the torsion-generator convention, not a new
+uncomputed gluing choice. For example across $A\to B$,
+the degree-two boundary classes transform as
+\[
+ x_0\longmapsto\upsilon,\qquad
+ x_2\longmapsto\upsilon-\xi.
+\]
+The degree-five classes transform by the inverse transpose:
+$\eta_0\mapsto \eta_\xi+\eta_\upsilon$, $\eta_2\mapsto-\eta_\xi$,
+and $\omega\mapsto\omega$. These formulas preserve
+\eqref{eq:L-products} and \eqref{eq:ruled-L}, with
+$\tau\mapsto\tau_2$.
+
+\subsection{The moving divisor remains in the complement}
+The open set $V_\sigma$ contains the divisor $D^\circ$
+over $S^\circ$, so it is larger than $\pi_\sigma^{-1}(U)$.
+We record its established ring to make this distinction
+explicit. In chamber $A$ use $x$ from \eqref{eq:witness},
+set $z_D=a_1+2x$, and put
+\[
+ d=\theta_w(z_D)|_{S^\circ},\qquad
+ h_D=\theta_v(x)|_{D^\circ}.
+\]
+The open-divisor calculation of \cite[\S7]{wuebben17} is
+\begin{equation}\label{eq:moving-ring}
+ \begin{gathered}
+ H^2(S^\circ,\Z)=H^2(S,\Z)/\Z[C]\simeq\Z^{21},\qquad
+ H^k(S^\circ,\Z)=0\quad(k>0,\ k\ne2),\\
+ H^*(D^\circ,\Z)=H^*(S^\circ,\Z)[h_D]/(h_D^2-dh_D),\qquad
+ D|_{D^\circ}=-2h_D+\pi^*d.
+ \end{gathered}
+\end{equation}
+Here $[C]$ is primitive, so the Gysin sequence gives the
+base cohomology. The $\mathrm{PGL}_2$ structure group acts
+trivially on fibre cohomology, and $h_D$ has fibre degree
+one, giving an integral Leray--Hirsch basis. The topological
+rank-two lift exists because $H^3(S^\circ,\Z)=0$;
+normalizing its hyperplane class to $h_D$ gives first
+Chern class $d$ and zero second Chern class. The universal
+extension gives the divisor identity; the orthogonality
+of $z_D$ to $a_1,w,v$ removes base-line ambiguities.
+
+The algebraic Brauer obstruction remains nonzero of order
+two on $S^\circ$: restriction to the function field is
+injective for a regular integral surface. Its analytic
+image on this open surface vanishes, using
+$H^2(S^\circ,\OO)=H^3(S^\circ,\Z)=0$. These lifting
+statements and their primary sources are proved in
+\cite[\S7.1]{wuebben17}. They do not imply an algebraic
+universal family over the full compact $S$. The divisorial
+wall proof used coarse blow-ups precisely so that such a
+lift was unnecessary.

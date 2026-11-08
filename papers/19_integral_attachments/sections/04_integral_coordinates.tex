@@ -1,0 +1,285 @@
+\section{Integral coordinates and universal classes}\label{sec:ring}
+
+We now give the integral coordinates in which the compact wall and
+attachment calculations can be performed. The Hilbert-square basis
+and Markman transport are classical inputs. The purpose of this
+section is to fix their signs and the universal normalization for
+this moduli problem, including arbitrary topological index classes.
+
+\subsection{The diagonal construction}
+Let $\alpha_1,\ldots,\alpha_{22}$ be an integral basis of $\Lambda$,
+write $q_{ij}=\alpha_i\cdot\alpha_j$, and let $(q^{ij})$ be its
+inverse matrix. Let $x_X$ be the oriented point class of $X$.
+Consider
+\[
+ b:B=\Bl_\Delta(X\times X)\longrightarrow X\times X,
+ \qquad p:B\longrightarrow Y=X^{[2]}.
+\]
+The map $p$ is the double cover ramified along the exceptional
+divisor $E_B$. Write $j:E_B\to B$, $\pi:E_B\to X$ and
+$e=[E_B]=p^*\delta$. A tensor class below is pulled back by $b$,
+and $e\alpha$ means $j_*\pi^*\alpha$. The blow-up relations are
+\begin{equation}\label{eq:blowup}
+ \begin{gathered}
+ (e\alpha)(u\otimes v)=e(\alpha uv),\qquad
+ (e\alpha)(e\beta)=-[\Delta](\alpha\beta\otimes1),\\
+ [\Delta]=x_X\otimes1+1\otimes x_X+
+             \sum_{i,j}q^{ij}\alpha_i\otimes\alpha_j.
+ \end{gathered}
+\end{equation}
+For the sign, $E_B|_{E_B}=-\xi$ and the excess formula gives
+$b^*[\Delta]=j_*\xi$, since $c_1(TX)=0$. Hence $e^2=-b^*[\Delta]$.
+In particular $e^4=24x_X\otimes x_X$. Integration on $Y$ is half
+integration of a pullback on $B$; $p^*[\pt]=2x_X\otimes x_X$.
+Thus \eqref{eq:blowup} is a multiplication rule using only the
+marked K3 pairing.
+
+The pullback of $\mu(\alpha)$ is $\alpha\otimes1+1\otimes\alpha$.
+The classes $\mu_i=\mu(\alpha_i)$ and $\delta$ form an integral
+basis in degree two. We extend $q$ to their Beauville--Bogomolov
+pairing by
+\begin{equation}\label{eq:BB}
+ q(\mu(a),\mu(b))=q(a,b),\quad q(\mu(a),\delta)=0,\quad
+ q(\delta,\delta)=-2.
+\end{equation}
+An integral degree-four basis consists of the classes whose
+pullbacks are
+\begin{equation}\label{eq:basis4}
+ \begin{aligned}
+ p^*A&=x_X\otimes1+1\otimes x_X,\qquad &p^*T_i&=2e\alpha_i,\\
+ p^*C_{ij}&=\alpha_i\otimes\alpha_j+\alpha_j\otimes\alpha_i
+       \quad(i<j),&p^*Q_i&=\alpha_i\otimes\alpha_i-e\alpha_i.
+ \end{aligned}
+\end{equation}
+Integrality is Qin--Wang's theorem, with its K3 extension
+\cite[Theorem~5.4 and Remark~5.6]{qw}, in the geometric
+Nakajima conventions of \cite[Remark~5.7]{bns}. In particular
+$Q_i$ is the half difference of the two Nakajima terms, not
+half a symmetric square by itself. These statements apply to
+all of $\Lambda$, including its nonalgebraic classes.
+We use the basis statement in that reference; the product
+signs here follow directly from \eqref{eq:blowup}.
+
+For completeness we print the entire middle pairing. Degree-eight
+products in the following display denote their integral against $Y$:
+\begin{equation}\label{eq:gram}
+ \begin{aligned}
+ A^2&=1,& AT_i=AC_{ij}=AQ_i&=0,\\
+ T_iT_j&=-2q_{ij},& T_iQ_j&=q_{ij},&T_iC_{jk}&=0,\\
+ Q_iQ_j&=(q_{ij}^2-q_{ij})/2,&&&Q_iC_{jk}&=q_{ij}q_{ik},\\
+ C_{ij}C_{kl}&=q_{ik}q_{jl}+q_{il}q_{jk}.
+ \end{aligned}
+\end{equation}
+Every entry follows by multiplication on $B$ and division by two.
+The pairing is unimodular. Eliminate the $T$ block $-2q$ over
+$\Q$. Its Schur complement is half the tensor-product pairing
+on the symmetric tensors in $\Lambda\otimes\Lambda$; its
+determinant is $2^{-22}(\det q)^{23}$. To verify this identity,
+diagonalize $q$ over a field extension: the diagonal symmetric
+tensors have entries $d_i^2/2$, and the off-diagonal ones have
+entries $d_i d_j$. The product is the stated expression, and
+the identity descends over $\Q$. The determinant of the whole
+pairing is therefore
+$\det(-2q)2^{-22}(\det q)^{23}=(\det q)^{24}=1$.
+This also verifies index one, once integrality and the known
+free rank $276$ are supplied.
+
+Products of degree-two classes are
+\begin{equation}\label{eq:degree2-products}
+ \begin{aligned}
+ \mu_i\mu_j&=q_{ij}A+C_{ij} &&(i<j),\\
+ \mu_i^2&=q_{ii}A+2Q_i+T_i,&\mu_i\delta&=T_i,\\
+ \delta^2&=-A-\sum_iq^{ii}Q_i-\tfrac12\sum_iq^{ii}T_i
+                     -\sum_{i<j}q^{ij}C_{ij}.
+ \end{aligned}
+\end{equation}
+The diagonal of $q^{-1}$ is even because the dual K3 lattice is
+even. Thus the last expression is integral. If $\alpha^i$ is the
+$q$-dual basis, set
+\begin{equation}\label{eq:basis6}
+ R_i=\mu(\alpha^i)A,\qquad R_\delta=-\delta A.
+\end{equation}
+These classes are dual to $\mu_i,\delta$ and form an integral
+degree-six basis. For $a\in R^2$ and $z\in R^4$, its product
+$az$ has coefficient $\int_Y\mu_i az$ on $R_i$ and
+$\int_Y\delta az$ on $R_\delta$. These are given by
+\eqref{eq:degree2-products} and \eqref{eq:gram}.
+Together with the unit, the oriented point, the dual degree-two/
+degree-six pairing, and zero odd groups, this specifies every product.
+The ranks are $1,23,276,23,1$. Torsion-freeness is the integral
+Hilbert-scheme theorem; see \cite[Theorem~3.1]{totaro}.
+
+The formulas also exhibit rational generation by degree two:
+\begin{equation}\label{eq:rational-generation}
+ A=\frac1{10}\delta^2+\frac1{20}\sum_{i,j}q^{ij}\mu_i\mu_j,
+\end{equation}
+after which \eqref{eq:degree2-products} gives $T_i,C_{ij},Q_i$,
+and \eqref{eq:basis6} gives degree six. The integral ring generally
+requires more than the integral symmetric square.
+
+We will also use the classical tangent-class identity
+\begin{equation}\label{eq:c2}
+ c_2(Y)=24A-3\delta^2
+\end{equation}
+of Shen--Vial \cite[Lemma~14.4]{sv}. Their incidence-surface
+class is $A$ here. Their rational Chow identity gives this integral
+cohomological identity by torsion-freeness. The preceding products
+give, independently,
+\[
+ \int_Y\delta^4=12,\quad
+ \int_Y c_2\mu(a)\mu(b)=30q(a,b),\quad
+ \int_Yc_2\delta^2=-60,\quad \int_Yc_2^2=828.
+\]
+
+\subsection{Transport from the rank-three moduli}
+Set $a_H=(1,H,2)$, $C_0=D_1+D_2-2H$ and
+\begin{equation}\label{eq:g}
+ g=e^{-C_0}s_{a_H},\qquad s_{a_H}(z)=z+(z,a_H)a_H.
+\end{equation}
+Here $e^D(r,c,s)=(r,c+rD,s+cD+rD^2/2)$.
+The input lattice gives
+\[
+ a_H^2=-2,\quad (v,a_H)=-2,\quad C_0^2=-14,\quad
+ s_{a_H}(v)=(1,C_0,-8),\quad g(v)=v'=(1,0,-1).
+\]
+This is the integral Mukai isometry induced by the spherical twist
+about $\OO_X(H)$ followed by tensoring with $\OO_X(-C_0)$.
+It need not send each chamber sheaf to a sheaf.
+
+The polarizations may be chosen in each sector with degree coprime
+to three, as in \cite[\S4.5]{wuebben17}; the full compact
+Gieseker moduli therefore satisfies Markman's suitability condition
+\cite[Definition~3.4]{markman08}. His universal Chern
+correspondence \cite[Theorem~1.2 and equation~(3)]{markman08}
+gives
+\begin{equation}\label{eq:Phi}
+ \Phi_\sigma=\gamma_{g,v}:H^*(M_\sigma,\Z)\xrightarrow{\sim} R.
+\end{equation}
+The source and target are torsion-free: for the source use the
+K3$^{[2]}$ deformation type established in Section~\ref{sec:geometry},
+and for the Hilbert square use \cite[Theorem~3.1]{totaro}.
+Thus the modulo-torsion qualification loses nothing here.
+The correspondence preserves tangent Chern classes and
+orientation; for the latter, preservation of $c_4=324[\pt]$
+suffices. Compatibility with the Mukai homomorphisms is
+\cite[Theorem~3.9 and diagram~(41)]{markman08}:
+\begin{equation}\label{eq:theta-transport}
+ \Phi_\sigma\theta_v(z)=\theta_{v'}(gz),\qquad
+ \theta_{v'}(r,c,r)=\mu(c)+r\delta.
+\end{equation}
+The sign in the second formula follows from the universal ideal
+sequence: $c_1(\OO_X^{[2]})=-\delta$, while the index of
+$(r,-c,r)$ is its Euler characteristic minus its tautological
+class. This determines $\Phi_\sigma$ without choosing an
+unspecified deformation path.
+
+\subsection{Topological indices and determinant normalization}
+Let $\mathcal I$ be the universal ideal class on $X\times Y$.
+For a topological class $F$ let $F^{[2]}$ denote the index
+defined by the universal length-two subscheme. With $g$ acting
+on topological classes through their Mukai vectors, put
+\begin{equation}\label{eq:J}
+ J_z=\chi_X((gz)^\vee)\,1-((gz)^\vee)^{[2]},\qquad
+ \mathcal L=\det J_y,\qquad \widehat J_z=J_z\otimes\mathcal L^{-1}.
+\end{equation}
+Here $gy=(0,-f_2,1)$ and $\rank J_y=1$.
+
+\begin{proposition}\label{prop:indices}
+For every $z\in K^0_{\mathrm{top}}(X)$ and $k\ge0$,
+\begin{equation}\label{eq:indices-transport}
+ \Phi_\sigma(c_k(I_z^y))=c_k(\widehat J_z).
+\end{equation}
+These classes are calculated in the integral basis above by
+\begin{equation}\label{eq:tautological-character}
+ p^*\ch(F^{[2]})=\ch(F)_1e^{-e}+\ch(F)_2,
+ \qquad F\in K^0_{\mathrm{top}}(X).
+\end{equation}
+Subscripts denote the two pullbacks from $X$ to $B$.
+\end{proposition}
+
+\begin{proof}
+Markman's universal-class identity intertwines the universal Chern
+characters up to a topological base line bundle. Contract its K3
+factor against $gz$ using the Euler pairing. Since $g$ is an
+Euler isometry, the index characters are intertwined up to that
+same line. Taking the determinant of the rank-one $y$-index
+multiplies it by exactly this line, so normalization cancels it.
+The resulting normalized characters agree over $\Q$, and hence
+so do the Chern classes. Both Chern classes are integral and
+$H^*(Y,\Z)$ is torsion-free, proving
+\eqref{eq:indices-transport} integrally.
+
+We prove \eqref{eq:tautological-character} for topological $F$,
+without requiring an algebraic representative of its first
+Chern class. Let $\mathcal Z\subset Y\times X$ be the
+universal subscheme and pull it back to $\mathcal Z_B\subset
+B\times X$. The incidence description is the diagonal blow-up
+\cite[\S10, diagram~(54)]{sv}. If $q_1,q_2:B\to X$
+are the projections, $\mathcal Z_B$ is the scheme-theoretic
+union of their graphs, intersecting in the graph over $E_B$.
+This includes the nonreduced fibre: in a blow-up chart with
+difference coordinates $(t,tw)$ the length-two algebra is
+$A[U]/(U(U-t))$. Evaluation at $0,t$ maps it injectively to
+$A\oplus A$, with image the pairs agreeing modulo $t$ and
+cokernel $A/(t)$. The other blow-up chart gives the same
+description. Thus there is an exact sequence of kernels
+\begin{equation}\label{eq:kernel}
+ 0\longrightarrow\OO_{\mathcal Z_B}\longrightarrow
+ \OO_{\Gamma_1}\oplus\OO_{\Gamma_2}\longrightarrow
+ \OO_{\Gamma_{E_B}}\longrightarrow0.
+\end{equation}
+All these kernels are perfect on the smooth product $B\times X$.
+Pass their equality to topological $K$-theory, tensor with the
+pullback of any $F$, and push forward to $B$. Base change for
+the complex-oriented projection and functoriality give
+\[
+ p^*F^{[2]}=q_1^*F+q_2^*F-j_!\pi^*F
+           =q_1^*F\otimes\OO_B(-E_B)+q_2^*F.
+\]
+The last equality uses the divisor Koszul class
+$j_!1=1-[\OO_B(-E_B)]$ and the projection formula. Only the
+fixed kernel in \eqref{eq:kernel} needed an algebraic
+representative. The equality therefore holds for arbitrary
+topological $F$. Applying the Chern character proves
+\eqref{eq:tautological-character}.
+\end{proof}
+
+For use as a finite formula, a Mukai vector $(r,c,s)$ has
+ordinary character $r+c+(s-r)x_X$. Truncate the exponential
+in \eqref{eq:tautological-character} after degree eight,
+form \eqref{eq:J}, and multiply its character by
+$\exp(-c_1(J_y))$. The Newton identities recover $c_1$ through
+$c_4$; higher classes vanish on $Y$. Formula
+\eqref{eq:blowup} and the integral bases then give their
+coordinates. This covers virtual classes of every rank.
+The intermediate arithmetic is rational, but the results are
+Chern classes of integral topological indices.
+
+\subsection{Exceptional coordinates}
+Applying \eqref{eq:g} to \eqref{eq:curves} gives
+\begin{equation}\label{eq:gc}
+ gc_0=(5/2,u_0,5/2),\qquad
+ gc_2=(-3/2,u_2,-3/2),\qquad q(u_0)=10,\quad q(u_2)=2.
+\end{equation}
+Substituting \eqref{eq:theta-transport} and \eqref{eq:c2}
+in the plane formula gives exactly
+\eqref{eq:planes-intro}. For any $a\in\Lambda$,
+$\mu(a)^2-\delta\mu(a)$ is even by
+\eqref{eq:degree2-products} and the evenness of $q$.
+This proves the asserted integrality of both plane coordinates.
+Multiplication gives $p_0^2=p_2^2=3$ and $p_0p_2=1$.
+
+Write
+\begin{equation}\label{eq:d-ell}
+ \begin{gathered}
+ \lambda_0=\mu(u_0)+\tfrac52\delta,\qquad
+ \lambda_2=\mu(u_2)-\tfrac32\delta,\qquad d_i(a)=q(\lambda_i,a),\\
+ \ell_0=\sum_jq(u_0,\alpha_j)R_j-5R_\delta,\qquad
+ \ell_2=\sum_jq(u_2,\alpha_j)R_j+3R_\delta.
+ \end{gathered}
+\end{equation}
+The functionals $d_i:R^2\to\Z$ are integral, and $\ell_i$
+is their Poincar\'e dual. They are precisely the line
+functionals and line classes of the two planes under $\Phi_A$.
+The primitive witnesses \eqref{eq:witness-restrictions}
+therefore apply to these explicit coordinates.

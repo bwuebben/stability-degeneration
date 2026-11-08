@@ -1,0 +1,318 @@
+\section{The compact wall correspondences}\label{sec:walls}
+
+The central factor classification determines the partial wall
+targets as well as the central target. We first identify these compact
+maps, then compute their actions. This is where the global moduli
+problem enters the wall calculation.
+
+\subsection{Partial targets and whole fibres}
+Choose a small rational nonzero parameter $\eta_*=(s_*,t_*)$ on
+one wall $\zeta_i=0$. Choose generic polarizations in the adjacent
+sectors, close enough that there is no intervening wall. The finite
+wall theorem and the exhaustive nearby list imply that every bundle
+in either chamber is $\eta_*$-semistable. Normalize the common
+image of their projective slope classifying maps. As in the central
+construction, connected fibres and normal-function descent give a
+normal projective partial target $Z_i$ and morphisms
+\begin{equation}\label{eq:partial-target}
+ M_+\longrightarrow Z_i\longleftarrow M_-.
+\end{equation}
+Their fibres are the $\eta_*$-graded classes. This uses the same
+slope classifying construction of Greb--Toma \cite{gt} and the
+whole-fibre descent in \cite[\S4.5]{wuebben17}.
+
+There are no additional equal-slope decompositions on this partial
+wall. Indeed the $H$-Jordan--H\"older classes of a proper equal-slope
+factor must be a subcollection of $a_0,a_1,a_2$, or a varying
+$w$-factor. Its equality equation is the corresponding subset sum
+of the $\zeta_i$. At a nonzero point just one of these three
+equations vanishes. The bounded wall theorem excludes further walls
+after shrinking the neighborhood of $H$. Local freeness and the
+exclusion of lost charge persist on the partial wall by the
+central factor and charge result recalled above.
+
+\begin{proposition}\label{prop:compact-walls}
+If $i=0$ or $2$, the two morphisms in \eqref{eq:partial-target}
+are the two resolutions of one isolated elementary Mukai contraction;
+their birational map is an elementary Mukai flop. If $i=1$, the
+reduced singular locus of $Z_1$ is a smooth compact K3 surface, and
+both morphisms are its intrinsic blow-up. In particular they define
+a unique isomorphism $M_+\simeq M_-$ over $Z_1$.
+\end{proposition}
+
+\begin{proof}
+For $i=0,2$, the only strictly polystable class is $L_i\oplus G$,
+where $G$ has vector $v-a_i$. The other two line factors have unequal
+$\eta_*$-slopes. Their one-dimensional cross Ext gives the unique
+nontrivial extension in the stable direction. It is stable: a
+destabilizing subsheaf would, by the exhaustive nearby wall list,
+give the wrong ordered line subfactor. Its vector is spherical.
+Uniqueness also follows from stability and Riemann--Roch: two
+nonisomorphic stable sheaves of the same spherical vector have
+zero Hom in both directions and hence nonpositive Euler
+characteristic, whereas that characteristic is two.
+
+The factors $L_i,G$ have equal slope and are stable of different
+ranks. Thus cross Hom and second Ext vanish, and
+\[
+ \dim\Ext^1(L_i,G)=(a_i,v-a_i)=3.
+\]
+They are rigid, so the full normal quotient is the doubled
+three-arrow quotient without a tangent factor. Its two resolutions
+are the incidence resolutions of the cone of rank-one square-zero
+endomorphisms of $\C^3$.
+
+These are whole compact fibres. To see why the local assertion
+suffices here, take a contrary sequence of points in a wall fibre
+outside its fixed classifying chart as the transverse parameter
+tends to zero. No-charge compactness gives a smooth gauge limit.
+Normalize the extension inclusion or quotient in $L^2$ and pass to
+its nonzero limiting map. Equal-slope polystability splits off the
+corresponding stable factor, and the determinant and factor list
+identify the other. The limit is $L_i\oplus G$, contradicting
+exclusion from the chart. The finite zero-section core has radius
+of order the square root of the transverse moment parameter, so
+the whole finite plane is in this chart as well. The two
+classifying maps are isomorphisms off that fibre. The common
+blow-up is locally the total space of $\OO(-1,-1)$ over the
+incidence flag variety in $\PP^2\times(\PP^2)^*$. Its flag
+variety is the exceptional divisor of the four-dimensional
+blow-up. Gluing to the common regular open set proves the
+compact elementary-flop assertion.
+
+For $i=1$, write $A_1=L_1$. The polystable objects are $A_1\oplus F$
+with $F$ stable of vector $w$ at $\eta_*$. Since
+$\zeta_0=-\zeta_2\ne0$, this is a generic polarization for the
+auxiliary problem. Its full moduli is the smooth compact K3 surface
+$S$, including the curve over the central split class. Equal slopes
+and different ranks imply cross Hom vanishing at every point of
+$S$. Serre duality therefore gives constant cross-extension
+dimension $(a_1,w)=2$.
+
+The full classifying model along this locus is the product of a
+smooth surface germ with $\C^2/\{\pm1\}$. The effective scalar
+stabilizer acts trivially on the tangent directions to $S$. The
+same compactness and normalized-map argument covers the entire
+$\PP^1$ fibre over each point of $S$; compactness of $S$ gives a
+finite cover of these models. The reduced singular locus is $S$,
+and there is no deeper singularity on this nonzero wall.
+
+The minimal resolution of the $A_1$ surface is the blow-up of
+its reduced singular point. Blow-up commutes with the smooth
+local product, so both maps are locally $\Bl_S Z_1\to Z_1$.
+Their identifications agree on the dense regular set and hence
+on overlaps. They glue to a unique global identification with
+the intrinsic blow-up. Proper GAGA makes this identification
+algebraic. Local universal $w$-families may be twisted, but all
+these constructions use their coarse classifying spaces and
+descend; no splitting of the algebraic Brauer class is required.
+The resulting isomorphism also commutes with the maps to $Z$,
+since its two composites agree on the dense stable open and $Z$
+is separated.
+\end{proof}
+
+\subsection{The divisor sign and the reflection}
+Use $+$ for the side $\zeta_1<0$ and $-$ for $\zeta_1>0$ in this
+subsection. Let $D_\pm$ be the exceptional divisor of the maps
+to $Z_1$, and let $\theta_\pm$ denote the Mukai markings.
+
+\begin{lemma}\label{lem:opposite-divisors}
+The two effective divisor classes are
+\[
+ [D_+]=\theta_+(a_1),\qquad [D_-]=-\theta_-(a_1).
+\]
+Both determinant sections have multiplicity one.
+\end{lemma}
+
+\begin{proof}
+The first formula is the determinant calculation of
+\cite[\S7.2]{wuebben17}, applied over the full auxiliary $S$ at
+this partial wall. We give the opposite-side argument explicitly.
+On the minus side $\mu(A_1)<\mu(E)$, so $\Hom(E,A_1)=0$.
+The locus $\Hom(A_1,E)\ne0$ is exactly $D_-$.
+For a nonzero map, let $B$ be the saturated rank-one hull
+of its image. The quotient $E/B$ is torsion-free, so the
+depth lemma on the smooth surface makes $B$ reflexive,
+hence a line bundle. The effective zero divisor of
+$A_1\to B$ has degree zero by $H$-semistability of $E$;
+ampleness of $H$ forces it to vanish. Thus $B=A_1$.
+The torsion-free quotient $F$ is $H$-semistable of vector
+$w$, and \cite[Lemma~4.1]{wuebben17} makes it locally free.
+It is semistable at the partial wall because $E$ is and
+$A_1$ has the same wall slope; the auxiliary polarization
+is generic, so $F$ is stable there. Conversely every
+nontrivial extension on this side has an inclusion of $A_1$.
+
+The perfect complex $Rp_*R\Hom(A_1,\cE)$ has amplitude
+$[0,1]$ and virtual rank zero, since $(a_1,v)=0$. Its
+determinant section is a section of the inverse determinant
+line. The first Chern class of that line is
+$-\theta_-(a_1)$. At an extension
+$0\to A_1\to E\to F\to0$ the kernel has dimension one:
+$\Hom(A_1,E)=\C$, and hence $\dim\Ext^1(A_1,E)=1$.
+The derivative of the determinant is the obstruction to
+preserving the inclusion. The map
+\begin{equation}\label{eq:det-transverse}
+ \Ext^1(E,E)\longrightarrow\Ext^1(A_1,E)
+\end{equation}
+is surjective. In the long exact sequence its cokernel maps
+into $\Ext^2(F,E)\to\Ext^2(E,E)$, which is an isomorphism:
+the Serre-dual map $\Hom(E,E)\to\Hom(E,F)$ is generated by
+the quotient and is an isomorphism. Thus a local two-term
+presentation of the index has corank one with a nonzero
+normal derivative of its determinant. The zero is simple.
+This proves the second formula with multiplicity one; the
+dual inclusion/quotient argument gives the same multiplicity
+on the plus side.
+\end{proof}
+
+\begin{proposition}\label{prop:marked-wall}
+In the Mukai markings the isomorphism across $\zeta_1=0$
+acts on degree two by $s_{a_1}$ and on the integral ring
+by Markman's $\gamma_{s_{a_1}}$. Across $\zeta_0=0$ or
+$\zeta_2=0$, the corrected flop correspondence acts by
+$\gamma_{\id}$.
+\end{proposition}
+
+\begin{proof}
+Let $f:M_+\to M_-$ be the divisorial isomorphism and set
+$\psi=\theta_-^{-1}f_*\theta_+$. The universal families
+agree up to a base line on the common stable open. Its
+complement is the connected smooth prime divisor $D_-$,
+so the kernel of restriction in degree two is $\Z[D_-]$,
+by the Thom sequence. Lemma~\ref{lem:opposite-divisors}
+implies $\psi(a_1)=-a_1$, while
+$\psi(x)-x$ is an integral multiple of $a_1$ for every
+$x\in v^\perp$. Write it as $k a_1$. Preservation of the
+Beauville--Bogomolov form gives
+\[
+ (x,a_1)=(\psi x,\psi a_1)=-(x,a_1)+2k,
+\]
+so $k=(x,a_1)$, as asserted.
+
+For an isolated plane wall let $\Gamma$ be the graph
+closure. Rie\ss\ \cite[Theorem~3.2, Lemma~3.5 and \S6]{riess}
+gives the integral multiplicative correspondence
+\begin{equation}\label{eq:flop-correspondence}
+ \mathcal Z=[\Gamma]+[P\times P'],\qquad
+ \mathcal Z_*z=\Gamma_*z+\left(\int_Pz\right)[P']
+ \quad(z\in H^4).
+\end{equation}
+Its transpose is the inverse. On the complement of the
+plane the universal families agree up to a base line.
+Deleting complex codimension two does not change degree-two
+cohomology, so $\mathcal Z_*$ is the identity in the Mukai
+markings. The rational cohomology of a K3$^{[2]}$ fourfold
+is generated by degree two, as is also immediate from the
+formulas in Section~\ref{sec:ring}. Thus both ring maps
+agree rationally with the indicated Markman maps. Their
+integral cohomology is torsion-free, so the agreement is
+integral. This reasoning uses the corrected correspondence,
+not the graph alone.
+\end{proof}
+
+\subsection{The six effective configurations}
+The cyclic order of the chambers and their wall maps is shown in
+Figure~\ref{fig:chambers}. The complete effective cycle table is
+Table~\ref{tab:cycles}. The notation $p_i$ here means the class
+obtained from the plane formula \eqref{eq:plane-formula};
+Section~\ref{sec:ring} identifies it with
+\eqref{eq:planes-intro} in the common ring $R$.
+
+\begin{figure}[htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\input{figures/code/chambers.tex}
+\end{adjustbox}
+\caption{The chamber adjacency cycle. Solid edges are elementary
+Mukai flops with their corrected cohomology correspondences; dashed
+edges are the divisorial isomorphisms. The edge labels give the
+vanishing coordinate and the Mukai action.}
+\label{fig:chambers}
+\end{figure}
+
+\begin{table}[htbp]
+\caption{Effective deepest surfaces and curves. In a ruled row the
+last three entries are the plane line, the common negative section,
+and the ruling. Here $f=c_0+c_2$.}
+\label{tab:cycles}
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{cccl}
+\toprule
+Chamber & Signs $(\zeta_0,\zeta_1,\zeta_2)$ & Surfaces & Curves\\
+\midrule
+$A$ & $(+,-,+)$ & $p_0,p_2$ & $c_0,c_2$ (two planes)\\
+$B$ & $(+,-,-)$ & $p_2,p_0-p_2$ & $-c_2;\ -c_2;\ f$\\
+$C$ & $(+,+,-)$ & $p_0,p_2-p_0$ & $c_0;\ c_0;\ -f$\\
+$D$ & $(-,+,-)$ & $p_0,p_2$ & $-c_0,-c_2$ (two planes)\\
+$E$ & $(-,+,+)$ & $p_2,p_0-p_2$ & $c_2;\ c_2;\ -f$\\
+$F$ & $(-,-,+)$ & $p_0,p_2-p_0$ & $-c_0;\ -c_0;\ f$\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Here is the geometric calculation of the table. If $P_2$ is
+flopped, its graph image is $-2[P_2']$ and the exceptional
+product contributes $3[P_2']$; see
+\cite[Example~6.6]{llw} or \cite[\S6]{riess}. Thus the
+corrected image is $[P_2']$. The other plane meets $P_2$
+transversely once. Its graph image is its blow-up at that
+point, and the product term adds $[P_2']$. Consequently
+\begin{equation}\label{eq:surface-transform}
+ p_2\longmapsto[P_2'],\qquad
+ p_0\longmapsto[\Sigma]+[P_2'],\qquad \Sigma\simeq\FF_1.
+\end{equation}
+The common plane line and negative section represent $-c_2$.
+A line in $P_0$ missing the blown-up point keeps its class;
+on $\FF_1$ it is the sum of negative section and ruling.
+The ruling therefore has class $f=c_0+c_2$. This gives row
+$B$ and the intersection matrix
+\begin{equation}\label{eq:ruled-matrix}
+ \begin{pmatrix}p_2^2&p_2(p_0-p_2)\\
+ p_2(p_0-p_2)&(p_0-p_2)^2\end{pmatrix}
+ =\begin{pmatrix}3&-2\\-2&4\end{pmatrix}.
+\end{equation}
+The reflection sends $c_0$ to $-c_2$, $c_2$ to $-c_0$,
+and $f$ to $-f$; it exchanges $p_0,p_2$ and preserves the
+tangent Chern class. This proves row $C$. The next flop
+gives the two-plane row $D$, with both line signs reversed.
+Repeating gives $E,F$ and returns to $A$.
+
+\begin{figure}[htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\input{figures/code/configurations.tex}
+\end{adjustbox}
+\caption{The two configurations and their classes across the flop
+from $A$ to $B$. The right-hand common curve is a line in $P_2'$
+and the negative section of $\Sigma$. The moving fibre specializes
+in $A$ to the reduced sum $c_0+c_2$; in $B$ this class is the
+ruling of $\Sigma$. The drawings indicate incidences and cycle
+classes, not metric shapes.}
+\label{fig:configurations}
+\end{figure}
+
+\begin{corollary}\label{cor:gallery}
+The chosen cohomological correspondences along any two paths in
+the six-chamber adjacency graph with the same endpoints agree.
+The complements $V_\sigma$ are isomorphic over $Z\setminus\{o\}$,
+and the wall actions induce their cohomology identifications.
+\end{corollary}
+
+\begin{proof}
+The six forward actions in the Mukai marking are
+$\id,s_{a_1},\id,\id,s_{a_1},\id$. Their product is the identity.
+Each reverse edge is the inverse correspondence. Cancellation
+of reverse edges and insertion of complete six-cycles generate
+the relations between paths in this graph. The ring assertion
+follows. For the complements, the central map is an isomorphism
+over $U$ and has the unique relative minimal $A_1$ resolution
+along $S^\circ$. The local identifications agree on the dense
+regular locus and glue over $Z\setminus\{o\}$.
+\end{proof}
+
+The corollary concerns these ordinary cohomological actions. It
+does not identify compositions of Chow correspondences or derived
+functors, and it is not a monodromy calculation for a smoothing.

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\draw[fill=blue!7,thick] (-4,0) ellipse (1.15 and .7);
+\draw[fill=blue!7,thick] (-1.7,0) ellipse (1.15 and .7);
+\fill (-2.85,0) circle (2pt);
+\node at (-4,0.15) {$P_0$};\node at (-1.7,0.15) {$P_2$};
+\node at (-4,-.3) {$p_0,\ c_0$};\node at (-1.7,-.3) {$p_2,\ c_2$};
+\node at (-2.85,1.1) {chamber $A$};
+\draw[->,thick] (-.35,0) -- node[above] {flop $P_2$} (1.45,0);
+\draw[fill=blue!7,thick] (1.8,-.65) rectangle (3.3,.65);
+\draw[fill=orange!8,thick] (3.3,-.65) rectangle (5.5,.65);
+\draw[very thick,blue] (3.3,-.65) -- (3.3,.65);
+\node at (2.55,.25) {$P_2'$};\node at (2.55,-.25) {$p_2$};
+\node at (4.4,.25) {$\Sigma\simeq\FF_1$};\node at (4.4,-.25) {$p_0-p_2$};
+\node at (3.65,1.1) {chamber $B$};
+\node[align=center] at (3.3,-1.05) {common curve $-c_2$};
+\node[align=center] at (-2.85,-1.5) {moving fibre $f\rightsquigarrow c_0+c_2$};
+\node[align=center] at (3.65,-1.65) {ruling $f=c_0+c_2$};
+\end{tikzpicture}

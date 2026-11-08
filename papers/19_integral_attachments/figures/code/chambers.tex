@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth,
+ chamber/.style={draw,rounded corners=2pt,fill=blue!3,align=center,
+ minimum width=21mm,minimum height=10mm,font=\small},
+ wall/.style={font=\footnotesize,fill=white,inner sep=2pt}]
+\node[chamber] (A) at (0,2.1) {$A$\\$(+,-,+)$};
+\node[chamber] (B) at (3.8,1.05) {$B$\\$(+,-,-)$};
+\node[chamber] (C) at (3.8,-1.05) {$C$\\$(+,+,-)$};
+\node[chamber] (D) at (0,-2.1) {$D$\\$(-,+,-)$};
+\node[chamber] (E) at (-3.8,-1.05) {$E$\\$(-,+,+)$};
+\node[chamber] (F) at (-3.8,1.05) {$F$\\$(-,-,+)$};
+\draw[->,thick] (A) -- node[wall,above,sloped] {$\zeta_2=0,\ \id$} (B);
+\draw[->,thick,dashed] (B) -- node[wall,right] {$\zeta_1=0,\ s_{a_1}$} (C);
+\draw[->,thick] (C) -- node[wall,below,sloped] {$\zeta_0=0,\ \id$} (D);
+\draw[->,thick] (D) -- node[wall,below,sloped] {$\zeta_2=0,\ \id$} (E);
+\draw[->,thick,dashed] (E) -- node[wall,left] {$\zeta_1=0,\ s_{a_1}$} (F);
+\draw[->,thick] (F) -- node[wall,above,sloped] {$\zeta_0=0,\ \id$} (A);
+\node[align=center,font=\small] at (0,0) {four plane flops\\two divisorial isomorphisms};
+\end{tikzpicture}

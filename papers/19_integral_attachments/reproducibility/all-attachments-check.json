@@ -1,0 +1,159 @@
+{
+  "A_image_independent_simplification": "pass",
+  "H2_H6_pairings": 529,
+  "H4_integral_involutions": 276,
+  "H6_integral_involutions": 23,
+  "all_H4_boundary_functionals": 276,
+  "all_H4_pairings": 38226,
+  "boundary_loop": "identity in degrees 2,4,5,7",
+  "normalized_index_classes": 96,
+  "primitive_witnesses": "pass",
+  "six_boundary_edges": [
+    {
+      "H2": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "H4_multiplier_mod8": 1,
+      "H5": [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "edge": "AB"
+    },
+    {
+      "H2": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "H4_multiplier_mod8": 1,
+      "H5": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "edge": "BC"
+    },
+    {
+      "H2": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "H4_multiplier_mod8": 5,
+      "H5": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "edge": "CD"
+    },
+    {
+      "H2": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "H4_multiplier_mod8": 1,
+      "H5": [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "edge": "DE"
+    },
+    {
+      "H2": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "H4_multiplier_mod8": 1,
+      "H5": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "edge": "EF"
+    },
+    {
+      "H2": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "H4_multiplier_mod8": 5,
+      "H5": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "edge": "FA"
+    }
+  ],
+  "six_chamber_degree2_products": 3174,
+  "status": "all exact checks passed"
+}

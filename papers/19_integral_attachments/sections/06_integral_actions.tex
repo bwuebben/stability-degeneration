@@ -1,0 +1,154 @@
+\section{The wall actions in integral coordinates}\label{sec:actions}
+
+The compact geometric actions were proved in
+Proposition~\ref{prop:marked-wall}. We now give their
+coordinates on every degree of $R$ and on the normalized
+indices. This also verifies compatibility with the
+attachment formulas.
+
+\subsection{All ring generators}
+At a divisorial wall the action in $R$ is the conjugate
+of $s_{a_1}$ by $g$. Put
+\begin{equation}\label{eq:reflection-root}
+ k_0=2H-D_2,\qquad r=\mu(k_0)+\delta
+             =\theta_{v'}(ga_1),\qquad q(k_0)=0,
+ \quad q(r)=-2.
+\end{equation}
+Write $\mathsf S$ for this integral ring automorphism. Its degree-two
+action is
+\begin{equation}\label{eq:S2}
+ \mathsf S(\mu(b))=\mu(b)+q(b,k_0)r,\qquad \mathsf S(\delta)=\delta-2r.
+\end{equation}
+Set $\mu_i'=\mathsf S(\mu_i)$, $\delta'=\mathsf S(\delta)$. The full
+degree-four action is
+\begin{equation}\label{eq:S4}
+ \begin{aligned}
+ A'&=\frac{c_2(Y)+3(\delta')^2}{24}
+     =A+\frac{\mu(k_0)^2+\delta\mu(k_0)}2,\\
+ T_i'&=\mu_i'\delta',\qquad
+ C_{ij}'=\mu_i'\mu_j'-q_{ij}A',\\
+ Q_i'&=\frac{(\mu_i')^2-q_{ii}A'-T_i'}2.
+ \end{aligned}
+\end{equation}
+In degree six the images are
+$\mathsf S(R_i)=\mathsf S(\mu(\alpha^i))A'$ and
+$\mathsf S(R_\delta)=-\delta'A'$. The unit and oriented point are
+fixed. Formula \eqref{eq:S4} follows from preservation of
+$c_2(Y)$ and \eqref{eq:degree2-products}. Its apparently
+rational expressions are integral because they are images
+under the integral ring map already constructed; the
+second formula for $A'$ also shows its integrality
+directly. These identities give a finite coordinate
+calculation on the entire lattice, including the classes
+outside its integral symmetric square.
+
+They imply
+\begin{equation}\label{eq:planes-reflection}
+ \mathsf S(p_0)=p_2,\quad \mathsf S(p_2)=p_0,\quad \mathsf S(c_2(Y))=c_2(Y),
+ \quad \mathsf S^2=\id.
+\end{equation}
+Consequently $\mathsf S$ preserves the exceptional ideal. In the
+fixed two-plane torsion convention,
+\[
+ \kappa(\mathsf S z)=5\kappa(z)\pmod8,
+\]
+because $p_2-3p_0\equiv5(p_0-3p_2)$ modulo eight in
+the integral lattice. The ruled conventions in
+\eqref{eq:ruled-rho} incorporate exactly this change.
+At a plane wall every generator has the identity action
+in $R$, with the geometric surface change
+\eqref{eq:surface-transform} still understood. It is the
+exceptional product in \eqref{eq:flop-correspondence}
+that makes this the action of a multiplicative
+correspondence.
+
+\subsection{The fixed determinant normalizer}
+Let $h=\id$ or $s_{a_1}$ act between the source and target
+Mukai lattices, and retain the original $y$ on both sides.
+Markman's universal-class identity, followed by the
+rank-one normalization argument, gives
+\begin{equation}\label{eq:wall-indices}
+ \gamma_h\bigl(c_k(I_z^y)\bigr)=
+ c_k\left(I_{hz}^y\otimes(\det I_{hy}^y)^{-1}\right).
+\end{equation}
+Indeed transport first gives the target universal family
+normalized by $hy$ rather than by $y$. Starting from the
+$y$-normalized target family, its $hy$-index still has
+rank one, so tensoring by its inverse determinant is
+exactly that change of normalization. Equality of
+characters implies equality of integral Chern classes
+by torsion-freeness, as in
+Proposition~\ref{prop:indices}.
+
+For $h=\id$ the determinant is trivial. For $h=s_{a_1}$,
+$(y,a_1)=-1$ and hence $hy=y-a_1$. Additivity of the
+index and $\det I_y^y=1$ give
+\begin{equation}\label{eq:normalizer-line}
+ c_1\left((\det I_{y-a_1}^y)^{-1}\right)=\theta_v(a_1),
+ \qquad \Phi\theta_v(a_1)=r.
+\end{equation}
+Thus in the common ring the transformed character is
+$\ch(I_{s_{a_1}z}^y)\exp(r)$, not merely the character
+with its input vector reflected. Formula
+\eqref{eq:tautological-character} and the Newton identities
+calculate all its Chern classes. Functoriality includes
+these normalizing lines, so they introduce no ambiguity
+in the six-step cohomological identity.
+
+\subsection{Dependence on the choices}
+An integral change of basis of $\Lambda$ changes the
+coordinates in \eqref{eq:basis4} and \eqref{eq:basis6}
+by the corresponding integral transformation. The
+diagonal construction itself is intrinsic. The isometry
+$g$ and the universal normalizer $y$ are specified:
+Markman's functoriality fixes the transport, and
+\eqref{eq:wall-indices} describes any change of the
+normalizer. Different geometric realizations of an
+action with the same degree-two marking have the same
+cohomological action, by rational generation and
+torsion-freeness.
+
+Isotopic regular neighborhoods give the same restriction
+and relative maps by naturality of excision. The outward
+orientation and the ordered difference $r_V-r_W$ fix
+the connecting signs. Replacing a torsion generator by
+a unit multiple changes the printed mod-eight functional
+by that unit. These choices specify the calculated
+cohomology and its maps; no assertion about a homotopy
+classification of the gluing follows from them.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Proposition~\ref{prop:compact-walls} constructs the
+compact partial-wall maps, and
+Lemma~\ref{lem:opposite-divisors} and
+Proposition~\ref{prop:marked-wall} identify their
+integral actions. Equations \eqref{eq:Phi}--\eqref{eq:gc}
+give the specified ambient marking and exceptional
+coordinates. Propositions~\ref{prop:complement},
+\ref{prop:boundary} and \ref{prop:all-attachments}
+calculate the complement and every attachment map.
+Proposition~\ref{prop:indices} and
+\eqref{eq:wall-indices} give the universal-index
+markings and their determinant correction. Finally
+Corollary~\ref{cor:gallery} proves the cohomological
+path relation. All computations use the same compact
+moduli problem and the same primitive cycles.
+\end{proof}
+
+\subsection{Exact verification}
+The formulas above are finite expressions in the marked
+K3 Gram matrix. Accompanying standard-library Python
+programs implement \eqref{eq:blowup} with rational
+arithmetic. They compute the integral middle pairing,
+the two plane coordinates, the four Chern classes of
+each index for a $24$-element topological $K$-basis, and
+the images of every degree-two, degree-four and
+degree-six basis element under $\mathsf S$. Additional virtual
+classes test negative ranks and the determinant
+normalization. The retained outputs check the plane
+binomial restrictions, all six degree-two attachment
+products, and the complete wall loop. The printed
+formulas define the calculation independently of these
+programs; the compact wall and topological-kernel
+arguments are the geometric justifications for using
+them.

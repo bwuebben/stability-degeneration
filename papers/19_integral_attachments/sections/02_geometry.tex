@@ -1,0 +1,164 @@
+\section{Compact moduli and their markings}\label{sec:geometry}
+
+We recall precisely the geometric results about the family that will
+be used. Their proofs are in \cite[\S\S4--7]{wuebben17}. All moduli
+spaces in this paper refer to this fixed complex K3 surface, rather
+than to an unspecified surface with the same intersection matrix.
+
+\subsection{Central factors and compact contractions}
+The embedding \eqref{eq:embedding} is primitive, and the lattice
+\eqref{eq:NS} contains no roots. Indeed a root would give
+$x^2-3y^2-4yz-4z^2=-1$, which is impossible modulo four, whether $y$
+is even or odd. The K3 realization and the choice of ample component
+in \cite[\S4.1]{wuebben17} therefore give the stated $X,H$.
+Let $L_0=\OO_X$, $L_1=\OO_X(D_1)$ and $L_2=\OO_X(D_2)$. Then
+\begin{equation}\label{eq:factor-pairing}
+ ((a_i,a_j))_{i,j=0}^2=
+ \begin{pmatrix}-2&1&2\\1&-2&1\\2&1&-2\end{pmatrix},
+ \qquad v^2=2,\quad w^2=0.
+\end{equation}
+At $H$ the cross Hom and second Ext groups of these distinct lines
+vanish. Riemann--Roch gives cross-extension dimensions $1,2,1$.
+
+The complete central factor and charge calculation is
+\cite[Lemma~4.1]{wuebben17}. For vector $v$ its polystable objects
+are the stable bundles, $L_1\oplus F$ with $F$ stable of vector $w$,
+and $L_0\oplus L_1\oplus L_2$. For vector $w$ the only strictly
+polystable object is $L_0\oplus L_2$. Every central semistable sheaf
+in both problems is locally free. The same calculation excludes all
+positive lost-charge ideal objects. Surface gauge compactness then
+excludes such objects throughout a sufficiently small neighborhood
+of $H$, including its walls \cite[Lemma~3.2 and \S4.2]{wuebben17}.
+Thus the generic chamber spaces are full compact Gieseker moduli,
+consisting entirely of slope-stable bundles, and have deformation
+type K3$^{[2]}$.
+
+Here the assertion about positive charge is stronger than the absence
+of singular sheaves in a particular chamber. It gives smooth gauge
+subsequences when polarizations approach a wall. This is used below
+to identify whole exceptional fibres with finite quotient fibres.
+
+The auxiliary generic $w$-moduli is a smooth compact K3 surface $S$.
+Its central map $S\to T$ contracts one $(-2)$-curve $C$ to the
+class of $L_0\oplus L_2$. Write $S^\circ=S\setminus C$.
+The normal projective central target $Z$ has the disjoint strata
+\begin{equation}\label{eq:strata}
+ Z=U\sqcup S^\circ\sqcup\{o\},
+\end{equation}
+where $U$ is the connected dense stable open set. Its reduced singular
+surface is $T$. Each projective map $\pi_\sigma:M_\sigma\to Z$
+is an isomorphism over $U$, has a projective-line fibre over every
+point of $S^\circ$, and has the exceptional configuration described
+below over $o$. Projective and fixed-$H$ gauge topologies agree.
+
+We use the full convergent classifying charts of
+\cite[\S\S2,4]{wuebben17}. At $o$ the effective compact group is
+$K=\mathrm U(1)^3/\mathrm U(1)$. With single arrows
+$z:1\to0$, $w_1:1\to2$ and a double arrow $u:0\to2$, and
+reverse arrows $z',w_1',\varphi$, the equations are
+\begin{equation}\label{eq:quiver}
+ \begin{gathered}
+ zz'-\varphi(u)=0,\qquad w_1w_1'+\varphi(u)=0,\\
+ \mu_0=|z|^2-|z'|^2-|u|^2+|\varphi|^2,\qquad
+ \mu_2=|w_1|^2-|w_1'|^2+|u|^2-|\varphi|^2,\\
+ \mu_1=-\mu_0-\mu_2,\qquad \mu=\zeta.
+ \end{gathered}
+\end{equation}
+The norms are the central harmonic norms after choosing orthonormal
+coordinates. These charts commute with the projective-to-affine
+quotient and the central graded-class map. They cover whole fibres
+for small parameters, including moving fibres whose bases tend to
+$o$. Along $S^\circ$ the transverse quotient is the two-arrow
+$A_1$ model, together with its smooth surface tangent factor.
+The finite wall list is exactly $\zeta_i=0$.
+
+The whole-fibre statement has two parts. No-charge compactness and
+normalized limiting inclusion and quotient maps force a sequence
+over a given graded class to converge to that class. On the finite
+side, vanishing cycle invariants give an acyclic arrow support.
+Summing moments over its source and sink subsets bounds every arrow
+norm squared by a fixed multiple of $|\zeta|$. Thus its complete
+exceptional core lies in the same convergent chart. These are the
+coverage results proved in \cite[\S4.4]{wuebben17}; a formal germ
+alone would not have this consequence.
+
+\subsection{Cycle classes and integral witnesses}
+Let $\theta_v:v^\perp\to H^2(M_\sigma,\Z)$ be the Mukai
+homomorphism, in the convention
+\begin{equation}\label{eq:theta}
+ \theta_v(z)=
+ \left[p_{M*}\bigl(\ch(\cE)\sqrt{\td_X}\,z^\vee\bigr)\right]_2.
+\end{equation}
+Here $p_M:X\times M_\sigma\to M_\sigma$, $\cE$ is a universal
+class and $(r,c,s)^\vee=(r,-c,s)$. The map is independent of twisting
+$\cE$ by a line bundle from $M_\sigma$. We identify curve classes
+with rational elements of $v^\perp$ through the Mukai pairing and
+$\theta_v$. In chamber $A$ the primitive line classes in the two
+planes are
+\begin{equation}\label{eq:curves}
+ c_0=v/2-a_0,\qquad c_2=v/2-a_2,\qquad
+ f=c_0+c_2=a_1.
+\end{equation}
+The last class is the proper reduced specialization of a moving
+$\PP^1$ fibre. The planes meet transversely once. Their normal bundles
+are their cotangent bundles, and their classes satisfy
+\begin{equation}\label{eq:plane-formula}
+ [P_i]=\tfrac12\theta_v(c_i)^2+\tfrac1{24}c_2(M_\sigma),\qquad
+ \left(\int [P_i][P_j]\right)_{i,j=0,2}
+ =\begin{pmatrix}3&1\\1&3\end{pmatrix}.
+\end{equation}
+These are the geometric identifications of
+\cite[\S\S5--6]{wuebben17}; the plane formula uses the classical
+K3$^{[2]}$ intersection theory of \cite{ht}.
+
+We will need integral, rather than rational, independence. Define
+\begin{equation}\label{eq:witness}
+ x=(0,f_2-f_3,0),\qquad y_0=(0,-3f_2,-1)\quad\text{in }v^\perp.
+\end{equation}
+The universal extensions on the planes give, with their positive
+hyperplane classes $h_0,h_2$,
+\begin{equation}\label{eq:witness-restrictions}
+ \begin{aligned}
+ \theta_v(x)|_{P_0\cup P_2}&=(0,h_2),&
+ \theta_v(y_0)|_{P_0\cup P_2}&=(-h_0,-h_2),\\
+ \theta_v(x)^2|_{P_0\cup P_2}&=(0,h_2^2),&
+ \theta_v(y_0)^2|_{P_0\cup P_2}&=(h_0^2,h_2^2).
+ \end{aligned}
+\end{equation}
+Both restriction matrices are unimodular. They prove that the pairs
+of plane and line classes embed primitively, and that the two
+evaluation maps onto $\Z^2$ are surjective.
+
+\subsection{Universal indices and twisting}
+The $v$-moduli spaces admit ordinary universal families, unique up
+to a base line bundle, since $\chi(v)=-1$. The auxiliary $w$-moduli
+has a nonzero algebraic Brauer obstruction of order two. We retain
+local twisted universal families there. This obstruction is not
+removed by constancy of the fibre cohomology of its projective
+extension family.
+
+Identify $K^0_{\mathrm{top}}(X)$ with the Mukai lattice by its Mukai
+vector. This convention lets a symbol such as $y=(0,-f_2,0)$ denote
+both an integral vector and the corresponding topological class;
+$\theta_v$ takes the vector, whereas a family index takes the class.
+For any $z\in K^0_{\mathrm{top}}(X)$ put
+\begin{equation}\label{eq:normalized-index}
+ \begin{gathered}
+ I_z(\cE)=p_{M!}(p_X^*z^\vee\cdot\cE),\qquad y=(0,-f_2,0),\\
+ \cE^y=\cE\otimes p_M^*(\det I_y(\cE))^{-1},\qquad
+ I_z^y=I_z(\cE^y).
+ \end{gathered}
+\end{equation}
+The exclamation mark denotes the complex-oriented topological
+$K$-theory pushforward. Since $\chi(v,y)=-(v,y)=1$, the $y$-index
+has rank one. The normalization cancels any base line twist of
+$\cE$, and $\det I_y^y$ is trivial. Its restrictions to the planes
+have the particularly useful form
+\begin{equation}\label{eq:index-plane}
+ c(I_z^y)|_{P_i}=(1+h_i)^{m_i(z)},\qquad
+ m_i(z)=\chi(L_i,z)=-(a_i,z),\quad i=0,2.
+\end{equation}
+This is the normalized extension calculation in
+\cite[\S6.4]{wuebben17}; it also holds for virtual and nonalgebraic
+topological classes. Section~\ref{sec:ring} computes all these
+indices globally from the universal subscheme on $X^{[2]}$.
