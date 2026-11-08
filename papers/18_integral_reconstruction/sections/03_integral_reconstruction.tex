@@ -1,0 +1,163 @@
+\section{Integral attachment and cochain descent}\label{sec:integral}
+
+The useful reduction in the middle degree is elementary once the
+correct integral restrictions have been calculated. We state it
+first, so that the later Grassmannian computation has a definite
+target: the homomorphism \(\kappa\), not just its finite codomain.
+
+\subsection{A calculated boundary homomorphism}
+Let \(M\) be a closed oriented smooth \(2n\)-manifold and \(E\subset M\)
+a compact tame subset. Suppose it has a closed oriented regular
+neighborhood \(W\) retracting onto \(E\), with smooth boundary \(L\).
+Put \(V=M\setminus E\). Collars identify the overlap of \(V\) with an
+open neighborhood of \(E\), up to homotopy, with \(L\).
+Assume
+\begin{equation}\label{eq:attachment-assumptions}
+ \begin{gathered}
+ H_n(E,\Z)=\Lambda\ \text{is free},\qquad H^n(E,\Z)=\Lambda^*,\\
+ H^{n-1}(E,\Z)=H_{n-1}(E,\Z)=0,\qquad
+ B:\Lambda\longrightarrow\Lambda^*\ \text{is injective}.
+ \end{gathered}
+\end{equation}
+Here the dual identification is evaluation, and \(B\) is the middle
+intersection map in \(W\). Let \(C=\coker B\).
+
+\begin{theorem}\label{thm:attachment}
+Suppose homogeneous integral classes \(g_j\in H^*(M,\Z)\) have
+degree-\(n\) monomials generating \(H^n(M,\Z)\).
+Supply the ring \(A=H^*(V,\Z)\) with the distinguished classes
+\(a_j=g_j|_V\), and calculate \(r_j=g_j|_E\).
+Then \(H^{n-1}(L,\Z)=0\), \(H^n(L,\Z)=C\), and
+\begin{equation}\label{eq:kappa}
+ \kappa\bigl(P(a_j)\bigr)=[P(r_j)]\in C
+\end{equation}
+is a well-defined homomorphism on all of \(A^n\).
+It is the actual boundary restriction and gives
+\begin{equation}\label{eq:fibre-product}
+ H^n(M,\Z)\ \simeq\
+ \{(u,z)\in A^n\oplus\Lambda^*:\ \kappa(u)=[z]\text{ in }C\}.
+\end{equation}
+The isomorphism is restriction to \(V\) and \(W\).
+\end{theorem}
+
+\begin{proof}
+Poincaré--Lefschetz duality and the sequence of \((W,L)\) give
+\[
+ 0\longrightarrow H^{n-1}(L,\Z)\longrightarrow\Lambda
+ \xrightarrow{B}\Lambda^*\longrightarrow H^n(L,\Z)
+ \longrightarrow0.
+\]
+This proves the boundary assertions. Excision also gives
+\(H^{n+1}(M,V;\Z)=H_{n-1}(E,\Z)=0\).
+Therefore restriction \(H^n(M,\Z)\to A^n\) is onto, and the
+monomials in the \(a_j\) generate \(A^n\).
+
+It remains to check every relation, which is the point of the
+formula. If \(P(a_j)=0\), the class \(P(g_j)\) comes from
+\(H^n(M,V;\Z)=\Lambda\). Its restriction to \(W\) is the image of
+that same element under \(B\). Hence \(P(r_j)\in B\Lambda\),
+so \eqref{eq:kappa} is independent of its polynomial representative.
+The two restrictions of each \(g_j\) agree on \(L\); consequently
+\(\kappa\) is the boundary restriction. The Mayer--Vietoris sequence,
+with \(H^{n-1}(L,\Z)=0\), now identifies \(H^n(M,\Z)\) with the
+kernel of \((u,z)\mapsto\kappa(u)-[z]\).
+\end{proof}
+
+This is an integral fibre product. It retains the finite boundary
+group, saturation and extension information that would disappear
+after tensoring with \(\QQ\). It requires the marked complement ring;
+it does not calculate that ring from the singularity. A basis change
+in \(\Lambda\) gives the naturally isomorphic fibre product.
+Changing the generating set changes the formula, but not the
+homomorphism, because it is the same boundary restriction.
+Isotopic regular neighborhoods give the same result under collar
+identifications.
+
+\subsection{Integral generators from universal indices}
+For primitive-vector K3 moduli, the required global generators come
+from \eqref{eq:mukai-convention}. Markman's theorem
+\cite[Theorem~1]{markman} states that Chern classes of the topological
+\(K\)-theory Künneth factors of a universal class generate integral
+cohomology. The integral Euler pairing on \(K^0_{\rm top}(X)\) is
+perfect. Taking an Euler-dual integral basis therefore expresses
+those factors as the indices \(I_z\). Thus the classes \(c_k(I_z)\)
+generate \(H^*(M,\Z)\). The same theorem gives odd vanishing and
+torsion-freeness in this K3 setting.
+
+Both qualifications matter: all topological \(K\)-classes are
+allowed, and the generation is integral. Algebraic indices alone,
+or rational Chern characters alone, would not justify
+Theorem~\ref{thm:attachment}. In a concrete exceptional family,
+a base-line ambiguity can often be removed by the determinant of a
+rank-one global index. Section~\ref{sec:schubert} performs exactly
+this normalization before calculating \(\kappa\).
+
+\subsection{All degrees and all overlaps}\label{subsec:cochains}
+The general construction uses the geometric data of
+Section~\ref{subsec:retained}. Whole-fibre coverage, proved in
+Proposition~\ref{prop:coverage}, supplies a finite open cover
+\(\mathcal U=(U_i)\) of \(M_\theta\) by those domains, together with
+domains in the regular locus. Write \(U_I=\bigcap_{i\in I}U_i\).
+Every intersection is expressed in any one of its coordinates by
+the actual classifying transitions.
+
+\begin{proposition}\label{prop:descent}
+Let
+\[
+ K^{p,q}(\mathcal U)=
+ \prod_{i_0<\cdots<i_p} C^q(U_{i_0\cdots i_p};\Z).
+\]
+With alternating restriction differential \(\delta\) and total
+differential \(D=\delta+(-1)^p d\), restriction induces a
+quasi-isomorphism
+\begin{equation}\label{eq:cech}
+ C^*(M_\theta;\Z)\longrightarrow\operatorname{Tot}K(\mathcal U).
+\end{equation}
+Changing the cover, slices or family trivializations gives the same
+object in the derived category of integral complexes.
+\end{proposition}
+
+\begin{proof}
+The coarse coordinate maps are unique on their overlaps and hence
+satisfy the cocycle identity on triples, and all its higher
+consequences. Thus \(D^2=0\).
+
+Use first the singular chains subordinate to \(\mathcal U\).
+Barycentric subdivision and its usual chain homotopy show that their
+inclusion in all singular chains is a chain-homotopy equivalence.
+For each subordinate simplex, the set of indices of cover members
+containing its image is a nonempty simplex. Its augmented Čech
+complex is contractible. Taking the corresponding products proves
+exactness of the augmented cochain resolution in the Čech direction.
+The Čech degree is bounded because the cover is finite; its
+filtration gives \eqref{eq:cech}.
+
+A refinement commutes with augmentation, so its total-complex map
+is a quasi-isomorphism. Two covers have a common intersection
+refinement. Different refinement assignments induce the same map
+in the derived category, since both commute with the invertible
+augmentation from \(C^*(M_\theta;\Z)\). Finally a change of slices
+or trivializations conjugates the overlap diagram by the unique
+coarse coordinate maps. Base-line twists, and different presentations
+of a universal gerbe, do not change those coarse maps.
+\end{proof}
+
+The descent assertion is classical; compare the open-cover
+construction in \cite[Section~4G]{hatcher}. Its application here uses the
+geometric identification of the domains and their overlaps, rather
+than replacing them by lists of fibre cohomology groups.
+The complex retains all multiple intersections and monodromy.
+It computes additive integral cohomology; no cup-product or
+homotopy-type assertion is being inferred from this additive
+statement. A finite cover gives a finite diagram of complexes,
+not automatically a finite matrix calculation. Compatible cellular
+models can make it finite when their maps are also supplied.
+
+In particular, the formal descent argument does not solve the
+existence or compatibility problem for arbitrary local resolutions.
+The local-to-global theory of Kaplan--Schedler
+\cite{kaplanschedler} treats such compatibility and monodromy
+questions in a broader setting. Here the compact projective
+chamber spaces are already part of (G1). Our task is to identify
+whole local fibres within them and to calculate the integral
+attachments on their universal-index classes.

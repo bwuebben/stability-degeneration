@@ -1,0 +1,157 @@
+\section{Schubert classes and the attachment modulo six}\label{sec:schubert}
+
+Work first in the positive chamber, with the actual extension
+\eqref{eq:actual-extension}. Write
+\(h=c_1(\mathcal U)\), \(p=c_2(\mathcal U)\).
+The integral Schubert presentation \cite[Section~3]{buch} is
+\begin{equation}\label{eq:schubert-ring}
+ H^*(G,\Z)=\Z[h,p]/(h^3-2hp,\ h^2p-p^2),\qquad
+ |h|=2,\quad |p|=4,
+\end{equation}
+with
+\begin{equation}\label{eq:schubert-evaluations}
+ \int_G h^4=2,\qquad\int_G h^2p=\int_G p^2=1.
+\end{equation}
+The second degree-four Schubert class is \(q=h^2-p\);
+thus \(\int_G q^2=1\) and \(\int_G pq=0\).
+These are the classical two Schubert directions of \(\Gr(2,4)\).
+They are represented by planes of the two types: planes containing
+a fixed line, and planes contained in a fixed three-space.
+
+\subsection{Removing the universal-family twist}
+In the lattice embedding \eqref{eq:rankseven-lattice}, put
+\(D=e-22f\). The integral Mukai vectors
+\[
+ x=(0,-f,0),\qquad y=(0,3f,1)
+\]
+are topological \(K\)-classes; algebraicity is not required.
+Their Euler pairings are
+\[
+ \chi(A,x)=1,\quad\chi(B,x)=0,\qquad
+ \chi(A,y)=0,\quad\chi(B,y)=1.
+\]
+If the restricted universal family differs from
+\eqref{eq:actual-extension} by a line \(L\), then
+\(I_x|_G=\mathcal U\otimes L\) and \(I_y|_G=L\).
+The global virtual rank of \(I_y\) is one. Tensor the universal
+class by \(\det(I_y)^{-1}\); this removes \(L\) on \(G\).
+For the resulting normalized indices,
+\begin{equation}\label{eq:index-restrictions}
+ I_z|_G=m_z[\mathcal U]+n_z[1],\qquad
+ c(I_z|_G)=(1+h+p)^{m_z},\qquad
+ m_z=\chi(A,z),\quad n_z=\chi(B,z).
+\end{equation}
+The binomial expansion is integral for every integer \(m_z\),
+including negative ones.
+
+In particular \(c_1(I_x)\) and \(c_2(I_x)\) extend \(h,p\)
+integrally to \(M\). Since \(h,p\) generate
+\eqref{eq:schubert-ring}, restriction is onto in every degree.
+Duality makes every corresponding inclusion
+\(H_k(G,\Z)\to H_k(M,\Z)\) primitive.
+The class \([G]\) is primitive because the integral extension
+\(c_2(I_x)^2\) evaluates to one on it.
+This is stronger than the information from divisors:
+every divisor restricts to a multiple of \(h\), whose fourth
+power has evaluation two.
+
+\subsection{The boundary and complement}
+The Plücker embedding identifies \(G\) with a smooth quadric
+fourfold in \(\PP^5\). The Euler and normal sequences give
+\[
+ c(TG)=\frac{(1+h)^6}{1+2h},\qquad
+ c_4(TG)=3h^4=6p^2 .
+\]
+Since \(G\) is Lagrangian, its normal bundle is \(T^*G\), so
+\begin{equation}\label{eq:self-intersection}
+ [G]^2=\int_G c_4(T^*G)=6 .
+\end{equation}
+For the boundary \(L=S(T^*G)\), the sphere-bundle Gysin sequence
+and \eqref{eq:schubert-ring} give
+\begin{equation}\label{eq:boundary-groups}
+ H^j(L,\Z)=
+ \begin{cases}
+ \Z,&j=0,2,6,9,13,15,\\
+ \Z^2,&j=4,11,\\
+ \Z/6,&j=8,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\end{equation}
+The only nonzero Euler multiplication is from degree zero
+to degree eight, where it is multiplication by six.
+This is a smooth boundary of the resolved neighborhood;
+the target has a six-dimensional singular stratum through \(o\),
+so it is not the link of an isolated singularity.
+
+Put \(V=M\setminus G\). Markman's theorem gives torsion-free even
+cohomology of \(M\), and the primitive inclusions just proved
+make the relative sequence torsion-free. More explicitly,
+\(H^k(M,V;\Z)=H_{16-k}(G,\Z)\); its map to \(H^k(M,\Z)\)
+is the dual of restriction and is a primitive injection whenever
+nonzero. Odd groups of \(V\) vanish. The classical \(X^{[4]}\)
+Betti numbers, obtained from Göttsche's formula \cite{gottsche},
+therefore give
+\[
+\begin{array}{c|rrrrrrrrr}
+k&0&2&4&6&8&10&12&14&16\\ \hline
+\rank H^k(M)&1&23&300&2852&19298&2852&300&23&1\\
+\rank H^k(V)&1&23&300&2852&19297&2851&298&22&0 .
+\end{array}
+\]
+The ranks removed in degrees \(8,10,12,14,16\) are
+\(1,1,2,1,1\). These ranks do not by themselves give the
+marked complement ring needed for attachment.
+
+\subsection{The calculated congruence}
+Apply Theorem~\ref{thm:attachment} with \(n=8\),
+\(\Lambda=\Z[G]\) and \(B=(6)\).
+For a marked universal-index Chern monomial of degree eight
+on \(V\), substitute \eqref{eq:index-restrictions}, reduce by
+\eqref{eq:schubert-ring}, and evaluate using
+\eqref{eq:schubert-evaluations}, modulo six.
+This specifies a homomorphism
+\(\kappa:H^8(V,\Z)\to\Z/6\) on all integral generators.
+In detail, for \(m=m_z\),
+\begin{equation}\label{eq:chern-polynomials}
+ \begin{aligned}
+ c_1(I_z)|_G&=mh,\\
+ c_2(I_z)|_G&=mp+\binom m2h^2,\\
+ c_3(I_z)|_G&=\frac{m(m^2-1)}3\,hp,\\
+ c_4(I_z)|_G&=\frac{m^2(m^2-1)}{12}\,p^2 .
+ \end{aligned}
+\end{equation}
+The displayed coefficients are integer-valued for every integer
+\(m\). The ring relations give the rule for all products, including
+products involving different indices. The all-relations argument
+in Theorem~\ref{thm:attachment} proves that this calculation
+depends only on the specified complement class.
+
+We obtain the explicit integral reconstruction
+\begin{equation}\label{eq:mod-six}
+ H^8(M,\Z)\simeq
+ \{(u,N)\in H^8(V,\Z)\oplus\Z:
+                  N\equiv\kappa(u)\pmod6\}.
+\end{equation}
+Moreover
+\(\kappa(c_2(I_x)^2|_V)=1\), so \(\kappa\) is onto.
+The higher index class supplies the odd evaluation which fourth
+powers of divisor classes cannot supply. Both Schubert directions,
+and their integral attachment, are thus visible in the same
+compact moduli family.
+
+For the negative chamber the pure extension axis instead restricts
+the normalized universal class to \(A\boxtimes\mathcal S+B\),
+where \(\mathcal S\) is the tautological subbundle in the
+image-of-\(Y_1\) description. Its Chern classes
+\(c_1(\mathcal S)=-h\), \(c_2(\mathcal S)=q=h^2-p\)
+again generate the full integral ring. The same duality argument
+proves all primitive inclusions in that chamber as well.
+
+The core is also genuinely different from a toric core component.
+Indeed \(\Pic(G)=\Z h\), so a connected automorphism preserves the
+Plücker embedding and acts through the projective orthogonal group
+of its smooth quadric. Its maximal torus has dimension three.
+A dense torus action on a toric fourfold would require dimension
+four. This observation is not needed for \eqref{eq:mod-six};
+the two independent Schubert classes already explain the extra
+integral information.

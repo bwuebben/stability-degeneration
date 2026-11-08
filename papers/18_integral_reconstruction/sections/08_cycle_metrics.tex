@@ -1,0 +1,241 @@
+\section{Harmonic geometry of the same cycles}\label{sec:cycle-metrics}
+
+The integral identification now determines exact metric periods.
+Ambient diameters require an additional argument, because a shortest
+path between points of an exceptional cycle may leave it.
+
+\subsection{Periods and primitive curve classes}
+For \(z\in v^\perp\), the normalized extension gives
+\[
+ \theta_v(z)|_G=-(a,z)h .
+\]
+Thus a positive minimal line \(\ell\) represents the functional
+\(-a\) on \(v^\perp\). Since \((a,v)=0\), its
+Beauville--Bogomolov square is \(-2\).
+The integral vector \(z_0=(0,-7f,-2)=x-2y\) satisfies
+\((v,z_0)=0\), \((a,z_0)=-1\); its Mukai class restricts to
+\(h\), proving primitivity of \(\ell\) directly.
+The proper family \eqref{eq:line-specialization}, rather than
+divisor pairings alone, identifies the moving fibre class with
+this line class.
+
+For \(t>0\), put
+\begin{equation}\label{eq:kappa-scale}
+ \kappa_t=\frac{88\pi t}{7},\qquad
+ b_t=(0,H+tD,-88t/7).
+\end{equation}
+We have \((a,b_t)=-44t/7\), so
+\eqref{eq:harmonic-class} gives the exact formulas
+\begin{equation}\label{eq:cycle-volumes}
+ \begin{gathered}
+ \operatorname{Area}_{g_t}(\ell)=\operatorname{Area}_{g_t}(f)
+       =\pi\kappa_t,\\
+ \Vol_{g_t}(\PP^2)=\frac{(\pi\kappa_t)^2}{2},\qquad
+ \Vol_{g_t}(G)=\frac{(\pi\kappa_t)^4}{12}.
+ \end{gathered}
+\end{equation}
+Either Schubert plane type is allowed. Its \(h^2\)-integral is
+one; the \(h^4\)-integral on \(G\) is two.
+These are Kähler volume identities on the actual holomorphic
+cycles, not a claim that the induced metric is exactly homogeneous.
+For \(t<0\), set \(\kappa_t=88\pi|t|/7\) and reverse the
+extension convention. The effective line functional is then
+\(+a\) in that chamber's Mukai marking, and the positive
+formulas are unchanged.
+
+\subsection{A distance-preserving zero section}
+Consider the positive-level complete quotient
+\[
+ Z_1Y_1=0,\qquad Z_1Z_1^*-Y_1^*Y_1=\kappa I_2
+\]
+with the flat Hilbert--Schmidt metric. Let \(g_{\Gr}\) denote
+the homogeneous Grassmannian metric with minimal line area
+\(\pi\).
+
+\begin{lemma}\label{lem:grass-retraction}
+The projection to \(\ker Z_1\) is a 1-Lipschitz retraction of the
+quotient onto its zero section with metric \(\kappa g_{\Gr}\).
+Consequently the ambient distances between core points equal
+their intrinsic Grassmannian distances. In the unit normalization,
+\[
+ \diam G=\frac{\pi}{\sqrt2},\qquad
+ \diam \PP^2=\frac{\pi}{2}
+\]
+for either Schubert plane, with ambient distances in the
+complete quotient.
+\end{lemma}
+
+\begin{proof}
+The real moment equation gives \(Z_1Z_1^*\ge\kappa I_2\).
+Let \(P_{\rm row}\) be the orthogonal projector onto the row
+space of \(Z_1\).
+The horizontal derivative of its row-space orthonormal frame
+has the form
+\((I-P_{\rm row})\delta Z_1^*(Z_1Z_1^*)^{-1/2}\).
+The equivalent kernel description therefore satisfies
+\[
+ \kappa\,|d(\ker Z_1)|_{g_{\Gr}}^2
+       \le\|\delta Z_1\|^2
+       \le\|\delta Z_1\|^2+\|\delta Y_1\|^2.
+\]
+The projection kills vertical orbit directions, so this bound
+survives minimization defining the quotient norm.
+On \(Y_1=0\), the equation \(Z_1Z_1^*=\kappa I_2\) gives
+the Stiefel quotient metric \(\kappa g_{\Gr}\).
+The retraction is the identity there; the inclusion and
+retraction prove equality of the two distances.
+
+For two planes, use principal vectors to rotate the two
+orthogonal blocks through angles
+\(\theta_1,\theta_2\in[0,\pi/2]\).
+The horizontal frame path has length
+\(\sqrt{\theta_1^2+\theta_2^2}\le\pi/\sqrt2\).
+For orthogonal planes, each column of any horizontal frame
+lift travels spherical distance at least \(\pi/2\).
+Minkowski's integral inequality bounds its Hilbert--Schmidt
+length below by \(\pi/\sqrt2\), proving sharpness.
+For either Schubert plane all planes share a fixed line or
+lie in a fixed three-space; one principal angle vanishes.
+The same argument gives diameter \(\pi/2\) and the induced
+line-area-\(\pi\) Fubini--Study metric.
+\end{proof}
+
+The complete cotangent Grassmannian metric is classical
+\cite[Theorem~1 and Section~2.2]{biquardgauduchon}.
+The retraction argument above verifies the ambient-distance
+statement needed for its transfer to the compact moduli.
+
+\begin{proposition}\label{prop:actual-diameters}
+In the actual eightfold, for either chamber,
+\begin{equation}\label{eq:actual-diameters}
+ \diam_{M,g_t}G=\frac{\pi}{\sqrt2}\sqrt{\kappa_t}\,
+                  (1+O(|t|)),\qquad
+ \diam_{M,g_t}\PP^2=\frac{\pi}{2}\sqrt{\kappa_t}\,
+                  (1+O(|t|)).
+\end{equation}
+After distances are divided by \(\sqrt{\kappa_t}\), the ambient
+spaces based on \(G\) converge in complete pointed
+Gromov--Hausdorff topology to the unit-level \(T^*\Gr(2,4)\)
+quotient. Along compact subsets of \(S^\circ\), the moving fibre
+has transverse Eguchi--Hanson limit and
+\[
+ \diam_{M,g_t} f/\sqrt{\kappa_t}\longrightarrow\pi/2
+\]
+uniformly.
+\end{proposition}
+
+\begin{proof}
+The deepest finite core has coefficient norm squared \(2\kappa_t\).
+Finite competitors have length \(O(\sqrt{\kappa_t})\), and
+their actual images have that length bound. The first-exit
+cost from a fixed larger chart stays positive. An actual
+near-minimizer cannot leave it; the 1-Lipschitz finite radius
+and coarse metric bound then keep such a path in coefficient
+radius \(O(\sqrt{\kappa_t})\).
+On this smaller region \eqref{eq:relative} has error \(O(|t|)\).
+It therefore compares both ambient distance infima, not merely
+the tensors on the core. Lemma~\ref{lem:grass-retraction} gives
+\eqref{eq:actual-diameters}.
+
+After rescaling, fixed chart domains exhaust the entire finite
+quotient. Exit barriers diverge, relative errors tend to zero
+on every bounded model ball, and inverse coverage supplies the
+whole corresponding actual ball. Finite intrinsic continuity
+then gives the complete pointed limit. The unitary symmetry is
+transitive on the core, so any choice of core basepoint gives
+the same pointed limit up to isometry.
+
+On a compact subset of \(S^\circ\), use finitely many full
+\(\C^6\) times two-arrow quotient charts. Their normal zero
+sections are the moving projective lines, with the same level
+\(\kappa_t\). The identical projection and first-exit argument
+gives the stated uniform diameter and transverse
+Eguchi--Hanson limit. The full ambient pointed limit also
+retains the Euclidean \(\C^6\) factor.
+\end{proof}
+
+\subsection{Successive scales with moving centers}\label{subsec:successive}
+We state the precise rule when a basepoint approaches a deeper
+stratum; a compact-stratum estimate alone does not cover that
+case. The rule applies to every contraction satisfying
+(G1)--(G3).
+
+Fix a central chart at \(p\), numbers \(\delta_n\downarrow0\),
+and generic parameters \(\theta_n\to0\).
+Suppose
+\[
+ \nu_n=\zeta_p(\theta_n)/\delta_n^2\longrightarrow\nu,
+ \qquad x_n\longrightarrow x
+\]
+for balanced representatives \(x_n\) at level \(\nu_n\),
+after unitary adjustment. Then
+\begin{equation}\label{eq:first-rescaling}
+ (M_{\theta_n},\delta_n^{-1}d_{\theta_n},
+               f_{p,\theta_n}([\delta_nx_n]))
+ \longrightarrow(Q_\nu,d_\nu,[x])
+\end{equation}
+in complete pointed Gromov--Hausdorff topology.
+
+For a further scale, retain a limiting representative \(x_*\)
+and its compact stabilizer \(K_*\).
+Write its full normal representation as
+\(T\oplus W'\), with trivial action on \(T\).
+In the common slice suppose the current representatives are
+\((u_n,z_n)\to0\). For \(\sigma_n\downarrow0\), require
+\begin{equation}\label{eq:successive-data}
+ \frac{(\nu_n-\nu)|_{\Lie K_*}}{\sigma_n^2}\longrightarrow\lambda,
+ \qquad \frac{z_n}{\sigma_n}\longrightarrow z_* .
+\end{equation}
+At physical scale \(\delta_n\sigma_n\), the complete pointed
+limit is
+\[
+ T\times(W'\!/\!/\!/_\lambda K_*),\qquad
+ \text{based at }(0,[z_*]).
+\]
+The notation \( /\!/\!/_\lambda\) means complex moment zero
+and real moment \(\lambda\).
+Tangential motion \(u_n\) need only tend to zero; it need not
+be comparable with \(\sigma_n\).
+This rule can be repeated for every fixed finite number of
+stages, retaining each stabilizer, full normal representation,
+normalized level and normal basepoint.
+
+For completeness, the finite parameter and normal-slice results
+are \cite[Sections~4--6]{wuebben14}; their actual harmonic
+transfer is \cite[Theorem~8.1]{wuebben17}.
+The proof of that transfer uses the same three facts used
+above: relative errors on every bounded model region, divergent
+rescaled exit costs, and inverse coverage of entire balls.
+Full normal slices preserve the simple-zero condition, and
+tangential translation removes \(u_n\).
+Errors compose multiplicatively and are not divided by the
+next smaller scale. Distance scaling is the inverse physical
+scale; tensor scaling is its inverse square.
+These arguments prove \eqref{eq:first-rescaling} and the finite
+iteration under precisely \eqref{eq:successive-data}.
+
+In the eightfold, a rank-one point of the zero cone has full
+normal model \(\C^6\) times the \(A_1\) quotient.
+Thus approaching the deepest point is handled by the \(U(2)\)
+model first, followed, when appropriate, by this full slice.
+No single limit is assigned to oscillating normalized data,
+and no infinite iteration is asserted.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Section~\ref{sec:construction} constructs the surface, the unique
+spherical bundle, both compact chamber spaces and their common
+normal target. Lemma~\ref{lem:rank-list} and the compactness
+argument exclude all additional ideal boundary; the whole-fibre
+and target arguments identify every stratum and fibre.
+The proper family in Section~\ref{subsec:specialization}
+proves reduced integral specialization.
+Section~\ref{sec:schubert} gives the primitive inclusions,
+self-intersection and calculated mod-six attachment.
+Equations~\eqref{eq:cycle-volumes} and
+\eqref{eq:actual-diameters}, with
+Proposition~\ref{prop:actual-diameters}, give the cycle metric
+claims. The construction verifies (G1)--(G3), so
+Proposition~\ref{prop:central-completion} and
+Theorem~\ref{thm:quantitative} identify the harmonic completion
+and control the full compact contraction graph.
+\end{proof}

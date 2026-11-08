@@ -1,0 +1,401 @@
+\section{A compact contraction with Grassmannian fibre}\label{sec:construction}
+
+We now construct a family for which the general statements have
+two independent Schubert directions to detect.
+Its central repeated factor has multiplicity two, so its effective
+local group is \(U(2)\). The construction includes the full compact
+moduli spaces, not only the Grassmannian quotient near one point.
+
+\subsection{The surface and the complete factor list}
+Choose a K3 surface with
+\begin{equation}\label{eq:rankseven-lattice}
+ \NS(X)=\Z H\oplus\Z D,\qquad H^2=2,\quad H\cdot D=0,\quad D^2=-44.
+\end{equation}
+Such a surface exists: the primitive embedding
+\(H=e_1+f_1,\ D=e_2-22f_2\) into two hyperbolic planes and
+Morrison's realization theorem
+\cite[Corollary~2.9(i)]{morrison} give the full Néron--Severi
+lattice. A root would satisfy \(h^2-22m^2=-1\), impossible modulo
+eleven. We choose the positive component so that \(H\) is ample.
+Put
+\begin{equation}\label{eq:rankseven-vectors}
+ a=(3,D,-7),\quad b=(1,0,1),\quad
+ w=a+b=(4,D,-6),\quad v=2a+b=(7,2D,-13).
+\end{equation}
+Then
+\[
+ a^2=b^2=-2,\quad(a,b)=4,\quad w^2=4,\quad v^2=6,\quad
+ (a,w)=2,\quad(a,v)=0.
+\]
+
+\begin{lemma}\label{lem:rank-list}
+For central polystable sheaves or residual ideal bundles of total
+vector \(a+(0,0,l)\), \(w+(0,0,l)\), or \(v+(0,0,l)\), with
+\(l\ge0\), the only possible stable-factor vector lists are
+\[
+ \{a\};\qquad \{w\},\{a,b\};\qquad
+ \{v\},\{a,w\},\{a,a,b\},
+\]
+respectively. In every case \(l=0\).
+\end{lemma}
+
+\begin{proof}
+Every stable factor has vector \((r,mD,s)\), since its \(H\)-slope
+is zero. Simplicity, Serre duality and Mukai Riemann--Roch give
+its square at least \(-2\), hence
+\[
+ s\le\left\lfloor\frac{1-22m^2}{r}\right\rfloor.
+\]
+For total vector \((R,MD,S+l)\), summation and Cauchy--Schwarz give
+\begin{equation}\label{eq:rank-bound}
+ 22\sum_i\frac{m_i^2}{r_i}\le
+ \sum_i\frac1{r_i}-S-l\le R-S,\qquad
+ \left(\sum_i|m_i|\right)^2\le\frac{R(R-S)}{22}.
+\end{equation}
+For \(a,w\) the last bounds are \(30/22,40/22\).
+Since \(\sum m_i=1\), there is exactly one nonzero \(m_i\), equal
+to one. For \(v\) the bound is \(140/22<9\), and
+\(\sum m_i=2\); the nonzero entries are one two or two ones.
+In particular negative entries cannot occur.
+
+For zero-\(m\) factors of total rank \(z\), the maximal sum of
+third components is \(z\), attained only by \(z\) rank-one factors
+with \(s=1\). For \(a\), the maximal total third component with
+the nonzero factor of rank \(r=1,2,3\) is
+\(\lfloor-21/r\rfloor+3-r=-19,-10,-7\).
+For \(w\), the corresponding values at \(r=1,2,3,4\) are
+\(-18,-9,-6,-6\). These give precisely the stated lists.
+
+For \(v\), a single \(m=2\) factor of rank \(r=1,\ldots,7\)
+gives the bounds
+\[
+ -81,\ -39,\ -25,\ -19,\ -16,\ -14,\ -13.
+\]
+For two \(m=1\) factors, order the ranks \(r\le q\), \(r+q\le7\).
+The bound is
+\(\lfloor-21/r\rfloor+\lfloor-21/q\rfloor+7-r-q\).
+All possibilities are
+\[
+\begin{array}{c|rrrrrr}
+(r,q)&(1,1)&(1,2)&(1,3)&(1,4)&(1,5)&(1,6)\\ \hline
+\text{bound}&-37&-28&-25&-25&-25&-25\\[2pt]
+(r,q)&(2,2)&(2,3)&(2,4)&(2,5)&(3,3)&(3,4)\\ \hline
+\text{bound}&-19&-16&-16&-16&-13&-13
+\end{array}
+\]
+Only \(r=7\) in the first case, and \((3,3),(3,4)\) in the
+second, survive. They give \(v,2a+b,a+w\).
+Every surviving bound already equals \(S\). Thus \(l=0\) and
+each factor attains its bound. This exhausts all ranks and charges.
+\end{proof}
+
+The double dual of a slope-stable torsion-free sheaf is slope-stable.
+A positive discrepancy of length \(l\) lowers its Mukai square by
+\(2rl\). For the vectors \(a,w,v\), the resulting squares would
+be at most \(-8,-4,-8\), respectively, contradicting the stable
+square bound. Thus stable sheaves of these vectors are bundles.
+The vector \(b\) gives \(\OO_X\). Extensions of the listed stable
+bundles are bundles, so every central semistable sheaf of these
+vectors is locally free.
+
+\subsection{Existence and compactness}
+Yoshioka's generic-polarization theorem
+\cite[Theorem~0.1]{yoshioka99} gives a stable object of vector
+\(a\) in a chamber adjoining \(H\).
+A proper positive-rank class cannot have normalized first Chern
+class \(D/3\). After avoiding the finite slope walls, generic
+Gieseker stability is therefore slope stability.
+Move the polarization to \(H\) inside this chamber. Each fixed
+subsheaf inequality becomes weak, so the object is \(H\)-semistable.
+Lemma~\ref{lem:rank-list} makes it stable, and the double-dual
+argument makes it locally free. Denote it by \(A\).
+If two nonisomorphic \(H\)-stable bundles had vector \(a\), their
+\(\Hom\) and \(\Ext^2\) would vanish, contradicting Euler
+characteristic \(-(a,a)=2\). The same identity gives
+\(\Ext^1(A,A)=0\). Thus \(A\) is unique and spherical.
+Set \(B=\OO_X\).
+
+The primitive vectors \(w,v\) similarly have compact generic
+moduli of dimensions six and eight, of deformation types
+\(X^{[3]}\) and \(X^{[4]}\)
+\cite[Appendix, Theorem~8.1]{yoshioka01}.
+For \(v\), use large integral polarizations \(mH\pm D\):
+the degree \(\mp88\) is coprime to seven.
+For \(w\), avoid the locally finite slope walls; equality of
+normalized first Chern classes would require \(rD/4\) integral
+with \(0<r<4\), which is impossible.
+The double-dual argument applies at any polarization and makes
+every slope-stable object in these compact moduli locally free.
+Write \(S_\pm\) for the sixfolds and \(M_\pm\) for the eightfolds.
+
+Finite wall theory \cite[Theorem~6.6]{grebtoma} permits a sufficiently
+small interval \(H+tD\) with no wall except possibly \(t=0\).
+Every chamber object is \(H\)-semistable by the preceding limiting
+inequalities. Conversely every \(H\)-stable object persists in both
+adjacent chambers by openness and chamber constancy.
+The local models below show that \(t=0\) is an actual wall.
+Let \(\omega_t\) be the smoothly varying Ricci-flat representatives
+of these classes.
+
+The eightfold is fine: the algebraic \(K\)-class
+\(\OO_X+\OO_p\) has index \(\chi(E)+\rank E=-6+7=1\);
+the universal-family criterion applies
+\cite[Theorem~4.6.5]{huybrechtslehn}.
+For \(w\), algebraic Mukai divisibility is
+\(\gcd(4,44,6)=2\). Since \(w^2=4>0\), the positive-square
+obstruction theorem of Mattei--Meinsma \cite{matteimeinsma}
+gives Brauer order two. We use local or twisted families on
+\(S_\pm\), without assuming an analytic trivialization of this
+obstruction. Topological universal classes remain available for
+the index calculations.
+
+Finally Lemma~\ref{lem:rank-list} excludes positive-charge central
+ideal objects. Surface compactness and removability
+\cite[Section~3.1]{gstw}, with the uniform small-energy estimates
+for the smooth family \(\omega_t\), give smooth subsequential
+gauge convergence on all of \(X\) as \(t\to0\).
+There are no positive-charge ideal objects at sufficiently nearby
+parameters either. Otherwise choose such parameters tending to
+zero. A bounded-energy subsequence has a fixed positive defect
+integer; compactness of the residual connections adds only
+nonnegative defect, contradicting the central list.
+This verifies the full no-boundary requirement, including nearby
+parameters, rather than just local freeness on the displayed fibres.
+
+\subsection{The full nonabelian local model}\label{subsec:grass-model}
+At \(E_o=A\otimes\C^2\oplus B\), both self-\(\Ext^1\) spaces
+vanish and the cross dimension is four.
+Let \(\mathbb V=\Ext^1(B,A)^*\simeq\C^4\), and use coordinates
+\[
+ Z_1:\mathbb V\to\C^2,\qquad Y_1:\C^2\to\mathbb V.
+\]
+The subscript distinguishes this linear map from the global
+target \(Z\). The effective group is \(U(2)\), and the equations are
+\begin{equation}\label{eq:u2-model}
+ Z_1Y_1=0,\qquad Z_1Z_1^*-Y_1^*Y_1=\zeta I_2,\qquad
+ \zeta=\frac{88\pi}{7}t .
+\end{equation}
+Indeed \eqref{eq:levels} gives
+\(2\pi(3\mu_t(v)-\deg_t A)=88\pi t/7\);
+the \(B\)-vertex level is \(-2\zeta\).
+These are full convergent coordinates by the normal form and
+harmonic reduction stated in Section~\ref{sec:data}.
+Qualitative formality is already covered by
+Bandiera--Manetti--Meazzini \cite[Theorem~5.1]{bmm}: the
+automorphism group is reductive, although the stable factors
+have different reduced Hilbert constants.
+The additional coordinate estimates, rather than formality
+alone, supply the relative harmonic comparison.
+
+For \(\zeta>0\), \(Z_1\) is surjective. Set \(P=\ker Z_1\),
+\(\mathcal U_P=\mathbb V/P\), and \(N=Y_1Z_1\).
+Then \(\im N\subset P\subset\ker N\).
+Conversely such an incident pair determines \(Z_1,Y_1\)
+up to \(GL(2)\). Thus the quotient is
+\begin{equation}\label{eq:incidence}
+ T^*\Gr(2,\mathbb V)=
+ \{(N,P):\im N\subset P\subset\ker N,\ \dim P=2\}
+ \longrightarrow
+ \mathcal N=\{N:N^2=0,\ \rank N\le2\}.
+\end{equation}
+The cotangent zero section \(G=\Gr(2,\mathbb V)\) has
+\(Y_1=0\), \(Z_1Z_1^*=\zeta I_2\), and coefficient norm
+squared \(2\zeta\).
+For \(\zeta<0\), \(Y_1\) is injective and \(P=\im Y_1\)
+gives the same incidence resolution over \(\mathcal N\).
+Thus this equal-dimensional Grassmannian model is not a
+nontrivial flop. Fibres over ranks two, one and zero are,
+respectively, a point, \(\PP^1\) and \(G\).
+
+For clarity we check normality of the affine target used here.
+The variety \(\{Z_1Y_1=0\}\subset\C^{16}\), over
+\(\rank Z_1=k\), has dimension
+\(k(6-k)+2(4-k)=8+4k-k^2\), with maximum twelve at \(k=2\).
+Every lower-rank pair is a limit of rank-two pairs by perturbing
+\(Z_1\), with \(Y_1\) fixed, among maps annihilating \(\im Y_1\).
+It is an irreducible complete intersection of four equations.
+If either map has rank two, the differential of \(Z_1Y_1\)
+is onto \(\End(\C^2)\). The locus where both ranks are at most
+one has dimension at most nine. The complete intersection is
+therefore regular in codimension one and normal.
+Reductive invariants preserve normality, and the matrix invariant
+\(Y_1Z_1\) identifies the quotient with \(\mathcal N\).
+
+The model at \(A\oplus B\), for vector \(w\), is the four-arrow
+\(U(1)\) quotient with level \(22\pi t\). It contracts
+\(T^*\PP^3\) to the rank-at-most-one square-zero cone.
+At \(A\oplus F\), for an \(H\)-stable \(w\)-bundle \(F\),
+the self-deformation space of \(F\) has dimension six and
+\(\dim\Ext^1(F,A)=(a,w)=2\).
+The local contraction is consequently a smooth sixfold factor
+times \(T^*\PP^1\to\C^2/\{\pm1\}\), with transverse level
+\(\zeta\).
+
+The simple-zero condition is explicit. In \eqref{eq:u2-model}
+at zero level, take
+\(Z_1=(I_2\ 0)\), \(Y_1=(0\ I_2)^{\mathsf T}\).
+A subrepresentation with zero \(B\)-component has its
+\(A\)-component annihilated by all rows of \(Y_1\), hence is zero.
+A nonzero \(B\)-component forces the full \(A\)-component by the
+columns of \(Z_1\). The auxiliary model uses the analogous pair
+\((1,0,0,0)\), \((0,1,0,0)^{\mathsf T}\).
+The two-arrow transverse model has the same two distinct
+nonzero coordinates. Trivial tangent directions do not change
+simplicity. Small multiples in the convergent charts give actual
+\(H\)-stable bundles. Their loci are nonempty and dense in the
+irreducible chamber moduli.
+
+\subsection{Whole fibres and normal targets}\label{subsec:targets}
+The slope classifying theorem of Greb--Toma
+\cite[Main Theorem, Theorem~5.5 and Remark~5.9]{grebtoma}
+first gives maps to the common reduced slope images.
+For the auxiliary family the local classifying maps descend
+despite base-line changes. At this stage we do not assume
+normality of the image or its analytic identification with
+\(\mathcal N\).
+
+We verify whole-fibre coverage before making that identification.
+Suppose \(t_n\to0\) and a chamber bundle \(E_n\) has central
+graded object \(2A\oplus B\). The no-charge result gives a smooth
+gauge limit \(E\). In a Jordan--Hölder filtration choose its
+first inclusion and last quotient, pass to fixed factor types,
+and normalize these holomorphic maps separately to \(L^2\)-norm
+one in the converging gauges. Elliptic estimates give nonzero
+limiting maps. A nonzero map between stable equal-slope factors
+splits the corresponding factor in the polystable bundle \(E\).
+
+If the first and last factors differ, their limits split off
+\(A\) and \(B\); the remaining vector \(a\) gives the unique \(A\).
+If both are \(A\), the inclusion \(i_n\) and quotient \(q_n\)
+satisfy \(q_ni_n=0\), still true after separate normalization
+and passage to the limit. With only one \(A\)-summand in \(E\),
+both nonzero maps would factor through it and have nonzero
+composition. Thus there are at least two copies of \(A\);
+the remaining vector is \(b\). In all cases \(E=2A\oplus B\).
+The two-factor proof gives whole-fibre coverage for \(A\oplus B\)
+and for \(A\oplus F\) with \(F\) in a compact part of its stable
+locus.
+
+We also need joint coverage when \(F_n\to A\oplus B\).
+At fixed \(H\), the surface comparison
+\cite[Theorem~4.11 and Corollary~4.15]{gstw} identifies the
+slope and Uhlenbeck topologies. Since charge is zero, \(F_n\)
+converges in gauge to \(A\oplus B\).
+Orient the extensions of \(A\) and \(F_n\) in either chamber and
+normalize their two maps as above. Their limiting composition
+vanishes. If the limiting map involving \(A\oplus B\) has a
+nonzero \(B\)-component, it splits off \(B\) and \(A\).
+Otherwise zero composition forces two \(A\)-summands.
+The limit is again \(2A\oplus B\).
+One fixed deep chart therefore covers these joint limits.
+
+All actual fibres lie in these charts for sufficiently small
+parameters. Conversely every finite core has norm \(O(\sqrt{|t|})\)
+and lies in the chart. They classify the same holomorphic bundles
+and central graded classes, so chamber constancy identifies
+their whole fibres.
+
+Normalize the common reduced projective image. Connectedness of
+the fibres just identified and Stein factorization make this
+normalization bijective on points. Denote the resulting targets
+by \(Z\) for \(v\) and \(T\) for \(w\).
+Whole-fibre coverage and properness give saturated neighborhoods
+in the actual and finite resolutions. Pull back target holomorphic
+functions through the classifying charts and descend them using
+\(\pi_*\OO=\OO\) for a proper birational map to a normal target.
+Doing this in both directions gives inverse germ maps: their
+composites agree on the dense stable locus and hence everywhere.
+Thus the contractions have exactly the analytic models above.
+
+The target \(T\) has one singular point \(o\), represented by
+\(A\oplus B\); \(S^\circ=T\setminus\{o\}\) is the stable
+\(w\)-moduli. The map \(F\mapsto A\oplus F\) embeds it into \(Z\).
+At \(o\), fix a spectator \(A\)-copy in the \(U(2)\) model.
+The equivariant Kuranishi and Darboux maps preserve this fixed
+locus, which is the \(U(1)\) four-arrow representation.
+On invariants its inclusion imposes the two-by-two minors of
+\(N\), giving the closed rank-at-most-one subcone of \(\mathcal N\).
+These local embeddings glue because they classify the same
+direct sums. Properness makes \(T\to Z\) a closed algebraic
+embedding. The singular support of \(\mathcal N\) is its
+rank-at-most-one locus. Consequently \(T\) is precisely the
+\emph{reduced} singular locus of \(Z\).
+
+We have proved projective symplectic contractions
+\(\pi_\pm:M_\pm\to Z\) with fibres
+\[
+ \begin{array}{c|ccc}
+ \text{central class}&H\text{-stable }v&A\oplus F,\ F\in S^\circ&2A\oplus B\\ \hline
+ \text{fibre}&\text{point}&\PP^1&\Gr(2,4).
+ \end{array}
+\]
+The auxiliary contractions \(S_\pm\to T\) have fibre \(\PP^3\)
+over \(o\). The symplectic forms agree with the quotient forms
+in the charts and with the common stable form elsewhere.
+Surface comparison gives the projective/gauge topology, while
+the earlier factor and charge argument excludes every further
+boundary. This verifies (G1)--(G3) for the eightfold.
+
+\subsection{The actual extension and specialization}\label{subsec:specialization}
+Let \(\mathcal U\) be the positive tautological quotient on
+\(G=\Gr(2,\mathbb V)\). In the positive chamber, the actual
+universal family restricts, up to a base line, to
+\begin{equation}\label{eq:actual-extension}
+ 0\longrightarrow A\boxtimes\mathcal U
+ \longrightarrow\mathcal E_G
+ \longrightarrow B\boxtimes1\longrightarrow0 .
+\end{equation}
+To see that this is the actual extension family, not just its
+linear approximation, observe that on \(Y_1=0\) the central
+\(\C^*\subset GL(2)\) gives \(Z_1\) weight \(1\) and \(Y_1\)
+weight \(-1\). An equivariant holomorphic coordinate change
+tangent to the identity has no nonlinear term surviving on
+this axis in either output. It fixes the axis. The harmonic
+recursion is also linear there, since two one-direction
+extension terms have zero product. The quotient
+\(\mathbb V\to\mathcal U\) therefore gives
+\eqref{eq:actual-extension} itself.
+
+Take \(N_0\ne0\) with \(N_0^2=0\), \(\rank N_0=1\).
+Put \(L_0=\im N_0\), \(K_0=\ker N_0\).
+The entire fibre over \(\tau N_0\), \(\tau\ne0\), is
+\[
+ \{P:L_0\subset P\subset K_0,\ \dim P=2\}\simeq\PP^1.
+\]
+Its closure is the product family
+\[
+ \PP^1\times\Delta\longrightarrow T^*G,\qquad
+ (P,\tau)\longmapsto(\tau N_0,P).
+\]
+It is proper and flat, with reduced central fibre a minimal
+Schubert line in \(G\). The whole-fibre chart transfers it to
+the compact moduli. Thus the moving fibre class \(f\) specializes
+with multiplicity one to the line class \(\ell\):
+\begin{equation}\label{eq:line-specialization}
+ f\longmapsto\ell .
+\end{equation}
+\begin{figure}[tb]
+ \centering
+ \input{figures/code/schubert_incidence.tex}
+ \caption{The Schubert line obtained from \(N=\tau N_0\).
+ For the fixed incident flag \(L_0\subset K_0\), the two
+ Schubert planes meet along this line. The chosen flat family
+ has this line as its reduced central fibre inside the larger
+ fibre \(G\). Arrows denote inclusions.}
+ \label{fig:schubert}
+\end{figure}
+The directions are parametrized by flags
+\(L_0\subset K_0\subset\mathbb V\); including the plane gives
+\(L_0\subset P\subset K_0\).
+Over \(S^\circ\), projective extension transitions are in
+\(PGL_2\), so their action on the fibre's integral cohomology
+is trivial. This does not trivialize the projective bundle.
+
+The normal bundle of \(G\) is \(T^*G\).
+Writing a cotangent vector as a map
+\(\mathbb V/P\to P\), the preimage of the rank-at-most-one locus has
+equation given by its \(2\times2\) determinant.
+Its restriction line bundle is
+\(\det P\otimes\det(\mathbb V/P)^*=\OO_G(-2h)\), where
+\(h=c_1(\mathcal U)\). This records the incidence of the moving
+exceptional divisor with the deep core.

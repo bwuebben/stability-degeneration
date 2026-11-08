@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Latex, every node/.style={font=\small},
+                    box/.style={align=center,inner sep=5pt}]
+ \node[box] (g) at (0,2.8) {\(G=\Gr(2,\mathbb V)\)};
+ \node[box] (l) at (-2.6,1.4)
+   {\(\Sigma_L=\{P:L_0\subset P\}\)\\ \(\simeq\PP^2\)};
+ \node[box] (k) at (2.6,1.4)
+   {\(\Sigma_K=\{P:P\subset K_0\}\)\\ \(\simeq\PP^2\)};
+ \node[box] (line) at (0,-0.15)
+   {\(\{P:L_0\subset P\subset K_0\}\simeq\PP^1\)};
+ \draw[->] (l) -- (g);
+ \draw[->] (k) -- (g);
+ \draw[->] (line) -- (l);
+ \draw[->] (line) -- (k);
+ \node[box] at (0,-1.05)
+   {\(\dim L_0=1,\quad\dim K_0=3,\quad L_0\subset K_0\subset\mathbb V\)};
+\end{tikzpicture}

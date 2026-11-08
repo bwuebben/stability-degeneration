@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite arithmetic only; geometry and analysis require the printed proofs.",
+  "K3_Hilbert4_even_betti": [
+    1,
+    23,
+    300,
+    2852,
+    19298,
+    2852,
+    300,
+    23,
+    1
+  ],
+  "complement_even_betti": [
+    1,
+    23,
+    300,
+    2852,
+    19297,
+    2851,
+    298,
+    22,
+    0
+  ],
+  "two_plane_smith": [
+    1,
+    8
+  ],
+  "boundary_orders": {
+    "isolated_plane": 3,
+    "two_planes": 8,
+    "Grassmannian": 6
+  },
+  "Grassmannian_top_evaluations": {
+    "h4": 2,
+    "h2p": 1,
+    "p2": 1
+  },
+  "tested_integer_Chern_parameters": [
+    -20,
+    20
+  ],
+  "Mukai_index_and_curve_witnesses": "PASS"
+}

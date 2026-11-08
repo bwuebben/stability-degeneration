@@ -1,0 +1,145 @@
+\section{Fourfold examples and the role of monodromy}\label{sec:examples}
+
+\subsection{The isolated and interacting plane contractions}
+The compact fourfolds in \cite{wuebben17} provide two further
+applications of the general theorem. We verify its local
+simple-zero hypothesis explicitly and record the additional
+global metric conclusion; their construction and detailed cycle
+geometry remain in that paper.
+
+For the isolated example, the lattice is
+\(\NS(X)=\Z H\oplus\Z D\) with Gram matrix
+\(\operatorname{diag}(2,-22)\), and
+\[
+ a=(1,0,1),\quad b=(2,D,-5),\quad v=a+b.
+\]
+The compact chamber spaces have a single \(\PP^2\) fibre.
+The complete factor list and no-charge theorem
+\cite[Section~3]{wuebben17} verify (G1)--(G2).
+The full deep representation is
+\(\C^3\oplus(\C^3)^*\) under \(U(1)\), with complex equation
+\(y(x)=0\). The point \(x=e_1,y=e_2^*\) is module-simple,
+as both arrow directions between the two one-dimensional
+vertices are nonzero. At stable points the effective group
+is trivial. The convergent charts and classifying diagram
+verify (G3).
+
+For the interacting example, the lattice matrix and vectors are
+\[
+ \begin{pmatrix}2&0&0\\0&-6&-4\\0&-4&-8\end{pmatrix},\qquad
+ a_0=(1,0,1),\quad a_1=(1,D_1,-2),\quad a_2=(1,D_2,-3),
+ \quad v=a_0+a_1+a_2 .
+\]
+For \([\omega]=H+sD_1+tD_2\), the levels are
+\[
+ \zeta(s,t)=\frac{2\pi}{3}
+ \begin{pmatrix}-10&-12\\8&0\\2&12\end{pmatrix}
+ \binom{s}{t}.
+\]
+All six chamber spaces, their common normal target, complete
+factor and charge lists, and whole fibres are constructed in
+\cite[Sections~4--5]{wuebben17}. They verify (G1)--(G2).
+At the deepest point the full effective group is
+\(U(1)^3/U(1)\), with paired arrow dimensions \(1,2,1\).
+In the coordinates of that paper,
+\[
+ zz'-\varphi(u)=ww'+\varphi(u)=0
+\]
+has the solution \(z=z'=w=1,\ w'=-1,\ u=\varphi=(1,0)\).
+Its directed support is strongly connected, which for
+one-dimensional vertices forbids a proper submodule.
+Along the moving stratum the full representation is
+\(\C^2\) times the two-arrow \(U(1)\) model, which has
+the simple point \(e_1,e_2^*\); stable centers are smooth.
+Together with the convergent classifying diagrams this verifies
+(G3) on every stratum.
+
+Theorem~\ref{thm:quantitative} consequently gives graph distortion
+tending to zero in both examples, with the variational bound
+\eqref{eq:global-distortion}. For the interacting family this
+holds through all chamber directions and arbitrary ratios of
+positive scales. It supplements the qualitative global
+convergence of \cite{wuebben17} by a proof from the finite
+quotient distances.
+
+Their integral formulas are instances of
+Theorem~\ref{thm:attachment}, with the explicit normalized
+index restrictions already proved in
+\cite[Proposition~6.1]{wuebben17}.
+For the plane, \(B=(3)\) and
+\[
+ \kappa(c_2(I_z)|_V)=\binom{m_z}{2},\qquad
+ \kappa(c_1(I_z)c_1(I_{z'})|_V)=m_zm_{z'}\pmod3.
+\]
+Here \(m_z\) is the Euler pairing with the extension subobject.
+In the two-plane chamber, \(E=P_0\cup P_2\) and
+\[
+ B=\begin{pmatrix}3&1\\1&3\end{pmatrix},\qquad
+ \coker B\simeq\Z/8,\qquad (n_0,n_2)\longmapsto n_0-3n_2 .
+\]
+With \(m_{i,z}=\chi(a_i,z)\), the boundary map is
+\[
+ \begin{aligned}
+ \kappa(c_2(I_z)|_V)
+   &=\binom{m_{0,z}}2-3\binom{m_{2,z}}2,\\
+ \kappa(c_1(I_z)c_1(I_{z'})|_V)
+   &=m_{0,z}m_{0,z'}-3m_{2,z}m_{2,z'}\pmod8 .
+ \end{aligned}
+\]
+These formulas use the marked complement ring and respect all
+its relations. The mod-eight statement concerns this
+two-plane chamber. The other four configurations are not
+assigned its global formula.
+
+The proper moving-line family specializes as \(f=c_0+c_2\),
+with both multiplicities one. For levels
+\(\zeta_0=a>0,\zeta_2=b>0\), the exact areas are
+\(\pi a,\pi b,\pi(a+b)\); the plane volumes are
+\((\pi a)^2/2,(\pi b)^2/2\).
+The ambient collapse and complete separated-scale limits are
+those of \cite[Section~8]{wuebben17}, with unchanged metric
+normalization. Thus the general global comparison and the
+explicit attachment refer to those same cycles.
+
+\subsection{The Schubert involution}
+The following topological example explains why the geometric
+transition information in Section~\ref{subsec:retained} cannot
+be replaced by local fibre rings and divisor classes.
+
+Choose a nondegenerate symmetric complex bilinear form on
+\(\C^4\). Orthogonal complementation defines a holomorphic
+involution \(\delta(P)=P^\perp\) of \(G=\Gr(2,4)\).
+For its tautological subbundle \(\mathcal S\) and quotient
+\(\mathcal U\), one has
+\(\delta^*\mathcal S\simeq\mathcal U^*\). Consequently
+\[
+ \delta^*h=h,\qquad \delta^*p=q,\qquad \delta^*q=p .
+\]
+Form the compact smooth mapping tori \(T_1\) and \(T_\delta\)
+over \(S^1\). Both have the same local product geometry,
+integral fibre ring, and distinguished divisor class \(h\).
+Their degree-four cohomology is different:
+\begin{equation}\label{eq:monodromy}
+ H^4(T_1,\Z)=\Z^2,\qquad H^4(T_\delta,\Z)=\Z .
+\end{equation}
+Indeed \(H^3(G,\Z)=0\), so the Wang sequence identifies
+degree-four cohomology with the invariant subgroup of
+\(H^4(G,\Z)=\Z p\oplus\Z q\). For the identity it is all of
+that group; for \(\delta\) it is \(\Z(p+q)\).
+
+This is a topological necessity example, not a claim that
+the involution occurs in the K3 family above. It shows that
+forgetting monodromy can change even a Betti number.
+The use of all multiple intersections has a further purpose:
+cochains retain their restriction maps and higher compatibility,
+which fibre cohomology alone generally discards.
+Theorem~\ref{thm:attachment} gives a smaller calculation only
+under its explicit vanishing, intersection and generator
+hypotheses.
+
+The results concern compact K3 bundle-moduli contractions
+without bubbling. Extending them to positive-charge strata
+requires new local geometric and metric inputs. The
+reconstruction of underlying degenerating manifolds and
+unrestricted Hermitian--Yang--Mills dynamics are likewise
+separate questions.

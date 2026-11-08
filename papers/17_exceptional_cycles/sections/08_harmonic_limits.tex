@@ -1,0 +1,417 @@
+\section{Harmonic collapse and complete rescaled limits}\label{sec:harmonic-limits}
+
+The classes calculated above determine exact periods.
+To determine diameters, one must also compare paths
+in the full compact moduli space. We first construct
+compatible local comparisons and explain why short
+ambient paths remain in them. This permits a relative
+estimate even when one exceptional plane is much
+smaller than the other.
+
+\subsection{Exact periods of the reconstructed cycles}
+Write
+\[
+ b_\eta=\left(0,[\omega_\eta],
+       \frac{c_1(v)\cdot[\omega_\eta]}{\rank v}\right).
+\]
+Equation~\eqref{eq:harmonic-class} gives
+$[\Omega_\eta]=2\pi^2\theta_v(b_\eta)$.
+In the interacting family
+$(a_i,b_\eta)=\deg_\eta L_i-\mu_\eta(v)
+=-\zeta_i/(2\pi)$. Pairing with
+\eqref{eq:interacting-curve-classes} proves
+\begin{equation}\label{eq:exact-cycle-volumes}
+ \begin{gathered}
+ \operatorname{Area}(c_0)=\pi a,\qquad
+ \operatorname{Area}(c_2)=\pi b,\qquad
+ \operatorname{Area}(f)=\pi(a+b),\\
+ \Vol(P_0)=\frac{(\pi a)^2}{2},\qquad
+ \Vol(P_2)=\frac{(\pi b)^2}{2}.
+ \end{gathered}
+\end{equation}
+The volume formula is $\int_P\Omega_\eta^2/2$.
+These are exact identities for the actual harmonic
+metric; they do not require its induced plane
+metric to be Fubini--Study. The reduced
+specialization of curves is reflected in exact
+additivity of their areas.
+
+For the isolated example put
+$\kappa_t=44\pi|t|/3$. Its signed line class
+\eqref{eq:isolated-classes} similarly gives
+\begin{equation}\label{eq:isolated-periods}
+ \operatorname{Area}(\ell_\pm)=\pi\kappa_t,
+ \qquad \Vol(P_\pm)=\frac{(\pi\kappa_t)^2}{2}.
+\end{equation}
+The same $\kappa_t$ is the absolute moment level
+in \eqref{eq:isolated-level}.
+
+\subsection{Compatible comparisons over the entire exceptional set}
+At the deeper point use the fixed background
+$E_0=L_0\oplus L_1\oplus L_2$. Its chart
+$\Phi_\eta$ has the full model
+\eqref{eq:three-vertex-model} and the estimate
+\eqref{eq:actual-quotient-comparison}, with radius
+$r=\|x\|$. The common radius and constant are
+independent of ratios of positive eigenvalues
+of the orbit operator $C_x^*C_x$.
+Section~\ref{sec:compact-interaction} proves that
+the chart covers whole fibres and commutes with
+the contraction to $Z$.
+
+For $F$ in a compact subset of $S^\circ$, local
+universal families give smoothly varying central
+HE connections on $L_1\oplus F$. The elliptic
+complement has a uniformly positive lower bound
+on that compact set. Harmonic projections and
+the finite-regularity estimates vary smoothly,
+so finitely many charts have uniform constants.
+Their full harmonic representations are
+\begin{equation}\label{eq:moving-normal-model}
+ U\oplus\bigl(\C^2\oplus(\C^2)^*\bigr),
+ \qquad \dim_\C U=2,
+ \qquad \kappa=2\pi(2\mu_\eta(v)-\deg_\eta F)=-\zeta_1.
+\end{equation}
+The effective group is a circle, trivial on $U$.
+The factor two in the target comes from the rank
+of $F$; the multiplicity-space moment still uses
+ordinary trace.
+
+Near $o$ these two-factor gaps need not remain
+positive. Instead choose one fixed smaller
+neighborhood of $o$ covered by the three-factor
+chart. Its coverage includes moving fibres whose
+base tends to $o$, by the normalized-map
+compactness argument of
+Section~\ref{sec:compact-interaction}. The
+remaining part of the contracted locus is compact
+in $S^\circ$ and admits the preceding finite cover.
+
+On an overlap the transition is exactly
+$h_{ij,\eta}=\Phi_{j,\eta}^{-1}\Phi_{i,\eta}$.
+Both charts classify the same holomorphic
+bundles; HE and finite balancing change their
+presentations, not their isomorphism classes.
+The transitions are holomorphic on the complex
+quotient charts and commute with the contraction.
+A base-line twist of a local universal family
+does not change either assertion.
+For $\varepsilon_i=C_i(|\eta|+r_i^2)<1/2$,
+comparison with the same actual metric gives
+\begin{equation}\label{eq:overlap-metric}
+ \frac{1-\varepsilon_i}{1+\varepsilon_j}g_i
+ \le h_{ij,\eta}^*g_j
+ \le\frac{1+\varepsilon_i}{1-\varepsilon_j}g_i.
+\end{equation}
+This relative statement remains valid when
+positive orbit eigenvalues become arbitrarily
+small. A bound for ordinary derivatives of
+balancing gauges is not required.
+
+\subsection{From tensor comparison to ambient distances}
+Equip each $\Q_\zeta$ with the length distance
+$d_\zeta$ obtained from continuous paths which
+are smooth in representation-type strata on a
+finite subdivision, with finite one-sided
+lengths at endpoints. The complex zero fibre
+has the module-simple point
+\eqref{eq:simple-point}. The finite intrinsic
+metric theorem \cite[Section~5]{wuebben14}
+therefore applies: these are proper geodesic
+spaces with the compact quotient topology,
+their distances vary continuously with balanced
+representatives and levels, and every target
+point is approximated at nearby levels.
+The quotient norm radius is 1-Lipschitz.
+
+Shrink the actual chart to have squared-metric
+bounds $1/2$ and 2 on $r<2R$. Closed radial
+sublevels are compact in the quotient and their
+images are closed in the compact Hausdorff
+moduli space. An actual path starting at radius
+$r_0<R$ and leaving the radius-$R$ image must
+pay at least
+\begin{equation}\label{eq:first-exit}
+ \frac{R-r_0}{\sqrt2}
+\end{equation}
+before its first exit. A segment of length $L$
+remaining in the chart has radius at most
+$r_0+\sqrt2L$. This applies to paths in the entire
+moduli space and excludes a shortcut through
+a distant part of that space.
+
+Here is the resulting complete rescaling
+statement, with its basepoint data made explicit.
+Let $\eta_n\to0$ be generic, $\delta_n\downarrow0$,
+and
+\begin{equation}\label{eq:first-rescaling-data}
+ \nu_n=\frac{\zeta(\eta_n)}{\delta_n^2}\longrightarrow\nu.
+\end{equation}
+Let $p_n$ be balanced representatives at levels
+$\nu_n$ converging, after unitary adjustment,
+to a representative $p$ at level $\nu$. Then
+\begin{equation}\label{eq:first-rescaling-limit}
+ \bigl(M_{\sigma(\eta_n)},\delta_n^{-1}d_{g_{\eta_n}},
+       \Phi_{\eta_n}([\delta_np_n])\bigr)
+ \longrightarrow(\Q_\nu,d_\nu,[p])
+\end{equation}
+in pointed Gromov--Hausdorff distance.
+
+For completeness, homogeneity identifies the
+current finite model with $\delta_n\Q_{\nu_n}$.
+Finite near-minimizers on a bounded rescaled
+ball have bounded radius, by its 1-Lipschitz
+property, and scale into the actual chart.
+Conversely an actual competitor of length
+$O(\delta_n)$ cannot pay the fixed exit cost
+\eqref{eq:first-exit}; its radius is
+$O(\delta_n)$. Applying
+\eqref{eq:actual-quotient-comparison} to both
+types of competitors and taking both infima
+gives relative distance error
+\begin{equation}\label{eq:rescaled-relative-error}
+ O_L(|\eta_n|+\delta_n^2)
+\end{equation}
+on each bounded rescaled ball. This comparison
+also holds for pairs much closer than
+$\delta_n$. The inverse chart covers every
+actual bounded ball, and the model distance
+continuity identifies the full complete target.
+The estimate compares the actual metric with
+the \emph{current} quotient $\Q_{\nu_n}$;
+it does not prescribe a rate for
+$\Q_{\nu_n}\to\Q_\nu$.
+
+At a fixed point of $S^\circ$ the same proof
+uses \eqref{eq:moving-normal-model}. It gives
+the complete product of the flat harmonic
+tangent space $U$ and the Eguchi--Hanson
+quotient $T^*\PP^1$ at nonzero normalized level,
+or $U\times(\C^2/\{\pm1\})$ at zero level.
+The statements are uniform on compact subsets
+of $S^\circ$.
+
+\subsection{Two scales in the deepest fibre}
+Let $C_i(a,b)$ denote the finite planes identified
+with $P_i$, and put $\rho=a+b$. Their balanced
+radii and finite ambient diameters are
+$O(\sqrt\rho)$, by the finite core bound
+\cite[Section~6]{wuebben14}. The preceding
+first-exit argument, now at scale $\sqrt\rho$,
+gives
+\begin{equation}\label{eq:relative-plane-diameter}
+ \diam_{g_\eta}P_i
+  =\sqrt\rho\,(1+O(\rho))
+        D_i(a/\rho,b/\rho),
+\end{equation}
+where $D_i(A,B)$ is the ambient diameter of
+the indicated plane in the complete quotient
+$\Q_{(A,-A-B,B)}$. The bounded inverse of the
+linear parameter map makes $|\eta|=O(\rho)$
+in this chamber. The error is relative even
+when $D_i\to0$: shorter competitors stay in
+the same radius-$O(\sqrt\rho)$ region, so no
+division by a weak diameter occurs.
+
+An explicit calculation separates the scales.
+On $C_0$, use \eqref{eq:plane-zero-section} and
+fix $w$ positive real. Before taking the
+remaining common phase quotient of $(z,\varphi)$,
+minimizing over the eliminated phase gives
+\begin{equation}\label{eq:plane-metric-form}
+ |dz|^2+|d\varphi|^2
+ +\frac{(\operatorname{Re}\langle\varphi,d\varphi\rangle)^2}
+             {b+|\varphi|^2}
+ -\frac{(\operatorname{Im}\langle\varphi,d\varphi\rangle)^2}
+             {b+2|\varphi|^2}.
+\end{equation}
+It lies between one half and twice the flat
+form on $(z,\varphi)$. Infimizing over the
+remaining phase preserves these inequalities.
+Thus the induced plane metric is bounded
+between one half and twice Fubini--Study at
+line area $\pi a$. Its intrinsic diameter is
+at most $\pi\sqrt a/\sqrt2$, an ambient upper
+bound as well.
+
+For a lower bound use the points with $z=0$,
+$\varphi=\sqrt a(1,0)$ and $\sqrt a(0,1)$,
+and $w=\sqrt{a+b}$. Any pair of their compact
+group translates has Euclidean separation at
+least $\sqrt{2a}$. Quotient length distance
+dominates Euclidean orbit separation. Hence
+\begin{equation}\label{eq:uniform-plane-bounds}
+ \sqrt{2a}\le\diam_{d_\zeta}C_0(a,b)
+       \le\frac\pi{\sqrt2}\sqrt a.
+\end{equation}
+Interchanging vertices gives the corresponding
+bounds with $b$ for $C_2$. Combined with
+\eqref{eq:relative-plane-diameter}, this proves
+the ratio-independent bounds of
+Theorem~\ref{thm:main}.
+
+Suppose $a/b\to0$ and $\rho\to0$. After dividing
+by $\sqrt b$, put $\epsilon=a/b$. The entire
+plane satisfies
+$|z|^2+|\varphi|^2=\epsilon$ and
+$w=\sqrt{1+|\varphi|^2}=1+O(\epsilon)$.
+It approaches the wall point $w=1$ uniformly.
+Its stabilizer separates vertex~0 from the
+spherical pair $(1,2)$. The full normal
+representation has positive coordinates
+$(z,\varphi_1,\varphi_2)$, their negative
+duals, and effective level $\epsilon$.
+There is no tangent factor. A second rescaling
+by $\sqrt\epsilon$ gives the unit-level
+Calabi quotient on $T^*\PP^2$, and the whole
+plane converges to its zero section.
+
+In that complete quotient
+\[
+ \{(q,p):p(q)=0,\ |q|^2-|p|^2=1\}/\mathrm U(1),
+\]
+the map $[q,p]\mapsto[q]$ is a retraction to
+the zero section. Since $|q|\ge1$, its
+Fubini--Study differential is bounded by the
+ambient flat norm. Infimizing over vertical
+directions makes it 1-Lipschitz on the
+quotient. Ambient and intrinsic zero-section
+distances therefore agree, and their diameter
+is $\pi/2$. The relative comparisons at both
+scales prove
+\begin{equation}\label{eq:separated-diameter}
+ \frac{\diam_{g_\eta}P_0}{\sqrt a}\longrightarrow\frac\pi2
+       \quad(a/b\to0),
+ \qquad
+ \frac{\diam_{g_\eta}P_2}{\sqrt b}\longrightarrow\frac\pi2
+       \quad(b/a\to0).
+\end{equation}
+
+\subsection{Successive complete limits}
+The two-scale calculation is a particular case
+of a statement with moving centers. The necessary
+data include both the residual stability level
+and the normal basepoint.
+
+\begin{theorem}\label{thm:successive-limits}
+Start with the actual rescaling
+\eqref{eq:first-rescaling-data}--\eqref{eq:first-rescaling-limit}.
+Let the current finite levels $\nu_n$ converge
+to $\nu_*$ and the current basepoints converge
+to $[x_*]\in\Q_{\nu_*}$. In the full normal
+slice at $x_*$ write the representation as
+$U\oplus W'$ with compact stabilizer $H$,
+where $H$ acts trivially on $U$. Write the
+balanced coordinates of the basepoints as
+$(u_n,z_n)\to0$. Suppose $\sigma_n\downarrow0$ and
+\begin{equation}\label{eq:successive-data}
+ \frac{(\nu_n-\nu_*)|_{\Lie H}}{\sigma_n^2}
+       \longrightarrow\lambda,
+ \qquad \frac{z_n}{\sigma_n}\longrightarrow z_*
+\end{equation}
+after compact group adjustment. At physical
+scale $\delta_n\sigma_n$ the complete pointed
+limit is
+\begin{equation}\label{eq:successive-product}
+ U\times(W'///_\lambda H),\qquad (0,[z_*]).
+\end{equation}
+Here $///$ denotes the hyperk\"ahler quotient
+with complex moment zero and real moment
+$\lambda$. The statement may be iterated
+through any fixed finite succession satisfying
+\eqref{eq:successive-data} at each stage.
+The physical scale is the product of the
+successive scales. No bound on $|u_n|/\sigma_n$
+is required.
+\end{theorem}
+
+\begin{proof}
+The full normal-slice and moving-center
+theorems \cite[Sections~4 and~6]{wuebben14}
+give the comparison after the change
+$(u,z)\mapsto(u_n+\sigma_nu,\sigma_nz)$.
+On bounded normal balls its relative
+squared-metric error is
+\begin{equation}\label{eq:successive-error}
+ O_{x_*}(|\nu_n-\nu_*|+|u_n|+\sigma_n R)=o(1).
+\end{equation}
+Translation removes the tangential motion
+and does not change a moment level. The
+outer error \eqref{eq:rescaled-relative-error}
+is also multiplicative, so it adds to this
+error and is not amplified by dividing by
+$\sigma_n$.
+
+Choose a fixed normal sublevel whose twice-sized
+neighborhood lies in the slice. Its exit cost,
+divided by $\sigma_n$, tends to infinity.
+An actual path of length $O(\delta_n\sigma_n)$
+therefore remains in both the outer chart and
+the inner slice; its translated normal radius
+is $O(\sigma_n)$. Conversely every bounded
+normal-model near-minimizer maps into these
+charts. Taking both length infima proves
+relative distance comparison, and the common
+inverse gives full ball coverage.
+
+The existence of a module-simple point passes
+to every full normal Ext representation
+\cite[Section~6]{wuebben14}. Its finite metric
+theorem applies to the full $U\oplus W'$;
+the product decomposition then gives the
+complete target \eqref{eq:successive-product}.
+For finitely many stages the relative errors
+sum to $o(1)$, and the successive exit estimates
+and inverse charts give the asserted iteration.
+Each limiting center has its own fixed radius
+and constants. The statement requires the
+convergent data at every stage and makes no
+assertion about an infinite succession.
+\end{proof}
+
+For this quiver the nonzero $\zeta_0$ and
+$\zeta_2$ walls have the isolated
+$T^*\PP^2$ normal model. On a nonzero
+$\zeta_1$ wall the tangent factor is $\C^2$
+and the transverse model is $T^*\PP^1$.
+If the internal scale in that pair-moduli
+surface also vanishes, the same full normal
+iteration applies. This describes approaches
+from all six chambers without a lower bound
+on a ratio of positive scales.
+
+\subsection{The isolated and moving fibre constants}
+In the isolated example the model plane is
+the zero section of $T^*\PP^2$ at level
+$\kappa_t$. Its induced metric is exactly
+$\kappa_t g_{\rm FS}$, with line area $\pi\kappa_t$.
+The actual comparison has error $O(|t|)$
+on that entire section. The first-exit
+argument and the 1-Lipschitz retraction give
+\begin{equation}\label{eq:isolated-diameter}
+ \diam_{g_t}P_\pm=\frac\pi2\sqrt{\kappa_t}
+                       (1+O(|t|)).
+\end{equation}
+Dividing distances by $\sqrt{\kappa_t}$ gives
+the complete unit Calabi quotient, with the
+zero section as the limit of the actual plane.
+
+For a moving fibre $F_y$ over $y\in S^\circ$,
+the same argument in the two-arrow model
+gives
+\begin{equation}\label{eq:moving-diameter}
+ \operatorname{Area}(F_y)=\pi|\zeta_1|,
+ \qquad
+ \frac{\diam_{g_\eta}F_y}{\sqrt{|\zeta_1|}}
+       \longrightarrow\frac\pi2.
+\end{equation}
+The limit is through nonzero transverse
+levels as $\eta\to0$, uniformly for $y$
+in a compact subset of $S^\circ$.
+The complete normal limit is Eguchi--Hanson
+times the harmonic tangent plane. When
+$y\to o$, the fixed three-factor chart and
+the retained rescaled basepoint supply the
+applicable limit instead. These are the
+same fibres that specialize in
+\eqref{eq:proper-specialization}.

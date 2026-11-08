@@ -1,0 +1,184 @@
+\section{The projective-line family over the open stratum}\label{sec:projective-family}
+
+Let $S\to T$ be the auxiliary K3 resolution, with
+exceptional $(-2)$-curve $C$, and identify
+$S^\circ=S\setminus C=T\setminus\{o\}$.
+In the two-plane chamber write $D^\circ=D\setminus E$.
+The map $\pi:D^\circ\to S^\circ$ is a projective-line
+bundle. It has trivial monodromy on fibre cohomology,
+yet a nonzero algebraic Brauer obstruction. This
+distinction is visible in the global topology.
+
+\subsection{Algebraic, analytic and topological lifts}
+For a stable bundle $F$ of vector $w$, the groups
+$\Hom(L_1,F)$ and $\Ext^2(L_1,F)$ vanish, while
+$\dim\Ext^1(L_1,F)=2$. Local universal $w$-families
+therefore give rank-two extension bundles. Their
+projectivizations descend to $D^\circ$, with the
+order-two Brauer class of the universal $w$-family.
+This class remains nonzero on $S^\circ$: for a
+regular integral scheme the Brauer group injects
+into that of its function field
+\cite[Corollaries~1.8 and~1.10]{grothendieckbrauer}.
+Consequently $D^\circ$ has no presentation as the
+projectivization of an ordinary \emph{algebraic}
+rank-two vector bundle on $S^\circ$.
+
+The curve $C$ is primitive in the unimodular K3
+lattice, since its square is $-2$. The Gysin
+sequence gives
+\begin{equation}\label{eq:open-surface-cohomology}
+ H^1(S^\circ)=H^3(S^\circ)=H^4(S^\circ)=0,
+ \qquad H^2(S^\circ)=H^2(S)/\Z[C]\simeq\Z^{21}.
+\end{equation}
+The connected group $\mathrm{PGL}_2(\C)$ acts
+trivially on $H^0(\PP^1)$ and $H^2(\PP^1)$.
+The fibre cohomology local systems are thus
+constant. There is also no topological obstruction
+in degree three to lifting the projective bundle.
+The class $u=\alpha|_{D^\circ}$ supplies an explicit
+integral hyperplane class, because $\alpha\cdot f=1$.
+
+An ordinary holomorphic lift exists as well. Siu's
+top-degree coherent-cohomology theorem for a
+connected noncompact complex manifold
+\cite{siu} gives $H^2(S^\circ,\OO)=0$.
+Together with $H^3(S^\circ,\Z)=0$, the exponential
+sequence gives $H^2(S^\circ,\OO^*)=0$. The obstruction
+from $1\to\OO^*\to\mathrm{GL}_2(\OO)
+\to\mathrm{PGL}_2(\OO)\to1$ therefore vanishes.
+There is no contradiction: on this nonproper
+surface analytification need not retain an
+algebraic Brauer obstruction.
+
+\subsection{The divisor class, including its multiplicity}
+We need the precise class of $D$ to calculate the
+ring of $D^\circ$. Put $A=L_1$. The inequality
+$\zeta_1<0$ means $\mu_\eta(A)>\mu_\eta(E)$,
+so $\Hom(A,E)=0$ throughout the chamber.
+Moreover $\chi(A,E)=-(a_1,v)=0$.
+
+A nonzero map $E\to A$ has image
+$A(-B)\otimes I_Z$ for an effective divisor $B$
+and a zero-dimensional scheme $Z$. At $H$ its
+image is a torsion-free quotient of a semistable
+slope-zero bundle, so has nonnegative slope.
+As a subsheaf of $A$ it has slope $-H\cdot B$.
+Ampleness forces $B=0$. The kernel has slope zero
+and is semistable. The complete factor and defect
+classification of Lemma~\ref{lem:interacting-factor-list}
+then forces $Z=\varnothing$ and makes the kernel
+a bundle of vector $w$. Conversely the extension
+fibres, including both deepest planes, have a
+quotient to $A$. Hence $\Hom(E,A)\ne0$ precisely
+on $D$.
+
+The perfect complex $Rp_*R\Hom(A,\cE)$ has
+amplitude $[1,2]$, virtual rank zero, and is
+acyclic off $D$. Locally write it as
+$K^1\xrightarrow{d}K^2$. Its determinant section
+lies in $\det(K^1)^{-1}\otimes\det(K^2)$, whose
+first Chern class is $\theta_v(a_1)$ by
+Grothendieck--Riemann--Roch and
+\eqref{eq:mukai-marking}.
+
+We check that the section vanishes simply at a
+generic point of $D$. There the bundle fits into
+$0\to F\xrightarrow{j}E\xrightarrow{q}A\to0$,
+with $F$ $H$-stable. The extension sequence,
+$\Hom(F,A)=\Hom(A,F)=0$, and simplicity give
+\[
+ \begin{gathered}
+ \Hom(F,E)=\C j,\quad \Hom(E,A)=\C q,\quad
+ \Hom(E,E)=\C,\\
+ \Ext^1(E,A)=\C,\quad
+ \Ext^2(E,A)=0.
+ \end{gathered}
+\]
+In the exact sequence
+\[
+ \Ext^1(E,E)\xrightarrow{q_*}\Ext^1(E,A)
+ \longrightarrow\Ext^2(E,F)
+ \xrightarrow{j_*}\Ext^2(E,E),
+\]
+the last arrow is an isomorphism: its Serre dual
+sends $\operatorname{id}_E$ to $j$ between
+one-dimensional spaces. Thus $q_*$ is onto.
+For an infinitesimal deformation $\delta$ of $E$,
+$q_*\delta$ is the obstruction to extending $q$.
+Serre duality identifies this obstruction with
+the first variation of the local differential
+from $\Ext^1(A,E)$ to $\Ext^2(A,E)$, up to sign.
+After cancelling acyclic summands, $d$ is a scalar
+function with nonzero derivative. Its zero is
+simple. These tangents preserve the determinant
+because $H^1(X,\OO_X)=0$.
+
+Since $D$ is irreducible and is the whole
+divisorial support, we have proved
+\begin{equation}\label{eq:divisor-class}
+ [D]=\theta_v(a_1),\qquad D|_{P_i}=-h_i,
+ \qquad D\cdot f=-2.
+\end{equation}
+The multiplicity argument is needed: the last
+two intersection numbers by themselves would
+not identify the global divisor class.
+
+\subsection{The ring over the open stratum}
+Use the integral isotropic Mukai map
+$\theta_w:w^\perp/\Z w\to H^2(S,\Z)$ induced
+by the same $w$-family as in the construction.
+With $x$ from \eqref{eq:restriction-witnesses}, set
+\[
+ z=a_1+2x,\qquad d=\theta_w(z)|_{S^\circ}.
+\]
+Direct pairing gives $z\in v^\perp$,
+$(z,a_1)=0$ and $(z,w)=0$. The universal
+extension over $D^\circ$ gives
+\begin{equation}\label{eq:mukai-open-compatibility}
+ \theta_v(z)|_{D^\circ}=\pi^*\theta_w(z)|_{S^\circ}.
+\end{equation}
+Here is the descent argument for this global
+identity. On the universal gerbe, use the
+normalized rational Chern character of the
+twisted family; equivalently divide the Chern
+character of a quasi-universal family by its
+similitude. Additivity in the universal extension
+gives \eqref{eq:mukai-open-compatibility} in rational
+cohomology. A tautological line, a base line or
+a rational choice for the torsion gerbe affects
+the degree-two pushforward only through
+$(z,a_1)$, $(z,w)$ or $(z,v)$, all zero.
+Thus the identity descends globally, rather
+than only on contractible charts. Both sides
+are integral. Leray--Hirsch with $u$ and
+\eqref{eq:open-surface-cohomology} shows that
+$H^2(D^\circ,\Z)$ is torsion-free, so the
+rational equality is integral.
+
+Combining it with \eqref{eq:divisor-class} gives
+\begin{equation}\label{eq:relative-canonical}
+ D|_{D^\circ}=-2u+\pi^*d.
+\end{equation}
+By adjunction this is the relative canonical
+class: $M$ and $S^\circ$ have trivial canonical
+bundles. Choose a topological rank-two lift $\mathcal W$
+of the projective bundle, in the quotient
+convention for $\PP(\mathcal W)$. Its hyperplane class
+differs from $u$ by a pullback from the base.
+Tensoring $\mathcal W$ with a topological line bundle
+removes this difference. The normalized lift
+has relative canonical class
+$-2u+\pi^*c_1(\mathcal W)$, so injectivity of $\pi^*$
+gives $c_1(\mathcal W)=d$. Also $c_2(\mathcal W)=0$ by
+\eqref{eq:open-surface-cohomology}. The integral
+projective-bundle formula now yields
+\begin{equation}\label{eq:open-divisor-ring}
+ H^*(D^\circ,\Z)
+   =H^*(S^\circ,\Z)[u]/(u^2-du).
+\end{equation}
+This calculation specifies the hyperplane
+normalization. It is consistent with the
+nonzero algebraic Brauer class and the trivial
+fibre-cohomology monodromy: these record
+different aspects of the same family.

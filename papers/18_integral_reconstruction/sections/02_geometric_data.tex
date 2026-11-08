@@ -1,0 +1,158 @@
+\section{Geometric data and harmonic coordinates}\label{sec:data}
+
+We begin by specifying the contraction problems under consideration.
+The hypotheses distinguish the geometry needed to identify a compact
+moduli space from the local estimates needed to control its metric.
+They will be verified, including the entire ideal boundary, for the
+eightfold constructed in Section~\ref{sec:construction}.
+
+\subsection{Conventions}
+For a projective K3 surface \(X\), write
+\[
+ v(F)=\ch(F)\sqrt{\operatorname{td}_X}=(r,c,s),\qquad
+ ((r,c,s),(r',c',s'))=c\cdot c'-rs'-r's .
+\]
+Here and below \(\ch\) denotes the Chern character. We fix the
+holomorphic determinant. For a smooth family of Ricci-flat Kähler forms
+\(\omega_\theta\), set
+\(\deg_\theta F=c_1(F)\cdot[\omega_\theta]\) and
+\(\mu_\theta(F)=\deg_\theta F/\rank F\).
+The harmonic metric is the real part of the \(L^2\) Hermitian pairing
+on harmonic \((0,1)\)-deformations, without division by the volume of
+\(X\). In particular it is half the real connection convention.
+
+If \(\mathcal E\) is a universal topological \(K\)-class and
+\(p:X\times M\to M\), our Mukai homomorphism and family indices are
+\begin{equation}\label{eq:mukai-convention}
+ \theta_v(z)=\bigl[p_*(\ch(\mathcal E)\sqrt{\operatorname{td}_X}\,z^\vee)\bigr]_2,
+ \qquad
+ I_z=p_!(z^\vee\otimes\mathcal E),\qquad
+ \chi(F,z)=-(v(F),v(z)).
+\end{equation}
+For \(\theta_v\) the argument belongs to \(v^\perp\); the notation
+\(z^\vee\) reverses its degree-two component. A class on \(X\) in a
+family-index expression is pulled back without further notation.
+Base line bundles may change \(\mathcal E\); they do not change
+\(\theta_v|_{v^\perp}\).
+The Kähler form of the actual harmonic metric has class
+\begin{equation}\label{eq:harmonic-class}
+ [\Omega_\theta]=2\pi^2\theta_v(b_\theta),\qquad
+ b_\theta=\left(0,[\omega_\theta],
+       \frac{c_1(v)\cdot[\omega_\theta]}{\rank v}\right).
+\end{equation}
+This is the fixed-determinant Chern--Weil formula
+\cite[Proposition~4.3, (4.6)]{biswasschumacher} in the real Dolbeault
+normalization. Indeed, with
+\(\Delta(\mathcal E)=c_2(\mathcal E)-(r-1)c_1(\mathcal E)^2/(2r)\),
+that formula reads
+\(\omega_{\rm WP}/(2\pi^2)=2p_*(\Delta(\mathcal E)\omega_\theta)\).
+Our form is \(\omega_{\rm WP}/2\), and expansion of
+\eqref{eq:mukai-convention} gives \eqref{eq:harmonic-class}.
+The computation is valid for local twisted families because their
+endomorphism bundles are untwisted.
+
+\subsection{The class of contractions}\label{subsec:hypotheses}
+Fix an ample central class \(H=[\omega_0]\), a primitive positive-rank
+Mukai vector \(v\), and the smooth finite-dimensional family
+\(\omega_\theta\). We impose the following three hypotheses.
+
+\medskip\noindent
+\textbf{(G1) Compact chamber spaces.}
+There are finitely many adjacent chambers and a connected normal
+projective variety \(Z\). For all sufficiently small generic parameters,
+the full moduli space \(M_\theta\) of slope-stable bundles is smooth
+and projective and is also the generic Gieseker moduli space.
+There is a proper surjective morphism
+\(\pi_\theta:M_\theta\to Z\), constant as a complex morphism within
+each chamber. Points of \(Z\) are the \(H\)-polystable classes of
+vector \(v\). Every chamber object is \(H\)-semistable, and
+\(\pi_\theta\) assigns its \(H\)-graded class. The \(H\)-stable locus
+\(U\subset Z\) is connected and dense, and \(\pi_\theta\) is an
+isomorphism over \(U\). Fix a finite Whitney stratification refining
+the stable-factor decomposition types. The projective and fixed-\(H\)
+gauge topologies on \(Z\) agree.
+
+\medskip\noindent
+\textbf{(G2) Absence of an ideal boundary.}
+Every central ideal Hermitian--Yang--Mills object of vector \(v\) has
+zero lost charge, and every \(H\)-semistable sheaf of that vector is
+locally free. Thus surface gauge compactness, with the smoothly varying
+background forms, has no concentration.
+
+\medskip\noindent
+\textbf{(G3) Full convergent quotient models.}
+For each central class
+\[
+ E_p=\bigoplus_i F_i\otimes\C^{m_i},
+\]
+the full doubled Ext-quiver complex moment zero fibre contains a
+module-simple representation of the specified dimension vector.
+Here module-simple means that there is no nonzero proper submodule.
+All loops, multiplicities and trivial tangent directions are retained.
+The convergent symplectic coordinates give local classifying
+identifications compatible with the central graded class and the
+coarse analytic germ of \(Z\). In these germs,
+\begin{equation}\label{eq:classifying-diagram}
+ \pi_\theta f_{p,\theta}=f_{p,0}q_{p,\theta},
+\end{equation}
+where \(q_{p,\theta}\) is the projective quotient map to the affine
+zero quotient. This is initially a statement about germs, not about
+the full preimage of a target neighborhood.
+
+\medskip
+The analytic ingredients in (G3) have precise hypotheses. The
+common-slope normal form
+\cite[Proposition~2.1]{wuebben17} applies to locally free
+\(H\)-polystable bundles on a Ricci-flat K3, with arbitrary ranks and
+multiplicities. It is a convergent equivariant holomorphic change
+\(\Psi(x)=x+O(\|x\|^3)\), \(D\Psi=I+O(\|x\|^2)\), identifying the
+full obstruction ideal with the complex moment ideal.
+Together with the local harmonic reduction
+\cite[Theorem~1.1 and Sections~3,5]{wuebben15} and finite balancing
+\cite[Theorem~2.1]{wuebben14}, it gives
+\begin{equation}\label{eq:relative}
+ (1-e_p)g_{p,\zeta_p(\theta)}
+ \ \leq\ f_{p,\theta}^*g_\theta\
+ \leq (1+e_p)g_{p,\zeta_p(\theta)},\qquad
+ e_p=C_p(|\theta|+\|x\|^2).
+\end{equation}
+The inequalities concern tangents to actual smooth quotient pieces.
+The local theorem also covers all sufficiently nearby actual solutions.
+
+The finite quotient metric in \eqref{eq:relative} is induced by the
+central harmonic norm on \(\Ext^1(E_p,E_p)\). Its real moment covector,
+paired by ordinary multiplicity trace, is
+\begin{equation}\label{eq:levels}
+ \zeta_{p,i}(\theta)=2\pi\bigl(r_i\mu_\theta(v)-\deg_\theta F_i\bigr),
+ \qquad \sum_i m_i\zeta_{p,i}=0,\qquad r_i=\rank F_i.
+\end{equation}
+The compact group is \(\prod_iU(m_i)\), modulo the ineffective common
+scalar. The rank weights instead occur in the spectral mass
+\(\Vol(\omega_0)\sum_i r_i\tr(\xi_i^*\xi_i)\), whose small quadratic
+form is \(\|[\xi,x]\|^2\). These are different pairings.
+Constants in \eqref{eq:relative} depend on the fixed background and
+its complementary elliptic gaps. They do not depend on ratios of
+positive finite eigenvalues or on a nearby stabilizer. Formal
+quadraticity alone would not give this estimate; the controlled
+convergent coordinates are essential.
+
+\subsection{What the reconstruction retains}\label{subsec:retained}
+Retain \(U\) as a geometric space with its interpretation by stable
+bundles and local classifying families. Retain also the quotient
+domains with their actual families in this same moduli problem.
+On two domains, their overlap is the locus of pairs representing
+isomorphic bundles. Injective coarse classifying maps identify its
+two projections with open subsets and give a unique transition map.
+We take cochains only after these overlap spaces and maps have
+been specified. In particular a bare cochain complex of \(U\) is not
+enough to define the overlaps.
+
+These geometric maps retain stratum monodromy and all multiple
+compatibilities. Local fibre types alone do not supply them.
+Specialization of exceptional classes will be computed from a
+separate proper family in Section~\ref{subsec:specialization}.
+For the smaller middle-degree calculation, the global datum is
+instead the marked ring \(H^*(M\setminus E,\Z)\), where \(E\) is the
+chosen compact exceptional core. This complement generally contains
+exceptional fibres over other strata. In our eightfold it is larger
+than \(\pi^{-1}(U)\).

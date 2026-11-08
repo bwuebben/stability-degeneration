@@ -1,0 +1,21 @@
+% Schematic incidence, not a real-dimensional embedding of the complex surfaces.
+\begin{tikzpicture}[font=\small,>=Stealth]
+ \draw[blue!65!black,thick] (-3.6,0) ellipse[x radius=.56,y radius=.8];
+ \node[above] at (-3.6,.95) {$f\simeq\PP^1$};
+ \node[below] at (-3.6,-1) {$t\ne0$};
+ \draw[->] (-2.75,0)--(-1.4,0) node[midway,above] {$t\longrightarrow0$};
+ \filldraw[fill=blue!5,draw=gray!70]
+   (0,0) .. controls (-1.6,1.8) and (-1.6,-1.8) .. (0,0);
+ \filldraw[fill=blue!5,draw=gray!70]
+   (0,0) .. controls (1.6,1.8) and (1.6,-1.8) .. (0,0);
+ \draw[blue!65!black,thick]
+   (0,0) .. controls (-.9,.75) and (-.9,-.75) .. (0,0);
+ \draw[blue!65!black,thick]
+   (0,0) .. controls (.9,.75) and (.9,-.75) .. (0,0);
+ \fill (0,0) circle[radius=1.3pt];
+ \node[above] at (-.9,.99) {$P_0$};
+ \node[above] at (.9,.99) {$P_2$};
+ \node at (-.9,0) {$c_0$};
+ \node at (.9,0) {$c_2$};
+ \node[below] at (0,-1) {$t=0:\quad f\rightsquigarrow c_0+c_2$};
+\end{tikzpicture}

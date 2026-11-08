@@ -1,0 +1,268 @@
+\section{Convergent harmonic symplectic models}\label{sec:harmonic-models}
+
+We first explain how the local equations and the metric use the same
+coordinates. The qualitative quadraticity of the deformation problem
+is known. The point needed here is control of the coordinate change
+relative to the central harmonic norm.
+
+\subsection{Conventions and the harmonic recursion}
+Let $(X,\omega_0)$ be a Ricci-flat K3 surface and
+\[
+ E_0=\bigoplus_{i=1}^k F_i\otimes W_i
+\]
+a locally free slope-polystable bundle. The $F_i$ are pairwise
+nonisomorphic stable bundles of common slope. Put $r_i=\rank F_i$
+and $m_i=\dim W_i$, and choose a direct-sum Hermitian--Einstein
+metric $h_0$. Write
+\[
+ d=\ddbar_{\End E_0},\quad V=H^1(X,\End E_0),\quad
+ G=\prod_i\mathrm{GL}(W_i),\quad K=\prod_i\mathrm U(W_i).
+\]
+Ineffective factors are removed when taking effective quotients.
+Since $H^1(X,\OO_X)=0$, all first-order deformations preserve the
+holomorphic determinant. We use the $h_0,\omega_0$ harmonic norm.
+Degrees are $c_1(F)\cdot[\omega]$, with no division by the volume
+of $X$. The HE determinant connection varies with $\omega$.
+
+Let $H_q$ and $G_q$ be the harmonic projections and Green operators.
+At a fixed Sobolev order above the multiplication threshold, the
+analytic implicit-function theorem solves
+\begin{equation}\label{eq:harmonic-recursion}
+ a(x)=x-d^*G_2(a(x)\wedge a(x)),\qquad
+ F(x)=H_2(a(x)\wedge a(x))
+\end{equation}
+for small $x\in V$. Thus $a(x)=x+O(|x|^2)$, and $F=0$ is the
+full convergent Kuranishi obstruction. The operators commute with
+the parallel multiplicity matrices, so $a$ and $F$ are
+$G$-equivariant wherever both sides are defined. This is a local
+equivariance statement; a Euclidean ball is not $G$-invariant.
+
+The surface hypothesis has a useful consequence. Since there are no
+$(0,3)$-forms, $I-H_2=dd^*G_2$ on $(0,2)$-forms. Applying $d$ to
+\eqref{eq:harmonic-recursion} gives the exact identity
+\begin{equation}\label{eq:whole-curvature}
+ da(x)+a(x)\wedge a(x)=F(x).
+\end{equation}
+It holds before imposing integrability. We will use it to regard the
+obstruction itself as a moment map.
+
+\subsection{A symplectic coordinate change with cubic correction}
+Normalize the parallel holomorphic two-form $\sigma_X$ compatibly
+with the harmonic norm, and define on $(0,1)$-forms
+\[
+ \mathcal B(\alpha,\beta)=
+ \int_X\sigma_X\wedge\tr(\alpha\wedge\beta).
+\]
+In an adapted unitary coframe the antilinear operator
+\begin{equation}\label{eq:quaternionic-J}
+ J(A_1\bar\theta^1+A_2\bar\theta^2)
+   =-A_2^*\bar\theta^1+A_1^*\bar\theta^2
+\end{equation}
+satisfies $J^2=-1$ and
+$\mathcal B(\alpha,J\beta)=\langle\alpha,\beta\rangle_{L^2}$.
+It preserves harmonic forms. Indeed the common-slope HE equation
+makes the induced connection on $\End E_0$ anti-self-dual; the
+K\"ahler identities, or integration by parts in the displayed
+pairing followed by $J^2=-1$, give closedness and coclosedness of
+$J\beta$ when $\beta$ is harmonic. This is the usual quaternionic
+structure in the ASD moduli construction \cite{itoh}.
+
+Let $B=a^*\mathcal B$ on $V$. It is closed and holomorphic.
+Pairing curvature with a parallel endomorphism identifies its
+complex moment with $F$, by \eqref{eq:whole-curvature} and Stokes'
+theorem. For
+$H_\xi(a)=\int_X\sigma_X\wedge\tr(\xi a\wedge a)$,
+graded cyclicity of the trace gives
+\[
+ dH_\xi(a)(b)=\int_X\sigma_X\wedge
+       \tr\bigl(\xi(b\wedge a+a\wedge b)\bigr)
+       =\mathcal B([\xi,a],b).
+\]
+We use this convention for both the linear and nonlinear complex
+moments.
+
+The form $B_0$ is the Serre pairing on $V$. The correction
+$D a_x-I$ takes values in $\im d^*$ and is $O(|x|)$. A harmonic
+form is $\mathcal B$-orthogonal to $\im d^*$, by
+\eqref{eq:quaternionic-J} and ordinary harmonic orthogonality.
+The two terms linear in $Da_x-I$ therefore vanish, leaving
+\begin{equation}\label{eq:symplectic-quadratic-error}
+ B_x=B_0+O(|x|^2).
+\end{equation}
+
+\begin{proposition}\label{prop:symplectic-normal-form}
+There is a $K$-equivariant holomorphic coordinate change on a
+neighborhood of zero in $V$ such that
+\begin{equation}\label{eq:cubic-darboux}
+ \Psi^*B=B_0,\qquad
+ \Psi(x)=x+O(|x|^3),\qquad D\Psi_x=I+O(|x|^2).
+\end{equation}
+Under the fixed Serre identification of the obstruction target with
+the dual parallel algebra,
+\[
+ F\circ\Psi=Q,
+\]
+where $Q$ is the quadratic complex moment of the linear action on
+$(V,B_0)$. The equality identifies the full convergent obstruction
+ideals. Stable-factor ranks and multiplicities are arbitrary.
+\end{proposition}
+
+\begin{proof}
+Write $\Delta B=B-B_0$. The holomorphic radial homotopy supplies
+a one-form $\alpha$ with $d\alpha=\Delta B$. In coordinates,
+\[
+ \alpha_x(v)=\int_0^1 t\,\Delta B_{tx}(x,v)\,dt.
+\]
+Thus $\alpha=O(|x|^3)$, and it is $K$-invariant. On one smaller
+ball all forms $B_s=B_0+s\Delta B$, $0\le s\le1$, are
+nondegenerate. Solve $\iota_{V_s}B_s=-\alpha$. The resulting
+holomorphic vector fields are invariant and vanish to order three,
+uniformly in $s$. Their flows exist through time one on a common
+smaller neighborhood. Cartan's formula gives
+\[
+ \frac{d}{ds}\Psi_s^*B_s
+   =\Psi_s^*(\Delta B+d\iota_{V_s}B_s)=0.
+\]
+Their order of vanishing gives the two estimates in
+\eqref{eq:cubic-darboux}. Holomorphic $K$-equivariance extends
+locally to $G$-equivariance.
+
+The two maps $F\circ\Psi$ and $Q$ are moment maps for the same
+linear action and the same form $B_0$. Pairing their difference
+with every parallel endomorphism has zero differential. Both
+vanish at zero, so their difference is zero. The statement is an
+equality of analytic maps, hence of their generated ideals.
+\end{proof}
+
+Paired harmonic orthonormal bases identify the representation with
+a doubled Ext quiver, simultaneously normalizing its norm and
+complex pairing. To track ranks, let $\eta_X$ be the harmonic
+$(0,2)$-form with $\int_X\sigma_X\wedge\eta_X=1$. The harmonic
+representative of a multiplicity-trace covector $(q_i)$ is
+\[
+ \bigoplus_i r_i^{-1}I_{F_i}\otimes q_i\eta_X.
+\]
+These factors belong to the obstruction-target identification.
+The real moment is paired with the ordinary multiplicity trace.
+For a nearby polarization parameter $\eta$ its target is
+\begin{equation}\label{eq:general-real-level}
+ \zeta_i(\eta)=2\pi\bigl(r_i\mu_{\omega_\eta}(E_0)
+                          -\deg_{\omega_\eta}F_i\bigr),
+ \qquad \sum_i m_i\zeta_i(\eta)=0.
+\end{equation}
+A determinant-preserving lift subtracts a rank-weighted common
+scalar, which acts trivially on the deformation representation.
+
+The DG-Lie formality theorem of \cite[Theorem~5.1]{bmm} already
+applies to $E_0$, because $\Aut(E_0)$ is reductive. Proposition
+\ref{prop:symplectic-normal-form} specifies convergent symplectic
+coordinates and their derivative, which are the data required in
+the next comparison. Equal reduced Hilbert polynomials are not
+part of its hypotheses.
+
+\subsection{The actual harmonic metric}
+The full local HYM theorem \cite[Theorem~1.1 and Sections~3,5]{wuebben15}
+applies to the convergent zero locus $F^{-1}(0)$. It gives nested
+coefficient neighborhoods and an open classifying homeomorphism to
+the actual fixed-determinant HYM moduli, smooth on smooth quotient
+pieces and covering every sufficiently nearby solution. At a
+balanced coefficient $x$, its comparison form is
+\begin{equation}\label{eq:complex-orbit-minimum}
+ g_{\rm fin}([b],[b])=
+       \inf_{\xi\in\Lie G}\|b-C_x\xi\|^2,
+ \qquad C_x\xi=[\xi,x].
+\end{equation}
+The finite orbit operator is $C_x^*C_x$; its positive eigenvalues
+measure the nonzero infinitesimal orbit directions.
+The actual harmonic metric lies between $1-C(|\eta|+|x|^2)$ and
+$1+C(|\eta|+|x|^2)$ times this form. The comparison concerns
+tangents to actual smooth quotient pieces, not all Zariski tangent
+vectors at a singular point. Constants depend on the fixed central
+background, its complementary elliptic gaps and bounded smooth
+parameter data. They do not depend on ratios of positive eigenvalues
+of $C_x^*C_x$ or on the nearby stabilizer type.
+
+We record precisely how the coordinate change preserves this order.
+Pull back the flat real K\"ahler form by $\Psi$. By
+\eqref{eq:cubic-darboux} its error is $O(r^2)$ and its moment is
+$\mu\circ\Psi=\mu+O(r^4)$, where $r=|x|$. These forms satisfy
+the exact Hamiltonian identity. The finite balancing theorem
+\cite[Theorem~2.1]{wuebben14}, applied on balls of radius comparable
+to $r$, changes the real orbit by $e^S$, $\|S\|=O(r^2)$, to put
+the pulled-back and flat moments at the same central target.
+The theorem includes the inverse correspondence and permits the
+invariant analytic subset $Q^{-1}(0)$.
+
+For every $\xi$, equivariance gives
+$D\Psi_x C_x\xi=C_{\Psi(x)}\xi$ and
+\[
+ (1-Cr^2)\|b-C_x\xi\|^2
+ \le\|D\Psi_x(b-C_x\xi)\|^2
+ \le(1+Cr^2)\|b-C_x\xi\|^2.
+\]
+Infimizing preserves the inequalities. The derivative of the
+varying balancing gauge contributes a complex orbit vector,
+which disappears in this same infimum; its value has norm
+distortion $1+O(r^2)$. Thus a derivative estimate for that gauge,
+which need not be uniform at a stabilizer change, is unnecessary.
+
+\begin{corollary}\label{cor:harmonic-comparison}
+Put $\Q_\zeta=\{Q=0,\mu=\zeta\}/K$, with its flat quotient
+metric. On fixed nested neighborhoods there are classifying
+identifications $\Phi_\eta$ with the actual HYM moduli satisfying
+\begin{equation}\label{eq:actual-quotient-comparison}
+ (1-C(|\eta|+r^2))g^{\rm quot}_{\zeta(\eta)}
+ \le\Phi_\eta^*g_\eta
+ \le(1+C(|\eta|+r^2))g^{\rm quot}_{\zeta(\eta)}
+\end{equation}
+on every smooth quotient piece. Their images cover every sufficiently
+nearby solution. The constants are independent of positive finite
+scale ratios. The fixed holomorphic family
+$x\mapsto(E_0,\ddbar_0+a(\Psi(x)))$ determines the classifying
+maps; the HE gauge corrections preserve its isomorphism classes.
+\end{corollary}
+
+On smooth complex quotient charts the classifying maps are
+holomorphic. Their open injectivity makes them biholomorphisms
+onto their images. Statements about entire exceptional fibres
+will require the additional compactness arguments below; they
+are not consequences of a germ identification alone.
+
+\subsection{Mukai and harmonic normalizations}
+For a universal family $\cE$ on $X\times M$, fix
+\begin{equation}\label{eq:mukai-marking}
+ \theta_v(x)=\left[p_{M*}\bigl(\operatorname{ch}(\cE)
+       \sqrt{\operatorname{td}_X}\,p_X^*(x^\vee)\bigr)\right]_2,
+ \qquad x^\vee=(r,-c,s),\quad x\in v^\perp.
+\end{equation}
+The perpendicular is taken in the full integral Mukai lattice.
+Twisting $\cE$ by a line from $M$ does not change this map on
+$v^\perp$. We also use its real extension and the
+Beauville--Bogomolov form $q$, including the rational dual form
+on curve functionals.
+
+The unnormalized real Dolbeault metric is half the usual real
+connection $L^2$ metric. In this convention its K\"ahler class is
+\begin{equation}\label{eq:harmonic-class}
+ [\Omega_\eta]=2\pi^2\theta_v\left(
+  0,[\omega_\eta],
+       \frac{c_1(v)\cdot[\omega_\eta]}{\rank v}\right).
+\end{equation}
+To verify the factor, set
+$\Delta(\cE)=c_2(\cE)-(r-1)c_1(\cE)^2/(2r)$.
+Biswas--Schumacher's fixed-determinant formula
+\cite[Proposition~4.3, (4.6)]{biswasschumacher} is
+\[
+ \frac{\omega^{\rm WP}}{2\pi^2}
+ =-\frac1r p_{M*}\bigl(\operatorname{ch}_2(\End\cE)\omega_\eta\bigr)
+ =2p_{M*}\bigl(\Delta(\cE)\omega_\eta\bigr).
+\]
+Their form is $iG_{j\bar k}\,dz_j\wedge d\bar z_k$, whereas
+the real metric $\operatorname{Re}G$ has K\"ahler form
+$\omega^{\rm WP}/2$. Expanding
+\eqref{eq:mukai-marking} identifies the last pushforward with
+the Mukai expression in \eqref{eq:harmonic-class}. This also
+shows that base-line twists cancel. In particular cohomological
+periods and quotient moment scales can now be compared without
+an unspecified normalization constant.
+

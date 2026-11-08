@@ -1,0 +1,332 @@
+\section{Whole fibres and quantitative global distances}\label{sec:global}
+
+The local estimates have relative errors, whereas gluing distances
+introduces additive errors. We keep these separate. First we obtain
+whole-fibre charts and the central completion. We then compare short
+ambient pairs in both directions, and finally concatenate geodesics.
+
+\subsection{Coverage and compatibility}
+\begin{proposition}\label{prop:coverage}
+Under \textup{(G1)--(G3)}, local classifying charts can be chosen to
+contain the whole preimages of smaller target neighborhoods, for
+all sufficiently small generic parameters. For each prescribed
+relative accuracy they give finite covers with that accuracy.
+Their coarse transitions satisfy all cocycle identities, and if
+two squared-metric errors are \(\epsilon_i,\epsilon_j<1/2\), then
+\begin{equation}\label{eq:overlap-metric}
+ \frac{1-\epsilon_i}{1+\epsilon_j}g_i
+ \le h_{ij,\theta}^*g_j
+ \le\frac{1+\epsilon_i}{1-\epsilon_j}g_i .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+By (G2), a sequence of nearby chamber connections has a subsequence
+converging smoothly modulo gauge to a central polystable bundle.
+Indeed surface compactness first gives an ideal limit; the
+small-energy estimates and removability leave only positive
+integral lost charge, which (G2) excludes. The smoothly varying
+background metrics and determinant connections preserve these
+local estimates; see also \cite[Lemma~3.2]{wuebben17}.
+
+Suppose \(\theta_n\to0\) and \(\pi_{\theta_n}(E_n)\to p\).
+Let \(E\) be a smooth gauge subsequential limit.
+Inverse coverage in the local solution chart at \(E\) gives
+balanced coefficients \(x_n\to0\), after compact-group adjustment.
+Equation~\eqref{eq:classifying-diagram} identifies their target
+classes with the affine invariants of \(x_n\), which converge
+to the vertex at \([E]\). Since \(Z\) is Hausdorff, \([E]=p\).
+
+Fix an outer chart at \(p\). If no smaller target neighborhood
+and parameter ball had their whole preimages inside it, choose
+points outside the chart with targets tending to \(p\) and
+parameters tending to zero. The preceding conclusion puts them
+in its open actual solution neighborhood, a contradiction.
+Finite invariant properness bounds balanced representatives with
+bounded invariants and small levels. Shrinking the target neighborhood
+therefore puts its whole preimage in any chosen inner coefficient
+ball. Conversely, the finite projective quotient is onto its affine
+target, and its small representatives classify actual nearby
+bundles. This gives coverage on both sides.
+
+For a prescribed accuracy, shrink an outer chart separately at
+each \(p\) using \eqref{eq:relative}. Extract a finite subcover of
+their inner target images, and only then shrink the common parameter
+ball. This order avoids any claim of a uniform complementary
+elliptic gap for separate stable backgrounds approaching a
+reducible limit. A chart at the reducible limit covers that region.
+
+On overlaps put \(h_{ij,\theta}=f_{j,\theta}^{-1}f_{i,\theta}\).
+These are the unique coarse identifications of the same holomorphic
+bundle classes, so they satisfy \(h_{jk,\theta}h_{ij,\theta}
+=h_{ik,\theta}\). They are holomorphic in complex coordinates and
+smooth on smooth quotient pieces. Comparing each finite metric
+with the same actual harmonic metric gives
+\eqref{eq:overlap-metric}.
+\end{proof}
+
+Universal families on overlapping domains can differ by a base
+line or a gerbe presentation. The coarse transition used above is
+unaffected. Proposition~\ref{prop:coverage} also supplies the
+geometric cover used in Proposition~\ref{prop:descent}.
+
+\subsection{The central length space}
+Give each central representation-type stratum its harmonic metric.
+Let \(d_0\) be the infimum of the lengths of paths with finitely
+many smooth stratum pieces and finite one-sided endpoint lengths.
+
+\begin{proposition}\label{prop:central-completion}
+The function \(d_0\) is a metric inducing the projective topology
+of \(Z\). It makes \(Z\) a compact geodesic space and is the
+completion metric of the intrinsic harmonic metric on \(U\).
+A finite upper bound \(D_*\ge\diam(Z,d_0)\) can be constructed
+from one finite central chart cover and its coarse metric bounds.
+\end{proposition}
+
+\begin{proof}
+At zero level the model radius is the distance to the cone vertex.
+Small model neighborhoods thus connect nearby points at cost
+bounded by a fixed multiple of their radii. The local tensor
+comparison transfers these paths to \(Z\). Connectedness and a
+finite chart cover make all distances finite.
+
+There is also a lower bound for leaving a chart. With squared
+metric comparison between \(1/2\) and \(2\), a path beginning at
+model radius \(r<R\) and leaving the radius-\(R\) sublevel has
+length at least
+\begin{equation}\label{eq:exit}
+ (R-r)/\sqrt2 .
+\end{equation}
+The model radius is 1-Lipschitz, and the image of a closed sublevel
+is compact, so a first exit must meet its radial boundary.
+This applies to ambient paths, without assuming that their later
+portions remain in the chart. Local finite metric lower bounds,
+together with \eqref{eq:exit}, separate distinct points.
+The short local paths give the reverse topological continuity.
+Thus \(d_0\) induces precisely the topology of \(Z\).
+Projective compactness gives metric compactness; the path definition
+makes it a length metric and hence a geodesic metric.
+
+Apply the perturbation proof of
+Proposition~\ref{prop:principal-completion} to a finite subdivision
+of a central actual path. Both the original and perturbed curves
+are compared with the same local model, using arbitrarily small
+relative errors. The simple joins have arbitrarily small total
+cost. Therefore the intrinsic distance on \(U\) is \(d_0|_U\).
+Density and compactness identify its completion with \(Z\).
+
+For the last assertion choose a finite cover by connected inner
+radial neighborhoods with coarse comparison at most \(2\).
+Its intersection graph is connected. Choose an overlap point for
+each edge in a spanning tree. Within a chart, join its center
+and these points through its cone vertex, with length bounded by
+its radius times the coarse comparison factor. A simple tree path
+visits each chart at most once. The sum of these finitely many
+local bounds, including the two endpoint joins, is a permissible
+\(D_*\). No unknown global distance enters this construction.
+\end{proof}
+
+\subsection{Finite-model discrepancies}
+Fix a central chart \(p\), and write \(Q_\zeta\) for its complete
+finite quotient, \(d_\zeta\) for its intrinsic metric, \(r_\zeta\)
+for the norm of a balanced representative, and
+\(q_\zeta:Q_\zeta\to Q_0\) for the projective quotient map.
+For \(r>0\), define
+\begin{align}
+ b_{p,r}(\theta)
+ &=\sup_{\substack{q_\zeta(x)=z,\ q_\zeta(x')=z'\\
+                         r_0(z),r_0(z')\le r}}
+       |d_\zeta(x,x')-d_0(z,z')|,\label{eq:finite-b}\\
+ a_{p,r}(\theta)
+ &=\sup_{\substack{q_\zeta(x)=z\\r_0(z)\le r}}
+       |r_\zeta(x)-r_0(z)|,\qquad
+ \widetilde a_{p,r}(\theta)
+ =\sup_{r_\zeta(x)\le r}|r_0(q_\zeta(x))-r_\zeta(x)|,
+ \label{eq:finite-a}
+\end{align}
+where \(\zeta=\zeta_p(\theta)\); the \(d_0\) in
+\eqref{eq:finite-b} is the finite zero-model distance.
+We distinguish it from the central global distance by its arguments.
+
+\begin{lemma}\label{lem:discrepancies}
+The three quantities in \eqref{eq:finite-b}--\eqref{eq:finite-a}
+are finite and tend to zero as \(\theta\to0\).
+\end{lemma}
+
+\begin{proof}
+Properness of the projective quotient and finite invariant
+properness bound balanced representatives uniformly for small
+levels and bounded target radii. The source-radius condition
+already gives bounded representatives in the other supremum.
+All relevant sets are compact.
+
+If one convergence failed, take a contradicting sequence and
+convergent subsequences of its balanced representatives.
+Source and target have the same affine invariants. At zero level
+uniqueness of the balanced orbit identifies their limits.
+Continuity of radius proves the two radial assertions. Finite
+intrinsic parameter continuity
+\cite[Theorem~5.1]{wuebben14}, applied to the two pairs of
+representatives, proves the distance assertion. There are finitely
+many parameter faces; passage to a face subsequence covers all
+approaches.
+\end{proof}
+
+These are variational functions of specified finite moment equations,
+norms and path distances. No semialgebraicity of those distances
+is required. The two radial functions serve different purposes:
+one bounds the preimage of a target ball, the other the image of
+a source ball.
+
+\subsection{From short pairs to global distortion}
+For a correspondence \(R\subset X\times Y\), write
+\[
+ \dis R=\sup_{(x,y),(x',y')\in R}
+          |d_X(x,x')-d_Y(y,y')|.
+\]
+
+\begin{lemma}\label{lem:short-correspondence}
+Let \(X,Y\) be nonempty compact length spaces and \(R\) a
+correspondence. Suppose \(\ell>0\), \(\alpha,\beta\ge0\), and
+\[
+ \begin{aligned}
+ d_X(x,x')\le\ell&\ \Longrightarrow\
+ d_Y(y,y')\le(1+\alpha)d_X(x,x')+\beta,\\
+ d_Y(y,y')\le\ell&\ \Longrightarrow\
+ d_X(x,x')\le(1+\alpha)d_Y(y,y')+\beta
+ \end{aligned}
+\]
+for all related pairs. With \(D=\diam X\) and
+\(q=\alpha+\beta/\ell\), one has
+\begin{equation}\label{eq:short-bound}
+ \dis R\le qD+\beta,\qquad
+ d_{\rm GH}(X,Y)\le\tfrac12(qD+\beta),\qquad
+ \diam Y\le(1+q)D+\beta .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Subdivide an \(X\)-geodesic of positive length \(d_X(x,x')\)
+into \(N=\lceil d_X(x,x')/\ell\rceil\) segments. Choose arbitrary
+related \(Y\)-points at the interior division points and the
+prescribed endpoints. Summing gives
+\(d_Y(y,y')\le(1+q)d_X(x,x')+\beta\).
+For zero \(X\)-distance the local inequality gives this directly.
+Interchanging \(X,Y\) gives the reverse global inequality.
+If \(d_Y\ge d_X\), their difference is at most \(qd_X+\beta\le qD+\beta\).
+If \(d_X\ge d_Y\), it is at most \(qd_Y+\beta\le qD+\beta\).
+This proves the distortion estimate, and the other assertions
+follow from the correspondence bound and the first global inequality.
+\end{proof}
+
+We now specify every quantity in the global bound. Choose
+\(0<\epsilon_j\downarrow0\), with \(\epsilon_j<1/8\).
+At each central point choose an outer coefficient radius \(16r\)
+where the central error in \eqref{eq:relative} is at most
+\(\epsilon_j/2\). Extract a finite cover by central radius-\(r/4\)
+images; write its radii as \(r_{ji}\).
+After that choice, shrink a parameter neighborhood \(\mathcal P_j\)
+so the nearby outer errors are at most \(\epsilon_j\), whole-preimage
+coverage holds, and
+\[
+ a_{i,r_{ji}},\ \widetilde a_{i,r_{ji}}<r_{ji}/16,
+ \qquad b_{i,r_{ji}}<r_{ji}.
+\]
+Choose any
+\begin{equation}\label{eq:global-parameters}
+ \begin{gathered}
+ 0<\ell_j<\min_i\frac{r_{ji}}{16\sqrt2},\qquad
+ \alpha_j=\sqrt{\frac{1+\epsilon_j}{1-\epsilon_j}}-1,\\
+ \beta_j(\theta)=\sqrt{1+\epsilon_j}\,
+                  \max_i b_{i,r_{ji}}(\theta).
+ \end{gathered}
+\end{equation}
+
+\begin{figure}[tb]
+ \centering
+ \resizebox{\linewidth}{!}{\input{figures/code/distance_buffers.tex}}
+ \caption{The radius buffers for one chart, schematically and
+ not to scale. A short pair starts in the central \(r/4\)
+ ball and remains in the range where both finite discrepancies
+ apply. The outer \(16r\) chart excludes ambient shortcuts.
+ The source start bound uses \(a_r\); the reverse transfer
+ of its endpoint uses \(\widetilde a_r\).}
+ \label{fig:buffers}
+\end{figure}
+
+\begin{theorem}\label{thm:quantitative}
+Under \textup{(G1)--(G3)}, let \(R_\theta\) be the graph of
+\(\pi_\theta\), with the harmonic distance on \(M_\theta\) and
+the completion distance on \(Z\). Then
+\begin{equation}\label{eq:global-distortion}
+ \dis R_\theta\le
+ \inf_{j:\,\theta\in\mathcal P_j}
+ \left[\left(\alpha_j+\frac{\beta_j(\theta)}{\ell_j}\right)D_*
+              +\beta_j(\theta)\right].
+\end{equation}
+For each fixed \(j\), \(\mathcal P_j\) contains all sufficiently
+small generic parameters and \(\beta_j(\theta)\to0\).
+The right side tends to zero through arbitrary adjacent chambers.
+Consequently \((M_\theta,d_\theta)\) converges in compact
+Gromov--Hausdorff topology to the harmonic completion \((Z,d_0)\).
+\end{theorem}
+
+\begin{proof}
+Fix \(j\) and one of its charts, and abbreviate \(r=r_{ji}\),
+\(\epsilon=\epsilon_j\). First suppose both central endpoints have
+model radius at most \(r\). Their finite central distance is at
+most \(2r\), by joining through the cone vertex. Their finite
+source distance is at most \(2r+b<3r\), and source radii are
+at most \(r+a<17r/16\).
+Finite near-minimizers stay inside the radius-\(16r\) chart,
+because radius is 1-Lipschitz. Their actual images give competitors
+of length less than \(4r\). On the other hand, any actual path
+leaving that outer chart pays more than \(10r\) before its first
+exit, by \eqref{eq:exit}. The closed sublevel images and
+whole-preimage coverage justify this barrier for ambient paths.
+Thus taking infima in both directions gives
+\begin{equation}\label{eq:local-ambient}
+ \begin{aligned}
+ d_\theta(x,x')&\le(1+\alpha_j)d_0(\pi_\theta x,\pi_\theta x')
+                         +\beta_j(\theta),\\
+ d_0(\pi_\theta x,\pi_\theta x')
+              &\le(1+\alpha_j)d_\theta(x,x')+\beta_j(\theta).
+ \end{aligned}
+\end{equation}
+The relative factor compares the two squared-metric errors;
+the larger required additive factor is \(\sqrt{1+\epsilon}\,b\).
+
+It remains to put every short ambient pair in such a chart.
+Choose an inner radius-\(r/4\) chart containing \(\pi_\theta x\).
+Its entire source preimage has radius at most \(5r/16<r/3\).
+If the central distance to \(\pi_\theta x'\) is at most \(\ell_j\),
+a central near-minimizer cannot reach radius \(r/2\): its exit
+cost is at least \(r/(4\sqrt2)>\ell_j\).
+Hence the other target endpoint is inside radius \(r/2\).
+If instead the source distance is at most \(\ell_j\), the source
+exit cost from radius at most \(r/3\) to radius \(r/2\) is at least
+\(r/(6\sqrt2)>\ell_j\). Thus \(x'\) has source radius less than
+\(r/2\). The function \(\widetilde a\) then puts its target
+inside radius \(r\). In either case both inequalities
+\eqref{eq:local-ambient} apply.
+
+Use Lemma~\ref{lem:short-correspondence} with
+\(X=(Z,d_0)\), \(Y=(M_\theta,d_\theta)\), and the transposed
+graph of \(\pi_\theta\). Both spaces are compact length spaces
+and \(\diam X\le D_*\) by
+Proposition~\ref{prop:central-completion}.
+This proves the expression in brackets for each admissible \(j\).
+Taking its infimum proves \eqref{eq:global-distortion}.
+
+For fixed \(j\), the finite discrepancy lemma gives
+\(\beta_j(\theta)\to0\). Therefore the limit superior of the
+bound is at most \(\alpha_jD_*\). Now let \(j\to\infty\).
+The correspondence estimate in \eqref{eq:short-bound} proves
+the stated convergence.
+\end{proof}
+
+The construction first fixes accuracy, then selects a finite
+cover, then takes the parameter limit. It gives an explicit
+variational modulus, with no assertion of a universal power law.
+In particular it does not use qualitative global
+Gromov--Hausdorff convergence as a premise.

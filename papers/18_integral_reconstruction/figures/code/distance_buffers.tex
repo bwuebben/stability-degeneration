@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Latex,every node/.style={font=\small}]
+ \draw[thick,->] (0,0) -- (11.2,0) node[right] {radius};
+ \foreach \x/\lab in {0/0,1.6/{r/4},3/{r/2},5.1/r,10.1/{16r}} {
+  \draw (\x,.1)--(\x,-.1);
+  \node[below=4pt] at (\x,0) {\(\lab\)};
+ }
+ \draw[very thick,blue] (.15,.5) -- (1.6,.5);
+ \node[above] at (1,.5) {central start};
+ \draw[very thick,blue,->] (1.6,1.35) -- (3,1.35);
+ \node[above,align=center] at (2.3,1.35)
+    {a path of length \(\ell<r/(16\sqrt2)\)\\cannot reach \(r/2\)};
+ \draw[thick,<->] (5.1,.6) -- (10.1,.6);
+ \node[above,align=center] at (7.6,.6)
+    {outer buffer\\first-exit cost \(>10r\)};
+ \node[align=center] at (6.9,2.0)
+    {whole-preimage coverage\\source start \(<r/3\)};
+ \draw[dashed,->] (5.5,1.8) to[out=190,in=20] (2.1,.2);
+\end{tikzpicture}

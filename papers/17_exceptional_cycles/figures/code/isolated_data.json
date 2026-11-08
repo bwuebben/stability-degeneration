@@ -1,0 +1,60 @@
+{
+  "scope": "Exact lattice, polynomial-coefficient, Fujiki and normalization identities only; not geometric existence, global contraction, compactness or metric proof.",
+  "vectors": {
+    "a": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "b": [
+      2,
+      0,
+      1,
+      -5
+    ],
+    "v": [
+      3,
+      0,
+      1,
+      -4
+    ],
+    "rho": [
+      "-1",
+      "0",
+      "-1",
+      "6"
+    ],
+    "w0": [
+      9,
+      0,
+      3,
+      -10
+    ]
+  },
+  "orthogonal_gram": [
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      -10,
+      14
+    ],
+    [
+      0,
+      14,
+      -24
+    ]
+  ],
+  "orthogonal_determinant": 88,
+  "primitive_factor_unit_minor": 1,
+  "line_square": "-5/2",
+  "plane_square": "3",
+  "plane_c2": "-3",
+  "area_coefficient_over_pi2": "44/3",
+  "volume_coefficient_over_pi4": "968/9",
+  "note_sha256": {}
+}

@@ -1,0 +1,380 @@
+\section{The compact family with interacting strata}\label{sec:compact-interaction}
+
+We now construct the family of Theorem~\ref{thm:main}. Its
+central factor list is short, but one factor varies in a K3
+surface. The degeneration of that surface accounts for the
+interaction at the deeper point.
+
+\subsection{Lattice realization and the polarization plane}
+The lattice \eqref{eq:intro-lattice} has signature $(1,2)$
+and determinant $64$. In three hyperbolic planes with
+$e_i\cdot f_i=1$, it has the primitive embedding
+\begin{equation}\label{eq:primitive-embedding}
+ H=e_1+f_1,\qquad D_1=e_2-3f_2,\qquad
+ D_2=-4f_2+e_3-4f_3.
+\end{equation}
+Projection to the three $e$-coordinates restricts to the
+identity on these generators, proving primitivity. Morrison's
+theorem \cite[Corollary~2.9(i)]{morrison} realizes the lattice
+as the full N\'eron--Severi group of a projective K3 surface.
+A root would solve
+\[
+ x^2-3y^2-4yz-4z^2=-1.
+\]
+Modulo four, even $y$ would give $x^2=3$, and odd $y$ would
+give $x^2=2$. There are no roots. Choose the positive component
+so that $H$ is ample.
+
+For the line bundles $L_i$ introduced above, the Mukai data are
+\begin{equation}\label{eq:interacting-vectors}
+ \begin{gathered}
+ a_0=(1,0,1),\quad a_1=(1,D_1,-2),\quad a_2=(1,D_2,-3),\\
+ v=(3,D_1+D_2,-4),\qquad w=a_0+a_2=(2,D_2,-2),\\
+ ((a_i,a_j))_{i,j=0}^2=
+       \begin{pmatrix}-2&1&2\\1&-2&1\\2&1&-2\end{pmatrix}.
+ \end{gathered}
+\end{equation}
+The pair sums $a_0+a_1$ and $a_1+a_2$ are spherical,
+whereas $w$ is primitive isotropic and $(a_1,w)=2$.
+Every nonzero difference of the line Chern classes has
+$H$-degree zero. Neither it nor its negative is effective,
+so cross Hom and second Ext groups vanish. The three edge
+dimensions of the doubled Ext quiver are therefore $1,2,1$.
+
+For $\eta=(s,t)$ the Ricci-flat form has class
+$H+sD_1+tD_2$ and volume $1-3s^2-4st-4t^2$.
+The degrees of $L_0,L_1,L_2$ are
+$0,-6s-4t,-4s-8t$. Substitution in
+\eqref{eq:general-real-level} gives
+\eqref{eq:intro-levels}, a rank-two linear map. The equations
+$\zeta_i=0$ will be shown to be all the nearby actual walls.
+
+\subsection{An exhaustive central factor calculation}
+Define
+\[
+ Q(k,j)=6k^2+8kj+8j^2=4k^2+8(j+k/2)^2.
+\]
+An $H$-slope-zero rank-one torsion-free sheaf has vector
+$c=(1,kD_1+jD_2,1-Q(k,j)/2-n)$, where $n\ge0$.
+
+\begin{lemma}\label{lem:interacting-factor-list}
+The $H$-polystable classes of total vector $v$ are precisely
+the stable classes, the classes $L_1\oplus F$ with $F$
+$H$-stable of vector $w$, and $E_0=L_0\oplus L_1\oplus L_2$.
+For vector $w$ the only strictly polystable class is
+$L_0\oplus L_2$. All the semistable sheaves in these two
+problems are locally free, and no central ideal object has
+positive lost charge.
+\end{lemma}
+
+\begin{proof}
+For residual vector $v_l=(3,D_1+D_2,-4+l)$, a stable
+rank-three factor has square $2-6l\ge-2$, so $l=0$.
+For a rank partition $1+2$, the complementary square is
+\begin{equation}\label{eq:interacting-bound}
+ (v_l-c)^2=-2+F(k,j)-4(n+l),\qquad
+ F(k,j)=20k+24j-18k^2-24kj-24j^2.
+\end{equation}
+Completing the square gives
+\[
+ F(k,j)=\frac{22}{3}-3Q(k-1/3,j-1/3).
+\]
+The inequality $F\ge0$ implies
+$|k-1/3|^2\le11/18$, hence $k=0,1$.
+For $k=0$ it gives $F=24j(1-j)$ and $j=0,1$;
+for $k=1$ it gives $F=2-24j^2$ and $j=0$.
+The three values are $0,0,2$, all smaller than four, so
+$n=l=0$.
+
+The complementary vectors for $(k,j)=(0,0),(0,1)$ are
+$a_1+a_2$ and $a_0+a_1$. Neither admits an $H$-stable
+sheaf. Indeed Hom in both directions between such a
+stable rank-two sheaf and the corresponding sum of the
+two distinct stable lines vanishes. Serre duality then
+makes their Euler characteristic nonpositive, contradicting
+the value two. The remaining possibility is $L_1\oplus F$
+with $v(F)=w$.
+
+For three rank-one factors let
+$\sum(k_i,j_i)=(1,1)$ and let $N$ be the sum of their
+singularity lengths. The second Chern identity is
+\begin{equation}\label{eq:three-line-budget}
+ \sum_i Q(k_i,j_i)+2(N+l)=14.
+\end{equation}
+The nonzero lattice vectors of $Q\le14$ are
+\[
+ \begin{array}{c|c}
+ Q=6&(1,0),(1,-1),(-1,0),(-1,1)\\
+ Q=8&(0,1),(0,-1).
+ \end{array}
+\]
+This list follows directly from $Q=4k^2+8(j+k/2)^2$.
+At most two nonzero summands fit the budget. A single
+summand $(1,1)$ has $Q=22$. Two $Q=6$ vectors cannot
+sum to $(1,1)$, and the only $Q=6$ plus $Q=8$ pair
+with that sum is $(1,0)+(0,1)$. Thus
+\eqref{eq:three-line-budget} forces the unordered triple
+$\{0,D_1,D_2\}$ and $N=l=0$.
+
+For the auxiliary vector $w_l=(2,D_2,-2+l)$,
+stability gives $-4l\ge-2$, hence $l=0$. A split
+rank-one pair must satisfy
+\[
+ Q(k,j)-4k-8j+n+n'+l=0.
+\]
+Its quadratic part is $Q(k,j-1/2)-2$. The expression
+$4k^2+8(j-1/2+k/2)^2\le2$ forces $k=0$ and
+$j=0,1$, and then $n=n'=l=0$. The pair is
+$L_0,L_2$. Stable sheaves of vectors $w$ and $v$
+are locally free by \eqref{eq:double-dual-square}.
+All semistable factors just listed are therefore bundles,
+and so are their extensions.
+\end{proof}
+
+Applying Lemma~\ref{lem:no-charge-compactness} to $v$
+and $w$ excludes ideal charge uniformly in a smaller
+parameter neighborhood. This step includes parameters on
+the walls. The compact spaces constructed next have no
+additional singular-sheaf boundary.
+
+\subsection{The finite model and its affine strata}
+Use coordinates $(z,z',w,w',u,\varphi)$, with
+$u\in\C^2$ and $\varphi\in(\C^2)^*$. The single
+arrows are $z:1\to0$ and $w:1\to2$, and the double
+arrow is $u:0\to2$; primes and $\varphi$ denote the
+reverse arrows. The effective compact group is
+$K=(\mathrm U(1))^3/\mathrm U(1)$. By
+Proposition~\ref{prop:symplectic-normal-form}, the full
+complex equations and real moments are
+\begin{equation}\label{eq:three-vertex-model}
+ \begin{gathered}
+ zz'-\varphi(u)=0,\qquad ww'+\varphi(u)=0,\\
+ \mu_0=|z|^2-|z'|^2-|u|^2+|\varphi|^2,\qquad
+ \mu_2=|w|^2-|w'|^2+|u|^2-|\varphi|^2,\\
+ \mu_1=-\mu_0-\mu_2.
+ \end{gathered}
+\end{equation}
+Write $\Q_\zeta=\{\text{complex equations},\mu=\zeta\}/K$.
+
+If the nonzero edge support were disconnected, summing
+the real moment over a connected component would force
+a nonempty proper subset sum of $\zeta$ to vanish.
+For generic $\zeta$ this is impossible. Connected
+support has trivial effective stabilizer, since all
+vertex dimensions are one. Thus the generic quotients
+are smooth. Torus GIT makes their maps to $\Q_0$
+projective; arbitrary real parameters in a chamber
+give the same complex quotient as a rational parameter.
+
+The affine zero space $Y\subset\C^8$ is normal.
+Its two equations are a regular sequence, so it is
+a pure six-dimensional complete intersection. Over
+$p=\varphi(u)\ne0$ it is irreducible, with fibre
+$(\C^*)^2$ over an irreducible open subset of $\C^4$.
+The part $p=0$ has dimension five, so is not another
+component. For a nonzero linear combination of the
+Jacobian rows to vanish, coefficients $\lambda,\nu$
+must satisfy
+\[
+ \lambda z=\lambda z'=\nu w=\nu w'=0,\qquad
+ (\nu-\lambda)u=(\nu-\lambda)\varphi=0.
+\]
+The largest such locus is
+$z=z'=w=w'=0$, $\varphi(u)=0$, of dimension three.
+Thus $Y$ is regular in codimension one and normal.
+Its torus invariant ring is normal as well.
+
+A zero-level representation with
+\begin{equation}\label{eq:simple-point}
+ z=z'=w=1,\quad w'=-1,\quad
+ u=(1,0),\quad\varphi=(1,0)
+\end{equation}
+is simple as a representation of the quiver with
+these relations, or \emph{module-simple}: its
+directed support is strongly connected. It gives
+a nonempty stable open set, so
+$\Q_\zeta\to\Q_0$ is birational and has connected
+fibres. Among the proper connected dimension vectors,
+only the double-edge pair $(1,0,1)$ supports a
+nonrigid central simple factor. Its affine quotient
+is the $A_1$ surface. A single-edge pair has equation
+$xy=0$ and at zero real level cannot have connected
+support. Hence the affine quotient has precisely
+its smooth four-dimensional stratum, the smooth
+part of that $A_1$ surface, and the vertex.
+
+\subsection{Compact moduli and whole fibres}
+Yoshioka's theorems give generic-polarization moduli
+of vectors $v$ and $w$, of K3$^{[2]}$ and K3 type.
+Generic Gieseker stability is slope stability because
+$(D_1+D_2)/3$ and $D_2/2$ cannot be normalized
+Chern classes of proper positive-rank subsheaves.
+The finite slope-wall theorem supplies such
+polarizations arbitrarily near $H$.
+Lemma~\ref{lem:interacting-factor-list} makes every
+object a bundle. For $v$, $\chi(v)=-1$ gives an
+ordinary universal family. For $w$, the gcd of the
+algebraic Mukai pairings is two. C\u ald\u araru's
+theorems \cite[Theorems~1.2(1), 3.2 and~3.4]{caldararu}
+give an obstruction of exact order two and the
+integral isotropic Mukai isometry. We use local
+universal $w$-families and their coarse descent.
+
+Every chamber bundle is $H$-semistable. At the
+deepest class $E_0$ the chart
+\eqref{eq:three-vertex-model} contains the entire
+actual fibre for sufficiently small parameters.
+To prove this, take any sequence in that fibre.
+No-charge compactness gives a smooth gauge limit
+$G$. Pass to a subsequence on which the first and
+last factors of its central Jordan--H\"older
+filtration are fixed lines $L_i,L_j$; they are
+distinct because the three factors occur once.
+Normalize the inclusion $L_i\to E_n$ and quotient
+$E_n\to L_j$ separately in $L^2$, using the same
+gauges as for the connections. Elliptic estimates
+give nonzero smooth limiting maps. Polystability
+splits off these two distinct lines from $G$.
+The determinant and $\operatorname{Pic}^0(X)=0$
+identify the third. Thus $G=E_0$. A contrary
+sequence outside the fixed open chart is impossible.
+
+The same reasoning for the $w$-problem needs only
+one normalized line inclusion; its determinant
+identifies the other line. For a compact set of
+$H$-stable $w$-bundles, local universal families
+and smooth HE metrics give the analogous uniform
+statement at $L_1\oplus F$.
+
+On the finite side, every point over the affine
+vertex has zero cycle invariants. Its directed
+support is acyclic. Summing the real moments over
+successive source or sink subsets bounds each
+arrow norm squared by a fixed multiple of
+$|\zeta|$. There are finitely many supports.
+Consequently the entire finite fibre has
+coefficient radius $O(\sqrt{|\zeta|})$ and lies
+in the same small chart. Both actual and finite
+families classify the same central graded
+objects. The two coverage statements therefore
+identify the whole fibres on both sides.
+
+For later use this is also uniform when the
+moving factor tends to its split class. If
+$F_n\to L_0\oplus L_2$ at the central polarization,
+the fixed-polarization surface comparison
+\cite[Theorem~4.11 and Corollary~4.15]{gstw},
+together with zero charge, gives that gauge
+limit. For chamber extensions involving $L_1$
+and $F_n$, normalize both extension maps.
+The limiting map involving $L_1$ splits off
+that line, and the map involving $L_0\oplus L_2$
+splits off at least one further line. The
+determinant identifies the remaining summand.
+The resulting limit is again $E_0$. Thus one
+fixed deep chart covers the moving fibres as
+their bases approach the deeper point; no
+uniform elliptic gap for separate two-factor
+backgrounds is required there.
+
+\subsection{The singular K3 surface and common target}
+Let $S$ be a generic compact $w$-moduli K3 surface.
+Its local universal families define compatible
+Greb--Toma classifying maps to the central slope
+space. Scalar twists do not affect these maps,
+so they descend to $S$. The only nontrivial
+fibre is the projective line of extensions of
+$L_0,L_2$. By whole-fibre coverage it is the
+zero section of the two-arrow $\mathrm U(1)$
+quotient. Normalize the reduced image to obtain
+$T$. The saturated-neighborhood and
+direct-image argument used for
+\eqref{eq:isolated-incidence} identifies the
+local map with $T^*\PP^1\to\C^2/\{\pm1\}$.
+Thus $T$ is a normal projective K3 surface
+with one $A_1$ point, $S\to T$ is its minimal
+resolution, and $S^\circ=S\setminus C$ is
+the nonempty moduli of $H$-stable $w$-bundles.
+Here $C$ is the exceptional $(-2)$-curve.
+
+Every nearby numerical wall through $H$ for
+the rank-three problem arises from a proper
+sum in Lemma~\ref{lem:interacting-factor-list}.
+Its equation is therefore one of
+$\zeta_i=0$. Walls not passing through $H$
+are avoided after shrinking the parameter
+ball. Each displayed wall is actual: the
+double-edge quotient realizes $\zeta_1=0$,
+and a spherical single-edge pair at nonzero
+internal level realizes $\zeta_0=0$ or
+$\zeta_2=0$. There are exactly six chambers.
+
+Each sector contains integral ample classes
+$mH+pD_1+qD_2$ with $p$ not divisible by
+three. Their degree $-10p-12q$ is coprime
+to three, so their full compact Gieseker
+moduli are the slope/HYM chamber moduli
+$M_\sigma$. Their universal families give
+central slope classifying maps. Their common
+image consists of the stable open set $U$,
+the classes $L_1\oplus F$ for
+$F\in S^\circ$, and $E_0$. Every listed
+class occurs by the full local quotients.
+The point \eqref{eq:simple-point}, dilated
+to the origin, proves that $U$ is nonempty
+and dense. Its connectedness follows from
+irreducibility of the chamber space.
+
+Fibres over $U$ are points, those over
+$S^\circ$ are projective lines, and the
+deepest fibre is the connected projective
+fibre of $\Q_\zeta\to\Q_0$. Normalizing
+the common reduced image yields a normal
+projective fourfold $Z$. Connectedness and
+Stein factorization make this normalization
+bijective on points. Whole-fibre coverage
+precedes the use of properness to shrink to
+saturated neighborhoods. On those neighborhoods,
+the fixed holomorphic classifying families
+commute with central S-equivalence. Descending
+coordinate functions by $\pi_*\OO=\OO$
+identifies the actual and finite target
+germs in both directions. The local model
+is \eqref{eq:three-vertex-model} at $E_0$
+and a smooth surface times the $A_1$ cone
+along $S^\circ$. The quotient symplectic
+forms agree with the moduli forms, giving
+symplectic resolutions $M_\sigma\to Z$.
+
+The assignment $F\mapsto L_1\oplus F$
+identifies $T$ with the reduced singular
+locus of $Z$. Construct the map first on $S$
+using local universal families; it is
+constant on $C$ and descends to the normal
+$T$. Along $S^\circ$ the product chart
+makes it a closed immersion. At $E_0$, the
+fixed space of the vertex-1 subtorus is
+the double-edge representation. Both the
+harmonic recursion and the equivariant
+Darboux map preserve this fixed space.
+Restriction of invariant rings onto its
+ring is surjective, since every double-edge
+invariant already has weight zero for the
+full torus. Hence the map is a closed
+immersion at the remaining point as well.
+Its image is reduced because $T$ is normal,
+and the stratum classification identifies
+its support with the singular set. This
+proves the assertion about the reduced
+singular locus.
+
+This constructs the full compact diagram.
+The two stable factors over $S^\circ$
+have cross-Ext dimension $(a_1,w)=2$, while
+the three lines at $o$ have the full
+eight-dimensional doubled representation.
+The change of local model is exactly the
+change of singular stratum. The explicit
+fibres and their specialization are
+computed next.
+

@@ -1,0 +1,338 @@
+\section{Integral cycles and their attachment}\label{sec:integral-attachments}
+
+All cohomology in this section has integral coefficients
+unless otherwise specified. The Mukai marking identifies
+the exceptional curve classes, but rational intersection
+formulas alone do not determine how their neighborhoods
+attach to the complement. We calculate both the primitive
+integral classes and the resulting boundary homomorphisms.
+
+\subsection{Primitive classes in the isolated example}
+On $P_+$ the universal extension has $K$-class
+$b\,\OO(1)+a$, up to tensoring by a base line bundle.
+For $x\in v^\perp$ this ambiguity disappears from
+\eqref{eq:mukai-marking}; hence
+\[
+ \theta_+(x)|_{P_+}=(a,x)h,\qquad
+ \theta_-(x)|_{P_-}=-(a,x)h.
+\]
+We identify a rational vector in $v^\perp$ with its
+curve functional by the Mukai pairing. A plane line
+therefore has class
+\begin{equation}\label{eq:isolated-classes}
+ \ell_\pm=\pm(a-v/2),\qquad q(\ell_\pm)=-5/2,
+ \qquad \rho_\pm=\theta_\pm\bigl(\pm(2a-v)\bigr).
+\end{equation}
+The integral vector $w_0=(9,3D,-10)$ lies in $v^\perp$
+and satisfies $(a,w_0)=1$. It proves that each line
+is primitive. The vector $2a-v=(-1,-D,6)$ is primitive;
+its pairings with $v^\perp$ are even, and its pairing
+with $w_0$ is two. Thus $q(\rho_\pm)=-10$ and
+$\rho_\pm$ has divisibility two. The restriction of
+$\theta_\pm(w_0)^2$ to the plane is $h^2$, which
+also proves primitivity of its surface class.
+
+For a K3$^{[2]}$-type fourfold the polarized Fujiki
+identities are
+\begin{equation}\label{eq:fujiki}
+ \begin{aligned}
+ \int_M\alpha\beta\gamma\delta
+ &=q(\alpha,\beta)q(\gamma,\delta)
+   +q(\alpha,\gamma)q(\beta,\delta)
+   +q(\alpha,\delta)q(\beta,\gamma),\\
+ \int_M c_2(M)\alpha\beta&=30q(\alpha,\beta).
+ \end{aligned}
+\end{equation}
+The rational map $\operatorname{Sym}^2H^2(M,\mathbb Q)
+\to H^4(M,\mathbb Q)$ is an isomorphism. Since
+$q(\ell)=-5/2$, the class $\ell^2/2+c_2(M)/24$
+pairs with $\alpha\beta$ as
+$q(\ell,\alpha)q(\ell,\beta)$, exactly the
+restriction pairing on the plane. Nondegeneracy gives
+the classical formula
+\begin{equation}\label{eq:plane-class}
+ [P_\pm]=\frac{\ell_\pm^2}{2}+\frac{c_2(M_\pm)}{24}
+         =\frac{\rho_\pm^2}{8}+\frac{c_2(M_\pm)}{24}.
+\end{equation}
+See \cite{hassetttschinkel}, with the attribution
+there to O'Grady. The cotangent normal bundle gives
+$[P]^2=3$; from $T_M|_P=T_P+T^*_P$ in $K$-theory
+one also gets $\int_Pc_2(M)=-3$. Formula
+\eqref{eq:plane-class} is rational. The integral
+primitivity assertion follows from $w_0$, without
+assuming an integral symmetric-square presentation.
+
+Totaro's torsion-freeness theorem
+\cite[Theorem~3.1]{totaro} and the coefficient of
+degree two in G\"ottsche's Hilbert-scheme formula
+\cite{gottsche} give free even cohomology of ranks
+$1,23,276,23,1$ for $M_\pm$. The contraction identifies
+$Z$ homeomorphically with $M_\pm/P_\pm$: the map
+from this compact quotient to the Hausdorff target
+is bijective. The plane inclusion is a cofibration,
+and its restrictions in degrees 0, 2 and 4 are
+surjective. The pair sequence therefore gives
+\begin{center}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrr}
+\toprule
+Space & $b_0$ & $b_2$ & $b_4$ & $b_6$ & $b_8$\\
+\midrule
+$M_\pm$ & 1&23&276&23&1\\
+$Z$ &1&22&275&23&1\\
+$M_\pm\setminus P_\pm$ &1&23&275&22&0\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+All other groups vanish, and these groups are
+torsion-free. The pullback from $Z$ is an injective
+ring map whose image is
+\begin{equation}\label{eq:isolated-target-ring}
+ \Z\cdot1\ \oplus\left(\bigoplus_{k>0}
+ \ker\bigl(H^k(M_\pm)\longrightarrow H^k(P_\pm)\bigr)\right).
+\end{equation}
+Its multiplication is inherited from the chamber
+ring; the local singularity alone does not provide
+that ring as additional output.
+
+\subsection{The two interacting curve and surface classes}
+Return to the chamber $\zeta_0,\zeta_2>0$, and put
+$E=P_0\cup P_2$. Let $c_i$ be an effective line in
+$P_i$ and $f$ a moving projective-line fibre. The
+universal extensions on these fibres give
+\begin{equation}\label{eq:interacting-curve-classes}
+ \begin{gathered}
+ l_i=a_i-v/2\quad(i=0,2),\qquad
+ c_0=-l_0,\quad c_2=-l_2,\quad f=a_1,\\
+ f=c_0+c_2,\qquad
+ q(c_0)=q(c_2)=-5/2,\quad q(c_0,c_2)=3/2,\quad q(f)=-2.
+ \end{gathered}
+\end{equation}
+Indeed the restriction to $P_i$ is
+$\theta_v(x)|_{P_i}=-(a_i,x)h_i$. Over a moving
+fibre the extension is $F\,\OO(1)+L_1$, so its
+restriction is $-(w,x)h=(a_1,x)h$. This calculation
+uses a fixed $F$ and needs no global ordinary
+universal family on $S^\circ$. Equation
+\eqref{eq:reduced-specialization} realizes the class
+relation by a reduced family of actual curves.
+
+Use the primitive lattice embedding
+\eqref{eq:primitive-embedding}. The integral vectors
+\[
+ x=(0,f_2-f_3,0),\qquad y=(0,-3f_2,-1)
+\]
+are in $v^\perp$, with pairings $(0,1,-1)$ and
+$(1,-2,1)$ against $(a_0,a_1,a_2)$. For
+$\alpha=\theta_v(x)$ and $\beta=\theta_v(y)$,
+\begin{equation}\label{eq:restriction-witnesses}
+ \alpha|_E=(0,h_2),\qquad \beta|_E=(-h_0,-h_2),
+ \qquad
+ \alpha^2|_E=(0,h_2^2),\quad
+ \beta^2|_E=(h_0^2,h_2^2).
+\end{equation}
+Both restriction matrices are unimodular. Thus the
+two line classes span a primitive subgroup of
+$H_2(M)$, and the two plane classes span a primitive
+subgroup of $H_4(M)$.
+
+The cotangent normal bundles and the transverse
+intersection at $p$ give
+\begin{equation}\label{eq:two-plane-matrix}
+ B=\begin{pmatrix}3&1\\1&3\end{pmatrix}.
+\end{equation}
+Equivalently, $[P_i]=l_i^2/2+c_2(M)/24$ by the
+argument for \eqref{eq:plane-class}; the off-diagonal
+intersection is $q(l_0,l_2)^2/2-1/8=1$.
+Here the geometric intersection and the rational
+Fujiki calculation agree, while
+\eqref{eq:restriction-witnesses} supplies the integral
+information.
+
+\subsection{The neighborhood boundaries}
+For one plane the boundary is the sphere bundle
+$L=S(T^*\PP^2)$. Its Euler class is $3h^2$.
+The Gysin sequence gives $H^j(L)=\Z$ for
+$j=0,2,5,7$, $H^4(L)=\Z/3$, and zero otherwise.
+In particular $H^3(L)=0$, although $H_3(L)=\Z/3$.
+
+For two transverse planes take a closed regular
+neighborhood $W$ with smoothed boundary $L$. It
+is the plumbing of their normal disk bundles and
+retracts to $E\simeq\PP^2\vee\PP^2$.
+Poincar\'e--Lefschetz duality makes the middle map
+$H^4(W,L)\to H^4(W)$ the matrix $B$.
+The pair sequence, together with $\det B=8$ and
+the gcd one of its entries, gives
+\begin{equation}\label{eq:two-plane-boundary}
+ H^j(L)=
+ \begin{cases}
+ \Z,&j=0,7,\\
+ \Z^2,&j=2,5,\\
+ \Z/8,&j=4,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\end{equation}
+The quotient map on $H^4(W)=\Z^2$ is
+\begin{equation}\label{eq:boundary-functional}
+ (n_0,n_2)\longmapsto n_0-3n_2\pmod8.
+\end{equation}
+Its kernel is $B\Z^2$: it kills both columns and
+is onto a group of order $\det B$.
+This $L$ is a smooth boundary in the resolution.
+The target has a positive-dimensional singular
+stratum through $o$, so $L$ is not the link of an
+isolated target singularity.
+
+Alexander--Lefschetz duality gives
+$H^k(M,M\setminus E)=H_{8-k}(E)$. The primitive
+line, plane and point inclusions just proved show
+that $V=M\setminus E$ has torsion-free even
+cohomology, with ranks $1,23,274,21$ in degrees
+$0,2,4,6$. In particular,
+\begin{equation}\label{eq:complement-quotient}
+ H^4(V)=H^4(M)/(\Z[P_0]+\Z[P_2]).
+\end{equation}
+Notice that $V$ retains the moving exceptional
+divisor away from $E$.
+
+\subsection{Calculated attachments on integral generators}
+We now specify the map from the complement to the
+boundary. The input includes the complement ring
+with its distinguished universal-index classes.
+The following formulas evaluate the attachment
+without asking for an ambient lift of a given class.
+
+For $z\in K^0_{\mathrm{top}}(X)$ define the family
+index
+\begin{equation}\label{eq:universal-index}
+ I_z=p_{M!}\bigl(p_X^*(z^\vee)\otimes\cE\bigr)
+       \in K^0_{\mathrm{top}}(M),\qquad
+ \chi(F,z)=-(v(F),v(z)).
+\end{equation}
+Here $p_!$ is the complex $K$-theory pushforward.
+Markman's integral-generation theorem
+\cite[Theorem~1]{markman}, the integral K\"unneth
+decomposition and the perfect Euler pairing on
+$K^0_{\mathrm{top}}(X)$ show that the Chern classes
+of these indices generate $H^*(M,\Z)$. Thus degree
+four is generated by the classes $c_2(I_z)$ and
+$c_1(I_z)c_1(I_{z'})$. Rational Chern characters
+would not suffice for this conclusion.
+
+One normalization removes the base-line ambiguity
+of the universal family on the exceptional set.
+For the isolated example, let $F,Q$ be its
+subobject and quotient in the chosen chamber.
+Their Mukai vectors span a primitive rank-two
+sublattice: the rank-one factor and the primitive
+$D$-coordinate give a unit minor. Unimodularity
+supplies a topological class $y$ with
+$\chi(F,y)=0$, $\chi(Q,y)=1$. On the plane
+\[
+ \cE=(F\,\OO(1)+Q)\otimes L,
+ \qquad I_y|_P=L.
+\]
+The global index $I_y$ has rank one. Tensor
+$\cE$ by $\det(I_y)^{-1}$ to remove $L$.
+For this normalized topological universal class,
+\begin{equation}\label{eq:isolated-index-restriction}
+ c(I_z)|_P=(1+h)^{m_z},\qquad m_z=\chi(F,z).
+\end{equation}
+The powers are interpreted as total Chern classes
+of virtual bundles and allow negative integers.
+
+For the interacting planes the class
+$y=(0,-f_2,0)$ has Euler pairings $(0,1,0)$ with
+$(a_0,a_1,a_2)$. The same global determinant
+normalization removes the line twists on \emph{both}
+planes, including their common point. It gives
+\begin{equation}\label{eq:interacting-index-restriction}
+ c(I_z)|_{P_i}=(1+h_i)^{m_{i,z}},\qquad
+ m_{i,z}=\chi(L_i,z),\quad i=0,2.
+\end{equation}
+This normalization is topological; it makes no
+claim of an algebraic lift for the auxiliary
+Brauer class considered in the next section.
+
+\begin{proposition}\label{prop:calculated-attachments}
+Let $A=H^*(V,\Z)$ be the complement ring with the
+restrictions of the normalized index Chern classes
+just specified.
+
+For an isolated plane, the actual restriction
+$\kappa:A^4\to H^4(L)=\Z/3$ is determined by
+\begin{equation}\label{eq:mod-three-generators}
+ \begin{aligned}
+ \kappa(c_2(I_z)|_V)&=\binom{m_z}{2},\\
+ \kappa(c_1(I_z)c_1(I_{z'})|_V)&=m_zm_{z'}
+ \end{aligned}\qquad\pmod3,
+\end{equation}
+and restriction identifies
+\begin{equation}\label{eq:mod-three-gluing}
+ H^4(M)=\{(u,N)\in A^4\oplus\Z:
+                      N\equiv\kappa(u)\pmod3\}.
+\end{equation}
+For the two-plane chamber, the actual restriction
+$\kappa:A^4\to H^4(L)=\Z/8$ is determined by
+\begin{equation}\label{eq:mod-eight-generators}
+ \begin{aligned}
+ \kappa(c_2(I_z)|_V)
+   &=\binom{m_{0,z}}2-3\binom{m_{2,z}}2,\\
+ \kappa(c_1(I_z)c_1(I_{z'})|_V)
+   &=m_{0,z}m_{0,z'}-3m_{2,z}m_{2,z'}
+ \end{aligned}\qquad\pmod8,
+\end{equation}
+and restriction identifies
+\begin{equation}\label{eq:mod-eight-gluing}
+ H^4(M)=\{(u,n_0,n_2)\in A^4\oplus\Z^2:
+           n_0-3n_2\equiv\kappa(u)\pmod8\}.
+\end{equation}
+Both attachment maps are surjective.
+\end{proposition}
+
+\begin{proof}
+The relative group $H^5(M,V)=H_3(E)$ vanishes
+in both cases. Thus $H^4(M)\to A^4$ is onto,
+and the restricted degree-four index monomials
+generate $A^4$. Equations
+\eqref{eq:isolated-index-restriction} and
+\eqref{eq:interacting-index-restriction} give their
+integer evaluations on the plane or planes.
+Passing to the boundary gives exactly
+\eqref{eq:mod-three-generators} and
+\eqref{eq:mod-eight-generators}.
+
+To check every relation among these generators,
+let a degree-four integral polynomial in the
+restricted Chern classes vanish on $V$. Its
+ambient polynomial class lies in the relative
+image $H^4(M,V)$, generated by the plane classes.
+Its evaluations on $E$ therefore lie in
+$3\Z$ or $B\Z^2$, respectively. The prescribed
+boundary functional kills these subgroups.
+Consequently the formulas are independent of the
+chosen polynomial expression in $A^4$ and
+define its actual boundary restriction.
+
+Apply Mayer--Vietoris to $V$ and an open regular
+neighborhood of $E$. Their overlap retracts to
+$L$, and $H^3(L)=0$. The restriction from $M$
+is therefore injective in degree four, with image
+the kernel of the difference of the two boundary
+maps. This is precisely the displayed fibre
+product. Finally $\theta(w_0)^2$ evaluates to one
+in the isolated case, while $\alpha^2$ evaluates
+to $(0,1)$ in the interacting case. Their images
+are units modulo three and eight.
+\end{proof}
+
+The construction retains the complement ring and
+its marked index classes as input. It recovers
+the integral degree-four attachment, including
+the torsion boundary information that is absent
+from Betti numbers. A change of index basis or
+universal normalization changes the formulas for
+the marked generators, but not the restriction
+map they calculate.

@@ -1,0 +1,289 @@
+\section{A compact contraction of one plane}\label{sec:isolated-plane}
+
+The isolated example separates the two ingredients of the construction.
+The Mukai square bound controls the entire compactification, while the
+three-dimensional extension space identifies the exceptional plane.
+Its topology and metric can then be calculated in the same normalization.
+
+\subsection{The surface and the central factors}
+Take the even lattice
+\[
+ \NS(X)=\Z H\oplus\Z D,\qquad H^2=2,\quad H\cdot D=0,
+ \quad D^2=-22.
+\]
+Morrison's realization theorem \cite[Corollary~2.9(i)]{morrison}
+gives a projective K3 surface with precisely this N\'eron--Severi
+lattice. A root would satisfy $x^2-11y^2=-1$, which is impossible
+modulo eleven. The positive cone is therefore an ample chamber;
+choose its component so that $H$ is ample. Put
+\begin{equation}\label{eq:isolated-vectors}
+ a=(1,0,1),\qquad b=(2,D,-5),\qquad v=a+b=(3,D,-4).
+\end{equation}
+We have $a^2=b^2=-2$, $(a,b)=3$, $v^2=2$ and
+$c_2(b)=c_2(v)=-4$.
+
+\begin{lemma}\label{lem:isolated-factors}
+There is a unique $H$-slope-stable bundle $B$ with vector $b$.
+It is rigid. Every central $H$-polystable class of vector $v$
+is either stable or $\OO_X\oplus B$. Every $H$-semistable
+torsion-free sheaf of vector $v$ is locally free. No central ideal
+object with that total vector has positive lost charge.
+\end{lemma}
+
+\begin{proof}
+Yoshioka's primitive-vector theorem
+\cite[Theorem~0.1 and condition $(\natural)$]{yoshioka99}
+gives a sheaf of vector $b$ at a generic polarization arbitrarily
+near $H$. Choose the polarization in a chamber adjoining $H$ for
+the finite slope-wall arrangement
+\cite[Theorem~6.6]{grebtoma}. Generic slope equality would require
+$D/2$ to be integral. It is not, so the sheaf is slope stable.
+As the polarization tends to $H$ within that chamber, every fixed
+subsheaf inequality becomes weak; the sheaf is $H$-semistable.
+
+An $H$-slope-zero rank-one torsion-free factor has the form
+$\OO_X(kD)\otimes I_T$, with vector
+$(1,kD,1-11k^2-n)$, where $n=\operatorname{length}T\ge0$.
+If a sheaf of vector $b$ split into two such factors, its second
+Chern class would be
+\[
+ 22k(k-1)+n_1+n_2\ge0,
+\]
+contrary to $c_2(b)=-4$. Thus it is $H$-stable.
+
+For any slope-stable torsion-free sheaf $F$, its double dual is
+stable: intersect a subsheaf of $F^{**}$ with $F$ to preserve
+rank and first Chern class. If $l=\operatorname{length}(F^{**}/F)$,
+then
+\begin{equation}\label{eq:double-dual-square}
+ v(F^{**})^2=v(F)^2-2\rank(F)l.
+\end{equation}
+A simple sheaf on a K3 surface has Mukai square at least $-2$,
+by Riemann--Roch and Serre duality. For $b^2=-2$ this forces
+$l=0$. Two nonisomorphic stable bundles with vector $b$ would
+have $\Hom=\Ext^2=0$, whereas their Euler pairing is two. This
+is impossible. The same calculation for $B$ itself gives
+$\Ext^1(B,B)=0$.
+
+Now allow an ideal object with residual vector
+$v_l=(3,D,-4+l)$, where $l\ge0$ is its total lost charge.
+The residual stable factors have slope zero. A stable rank-three
+factor has square $2-6l\ge-2$, hence $l=0$. For a rank partition
+$1+2$, take the rank-one vector
+$c=(1,kD,1-11k^2-n)$. The complementary stable rank-two vector
+has square
+\begin{equation}\label{eq:isolated-rank-two-bound}
+ (v_l-c)^2=-2+44k-66k^2-4(n+l).
+\end{equation}
+For integral $k$, the quadratic term is nonpositive, with equality
+only at zero. The lower square bound forces $k=n=l=0$. The
+factors are $\OO_X$ and $B$.
+
+For three rank-one factors, write $\sum k_i=1$. Their second
+Chern class is
+\[
+ 11\left(\sum_i k_i^2-1\right)+\sum_i n_i\ge0,
+\]
+whereas $c_2(v_l)=-4-l<0$. These are all positive-rank
+partitions. Finally a stable sheaf of vector $v$ is locally free
+by \eqref{eq:double-dual-square}, and a strictly semistable one
+is an extension of the two locally free factors. Such an
+extension is locally free.
+\end{proof}
+
+We will also need the following consequence of surface gauge
+compactness, which applies to both examples in this paper.
+
+\begin{lemma}\label{lem:no-charge-compactness}
+Fix a topological bundle type on a K3 surface and a smooth compact
+family of base K\"ahler metrics through $\omega_0$. Keep the
+holomorphic determinant fixed and let its HE connection vary
+smoothly. Suppose every central ideal HYM object of that total
+type has zero lost charge. A sequence of HYM connections whose
+parameters tend to zero then has a subsequence converging
+smoothly modulo gauge on all of $X$. Moreover, after shrinking
+the parameter neighborhood, no ideal object of that total type
+has positive lost charge at any parameter in it.
+\end{lemma}
+
+\begin{proof}
+The trace-free connections are projective ASD connections, and
+their energies are topologically bounded. Pass to a weak limit
+of their curvature measures and remove the finitely many atoms
+above the small-energy threshold. In fixed coordinate balls
+away from those points, the base metrics converge smoothly.
+Their Sobolev, gauge-fixing and elliptic constants are uniformly
+bounded. Small-energy regularity first gives local curvature
+bounds stronger than $L^2$; varying-metric compactness and
+elliptic bootstrapping then give smooth subsequential convergence
+in gauges on the complement. This is the setting of
+\cite[Introduction, Theorem~E$'$, and Theorem~10.3]{wehrheim}.
+An energy bound alone would not meet that theorem's stronger
+local integrability hypothesis.
+
+The surface compactness, extension, removal and defect-current
+results \cite[Section~3.1, Theorems~3.3, 3.5--3.7 and~3.10]{gstw}
+produce a central polystable residual bundle and a nonnegative
+integral lost charge. The determinant is smooth and has no
+concentrating part. Local projective instantons lift over
+four-balls, so the missing charges are integers. By hypothesis
+their sum is zero. The energy identity and small-energy
+regularity therefore remove all the exceptional points, proving
+smooth convergence on $X$.
+
+If positive-charge ideal objects occurred arbitrarily close to
+zero, choose such a sequence. The energy bound permits a
+subsequence with one fixed positive defect. Applying compactness
+to its residual connections can add only nonnegative lost
+charge. The resulting central ideal object would still have
+positive defect, a contradiction. This also accounts for the
+zero-dimensional discrepancy of a torsion-free sheaf from its
+polystable double dual.
+\end{proof}
+
+\subsection{The two chambers and their full exceptional planes}
+Let $\omega_t$ be the Ricci-flat representative of $H+tD$.
+The base volume is $1-11t^2$. Shrink the interval so that no
+other slope wall for $b$ or $v$ meets it. For large integral
+$m$, the degree of $v$ at $mH\pm D$ is $\mp22$, coprime to
+three. Thus its Gieseker semistable sheaves are slope stable.
+Yoshioka's theorem and its deformation-type refinement
+\cite[Appendix, Theorem~8.1]{yoshioka01} give smooth projective
+fourfolds
+\[
+ M_\pm=M_{mH\pm D}(v)
+\]
+of K3$^{[2]}$ type. All their points are bundles, by
+\eqref{eq:double-dual-square}. Since $\chi(E)=-1$, the
+universal-family criterion \cite[Theorem~4.6.5]{huybrechtslehn}
+gives ordinary universal families.
+
+Every chamber object is $H$-semistable, by taking limits of its
+subsheaf inequalities; an $H$-stable object remains stable in
+both adjacent chambers. The only remaining central graded type
+is $\OO_X\oplus B$. Cross Hom and second Ext groups vanish,
+and both cross first Ext groups have dimension three. At $t>0$
+the allowable orientation is
+\begin{equation}\label{eq:isolated-positive-extension}
+ 0\longrightarrow B\longrightarrow E\longrightarrow\OO_X
+ \longrightarrow0,
+\end{equation}
+since $\mu_t(B)=-11t<\mu_t(E)=-22t/3$. The orientation is
+reversed at $t<0$.
+
+The full local model at $E_0=\OO_X\oplus B$ has coordinates
+$(u,\varphi)\in\C^3\oplus(\C^3)^*$, with action
+$(u,\varphi)\mapsto(e^{i\theta}u,e^{-i\theta}\varphi)$,
+complex equation $\varphi(u)=0$, and real level
+\begin{equation}\label{eq:isolated-level}
+ |u|^2-|\varphi|^2=\tau(t),\qquad
+ \tau(t)=-\frac{44\pi}{3}t.
+\end{equation}
+Here $u$ is in $\Ext^1(B,\OO_X)$. Formula
+\eqref{eq:general-real-level} gives the sign and coefficient.
+The determinant-one infinitesimal lift has weights $2/3,-1/3$,
+whose difference is one; there is no additional rank factor in
+the effective circle moment.
+
+For $\tau>0$ the complex quotient is $T^*\PP^2$ with
+coordinate $[u]$ on the zero section; for $\tau<0$ use
+$[\varphi]$. The affine map is
+\begin{equation}\label{eq:isolated-incidence}
+ (u,\varphi)\longmapsto u\otimes\varphi,
+ \qquad \{A\in\mathfrak{sl}_3:A^2=0,\ \rank A\le1\}.
+\end{equation}
+The entire zero section has coefficient norm squared $|\tau|$.
+It therefore lies in the common coefficient neighborhood for
+small $t$. Corollary~\ref{cor:harmonic-comparison} gives actual
+stable bundles on that entire section. The coordinate change
+fixes each one-direction extension axis: its equivariance and
+identity derivative exclude higher monomials of weight one on
+that axis. The harmonic recursion is also linear there, because
+the square of a one-direction extension is zero. Thus these are
+the actual projective extension families in
+\eqref{eq:isolated-positive-extension} and its reverse.
+
+For clarity, the same chart contains every point of the actual
+central fibre. If not, take $t_n\to0$ and bundles outside it
+with graded class $\OO_X\oplus B$. Lemmas
+\ref{lem:isolated-factors} and \ref{lem:no-charge-compactness}
+give a smooth gauge limit $G$. Normalize the inclusion of the
+fixed first factor in each extension to have $L^2$ norm one.
+Its holomorphic-map equation has smoothly convergent coefficients;
+global elliptic estimates give smooth convergence to a nonzero
+map into $G$. Equal-slope stability and polystability split off
+that factor. The remaining factor is identified by its vector
+and the uniqueness just proved. Thus $G=\OO_X\oplus B$, which
+puts the sequence in the open actual solution chart, a
+contradiction. The extension planes are embedded: the
+classifying map is biholomorphic on the smooth quotient, and
+the middle term determines its distinguished subobject up to
+scalar. Write their images as $P_\pm$.
+
+\subsection{The common normal target}
+The smooth chamber bases are weakly normal, so the
+Greb--Toma classifying theorem applies to their universal
+families \cite[Main Theorem]{grebtoma}. For a surface the
+slope equivalence is given by the graded double dual and its
+defect cycle \cite[Theorem~5.5, Proposition~5.8 and
+Remark~5.9]{grebtoma}. Our maps have a common reduced projective
+image: its points are the common stable open set and the one
+class $z_0=\OO_X\oplus B$. Their fibres are points and the
+entire planes just identified.
+
+Normalize this reduced image. Stein factorization of either
+proper birational map has a normal finite factor. Its finite
+fibres have one point because the original fibres are connected.
+It is therefore the normalization, bijective over the reduced
+image. The two chamber maps lift to a common normal projective
+target $Z$, with the same point topology and the same fibres.
+
+We explain the analytic identification, since a topological
+description of the fibres would not suffice. The local
+holomorphic classifying family commutes with central
+S-equivalence, which in the finite model is exactly the
+invariant $u\otimes\varphi$. Its chart contains the full
+exceptional plane. Properness now allows the target to be
+shrunk until its entire inverse image is in that chart:
+otherwise a sequence outside the chart mapping to $z_0$
+would have a limit in the plane. The proper incidence map
+in \eqref{eq:isolated-incidence} has the same property.
+
+Both targets are normal. For the finite target, the hypersurface
+$\varphi(u)=0$ is an irreducible quadric with an isolated
+singularity, hence normal, and its invariant ring is normal.
+A proper birational map to a normal target has direct image
+of its structure sheaf equal to that structure sheaf. Pull
+back target coordinate functions to the two identified
+resolution neighborhoods and descend them by this identity.
+The resulting maps between target germs are inverse on the
+dense stable open set, hence everywhere. This identifies the
+actual contraction with \eqref{eq:isolated-incidence}.
+
+Consequently $z_0$ is the unique singular point and both maps
+are small symplectic resolutions. Zero-level points with
+$u,\varphi\ne0$ and $\varphi(u)=0$ are stable and tend to
+the origin. The listed target is therefore the closure of
+the stable wall locus. The surface comparison
+\cite[Theorem~4.11 and Corollary~4.15]{gstw} identifies its
+compact topology with the HYM compactification; its analytic
+germ was proved separately above.
+
+At the central polarization, the ordinary Gieseker moduli
+is a different object. Its reduced Euler characteristic is
+$-1/3$, which cannot equal that of a factor of rank one or
+two. The nonsplit extensions in
+\eqref{eq:isolated-positive-extension} are Gieseker stable
+at $H$, since the $B$ subobject has reduced constant term
+$-3/2$; the opposite orientation is destabilized by
+$\OO_X$. Thus $M_H(v)$ is the resolution $M_+$, not $Z$.
+The distinction between the slope target and the central
+Gieseker space is already visible in this simplest example.
+
+The construction has now placed the full plane, with its
+cotangent normal bundle and its normalized quotient metric,
+inside a compact fourfold. Sections~\ref{sec:integral-attachments}
+and \ref{sec:harmonic-limits} compute its integral attachment
+and metric collapse. They will use the same extension family
+and the same signed Mukai marking.
+

@@ -1,0 +1,254 @@
+\section{The compact harmonic limit}\label{sec:global-completion}
+
+The local estimates identify the geometry near the
+exceptional cycles. We finish by identifying the
+completion of the regular harmonic metric and the
+limit of the entire compact spaces. In the isolated
+example a direct collapsing-neighborhood argument
+suffices. For the interacting family we identify
+the limiting semiample class and apply the
+Ricci-flat degeneration theorems of Tosatti and
+Song to the actual harmonic metrics.
+
+\subsection{Smooth convergence on the stable open set}
+Let $U=Z_{\rm reg}$, identified with the
+$H$-stable bundle locus, and write $g_0$ for its
+central harmonic metric. A compact subset of
+$U$ is covered by finitely many local universal
+families. At each central bundle the normalized
+fixed-determinant HE equation has invertible
+trace-free gauge linearization, since stability
+removes its kernel. Compactness supplies a
+uniform positive lower bound. The parameter
+implicit-function theorem and elliptic
+bootstrapping give smooth variation of the
+normalized HE metrics. The deformation kernels
+have constant dimension on this smooth locus,
+so their harmonic projections vary smoothly
+as well. Consequently
+\begin{equation}\label{eq:regular-smooth-limit}
+ g_\eta\longrightarrow g_0
+ \quad\text{in every fixed }C^k\text{ norm on compact subsets of }U.
+\end{equation}
+These are the same holomorphic bundles in every
+nearby chamber. The identification is the
+restriction of the classifying contraction.
+
+\subsection{A direct argument for the isolated plane}
+In the isolated zero-level model, distance to
+the cone vertex is the norm radius. The local
+harmonic comparison shows that a radius-$\rho$
+neighborhood has diameter $O(\rho)$ and that
+adding the vertex is exactly the local metric
+completion, with its quotient topology.
+Outside such a neighborhood the target is
+compact and smooth. Thus the completion of
+$(U,g_0)$ is $Z$, with no further end.
+
+One can also see compact convergence directly.
+Use the invariant $A=u\otimes\varphi$ from
+\eqref{eq:isolated-incidence}, and take the
+target neighborhood where its nonzero singular
+value is at most $\rho^2/2$. In the balanced
+model, if $\kappa_t\le\rho^2$, its whole
+preimage has radius $O(\rho)$ and diameter
+$O(\rho)$, uniformly in $t$. Whole-fibre
+coverage and the ambient comparison transfer
+this bound to the actual moduli space.
+
+Collapse each of these neighborhoods to a
+point. A shortest quotient path needs to
+visit that point at most once; lifting the
+visit across a set of diameter $O(\rho)$
+changes distance by at most $O(\rho)$.
+For fixed $\rho$, the common compact exterior
+has smoothly convergent metrics by
+\eqref{eq:regular-smooth-limit}, so the
+collapsed spaces converge in length distance.
+The limsup of the original compact
+Gromov--Hausdorff distance is therefore at
+most $C\rho$. Letting $\rho\downarrow0$
+proves convergence to the central completion.
+
+\subsection{The limiting class gives the actual contraction}
+In the interacting example put $c=D_1+D_2$
+and $b_0=(0,H,0)\in v^\perp$. On every
+chamber,
+\[
+ \frac{[\Omega_\eta]}{2\pi^2}
+       \longrightarrow\theta_v(b_0).
+\]
+To identify this limiting class globally, use
+the Greb--Toma determinant construction with
+a sufficiently large very ample multiple $mH$.
+Its surface $K$-class is
+\[
+ u_1=-3[\OO_{mH}]
+       +\chi(E\otimes\OO_{mH})[\OO_x].
+\]
+Riemann--Roch gives
+\[
+ v(\OO_{mH})=(0,mH,-(mH)^2/2),\qquad
+ v(u_1)=(0,-3mH,c\cdot mH).
+\]
+Their determinant convention is
+$\lambda_{\cE}(u_1)=\det Rp_*(\cE\otimes p_X^*u_1)$
+\cite[Definition~2.1]{grebtoma}. Since our
+Mukai convention inserts the dual vector,
+and $c\cdot H=0$, we obtain
+\begin{equation}\label{eq:determinant-polarization}
+ c_1\lambda_{\cE}(u_1)=3m\theta_v(b_0).
+\end{equation}
+
+The classifying theorem gives an ample line
+on the slope target whose pullback is
+$\lambda_{\cE}(u_1)^N$ for a positive integer
+$N$. Restrict to the common reduced image
+and pull back under its finite normalization.
+The resulting line $A_Z$ on $Z$ is ample.
+Using a common power for the finitely many
+chambers gives
+\begin{equation}\label{eq:common-ample-class}
+ \theta_v(b_0)=\pi_\sigma^*\alpha_Z,
+ \qquad \alpha_Z=\frac{c_1(A_Z)}{3mN}.
+\end{equation}
+The maps here are precisely the classifying
+contractions already constructed. Thus the
+limiting class is big and nef, and its
+sufficiently divisible multiples define
+this connected-fibre semiample morphism.
+Vanishing on the named exceptional curves
+alone would not have identified the ample
+class on the target.
+
+\subsection{Ricci-flatness and metric identification}
+Every chamber object is locally free and
+slope stable. At fixed determinant its
+trace-free HE connection is an irreducible
+projective ASD connection on the Ricci-flat
+K3 surface. Itoh's construction
+\cite[Theorem~2.1]{itoh} makes its smooth
+moduli metric hyperk\"ahler. The real
+Dolbeault metric differs by the fixed factor
+specified in Section~\ref{sec:harmonic-models};
+it is therefore hyperk\"ahler as well,
+smooth on the entire compact $M_\sigma$,
+and complete. By uniqueness in a K\"ahler
+class,
+$g_\eta/(2\pi^2)$ is the Ricci-flat metric
+in class $\theta_v(b_\eta)$ on that fixed
+complex manifold. No auxiliary metric on
+a deformation-equivalent space is used.
+
+The symplectic form on $U$ pulls back and
+extends as the symplectic form on
+$M_\sigma$. Its top power trivializes the
+canonical sheaf on $U$. Normality and the
+codimension-at-least-two singular complement
+give the trivial reflexive canonical sheaf
+on $Z$. The resolution has zero discrepancies;
+further resolutions have nonnegative
+discrepancies, since $M_\sigma$ is smooth.
+Hence $Z$ is a projective Calabi--Yau
+variety with canonical singularities and
+a crepant resolution, as required by the
+metric completion results.
+
+Tosatti's real-class degeneration theorem
+\cite[Theorem~1.1 and the subsequent sequence
+formulation]{tosatti} applies to
+$\theta_v(b_\eta)\to\pi_\sigma^*\alpha_Z$.
+Its smooth limit away from the exceptional
+locus is the regular Ricci-flat metric
+of $\alpha_Z$ on $Z$. Equation
+\eqref{eq:regular-smooth-limit} identifies
+that metric with $g_0/(2\pi^2)$.
+This equality of metric tensors is a separate
+step from the algebraic/Uhlenbeck topological
+identification.
+
+\begin{proposition}\label{prop:compact-limit}
+The completion of $(U,g_0)$ is a compact
+length space $(Z,d_0)$ whose topology is
+the projective topology. For every generic
+sequence $\eta\to0$, allowing changes of
+chamber and arbitrary ratios of its positive
+scales,
+\[
+ (M_{\sigma(\eta)},g_\eta)
+          \longrightarrow(Z,d_0)
+ \quad\text{in compact Gromov--Hausdorff distance}.
+\]
+\end{proposition}
+
+\begin{proof}
+Song's completion theorem
+\cite[Theorem~1.1]{song} applies to
+$(Z,\alpha_Z)$. Its regular Ricci-flat
+metric has compact completion homeomorphic
+to $Z$, extending the identity on $U$.
+The metric identification above and a fixed
+homothety give the first assertion.
+On a fixed chamber, \cite[Corollary~1.1]{song}
+gives compact convergence of the Ricci-flat
+metrics to that completion. Its limiting
+class is rational, big and nef, with
+semiample model exactly $Z$ by
+\eqref{eq:common-ample-class}.
+
+The conclusion applies to real interior
+classes as well. If rational approximants
+are used in this argument, approximate the
+$n$th interior metric by a rational interior
+class with Gromov--Hausdorff discrepancy
+less than $1/n$. Smooth dependence at each
+interior class permits this choice, and the
+approximating classes still tend to the
+same boundary class. No continuity estimate
+uniform up to the boundary is assumed.
+
+There are only six chambers. Every generic
+parameter sequence has subsequences in a
+single chamber. The determinant calculation
+and the regular harmonic identification
+give the same $(Z,d_0)$ for all such
+subsequences. The subsequence criterion
+proves the assertion for the original
+sequence.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Section~\ref{sec:compact-interaction} constructs
+the compact chamber spaces, excludes all
+ideal charge and identifies the full
+singular locus of their common normal
+target. Section~\ref{sec:chambers} gives
+all six deepest fibres and the reduced
+specialization. The primitive cycle
+calculations and Proposition
+\ref{prop:calculated-attachments} prove
+the integral assertions. Equations
+\eqref{eq:exact-cycle-volumes},
+\eqref{eq:relative-plane-diameter},
+\eqref{eq:uniform-plane-bounds} and
+\eqref{eq:separated-diameter}, together
+with Theorem~\ref{thm:successive-limits},
+give the exact periods, ambient collapse
+and complete rescaled limits for those
+same cycles. Proposition~\ref{prop:compact-limit}
+proves the final compact convergence.
+\end{proof}
+
+The integral attachment uses a marked
+complement, and the metric completion uses
+the global harmonic class on the actual
+compact family. The exceptional cycles
+thus carry explicit global information,
+while the geometry retained away from
+them remains part of the reconstruction
+data. The argument concerns these
+contractions without lost charge. Extending
+it to singular graded sheaves and bubbling
+would require compatible local metrics and
+integral attachment data for those additional
+boundary strata.

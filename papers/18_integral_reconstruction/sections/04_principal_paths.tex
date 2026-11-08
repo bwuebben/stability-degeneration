@@ -1,0 +1,159 @@
+\section{Paths through the principal stratum}\label{sec:paths}
+
+Before comparing compact spaces, we identify the central metric that
+will be their limit. Density of the stable locus is not sufficient:
+a dense Riemannian stratum can have a larger intrinsic distance.
+We prove equality of distances by perturbing paths and controlling
+the short joins between their pieces.
+
+\subsection{Short paths in a fixed semialgebraic set}
+We use the following elementary consequence of semialgebraic
+triangulation and uniform monotonicity
+\cite[pp.~116,130,133]{vandendries}.
+
+\begin{lemma}\label{lem:bounded-paths}
+A nonempty bounded connected semialgebraic set \(S\subset\R^N\),
+not necessarily closed, has finite intrinsic diameter for
+Euclidean path length. More precisely, every two points can be
+joined in \(S\) by a continuous semialgebraic path of length at
+most a constant \(C_S\).
+\end{lemma}
+
+\begin{proof}
+Triangulate the compact closure compatibly with \(S\).
+Its inverse image is a finite union of relative open simplices.
+Choose their barycenters and connect two when one included simplex
+is a face of the other. The connecting segment lies in the larger
+open simplex except at its endpoint and stays in the union.
+The resulting finite incidence graph is connected. Otherwise one
+component and its complement would be relatively open and closed:
+a relative limit between included cells can only occur along a
+face incidence, which would connect the components.
+
+Choose a spanning tree. Join each variable endpoint to its cell
+barycenter and then follow the tree between barycenters. Transport
+the resulting polygonal paths through the semialgebraic
+triangulation map. There are finitely many endpoint-cell choices,
+so this is a semialgebraic family of continuous paths. Cell decomposition and uniform finiteness, applied with the two
+endpoints as parameters, bound the number of monotonicity intervals
+of each coordinate by a common integer. Every coordinate stays in the
+bounded range of \(S\). The sum of its coordinate variations
+therefore gives a uniform finite bound for path length.
+\end{proof}
+
+For a positive-dilation-invariant set, applying the lemma in its
+unit ball gives joining paths of length \(C_S\rho\) in its
+radius-\(\rho\) ball. This is a statement about a fixed set; it
+does not assert a uniform constant for arbitrary degenerating
+families.
+
+\subsection{The simple zero quotient}
+Let \(W\) be a full doubled-quiver representation, with compact
+group \(K\) a connected product of unitary groups modulo an
+ineffective common scalar. Put
+\[
+ A_0=\{\mu_{\C}=0,\ \mu_{\R}=0\},\qquad Q_0=A_0/K.
+\]
+Assume that the complex zero fibre contains a module-simple
+representation. Write \(A_0^s\) for the balanced simple locus and
+\(Q_0^s=A_0^s/K\).
+We use the finite intrinsic theorem
+\cite[Section~5]{wuebben14}: \(Q_0\), with the infimum of
+finite-stratum path lengths, is a proper geodesic space whose
+metric topology is the quotient topology. We also use its full
+normal metric slice and normal-simple results
+\cite[Sections~4,6]{wuebben14}. These retain the complete normal
+representation and require the simple-zero hypothesis.
+
+\begin{lemma}\label{lem:simple-paths}
+There is a constant \(C_W\) such that every two points of
+\(A_0^s\) of norm at most \(\rho\) can be joined in \(A_0^s\),
+within that ball, by a path of length at most \(C_W\rho\).
+At any point of \(Q_0\), nearby simple points admit simple joining
+paths whose length tends to zero and which stay in any fixed
+sufficiently small neighborhood.
+\end{lemma}
+
+\begin{proof}
+Crawley--Boevey's theorem \cite[Theorem~1.2]{crawleyboevey},
+under the existence of a simple representation, makes the complex
+zero fibre irreducible and generically simple. Its simple quotient
+is a connected smooth open complex variety. Kempf--Ness identifies
+this with \(Q_0^s\). The compact-group quotient
+\(A_0^s\to Q_0^s\) is proper with connected fibres. A separation
+of its source would induce a separation of its target, by the
+closed-map property and connected fibres. Hence \(A_0^s\) is connected.
+
+Simplicity is semialgebraic: for each proper subdimension vector,
+the existence of invariant subspaces is a polynomial incidence
+condition on a product of Grassmannians, followed by projection.
+There are finitely many such vectors. The balanced moment equations
+are real polynomial, and \(A_0^s\) is invariant under positive
+dilation. The map \(x\mapsto x/\max(1,\|x\|)\) retracts it onto its
+unit-ball part. That part is connected and bounded, so
+Lemma~\ref{lem:bounded-paths} and scaling prove the first assertion.
+The zero-dimensional case uses constant paths.
+
+For the second assertion take the full normal slice at a balanced
+representative of the chosen point. Its stabilizer is connected,
+and its full normal representation again has a module-simple point
+by the normal-simple theorem. Representatives of nearby points
+tend, after unitary adjustment, to zero in this slice.
+A closed zero-level representation has scalar stabilizer exactly
+when it is simple; the slice preserves this condition.
+Apply the first assertion in the full normal representation.
+The bounded metric comparison of the slice takes its \(C\rho\)
+joins to joins of length at most \(C'\rho\) in the ambient quotient.
+Their images lie in any prescribed fixed neighborhood for small
+\(\rho\).
+\end{proof}
+
+Projection cannot increase the lengths of the balanced paths.
+Semialgebraic paths are piecewise smooth after finite subdivision,
+and within the simple stratum they may be smoothed with arbitrarily
+small additional length.
+
+\begin{proposition}\label{prop:principal-completion}
+The intrinsic Riemannian distance of \(Q_0^s\) equals the restriction
+of the full finite-stratum distance of \(Q_0\).
+Its metric completion is \(Q_0\).
+\end{proposition}
+
+\begin{proof}
+One inequality follows because every simple path is admissible
+in the full quotient. For the reverse, take simple endpoints and
+a finite-stratum path of length within \(\epsilon\) of their full
+distance. Truncate an arbitrarily small total length at its finitely
+many stratum junctions. Cover the remaining compact smooth pieces
+by normal slice charts with relative squared-metric errors less
+than a chosen \(\delta>0\), and subdivide.
+
+In a full slice the given stratum is \(T\times\{0\}\), where the
+group acts trivially on \(T\). Choose balanced simple normal points
+\((u_j,z_j)\to0\). Translation in \(T\) removes \(u_j\), without
+changing the moment map or stabilizer. Replace a piece
+\((u(t),0)\) by \((u(t),z_j)\). Its product-metric speed is exactly
+the old speed. Comparing both curves with that same product metric
+increases length by at most
+\(\sqrt{(1+\delta)/(1-\delta)}\). Their endpoints converge.
+
+Use Lemma~\ref{lem:simple-paths} to join the perturbed endpoints
+at each subdivision point. At an original singular junction,
+first choose a neighborhood where the joining cost is below an
+assigned tolerance, then truncate far enough toward the junction
+to place both endpoints there. Small simple perturbations remain
+there. The same construction joins to the original simple endpoints.
+There are finitely many joins; allocate their total cost below
+\(\epsilon\), and choose the chart errors so their total length
+inflation is below \(\epsilon\).
+The resulting simple path has length at most the full distance
+plus \(3\epsilon\). Let \(\epsilon\downarrow0\).
+
+The simple locus is dense in the quotient topology, hence in the
+finite metric topology. Properness gives completeness of \(Q_0\),
+so it is the asserted completion.
+\end{proof}
+
+This argument explains why lower-dimensional strata create no
+new shortcuts between stable points: every such path can be
+approximated with its length, not merely with its endpoints.
