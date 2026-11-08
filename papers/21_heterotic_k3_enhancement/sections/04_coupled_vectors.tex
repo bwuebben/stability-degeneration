@@ -1,0 +1,247 @@
+\section{The first coupled vector correction}\label{sec:coupled}
+
+\subsection{Action convention and the corrected background}
+For this calculation use unit-scale internal coordinates and remove the
+common gravitational prefactor. Set $\eta=\alpha'/L^2$ and use positive
+forms $\BF=-\tfrac12\Tr_{32}$ and $\BR=-\tfrac12\Tr_T$ on
+the compact gauge and internal Euclidean rotation algebras. The
+Lorentzian extension of the tangent trace is understood in the
+ten-dimensional action. Our convention is
+\begin{equation}\label{eq:heterotic-action}
+ \begin{split}
+ S=\int e^{-2\Phi}\sqrt{-G}\Bigl[&
+ R+4|d\Phi|^2-\frac1{12}H_{MNP}H^{MNP}\\
+ &-\frac\eta4\bigl(\BF(F_{MN},F^{MN})-\BR(R_{MN},R^{MN})\bigr)
+ \Bigr].
+ \end{split}
+\end{equation}
+Use the field choice in which no additional independent purely bosonic
+operator at order $\alpha'^2$ is required beyond the recursively defined
+torsion and composite-connection terms \cite{bdr,aqs}. This statement
+does not discard their order-$\alpha'^2$ contributions. The tangent
+connection is the composite Hull connection
+$\Theta_H=\Theta_{\rm LC}+\tfrac12H$, where
+$H^a{}_b=H^a{}_{bM}dx^M$ in an orthonormal frame, in the convention
+of \cite[section~2.1]{mcorist_yin}. It reduces to Levi--Civita at leading order.
+Fix Chern--Simons signs by
+\begin{align}
+ dH&=\frac\eta2\bigl(\BR(R\wedge R)-\BF(F\wedge F)\bigr),
+ \label{eq:Bianchi}\\
+ \delta H&=d\mathcal B-\eta\BF(\delta\mathcal A\wedge F)
+                  +\eta\BR(\delta\Theta\wedge R).
+ \label{eq:Hvariation}
+\end{align}
+$\mathcal B$ denotes the gauge-covariantly shifted two-form variation.
+These choices fix relative normalizations rather than combining formulas
+with incompatible trace or dilaton conventions.
+
+For $t=(a,b)$ let $F_t$ be the full leading ASD curvature. Through first
+order the smooth background is
+\begin{equation}\label{eq:background}
+ G_S=(1+\eta f_t)g_0,\qquad
+ \Phi=\Phi_0+\tfrac12\eta f_t,\qquad H=-\eta *_0df_t,
+\end{equation}
+where $f_t$ has zero mean and solves
+\begin{equation}\label{eq:Poisson}
+ \nabla^m\nabla_m f_t
+ =\frac14\bigl(\BR(R_{mn},R^{mn})-\BF(F_{t,mn},F_t^{mn})\bigr).
+\end{equation}
+Here $\nabla^2$ has the divergence sign; the nonnegative scalar
+Laplacian is $\Delta_0=-\nabla^2$. The source has mean zero by
+\eqref{eq:instanton}. Scalar elliptic inversion gives a unique
+solution, with uniform spatial bounds on a sufficiently small family
+of reconstructed connections. These connections have uniformly bounded
+spatial coefficients in fixed gauge even though the small spectral
+ratios degenerate. Parameter derivative bounds used later are only on
+fixed regular patches. For sufficiently small $\eta$, $1+\eta f_t>0$.
+
+The normalization can be checked directly. In four dimensions the
+linear conformal Ricci tensor is
+$-\nabla_m\nabla_nf-\tfrac12g_{mn}\nabla^2f$; the dilaton
+Hessian adds $\nabla_m\nabla_nf$. For an ASD curvature,
+$\BF(F_{mp},F_n{}^p)=\tfrac14g_{mn}\BF(F_{pq},F^{pq})$.
+The Einstein equation from \eqref{eq:heterotic-action} gives
+\eqref{eq:Poisson}. Also
+$\BF(F\wedge F)=-\tfrac12\BF(F_{mn},F^{mn})dV$ and
+$d(-*df)=-\nabla^2 f\,dV$, so the Bianchi identity gives the same
+equation. The dilaton equation gives the same trace condition, and
+the two-form equation holds because the leading weighted dual flux
+is exact. The gauge equation
+$D_{\mathcal A}(e^{-2\Phi}*_4F)-e^{-2\Phi}F\wedge *_4H=0$
+also cancels through this order, using $*_4F=-F$ and
+$*_4H=\eta df$. The corresponding conformal/dilaton ansatz is the usual
+first-order supersymmetric K3 construction \cite{gpt}; ASD persists
+under conformal rescaling. It is a solution through the computed
+order, not an existence assertion for an exact finite-$\eta$ background.
+
+\subsection{The two heavy spin-one sectors}
+Let $P_t$ be the whole 96-dimensional low real spectral projection
+of $d_{\mathcal A_t}^*d_{\mathcal A_t}$ on the full orthogonal
+adjoint. Put $A_t=P_td_{\mathcal A_t}^*d_{\mathcal A_t}P_t$.
+This space includes all persistent massless vectors. Define
+\begin{equation}\label{eq:TJ}
+ T_tp=\BF(p,F_t)\in\Omega^2(S),\qquad
+ (J_tp)_m=\BF(F_{t,mn},D^np),\qquad
+ I_tv=\iota_vF_t.
+\end{equation}
+The Yang--Mills equation and invariance of the trace give
+$J_t=d^*T_t=I_t^*d_{\mathcal A_t}$, and hence $d^*J_t=0$.
+In components the latter follows by differentiating
+$\BF(F_{mn},D^np)$; the curvature commutator contracts to zero.
+
+Set $s=\sqrt\eta$ and canonically normalize the gauge fluctuation by
+$p=s\,\delta\mathcal A_\mu$. Let $v$ be the metric vector in the
+coframe $dy^m+v^m_\mu dx^\mu$, and let $\beta$ be the shifted
+two-form vector. After the diffeomorphism and form constraints their
+profiles are co-closed real one-forms. At leading order both have
+ordinary $L^2$ kinetic norm and squared-mass operator
+$\Delta_1=d^*d$ on co-closed one-forms. The external field-strength
+coefficient is $-1/4$ for each. For the two-form, the three placements
+of the internal index in $H_{\mu\nu m}$ turn its contribution to
+$-H^2/12$ into $-H_{\mu\nu m}H^{\mu\nu m}/4$, giving the
+external vector kinetic term. The three placements of the external
+index in $H_{\mu mn}$ instead give its mass term; the factor
+$1/2$ in the internal two-form norm yields the usual Proca
+normalization. For the metric the kinetic coefficient follows from the
+quadratic Kaluza--Klein curvature formula; on a Ricci-flat base its
+Killing-operator form reduces, on co-closed forms, to $\|dv\|^2$.
+K3 has no harmonic one-forms, and a Killing field on a compact
+Ricci-flat K3 would be parallel. Thus both sectors have a fixed
+positive gap.
+
+With $I_tv=\iota_vF_t$ and the plus coframe just specified, the
+horizontal mixed gauge curvature is
+$-d_{\mathcal A}\delta\mathcal A_\mu-I_tv_\mu$.
+The terms determining the first low-vector coefficient are therefore
+\begin{equation}\label{eq:mixing-squares}
+ Q=\|d_{\mathcal A}p+sI_tv\|^2+\|dv\|^2
+                      +\|d\beta-sT_tp\|^2,
+ \qquad K=\|p\|^2+\|v\|^2+\|\beta\|^2
+\end{equation}
+at leading heavy order. Reversing the coframe convention reverses
+the metric mixing sign and leaves its Schur term unchanged. Exact
+one-form gauge directions are not additional transverse vector
+species. Harmonic two-form components of $T_tp$, in contrast, must
+remain in the direct norm in \eqref{eq:mixing-squares}.
+
+The conformal background contributes gauge kinetic weight
+$(1+\eta f_t)$: its four-dimensional volume factor and dilaton
+factor leave one power of $1+\eta f_t$. The extra inverse internal
+metric in the gauge mass term cancels that power to first order.
+Thus the direct gauge correction to the pencil is
+$T_t^*T_t-\lambda f_t$.
+
+Eliminating both complete leading heavy towers gives
+\begin{equation}\label{eq:effectivecoefficient}
+ E_t(\lambda)=P_t\left[T_t^*T_t-\lambda f_t
+           -2J_t^*(\Delta_1-\lambda)^{-1}J_t\right]P_t.
+\end{equation}
+Each factor of two in this expression comes from one of the two
+distinct, equally normalized heavy sectors. No finite KK cutoff is
+taken. Leading elliptic estimates give
+$\|p\|_{H^k}\le C_k\|p\|$ for $p\in\operatorname{im}P_t$,
+uniformly in $t$. Together with the one-form gap and the uniform
+Poisson bound, this proves, on a fixed interval below half that gap,
+\begin{equation}\label{eq:Ebound}
+ \|E_t(\lambda)\|+\|\partial_\lambda E_t(\lambda)\|\le C.
+\end{equation}
+There is no inverse small gauge eigenvalue in this bound.
+
+For clarity, the order count also covers the terms not visible in
+\eqref{eq:mixing-squares}. Metric--two-form heavy mixing from the
+background $H$ and first-order changes of their operators are of
+order $\eta$. Between two gauge--heavy mixings of order
+$\sqrt\eta$ they first affect the low pencil at order $\eta^2$.
+The $\eta\|I_tv\|^2$ term has the same property. A gauge-vector
+induced torsion variation is of order $\sqrt\eta$ in canonical
+variables, so its quadratic contribution through
+$\eta R(\Theta)^2$ starts at order $\eta^2$.
+Quadratic gauge Chern--Simons terms have at least two external legs
+and cannot contract with the purely internal background to supply
+an earlier diagonal term. Lorentz Chern--Simons corrections to a
+gauge--heavy mixing start at order $\eta^{3/2}$. Finally the
+off-diagonal coupling to the gapped gauge complement starts at
+order $\eta$, and its Schur contribution at order $\eta^2$.
+The absence of a further independent bosonic $\alpha'^2$ operator
+in the chosen scheme matters here: canonical gauge normalization
+removes one power of $\eta$ from a quadratic gauge term.
+We extract a perturbative coefficient; we do not treat the raw
+curvature-squared action as a positive bounded perturbation of an
+infinite-dimensional second-order form.
+
+\subsection{Hodge cancellation, positivity and the error bound}
+Let $\HH_2$ denote harmonic projection on real two-forms. For every
+adjoint zero-form $p$, ASD gives $*T_tp=-T_tp$. Decompose
+$T_tp=h+e+c$ into harmonic, exact and coexact parts. Hodge star
+preserves $h$ and exchanges $e,c$ isometrically, so
+$\|e\|=\|c\|$. Moreover
+$e=d\Delta_1^{-1}d^*T_tp$. Hence
+\begin{equation}\label{eq:Hodgeidentity}
+ \|T_tp\|^2-2\langle J_tp,\Delta_1^{-1}J_tp\rangle
+                   =\|\HH_2T_tp\|^2.
+\end{equation}
+This elementary identity is a useful check on the two heavy
+normalizations. Polarization and the resolvent identity rewrite
+\eqref{eq:effectivecoefficient} as
+\begin{align}\label{eq:Epositive}
+ E_t(\lambda)&=P_tT_t^*\HH_2T_tP_t-\lambda Z_t(\lambda),\\
+ Z_t(\lambda)&=P_t\left[f_t+
+ 2J_t^*\Delta_1^{-1}(\Delta_1-\lambda)^{-1}J_t\right]P_t.
+ \nonumber
+\end{align}
+
+Define the first-order effective model by
+\begin{equation}\label{eq:pencil}
+ F_t^{[1]}(\lambda,\eta)=A_t-\lambda I+\eta E_t(\lambda),
+ \qquad m^{2,[1]}=L^{-2}\lambda.
+\end{equation}
+For small $\eta$, its zero-energy mass form is nonnegative,
+and its kinetic form $I+\eta Z_t(\lambda)$ is positive on the
+fixed low interval. Also $\partial_\lambda F_t^{[1]}=-I+O(\eta)$
+is negative definite there. These assertions concern a finite
+96-dimensional pencil with an exactly specified coefficient.
+
+Every parallel generator of the unbroken algebra has
+$d_{\mathcal A_t}p=0$ and $T_tp=0$ pointwise. In the central
+unitary directions the latter follows from determinant-flat
+curvature on each stable factor; it also holds in the trivial
+$\SO(14)$ block. On an axis the separate rank-three determinants
+remain trivial because $\operatorname{Pic}^0(S)=0$.
+Consequently
+\begin{equation}\label{eq:kernel}
+ \ker F_t^{[1]}(0,\eta)=\ker A_t.
+\end{equation}
+There are exactly 93, 94 or 96 zero roots on the corresponding
+strata. Positivity precludes an extra kernel outside $\ker A_t$.
+
+\begin{proposition}\label{prop:coupled}
+For sufficiently small $a,b,\eta\ge0$, the pencil
+\eqref{eq:pencil} has 96 real low roots, counted with
+multiplicity, with kernels as in \eqref{eq:kernel}. Its three
+positive generic branches satisfy \eqref{eq:intro-corrected}.
+\end{proposition}
+\begin{proof}
+Choose a fixed positive cutoff below the one-form and gauge
+complementary gaps and then shrink the parameter neighborhood so
+that the whole leading low cluster lies well below it. The
+pencil is positive at a small fixed negative endpoint and
+negative at the positive endpoint, and decreases strictly
+between them. Its ordered eigenvalue functions therefore have
+exactly one zero each. Equation~\eqref{eq:Ebound} and the
+min--max inequalities displace each root from the corresponding
+eigenvalue of $A_t$ by at most $C\eta$. Divide by the positive
+finite eigenvalue, whose minimum is a fixed constant times
+$b^2$, and apply Proposition~\ref{prop:vectors}. Exact zero
+branches are treated by \eqref{eq:kernel}, not by division.
+\end{proof}
+
+The formal full expression is
+$F=A_t-\lambda I+\eta E_t(\lambda)+\Oformal(\eta^2)$.
+Here $\Oformal$ records uncomputed higher coefficients; it is
+not a uniform numerical bound on an exact finite-$\eta$ pole.
+Solving \eqref{eq:pencil} retains its energy dependence and
+thereby resums some higher powers by convention. Those powers
+are not additional calculated string coefficients. Along
+$b=\varepsilon^p$, $a=\varepsilon$, $p>1$, the sufficient
+condition $\eta=o(\varepsilon^{2p+2})$ refers precisely to
+the model estimate just proved.

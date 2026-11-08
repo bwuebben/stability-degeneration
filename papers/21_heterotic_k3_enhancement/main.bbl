@@ -1,0 +1,140 @@
+
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{wuebben15}
+B.J.~Wuebben, \emph{Quantitative local models for {Hermitian--Einstein}
+  metrics},  7 November, 2026.
+\newblock 10.5281/zenodo.24029090.
+
+\bibitem{stabilitywalls}
+L.B.~Anderson, J.~Gray, A.~Lukas and B.~Ovrut, \emph{{Stability Walls in
+  Heterotic Theories}},
+  \href{https://doi.org/10.1088/1126-6708/2009/09/026}{\emph{JHEP} {\bfseries
+  09} (2009) 026} [\href{https://arxiv.org/abs/0905.1748}{{\ttfamily
+  0905.1748}}].
+
+\bibitem{honecker}
+G.~Honecker, \emph{{Massive U(1)s and Heterotic Five-Branes on K3}},
+  \href{https://doi.org/10.1016/j.nuclphysb.2006.04.027}{\emph{Nucl. Phys. B}
+  {\bfseries 748} (2006) 126}
+  [\href{https://arxiv.org/abs/hep-th/0602101}{{\ttfamily hep-th/0602101}}].
+
+\bibitem{louis}
+J.~Louis, M.~Schasny and R.~Valandro, \emph{{6D Effective Action of Heterotic
+  Compactification on K3 with nontrivial Gauge Bundles}},
+  \href{https://doi.org/10.1007/JHEP04(2012)028}{\emph{JHEP} {\bfseries 04}
+  (2012) 028} [\href{https://arxiv.org/abs/1112.5106}{{\ttfamily 1112.5106}}].
+
+\bibitem{alpv}
+S.~Alexandrov, J.~Louis, B.~Pioline and R.~Valandro, \emph{{N=2 Heterotic-Type
+  II duality and bundle moduli}},
+  \href{https://doi.org/10.1007/JHEP08(2014)092}{\emph{JHEP} {\bfseries 08}
+  (2014) 092} [\href{https://arxiv.org/abs/1405.4792}{{\ttfamily 1405.4792}}].
+
+\bibitem{cheung}
+C.~Cheung, A.~Helset and J.~Parra-Martinez, \emph{{Geometric Soft Theorems}},
+  \href{https://doi.org/10.1007/JHEP04(2022)011}{\emph{JHEP} {\bfseries 04}
+  (2022) 011} [\href{https://arxiv.org/abs/2111.03045}{{\ttfamily
+  2111.03045}}].
+
+\bibitem{candelas}
+P.~Candelas, X.~de~la Ossa and J.~McOrist, \emph{{A Metric for Heterotic
+  Moduli}}, \href{https://doi.org/10.1007/s00220-017-2978-7}{\emph{Commun.
+  Math. Phys.} {\bfseries 356} (2017) 567}
+  [\href{https://arxiv.org/abs/1605.05256}{{\ttfamily 1605.05256}}].
+
+\bibitem{mcorist_sticka_svanes}
+J.~McOrist, M.~Sticka and E.E.~Svanes, \emph{{The moduli of the universal
+  geometry of heterotic moduli}},
+  \href{https://arxiv.org/abs/2411.05350}{{\ttfamily 2411.05350}}.
+
+\bibitem{mcorist_yin}
+J.~McOrist and Q.~Yin, \emph{{Heterotic moduli, the double extension and the
+  $\alpha'^2$ metric}},  \href{https://arxiv.org/abs/2607.15817}{{\ttfamily
+  2607.15817}}.
+
+\bibitem{wuebben20}
+B.J.~Wuebben, \emph{Canonical metrics on singular moduli of {K3} bundles},  8
+  November, 2026.
+\newblock 10.5281/zenodo.24060228.
+
+\bibitem{yoshioka}
+K.~Yoshioka, \emph{{Irreducibility of moduli spaces of vector bundles on K3
+  surfaces}},  \href{https://arxiv.org/abs/math/9907001}{{\ttfamily
+  math/9907001}}.
+
+\bibitem{donaldson}
+S.K.~Donaldson, \emph{{Anti Self-Dual Yang-Mills Connections Over Complex
+  Algebraic Surfaces and Stable Vector Bundles}},
+  \href{https://doi.org/10.1112/plms/s3-50.1.1}{\emph{Proc. Lond. Math. Soc.}
+  {\bfseries 50} (1985) 1}.
+
+\bibitem{uy}
+K.~Uhlenbeck and S.T.~Yau, \emph{{On the existence of hermitian-yang-mills
+  connections in stable vector bundles}},
+  \href{https://doi.org/10.1002/cpa.3160390714}{\emph{Commun. Pure Appl. Math.}
+  {\bfseries 39} (1986) S257}.
+
+\bibitem{budurzhang}
+N.~Budur and Z.~Zhang, \emph{Formality conjecture for {K3} surfaces},
+  \href{https://doi.org/10.1112/S0010437X19007206}{\emph{Compos. Math.}
+  {\bfseries 155} (2019) 902}
+  [\href{https://arxiv.org/abs/1803.03974}{{\ttfamily 1803.03974}}].
+
+\bibitem{buchdahl}
+N.~Buchdahl and G.~Schumacher, \emph{{An Analytic Application of Geometric
+  Invariant Theory}},
+  \href{https://doi.org/10.1016/j.geomphys.2021.104237}{\emph{J. Geom. Phys.}
+  {\bfseries 165} (2021) 104237}
+  [\href{https://arxiv.org/abs/2008.04625}{{\ttfamily 2008.04625}}].
+
+\bibitem{itoh}
+M.~Itoh, \emph{{Gauge fields and quaternion structure}},
+  \href{https://doi.org/10.2996/kmj/1138038932}{\emph{Kodai Math. J.}
+  {\bfseries 11} (1988) 344}.
+
+\bibitem{parallelspinor}
+X.~Dai, X.~Wang and G.~Wei, \emph{{On the Stability of Riemannian Manifold with
+  Parallel Spinors}},
+  \href{https://doi.org/10.1007/s00222-004-0424-x}{\emph{Invent. Math.}
+  {\bfseries 161} (2005) 151}
+  [\href{https://arxiv.org/abs/math/0311253}{{\ttfamily math/0311253}}].
+
+\bibitem{bdr}
+E.~Bergshoeff and M.~de~Roo, \emph{{The quartic effective action of the
+  heterotic string and supersymmetry}},
+  \href{https://doi.org/10.1016/0550-3213(89)90336-2}{\emph{Nucl. Phys. B}
+  {\bfseries 328} (1989) 439}.
+
+\bibitem{aqs}
+L.~Anguelova, C.~Quigley and S.~Sethi, \emph{{The Leading Quantum Corrections
+  to Stringy K{\"a}hler Potentials}},
+  \href{https://doi.org/10.1007/JHEP10(2010)065}{\emph{JHEP} {\bfseries 10}
+  (2010) 065} [\href{https://arxiv.org/abs/1007.4793}{{\ttfamily 1007.4793}}].
+
+\bibitem{gpt}
+J.~Gillard, G.~Papadopoulos and D.~Tsimpis, \emph{{Anomaly, Fluxes and (2,0)
+  Heterotic-String Compactifications}},
+  \href{https://doi.org/10.1088/1126-6708/2003/06/035}{\emph{JHEP} {\bfseries
+  06} (2003) 035} [\href{https://arxiv.org/abs/hep-th/0304126}{{\ttfamily
+  hep-th/0304126}}].
+
+\bibitem{hein_tosatti}
+H.-J.~Hein and V.~Tosatti, \emph{{Higher-order estimates for collapsing
+  Calabi-Yau metrics}},
+  \href{https://doi.org/10.4310/CJM.2020.v8.n4.a1}{\emph{Camb. J. Math.}
+  {\bfseries 8} (2020) 683} [\href{https://arxiv.org/abs/1803.06697}{{\ttfamily
+  1803.06697}}].
+
+\bibitem{oneill}
+B.~O'Neill, \emph{{The fundamental equations of a submersion.}},
+  \href{https://doi.org/10.1307/mmj/1028999604}{\emph{Michigan Math. J.}
+  {\bfseries 13} (1966) 459}.
+
+\bibitem{bielawski}
+R.~Bielawski, \emph{{Curvature of hyperk{\"a}hler quotients}},
+  \href{https://doi.org/10.2478/s11533-008-0026-8}{\emph{Central Eur. J. Math.}
+  {\bfseries 6} (2008) 191}
+  [\href{https://arxiv.org/abs/math/0702889}{{\ttfamily math/0702889}}].
+
+\end{thebibliography}\endgroup

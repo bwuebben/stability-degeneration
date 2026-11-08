@@ -1,0 +1,203 @@
+\section{The compactification and its enhancement locus}\label{sec:compactification}
+
+\subsection{Stable factors and the orthogonal embedding}
+Fix a smooth projective K3 surface $S$ with $\operatorname{Pic}(S)=\ZZ H$,
+where $H$ is ample. Let $g_0$ be its Ricci-flat K\"ahler metric in that
+class, oriented so that primitive $(1,1)$ forms are anti-self-dual. Norms
+and harmonic representatives without an explicit scale use $g_0$ and
+unnormalized trace inner products. Write $V_0=\Vol(S,g_0)$.
+
+Choose locally free $\mu_H$-stable bundles $A,B$ with
+\begin{equation}\label{eq:factors}
+ \begin{gathered}
+ \operatorname{rk}A=\operatorname{rk}B=3,\qquad \det A=\det B=\OO_S,\\
+ c_2(A)=7,\quad c_2(B)=10,\qquad A\not\simeq A^*,\quad B\not\simeq B^*.
+ \end{gathered}
+\end{equation}
+Here existence includes the locally free, slope-stable and non-self-dual
+conditions. We give the argument because these conditions determine both
+the analytic application and the unbroken gauge algebra.
+
+For $k=7,10$ the Mukai vector is $v_k=(3,0,3-k)$, with
+$v_7^2=24$ and $v_{10}^2=42$. Both vectors are primitive. An equal
+reduced-Hilbert-polynomial proper subsheaf would have first Chern class
+zero and Euler characteristic divided by rank equal to $-1/3$ or
+$-4/3$. Neither is possible for rank one or two. Thus $H$ is general
+for these vectors. Yoshioka's nonemptiness and irreducibility theorem,
+together with the slope-stability and local-freeness criteria in
+\cite[Theorem~0.1, Proposition~0.5 and section~3.3]{yoshioka}, gives
+nonempty slope-stable and locally free opens. In that notation the
+integer $l$ equals three and $v_k^2\ge2l^2$. The exceptions to the
+locally free criterion do not occur: the vectors have rank three,
+whereas the spherical exception of the form
+$(\operatorname{rk}v_0)v_0-\omega$ would have square rank.
+Irreducibility makes the two opens intersect. Since $\operatorname{Pic}^0(S)=0$,
+their determinant is trivial.
+
+Dualization acts holomorphically as an involution on this smooth open.
+At a fixed point $F$, simplicity makes an isomorphism $F\to F^*$
+symmetric or skew-symmetric after scalar normalization. Odd rank
+excludes the latter. The invariant tangent space is
+$H^1(S,\mathfrak{so}(F))\simeq H^1(S,F)$: use
+$\Lambda^2F^*\simeq F$ and the symmetric form. Stability and Serre
+duality give $H^0(F)=H^2(F)=0$, and Riemann--Roch gives
+\begin{equation}\label{eq:selfdual-dim}
+ h^1(F)=k-6,\qquad h^1(\End F)=6k-16.
+\end{equation}
+The fixed locus of a holomorphic involution is smooth with its invariant
+tangent space. One can see this directly by replacing local coordinates
+$z$ centered at a fixed point by
+$\tfrac12(z+D\iota_0\,z\circ\iota)$; their derivative is the
+identity and the action becomes linear. The fixed locus therefore
+cannot fill the stable locally free open. This proves that the choices
+in \eqref{eq:factors} exist. Their distinct second Chern classes also
+exclude isomorphisms between $A$ or $A^*$ and $B$ or $B^*$.
+
+At enhancement set $E_0=A\otimes\CC^2$ and define the real gauge
+bundle
+\begin{equation}\label{eq:gauge-bundle}
+ \mathcal V=(E_0\oplus B)_{\RR}\oplus\RR^{14},\qquad
+ \mathcal V\otimes\CC=E_0\oplus E_0^*\oplus B\oplus B^*\oplus\OO^{14}.
+\end{equation}
+It has real rank 32, $w_2(\mathcal V)=0$, and
+$p_1(\mathcal V)=-2c_2(E_0\oplus B)=-48=p_1(TS)$.
+The weighted instanton number is
+\begin{equation}\label{eq:instanton}
+ 2c_2(A)+c_2(B)=2\cdot7+10=24.
+\end{equation}
+There is consequently no five-brane source in the integrated Bianchi
+identity \cite{honecker}. The Donaldson--Uhlenbeck--Yau correspondence
+\cite{donaldson,uy} supplies determinant-flat HE connections, which are
+ASD on $S$. They give the leading background with eight supercharges,
+or six-dimensional $\mathcal N=(1,0)$ supersymmetry. Equation
+\eqref{eq:instanton} is an integrated condition; it does not set the
+gauge and tangent curvature densities equal pointwise. Their difference
+sources the first correction in section~\ref{sec:coupled}.
+
+The parallel orthogonal adjoint sections have compact algebra
+\begin{equation}\label{eq:centralizer}
+ \mathfrak h_0=\mathfrak{so}(14)\oplus\mathfrak u(2)\oplus\mathfrak u(1),
+ \qquad \dim_\RR\mathfrak h_0=96.
+\end{equation}
+Indeed the endomorphism blocks give $\End(\CC^2)$ and $\CC$ by
+simplicity. The additional exterior-square blocks have no parallel
+sections. For example,
+\[
+ \Lambda^2(A\otimes\CC^2)=
+ (\Lambda^2 A\otimes\operatorname{Sym}^2\CC^2)
+ \oplus(\operatorname{Sym}^2 A\otimes\Lambda^2\CC^2),
+\]
+and $H^0(A\otimes A)=\Hom(A^*,A)=0$ by stability and
+non-self-duality. The other cross blocks vanish for the same reason.
+There are no maps to the trivial fourteen-dimensional factor.
+This also explains why replacing $A$ by a pseudoreal rank-two factor
+would give a different centralizer. All central factors here have
+$c_1=0$; the abelian flux mass matrix of \cite[section~3.2]{honecker}
+vanishes. Protection of the nonconstant-profile vector calculation
+requires the separate argument in section~\ref{sec:coupled}.
+
+\subsection{Harmonic coordinates and actual bundles}\label{subsec:harmonic}
+General K3 formality results \cite{budurzhang} identify quadratic
+deformation germs. The quantitative metric application below needs
+the stronger coordinate specification in the original harmonic chart.
+
+The harmonic space $H^1(S,\End A)$ has complex dimension 26 and a
+quaternionic structure. Choose thirteen orthonormal symplectic pairs,
+normalized using the parallel holomorphic two-form. Then
+\[
+ H^1(S,\End E_0)=H^1(S,\End A)\otimes\End(\CC^2)
+\]
+has coordinates $(X_j,Y_j)_{j=1}^{13}$ with the flat real metric
+\begin{equation}\label{eq:flatmetric}
+ \|\dot x\|^2=\operatorname{Re}\sum_{j=1}^{13}
+ \tr(\dot X_j^*\dot X_j+\dot Y_j^*\dot Y_j).
+\end{equation}
+The multiplicity group acts by simultaneous conjugation; its center
+acts trivially. The complex and real moment equations are
+\begin{equation}\label{eq:moments}
+ \sum_j[X_j,Y_j]=0,\qquad
+ \sum_j\bigl([X_j,X_j^*]+[Y_j,Y_j^*]\bigr)=0.
+\end{equation}
+Only their zero level is used. Let $\Cone$ be this hyperk\"ahler
+quotient by the effective group $\PU(2)$, with metric $\gC$ on its
+smooth-simple part.
+
+We record why these are exact local deformation coordinates, rather
+than merely the quadratic part of an unspecified obstruction. Put
+$d=\dbar_{E_0}$ and denote harmonic projection and Green operators
+by $H_q,G_q$. The convergent harmonic recursion of
+\cite[Lemma~2.1]{wuebben15} is
+\begin{equation}\label{eq:recursion}
+ \mathfrak a(x)=x-d^*G_2(\mathfrak a(x)\wedge\mathfrak a(x)),\qquad
+ \mathfrak k(x)=H_2(\mathfrak a(x)\wedge\mathfrak a(x)).
+\end{equation}
+On a Ricci-flat K3 its obstruction is exactly
+\begin{equation}\label{eq:quadratic}
+ \mathfrak k(x)=H_2(x\wedge x).
+\end{equation}
+For completeness, a harmonic $\End E_0$-valued $(0,2)$-form is
+$\xi\bar\sigma$ with $\xi$ parallel. This follows from the formula
+for $d^*(\xi\bar\sigma)$ and the Bochner identity on the
+zero-mean-curvature endomorphism bundle. If $d^*u=0$ and
+$\gamma=\phi\bar\sigma$, the coefficients of
+$u\wedge d^*\gamma$ and $d^*\gamma\wedge u$ are, up to common
+nonzero scalars,
+$-\sum_j u_{\bar j}\nabla_j\phi$ and
+$\sum_j(\nabla_j\phi)u_{\bar j}$. Pair either with a parallel
+$\xi$ and integrate by parts, keeping the matrix order. The resulting
+terms contain $\sum_j\nabla_j u_{\bar j}=-d^*u$ and vanish.
+Consequently both products have zero harmonic projection.
+Writing $\mathfrak a=x+\beta$ with $\beta$ coexact and
+$d^*$-closed eliminates all terms containing $\beta$ in the
+obstruction and proves \eqref{eq:quadratic}. This is precisely the
+local argument in \cite[Lemma~3.1]{wuebben20}; it uses none of that
+paper's later global rank or no-bubbling hypotheses.
+
+Serre duality identifies \eqref{eq:quadratic} with the first equation
+in \eqref{eq:moments}; a common nonzero symplectic factor and the
+rank-dual identification do not change its zero set. Fixing the
+determinant removes no harmonic directions because $H^1(S,\OO)=0$.
+The analytic quotient construction \cite{buchdahl} and HE reconstruction
+\cite[Theorem~1.1]{wuebben15} therefore identify the balanced quotient
+with the actual nearby HE moduli. This identification $\Psi$ is
+holomorphic in these same coordinates: the holomorphic classifying
+map and the reconstructed HE map assign the same bundle class to
+each harmonic deformation. No further nonlinear reparametrization
+is made.
+
+The quantitative input, specialized to this fixed background, is
+\begin{equation}\label{eq:metriccomparison}
+ (1-Cr^2)\gC\ \le\ \Psi^*\gKS\ \le\ (1+Cr^2)\gC,
+ \qquad r=\|x\|,
+\end{equation}
+on genuine smooth stratum tangents. Here $\gKS$ is the real harmonic
+Kodaira--Spencer metric in the unnormalized Dolbeault norm. The same
+constant works when positive orbit scales have arbitrary ratios. It
+may depend on the fixed metric, bundles, ranks, harmonic dimensions
+and elliptic gaps. This does not assert uniformly sized smooth
+coordinate charts through every lower stratum. On the smooth-simple
+locus $\gKS$ is hyperk\"ahler \cite{itoh}.
+
+Let $\sigma_j$ be the Pauli matrices with
+$\tr(\sigma_i\sigma_j)=2\delta_{ij}$ and
+$[\sigma_i,\sigma_j]=2i\epsilon_{ijk}\sigma_k$. Our family is
+\begin{equation}\label{eq:pauli}
+ X_1=a\sigma_3,\qquad X_2=b\sigma_1,\qquad
+ X_j=0\ (j\ge3),\qquad Y_j=0,\qquad a,b\in\RR.
+\end{equation}
+It satisfies both moment equations since its nonzero matrices are
+Hermitian. If $ab\ne0$, a line invariant under $\sigma_3$ is an
+eigenline, and $\sigma_1$ exchanges the two eigenlines. The
+representation is therefore simple. Reconstruction gives an actual
+stable rank-six bundle $E_{a,b}$ with $c_2=14$ and trivial determinant.
+The local simple moduli space has complex dimension
+$104-2\cdot3=98$.
+
+On a nonzero axis the representation is the sum of two distinct
+characters, corresponding to two nearby stable rank-three factors.
+Upper semicontinuity preserves the other Hom vanishings after
+shrinking the neighborhood. The unbroken algebra is thus
+$\mathfrak{so}(14)\oplus\mathfrak u(1)^2$ generically,
+$\mathfrak{so}(14)\oplus\mathfrak u(1)^3$ on an axis, and
+\eqref{eq:centralizer} at the origin. Their dimensions are
+93, 94 and 96, respectively.

@@ -1,0 +1,263 @@
+\section{A leading neutral-scalar interaction}\label{sec:scalar}
+
+\subsection{Partial reduction on a regular patch}
+Fix a relatively compact generic patch with $a,b>0$, and allow
+the spectator bundle and K3 geometry to vary in small patches.
+Write $z=(z_E,z_B)$ for bundle coordinates, $y$ for geometric
+hypermultiplet coordinates, and $\chi^I$ for locally unwrapped
+periodic two-form coordinates. The tensor multiplet and gravity
+remain explicit. At energies below the smallest Higgs mass we
+eliminate the three massive vector multiplets as well as the
+gapped KK modes. We retain all unbroken gauge and charged matter
+fields. The reduced scalar kinetic metric is a smooth gauged
+target near this vacuum; it is not the possibly singular vacuum
+quotient by the unbroken group.
+
+The nondegeneracy needed for this partial reduction can be checked
+in the local model. Let $D:\mathfrak{su}(2)\to T_xV$ be the
+broken orbit map. At moment level zero its quaternionic images
+obey
+\begin{equation}\label{eq:normals}
+ \langle I_\alpha D\xi,I_\beta D\zeta\rangle
+                 =\delta_{\alpha\beta}Q_x(\xi,\zeta).
+\end{equation}
+The symplectic pairings of orbit vectors vanish by moment-map
+equivariance. Since $D$ is injective, the three moment equations
+have an invertible derivative on these nine real normal directions.
+Their norm-square potential has positive Hessian there. The three
+orbit directions are Goldstone directions; a local gauge slice
+removes them. This accounts for the twelve real scalar directions
+in the three massive vector multiplets.
+
+At the actual ASD background the same construction has an elliptic
+description. If $H$ is its full residual compact gauge group and
+$\mathfrak h$ its parallel algebra, the hyperk\"ahler Weitzenb\"ock
+formula identifies the ASD cokernel with
+$\mathfrak h\otimes\RR^3$. On an $H$-invariant Coulomb slice the
+complement of this cokernel has a bounded elliptic right inverse;
+its finite kernel is the full retained ASD deformation space.
+For an off-shell effective action solve the heavy
+Euler--Lagrange equations on this complement. Their leading
+linearization is the positive ASD Hessian. The implicit-function
+construction gives a smooth $H$-equivariant solution in all retained
+variables, with the unbroken moment maps left as a potential.
+It agrees with the projected ASD construction on neutral ASD vacua;
+these equations need not agree away from that locus. The metric,
+two-form and fermionic complementary operators are those specified
+in section~\ref{sec:vectors}. All inverse bounds here belong to
+the fixed regular patch, and can deteriorate when its Higgs gap
+vanishes.
+
+The perturbative expansion below means the finite jet of this
+tree action, order by order in $\eta$ and external derivatives.
+The coefficient functions and the parameter derivatives actually
+used are smooth on the fixed patch. The notation $\Oformal(\eta^j)$
+specifies the absence of lower coefficients; it does not bound an
+unconstructed infinite remainder at finite $\eta$.
+
+\subsection{Mixed constraints and the vertical kinetic coefficient}
+For a pure bundle velocity at fixed leading geometry, use a
+parameter gauge connection $\Lambda_i$ and set
+\begin{equation}\label{eq:horizontal-ASD}
+ a_i=\partial_i\mathcal A-d_{\mathcal A}\Lambda_i,\qquad
+ d_{\mathcal A}^*a_i=0,\qquad d_{\mathcal A}^+a_i=0.
+\end{equation}
+The external-index gauge equation is precisely the first condition;
+$\mathcal A_\mu=\Lambda_i\partial_\mu z^i$ gives
+$F_{\mu m}=a_{i,m}\partial_\mu z^i$. For stable determinant-fixed
+$E,B$, the adjoint Laplacian is invertible off its retained central
+kernel. Smooth slice dependence and elliptic differentiation control
+$\Lambda_i$ and any fixed finite number of derivatives on the
+patch. K3 geometric variations lift to nearby ASD connections:
+the trace-free stable ASD cokernel is zero, since its harmonic
+self-dual adjoint forms have parallel coefficients. The neutral
+central equations are compatible with the fixed trivial determinants.
+
+Put $f_i=\partial_i f$ and
+$(j_i)_m=\BF(F_{mn},a_i{}^n)$. For the convention
+$G_{\mu m}=\eta v_{i,m}\partial_\mu z^i$ the mixed Einstein
+equation to the required order is
+\begin{equation}\label{eq:Einsteinconstraint}
+ \Delta_1v_i=df_i+j_i,\qquad d^*v_i=0.
+\end{equation}
+Its coefficients follow directly from
+\eqref{eq:heterotic-action}: the conformal internal metric contributes
+$-3\eta\,df_i/2$, the dilaton contributes $+\eta\,df_i$,
+the mixed metric contributes $\eta d^*dv_i/2$, and the gauge
+stress contributes $-\eta j_i/2$. The $H$ stress starts at
+$\eta^2$; the mixed $R^2$ source for a pure bundle velocity does
+also, because the leading tangent connection is independent of $z$.
+
+The longitudinal equation is essential. Differentiating
+\eqref{eq:Poisson}, using the Yang--Mills equation and trace invariance,
+gives
+\begin{equation}\label{eq:longitudinal}
+ \Delta_0f_i=\tfrac12\BF(F_{mn},(d_{\mathcal A}a_i)^{mn})
+ =\BF(F_{mn},D^ma_i{}^n)=-d^*j_i.
+\end{equation}
+Thus $df_i+j_i$ is co-closed. Since $H^1(S,\RR)=0$,
+\eqref{eq:Einsteinconstraint} has the controlled solution
+$v_i=\Delta_1^{-1}(df_i+j_i)$.
+
+For the two-form constraint, write $H_S=\eta h_1$ and
+$H_{\mu mn}=\eta(\mathcal H_i)_{mn}\partial_\mu z^i$.
+The mixed Bianchi identity and the external-index two-form equation
+give
+\begin{equation}\label{eq:Bconstraint}
+ d\mathcal H_i=\partial_i h_1+\BF(a_i\wedge F)=:S_i,
+ \qquad d^*\mathcal H_i=0.
+\end{equation}
+The source is closed: the derivative of the internal Bianchi
+identity is $d\partial_i h_1=-\BF(d_{\mathcal A}a_i\wedge F)$,
+and the second term cancels it using $d_{\mathcal A}F=0$.
+Since $H^3(S,\RR)=0$, with $G_3$ the ordinary Green operator,
+\begin{equation}\label{eq:Bsolution}
+ \mathcal H_i=d^*G_3S_i+h_i,
+\end{equation}
+where $h_i$ is harmonic. These harmonic components describe the
+retained periodic two-form coordinates and their local connection;
+they are not inverted. Their parameter-space curvature is the
+harmonic projection of the universal Chern--Weil form, including
+the parameter legs of the universal gauge connection. The universal
+Bianchi identity makes it closed. On a contractible patch a smooth
+connection potential is obtained by the Poincar\'e homotopy operator.
+This accounts for parameter integrability; setting every $h_i$ to
+zero independently would not do so. All computed coefficients
+and their finite parameter derivatives are bounded on the patch.
+
+The action now determines the leading bundle tensor, not merely its
+expected scale. The mixed Yang--Mills term is order $\eta$ and gives
+the $L^2$ metric of \eqref{eq:horizontal-ASD}. The leading metric and
+dilaton are independent of $z$; their bundle dependence and metric
+compensator start at order $\eta$, so their pure-bundle kinetic
+contribution starts at $\eta^2$. The two-form constraint has the
+same order, with its periodic-coordinate connection of order one.
+The leading tangent connection is independent of $z$; its
+variation through the corrected metric and torsion starts at
+$\eta$. The curvature-squared and Lorentz Chern--Simons terms
+therefore do not add an order-$\eta$ pure-bundle tensor. They are
+not omitted from base and higher-order coefficients.
+
+If $a_i=\beta_i-\beta_i^*$ with $\beta_i$ its $(0,1)$ part,
+the real one-form norm is twice the Dolbeault norm. Restoring the
+normalization \eqref{eq:YMaction} gives
+\begin{equation}\label{eq:physicalmetric}
+ S_{\rm scalar}=-\frac12\int C_B\gKS_{ij}
+               \partial_\mu z_E^i\partial^\mu z_E^j+\cdots,
+ \qquad C_B=\frac{2L^2}{g_{10}^2}.
+\end{equation}
+This is a block of the full kinetic tensor, not yet its intrinsic
+or ambient curvature.
+
+\subsection{The other neutral fields and ambient curvature}
+After a common six-dimensional normalization, the neutral metric
+has the following finite-order structure:
+\begin{align}\label{eq:blockmetric}
+ G_\eta={}&g_{AB}(y)dy^A dy^B
+ +\eta h_{ij}(y,z)(dz^i+C_A^i dy^A)(dz^j+C_B^jdy^B)\nonumber\\
+ &+\eta^2 k_{IJ}(y)(d\chi^I+V^I)(d\chi^J+V^J)+E_\eta,
+ \\
+ h(y,z)={}&V_0^{-1}\bigl(g^{\rm KS}_{E,y}(z_E)
+                               \oplus g^{\rm KS}_{B,y}(z_B)\bigr).
+ \label{eq:productbundle}
+\end{align}
+The leading blocks $g,h,k$ are positive and smooth. The connection
+$V$ has both $dy$ and $dz$ components. Perturbative two-form shift
+symmetry makes the coefficient functions independent of $\chi$.
+With two parameter derivatives, the formal remainder orders are
+\begin{equation}\label{eq:blockorders}
+ \begin{gathered}
+ E_{yy}=\Oformal(\eta),\quad
+ E_{yz},E_{zz}=\Oformal(\eta^2),\\
+ E_{y\chi},E_{z\chi},E_{\chi\chi}=\Oformal(\eta^3).
+ \end{gathered}
+\end{equation}
+The leading $y,z$ cross term is included in $C$.
+The leading two-form Hodge metric depends only on $y$; its
+first correction is one order higher. These orders follow from
+the constraints and action count above and agree with the
+geometry--bundle--two-form hierarchy of \cite{alpv}. The Lorentz
+Chern--Simons and curvature-squared contributions identified there
+are included at their required orders.
+
+We spell out the curvature consequence because the small axion
+block cannot be treated as a bounded spectator. In the coframe
+of \eqref{eq:blockmetric} the scales are $(1,\eta,\eta^2)$.
+In coordinates the inverse orders are
+\begin{gather*}
+ G^{yy}=O(1),\quad G^{yz}=O(1),\quad
+ G^{zz}=\eta^{-1}h^{-1}+O(1),\\
+ G^{z\chi}=O(\eta^{-1}),\quad G^{y\chi}=O(1),\quad
+ G^{\chi\chi}=O(\eta^{-2}).
+\end{gather*}
+For lower-index Christoffel symbols with two bundle arguments,
+\[
+ \Gamma_{z,zz}=\eta\Gamma(h)_{z,zz}+O(\eta^2),\quad
+ \Gamma_{y,zz}=O(\eta),\quad \Gamma_{\chi,zz}=O(\eta^2).
+\]
+The last estimate uses shift independence. In the coordinate
+curvature formula the second-derivative terms and the $zz$
+Christoffel contraction give $\eta R(h)$; all other contractions
+have order $\eta^2$ or higher, including the one with
+$G^{\chi\chi}$. Consequently
+\begin{equation}\label{eq:ambientleading}
+ R(G_\eta)_{EEEE}=\frac\eta{V_0}R(g_E^{\rm KS})
+                                  +\Oformal(\eta^2).
+\end{equation}
+The leading product in \eqref{eq:productbundle} is essential for
+the pure-$E$ coefficient. The spectator-bundle moduli have not
+been declared constant. A nonsingular tensor-field block can
+also be retained; its four-$E$ contributions start one order
+later by the same calculation. In product-frame units the leading
+sectional curvature is therefore $C_B^{-1}K_{\gKS}$.
+
+It remains to compare neutral curvature with the ambient scalar
+target including charged fields. Every additional hypermultiplet
+in table~\ref{tab:matter} is charged under the residual compact
+group. The neutral fields are exactly the $E,B$ moduli and the
+geometric/two-form fields. The equivariant partial reduction
+constructed above gives a smooth metric on which the full residual
+group acts by isometries. Its fixed component is totally geodesic:
+a geodesic with fixed initial point and fixed tangent remains
+fixed by uniqueness. Thus its four-neutral curvature is the
+ambient scalar curvature. The residual global gauge action,
+including shared centers, is retained; no further finite or
+continuous quotient is taken. This argument does not say that
+the $E$-only slice is totally geodesic among the neutral fields;
+their effects have instead been included in
+\eqref{eq:blockmetric}--\eqref{eq:ambientleading}.
+
+\subsection{The interaction and its order of limits}
+Combining \eqref{eq:physicalmetric}, \eqref{eq:ambientleading}
+and Proposition~\ref{prop:curvature} proves
+\eqref{eq:intro-curvature}. In physical scalar normal coordinates
+with the convention assigning positive curvature to a sphere,
+$G_{ij}=\delta_{ij}-\tfrac13R_{ikjl}\phi^k\phi^l+\cdots$.
+The two-polarization part of the Lorentzian action
+$-\tfrac12G_{ij}\partial\phi^i\partial\phi^j$ is
+\begin{equation}\label{eq:interaction}
+ \mathcal L_4=\frac{\mathcal K_{\rm phys}^{\rm lead}}6
+ \left[(\phi^v)^2(\partial\phi^u)^2
+       +(\phi^u)^2(\partial\phi^v)^2
+       -2\phi^u\phi^v\partial\phi^u\cdot\partial\phi^v\right]
+\end{equation}
+at the calculated large-volume order. It is a nonzero
+curvature-controlled scalar coefficient in the covariant tree
+amplitude dictionary \cite{cheung}. Neutral exchange contributions
+that appear in other coordinates assemble into this coefficient;
+universal graviton-exchange poles are separate.
+
+The statement first computes the leading tree large-volume
+coefficient on a fixed regular patch, then takes
+$a=\varepsilon$, $b=\kappa\varepsilon$ with fixed $\kappa>0$.
+The geometric relative error is $O_\kappa(\varepsilon^2)$.
+The derivative expansion requires
+$E_{\rm probe}\ll\kappa\varepsilon/L$, with its next parameter
+$E_{\rm probe}^2/m_{\min}^2$, and perturbative interactions in
+canonical normalization. Taking the probe energy sufficiently
+small and the ten-dimensional coupling weak leaves a nonempty
+regime. Keeping a six-dimensional dilaton fixed as volume grows
+need not keep that ten-dimensional coupling small, so these
+limits are specified separately. We have not bounded higher
+physical coefficients as $\varepsilon\to0$ or proved a uniform
+simultaneous finite-$\eta$ curvature remainder.

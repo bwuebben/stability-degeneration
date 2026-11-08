@@ -1,0 +1,51 @@
+\documentclass[11pt,letterpaper]{article}
+\pdfoutput=1
+\usepackage{jheppub}
+\usepackage{mathtools,amssymb,amsthm,bm,booktabs,adjustbox}
+\setlength{\emergencystretch}{2em}
+\input{macros}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Light vectors and scalar interactions near heterotic K3 gauge enhancement}
+\author{Bernd Johannes Wuebben}
+\affiliation{New York, NY, USA}
+\emailAdd{wuebben@gmail.com}
+\date{November 8, 2026}
+\subheader{November 8, 2026\\This version: November 8, 2026}
+\abstract{We determine light-vector masses and a leading neutral-scalar
+interaction near gauge enhancement in an $SO(32)$ heterotic compactification
+on a smooth K3 surface. A family of stable bundles approaches a repeated
+rank-three factor. For harmonic deformation amplitudes $a,b$, quantitative
+Hermitian--Einstein reconstruction gives three leading squared vector masses
+proportional to $b^2$, $a^2$ and $a^2+b^2$, with relative geometric error
+of order $a^2+b^2$ independent of $b/a$. We calculate and bound the first
+tree-level correction to the effective vector eigenvalue equation, including
+the complete leading metric and two-form Kaluza--Klein towers. An
+anti-self-dual Hodge identity gives positivity and preserves the unbroken
+gauge kernels. In the same family, a neutral-scalar interaction coefficient
+grows as the inverse square of the deformation amplitude at fixed positive
+$b/a$, with quadratic relative geometric error. Its identification uses
+derivative estimates for the bundle metric and a reduction retaining the
+other neutral fields. The vector bound applies to the stated first-order
+system. For the scalar result, we first extract the tree-level large-volume
+coefficient at each regular point, then approach enhancement at fixed
+positive ratio; a uniform finite-string-scale remainder is not asserted.}
+\keywords{Superstrings and Heterotic Strings, Compactification and String Models,
+Supersymmetric Effective Theories}
+\hypersetup{pdftitle={Light vectors and scalar interactions near heterotic K3 gauge enhancement},
+pdfauthor={Bernd Johannes Wuebben}}
+\begin{document}
+\maketitle
+\input{sections/01_introduction}
+\input{sections/02_compactification}
+\input{sections/03_vectors}
+\input{sections/04_coupled_vectors}
+\input{sections/05_derivatives}
+\input{sections/06_scalar_interaction}
+\input{sections/07_discussion}
+\bibliographystyle{JHEP}
+\bibliography{references}
+\end{document}

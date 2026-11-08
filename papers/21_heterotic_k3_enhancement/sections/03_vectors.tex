@@ -1,0 +1,183 @@
+\section{Light vectors and the retained spectrum}\label{sec:vectors}
+
+\subsection{The physical vector operator}
+On real skew-adjoint generators set
+$\BF(U,V)=-\tfrac12\Tr_{32}(UV)$. Define $g_{10}$ by
+\begin{equation}\label{eq:YMaction}
+ S_{\rm YM}=-\frac1{4g_{10}^2}\int
+    \BF(F_{MN},F^{MN})\,d\Vol_{10}.
+\end{equation}
+The constant dilaton is absorbed in this coupling. Initially use the
+product spacetime metric $g_{1,5}+L^2g_0$; a constant change to
+six-dimensional Einstein frame must rescale masses and scalar kinetic
+tensors consistently. On a realified unitary block $\BF$ restricts to
+$-\operatorname{Re}\Tr$. A multiplicity generator at $E_0$ consequently
+has reference norm $3V_0\tr_2(\xi^*\xi)$.
+
+For a Lorentz-transverse external fluctuation
+$\delta\mathcal A_\mu=v_\mu\psi(y)$, background gauge separates the
+internal Goldstone variation. The external kinetic and mass forms are
+$g_{10}^{-2}\|\psi\|^2_{L^2(L^2g_0)}$ and
+$g_{10}^{-2}\|d_{\mathcal A}\psi\|^2_{L^2(L^2g_0)}$.
+The coupling cancels in their generalized eigenvalue. On endomorphism
+zero-forms the HE K\"ahler identity gives
+\begin{equation}\label{eq:physicaloperator}
+ d_{\mathcal A}^*d_{\mathcal A}=2\Delta_{\dbar,\End E}.
+\end{equation}
+The induced endomorphism mean curvature is zero, so the $\partial$
+and $\dbar$ Laplacians agree in this degree. This is a
+zero-form vector-profile identity, not an identity for the full
+one-form Yang--Mills Hessian; compare \cite[appendix~A]{louis}.
+The zero-form and one-form norms scale as $L^4$ and $L^2$,
+respectively, so physical squared masses acquire the factor $L^{-2}$.
+
+For $\xi=\sum z_j\sigma_j$ the finite Dolbeault energy and mass are
+\begin{align}
+ q_x(\xi)&=\sum_j\|[\xi,X_j]\|^2+\|[\xi,Y_j]\|^2
+ =8\bigl(a^2|z_1|^2+(a^2+b^2)|z_2|^2+b^2|z_3|^2\bigr),
+ \label{eq:pauli-energy}\\
+ M_0(\xi)&=3V_0\tr(\xi^*\xi)=6V_0\sum_j|z_j|^2.
+ \label{eq:pauli-mass}
+\end{align}
+Thus its ordered eigenvalues for $0<b\le a$ are
+$\tfrac4{3V_0}(b^2,a^2,a^2+b^2)$.
+
+\begin{proposition}\label{prop:vectors}
+For the actual bundles of \eqref{eq:pauli}, sufficiently near the
+origin, there are exactly three real vector species whose positive
+masses tend to zero away from the unbroken kernel. They satisfy
+\eqref{eq:intro-masses}, with a constant independent of $b/a$.
+The corresponding two-sided inequality retains exact zeros on the
+axes and at the origin. All other nonzero vector-profile eigenvalues
+have a fixed positive lower bound in reference units.
+\end{proposition}
+\begin{proof}
+Apply \cite[Theorem~1.1(ii)]{wuebben15} at the locally free polystable
+bundle $A\otimes\CC^2$, at constant polarization and fixed
+determinant. Its trace-free multiplicity algebra has dimension three.
+The theorem bounds every small Dolbeault eigenvalue between
+$(1-C\|x\|^2)\nu_j(x)$ and $(1+C\|x\|^2)\nu_j(x)$,
+including zeros, and gives a positive complementary gap. Here
+$\|x\|^2=2(a^2+b^2)$ and \eqref{eq:pauli-energy}--\eqref{eq:pauli-mass}
+give $\nu_j$. Equation~\eqref{eq:physicaloperator} and the internal
+scale give \eqref{eq:intro-masses}. The real adjoint sector is preserved
+by this Laplacian. Each complex eigenspace is the complexification of
+its Hermitian, or equivalently skew-Hermitian, real form. Its complex
+multiplicity is therefore the number of real generator profiles,
+not twice that number. The remaining orthogonal-adjoint blocks have
+the kernels already identified in \eqref{eq:centralizer}; their
+positive spectrum stays separated from zero by elliptic continuity
+on the fixed compact background.
+\end{proof}
+
+The essential input is the relative form of the imported estimate.
+In its proof the complementary Schur term is bounded by the finite
+energy of the same vector. A uniform additive error of order
+$(a^2+b^2)^2$ would not establish the result when $b\ll a^2$.
+There is no additional gauge coupling multiplying the masses in
+\eqref{eq:intro-masses} after the convention \eqref{eq:YMaction} is fixed.
+
+\subsection{Massless fields and Higgs multiplets}
+The vector gap does not make the remaining matter heavy. The full
+orthogonal adjoint decomposes into endomorphism, exterior-square,
+mixed tensor and fourteen-dimensional vector sectors. For a stable
+determinant-trivial rank-$r$ bundle $F$ with $c_2(F)=k$ and the
+Hom vanishings established above, Riemann--Roch and Serre duality give
+\begin{align}\label{eq:cohomology}
+ h^1(F)&=k-2r,&
+ \dim_{\mathbb H}\mathcal M_F&=rk-r^2+1,\\
+ h^1(F\otimes G)&=r_Gk_F+r_Fk_G-2r_Fr_G,&
+ h^1(\Lambda^2F)&=(r-2)k-r(r-1).\nonumber
+\end{align}
+These follow by integrating $\operatorname{ch}(\cdot)\operatorname{td}(S)$;
+the exterior-square formula uses
+$c_2(\Lambda^2F)=(r-2)c_2(F)$ when $c_1(F)=0$.
+The neutral moduli formula follows from $h^1(\End F)=2rk-2r^2+2$.
+In the spectrum convention of \cite{honecker}, complex conjugate
+sectors combine into full hypermultiplets. At a generic point the
+dimension-weighted counts are listed in table~\ref{tab:matter}.
+
+\begin{table}[t]
+\centering
+\caption{Generic massless hypermultiplet contributions. Charges refer to
+the two central $\U(1)$ factors. The fourteen-dimensional sectors contain
+hypermultiplets in the vector representation of $\SO(14)$, not additional
+gauge vectors.}\label{tab:matter}
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{lr}
+\toprule
+Sector & Dimension-weighted hypermultiplet count\\
+\midrule
+$E$ moduli, neutral &49\\
+$B$ moduli, neutral &22\\
+$\Lambda^2E$, charge $(2,0)$ &26\\
+$\Lambda^2B$, charge $(0,2)$ &4\\
+$E\otimes B$, charge $(1,1)$ &66\\
+$E\otimes B^*$, charge $(1,-1)$ &66\\
+$E$ sector in $\mathbf {14}$, charge $(1,0)$ &28\\
+$B$ sector in $\mathbf {14}$, charge $(0,1)$ &56\\
+K3 geometry and two-form fields &20\\
+\midrule
+Total &337\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+At enhancement the $E$ endomorphism sector consists of thirteen
+adjoint-$\U(2)$ hypermultiplets and contributes 52. On a nonzero axis
+the two distinct rank-three factors contribute $2\cdot13$ neutral
+hypermultiplets and 24 off-diagonal charged ones, giving 50.
+The other dimension-weighted totals are unchanged. Thus
+\begin{equation}\label{eq:counts}
+ (n_H,n_V)=
+ \begin{cases}
+ (340,96),&a=b=0,\\
+ (338,94),&ab=0,\quad a^2+b^2>0,\\
+ (337,93),&ab\ne0.
+ \end{cases}
+\end{equation}
+There is one tensor multiplet, containing the six-dimensional dilaton,
+and the gravity multiplet. Every row obeys
+$n_H-n_V+29n_T=273$. This is a gravitational anomaly count; it does
+not replace the gauge-anomaly and embedding analysis of \cite{honecker}.
+As a separate index check, the real gauge ASD complex has
+$h^1-h^0-h^2=4\cdot30\cdot24-4\cdot496=896$ on K3. Our generic
+gauge hypermultiplets contribute $4(337-20)$, and $h^0=93$ gives
+$4(337-20)-4\cdot93=896$; the corresponding enhanced and axis
+counts agree as well. Here the expression subtracts all four
+parallel contributions, equivalently using $h^2=3h^0$ in the
+ASD index.
+
+Three hypermultiplets and three vectors combine into three massive
+$\mathcal N=(1,0)$ vector multiplets generically. Each massive vector
+has five physical polarizations and three physical real scalar
+partners; the fourth scalar of its hypermultiplet is a Goldstone
+mode. On an axis only two such multiplets are massive.
+
+\subsection{The common low-energy space}
+Choose background gauge, diffeomorphism gauge and two-form gauge at
+the reference background. The leading internal operators are the
+adjoint zero-form Laplacian for vectors, the positive ASD deformation
+square for connection scalars, the physical Lichnerowicz operator for
+metric deformations, ordinary Hodge Laplacians for forms, and the
+corresponding Dirac complexes for fermions. The ASD square is
+$d_{\mathcal A}d_{\mathcal A}^*+2d_{\mathcal A}^{+*}d_{\mathcal A}^+$
+on one-forms. The parallel-spinor factorization gives nonnegativity
+of the physical Ricci-flat metric operator \cite{parallelspinor};
+this excludes the unphysical Euclidean conformal mode. Compactness
+gives finite kernels and positive complementary gaps. Supersymmetry
+identifies the physical superpartners.
+
+Take a cutoff below the minimum of these reference gaps and retain
+every reference low mode, including the gauge/Goldstone complex.
+Smooth elliptic dependence gives common finite low spectral clusters
+and a complementary gap $\gamma>0$ for all sufficiently small
+$(a,b)$. One must not first divide out a different number of scalar
+gauge directions at each stratum and then assert continuity on a
+fixed space. The theory with the Higgs multiplets retained has the
+common leading window $E_{\rm probe}\ll\sqrt\gamma/L$.
+Eliminating them instead requires $E_{\rm probe}\ll b/L$ on a
+generic regular patch. Higher-derivative string terms are used
+perturbatively through leading resolvents, not as a positive
+second-order operator on the entire tower.
