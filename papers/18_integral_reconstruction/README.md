@@ -3,10 +3,11 @@
 By [Bernd Johannes Wuebben](https://bwuebben.github.io/),
 [ORCID](https://orcid.org/0009-0002-4588-3284).
 Preprint. Original manuscript date: 7 November 2026.
+This version: 7 November 2026.
 
 [Read the paper](integral-reconstruction.pdf) ·
 [Abstract and citation](https://bwuebben.github.io/papers/integral-reconstruction/) ·
-[Zenodo:24046142](https://zenodo.org/records/24046142) · [DOI](https://doi.org/10.5281/zenodo.24046142)
+[Zenodo:24047889](https://zenodo.org/records/24047889) · [DOI](https://doi.org/10.5281/zenodo.24047889)
 
 A compact moduli eightfold of rank-seven bundles on a K3 surface has moving
 projective-line fibres that specialize to Schubert lines in a deepest

@@ -3,10 +3,11 @@
 By [Bernd Johannes Wuebben](https://bwuebben.github.io/),
 [ORCID](https://orcid.org/0009-0002-4588-3284).
 Preprint. Original manuscript date: 7 November 2026.
+This version: 7 November 2026.
 
 [Read the paper](exceptional-cycles.pdf) ·
 [Abstract and citation](https://bwuebben.github.io/papers/exceptional-cycles/) ·
-[Zenodo:24046092](https://zenodo.org/records/24046092) · [DOI](https://doi.org/10.5281/zenodo.24046092)
+[Zenodo:24047888](https://zenodo.org/records/24047888) · [DOI](https://doi.org/10.5281/zenodo.24047888)
 
 Compact K3 bundle-moduli fourfolds contain exceptional cycles whose integral
 attachments and harmonic metric degeneration can be calculated together. In the

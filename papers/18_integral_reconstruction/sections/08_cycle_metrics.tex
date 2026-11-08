@@ -97,7 +97,14 @@ length below by \(\pi/\sqrt2\), proving sharpness.
 For either Schubert plane all planes share a fixed line or
 lie in a fixed three-space; one principal angle vanishes.
 The same argument gives diameter \(\pi/2\) and the induced
-line-area-\(\pi\) Fubini--Study metric.
+line-area-\(\pi\) Fubini--Study metric: the principal-vector
+path gives the upper bound. For the lower bound take
+\(P=\langle e_1,e_2\rangle\) and
+\(P'=\langle e_1,e_3\rangle\) in either Schubert plane type.
+In a horizontal frame lift starting at \((e_1,e_2)\), the second
+column ends in \(P'\), orthogonal to \(e_2\), and so travels
+spherical distance at least \(\pi/2\). The Hilbert--Schmidt
+length dominates that column length.
 \end{proof}
 
 The complete cotangent Grassmannian metric is classical
@@ -145,21 +152,36 @@ then gives the complete pointed limit. The unitary symmetry is
 transitive on the core, so any choice of core basepoint gives
 the same pointed limit up to isometry.
 
-On a compact subset of \(S^\circ\), use finitely many full
-\(\C^6\) times two-arrow quotient charts. Their normal zero
-sections are the moving projective lines, with the same level
-\(\kappa_t\). The identical projection and first-exit argument
-gives the stated uniform diameter and transverse
-Eguchi--Hanson limit. The full ambient pointed limit also
-retains the Euclidean \(\C^6\) factor.
+Fix a compact subset \(K\subset S^\circ\) and an accuracy
+\(\epsilon>0\). At each point choose a full \(\C^6\) times
+two-arrow quotient chart, with nested inner and outer domains,
+so small that the \(\|x\|^2\) term in \eqref{eq:relative}
+is below \(\epsilon\) on the outer domain. Cover \(K\) by
+finitely many inner domains, as in Proposition~\ref{prop:coverage},
+and then choose \(|t|\) small enough for all parameter errors
+to be below \(\epsilon\) and for whole-fibre coverage to hold.
+The normal zero sections are the moving projective lines,
+with the same level \(\kappa_t\). Competitors of length
+\(O(\sqrt{\kappa_t})\) cannot cross the positive outer exit
+barriers. Projection to the normal zero section therefore gives,
+uniformly over \(K\), the ratio \(\pi/2\) with a relative
+error \(O(\epsilon)\). Let \(t\to0\) first and then
+\(\epsilon\to0\).
+
+The same choice works on any prescribed bounded rescaled ball.
+The outer exit costs diverge after rescaling, and inverse
+coverage supplies all actual points of the ball. Translating
+the trivial coordinates to the moving center gives the full
+pointed limit \(\C^6\) times the unit-level Eguchi--Hanson
+space; its transverse factor is the asserted limit.
 \end{proof}
 
 \subsection{Successive scales with moving centers}\label{subsec:successive}
-We state the precise rule when a basepoint approaches a deeper
-stratum; a compact-stratum estimate alone does not cover that
-case. The rule applies to every contraction satisfying
-(G1)--(G3).
+The following proposition also covers basepoints approaching a
+deeper stratum.
 
+\begin{proposition}\label{prop:successive-limits}
+Assume \textup{(G1)--(G3)}.
 Fix a central chart at \(p\), numbers \(\delta_n\downarrow0\),
 and generic parameters \(\theta_n\to0\).
 Suppose
@@ -179,7 +201,8 @@ in complete pointed Gromov--Hausdorff topology.
 For a further scale, retain a limiting representative \(x_*\)
 and its compact stabilizer \(K_*\).
 Write its full normal representation as
-\(T\oplus W'\), with trivial action on \(T\).
+\(W=T\oplus W'\), where \(T=W^{K_*}\) and
+\(W'=T^\perp\) for the invariant hyperk\"ahler inner product.
 In the common slice suppose the current representatives are
 \((u_n,z_n)\to0\). For \(\sigma_n\downarrow0\), require
 \begin{equation}\label{eq:successive-data}
@@ -199,20 +222,43 @@ be comparable with \(\sigma_n\).
 This rule can be repeated for every fixed finite number of
 stages, retaining each stabilizer, full normal representation,
 normalized level and normal basepoint.
+\end{proposition}
 
-For completeness, the finite parameter and normal-slice results
-are \cite[Sections~4--6]{wuebben14}; their actual harmonic
-transfer is \cite[Theorem~8.1]{wuebben17}.
-The proof of that transfer uses the same three facts used
-above: relative errors on every bounded model region, divergent
-rescaled exit costs, and inverse coverage of entire balls.
-Full normal slices preserve the simple-zero condition, and
-tangential translation removes \(u_n\).
-Errors compose multiplicatively and are not divided by the
-next smaller scale. Distance scaling is the inverse physical
-scale; tensor scaling is its inverse square.
-These arguments prove \eqref{eq:first-rescaling} and the finite
-iteration under precisely \eqref{eq:successive-data}.
+\begin{proof}
+On a bounded region \(\|x\|\le R\) of the first rescaled
+finite model, \eqref{eq:relative} has squared-metric error
+\(O_p(|\theta_n|+\delta_n^2R^2)=o(1)\).
+The fixed outer chart has a positive first-exit cost by
+\eqref{eq:exit}; divided by \(\delta_n\), this tends to infinity.
+Its coarse comparison and the 1-Lipschitz model radius keep
+every bounded-length rescaled actual path in a bounded model
+region. Conversely bounded model competitors scale into the
+chart. Proposition~\ref{prop:coverage} and the inverse local
+solution chart give entire actual balls. Thus both ambient
+distance infima are compared. The finite intrinsic continuity
+theorem \cite[Theorem~5.1]{wuebben14}, applicable by (G3), now
+gives \eqref{eq:first-rescaling}.
+
+For the next scale apply the full normal metric slice and
+moving-center results \cite[Sections~4,6]{wuebben14} in this
+finite model. After \((u,z)=(u_n+\sigma_n u',\sigma_n z')\),
+their error on a bounded normal ball is
+\[
+ O_{x_*}(|\nu_n-\nu|+|u_n|+\sigma_n R)=o(1).
+\]
+Translation in the fixed subspace removes \(u_n\) without
+changing the moment equations. The outer harmonic error is
+multiplicative and is not divided by \(\sigma_n\).
+Both the outer chart and a fixed inner slice have divergent
+exit costs at physical scale \(\delta_n\sigma_n\).
+The same two-sided path comparison and inverse coverage
+therefore identify the entire complete product limit stated above.
+Full normal slices retain the simple-zero hypothesis
+\cite[Lemma~6.3]{wuebben14}. For any fixed finite iteration,
+the relative errors sum to \(o(1)\), and the nested exit
+barriers give coverage at each physical scale. This proves
+the result directly from (G1)--(G3).
+\end{proof}
 
 In the eightfold, a rank-one point of the zero cone has full
 normal model \(\C^6\) times the \(A_1\) quotient.
