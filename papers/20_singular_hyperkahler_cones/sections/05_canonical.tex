@@ -1,0 +1,272 @@
+\section{The determinant class and the canonical metric}\label{sec:canonical}
+
+Write $R=2r_0$, $c=2aH$ and $h=c_1(H)=[\omega]$.
+Let $\Omega$ be the K\"ahler form of the harmonic metric
+on $M_{\reg}$. In the normalization of
+Biswas--Schumacher, denote the Weil--Petersson form by
+$\omega^{\WP}$. There is a fixed positive constant $b$
+such that
+\begin{equation}\label{eq:WP-normalization}
+ \Omega=b\,\omega^{\WP}.
+\end{equation}
+This constant only converts trace and real-metric conventions;
+the cone and actual metrics throughout the paper use the
+same harmonic convention. We retain $b$ explicitly in
+the class calculation.
+
+\subsection{The positive determinant polarization}
+Choose a sufficiently divisible positive integer $k$, a
+divisor $D\in|H^k|$, and a point $x\in S$. For the fixed
+Mukai vector $v=2v_0$ define
+\begin{equation}\label{eq:determinant-class}
+ u_D=-R[\OO_D]+\chi(F\otimes\OO_D)[\OO_x],
+ \qquad
+ \lambda_D=\det Rp_*(\mathcal E\otimes q_S^*u_D).
+\end{equation}
+The Euler characteristic depends only on $v$, not on $F$.
+The expression on the right is the determinant of cohomology
+on family parameter spaces, descended to $M$. It is the
+positive convention of
+\cite[Definition~8.1.9]{hl97}. Here $p$ and $q_S$ are the
+projections to the parameter space and $S$. Any positive
+power required in the construction can be absorbed into
+$\lambda_D$, with the reciprocal change in the scalar
+class coefficient below. The auxiliary $k$ does not change
+the fixed form $\omega$ used for the harmonic metric.
+
+The stabilizer weights also make descent explicit in this
+family. For a stable factor $G$ of vector $v_0$, additivity
+of the Euler characteristic gives
+\[
+ \chi(G\otimes u_D)
+ =-2r_0\chi(G\otimes\OO_D)
+             +2\chi(G\otimes\OO_D)r_0=0.
+\]
+Each multiplicity-group determinant character is therefore
+trivial at a closed polystable orbit, including a repeated
+summand. At a stable point the same equality follows directly
+from the definition of $u_D$.
+
+\begin{lemma}\label{lem:ample}
+The determinant line $\lambda_D$ is ample on $M$.
+\end{lemma}
+
+\begin{proof}
+The determinant construction is semiample and defines
+the projective Donaldson--Uhlenbeck morphism
+\cite[Definition and Theorem~8.2.8]{hl97}. Its closed-point
+invariant is the reflexive hull of the slope graded object
+together with the defect cycle of that graded object
+\cite[Theorem~8.2.11]{hl97}. Proposition~\ref{prop:no-bubbling}
+says that every slope graded factor here is locally free.
+Thus the defect cycle is zero. The remaining invariant
+is the polystable bundle itself, and slope S-equivalence
+agrees with Gieseker S-equivalence. The morphism is
+therefore injective on closed points. Being projective
+and quasi-finite, it is finite. A positive power of
+$\lambda_D$ is the pullback of an ample line under this
+finite morphism, proving ampleness. This argument needs
+neither normality of the target nor an isomorphism with it.
+\end{proof}
+
+\begin{lemma}\label{lem:class}
+With the determinant convention \eqref{eq:determinant-class},
+before replacing it by a descent power,
+\begin{equation}\label{eq:omega-class}
+ [\Omega]=\frac{4\pi^2b}{Rk}\,c_1(\lambda_D)
+       \quad\hbox{in }H^2(M_{\reg},\RR).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The Chern character of the $K$-theory class in
+\eqref{eq:determinant-class} is
+\begin{equation}\label{eq:chu}
+ \ch(u_D)=(0,-Rkh,k(c\cdot h)[x]).
+\end{equation}
+Indeed, $\ch(\OO_D)=1-e^{-kh}$ and
+$\chi(F\otimes\OO_D)=k(c\cdot h)-Rk^2h^2/2$
+on a K3 surface.
+
+Work first on a stable parameter space with a universal
+family $\mathcal E$. Since $H^1(S,\RR)=0$,
+\[
+ c_1(\mathcal E)=q_S^*c+p^*\beta
+\]
+for a class $\beta$ on that space. Grothendieck--Riemann--Roch
+and \eqref{eq:chu} give
+\begin{align}
+ c_1(\lambda_D)
+ &=-Rk\,p_*(\ch_2(\mathcal E)\,q_S^*h)
+                  +k(c\cdot h)\beta \notag\\
+ &=-\frac{k}{2}\,p_*(\ch_2(\End\mathcal E)\,q_S^*h).
+                                                    \label{eq:GRR}
+\end{align}
+For the second equality use
+$\ch_2(\End\mathcal E)=2R\ch_2(\mathcal E)-c_1(\mathcal E)^2$
+and
+$p_*(c_1(\mathcal E)^2q_S^*h)=2(c\cdot h)\beta$.
+This agrees with the discriminant formula in
+\cite[Proposition~8.3.1(ii)]{hl97}.
+
+The fixed-determinant curvature identity of
+\cite[Proposition~4.3, equation~(4.6)]{biswas16}, in
+surface dimension, is
+\begin{equation}\label{eq:WP-curvature}
+ \frac{\omega^{\WP}}{2\pi^2}
+   =-\frac1R\,p_*(\ch_2(\End\mathcal E,h_E)\wedge\omega).
+\end{equation}
+The fixed-determinant hypothesis holds because
+$\operatorname{Pic}^0(S)=0$. Comparing
+\eqref{eq:GRR} and \eqref{eq:WP-curvature} gives the stated
+coefficient.
+
+One can check the sign through the Quillen line as well.
+In the convention of \cite[Theorem~4.6, equations~(4.11)
+and~(4.13)]{biswas16}, the positive line is the dual
+determinant
+\begin{equation}\label{eq:Quillen}
+ Q_D=\left[\det Rp_*\left(
+ (\End\mathcal E-R^2\OO)\otimes
+                   (q_S^*H^k-q_S^*H^{-k})\right)\right]^{-1}.
+\end{equation}
+Its first Chern class is
+\[
+ c_1(Q_D)=-2k\,p_*(\ch_2(\End\mathcal E)\,q_S^*h)
+                  =4c_1(\lambda_D).
+\]
+Using the nondual determinant would reverse this sign.
+
+Finally these computations give equality on the coarse
+stable locus, not merely on a family. The stable Quot
+parameter space is a principal $\operatorname{PGL}(m)$
+bundle over $M^s$ for an appropriate framing dimension
+$m$. Its universal endomorphism bundle and determinant
+classes descend. Pullback in real degree-two cohomology
+is injective, by the low-degree Leray sequence and
+$H^1(\operatorname{PGL}(m),\RR)=0$. Thus the equality
+proved on that atlas gives \eqref{eq:omega-class} on
+$M^s=M_{\reg}$. No universal bundle on the full coarse
+moduli space is required.
+\end{proof}
+
+Put $\lambda=\lambda_D$ and
+$\kappa=4\pi^2b/(Rk)$, adjusted if a positive descent
+power has been taken. Choose a smooth K\"ahler
+representative $\theta\in c_1(\lambda)$, obtained from
+a projective embedding and scaled by its degree.
+
+\subsection{Continuous potentials in the global class}
+Theorem~11 of \cite{buchdahl21} applies to polystable
+bundles deformable to stable bundles over a compact Hodge
+manifold. The surface $S$ is Hodge since $[\omega]=c_1(H)$;
+all our polystable objects are bundles; and the simple
+points in Section~\ref{subsec:quivers} show local density
+of stable bundles. The analytic moduli germs are those
+identified in Section~\ref{sec:harmonic}. That theorem
+therefore gives continuous plurisubharmonic local
+potentials for $\Omega$. We now check that they define
+a current in the global class from Lemma~\ref{lem:class}.
+
+The variety $M$ is Cohen--Macaulay and
+$\operatorname{codim}\Sing M\ge6$. Scheja's restriction
+theorem \cite[Section~5, Corollary after Satz~III]{scheja61}
+gives
+\begin{equation}\label{eq:Scheja}
+ H^1(M,\OO_M)\simeq H^1(M_{\reg},\OO_{M_{\reg}}).
+\end{equation}
+In the theorem's depth convention, for degree one it
+suffices that
+$\operatorname{depth}_x\OO_M\ge\dim_x\Sing M+3$;
+our dimension and codimension bounds satisfy this.
+Combining \eqref{eq:Scheja} with
+\eqref{eq:forms-cohomology} gives vanishing of the
+right side.
+
+By Lemma~\ref{lem:class}, there is a smooth real
+one-form $\alpha$ on $M_{\reg}$ with
+$d\alpha=\Omega-\kappa\theta$. Its $(0,1)$ part is
+$\dbar$-closed. The preceding vanishing and the
+Dolbeault theorem give a smooth function $f$ with
+$\alpha^{0,1}=\dbar f$. Since $\alpha$ is real,
+\begin{equation}\label{eq:global-potential}
+ \Omega=\kappa\theta+dd^c\varphi
+ \quad\hbox{on }M_{\reg},\qquad
+ \varphi=2\operatorname{Im}f.
+\end{equation}
+
+Let $U$ be a small neighbourhood in $M$. Write
+$\Omega=dd^cu$ on $U_{\reg}$, where $u$ is the
+continuous local potential supplied above, and
+$\theta=dd^cw$ with $w$ a smooth local potential.
+Then
+\[
+ h_U=\varphi-u+\kappa w
+\]
+is pluriharmonic on $U_{\reg}$. Both $h_U$ and
+$-h_U$ are plurisubharmonic there. The
+Grauert--Remmert extension theorem across a subset of
+complex codimension at least two in a normal space
+\cite[Section~1.7, Satz~4]{gr56} extends both as
+plurisubharmonic functions on $U$. In this codimension
+the theorem requires no prior upper bound. Their sum
+is zero on the dense regular locus, hence everywhere
+by uniqueness of plurisubharmonic extension. The
+extensions are consequently finite and continuous:
+each is both upper and lower semicontinuous. Their
+$dd^c$ currents are opposite positive currents, so
+both vanish.
+
+It follows that $\varphi=u-\kappa w+h_U$ extends
+continuously over $U$. The extensions agree on overlaps
+by density, producing a global continuous function
+$\varphi$ on $M$. Formula \eqref{eq:global-potential}
+now defines a positive closed current on $M$ in
+$\kappa c_1(\lambda)$, with the claimed local
+continuous potentials.
+
+\subsection{Identification by Ricci-flat uniqueness}
+The harmonic metric on the stable locus is
+hyperk\"ahler. This is Itoh's theorem for irreducible
+Einstein--Hermitian connections on a K3 surface
+\cite[Theorem~2.1 and Remark~(iii)]{itoh88}; the
+Einstein--Hermitian extension in that remark allows
+the nonzero slope here. The associated holomorphic
+symplectic form, in harmonic coordinates, is a fixed
+nonzero multiple of
+\begin{equation}\label{eq:Mukai-form}
+ (a,b)\longmapsto\int_S\tr(a\wedge b)\wedge\sigma.
+\end{equation}
+Indeed, the quaternionic complex structures on
+endomorphism-valued one-forms and the trace $L^2$
+pairing give \eqref{eq:Mukai-form} by contraction
+with the parallel form $\sigma$. This is the
+Serre-duality form defining the Mukai symplectic
+structure, so it agrees with $\sigma_M$ up to the
+fixed normalization. This identification is a
+calculation of the forms; it does not require
+extending a Riemannian tensor across $\Sigma$.
+
+Set $d=\dim_{\CC}M=4q+2$. The hyperk\"ahler volume
+identity on $M_{\reg}$ says that $\Omega^d$ is a
+constant positive multiple of the adapted measure
+defined by $\sigma_M^{d/2}$ and its conjugate. The
+constant is determined by the total volume of
+$\kappa c_1(\lambda)$. The current has locally
+bounded potentials, so its Monge--Amp\`ere measure
+does not charge the singular analytic set. The
+volume identity therefore holds on all of $M$.
+
+The variety is projective, has canonical
+singularities and trivial canonical bundle. The
+class $\kappa c_1(\lambda)$ is K\"ahler and belongs
+to the real N\'eron--Severi space. The existence and
+uniqueness theorem of Eyssidieux--Guedj--Zeriahi
+\cite[Theorem~7.5 and Corollary~7.6]{egz09} applies
+to precisely these data. It identifies our current
+with the canonical singular Ricci-flat current in
+that class. This proves part~(i) of
+Theorem~\ref{thm:main}. Together with
+Section~\ref{sec:distances}, it proves all claims
+of Corollary~\ref{cor:completion-main} for the
+canonical metric.

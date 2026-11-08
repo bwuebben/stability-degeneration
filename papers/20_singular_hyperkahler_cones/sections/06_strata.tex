@@ -1,0 +1,180 @@
+\section{The metric on the singular strata}\label{sec:strata}
+
+We finish by distinguishing the quadratic approximation
+from an exact local cone metric. The argument uses only
+the intrinsic recognition of the two singular strata and
+their harmonic metrics.
+
+\begin{lemma}\label{lem:intrinsic-strata}
+The subset $\Sigma$ consists precisely of the points of
+$M$ whose metric tangent cones are not Euclidean. Within
+$\Sigma$, the subset $\Delta$ is its topological
+nonmanifold locus. The corresponding descriptions hold
+in the cones \eqref{eq:offdiag-cone} and
+\eqref{eq:diagonal-cone}.
+\end{lemma}
+
+\begin{proof}
+At a regular point the tangent cone is Euclidean.
+At an off-diagonal point the normal cone is
+$\mathcal N_q=T^*\CC^q\hkr_0\U(1)$. Its link is
+\begin{equation}\label{eq:link}
+ L_q=V_2(\CC^q)/S^1,
+\end{equation}
+where $V_2(\CC^q)$ is the complex Stiefel manifold
+of orthonormal two-frames and the circle multiplies
+both vectors by the same phase. To see this, conjugate
+the cotangent coordinate in the equations
+$y(x)=0$, $|x|=|y|$ and then fix the common norm.
+
+The fibration
+$S^{2q-3}\to V_2(\CC^q)\to S^{2q-1}$ gives
+$\pi_1(V_2)=\pi_2(V_2)=0$ for $q\ge4$.
+The circle bundle over $L_q$ consequently gives
+$\pi_1(L_q)=0$ and $\pi_2(L_q)=\ZZ$. Hurewicz
+then gives $H_2(L_q,\ZZ)=\ZZ$. Thus the vertex
+of $\mathcal N_q$ has nonzero local homology in
+degree three, strictly below its real dimension
+$4q-4$. Multiplication by the Euclidean factor
+shifts this nonzero local homology but does not
+remove it. The off-diagonal cone is therefore not
+a topological manifold at its vertex, and in
+particular is not Euclidean.
+
+The diagonal cone contains off-diagonal points
+arbitrarily close to its vertex: choose two
+distinct one-dimensional loop characters tending
+to zero and take their direct sum. At each such
+point the normal slice has the off-diagonal form
+just considered. Hence the diagonal cone also
+cannot be Euclidean. Uniqueness of tangent cones
+from Section~\ref{sec:distances} proves the first
+assertion on $M$. The finite-dimensional slice
+theorem gives the same assertion at all points
+of each cone.
+
+By \eqref{eq:strata}, $\Sigma=\Sym^2N$.
+Off the diagonal it is a manifold. Near a
+diagonal point its germ is
+\begin{equation}\label{eq:symmetric-square}
+ \CC^n\times(\CC^n/\{\pm1\}).
+\end{equation}
+The normal link is $\mathbb{RP}^{2n-1}$, whose
+first integral homology is $\ZZ/2$. This gives
+nontop local homology at the vertex, so the
+nonmanifold locus of $\Sigma$ is precisely
+$\Delta$. In the diagonal cone, the nonsimple
+semisimple representations are unordered pairs
+of one-dimensional loop characters. Their
+space is $\Sym^2\CC^n$, with the same description
+\eqref{eq:symmetric-square}; its nonmanifold
+locus is the diagonal flat factor $\CC^n$.
+In the off-diagonal cone the singular set is
+the flat factor $\CC^{2n}\times\{0\}$ and is
+everywhere a manifold. This proves all the
+claimed intrinsic descriptions.
+\end{proof}
+
+\begin{lemma}\label{lem:stratum-length}
+Let $S_0$ be either $\Delta$ or
+$\Sigma\setminus\Delta$. The intrinsic length
+metric obtained by restricting curves to $S_0$
+and measuring their lengths with the completed
+ambient distance is the Riemannian length metric
+of its harmonic stratum metric. The same assertion
+holds for the corresponding flat strata in the
+tangent cones.
+\end{lemma}
+
+\begin{proof}
+Fix $s\in S_0$. In the chart centred at $s$, the
+stratum is the fixed factor $U\times\{0\}$.
+The coarse tensor bounds and the exit estimate
+make the restricted ambient distance locally
+bi-Lipschitz equivalent to a smooth metric on
+$S_0$. Thus a rectifiable curve has a locally
+absolutely continuous parametrization in its
+smooth coordinates.
+
+For a differentiable curve $\gamma$ with
+$\gamma(0)=s$, write its fixed-factor coordinate
+as $u(t)=t\dot u(0)+o(t)$. The radius formula
+\eqref{eq:radius-main} in this fixed centred
+chart gives
+\begin{equation}\label{eq:metric-speed}
+ \lim_{t\to0}\frac{D(\gamma(t),\gamma(0))}{|t|}
+       =\|\dot u(0)\|_U
+       =\|\dot\gamma(0)\|_{g_{S_0}}.
+\end{equation}
+The last equality follows from the harmonic
+normalization at the centre. The argument also
+applies at almost every differentiability point
+of an absolutely continuous curve. It is
+pointwise: the comparison constant belongs to
+the fixed centre at which the limit is taken.
+
+The length of a Lipschitz curve in a metric
+space is the integral of its metric speed
+\cite[Theorem~2.7.6]{bbi01}. Applying this
+locally, and subdividing a rectifiable curve,
+proves equality of its ambient-metric length
+and harmonic Riemannian length. Infima over
+curves in the stratum prove the assertion.
+For the finite cones the same proof uses the
+finite metric slice and its radius comparison.
+\end{proof}
+
+\begin{proposition}\label{prop:not-isometric}
+For every singular point $p\in M$, no pointed
+neighbourhood of $(M,D,p)$ is isometric to a
+neighbourhood of the vertex in its metric
+tangent cone.
+\end{proposition}
+
+\begin{proof}
+An isometry preserves metric tangent cones,
+and hence preserves $\Sigma$ by
+Lemma~\ref{lem:intrinsic-strata}. If $p$ is
+off the diagonal, a sufficiently small
+neighbourhood meets only the smooth stratum
+$\Sigma\setminus\Delta$. In the tangent
+cone this stratum is the flat factor
+$\CC^{2n}$. If $p$ is diagonal, an isometry
+also preserves the topological nonmanifold
+locus of $\Sigma$, so it sends $\Delta$
+to the flat factor $\CC^n$ of the diagonal
+cone. Lemma~\ref{lem:stratum-length} shows
+that in either case the restricted map
+would be an isometry of the intrinsic
+Riemannian metrics on open subsets of
+these strata.
+
+On the local ordered cover of
+$\Sigma\setminus\Delta$, the harmonic metric
+is $g_N\oplus g_N$. On $\Delta$ it is
+$2g_N$, since the tangent inclusion is
+$a\mapsto a\otimes I_2$ and
+$\tr(I_2)=2$. An isometry to a flat factor
+therefore makes $g_N$ flat on a nonempty
+open subset of $N$.
+
+The metric $g_N$ is hyperk\"ahler, hence
+Ricci-flat and real analytic in harmonic
+coordinates \cite[Theorem~5.2]{dk81}.
+Analytic continuation of its curvature on
+the connected manifold $N$ would make it
+flat everywhere. A complete simply
+connected flat manifold is Euclidean,
+whereas $N$ is compact, simply connected
+and of positive dimension. This
+contradiction proves the proposition.
+\end{proof}
+
+The proposition concerns exact isometry.
+It provides no lower bound on the first
+nonzero error term in
+\eqref{eq:main-comparison}. Optimality of
+the exponent, derivative estimates near
+lower strata, and extensions to moduli
+with a singular-sheaf boundary remain
+separate questions.

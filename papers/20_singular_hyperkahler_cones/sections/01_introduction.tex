@@ -1,0 +1,250 @@
+\section{Introduction}\label{sec:introduction}
+
+A projective symplectic variety carries a unique singular Ricci-flat
+K\"ahler metric in each K\"ahler class, in the sense of
+Eyssidieux--Guedj--Zeriahi \cite[Theorem~7.5 and Corollary~7.6]{egz09}.
+The existence theorem does not by itself describe the local metric
+geometry at a singular point. In a moduli space of bundles, a second
+description is available: Hermitian--Einstein connections define a
+hyperk\"ahler $L^2$ metric on the stable locus. We identify these two
+metrics on a family of singular compact K3 moduli spaces and obtain
+a quadratic comparison with explicit hyperk\"ahler cones at every
+singular point.
+
+The simplest example is already a compact space with two
+positive-dimensional singular strata. Let $S$ be a quartic K3 surface
+with $\operatorname{Pic}(S)=\ZZ H$, $H^2=4$, and put
+\begin{equation}\label{eq:quartic}
+ v_0=(5,H,0),\qquad v=2v_0=(10,2H,0),\qquad M=M_H(v).
+\end{equation}
+Here $M_H(v)$ denotes the moduli space of $H$-Gieseker-semistable
+sheaves of Mukai vector $v$. This space has complex dimension $18$.
+Every semistable sheaf is a vector bundle, and its slope
+Jordan--H\"older factors are vector bundles as well. If
+$N=M_H(v_0)$, then $N$ is a smooth compact hyperk\"ahler sixfold,
+and the singular locus and its diagonal are
+\begin{equation}\label{eq:quartic-strata}
+ \Sigma=\Sym^2N,\qquad \Delta=\{[G\oplus G]:[G]\in N\}.
+\end{equation}
+Thus $\dim_{\CC}\Sigma=12$ and $\dim_{\CC}\Delta=6$.
+The variety $M$ has terminal, locally factorial symplectic
+singularities, admits no symplectic resolution, and has no smoothing.
+These assertions follow from the moduli results recalled in
+Section~\ref{sec:moduli}. The exclusion of a non-locally-free
+boundary is proved there by a Mukai-pairing inequality.
+
+\subsection{The family and the main result}
+Let $S$ be a projective K3 surface with
+$\operatorname{Pic}(S)=\ZZ H$, where $H$ is ample. Write the Mukai
+vector of a sheaf as $v(F)=(\rk F,c_1(F),\chi(F)-\rk F)$, with
+pairing
+\[
+ \langle(r,c,s),(r',c',s')\rangle=c\cdot c'-rs'-r's.
+\]
+We impose the conditions
+\begin{equation}\label{eq:family}
+ v_0=(r_0,aH,s_0),\qquad
+ \gcd(r_0,aH^2)=1,\qquad q:=v_0^2\ge4,
+ \qquad r_0\ge q+1,
+\end{equation}
+and set
+\begin{equation}\label{eq:MN}
+ M=M_H(2v_0),\qquad N=M_H(v_0).
+\end{equation}
+The integer $q$ is even. Fix the Ricci-flat K\"ahler form
+$\omega\in c_1(H)$ on $S$.
+Proposition~\ref{prop:no-bubbling} proves that slope and Gieseker
+semistability agree for the sheaves under consideration.
+The moduli results in Section~\ref{sec:moduli} identify
+the stable locus $M^s$ with the regular locus of $M$. The
+Hermitian--Einstein metrics therefore define the harmonic $L^2$
+metric $g^{L^2}$ on $M_{\reg}$.
+
+Here is the local cone that occurs in the theorem. For a polystable
+bundle $E$, let
+\begin{equation}\label{eq:cone-intro}
+ V_E=H^1(S,\End E),\qquad K_E=\Aut(E,h_E),\qquad
+ \Cone_E=V_E\hkr_0K_E.
+\end{equation}
+Harmonic representatives give $V_E$ its flat hyperk\"ahler
+structure. The last expression means the simultaneous zero set of
+the three moment maps, divided by the unitary automorphism group;
+an ineffective scalar circle can be removed. The regular part of
+this quotient carries the reduction metric $g_{\Cone_E}$. Its full
+length metric is denoted by $d_{\Cone_E}$, and
+$r(x)=d_{\Cone_E}(0,x)$. Equivalently, $\Cone_E$ is the flat
+hyperk\"ahler quotient of the doubled Ext-quiver of the stable
+summands of $E$. Section~\ref{sec:harmonic} specifies the harmonic
+and moment-map conventions.
+
+\begin{theorem}\label{thm:main}
+Assume \eqref{eq:family}. There is an ample Donaldson determinant
+line bundle $\lambda$ on $M$ and a constant $\kappa>0$ with the
+following properties.
+\begin{enumerate}
+\item The K\"ahler form of $g^{L^2}$ extends to the canonical
+singular Ricci-flat current in the class $\kappa c_1(\lambda)$.
+It has continuous local potentials on $M$.
+\item At every polystable point $[E]\in M$ there is a
+biholomorphism of germs
+\[
+ \Psi_E:(\Cone_E,0)\longrightarrow(M,[E])
+\]
+for which, on the regular locus of a sufficiently small
+neighbourhood,
+\begin{equation}\label{eq:main-comparison}
+ (1-C_Er^2)g_{\Cone_E}
+ \le \Psi_E^*g^{L^2}
+ \le (1+C_Er^2)g_{\Cone_E}.
+\end{equation}
+The same inequality holds on tangent vectors to every smooth
+orbit-type stratum, with its harmonic metric. Within this fixed
+chart, $C_E$ is independent of stabilizer type and of the ratios
+of positive orbit eigenvalues.
+\end{enumerate}
+\end{theorem}
+
+The determinant convention, including its positive sign, is given
+in Section~\ref{sec:canonical}. The constants and chart radii in
+\eqref{eq:main-comparison} may depend on the fixed bundle $E$,
+its harmonic dimensions and its positive background elliptic
+gaps. The theorem does not assert one radius or comparison
+constant for all possible centred charts.
+
+\begin{corollary}\label{cor:completion-main}
+The metric completion of $(M_{\reg},g^{L^2})$ is a compact geodesic
+space canonically homeomorphic to $M$. At every $p=[E]\in M$ its
+metric tangent cone is unique and is $(\Cone_E,d_{\Cone_E},0)$.
+In the chart of Theorem~\ref{thm:main},
+\begin{equation}\label{eq:radius-main}
+ d(p,\Psi_E(x))=r(x)(1+O_E(r(x)^2)).
+\end{equation}
+The Gromov--Hausdorff distance between the closed unit balls in
+$(M,\epsilon^{-1}d,p)$ and in $\Cone_E$ is $O_E(\epsilon^2)$.
+\end{corollary}
+
+The completion assertion requires a path argument in addition to
+the tensor estimate. We prove that paths along singular strata can
+be approximated in length by regular paths. The perturbation is
+transverse to the stratum in a product slice; radial dilation alone
+preserves the singular stratum.
+
+In the example \eqref{eq:quartic}, the two singular tangent cones
+are
+\begin{equation}\label{eq:quartic-cones}
+ \begin{aligned}
+ \Cone_{G_1\oplus G_2}
+  &\cong \CC^{12}\times(T^*\CC^4\hkr_0\U(1)),
+       &&G_1\not\cong G_2,\\
+ \Cone_{G\oplus G}
+  &\cong \CC^6\times
+       ((\CC^6\otimes\mathfrak{sl}_2)\hkr_0\SU(2)).
+ \end{aligned}
+\end{equation}
+The first normal factor is the closure of the minimal nilpotent
+orbit in $\mathfrak{sl}_4$, of complex dimension six. The second
+normal factor has complex dimension twelve. These products are
+metric products, with the flat factors normalized by the harmonic
+inner products.
+
+The approximation in \eqref{eq:main-comparison} is not an exact
+local isometry. Proposition~\ref{prop:not-isometric} proves that
+no singular point has a neighbourhood isometric to a neighbourhood
+of the vertex in its tangent cone. The reason is the intrinsic
+geometry of the singular strata: their induced length metrics
+contain the nonflat hyperk\"ahler metric of $N$. This does not
+assert that the exponent two is optimal.
+
+\subsection{Relation to earlier work}
+The algebraic local models for these singularities belong to the
+deformation theory of sheaves on K3 surfaces. Kaledin--Lehn--Sorger
+established the structure and nonexistence of symplectic resolutions
+for the relevant nonprimitive moduli spaces \cite{kls06}.
+Arbarello--Sacc\`a identified the local quiver germs under
+a formality hypothesis \cite[Propositions~4.4 and~6.1]{as18},
+and Budur--Zhang proved that hypothesis for polystable sheaves
+on projective K3 surfaces \cite[Theorem~1.2]{bz19}.
+Perego--Rapagnetta established the irreducible
+symplectic-variety properties used here \cite{pr23}.
+
+On the analytic side, Itoh proved that the $L^2$ metric on the
+irreducible Einstein--Hermitian moduli space over a K3 surface is
+hyperk\"ahler \cite[Theorem~2.1 and Remark~(iii)]{itoh88}.
+Verbitsky's theory of hyperholomorphic and projectively
+hyperholomorphic bundles gives the underlying quadraticity
+mechanism \cite[Theorems~6.2, 7.1 and 11.2, arXiv version]{verbitsky96}.
+We use a surface calculation to show that the obstruction map is
+quadratic in the particular harmonic coordinates needed for the
+metric estimate. An unspecified analytic change of coordinates
+would not preserve the stated quadratic error.
+
+The quantitative local comparison for the harmonic metric is
+imported from \cite[Theorem~1.1(iii)]{wuebben15}. Its application
+here uses the full harmonic Kuranishi locus, including repeated
+stable factors. The finite-dimensional metric slices and
+localization arguments are those of \cite[Sections~4--6]{wuebben14}.
+We state the required versions below. The additional global step
+uses continuous Weil--Petersson potentials from
+Buchdahl--Schumacher \cite[Theorem~11]{buchdahl21}, the curvature
+formula of Biswas--Schumacher \cite[Proposition~4.3]{biswas16},
+and uniqueness of the singular Ricci-flat current. Continuous
+Weil--Petersson potentials themselves are an established input.
+
+Namikawa--Odaka study canonical metrics and conical structures on
+symplectic singularities, including a theorem under a symplectic
+resolution or smoothing hypothesis and higher-order asymptotics
+at isolated singularities \cite[Theorem~1.1 and Corollary~6.8]{no26}.
+Odaka's subsequent result gives a hyperk\"ahler cone structure on
+every symplectic singularity germ \cite[Corollary~1.3]{odaka26}.
+The distinction relevant here is between the existence of a local
+cone metric and the asymptotics of the metric selected by an ample
+class on a compact moduli space. Theorem~\ref{thm:main} concerns
+the latter metric and gives a relative estimate across its
+positive-dimensional singular strata. It makes no assertion about
+higher derivatives near lower strata or about the complete
+Donaldson--Sun degeneration data.
+
+\subsection{Proof and organization}
+The local argument begins with the canonical harmonic
+reconstruction $a=x-\bar\partial^*G(a\wedge a)$.
+On a Ricci-flat K3 surface, harmonic endomorphism-valued
+two-forms have parallel coefficients. Integration by parts
+then annihilates the harmonic projection of every product
+containing the coexact correction. Thus the obstruction
+is exactly quadratic in the coordinates in which the
+Hermitian--Einstein comparison has quadratic error.
+The holomorphic family and the metric reconstruction
+classify the same complex gauge orbit, so the resulting
+chart is simultaneously holomorphic and quantitative.
+Transverse perturbations in product slices then identify
+the full stratified length distance with the completion
+of the regular-locus metric.
+
+For the global identification, the rank inequality forces
+the defect cycles of all slope graded objects to vanish.
+The Donaldson--Uhlenbeck morphism is consequently finite,
+making its determinant polarization ample. A discriminant
+calculation identifies this class with the harmonic
+K\"ahler class. Continuous local potentials, together
+with a depth-based cohomology restriction theorem, produce
+a global continuous potential in that class. The
+hyperk\"ahler volume identity then places the resulting
+current in the uniqueness theorem of
+Eyssidieux--Guedj--Zeriahi.
+
+Section~\ref{sec:moduli} proves that the rank bound excludes both
+non-locally-free sheaves and non-locally-free graded factors, and
+describes the two singular strata. Section~\ref{sec:harmonic}
+proves exact harmonic quadraticity and applies the quantitative
+Hermitian--Einstein comparison in the same holomorphic quotient
+coordinates. Section~\ref{sec:distances} identifies the completion
+distance and derives the rescaling estimates.
+Section~\ref{sec:canonical} identifies the ample determinant class
+and proves the global Ricci-flat metric statement.
+Section~\ref{sec:strata} proves the failure of local isometry.
+
+All dimensions below are complex unless otherwise indicated.
+We use $d^c=\frac{i}{2}(\bar\partial-\partial)$, so
+$\ddc=i\partial\bar\partial$. A smooth stratum carries its
+harmonic $L^2$ metric; a distance on the entire stratified space
+will always be specified by its allowed paths.

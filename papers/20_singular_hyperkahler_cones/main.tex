@@ -1,0 +1,83 @@
+\pdfoutput=1
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{booktabs,adjustbox}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdfauthor={Bernd Johannes Wuebben},
+ pdftitle={Canonical metrics on singular moduli of K3 bundles},
+ pdfsubject={Canonical Ricci-flat metrics and quantitative tangent cones on K3 bundle moduli},
+ pdfkeywords={K3 surface; moduli of bundles; singular Ricci-flat metric; hyperkahler quotient; metric tangent cone}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\Sing}{\operatorname{Sing}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SU}{\operatorname{SU}}
+\newcommand{\U}{\operatorname{U}}
+\newcommand{\reg}{\mathrm{reg}}
+\newcommand{\str}{\mathrm{str}}
+\newcommand{\WP}{\mathrm{WP}}
+\newcommand{\can}{\mathrm{can}}
+\newcommand{\ddc}{dd^c}
+\newcommand{\dbar}{\bar\partial}
+\newcommand{\Cone}{\mathcal C}
+\newcommand{\hkr}{\mathbin{/\!\!/\!\!/}}
+\title[Canonical metrics on singular K3 moduli]{Canonical metrics on singular moduli of K3 bundles}
+\author{Bernd Johannes Wuebben}
+\subjclass[2020]{14J60 (primary); 14J28, 32Q20, 53C26 (secondary)}
+\keywords{K3 surface, moduli of bundles, singular Ricci-flat metric,
+hyperk\"ahler quotient, metric tangent cone}
+\date{November 8, 2026\\This version: November 8, 2026}
+
+\begin{document}
+\begin{abstract}
+The canonical singular Ricci-flat metric on a class of compact K3
+bundle moduli spaces admits quadratic approximation by its
+hyperk\"ahler tangent cones in holomorphic coordinates. The spaces
+parametrize twice a primitive Mukai vector on a K3 surface of Picard
+rank one; a rank bound ensures that every semistable sheaf and every
+slope Jordan--H\"older factor is locally free. These spaces have
+positive-dimensional singular strata and admit neither a symplectic
+resolution nor a smoothing. We identify the metric in an ample
+determinant class with the harmonic $L^2$ metric, identify its tangent
+cones as the flat hyperk\"ahler quotients of the extension spaces,
+and prove that its regular-locus completion is the original moduli
+space. The comparison is uniform through changes of stabilizer in
+each fixed local chart. The proof combines quantitative local models
+for Hermitian--Einstein metrics with exact quadraticity in harmonic
+Kuranishi coordinates, continuous Weil--Petersson potentials, and a
+determinant-class calculation.
+\end{abstract}
+\maketitle
+\setcounter{tocdepth}{1}
+%\tableofcontents
+%\newpage
+\input{sections/01_introduction}
+\input{sections/02_moduli}
+\input{sections/03_harmonic}
+\input{sections/04_distances}
+\input{sections/05_canonical}
+\input{sections/06_strata}
+\input{references/main_references}
+\end{document}

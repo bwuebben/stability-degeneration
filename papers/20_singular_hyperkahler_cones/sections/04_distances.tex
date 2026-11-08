@@ -1,0 +1,211 @@
+\section{Completion and tangent cones}\label{sec:distances}
+
+We distinguish two path distances until their equality has
+been proved. On $M_{\reg}$, let $d_{\reg}$ be the Riemannian
+distance of $g^{L^2}$. On all of $M$, call a path admissible
+if it is continuous, has a finite partition into smooth paths
+lying in single strata on the open subintervals, and has
+finite one-sided stratum lengths at the endpoints. Let
+$d_{\str}$ be the infimum of these lengths. The same
+convention on each finite cone gives its full length distance
+$d_{\Cone_E}$. Piecewise smooth paths and their finite-length
+limits give the same infimum.
+
+\subsection{Short paths in the regular locus}
+The following elementary consequence of semialgebraicity
+provides control near the endpoints of transverse perturbations.
+
+\begin{lemma}\label{lem:short-paths}
+Let $\Cone$ be one of the cones in
+\eqref{eq:offdiag-cone}--\eqref{eq:diagonal-cone}, or a full
+normal cone to one of its strata. There is a constant $A_\Cone$
+such that any two regular points of radius at most $\rho$
+can be joined in the regular locus, within that radial ball,
+by a piecewise smooth path of length at most $A_\Cone\rho$.
+\end{lemma}
+
+\begin{proof}
+Write the full normal representation as $W$ with compact
+group $K'$, and let $B^*$ be the module-simple part of the
+simultaneous zero set of its real and complex moment maps.
+The simple locus of $\Cone$ is a connected complex open
+subset of an irreducible cone. For the two original cones,
+irreducibility and normality follow from their moduli germs;
+homogeneity extends these properties to the whole cone.
+The same argument applies to full normal slices, using the
+slice theorem. Simplicity agrees with regularity here by
+the stable-locus description of Section~\ref{sec:moduli}
+and its slice restriction. Existence and density of simple
+points in every normal cone were recalled in
+Section~\ref{subsec:slice-input}.
+
+The map $B^*\to\Cone_{\reg}$ is proper with connected
+$K'$-orbit fibres. The group $K'$ is a product of unitary
+groups, with an optional ineffective scalar quotient, and
+is connected. Thus $B^*$ is connected. If the zero
+representation itself is simple, the effective group is
+trivial and the quotient is a flat vector space; the
+assertion is then immediate. Otherwise radial scaling
+identifies $B^*$ with its unit section times $(0,\infty)$.
+It follows that
+\[
+ B^*\cap\{0<\|w\|<1\}
+\]
+is a bounded connected semialgebraic set.
+
+We recall why such a set has finite Euclidean inner diameter,
+including when it is not closed. A finite semialgebraic
+triangulation uses finitely many open simplices. In each
+simplex choose an anchor and join a variable point to that
+anchor along the image of the straight segment in the
+simplex. Join the finitely many anchors by fixed
+semialgebraic arcs in the connected set. This gives finitely
+many semialgebraic families of paths. Uniform monotonicity
+partitions each coordinate of each path into a bounded
+number of monotone intervals. Each coordinate varies over
+a bounded range, so its total variation, and hence the
+Euclidean length, has a common bound. This is the
+triangulation and monotonicity argument of
+\cite[Sections~2 and~3, especially Theorem~3.4]{vdd98}.
+Semialgebraic arcs are piecewise smooth; endpoint derivatives
+may be unbounded, but their lengths are finite.
+
+Projection from the balanced locus to its smooth quotient
+does not increase lengths. We obtain a uniform bound for
+regular points of cone radius less than one. Dilation gives
+the bound $A_\Cone\rho$ for an open radial ball. For points
+on its boundary, first contract both endpoints by a factor
+$1-\delta$, join the contracted points, and append the two
+regular radial segments. Their total added length is at
+most $2\delta\rho$. This proves the assertion for the
+closed ball as well, after increasing the constant.
+\end{proof}
+
+\begin{proposition}\label{prop:completion}
+The completion of $(M_{\reg},d_{\reg})$ is canonically
+homeomorphic to $M$, and its distance equals $d_{\str}$.
+In particular it is a compact geodesic space.
+\end{proposition}
+
+\begin{proof}
+Shrink each fixed chart in Theorem~\ref{thm:main}(ii) so
+that its squared metric bounds lie between $1/2$ and $2$.
+Lemma~\ref{lem:short-paths} then shows that the $d_{\reg}$
+diameter of regular points in a radial ball of radius
+$\rho$ is at most $A\rho$. Every sequence of regular
+points converging to the centre therefore determines the
+same completion point.
+
+There is also a lower bound for leaving a chart. If an
+admissible path starts at cone radius $\rho$ and first
+reaches the boundary of a concentric chart of radius $R$,
+its length before exit is at least
+\begin{equation}\label{eq:exit}
+ (R-\rho)/\sqrt2.
+\end{equation}
+This follows by integrating the radial $1$-Lipschitz
+inequality for the cone and the coarse tensor lower bound.
+In particular, distinct points of $M$ cannot represent
+the same completion point. Conversely, a $d_{\reg}$-Cauchy
+sequence has an algebraically convergent subsequence because
+$M$ is compact. The diameter estimate identifies its limit
+in the completion; the Cauchy property gives the same limit
+for the full sequence. Thus no additional completion points
+occur. These estimates also prove that the completion
+topology is the original topology of $M$. Denote this
+completed distance by $D$.
+
+We next compare lengths. Let $\gamma:[a,b]\to M$ be a
+$C^1$ path contained in a single smooth stratum. Given
+$\eta>0$, cover its compact image by finitely many centred
+charts whose metric distortion is between $1-\eta$ and
+$1+\eta$. In each such chart the cone splits as
+$U\times\mathcal N$, and the stratum through its centre
+is $U\times\{0\}$. Subdivide $[a,b]$ so that each
+subarc is contained in one chart and write it there as
+$(u(t),0)$.
+
+Choose regular points $z_j\in\mathcal N$ tending to
+the vertex. They exist by the simple-point property in
+Section~\ref{subsec:slice-input}. The paths
+\begin{equation}\label{eq:transverse-path}
+ t\longmapsto (u(t),z_j)
+\end{equation}
+lie in the regular locus for large $j$. Their lengths in
+the exact product are the Euclidean length of $u$.
+The two tensor bounds give, for each subarc,
+\[
+ \limsup_j L_{g^{L^2}}(\Psi(u,z_j))
+ \le \sqrt{\frac{1+\eta}{1-\eta}}\,L_{g^{L^2}}(\gamma).
+\]
+Their endpoints converge in the original topology, hence
+in $D$ by the preceding paragraph. Taking endpoint
+distance limits and summing with the triangle inequality
+gives the same upper bound for $D(\gamma(a),\gamma(b))$.
+No common endpoint is required for the different
+perturbed subarcs. Letting $\eta$ tend to zero gives
+$D(\gamma(a),\gamma(b))\le L(\gamma)$.
+
+For an admissible path whose open pieces have endpoints
+in lower strata, truncate each piece at both ends and
+apply this argument. The finite one-sided lengths and
+continuity of $D$ allow the truncation parameters to
+tend to zero. Therefore $D\le d_{\str}$ on $M$.
+On regular points, every regular path is admissible, so
+$d_{\str}\le d_{\reg}=D$. Finally, $d_{\str}$ is
+continuous in the original topology: in a chart centred
+at any point, its radial paths have length at most
+$\sqrt2\rho$, and the triangle inequality gives
+continuity in both arguments. Approximation by regular
+endpoints extends the reverse inequality to all of $M$.
+Thus $D=d_{\str}$.
+
+The completion of a length space is a length space.
+It is compact here, so the usual compactness argument
+for almost minimizing paths supplies minimizing
+geodesics. This proves the last assertion.
+\end{proof}
+
+\subsection{Quantitative convergence to the cone}
+We can now transfer the quadratic tensor comparison to
+the completed distance. Fix a centre $p=[E]$ and its
+chart $\Psi_E$. Competitors joining points of radius
+at most $\rho$ can be chosen with length $O(\rho)$,
+using radial paths through the centre. A competitor
+of this length cannot leave a fixed chart when $\rho$
+is small, by \eqref{eq:exit}. Within the chart, the
+coarse lower bound further shows that its radius is
+$O(\rho)$ throughout. On all such competitors the
+tensor distortion is therefore $1+O_E(\rho^2)$.
+
+Apply this reasoning first to almost minimizing cone
+paths and then to almost minimizing admissible paths
+in $M$. Proposition~\ref{prop:completion} identifies
+the latter infimum with $D$. Taking both infima gives
+\begin{equation}\label{eq:distance-comparison}
+ (1-C'_E\rho^2)d_{\Cone_E}(x,y)
+ \le D(\Psi_E x,\Psi_E y)
+ \le(1+C'_E\rho^2)d_{\Cone_E}(x,y)
+ \quad(r(x),r(y)\le\rho).
+\end{equation}
+The slightly larger radius used by the competitors
+is absorbed into $C'_E$. Setting $y=0$ proves
+\eqref{eq:radius-main}.
+
+For completeness, fix $L<\infty$ and put
+$x=\epsilon\hat x$, $y=\epsilon\hat y$ in
+\eqref{eq:distance-comparison}. On the cone ball of
+radius $L$, the map
+$\hat x\mapsto\Psi_E(\epsilon\hat x)$ has distance
+distortion $O_{E,L}(\epsilon^2)$ when the target
+distance is divided by $\epsilon$. The radial formula
+shows that the preimage of the closed target unit
+ball lies between cone radii $1-O_E(\epsilon^2)$
+and $1+O_E(\epsilon^2)$. Radial adjustment to radius
+one costs $O_E(\epsilon^2)$ in the rescaled metric.
+This gives a correspondence of the two closed unit
+balls with that distortion, hence the
+Gromov--Hausdorff estimate in
+Corollary~\ref{cor:completion-main}. The construction
+works for every sequence $\epsilon\downarrow0$;
+the metric tangent cone is consequently unique.

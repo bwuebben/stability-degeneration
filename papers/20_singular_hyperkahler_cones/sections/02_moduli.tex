@@ -1,0 +1,223 @@
+\section{A compact moduli space of bundles}\label{sec:moduli}
+
+We first show that the rank condition in \eqref{eq:family} excludes
+both singular sheaves and singular stable factors. The second
+assertion is needed for the determinant polarization: the cycle
+recorded by the Donaldson--Uhlenbeck morphism is the defect of the
+slope graded object, not just the defect of the original sheaf.
+
+\begin{proposition}\label{prop:no-bubbling}
+Assume \eqref{eq:family}. Every slope-semistable torsion-free sheaf
+of Mukai vector $2v_0$ is locally free. If it is strictly
+slope-semistable, its slope Jordan--H\"older factors are two stable
+bundles of vector $v_0$. Every slope-semistable sheaf of vector
+$v_0$ is stable and locally free. For these two Mukai vectors,
+slope and Gieseker semistability agree, as do stability and
+S-equivalence.
+\end{proposition}
+
+\begin{proof}
+We use two elementary properties of stable sheaves on a K3
+surface. If $A$ is stable, simplicity and Serre duality give
+\begin{equation}\label{eq:stable-bound}
+ v(A)^2=\dim\Ext^1(A,A)-2\ge-2.
+\end{equation}
+If $A$ is slope-stable and torsion-free, $A^{**}$ is a stable
+bundle, and
+\[
+ v(A^{**})=v(A)+(0,0,\operatorname{length}(A^{**}/A)).
+\]
+The reflexive hull of a slope-semistable sheaf is semistable.
+
+Let $F$ have vector $2v_0$, and write
+$\ell=\operatorname{length}(F^{**}/F)$. If $F^{**}$ is stable,
+\eqref{eq:stable-bound} implies
+\[
+ 4q-4r_0\ell\ge-2.
+\]
+Since $r_0\ge q+1$, this forces $\ell=0$.
+
+Suppose instead that $F^{**}$ is strictly slope-semistable.
+An equal-slope factor of rank $r'$ and first Chern class $a'H$
+satisfies
+\[
+ r_0a'H^2=r'aH^2.
+\]
+Coprimality in \eqref{eq:family} forces $r_0\mid r'$.
+There are therefore exactly two stable factors $A_1,A_2$, each
+of rank $r_0$ and first Chern class $aH$. Put
+\[
+ v(A_i)=(r_0,aH,s_i),\qquad
+ \ell_i=\operatorname{length}(A_i^{**}/A_i).
+\]
+Additivity gives $s_1+s_2=2s_0+\ell$. Applied to $A_i^{**}$,
+\eqref{eq:stable-bound} gives
+\begin{equation}\label{eq:factor-inequality}
+ q-2r_0(s_i+\ell_i-s_0)\ge-2.
+\end{equation}
+Because $2r_0>q+2$, integrality implies
+$s_i+\ell_i\le s_0$. Summing yields
+$\ell+\ell_1+\ell_2\le0$. All three lengths vanish, and
+$s_1=s_2=s_0$. Thus $F$ is a bundle and its stable factors are
+bundles of vector $v_0$. Extensions of locally free sheaves are
+locally free, consistently with this conclusion.
+
+For vector $v_0$, the same coprimality rules out an equal-slope
+proper factor. If $A$ is such a stable sheaf, its reflexive hull
+has square $q-2r_0\ell$, and \eqref{eq:stable-bound} again forces
+$\ell=0$.
+
+Slope stability implies Gieseker stability, and Gieseker
+semistability implies slope semistability. A strictly
+slope-semistable $F$ of vector $2v_0$ has the two factors just
+described. Their reduced Hilbert polynomials both equal that of
+$F$, so $F$ is Gieseker-semistable and is not Gieseker-stable.
+For vector $v_0$ there is no strictly slope-semistable case.
+The Jordan--H\"older factors in the two theories consequently
+coincide, proving the S-equivalence assertion.
+\end{proof}
+
+\subsection{Geometry of the moduli space}
+The vector $v_0$ is primitive. On a surface of Picard rank one,
+$H$ is general in the sense required for these moduli spaces
+\cite[Definition~2.8 and Lemma~2.9(1)]{pr23}. The primitive
+space $N$ is a nonempty smooth projective irreducible
+holomorphic symplectic manifold of dimension
+\begin{equation}\label{eq:n}
+ n=q+2,
+\end{equation}
+deformation equivalent to $S^{[q/2+1]}$
+\cite[Theorem~1.7 and the paragraph following Definition~1.6]{pr23}.
+In particular, it is simply connected. Proposition~\ref{prop:no-bubbling}
+identifies it with a compact moduli space of slope-stable bundles.
+
+The results of Kaledin--Lehn--Sorger
+\cite[Theorem~4.4, Proposition~6.1 and Theorems~A--B]{kls06}
+give the following description. The variety $M$ is normal,
+irreducible and projective, of dimension $4q+2$. Its regular
+locus is precisely the nonempty stable locus. Every singular
+point is represented by $G_1\oplus G_2$ with $G_i\in N$.
+The direct-sum morphism identifies the reduced singular locus
+with $\Sym^2N$. One can also see the last assertion from the
+local quiver descriptions below: the semisimple nonsimple
+representations are exactly the unordered pairs of simple
+summands. Near a repeated summand, the restrictions of traces
+of matrix words to two one-dimensional characters are the
+polarized power sums. These generate the symmetric-square
+invariant ring in characteristic zero, identifying the
+reduced singular locus. Away from the diagonal the local
+product description gives the same identification. Accordingly,
+\begin{equation}\label{eq:strata}
+ \Sing M=\Sigma=\Sym^2N,\qquad
+ \Delta\cong N,\qquad
+ \dim\Sigma=2q+4,\quad \dim\Delta=q+2.
+\end{equation}
+There are three smooth strata: $M^s$, $\Sigma\setminus\Delta$,
+and $\Delta$.
+
+The variety $M$ has symplectic singularities and is locally
+factorial in the algebraic sense. Its singular locus has
+codimension $2q-2\ge6$, so its singularities are terminal
+\cite[Corollary~1]{namikawa01}. It has no proper symplectic
+resolution \cite[Theorem~B]{kls06}. The Main Theorem of
+\cite{namikawa06} applies to the projective, $\mathbb Q$-factorial,
+terminal symplectic variety $M$ and makes every flat deformation
+locally trivial. Since $\Sigma$ is nonempty, $M$ has no flat
+smoothing. Algebraic local factoriality here does not assert
+factoriality of completed local rings; see
+\cite[Remark~6.3]{kls06}.
+
+We shall also use the irreducible symplectic-variety theorem of
+Perego--Rapagnetta \cite[Theorem~1.10]{pr23}. It gives canonical
+singularities and
+\begin{equation}\label{eq:forms-cohomology}
+ H^0(M,\Omega_M^{[2]})=\CC\sigma_M,
+ \qquad H^1(M,\OO_M)=0.
+\end{equation}
+For the second equality, the definition of an irreducible
+symplectic variety gives no reflexive one-forms. Pullback to
+a projective resolution, Hodge symmetry, and rationality of
+canonical singularities give the stated cohomology vanishing;
+compare \cite[Definition~1.2 and Remark~1.3]{pr23}.
+Symplectic singularities are Gorenstein, with trivial canonical
+bundle generated by the top exterior power of $\sigma_M$.
+
+\subsection{The two extension cones}\label{subsec:quivers}
+The formulas below use the harmonic Hermitian forms; the displayed
+complex vector spaces are supplied with the corresponding flat
+hyperk\"ahler structures. A quiver representation is called
+simple if it has no nonzero proper subrepresentation. Let
+$G_1\not\cong G_2$ belong to $N$.
+Stability and Serre duality give
+\[
+ \Hom(G_1,G_2)=\Ext^2(G_1,G_2)=0,
+ \qquad \dim\Ext^1(G_1,G_2)=q.
+\]
+Each self-extension space has dimension $n$. The effective
+unitary stabilizer is a circle, acting with opposite weights
+on the two cross-extension spaces. Hence
+\begin{equation}\label{eq:offdiag-cone}
+ \Cone_{G_1\oplus G_2}
+ =\CC^{2n}\times\mathcal N_q,
+ \qquad \mathcal N_q=T^*\CC^q\hkr_0\U(1).
+\end{equation}
+In coordinates $(x,y)\in\CC^q\oplus(\CC^q)^*$ the equations are
+$y(x)=0$ and $|x|^2=|y|^2$. The map $(x,y)\mapsto x\otimes y$
+identifies the complex quotient with the rank-at-most-one,
+square-zero matrices in $\mathfrak{sl}_q$, namely the minimal
+nilpotent orbit closure. Its complex dimension is $2q-2$.
+There are simple balanced points: take nonzero perpendicular
+vectors of equal norm for $x$ and the conjugate of $y$.
+
+For $E=G\oplus G$, the extension space is
+$\Ext^1(G,G)\otimes\mathfrak{gl}_2$. Splitting off scalar
+matrices gives
+\begin{equation}\label{eq:diagonal-cone}
+ \Cone_{G\oplus G}=\CC^n\times\mathcal Q_q,
+ \qquad
+ \mathcal Q_q=(\CC^n\otimes\mathfrak{sl}_2)\hkr_0\SU(2),
+ \qquad \dim\mathcal Q_q=3q.
+\end{equation}
+Here $n$ is even, and a symplectic basis identifies the extension
+space with $n/2$ pairs of matrix loops $(A_j,B_j)$.
+Simple balanced points exist: set all $B_j=0$ and choose two
+noncommuting Hermitian traceless matrices among the $A_j$, with
+the remaining matrices zero. The complex moment map
+$\sum_j[A_j,B_j]$ and the real moment map
+$\sum_j([A_j,A_j^*]+[B_j,B_j^*])$ vanish. The two Hermitian
+matrices have no common invariant line, so this representation
+is simple. Scaling makes these simple points arbitrarily small.
+The scalar center acts trivially, so the use of $\SU(2)$ rather
+than its effective quotient does not change the metric quotient.
+
+The holomorphic germs and metric normalizations in
+\eqref{eq:offdiag-cone}--\eqref{eq:diagonal-cone} will be identified
+with those of $M$ in the next section. In particular, the metric
+on the fixed scalar factor of \eqref{eq:diagonal-cone} is the
+one induced by $a\mapsto a\otimes I_2$; it is twice the harmonic
+metric on the deformation space of $G$.
+
+\begin{example}\label{ex:quartic}
+For a Picard-rank-one quartic K3 surface, $v_0=(5,H,0)$ satisfies
+$q=4$, $r_0=q+1$ and $\gcd(5,4)=1$. The stable factors have
+second Chern class $c_2=7$, and a sheaf of vector $2v_0$ has
+$c_2=18$, since $s=r+c_1^2/2-c_2$ on a K3 surface. The
+dimensions are as follows.
+\begin{center}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcc}
+\toprule
+Locus & Complex dimension & Complex normal-cone dimension\\
+\midrule
+$M^s$ & $18$ & $0$\\
+$\Sigma\setminus\Delta$ & $12$ & $6$\\
+$\Delta$ & $6$ & $12$\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+Thus the family contains a compact example with both types of
+singular points. The existence assertions are the moduli
+theorems above; the numerical equalities alone do not establish
+existence.
+\end{example}

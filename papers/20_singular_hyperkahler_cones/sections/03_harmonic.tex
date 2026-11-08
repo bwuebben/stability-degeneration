@@ -1,0 +1,229 @@
+\section{Harmonic coordinates and the quadratic estimate}\label{sec:harmonic}
+
+Let $E=\bigoplus_i F_i\otimes W_i$ be a polystable bundle on
+$S$, with pairwise nonisomorphic stable factors and a direct-sum
+Hermitian--Einstein metric $h_E$. Put
+\[
+ V=H^1(S,\End E),\qquad
+ G=\prod_i\GL(W_i),\qquad K=\prod_i\U(W_i).
+\]
+We use unnormalized trace inner products and volume form
+$\omega^2/2$. Write $d=\dbar_E$, and let $H_j,G_j$ denote
+harmonic projection and the Green operator in degree $(0,j)$.
+The flat metric on $V$ is the real metric of this harmonic
+Hermitian form. Its quaternionic structure is induced by the
+parallel holomorphic symplectic form of $S$, normalized to make
+that structure antiunitary. All quotient metrics use these
+same normalizations.
+
+\subsection{Exact quadraticity in the harmonic coordinates}
+The canonical harmonic recursion is
+\begin{equation}\label{eq:recursion}
+ a(x)=x-d^*G_2(a(x)\wedge a(x)),\qquad
+ \kappa_E(x)=H_2(a(x)\wedge a(x)).
+\end{equation}
+It converges on a neighbourhood of $0\in V$ and gives a
+holomorphic semiuniversal deformation over
+$Z=\kappa_E^{-1}(0)$; its underlying reduced space suffices
+for all metric statements. In particular,
+\begin{equation}\label{eq:coclosed}
+ H_1a=x,\qquad d^*a=0,\qquad a=x+O(|x|^2).
+\end{equation}
+The maps are locally $G$-equivariant. These assertions, including
+integrability precisely on $Z$, are the harmonic construction
+of \cite[Lemma~2.1]{wuebben15}. Convergence follows from the
+contraction for $d^*G_2(a\wedge a)$ in a sufficiently high
+Sobolev norm. Parallel endomorphisms commute with the Hodge
+operators, which gives the equivariance even for nonunitary
+elements of $G$ whenever both sides are defined.
+
+\begin{lemma}\label{lem:quadraticity}
+On the full convergence neighbourhood of \eqref{eq:recursion},
+\begin{equation}\label{eq:exact-quadraticity}
+ \kappa_E(x)=H_2(x\wedge x).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Choose a nonzero parallel holomorphic two-form $\sigma$ on $S$.
+Every endomorphism-valued $(0,2)$-form is $\phi\bar\sigma$.
+The formula for $d^*$, together with parallelness of $\sigma$,
+identifies $d^*(\phi\bar\sigma)$ with a nonzero constant
+multiple of contraction of $\partial_E\phi$ by $\bar\sigma$.
+Thus $\phi\bar\sigma$ is harmonic if and only if
+$\partial_E\phi=0$. Equivalently, $\phi^*$ is holomorphic.
+The induced connection on $\End E$ has zero Hermitian--Einstein
+constant, so its holomorphic sections are parallel. We obtain
+\begin{equation}\label{eq:harmonic-two}
+ \mathcal H^{0,2}(\End E)
+   =\{\xi\bar\sigma:\nabla\xi=0\}.
+\end{equation}
+Consequently, for $\theta=\theta_0\bar\sigma$,
+\begin{equation}\label{eq:harmonic-test}
+ H_2\theta=0\quad\Longleftrightarrow\quad
+ \int_S\tr(\theta_0\xi^*)\,dV=0
+ \quad\hbox{for every parallel }\xi.
+\end{equation}
+
+We claim that for $d^*u=0$ and arbitrary
+$\gamma=\phi\bar\sigma$,
+\begin{equation}\label{eq:coexact-vanishing}
+ H_2(u\wedge d^*\gamma)=0
+      =H_2(d^*\gamma\wedge u).
+\end{equation}
+Use unitary normal frames at a point. Up to fixed nonzero
+scalars, the two coefficients relative to $\bar\sigma$ are
+\[
+ -\sum_j u_{\bar j}\nabla_j\phi,
+ \qquad \sum_j(\nabla_j\phi)u_{\bar j}.
+\]
+For a parallel $\xi$, covariant integration by parts gives
+\begin{align}
+ \int_S\sum_j\tr(u_{\bar j}\nabla_j\phi\,\xi^*)\,dV
+ &=-\int_S\tr\left(\left(\sum_j\nabla_j u_{\bar j}\right)
+                   \phi\xi^*\right)dV=0,\label{eq:ordered-one}\\
+ \int_S\sum_j\tr((\nabla_j\phi)u_{\bar j}\xi^*)\,dV
+ &=-\int_S\tr\left(\phi\left(\sum_j\nabla_j u_{\bar j}\right)
+                   \xi^*\right)dV=0.\label{eq:ordered-two}
+\end{align}
+The contracted derivative is a constant multiple of $-d^*u$.
+The connection preserves the metric and volume, and
+$\nabla\xi^*=0$, so these are global divergence identities.
+The order of the endomorphisms is retained in both formulas;
+neither commuting factors nor flatness of the Chern connection
+is used. Equations \eqref{eq:harmonic-test}--\eqref{eq:ordered-two}
+prove \eqref{eq:coexact-vanishing}.
+
+Now write $a=x+\beta$, where
+$\beta=-d^*G_2(a\wedge a)$. Both $x$ and $\beta$ are
+$d^*$-closed. Formula \eqref{eq:coexact-vanishing}, first with
+$u=x$ and then with $u=\beta$, annihilates under $H_2$ all
+three terms $x\wedge\beta$, $\beta\wedge x$ and
+$\beta\wedge\beta$. Expanding $H_2(a\wedge a)$ proves
+\eqref{eq:exact-quadraticity}.
+\end{proof}
+
+This calculation specifies the coordinates in the quadraticity
+theorems for hyperholomorphic bundles. It uses the central
+Ricci-flat metric on the surface. The coordinate specification
+is essential for the metric estimate below: a general
+holomorphic substitution $x\mapsto x+O(|x|^2)$ has derivative
+$I+O(|x|)$ and need only preserve a relative linear error.
+
+Choose unitary harmonic bases for the cross-extension spaces
+and symplectically paired bases for the loops. Serre duality
+identifies $H_2(x\wedge x)$ with the complex moment map of this
+doubled quiver. More precisely, with $r_i=\rk F_i$ and a
+normalized harmonic generator $\eta_S$ of $H^2(S,\OO_S)$,
+\begin{equation}\label{eq:rank-dual}
+ H_2(x\wedge x)
+   =\bigoplus_i r_i^{-1}I_{F_i}\otimes
+                      \mu_{\CC,i}(x)\,\eta_S,
+\end{equation}
+up to the single common nonzero symplectic normalization;
+see the rank-dual formula in \cite[Section~3]{wuebben14}.
+In particular the zero sets agree exactly. Since
+$H^1(S,\OO_S)=0$, fixing the determinant removes no harmonic
+direction. Lemma~\ref{lem:quadraticity} therefore gives
+\begin{equation}\label{eq:Z-cone}
+ Z=\mu_{\CC}^{-1}(0),\qquad
+ (Z\cap\mu_{\RR}^{-1}(0))/K=\Cone_E.
+\end{equation}
+
+\subsection{The quantitative local comparison}
+We record precisely the metric input from
+\cite[Theorem~1.1(i),(iii)]{wuebben15}, at constant polarization.
+For a fixed locally free polystable background on a compact
+K\"ahler manifold, in the coordinates \eqref{eq:recursion} and
+on the fixed-determinant subspace, that theorem gives a
+homeomorphism
+\[
+ f_0:(Z\cap\mu_{\RR}^{-1}(0))/K\longrightarrow
+       \text{a neighbourhood of }[E]
+\]
+onto the nearby Hermitian--Einstein moduli. It covers every
+sufficiently nearby solution, preserves the local complex-orbit
+description, and is smooth on smooth pieces of fixed orbit type.
+For genuine tangent vectors to such pieces,
+\begin{equation}\label{eq:imported-estimate}
+ (1-C|x|^2)g_{\rm fin}
+ \le f_0^*g^{L^2}\le(1+C|x|^2)g_{\rm fin}.
+\end{equation}
+Here, if $v$ is a balanced tangent lift and $C_x\xi=[\xi,x]$,
+\[
+ g_{{\rm fin},x}([v],[v])=\inf_\xi\|v-C_x\xi\|^2
+\]
+is the flat reduction metric; the scalar kernel can be omitted
+from the gauge algebra. This is a statement on actual stratum
+tangents, not on all Zariski tangents at a singular point.
+The constant is independent of stabilizer type, of the positive
+singular values of $C_x$ or $D\kappa_E(x)$, and of ratios of
+positive orbit eigenvalues. It may depend on the fixed
+background, ranks and multiplicities, harmonic dimensions,
+positive elliptic gaps, Sobolev constants and the chosen
+regularity order. These are exactly the dependencies needed
+in \eqref{eq:main-comparison}.
+
+All hypotheses hold here by Proposition~\ref{prop:no-bubbling}.
+The Hermitian--Einstein correspondence identifies the analytic
+moduli with the slope-polystable bundle moduli, and the latter
+is the Gieseker moduli germ by that proposition. By
+\eqref{eq:Z-cone}, $g_{\rm fin}=g_{\Cone_E}$. A zero-level
+balanced representative satisfies
+\begin{equation}\label{eq:cone-radius}
+ r([x])=\|x\|.
+\end{equation}
+Indeed, the radial segment is horizontal and has length
+$\|x\|$, while the norm is $1$-Lipschitz on every stratum.
+The full cone distance has the same property
+\cite[Section~5]{wuebben14}. Thus \eqref{eq:imported-estimate}
+is precisely the asserted quadratic tensor estimate.
+
+It remains to check that the identification is holomorphic in
+these same coordinates. The family $\dbar_E+a(x)$ is
+holomorphic, locally $G$-equivariant and semiuniversal. The
+analytic GIT construction of Buchdahl--Schumacher
+\cite[Theorems~5--9 and Remark~4]{buchdahl21} identifies its
+reduced analytic quotient $Z/\!/G$ with the reduced moduli
+germ. Denote its holomorphic classifying isomorphism by $\chi$.
+The Kempf--Ness identification supplies the homeomorphism
+between the balanced quotient in \eqref{eq:Z-cone} and
+$Z/\!/G$.
+
+The map $f_0$ in \eqref{eq:imported-estimate} corrects the
+same operator $\dbar_E+a(x)$ within its complex gauge orbit.
+Its finite balancing step changes $x$ within its $G$-orbit.
+Consequently $f_0$ and $\chi$ assign the same bundle class to
+every balanced representative. Local coverage and uniqueness
+identify them. The holomorphic structure on the cone quotient
+therefore makes $\Psi_E=f_0$ a biholomorphism of germs, without
+any further change of coordinates. This proves part~(ii) of
+Theorem~\ref{thm:main}.
+
+\subsection{Finite-dimensional slices used below}\label{subsec:slice-input}
+We also need two finite-dimensional conclusions of
+\cite[Sections~4--6]{wuebben14}. At a fixed point of a flat
+zero-level doubled-quiver quotient, its full quaternionic
+normal representation $W$ is again a doubled Ext-quiver
+representation. If $K'$ is the stabilizer and $U=W^{K'}$,
+the normal quotient splits as the exact metric product
+\begin{equation}\label{eq:normal-product}
+ W\hkr_0K'=U\times\bigl(U^\perp\hkr_0K'\bigr).
+\end{equation}
+The stratum through the centre is $U\times\{0\}$. There is a
+slice homeomorphism, smooth on strata, with relative metric
+error $O(\|w\|)$ and derivative at the central stratum equal
+to the isometric normal identification. Its constant may
+depend on that centre, but not on positive eigenvalues of the
+retained orbit operator.
+
+The quotient is proper and geodesic, with its quotient
+topology. If its complex zero fibre has one module-simple
+point, then the simple locus is dense and every full normal
+Ext-quiver has a module-simple point as well. These are the
+metric-slice theorem, the properness theorem and the
+normal-simple lemma of \cite{wuebben14}. The explicit simple
+points in Section~\ref{subsec:quivers} verify this hypothesis
+for our two singular cones. These statements apply to the
+full $W$ in \eqref{eq:normal-product}; the complementary
+representation $U^\perp$ alone need not be a doubled quiver.

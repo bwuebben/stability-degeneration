@@ -595,5 +595,37 @@
     },
     "number": 19,
     "directory": "19_integral_attachments"
+  },
+  {
+    "paper": "singular_hyperkahler_cones",
+    "title": "Canonical metrics on singular moduli of K3 bundles",
+    "date": "2026-11-08",
+    "revision_date": "2026-11-08",
+    "website_slug": "canonical-metrics-singular-k3-moduli",
+    "pages": 17,
+    "pdf_sha256": "8413297cf26ba8ae69cdc1dd04589c3b7f9e5e908670a15ba47aa1a36628958c",
+    "source_sha256": "e6b9d2f70adf01af991d3b388815a0dfb695131c7f9b3721f473f33b935f1f94",
+    "download_filename": "canonical-metrics-singular-k3-moduli.pdf",
+    "source_files_sha256": {
+      "main.tex": "e6b9d2f70adf01af991d3b388815a0dfb695131c7f9b3721f473f33b935f1f94",
+      "sections/01_introduction.tex": "ca1d8ac732ff3d41b27c688f4e61de897583e034c2d4e4b0aee790d34a8bc7fe",
+      "sections/02_moduli.tex": "6ba9a965e02d139798a880bd7b69b3c9b17e337128255930962439482f6a1c5b",
+      "sections/03_harmonic.tex": "e527d35e6f1ea300dd5d84caff8e339182263cc8a86781833b2cf4f0ba61173f",
+      "sections/04_distances.tex": "57e384c44d0aab80cadc6ee212565aba2b8cb830620d60fdcef79a83629eb7d6",
+      "sections/05_canonical.tex": "1e8d0d2f6ae284019d73d2d9c51747a8c52938c024cf8591486c14b7dbca9261",
+      "sections/06_strata.tex": "b6d5c822674ddde4734eb5eacaf7d0b1c4472377ce63c6e652dd276317842c5a",
+      "references/main_references.tex": "884853ea77a85ecb2ed5cedc21c4f5035ae1ede28be1bc9b0dbaef6e59a20925",
+      "canonical-metrics-singular-k3-moduli.pdf": "8413297cf26ba8ae69cdc1dd04589c3b7f9e5e908670a15ba47aa1a36628958c",
+      "README.md": "4751b6edd5842d95242b60eab2d9a615a3849258f170b001e369fd954573a9a0"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.24060228",
+      "conceptdoi": "10.5281/zenodo.24060227",
+      "record_url": "https://zenodo.org/records/24060228",
+      "created": "2026-11-08T20:22:59.496578+00:00",
+      "id": 24060228
+    },
+    "number": 20,
+    "directory": "20_singular_hyperkahler_cones"
   }
 ]
