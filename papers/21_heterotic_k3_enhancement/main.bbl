@@ -4,7 +4,8 @@
 \bibitem{wuebben15}
 B.J.~Wuebben, \emph{Quantitative local models for {Hermitian--Einstein}
   metrics},  7 November, 2026.
-\newblock 10.5281/zenodo.24029090.
+\newblock
+  \href{https://doi.org/10.5281/zenodo.24029090}{10.5281/zenodo.24029090}.
 
 \bibitem{stabilitywalls}
 L.B.~Anderson, J.~Gray, A.~Lukas and B.~Ovrut, \emph{{Stability Walls in
@@ -56,7 +57,8 @@ J.~McOrist and Q.~Yin, \emph{{Heterotic moduli, the double extension and the
 \bibitem{wuebben20}
 B.J.~Wuebben, \emph{Canonical metrics on singular moduli of {K3} bundles},  8
   November, 2026.
-\newblock 10.5281/zenodo.24060228.
+\newblock
+  \href{https://doi.org/10.5281/zenodo.24060228}{10.5281/zenodo.24060228}.
 
 \bibitem{yoshioka}
 K.~Yoshioka, \emph{{Irreducibility of moduli spaces of vector bundles on K3

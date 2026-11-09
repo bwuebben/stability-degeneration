@@ -5,7 +5,7 @@ By [Bernd Johannes Wuebben](https://bwuebben.github.io/),
 
 [Current version (PDF)](heterotic-k3-enhancement.pdf) ·
 [Abstract and citation](https://bwuebben.github.io/papers/heterotic-k3-enhancement/) ·
-[Zenodo:24063938](https://zenodo.org/records/24063938) · [DOI](https://doi.org/10.5281/zenodo.24063938)
+[Zenodo:24068195](https://zenodo.org/records/24068195) · [DOI](https://doi.org/10.5281/zenodo.24068195)
 
 An SO(32) heterotic compactification on a smooth K3 has three light vector
 species near a repeated bundle factor. Their leading squared masses have a
@@ -19,8 +19,9 @@ leading large-volume coefficient before the geometric limit.
 ## Build and reproduce
 
 With a LaTeX installation, run `latexmk -pdf main.tex` in this directory.
-The official JHEP style, bibliography style and generated bibliography are
-included. The archived PDF is the checked-in file named above; a local build
+The official JHEP support files and generated bibliography are included.
+`JHEP-doi.bst` is a local derivative that adds DOI hyperlinks for preprints;
+the original `JHEP.bst` is retained. The archived PDF is the checked-in file named above; a local build
 produces `main.pdf`.
 
 The four `figures/code/compute*.py` programs use the Python standard library
