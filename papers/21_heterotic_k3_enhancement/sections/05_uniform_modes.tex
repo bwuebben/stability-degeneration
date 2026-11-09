@@ -1,0 +1,216 @@
+\section{Actual scalar modes and their gauge vertices}\label{sec:modes}
+
+We now retain the light vector multiplets and calculate their interactions
+with two massless bundle scalars. All fields in this section belong to the
+actual ASD connection $\mathcal A=\mathcal A(a,b)$. Fix $0<\kappa_0<1$
+and restrict to
+\begin{equation}\label{eq:hierarchycone}
+ 0<b\le\kappa_0a,\qquad r^2=2(a^2+b^2).
+\end{equation}
+Constants may depend on $\kappa_0$ and the fixed compactification, but not
+on $b/a$. Sobolev norms below concern spatial derivatives on the fixed K3;
+they do not denote derivatives with respect to $a$ or $b$.
+
+\subsection{Harmonic representatives of the external states}
+In the harmonic coordinates of section~\ref{subsec:harmonic}, choose the
+two Dolbeault-unit vectors
+\begin{equation}\label{eq:plane}
+ \beta_u:\ \delta X_3=\sigma_1/\sqrt2,\qquad
+ \beta_v:\ \delta X_3=\sigma_2/\sqrt2,
+\end{equation}
+with all other components zero. The affine Hermitian $X_3$ plane satisfies
+all three moment equations. Its tangents are perpendicular to the gauge
+orbit and its quaternionic images at the Pauli point. The corresponding
+real-unit one-forms at the reference connection are
+\begin{equation}\label{eq:realstates}
+ \mathsf u_0=(\beta_u-\beta_u^*)/\sqrt2,\qquad
+ \mathsf v_0=(\beta_v-\beta_v^*)/\sqrt2.
+\end{equation}
+Transport their classes by $\Psi$, take actual ASD harmonic representatives,
+and normalize the resulting ordered pair by the positive inverse square
+root of its $2\times2$ Gram matrix. Denote these real-unit external states
+by $\mathsf u,\mathsf v$. This fixes their frame as well as their plane.
+Let $\Pi_1$ be reference ASD harmonic projection on real one-forms.
+
+\begin{lemma}\label{lem:actualstates}
+In the fixed-reference unitary Coulomb presentation, for every fixed
+spatial Sobolev order $s$,
+\begin{align}\label{eq:actualstates}
+ \|\Pi_1\mathsf u-\mathsf u_0\|_{H^s}
+ +\|\Pi_1\mathsf v-\mathsf v_0\|_{H^s}&\le C_s r^2,\\
+ \|(1-\Pi_1)\mathsf u\|_{H^s}
+ +\|(1-\Pi_1)\mathsf v\|_{H^s}&\le C_s r.\nonumber
+\end{align}
+These estimates are uniform on \eqref{eq:hierarchycone}.
+\end{lemma}
+\begin{proof}
+The fixed-complement reconstruction of
+\cite[Lemmas~2.1--2.2, Proposition~2.3 and Lemma~3.1]{wuebben15}
+has a holomorphic map $\mathfrak a(y)$, its derivative $J_y$, and a
+complementary Hermitian correction $\sigma(y)$ satisfying
+\begin{equation}\label{eq:reconstructionjets}
+ \mathfrak a(y)=y+O(r^2),\quad J_y=I+O(r),\quad
+ H_1J_y=I,\quad \bar\partial_0^*J_y=0,\quad \sigma(y)=O(r^2).
+\end{equation}
+Here $H_1$ is Dolbeault harmonic projection; the estimates hold in each
+fixed spatial norm. Finite balancing replaces $x$ by $y=e^Sx$, where
+$\|S\|\le Cr^2$, and hence $y-x=O(r^3)$. Conjugation acts only on
+multiplicity matrices. Thus $y$ is still supported in slots $X_1,X_2$,
+whereas $w=e^S\beta_u$ or $e^S\beta_v$ is supported in $X_3$. In
+particular, $w=\beta_{u,v}+O(r^2)$ and $w$ is flat-orthogonal to the
+entire complex orbit $O_y=\operatorname{im}C_y$ of the parallel gauge
+algebra. The exact complex moment equation makes $w$ an integrable tangent.
+
+Minimizing first over the fixed complementary complex gauge space produces
+the positive Hermitian form $B_y$ on harmonic vectors, with
+$\|B_y-I\|\le Cr^2$ \cite[Proposition~2.4]{wuebben15}. The remaining full
+gauge minimum is the $B_y$-distance to $O_y$. If $o$ is the $B_y$-projection
+of $w$ onto $O_y$, then
+\begin{equation}\label{eq:orbitvectorbound}
+ (1-Cr^2)|o|^2\le B_y(o,o)=B_y(w,o)
+             =(B_y-I)(w,o),\qquad |o|\le Cr^2|w|.
+\end{equation}
+This estimates the orbit vector, without estimating a Lie algebra element
+whose action gives that vector. No inverse small orbit eigenvalue enters.
+
+For $w-o$, the complementary minimizer $\zeta$ satisfies
+$\|\zeta\|_{H^{s+1}}\le C_s r|w-o|$ by the fixed-gap normal equation
+and elliptic regularity. Its harmonic representative in the holomorphic
+frame is
+\[
+ \gamma=J_y(w-o)-D_{\mathfrak a}\zeta,
+ \qquad D_{\mathfrak a}=\bar\partial_0+[\mathfrak a,\cdot].
+\]
+It is closed by integrability and orthogonal to the full complex gauge
+image for the HE metric, so it is Dolbeault harmonic for that metric.
+Since $H_1J_y=I$ and $H_1\bar\partial_0\zeta=0$,
+\[
+ H_1\gamma=w-o-H_1[\mathfrak a,\zeta]
+           =\beta_{u,v}+O(r^2).
+\]
+The complementary component is $O(r)$ in $H^s$.
+
+Transport by $e^\sigma$ to the reference unitary bundle changes these
+estimates only by $O(r^2)$. Differentiating this frame along a parameter,
+or differentiating $S$, adds a complex gauge direction, removed by the
+full harmonic minimum. No bound for either parameter derivative is used.
+Passing to the real representatives \eqref{eq:realstates}, harmonic
+orthogonality gives Gram matrix $I+O(r^2)$. Its inverse square root
+preserves the estimates. Finally the fixed Coulomb correction is generated
+by a complementary unitary gauge of size $O(r^2)$: the first connection
+jet is already co-closed, and the reference complementary gauge Laplacian
+has a fixed gap. Its conjugation changes these one-forms by $O(r^2)$.
+\end{proof}
+
+\subsection{The light eigenvector}
+Put $D=d_{\mathcal A}$ and $\mathcal L=D^*D$. At the reference point let
+\begin{equation}\label{eq:pauliprofiles}
+ k_i=I_A\otimes i\sigma_i/\sqrt{6V_0},\qquad i=1,2,3,
+\end{equation}
+extended by zero on the other orthogonal-adjoint blocks. These are
+orthonormal. The other 93 parallel sections form an exact fixed kernel
+throughout the family with $a,b>0$.
+
+\begin{lemma}\label{lem:lightdirection}
+The normalized light eigenvector $p_L$ of $\mathcal L$ can be chosen with
+$\|p_L-k_3\|_{H^s}\le C_s r^2$. The two heavier low eigenvectors span
+a plane within $O(r^2)$ of $\operatorname{span}\{k_1,k_2\}$, uniformly
+on \eqref{eq:hierarchycone}.
+\end{lemma}
+\begin{proof}
+Write $\mathcal A=\mathcal A_0+\alpha$ in fixed Coulomb gauge. The
+quadratic term in its unitary reconstruction is reference-harmonic
+orthogonal: its $(0,1)$ part is $\mathfrak a_2-\bar\partial_0\sigma_2$,
+with $\mathfrak a_2$ coexact. Finite balancing changes $x$ only by
+$O(r^3)$. The complementary Coulomb correction has size $O(r^2)$;
+its linear exact term has zero harmonic projection, and its commutator
+with the first jet has size $O(r^3)$. Consequently
+\begin{equation}\label{eq:connectiontwojet}
+ \Pi_1\alpha=\alpha_1(x)+O(r^3),\qquad
+ (1-\Pi_1)\alpha=O(r^2).
+\end{equation}
+These are value estimates in fixed spatial norms.
+
+Let $\Pi_0$ project onto the full reference parallel algebra. Coulomb
+orthogonality gives
+$Q_0\mathcal L\Pi_0=Q_0[\alpha,\cdot]^*[\alpha,\cdot]\Pi_0=O(r^2)$.
+The fixed complementary gap, or the eigenvector equation used in
+\eqref{eq:lowcomplement}, represents the low cluster as a graph
+$X:\operatorname{im}\Pi_0\to\operatorname{im}Q_0$ with
+$X=O(r^2)$ in each fixed spatial norm. Its canonical isometry is
+$U=(I+X)(I+X^*X)^{-1/2}$. Parallel commutators preserve reference
+harmonic one-forms and their orthogonal complement. Equation
+\eqref{eq:connectiontwojet} therefore gives
+\begin{equation}\label{eq:effectivepauli}
+ U^*\mathcal LU=\Lambda_x+O(r^4),\qquad
+ \Lambda_x\big|_{\langle k_1,k_2,k_3\rangle}
+ =\frac8{3V_0}\operatorname{diag}(a^2,a^2+b^2,b^2).
+\end{equation}
+Indeed the harmonic first-jet/quadratic-jet cross term vanishes, the
+remaining diagonal error is $O(r^4)$, and the cross block times $X$
+and the complementary graph energy have the same order.
+The fixed 93-dimensional kernel decouples exactly. In its orthogonal
+three-dimensional complement the light eigenvalue of $\Lambda_x$ has
+separation at least $c_{\kappa_0}a^2$ from the other two. The error in
+its unit eigenvector is bounded by $Cr^4/a^2\le Cr^2$. The orthogonal
+plane and spatial estimates follow from the graph construction.
+\end{proof}
+
+The additive matrix estimate \eqref{eq:effectivepauli} does not prove a
+relative bound for the light mass when $b\ll a^2$. That bound remains
+the separate energy-relative conclusion of Proposition~\ref{prop:vectors}.
+
+\subsection{Uniform cubic vertices}
+Let $I_\alpha$, $\alpha=1,2,3$, be the parallel complex structures on
+real one-forms. For an adjoint zero-form $p$ define
+\begin{equation}\label{eq:vertices}
+ j_p=\langle[p,\mathsf u],\mathsf v\rangle,\qquad
+ b_p^\alpha(w,z)=\langle I_\alpha[p,w],z\rangle,
+ \quad w,z\in\{\mathsf u,\mathsf v\}.
+\end{equation}
+The inner product uses $g_0$ and $\BF$. The second form is symmetric
+because $I_\alpha$ and $\operatorname{ad}p$ are commuting skew-adjoint
+operators. These are respectively the vector current and the Hessian of
+a component of the gauge moment map, with signs fixed in
+section~\ref{sec:scattering}.
+
+\begin{proposition}\label{prop:vertices}
+For the three low positive vector profiles,
+\begin{equation}\label{eq:lowvertices}
+ j_{p_L}=-\frac2{\sqrt{6V_0}}+O(r^2),\qquad
+ j_{p_M},j_{p_H}=O(r^2),\qquad
+ b_{p_j}^\alpha(w,z)=O(r^2).
+\end{equation}
+Every persistent zero mode has both vertices exactly zero. For a complete
+orthonormal zero-form eigenbasis $\{p_n\}$,
+\begin{equation}\label{eq:parsevalvertices}
+ \sum_n\left[|j_{p_n}|^2+
+ \sum_{\alpha=1}^3\sum_{w,z\in\{\mathsf u,\mathsf v\}}
+ |b_{p_n}^\alpha(w,z)|^2\right]\le C.
+\end{equation}
+All constants are uniform on \eqref{eq:hierarchycone}.
+\end{proposition}
+\begin{proof}
+For a parallel $k$, both $\operatorname{ad}k$ and
+$I_\alpha\operatorname{ad}k$ preserve reference harmonic one-forms
+and their orthogonal complement. Thus mixed harmonic/complementary
+pairings vanish in \eqref{eq:vertices}. Lemma~\ref{lem:actualstates}
+leaves an $O(r^2)$ error: the harmonic parts change by $O(r^2)$ and
+both complementary parts are $O(r)$. Lemma~\ref{lem:lightdirection}
+and spatial multiplication estimates allow replacement of each low
+profile by its parallel approximation, with the same error.
+
+At the reference plane, Pauli commutators give
+$j_{k_3}=-2/\sqrt{6V_0}$ and $j_{k_1}=j_{k_2}=0$. The three flat
+moment maps vanish identically on the Hermitian $X_3$ plane. Their
+Hessians on each selected pair therefore vanish for every parallel
+generator. This proves \eqref{eq:lowvertices}. The persistent central
+and spectator generators commute pointwise with the selected
+$\End E$ fluctuations, proving the exact zero statements.
+
+Each functional in \eqref{eq:vertices} is the $L^2$ pairing of $p$
+with a pointwise bilinear zero-form expression in $\mathsf u,\mathsf v$.
+Lemma~\ref{lem:actualstates} and Sobolev multiplication bound its
+$L^2$ norm uniformly. Parseval gives \eqref{eq:parsevalvertices},
+including all complementary $\SO(32)$ blocks.
+\end{proof}

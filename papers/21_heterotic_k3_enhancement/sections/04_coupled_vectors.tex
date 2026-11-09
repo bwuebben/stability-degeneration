@@ -6,7 +6,7 @@ common gravitational prefactor. Set $\eta=\alpha'/L^2$ and use positive
 forms $\BF=-\tfrac12\Tr_{32}$ and $\BR=-\tfrac12\Tr_T$ on
 the compact gauge and internal Euclidean rotation algebras. The
 Lorentzian extension of the tangent trace is understood in the
-ten-dimensional action. Our convention is
+ten-dimensional action. In mostly-plus signature our convention is
 \begin{equation}\label{eq:heterotic-action}
  \begin{split}
  S=\int e^{-2\Phi}\sqrt{-G}\Bigl[&
@@ -214,25 +214,126 @@ Consequently
 There are exactly 93, 94 or 96 zero roots on the corresponding
 strata. Positivity precludes an extra kernel outside $\ker A_t$.
 
+\subsection{A relative estimate uniform in the Higgs hierarchy}
+The absolute estimate \eqref{eq:Ebound} can be sharpened by using
+the fixed reducible connection $\mathcal A_0$. Put
+$D_0=d_{\mathcal A_0}$, let $\Pi_0$ project onto its full
+96-dimensional parallel algebra, and set $Q_0=I-\Pi_0$.
+The reconstruction in \cite[Lemmas~2.1--2.2 and section~3.2]{wuebben15}
+gives a fixed-unitary representative differing from $\mathcal A_0$
+by $O(r)$ in every fixed spatial regularity norm, where
+$r^2=2(a^2+b^2)$. Impose the reference Coulomb condition
+\begin{equation}\label{eq:fixedcoulomb}
+ \mathcal A_t=\mathcal A_0+\alpha_t,\qquad
+ D_0^*\alpha_t=0,\qquad \|\alpha_t\|_{C^1}\le Cr.
+\end{equation}
+This uses only a fixed inverse. Indeed the derivative of
+$D_0^*(e^u\cdot(\mathcal A_0+\beta)-\mathcal A_0)$ in
+$u\in Q_0W^{s+1,2}$ is $\pm D_0^*D_0$, with range
+$Q_0W^{s-1,2}$, for an integer $s\ge4$. The implicit-function
+theorem supplies the small gauge while leaving the stabilizer
+intact; see also \cite[Proposition~3.4]{feehan}. The following
+decomposition estimates use this slice; the spectral conclusion
+is gauge invariant.
+
+Write $D=D_0+[\alpha_t,\cdot]$ and split a zero-form as
+$p=k+q$, where $k=\Pi_0p$. Since
+$D_0^*[\alpha_t,k]=0$, the terms $D_0q$ and $[\alpha_t,k]$
+are orthogonal. The fixed Poincar\'e inequality on $Q_0$ and
+absorption of $[\alpha_t,q]$ give
+\begin{equation}\label{eq:fixedenergy}
+ \|D_0q\|+\|[\alpha_t,k]\|+\|q\|_{W^{1,2}}
+                   \le C\|Dp\|.
+\end{equation}
+For example, if $U^2=\|D_0q\|^2+\|[\alpha_t,k]\|^2$ and
+$\gamma_0$ is the first positive reference eigenvalue, then
+$U\le\|Dp\|+Cr\gamma_0^{-1/2}U$.
+
+On the whole low cluster this improves to
+\begin{equation}\label{eq:lowcomplement}
+ \|Q_0p\|\le Cr\|Dp\|,\qquad p\in\operatorname{im}P_t.
+\end{equation}
+To prove it first take an eigenvector with eigenvalue $\lambda$.
+The complementary operator $L_Q=Q_0D^*DQ_0$ has a fixed positive
+gap, whereas the 96 low eigenvalues are $O(r^2)$ by min--max.
+The complementary equation is
+\[
+ q=-(L_Q-\lambda)^{-1}Q_0
+       [\alpha_t,\cdot]^*[\alpha_t,k].
+\]
+Equations~\eqref{eq:fixedenergy} and~\eqref{eq:fixedcoulomb}
+prove \eqref{eq:lowcomplement} for that eigenvector. For
+$p=\sum_{j=1}^{96}c_je_j$, Cauchy--Schwarz gives
+$\|Q_0p\|\le Cr\sqrt{96}(\sum_j|c_j|^2\lambda_j)^{1/2}$.
+Absorb the fixed dimension into $C$. Zero eigenvalues are included.
+
+Every reference parallel $k$ has $\BF(k,F_0)=0$ pointwise.
+On $A\otimes\CC^2$ this follows from
+$F_0=F_A\otimes I$ and $\tr F_A=0$; it also holds on the
+determinant-flat $B$ block and the trivial block. The curvature
+identity therefore gives the exact transgression formula
+\begin{equation}\label{eq:transgression}
+ \HH_2\BF(p,F_t)=\HH_2\BF(q,F_t)
+                    +\HH_2\BF(k,\alpha_t\wedge\alpha_t).
+\end{equation}
+The omitted linear term is $d\BF(k,\alpha_t)$ and has zero
+harmonic projection. Trace invariance bounds the second term by
+$C\|\alpha_t\|_\infty\|[\alpha_t,k]\|$. Equations
+\eqref{eq:fixedenergy}--\eqref{eq:transgression} imply
+\begin{equation}\label{eq:relativeharmonic}
+ 0\le M_t:=P_tT_t^*\HH_2T_tP_t\le Cr^2A_t.
+\end{equation}
+The vanishing reference harmonic flux is essential: a nonzero
+$\HH_2\BF(k,F_0)$ would violate this inequality at $r=0$.
+
+The zero-mean convention in \eqref{eq:Poisson} also matters.
+Since $\BF(k,k)$ is constant on K3, $\langle k,f_tk\rangle=0$.
+Equations~\eqref{eq:lowcomplement} and the $O(r^2)$ low
+spectral upper bound yield $\|P_tf_tP_t\|\le Cr^2$.
+Moreover $\|J_tp\|\le C\|Dp\|$, so on a fixed interval
+$|\lambda|\le\Lambda_*$ below the one-form gap,
+\begin{equation}\label{eq:relativekinetic}
+ \|Z_t(\lambda)\|\le Cr^2,\qquad
+ \partial_\lambda F_t^{[1]}
+ =-I-\eta P_tf_tP_t
+ -2\eta P_tJ_t^*(\Delta_1-\lambda)^{-2}J_tP_t
+ =-I+O(\eta r^2).
+\end{equation}
+
 \begin{proposition}\label{prop:coupled}
-For sufficiently small $a,b,\eta\ge0$, the pencil
-\eqref{eq:pencil} has 96 real low roots, counted with
-multiplicity, with kernels as in \eqref{eq:kernel}. Its three
-positive generic branches satisfy \eqref{eq:intro-corrected}.
+There are $r_0,\eta_0,C>0$, depending only on the fixed
+compactification data, such that for $r\le r_0$ and
+$0\le\eta\le\eta_0$ the pencil \eqref{eq:pencil} has
+96 real low roots, counted with multiplicity. If $\mu_j$ are
+the ordered eigenvalues of $A_t$, then
+\begin{equation}\label{eq:relativeroots}
+ (1-C\eta r^2)\mu_j\le\lambda_j^{[1]}
+                    \le(1+C\eta r^2)\mu_j,\qquad 1\le j\le96.
+\end{equation}
+The estimate includes exact zeros and has a constant independent
+of the ratio $b/a$. The three positive generic masses consequently
+satisfy \eqref{eq:intro-corrected}.
 \end{proposition}
 \begin{proof}
-Choose a fixed positive cutoff below the one-form and gauge
-complementary gaps and then shrink the parameter neighborhood so
-that the whole leading low cluster lies well below it. The
-pencil is positive at a small fixed negative endpoint and
-negative at the positive endpoint, and decreases strictly
-between them. Its ordered eigenvalue functions therefore have
-exactly one zero each. Equation~\eqref{eq:Ebound} and the
-min--max inequalities displace each root from the corresponding
-eigenvalue of $A_t$ by at most $C\eta$. Divide by the positive
-finite eigenvalue, whose minimum is a fixed constant times
-$b^2$, and apply Proposition~\ref{prop:vectors}. Exact zero
-branches are treated by \eqref{eq:kernel}, not by division.
+Equations~\eqref{eq:relativeharmonic} and~\eqref{eq:relativekinetic}
+give
+\[
+ A_t\le A_t+\eta M_t\le(1+C\eta r^2)A_t,\qquad
+ (1-C\eta r^2)I\le I+\eta Z_t(\lambda)\le(1+C\eta r^2)I.
+\]
+The pencil decreases strictly on the fixed interval and has
+opposite definite signs at its endpoints after shrinking $r_0$
+and $\eta_0$. Each ordered eigenvalue function has one root.
+The min--max principle bounds the $j$th root by
+\[
+ \frac{\mu_j}{1+C\eta r^2}
+ \le\lambda_j^{[1]}\le
+ \frac{(1+C\eta r^2)\mu_j}{1-C\eta r^2}.
+\]
+This proves \eqref{eq:relativeroots}, including zero branches.
+Combining with Proposition~\ref{prop:vectors} gives the stated
+comparison with the finite masses. No positive eigenvalue is
+replaced by the smallest one in this argument.
 \end{proof}
 
 The formal full expression is
@@ -241,7 +342,7 @@ Here $\Oformal$ records uncomputed higher coefficients; it is
 not a uniform numerical bound on an exact finite-$\eta$ pole.
 Solving \eqref{eq:pencil} retains its energy dependence and
 thereby resums some higher powers by convention. Those powers
-are not additional calculated string coefficients. Along
-$b=\varepsilon^p$, $a=\varepsilon$, $p>1$, the sufficient
-condition $\eta=o(\varepsilon^{2p+2})$ refers precisely to
-the model estimate just proved.
+are not additional calculated string coefficients. The relative
+model estimate permits fixed sufficiently small $\eta$ as
+$b/a$ tends to zero. Control of higher physical coefficients
+is a separate question.

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "signature": "mostly plus",
+  "dimension": 6,
+  "stress_contraction": "8*c + 8",
+  "stress_identity": "T1 P T2 = -s*u",
+  "normal_coordinate_vertex": "K*t",
+  "figure_low_energy_slope": "-3/4",
+  "figure_intermediate_limit": "-13/6",
+  "scope": "Exact tensor and finite vertex identities; not the full heterotic correction."
+}

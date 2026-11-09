@@ -1,10 +1,12 @@
-\section{Derivative estimates and a nonzero curvature component}\label{sec:derivatives}
+\section{Regular-patch derivatives and the quotient model}\label{sec:derivatives}
 
 \subsection{Preserving the quadratic rate in holomorphic coordinates}
-To use \eqref{eq:metriccomparison} in an interaction coefficient we
-need two metric derivatives. Its quadratic rate cannot simply be
-differentiated. The additional input is that both metrics are
-Ricci-flat K\"ahler in the same complex structure.
+The direct spectral proof in section~\ref{sec:scattering} controls the
+selected curvature uniformly in $b/a$. A complementary approach on
+regular angular patches upgrades \eqref{eq:metriccomparison} to metric
+derivative estimates. Its quadratic rate cannot simply be differentiated;
+the additional input is that both metrics are Ricci-flat K\"ahler in
+the same complex structure.
 
 \begin{lemma}\label{lem:interior}
 Let $g_*$ be a smooth Ricci-flat K\"ahler metric on a complex manifold
@@ -126,12 +128,8 @@ $C^0$ tensor comparison, and alone it is not an intrinsic curvature
 calculation. The following calculation supplies the latter.
 
 \subsection{Curvature in additional harmonic deformation directions}
-At a Pauli point with $a,b>0$, choose
-\begin{equation}\label{eq:plane}
- u:\ \delta X_3=\sigma_1/\sqrt2,\qquad
- v:\ \delta X_3=\sigma_2/\sqrt2,
-\end{equation}
-with all other components zero. They are orthonormal for
+At a Pauli point with $a,b>0$, let $u,v$ be the two Dolbeault
+vectors in \eqref{eq:plane}. They are orthonormal for
 \eqref{eq:flatmetric}. Their support is orthogonal to the orbit
 and its three quaternionic images, so they are horizontal tangent
 vectors to the hyperk\"ahler quotient.
@@ -184,9 +182,12 @@ Scaling back gives \eqref{eq:actualcurvature}. In particular its
 relative error is $O_\kappa(\varepsilon^2)$.
 \end{proof}
 
-Equation~\eqref{eq:actualcurvature} is so far a bundle-metric
-statement. The next section identifies its leading physical
-meaning without freezing the other neutral fields.
+Equation~\eqref{eq:actualcurvature} supplies an independent regular-ray
+check of Proposition~\ref{prop:uniformcurvature}. The latter's direct
+vertex proof also allows $b/a\to0$; the local derivative argument
+above does not provide that additional uniformity. Section~\ref{sec:scalar}
+identifies the leading physical coefficient while retaining the other
+neutral fields.
 
 \begin{figure}[t]
 \centering
@@ -194,9 +195,10 @@ meaning without freezing the other neutral fields.
 \caption{Exact finite-model formulas as the angular ratio decreases.
 Left: the three normalized leading squared vector masses. The relative
 geometric estimate remains uniform over the plotted ratios. Right:
-the cone curvature of the horizontal two-plane \eqref{eq:plane}. Its transfer to the
-actual metric has been proved at each fixed positive ratio; the plot
-does not assert a ratio-uniform differentiated error. Both panels
+the cone curvature of the horizontal two-plane \eqref{eq:plane}.
+Proposition~\ref{prop:uniformcurvature} transfers this selected curvature
+to the actual harmonic metric with uniform relative quadratic error for
+$0<b\le\kappa_0a$, $\kappa_0<1$. Both panels
 plot analytic formulas, not numerical HE solutions.}
 \label{fig:scales}
 \end{figure}

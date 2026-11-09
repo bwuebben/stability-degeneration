@@ -38,6 +38,12 @@ C.~Cheung, A.~Helset and J.~Parra-Martinez, \emph{{Geometric Soft Theorems}},
   (2022) 011} [\href{https://arxiv.org/abs/2111.03045}{{\ttfamily
   2111.03045}}].
 
+\bibitem{bonifacio_hinterbichler}
+J.~Bonifacio and K.~Hinterbichler, \emph{{Unitarization from Geometry}},
+  \href{https://doi.org/10.1007/JHEP12(2019)165}{\emph{JHEP} {\bfseries 12}
+  (2019) 165} [\href{https://arxiv.org/abs/1910.04767}{{\ttfamily
+  1910.04767}}].
+
 \bibitem{candelas}
 P.~Candelas, X.~de~la Ossa and J.~McOrist, \emph{{A Metric for Heterotic
   Moduli}}, \href{https://doi.org/10.1007/s00220-017-2978-7}{\emph{Commun.
@@ -47,12 +53,21 @@ P.~Candelas, X.~de~la Ossa and J.~McOrist, \emph{{A Metric for Heterotic
 \bibitem{mcorist_sticka_svanes}
 J.~McOrist, M.~Sticka and E.E.~Svanes, \emph{{The moduli of the universal
   geometry of heterotic moduli}},
-  \href{https://arxiv.org/abs/2411.05350}{{\ttfamily 2411.05350}}.
+  \href{https://doi.org/10.1007/s00023-026-01745-5}{\emph{Ann. Henri
+  Poincar\'e} (2026) } [\href{https://arxiv.org/abs/2411.05350}{{\ttfamily
+  2411.05350}}].
 
 \bibitem{mcorist_yin}
 J.~McOrist and Q.~Yin, \emph{{Heterotic moduli, the double extension and the
   $\alpha'^2$ metric}},  \href{https://arxiv.org/abs/2607.15817}{{\ttfamily
   2607.15817}}.
+
+\bibitem{mcorist_picard}
+J.~McOrist and S.~Picard, \emph{{Stringy Corrections to Heterotic
+  SU(3)-Geometry}},
+  \href{https://doi.org/10.1007/s00220-026-05620-6}{\emph{Commun. Math. Phys.}
+  {\bfseries 407} (2026) 105}
+  [\href{https://arxiv.org/abs/2507.02388}{{\ttfamily 2507.02388}}].
 
 \bibitem{wuebben20}
 B.J.~Wuebben, \emph{Canonical metrics on singular moduli of {K3} bundles},  8
@@ -121,12 +136,11 @@ J.~Gillard, G.~Papadopoulos and D.~Tsimpis, \emph{{Anomaly, Fluxes and (2,0)
   06} (2003) 035} [\href{https://arxiv.org/abs/hep-th/0304126}{{\ttfamily
   hep-th/0304126}}].
 
-\bibitem{hein_tosatti}
-H.-J.~Hein and V.~Tosatti, \emph{{Higher-order estimates for collapsing
-  Calabi-Yau metrics}},
-  \href{https://doi.org/10.4310/CJM.2020.v8.n4.a1}{\emph{Camb. J. Math.}
-  {\bfseries 8} (2020) 683} [\href{https://arxiv.org/abs/1803.06697}{{\ttfamily
-  1803.06697}}].
+\bibitem{feehan}
+P.M.N.~Feehan, \emph{{Critical-exponent Sobolev norms and the slice theorem for
+  the quotient space of connections}},
+  \href{https://doi.org/10.2140/pjm.2001.200.71}{\emph{Pacific J. Math.}
+  {\bfseries 200} (2001) 71}.
 
 \bibitem{oneill}
 B.~O'Neill, \emph{{The fundamental equations of a submersion.}},
@@ -138,5 +152,23 @@ R.~Bielawski, \emph{{Curvature of hyperk{\"a}hler quotients}},
   \href{https://doi.org/10.2478/s11533-008-0026-8}{\emph{Central Eur. J. Math.}
   {\bfseries 6} (2008) 191}
   [\href{https://arxiv.org/abs/math/0702889}{{\ttfamily math/0702889}}].
+
+\bibitem{bielawski_erratum}
+R.~Bielawski, \emph{{Erratum to: Curvature of hyperk{\"a}hler quotients}},
+  \href{https://doi.org/10.2478/s11533-009-0011-x}{\emph{Central Eur. J. Math.}
+  {\bfseries 7} (2009) 363}.
+
+\bibitem{gik}
+C.~Guenther, J.~Isenberg and D.~Knopf, \emph{{Stability of the Ricci flow at
+  Ricci-flat metrics}},
+  \href{https://doi.org/10.4310/CAG.2002.v10.n4.a4}{\emph{Commun. Anal. Geom.}
+  {\bfseries 10} (2002) 741}.
+
+\bibitem{hein_tosatti}
+H.-J.~Hein and V.~Tosatti, \emph{{Higher-order estimates for collapsing
+  Calabi-Yau metrics}},
+  \href{https://doi.org/10.4310/CJM.2020.v8.n4.a1}{\emph{Camb. J. Math.}
+  {\bfseries 8} (2020) 683} [\href{https://arxiv.org/abs/1803.06697}{{\ttfamily
+  1803.06697}}].
 
 \end{thebibliography}\endgroup

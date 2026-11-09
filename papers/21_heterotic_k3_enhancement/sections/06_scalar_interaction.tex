@@ -1,4 +1,4 @@
-\section{A leading neutral-scalar interaction}\label{sec:scalar}
+\section{The leading physical curvature coefficient}\label{sec:scalar}
 
 \subsection{Partial reduction on a regular patch}
 Fix a relatively compact generic patch with $a,b>0$, and allow
@@ -229,11 +229,16 @@ their effects have instead been included in
 
 \subsection{The interaction and its order of limits}
 Combining \eqref{eq:physicalmetric}, \eqref{eq:ambientleading}
-and Proposition~\ref{prop:curvature} proves
-\eqref{eq:intro-curvature}. In physical scalar normal coordinates
+and Proposition~\ref{prop:uniformcurvature} gives
+\begin{equation}\label{eq:physicaluniformcurvature}
+ \mathcal K_{\rm phys}^{\rm lead}
+ =\frac{3g_{10}^2}{4L^2b^2}[1+O(r^2)],\qquad
+ m_L^2\mathcal K_{\rm phys}^{\rm lead}=3e^2[1+O(r^2)],
+\end{equation}
+uniformly on \eqref{eq:hierarchycone}. In physical scalar normal coordinates
 with the convention assigning positive curvature to a sphere,
 $G_{ij}=\delta_{ij}-\tfrac13R_{ikjl}\phi^k\phi^l+\cdots$.
-The two-polarization part of the Lorentzian action
+The two-polarization part of the mostly-plus Lorentzian action
 $-\tfrac12G_{ij}\partial\phi^i\partial\phi^j$ is
 \begin{equation}\label{eq:interaction}
  \mathcal L_4=\frac{\mathcal K_{\rm phys}^{\rm lead}}6
@@ -248,16 +253,19 @@ that appear in other coordinates assemble into this coefficient;
 universal graviton-exchange poles are separate.
 
 The statement first computes the leading tree large-volume
-coefficient on a fixed regular patch, then takes
-$a=\varepsilon$, $b=\kappa\varepsilon$ with fixed $\kappa>0$.
-The geometric relative error is $O_\kappa(\varepsilon^2)$.
+coefficient at each fixed regular point. The resulting coefficient
+obeys the geometric relative estimate $O(a^2+b^2)$ uniformly as
+$b/a\to0$, by the spectral curvature formula; no uniform parameter
+derivative estimate for the whole neutral kinetic tensor is needed.
 The derivative expansion requires
-$E_{\rm probe}\ll\kappa\varepsilon/L$, with its next parameter
+$E_{\rm probe}\ll b/L$, with its next parameter
 $E_{\rm probe}^2/m_{\min}^2$, and perturbative interactions in
 canonical normalization. Taking the probe energy sufficiently
 small and the ten-dimensional coupling weak leaves a nonempty
 regime. Keeping a six-dimensional dilaton fixed as volume grows
 need not keep that ten-dimensional coupling small, so these
 limits are specified separately. We have not bounded higher
-physical coefficients as $\varepsilon\to0$ or proved a uniform
-simultaneous finite-$\eta$ curvature remainder.
+physical coefficients near enhancement or proved a uniform simultaneous
+finite-$\eta$ curvature remainder. At energies comparable to or above
+$b/L$, Theorem~\ref{thm:amplitude} retains the light multiplet explicitly
+and replaces the quotient derivative expansion.

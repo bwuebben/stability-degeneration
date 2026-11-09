@@ -5,16 +5,26 @@ By [Bernd Johannes Wuebben](https://bwuebben.github.io/),
 
 [Current version (PDF)](heterotic-k3-enhancement.pdf) ·
 [Abstract and citation](https://bwuebben.github.io/papers/heterotic-k3-enhancement/) ·
-[Zenodo:24068195](https://zenodo.org/records/24068195) · [DOI](https://doi.org/10.5281/zenodo.24068195)
+[Zenodo:24072269](https://zenodo.org/records/24072269) · [DOI](https://doi.org/10.5281/zenodo.24072269)
 
-An SO(32) heterotic compactification on a smooth K3 has three light vector
-species near a repeated bundle factor. Their leading squared masses have a
-relative geometric estimate independent of their hierarchy. The first tree
-vector pencil includes the complete leading metric and two-form towers.
-The same family has a nonzero leading neutral-scalar interaction with a
-quadratic relative geometric error at fixed angular ratio. The vector bound
-concerns the defined first-order pencil; the scalar statement takes the
-leading large-volume coefficient before the geometric limit.
+Original version: 8 November 2026. This version: 8 November 2026.
+
+Two actual massless bundle scalars in a smooth SO(32) heterotic K3 family
+have a complete leading Yang–Mills tree amplitude that approaches an explicit
+light-vector exchange formula, uniformly as the Higgs scales separate.
+The comparison includes the full internal vector and scalar spectrum, below
+the heavier Higgs masses and away from light poles. Harmonic orthogonality
+controls the vertices and an exact scalar contact–exchange cancellation
+removes inverse-mass losses. The same estimates give a selected curvature
+coefficient with uniform inverse-square growth.
+
+The defined first-order coupled vector pencil has a ratio-uniform relative
+correction bound; a fixed-ray coefficient satisfies a Pauli selection rule.
+At the next heterotic tree order, quadratic potential mixing with K3 metric
+deformations and universal graviton exchange are controlled separately.
+The complete coefficient at that order, finite-string-scale remainders and
+quantum effects remain open. The physical curvature statement extracts its
+leading large-volume coefficient before applying the geometric estimate.
 
 ## Build and reproduce
 
@@ -24,11 +34,14 @@ The official JHEP support files and generated bibliography are included.
 the original `JHEP.bst` is retained. The archived PDF is the checked-in file named above; a local build
 produces `main.pdf`.
 
-The four `figures/code/compute*.py` programs use the Python standard library
-and reproduce finite matrix, projection, cohomology and curvature calculations.
+The six `figures/code/compute*.py` programs reproduce finite matrix, projection,
+cohomology, curvature, spectral-amplitude and graviton calculations. The first
+four use the Python standard library; the last two require SymPy.
 They do not replace the analytic proofs or the perturbative physical derivation.
-The figure program `figures/code/fig01_scales.py` requires NumPy and Matplotlib
-and plots exact finite-model formulas, not numerical HE solutions.
+The two `figures/code/fig*.py` programs require NumPy and Matplotlib and plot
+exact finite-model formulas. Pinned dependencies are in `requirements.txt`.
+For example, use `uv run --with-requirements requirements.txt python
+figures/code/compute06_gravity.py`. These are not numerical HE solutions.
 
 [Programme and companion papers](../../README.md) ·
 [Physics guide](https://bwuebben.github.io/research/physics/).

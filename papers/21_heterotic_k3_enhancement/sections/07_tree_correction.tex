@@ -1,0 +1,221 @@
+\section{Partial results at the next heterotic tree order}\label{sec:nexttree}
+
+The amplitude in Theorem~\ref{thm:amplitude} includes the complete
+Yang--Mills tower. A further coefficient is required to include the
+other heterotic interactions. We identify its perturbative order, bound
+the quadratic potential mixing with K3 shape deformations, and calculate
+the universal massless spin-two contribution. The remaining
+coefficient is not evaluated here.
+
+\subsection{Order counting and the required terms}
+Remove the common gravitational prefactor and write the action in
+reference internal units as
+\begin{equation}\label{eq:treeorders}
+ S[Y,\mathcal A]=S_0[Y]+\eta S_1[Y,\mathcal A]
+             +\eta^2 S_2[Y,\mathcal A]+\Oformal(\eta^3),
+\end{equation}
+where $Y$ denotes the metric, dilaton and two-form. The term $S_1$
+contains both Yang--Mills and tangent curvature squared. In the field
+scheme of \eqref{eq:heterotic-action}, $S_2$ includes the terms generated
+by the recursive Chern--Simons definition of $H$ and the composite
+Hull connection. The absence of a new independent bosonic invariant
+at this order does not set $S_2$ to zero
+\cite[section~3.1]{aqs}\cite[section~2.1]{mcorist_yin,mcorist_picard}.
+
+Each canonical gauge or connection-scalar external leg removes a factor
+$\eta^{1/2}$ in these units. A bare term $\eta^nS_n$ with four such
+legs has order $\eta^{n-2}$. The leading Yang--Mills amplitude has
+order $\eta^{-1}$; its first relative-$\eta$ correction requires the
+complete bare action through $\eta^2$. The same count follows for
+exchange diagrams after canonical normalization of internal fields.
+Independent bare $\eta^3$ terms affect a later coefficient at fixed
+deformation and momentum. This order count gives no estimate uniform
+in a vanishing Higgs mass or near a pole.
+
+One can organize the calculation by the stationary action. Let $Y_0$
+be the leading product background, $K$ the gauge-fixed Hessian of $S_0$,
+and $J[\mathcal A]=\delta_Y S_1[Y_0,\mathcal A]$. With constraints,
+zero modes and propagator boundary conditions specified, eliminating
+the neutral fluctuations to this order would give
+\begin{equation}\label{eq:stationarycorrection}
+ W[\mathcal A]=S_2[Y_0,\mathcal A]
+       -\tfrac12\langle J[\mathcal A],K_F^{-1}J[\mathcal A]\rangle.
+\end{equation}
+This follows by inserting the stationary displacement
+$-\eta K_F^{-1}J$ into the quadratic leading action and its source.
+The massless poles in $K_F^{-1}$ are retained; the expression is not
+a local elimination of massless fields. At zero external momentum,
+the compatible complementary inverse is used, with background zero
+modes fixed by the stated normalization.
+
+Formula~\eqref{eq:stationarycorrection} is an organization of the
+missing calculation, not a computed amplitude. If $J_d$ is the
+degree-$d$ fluctuation part, its quartic term involves
+$J_0K_F^{-1}J_4$, $J_1K_F^{-1}J_3$ and
+$\tfrac12J_2K_F^{-1}J_2$. The first two include the corrected background
+and linear mixing. One must also insert the cubic part of $W$ into
+Yang--Mills exchange diagrams, insert its quadratic part into internal
+propagators, and correct the external modes and residues. Adding only
+neutral exchange between two scalar-pair sources omits these terms.
+The scalar constraints in section~\ref{sec:scalar} and the vector pencil
+in section~\ref{sec:coupled} supply parts of this reduction, but neither
+determines the complete cubic and quartic vertices.
+
+\subsection{Quadratic mixing with K3 metric deformations}
+One part of the coupled reduction admits a relative estimate from the
+same harmonic energy bound. Consider a volume-preserving infinitesimal
+hyperk\"ahler metric deformation in harmonic gauge, modulo
+diffeomorphisms and rotations of the parallel self-dual triple.
+Its period variations are harmonic ASD two-forms
+$\beta_\alpha=(\partial_\tau\omega_\alpha)^-$; this is the usual
+$\mathbb R^3\otimes\mathcal H^-_2(S)$ description of the 57-dimensional
+space of K3 shape tangents \cite{gik}. Normalize
+$\sum_\alpha\|\beta_\alpha\|^2\le1$.
+
+At fixed connection, put $f_\alpha=\partial_\tau\mu_\alpha$ and
+$c_{n\alpha}=\langle p_n,f_\alpha\rangle$. Up to the fixed component
+signs in \eqref{eq:infinitemoments}, the source is
+$f_\alpha=*_0(F\wedge\beta_\alpha)$. The variation of the outer
+Hodge star contributes zero because $F\wedge\omega_\alpha=0$ at the
+ASD background, and the self-dual part of the period variation wedges
+to zero with $F$. Since $\beta_\alpha$ is harmonic and ASD,
+\begin{equation}\label{eq:shapesource}
+ |c_{n\alpha}|
+ =\left|\int_S\BF(p_n,F)\wedge\beta_\alpha\right|
+ =\left|\langle\HH_2\BF(p_n,F),\beta_\alpha\rangle\right|.
+\end{equation}
+
+\begin{lemma}\label{lem:shapemixing}
+For each low positive mode,
+\begin{equation}\label{eq:shapemixing}
+ \sum_\alpha|c_{n\alpha}|^2\le Cr^2\mu_n.
+\end{equation}
+The mixed Hessian of $\tfrac12\sum_\alpha\|\mu_\alpha\|^2$
+between the unit scalar normal $n_{n\alpha}$ and this metric tangent
+is $\sqrt{\mu_n}c_{n\alpha}$, hence is $O(r\mu_n)$.
+The normal gauge-field adjustment to the linearized ASD equation is
+\begin{equation}\label{eq:shapelift}
+ \dot{\mathcal A}_\perp
+ =-\sum_{n>0,\alpha}\frac{c_{n\alpha}}{\sqrt{\mu_n}}n_{n\alpha}.
+\end{equation}
+Its low component is $O(r)$ and its complementary component is $O(1)$
+in every fixed spatial Sobolev norm, uniformly in $b/a$.
+\end{lemma}
+\begin{proof}
+Equations~\eqref{eq:shapesource} and~\eqref{eq:relativeharmonic}
+give \eqref{eq:shapemixing} by Cauchy--Schwarz. They also show that
+the source has zero projection on every parallel zero-form.
+At zero moment level the potential Hessian is the pairing of first
+moment derivatives. Equation~\eqref{eq:quaternionicgram} gives the
+displayed mixed entry and verifies that \eqref{eq:shapelift} solves
+$D\mu_\alpha(\dot{\mathcal A}_\perp)+f_\alpha=0$.
+
+For the full adjoint ASD complex the moment-map cokernel consists of
+three copies of the parallel algebra; the preceding vanishing removes
+each compatibility obstruction. The full lift includes the spectator
+$B$ connection's curvature source and its gapped response. In a
+trace-free determinant-fixed stable $E$ block the obstruction space
+is zero; restricting the lift to that block means restricting the
+source as well.
+
+Orthonormality of the normals gives
+\[
+ \|\dot{\mathcal A}_{\perp,\mathrm{low}}\|^2
+ =\sum_{n\,\mathrm{low},\alpha}\frac{|c_{n\alpha}|^2}{\mu_n}
+ \le Cr^2.
+\]
+Each unit low normal solves the uniformly elliptic ASD one-form
+square with bounded eigenvalue. Its coefficients are uniformly
+smooth in the fixed unitary presentation, so elliptic regularity
+bounds the normal in every fixed $H^s$ norm. The finite low sum
+therefore has the same $O(r)$ bound in $H^s$; dividing a spatial
+estimate for $Dp_n$ by a small $\sqrt{\mu_n}$ is unnecessary.
+For the complementary part, Parseval and the fixed positive gap
+give a uniform $L^2$ bound. The curvature and normalized harmonic
+$\beta_\alpha$ have uniformly bounded spatial derivatives, so the
+source does also. The complementary ASD equation and elliptic
+regularity then give its fixed-$H^s$ bounds.
+\end{proof}
+
+In the common normalization of \eqref{eq:treeorders}, a canonical
+gauge normal carries $\eta^{-1/2}$ and a geometry mode has leading
+order-one normalization. Thus this potential block has a low mixed
+entry $O(\sqrt\eta\,r\mu_n)$ and a static canonical normal
+admixture $O(\sqrt\eta\,r)$. This controls one quadratic contribution.
+It does not bound parameter derivatives of \eqref{eq:shapelift},
+the full corrected kinetic form, or a two-external-scalar neutral
+source at nonzero momentum. Those are still needed for the complete
+four-point coefficient.
+
+\subsection{The massless graviton and the angular domain}
+Use the six-dimensional Einstein frame normalized to agree with the
+product-frame external metric at the fixed leading vacuum. Define
+\begin{equation}\label{eq:Einsteinnormalization}
+ S_{\rm EH}=\frac1{2\kappa_6^2}\int\sqrt{-g}\,R,
+ \qquad g_{\mu\nu}=\eta_{\mu\nu}+2\kappa_6h_{\mu\nu}.
+\end{equation}
+The curvature convention in this Lorentzian action gives the usual
+healthy graviton propagator. For canonical orthogonal massless scalars,
+the minimally coupled graviton vertex is diagonal in species. Hence
+$\phi\chi\to\phi\chi$ has only $t$-channel graviton exchange at
+this order. It is
+\begin{equation}\label{eq:gravitonamplitude}
+ \mathcal M_{\rm grav}=\kappa_6^2\frac{su}{t}.
+\end{equation}
+For completeness, the conserved scalar stress at a vertex is
+$T_{\mu\nu}(p,p')=p_\mu p'_\nu+p_\nu p'_\mu-\eta_{\mu\nu}p\cdot p'$.
+The conserved-source propagator numerator in $D$ dimensions is
+\[
+ P_{\mu\nu,\rho\sigma}
+ =\tfrac12(\eta_{\mu\rho}\eta_{\nu\sigma}
+           +\eta_{\mu\sigma}\eta_{\nu\rho})
+       -\frac{\eta_{\mu\nu}\eta_{\rho\sigma}}{D-2}.
+\]
+On-shell contractions give
+$T_1PT_2=(s^2+u^2-t^2)/2=-su$. In mostly-plus signature the exchanged
+momentum has $q^2=-t$, and the two vertices and propagator give
+$\mathcal M=\kappa_6^2T_1PT_2/q^2=-\kappa_6^2T_1PT_2/t$, proving
+\eqref{eq:gravitonamplitude} also in $D=6$. Conservation removes
+longitudinal gauge terms.
+
+Restoring the common normalization of \eqref{eq:heterotic-action},
+the gauge term is
+\[
+ -\frac{\alpha'e^{-2\Phi_0}}{8\kappa_{10}^2}
+                    \BF(F_{MN},F^{MN}).
+\]
+Comparison with \eqref{eq:YMaction} and integration over the leading
+volume $V_0L^4$ give
+\begin{equation}\label{eq:gravitycoupling}
+ g_{10}^2=\frac{2\kappa_{10}^2e^{2\Phi_0}}{\alpha'},\qquad
+ \kappa_6^2=\frac{\kappa_{10}^2e^{2\Phi_0}}{V_0L^4}
+           =\frac34\alpha'e^2.
+\end{equation}
+These are the leading background normalizations needed for this
+coefficient. If $|t|\ge\delta E^2$, then
+\begin{equation}\label{eq:gravitybound}
+ |\mathcal M_{\rm grav}|
+ \le\frac{3}{4\delta}e^2\eta(EL)^2.
+\end{equation}
+At $E\asymp b/L$ this is $O(e^2\eta b^2)$, uniformly in $b/a$.
+It is an absolute bound relative to the natural amplitude scale $e^2$,
+not a relative bound against a Yang--Mills amplitude that may vanish.
+
+The massless pole requires a change to the domain of any full-amplitude
+comparison. For sufficiently small nonzero $s$, the domain
+\eqref{eq:amplitudedomain} allows $t\to0$ with $u\to-s$.
+The graviton term then has the nonzero residue $-\kappa_6^2s^2$.
+Thus the pure-Yang--Mills comparison cannot be extended to the
+unsubtracted full amplitude on precisely the same forward-allowed
+domain by appending a bounded error. Angular separation from massless
+poles, or a specified gauge-invariant pole subtraction, is necessary.
+This restriction does not by itself control the other terms of
+\eqref{eq:stationarycorrection}.
+
+The unresolved part is the complete constrained neutral-field source,
+its recursively induced contacts, the corrected scalar external states,
+and their combined exchanges and residues. Uniform estimates would
+also have to control small gauge inverses and mass insertions in this
+sum. They do not follow from the fixed complementary gaps alone.
+Even a complete calculation of this coefficient would remain distinct
+from a bound on the full finite-$\alpha'$ remainder.

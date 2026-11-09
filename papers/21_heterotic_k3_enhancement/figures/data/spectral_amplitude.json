@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "scope": "Exact finite identities; no numerical proof of analytic or KK bounds.",
+  "scalar_mass_squared": "lam/L**2",
+  "normal_scalar_cubic": "buv*g10*sqrt(lam)/L**3",
+  "quartic_potential_vertex": "g10**2*(buu*bvv + 2*buv**2)/L**4",
+  "scalar_contact_plus_exchange": "g10**2*(buu*bvv*t/(mass2 - t) + buv**2*(s/(mass2 - s) + u/(mass2 - u)))/L**4",
+  "low_energy_curvature_coefficient": "g10**2*(buu*bvv - buv**2 + 3*j**2)/(L**4*mass2)",
+  "real_reference_curvature": "3/(4*b**2)",
+  "physical_reference_curvature": "3*g10**2/(4*L**2*b**2)",
+  "checks": [
+    "Canonical scalar mass and cubic normalization",
+    "Quartic potential symmetry factors",
+    "Exact contact/exchange cancellation",
+    "All three scalar exchange channels",
+    "Gauss plus ONeill low-energy coefficient",
+    "Real/Dolbeault and physical metric factors",
+    "Pole-location resolvent difference"
+  ]
+}

@@ -1,0 +1,149 @@
+\section{The vector correction on a regular ray}\label{app:coefficient}
+
+The estimate of Proposition~\ref{prop:coupled} admits an explicit
+leading coefficient when $a=\varepsilon$, $b=\kappa\varepsilon$
+with fixed $0<\kappa<1$. Use the fixed Coulomb presentation of
+\eqref{eq:fixedcoulomb} and write
+\[
+ \alpha_\varepsilon=\varepsilon u+O(\varepsilon^2),\qquad
+ C=[u,\cdot],\quad
+ G=(Q_0D_0^*D_0Q_0)^{-1},\quad
+ \Lambda=\Pi_0C^*C\Pi_0.
+\]
+Here $u$ is the first real harmonic deformation; all remainders
+hold in each fixed spatial regularity. The fixed inverse $G$
+maps $Q_0L^2$ to $Q_0W^{2,2}$, with its higher elliptic versions.
+No second derivative of the finite balancing correction is used.
+
+The low spectral space is a graph over $K_0=\ker D_0$.
+Let $X_\varepsilon:K_0\to Q_0L^2$ be its graph map and set
+\begin{equation}\label{eq:graphcoefficient}
+ R=-GQ_0C^*C\Pi_0,\qquad
+ U_\varepsilon=(I+X_\varepsilon)
+              (I+X_\varepsilon^*X_\varepsilon)^{-1/2}.
+\end{equation}
+Then
+\begin{equation}\label{eq:graphexpansion}
+ X_\varepsilon=\varepsilon^2R+O(\varepsilon^3),\qquad
+ U_\varepsilon=I+\varepsilon^2R+O(\varepsilon^3).
+\end{equation}
+Indeed \eqref{eq:lowcomplement} gives $X_\varepsilon=O(\varepsilon^2)$.
+Writing the blocks of $D_\varepsilon^*D_\varepsilon$ as
+$A_{00},B,L_Q$, Coulomb orthogonality gives
+$B=\varepsilon^2Q_0C^*C\Pi_0+O(\varepsilon^3)$ and
+$A_{00}=\varepsilon^2\Lambda+O(\varepsilon^3)$.
+The graph equation
+$L_QX+B=X(A_{00}+B^*X)$, with
+$L_Q=L_{Q,0}+O(\varepsilon)$ between fixed elliptic spaces,
+proves \eqref{eq:graphexpansion}. Elliptic regularity upgrades
+the finite-dimensional graph estimate to every required spatial norm.
+The isometric normalization changes the parallel component only
+at order $\varepsilon^4$.
+
+Let $f_0$ be the zero-mean solution of \eqref{eq:Poisson} at
+the enhancement point, and let $h=\Delta_0^{-1}f_0$ have zero
+mean, with $\Delta_0=-\nabla^2$. Define
+\begin{align}
+ Hk&=\HH_2\bigl(\BF(Rk,F_0)+\BF(k,u\wedge u)\bigr),
+ \label{eq:Hcoefficient}\\
+ \langle k,Wl\rangle
+   &=\int_S h\,\BF([u,k],[u,l])\,dV_0 .
+ \label{eq:Wcoefficient}
+\end{align}
+Internal one-form indices in the second equation are contracted
+with $g_0$. The harmonic transgression \eqref{eq:transgression}
+and \eqref{eq:graphexpansion} give
+\begin{equation}\label{eq:masscoefficient}
+ U_\varepsilon^*M_\varepsilon U_\varepsilon
+      =\varepsilon^4H^*H+O(\varepsilon^5).
+\end{equation}
+The terms linear in a second connection coefficient are exact
+under harmonic projection, which is why no such coefficient
+appears in \eqref{eq:Hcoefficient}.
+
+For the kinetic term, $\Pi_0f_\varepsilon\Pi_0=0$ exactly.
+Since $f_\varepsilon=f_0+O(\varepsilon)$,
+\[
+ U_\varepsilon^*f_\varepsilon U_\varepsilon
+ =\varepsilon^2(\Pi_0f_0R+R^*f_0\Pi_0)+O(\varepsilon^3)
+ =-2\varepsilon^2W+O(\varepsilon^3).
+\]
+For the last equality use $G(f_0k)=hk$ for parallel $k$:
+$D_0^*D_0(hk)=(\Delta_0h)k=f_0k$. Self-adjointness of $G$
+then gives
+$\langle k,f_0Rl\rangle=-\int h\,\BF([u,k],[u,l])$.
+
+There is a further cancellation in the energy-dependent term.
+Parallelness implies $[F_0,k]=0$, so trace invariance gives
+$I_0^*[u,k]=0$ pointwise. Thus
+\[
+ J_\varepsilon U_\varepsilon
+ =I_\varepsilon^*D_\varepsilon U_\varepsilon
+ =O(\varepsilon^2).
+\]
+The resolvent term in $Z_\varepsilon$ is consequently
+$O(\varepsilon^4)$ on the fixed interval. Combining these
+identities yields
+\begin{equation}\label{eq:coefficientlimit}
+ \varepsilon^{-4}U_\varepsilon^*
+ E_\varepsilon(\varepsilon^2z)U_\varepsilon
+ \longrightarrow H^*H+2zW
+\end{equation}
+uniformly for $z$ in compact sets. This is an operator statement
+and remains valid at a repeated leading eigenvalue.
+
+For the three simple positive branches let $k_j$ be the unit
+$\Lambda$ eigenvectors with
+$\ell_j=8(\kappa^2,1,1+\kappa^2)_j/(3V_0)$, and define
+\begin{equation}\label{eq:sigmacoefficient}
+ \sigma_j=\|Hk_j\|^2+
+       2\ell_j\int_S h\,|[u,k_j]|^2\,dV_0.
+\end{equation}
+If $\mu_{\varepsilon,j}$ denotes the corresponding actual
+leading gauge eigenvalue, the roots of \eqref{eq:pencil} obey
+\begin{equation}\label{eq:raycorrection}
+ \lambda_{\varepsilon,j}^{[1]}(\eta)-\mu_{\varepsilon,j}
+ =\eta\varepsilon^4\sigma_j
+ +O_\kappa(\eta\varepsilon^5+\eta^2\varepsilon^6).
+\end{equation}
+To justify the remainder, pull the normalized leading eigenvector
+back by $U_\varepsilon$. Its distance from $k_j$ is
+$O_\kappa(\varepsilon)$ and its spectral separation is at least
+$c_\kappa\varepsilon^2$. Differentiating the simple pencil root
+at $\eta=0$ gives
+$\lambda'_j(0)=\langle p_j,E_\varepsilon(\mu_j)p_j\rangle$.
+Equation~\eqref{eq:coefficientlimit} gives
+$\lambda'_j(0)=\varepsilon^4\sigma_j+O_\kappa(\varepsilon^5)$.
+On the low-root interval,
+$E=O(\varepsilon^4)$, $E_\lambda=O(\varepsilon^2)$ and
+$E_{\lambda\lambda}=O(\varepsilon^4)$. The separated eigenvector
+equation therefore gives $\partial_\eta p_j=O_\kappa(\varepsilon^2)$
+and $\partial_\eta^2\lambda_j=O_\kappa(\varepsilon^6)$.
+Taylor's theorem in $\eta$ proves \eqref{eq:raycorrection}.
+
+The Pauli family has an additional selection rule. Write
+$u=U\otimes\sigma_3+\kappa V\otimes\sigma_1$, with $U,V$
+fixed unitary adjoint-valued one-forms on $A$. For the generators
+$\widetilde k_i=I_A\otimes i\sigma_i/\sqrt{6V_0}$,
+\begin{equation}\label{eq:selectionrule}
+ H\widetilde k_1=H\widetilde k_3=0.
+\end{equation}
+Products in $u\wedge u$ have multiplicity factors in
+$\operatorname{span}\{I,\sigma_2\}$, so their pairings with
+$\widetilde k_1,\widetilde k_3$ vanish. For these two inputs,
+the double commutator $C^*C\widetilde k_i$ has multiplicity
+factors only in $\operatorname{span}\{\sigma_1,\sigma_3\}$.
+The fixed complementary projection and Green operator preserve
+that subspace; pairing with $F_A\otimes I$ is again zero.
+This proves both terms of \eqref{eq:Hcoefficient} vanish.
+The smallest and middle branches thus have only the warping
+integral in \eqref{eq:sigmacoefficient}.
+
+The formula determines a background-dependent coefficient, not
+a universal nonzero number. Its value requires the reference ASD
+fields and normalized harmonic representatives. Zero mean does
+not give the warping integral a sign. At $\kappa=1$, individual
+branch coefficients require the geometric splitting on the
+repeated leading eigenspace as well as \eqref{eq:coefficientlimit}.
+Finally \eqref{eq:raycorrection} concerns the defined pencil:
+its powers of $\eta$ do not bound uncomputed string corrections.

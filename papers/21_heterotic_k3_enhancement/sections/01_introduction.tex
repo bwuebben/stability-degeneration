@@ -1,15 +1,22 @@
 \section{Introduction}\label{sec:introduction}
 
-Gauge enhancement in a heterotic compactification occurs when the internal
-connection acquires additional parallel adjoint sections. A deformation away
-from that locus makes the corresponding external vectors massive. The
-finite-dimensional Higgs mass matrix describes the leading mechanism, but
-an absolute error estimate need not resolve its smallest eigenvalue: several
-Higgs scales can approach zero at unrelated rates. There is a related
-problem for scalar interactions. A comparison of kinetic metrics does not,
-by itself, control the derivatives entering their curvature or identify the
-curvature of a bundle-moduli subspace with a coupling in the full reduced
-theory.
+Near gauge enhancement, a heterotic compactification can have several
+Higgs scales that vanish at unrelated rates. Scalar scattering then probes
+different effective descriptions as the energy crosses those scales.
+Below the smallest mass, the massive vector multiplets can be eliminated
+and their interactions are encoded in a quotient metric. Above that mass,
+the light multiplet must remain explicit. Establishing this transition
+on an actual compactification requires control of its normalized states,
+vertices and complete internal exchanges, in addition to its masses.
+
+The enhanced vectors arise from parallel adjoint sections of the internal
+connection. The finite-dimensional Higgs mass matrix describes how they
+become massive, but an absolute approximation need not resolve the smallest
+eigenvalue. Similarly, a comparison of scalar kinetic metrics does not
+control their curvature by differentiation, or identify a bundle-moduli
+curvature with an interaction in the full reduced theory. We obtain
+relative mass estimates and a uniform scattering comparison by working
+directly with the reconstructed connection and its harmonic modes.
 
 We address these questions on one family of smooth K3 compactifications of
 the $\operatorname{Spin}(32)/\ZZ_2$ heterotic theory with vector structure.
@@ -46,37 +53,77 @@ Its three positive roots, converted to squared masses by $L^{-2}$,
 satisfy
 \begin{equation}\label{eq:intro-corrected}
  \left|\frac{m_j^{2,[1]}}{\widehat m_j^2}-1\right|
- \le C\left(a^2+b^2+\frac{\eta}{b^2}\right).
+ \le C(1+\eta)(a^2+b^2).
 \end{equation}
 An anti-self-dual (ASD) Hodge identity checks the relative coefficients of the two
 mixings and proves positivity and preservation of the unbroken kernels.
-The sufficient region $\eta=o((a^2+b^2)b^2)$ makes this calculated
-correction smaller than the geometric relative error. Equation
+The correction relative to the actual leading gauge masses is
+$O(\eta(a^2+b^2))$, uniformly in $b/a$. Equation
 \eqref{eq:intro-corrected} concerns the defined pencil; it does not
 bound an uncomputed remainder in exact string poles.
 
-The second physical quantity is a neutral-scalar interaction. In the same
-holomorphic local quotient chart, the actual harmonic metric has a
-relative quadratic comparison with the hyperk\"ahler cone metric.
-Ricci-flat K\"ahler regularity upgrades this comparison to every fixed
-derivative order on compact smooth angular regions. An explicit
-horizontal two-plane has cone sectional curvature $3/(2b^2)$.
-We solve the mixed Einstein and two-form constraints, account for the
-other neutral fields and for the small axion kinetic block, and obtain
-the leading physical sectional curvature
+The interaction result concerns two specified massless bundle scalars.
+Put $r^2=2(a^2+b^2)$ and $e^2=2g_{10}^2/(3V_0L^4)$, with $g_{10}$
+defined by the ten-dimensional gauge action. Let $\mathcal M_{\rm YM}$
+be their on-shell four-point tree amplitude on the actual internal ASD
+background, including the complete internal Yang--Mills vector and scalar
+spectrum. For $0<b\le\kappa_0a$, with fixed $\kappa_0<1$, we prove
+\begin{equation}\label{eq:intro-amplitude}
+ \mathcal M_{\rm YM}
+ =e^2\left(\frac{t-u}{m_0^2-s}+\frac{t-s}{m_0^2-u}\right)
+ +O\!\left(e^2\left[r^2\frac{E^2}{m_0^2+E^2}+(EL)^2\right]\right),
+ \qquad m_0^2=\frac{8b^2}{3V_0L^2}.
+\end{equation}
+Here $s,t,u$ are Mandelstam invariants and
+$E^2=\max(|s|,|t|,|u|)$. The domain lies below the two heavier Higgs
+masses, at a fixed relative distance from the light poles; its precise
+conditions appear in Theorem~\ref{thm:amplitude}. The error is absolute,
+with constants independent of $b/a$. For a sufficiently separated
+hierarchy the domain contains energies below and above the light mass.
+It therefore connects the low-energy quotient description with the
+intermediate description retaining a light $\U(1)$ vector multiplet.
+
+Two estimates make this comparison possible. The actual external modes
+have reference harmonic components accurate to $O(r^2)$ and complementary
+components of size $O(r)$. The mixed terms vanish in the cubic currents
+by harmonic orthogonality, giving $O(r^2)$ vertex errors without a bound
+on derivatives of the balancing gauge. The scalar partners of each vector
+must also be retained. Their cubic vertices contain their masses, and
+scalar exchange cancels the zero-momentum contact term exactly. The
+remaining complementary tower is controlled by a fixed gap and Parseval.
+These facts yield the complete spectral formula in
+Proposition~\ref{prop:spectralamplitude} and the uniform error in
+\eqref{eq:intro-amplitude}.
+
+The same actual-mode estimates and the Gauss--O'Neill curvature formula
+give a selected harmonic sectional curvature
+$K_{\gKS}=3(1+O(r^2))/(2b^2)$, uniformly in this hierarchy. Solving the
+mixed Einstein and two-form constraints, and retaining the other neutral
+fields and their different kinetic scales, identifies the leading
+physical curvature coefficient as
 \begin{equation}\label{eq:intro-curvature}
  \mathcal K_{\rm phys}^{\rm lead}
- =\frac{3g_{10}^2}{4L^2\kappa^2\varepsilon^2}
-       \bigl(1+O_\kappa(\varepsilon^2)\bigr),\qquad
- a=\varepsilon,\quad b=\kappa\varepsilon,\quad 0<\kappa\le1.
+ =\frac{3g_{10}^2}{4L^2b^2}[1+O(a^2+b^2)],\qquad
+ m_L^2\mathcal K_{\rm phys}^{\rm lead}=3e^2[1+O(a^2+b^2)].
 \end{equation}
-Here $g_{10}$ is defined by the gauge action in
-section~\ref{sec:vectors}. This coefficient multiplies a specified
-two-polarization quartic interaction in scalar normal coordinates.
-Its derivation first extracts the tree-level large-volume coefficient
-on a fixed regular patch, then takes the displayed geometric limit.
-It is not uniform as $\kappa\to0$. Eliminating the Higgs multiplets
-requires probe energies much smaller than $b/L$.
+The identification first extracts the leading tree large-volume
+coefficient at each regular point; the resulting coefficient obeys the
+uniform geometric estimate. It does not bound higher physical
+coefficients in a simultaneous finite-$\eta$ limit. General metric
+derivatives can still diverge near a changing stabilizer, as an explicit
+horizontal projector in appendix~\ref{sec:derivatives} demonstrates.
+
+The first additional heterotic tree coefficient requires the full action
+through bare order $\alpha'^2$ after canonical normalization. We give
+its order count in section~\ref{sec:nexttree}. The same harmonic energy
+bound controls quadratic potential mixing with K3 metric deformations and gives
+a uniform linear normal lift. We also calculate the universal graviton
+contribution, which is bounded away from forward scattering and has a
+massless pole absent from the leading Yang--Mills amplitude. These
+calculations do not determine the full corrected scalar vertices and
+their combined metric, dilaton, two-form and gauge exchanges. In particular,
+\eqref{eq:intro-amplitude} is not a finite-string-scale error estimate
+for the full heterotic amplitude.
 
 Heterotic bundle stability, charged fields and D-term Higgsing have an
 established effective-theory description \cite{stabilitywalls}.
@@ -89,9 +136,14 @@ to identify the leading coefficient; we do not import a specialized
 duality completion as the metric of the present compactification.
 The relation between scalar curvature and covariant amplitudes is also
 standard \cite{cheung}.
+Kaluza--Klein amplitude cancellations derived from Hodge decomposition
+and eigenfunction completeness are studied in
+\cite{bonifacio_hinterbichler}. Here the required estimates concern
+covariant modes on a nontrivial ASD bundle whose Higgs scales separate.
 
 Universal heterotic representatives and higher-order moduli metrics are
-developed in \cite{candelas,mcorist_sticka_svanes,mcorist_yin}.
+developed in \cite{candelas,mcorist_sticka_svanes,mcorist_yin}; the recursive
+second-order action is also discussed in \cite{mcorist_picard}.
 Their Calabi--Yau threefold results concern four-dimensional
 compactifications; we use the action and covariant-variation conventions,
 not their moduli-metric theorems as results for six-dimensional K3 vacua.
@@ -99,17 +151,22 @@ not their moduli-metric theorems as results for six-dimensional K3 vacua.
 The quantitative input is the energy-relative spectral and quotient-metric
 comparison in \cite{wuebben15}. We use the local harmonic quadraticity
 argument of \cite{wuebben20} without extending that paper's global
-compactness theorem to this family. The new application combines those
-inputs with a compact heterotic model, the coupled vector calculation,
-and a physically normalized curvature coefficient on that same family.
-The Hodge identity, interior estimates and quotient curvature formula
-are standard mechanisms or direct calculations. Their role is to make
-the physical identifications and their accuracy precise.
+compactness theorem to this family. The new comparison concerns the actual scalar representatives and the
+complete Yang--Mills amplitude uniformly through a separating Higgs
+hierarchy. The relative vector correction uses the same connection's
+gauge energy and a harmonic transgression identity; the fixed-ray
+coefficient and its Pauli selection rule are calculated in
+appendix~\ref{app:coefficient}. Classical quotient curvature and local
+Ricci-flat estimates supply geometric identifications, while the
+uniform vertex and spectral-sum estimates determine the accuracy in
+this degenerating family.
 
 Section~\ref{sec:compactification} constructs the family and fixes its
 local coordinates. Sections~\ref{sec:vectors} and~\ref{sec:coupled}
 derive the vector statements and the retained field content.
-Sections~\ref{sec:derivatives} and~\ref{sec:scalar} establish the
-derivative estimates and the leading ambient scalar interaction.
+Sections~\ref{sec:modes} and~\ref{sec:scattering} prove the actual-mode
+estimates and the amplitude comparison. Section~\ref{sec:scalar}
+identifies the leading ambient scalar interaction, and
+section~\ref{sec:nexttree} treats the first additional tree order.
 Throughout, the string coupling is taken in the tree regime independently
 of the geometric parameters.
