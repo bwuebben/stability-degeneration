@@ -1,0 +1,244 @@
+\section{Topology and central harmonic forms}\label{sec:harmonic}
+
+\subsection{The restriction map}
+Let $q:Y\to X_0$ be the small resolution, with exceptional curves
+$C_i=q^{-1}(p_i)\cong\PP^1$, and identify $M_0$ with
+$Y\setminus\bigcup_iC_i$. Removing submanifolds of real codimension four
+does not change cohomology in degrees one and two, so by hypothesis
+\begin{equation}\label{eq:central-cohomology}
+ H^1(M_0;\RR)=0,\qquad H^2(M_0;\RR)=H^2(Y;\RR)=V .
+\end{equation}
+A neighbourhood of $C_i$ in $Y$ retracts onto $C_i$, and its boundary is
+the link $L_i=L_{\sigma^{(i)}}$. The restrictions $H^2(N)\to H^2(C_i)$ and $H^2(N)\to H^2(L_i)$ of such a
+neighbourhood $N$ are isomorphisms, and we let $\vartheta_i$ be the form of
+Lemma~\ref{lem:link-form} for the generator of $H^2(L_i;\ZZ)$ that
+corresponds to the positive generator of $H^2(C_i;\ZZ)$. With this
+convention the restriction of a class $D\in V$ to $L_i$ is
+$(D\cdot C_i)[\vartheta_i]$. Define
+\begin{equation}\label{eq:restriction}
+ \per:V\longrightarrow\RR^N,\qquad \per(D)=(D\cdot C_i)_{i},\qquad
+ K=\ker\per,\qquad\cQ=V/K .
+\end{equation}
+
+\begin{lemma}\label{lem:topology}
+Let $W$ be the complement in $M_0$ of small open cone neighbourhoods of
+the nodes, identified with a subset of every $X_t$ by
+Lemma~\ref{lem:condition-N}. For $t\ne0$ restriction to $W$ identifies
+$H^2(X_t;\RR)$ with $K$, and $b_1(X_t)=0$. In particular $b_2(X_t)=s:=\dim K$, and
+$m:=\dim\cQ=b_2(Y)-b_2(X_t)$.
+\end{lemma}
+\begin{proof}
+By \eqref{eq:local-fibres} and Lemma~\ref{lem:condition-N},
+$X_t$ is obtained from $W$ by attaching copies of a compact truncation of
+$V_\sigma$ along the links. Apply the Mayer--Vietoris sequence, using
+\eqref{eq:link-cohomology}, \eqref{eq:cap-topology} and
+\eqref{eq:central-cohomology}: the maps in degree zero are
+surjective and the terms in degree one vanish, so $b_1(X_t)=0$; in
+degree two $H^2(X_t)$ is the kernel of the restriction
+$H^2(W)=V\to\bigoplus_iH^2(L_i)$, which is $K$. This is the classical description of the cohomology of a conifold
+transition \cite[Theorem~3.2]{rossi}, \cite[Section~1]{lee-lin-wang}.
+\end{proof}
+
+The class $H=[q^*\omega]$ lies in $K$, because $q^*\omega$ vanishes on the
+exceptional curves. Put
+\begin{equation}\label{eq:intersection-forms}
+ B(D,E)=\int_YD\,E\,H,\qquad a(D)=\int_YD\,H^2,\qquad v=\int_YH^3 .
+\end{equation}
+Since $q^*\omega$ is a smooth closed form on $Y$ in the class $H$ and
+the curves $C_i$ have measure zero,
+\begin{equation}\label{eq:volume}
+ \int_{M_0}\omega^3=v,\qquad\vol(M_0,g_0)=\frac v6 .
+\end{equation}
+
+\subsection{Harmonic representatives}
+
+\begin{proposition}\label{prop:harmonic}
+For every $D\in V$ there is a smooth real closed $(1,1)$-form $\eta_D$ on
+$M_0$ in the class $D$, depending linearly on $D$, such that:
+\begin{enumerate}
+\item $\eta_D$ is coclosed for $g_0$, square integrable, and
+$\Lambda_\omega\eta_D=3a(D)/v$;
+\item for some $\nu\in(0,1)$ and all $j\ge0$, on the end at $p_i$,
+\begin{equation}\label{eq:eta-expansion}
+ |\nabla_C^j(\eta_D-\per_i(D)\vartheta_i)|_{g_C}\le C_jr^{\nu-2-j}\,\|D\| ;
+\end{equation}
+\item for $D,E\in V$,
+\begin{equation}\label{eq:gram}
+ \langle\eta_D,\eta_E\rangle_{L^2(M_0,g_0)}=G(D,E)
+ =-B(D,E)+\frac{3a(D)a(E)}{2v},
+\end{equation}
+\end{enumerate}
+with $G$ the form of \eqref{eq:intro-data}. In particular $G$ is positive
+definite on $V$. Here $\|D\|$ is any fixed norm on $V$, and
+$\per_i(D)=D\cdot C_i$.
+\end{proposition}
+\begin{proof}
+By hypothesis $V$ is spanned by first Chern classes of holomorphic line
+bundles on $Y$; it suffices to construct $\eta_D$ for such a class and to
+extend linearly. Let $\mathcal L$ be a line bundle with $c_1(\mathcal L)=D$
+and let $\theta_b$ be the normalized curvature form of a smooth Hermitian
+metric on $\mathcal L$.
+
+\emph{A model form near the nodes.} Let $N_i=q^{-1}(\{r<R_0\})$ be the
+neighbourhood of $C_i$ in $Y$. An ordinary double point has exactly two small resolutions, each with
+exceptional curve of normal bundle $\OO(-1)^{\oplus2}$, so $N_i$ is
+isomorphic to a neighbourhood of the zero section in
+$\OO(-1)^{\oplus2}\to\PP^1$. Since $q$ maps $N_i$ properly onto a Stein
+space with $R^1q_*\OO=0$, we have $H^1(N_i,\OO)=0$, and a holomorphic
+line bundle on $N_i$ is determined up to isomorphism by its degree on
+$C_i$: it is a power of the pull-back $\mathcal R_i$ of
+$\OO_{\PP^1}(1)$. Thus
+$\mathcal L|_{N_i}\cong\mathcal R_i^{\,b_i}$ with $b_i=D\cdot C_i$. On
+$N_i\setminus C_i$, identified with a punctured neighbourhood of the
+vertex of $C_\sigma$, the bundle $\mathcal R_i$ is the pull-back under
+$C_\sigma\setminus\{0\}\to Z_\sigma$ of the line bundle of one ruling,
+whose class is the generator used to define $\vartheta_i$. Let $h_Z$ be a
+Hermitian metric on that bundle over $Z_\sigma$ whose normalized curvature
+is the harmonic representative of its class, namely
+$\vartheta_Z+\tfrac1{2\pi}\omega_Z$ in the notation of the proof of
+Lemma~\ref{lem:link-form}. The pulled-back metric multiplied by $|w|$
+has normalized curvature
+$\vartheta_i+\tfrac1{2\pi}\varpi^*\omega_Z-\tfrac1{2\pi}\,\tfrac i2\partial
+\bar\partial\log|w|^2=\vartheta_i$. Hence $\mathcal L|_{N_i\setminus
+C_i}$ carries a Hermitian metric with normalized curvature
+$b_i\vartheta_i$. Its logarithmic ratio $u_i$ to the smooth metric
+satisfies $u_i=O(1+|\log r|)$ and $|\nabla_C^ju_i|=O(r^{-j})$ for
+$j\ge1$, and $\theta_b$ has size $O(r^{-2})$ in the cone metric, with
+corresponding bounds for derivatives: indeed the two metrics on $\mathcal R_i$ over the punctured cone differ
+by the factor $|w|$ and by a function that is smooth on $N_i$ or
+homogeneous of degree zero, and a function or form that is smooth on
+$Y$ has cone derivatives of order $j$ bounded by $Cr^{-j}$, respectively
+$Cr^{-2-j}$, because the dilations of the cone extend to $N_i$. Patching the $u_i$ with
+cutoffs supported in the $N_i$ and equal to one near the $C_i$ we obtain
+a function $u$ on $M_0$ and a real closed $(1,1)$-form
+\[
+ \theta=\theta_b+\tfrac1{2\pi}d\dc u ,
+\]
+where $u$ is the logarithm of the ratio of the smooth metric to the
+patched one, which represents $D$ on $M_0$ and equals
+$b_i\vartheta_i$ near $p_i$. Since $\vartheta_i$ is primitive for the
+cone and $\omega-\omega_C=O(r)$ by \eqref{eq:central-rate},
+\begin{equation}\label{eq:contraction-decay}
+ |\nabla_C^j\Lambda_\omega\theta|\le C_jr^{-1-j}\qquad\text{near the nodes.}
+\end{equation}
+
+\emph{Intersection numbers.} Because $\theta_b$ and $q^*\omega$ are smooth
+closed forms on $Y$,
+\[
+ \int_{M_0}\theta_b\wedge\omega^2=a(D),\qquad
+ \int_{M_0}\theta_b^2\wedge\omega=B(D,D).
+\]
+Truncate the ends at $r=\rho$. Replacing $\theta_b$ by $\theta$ changes
+the first integral by the boundary term $\int_{r=\rho}\dc u\wedge\omega^2
+=O(\rho^4)$, and the second by $\int_{r=\rho}\dc u\wedge(\theta+\theta_b)
+\wedge\omega=O(\rho^2)$, up to constant factors; the integrands are
+absolutely integrable, their worst size being $O(r^{-4})$ against the
+volume density $r^5dr$. Hence
+\begin{equation}\label{eq:theta-integrals}
+ \int_{M_0}\theta\wedge\omega^2=a(D),\qquad
+ \int_{M_0}\theta^2\wedge\omega=B(D,D).
+\end{equation}
+
+\emph{The scalar correction.} The space $(X_0,g_0)$ is a compact space
+with isolated conical singularities in the sense of
+\cite[Definition~2.1]{joyce}, by \eqref{eq:central-rate}, after replacing $r$ by the distance to the
+node, and $M_0$ is connected. The function
+$\varrho=3a(D)/v-\Lambda_\omega\theta$ has integral zero, because
+$\Lambda_\omega\theta\,dV=\tfrac12\theta\wedge\omega^2$ and
+\eqref{eq:volume}, \eqref{eq:theta-integrals}; and it is $O(r^{-1})$ with
+all derivatives by \eqref{eq:contraction-decay}. The exponents $\beta$ of
+homogeneous harmonic functions $r^\beta\phi$ on a six-dimensional cone are
+the roots of $\beta(\beta+4)=\lambda_L$ for eigenvalues $\lambda_L\ge0$ of the
+link, so none
+lies in $(-4,0)$ and the positive ones are bounded below by some $\beta_1>0$. Fix $\nu\in(0,\min(1,\beta_1))$. By
+\cite[Proposition~2.18 and Theorem~2.9]{joyce} there is a smooth function
+$f$ on $M_0$ with
+\begin{equation}\label{eq:scalar-equation}
+ \Lambda_\omega d\dc f=\varrho,\qquad
+ |\nabla_C^j(f-f_i)|\le C_jr^{\nu-j}\ \text{ on the end at }p_i,
+\end{equation}
+for constants $f_i$. Put $\eta_D=\theta+d\dc f$.
+
+\emph{Properties.} The form $\eta_D$ is real, closed, of type $(1,1)$,
+represents $D$, has $\Lambda_\omega\eta_D=3a(D)/v$, and satisfies
+\eqref{eq:eta-expansion} by \eqref{eq:scalar-equation}. Write
+$\eta_D=\alpha+(a(D)/v)\,\omega$. Then $\alpha$ is closed and primitive,
+so $*\alpha=-\alpha\wedge\omega$ is closed, and $*\omega=\tfrac12\omega^2$
+is closed; thus $\eta_D$ is coclosed. It is square integrable because
+$|\eta_D|=O(r^{-2})$ and the volume density is $r^5dr$. The boundary
+terms produced by replacing $\theta$ with $\eta_D$ in
+\eqref{eq:theta-integrals} are $O(\rho^{\nu+4})$ and $O(\rho^{\nu+2})$, so
+$\int\eta_D\wedge\omega^2=a(D)$ and $\int\eta_D^2\wedge\omega=B(D,D)$.
+Since $\alpha$ is primitive and pointwise orthogonal to $\omega$, and
+$\|\omega\|^2=3\vol(M_0)=v/2$,
+\[
+ \|\eta_D\|^2=-\int_{M_0}\alpha^2\wedge\omega+\frac{a(D)^2}{v^2}\cdot
+ \frac v2=-B(D,D)+\frac{a(D)^2}{v}+\frac{a(D)^2}{2v},
+\]
+which is \eqref{eq:gram} on the diagonal; polarization gives the general
+case. Finally, $G(D,D)=0$ forces $\eta_D=0$ and hence $D=0$.
+\end{proof}
+
+\begin{lemma}\label{lem:uniqueness}
+Let $g$ be a smooth metric on $M_0$ uniformly equivalent to $g_C$ near
+each node. A smooth square-integrable two-form on $M_0$ that is closed
+and coclosed for $g$ and exact is zero.
+\end{lemma}
+\begin{proof}
+Let $\psi$ be such a form. On an end write $\psi=a(r)+dr\wedge b(r)$ with
+$a,b$ forms on the link, choose $v_0$ on the link with
+$d_Lv_0=a(r_0)$, and put $\beta(r)=v_0+\int_{r_0}^rb(x)\,dx$. Then
+$d\beta=\psi$ on the end. With
+$B_0(x)=\|b(x)\|_{L^2(L)}$, square integrability and cone equivalence give
+$\int_0^{r_0}x^3B_0(x)^2dx<\infty$, and for $0<r<\delta<r_0$ the
+Cauchy--Schwarz inequality gives
+\[
+ r\|\beta(r)\|_{L^2(L)}\le rC_\delta+2^{-1/2}
+ \Bigl(\int_0^\delta x^3B_0(x)^2dx\Bigr)^{1/2}.
+\]
+Hence $r\|\beta(r)\|_{L^2(L)}\to0$ as $r\to0$. In particular $\beta$ is
+square integrable, and for a cutoff $\chi_\rho$ vanishing below $\rho$,
+equal to one above $2\rho$, with $|d\chi_\rho|\le C/\rho$,
+\[
+ \|d\chi_\rho\wedge\beta\|^2\le C\rho^{-2}\int_\rho^{2\rho}
+ r^3\|\beta(r)\|^2_{L^2(L)}dr\longrightarrow0 .
+\]
+Let $\gamma$ be a global smooth primitive of $\psi$. On each end
+$\gamma-\beta$ is closed, hence exact because $H^1(L)=0$; subtracting the
+differential of a cutoff of its potential we may assume $\gamma=\beta$
+near the nodes. Then $\chi_\rho\gamma$ is compactly supported and
+\[
+ \|\psi\|^2=\lim_{\rho\to0}\langle d(\chi_\rho\gamma),\psi\rangle
+ =\lim_{\rho\to0}\langle\chi_\rho\gamma,d^*\psi\rangle=0 .
+\]
+\end{proof}
+
+Consequently, for $g_0$ and for each $g_0^R$, a smooth square-integrable
+closed and coclosed two-form on $M_0$ is determined by its class in $V$.
+For $g_0$ the space of such forms is $\{\eta_D:D\in V\}$.
+
+\subsection{The quotient form}
+Let $\cM$ be the quotient of $G$ on $\cQ=V/K$,
+\begin{equation}\label{eq:quotient-form}
+ \cM([D],[D])=\min_{k\in K}G(D+k,D+k),
+\end{equation}
+and let $\cE([D],[E])=\per(D)\cdot \per(E)$, the Euclidean inner product in
+$\RR^N$. Both are positive definite on the $m$-dimensional space $\cQ$.
+Let
+\[
+ 0<\mu_1\le\cdots\le\mu_m
+\]
+be the eigenvalues of $\cE$ relative to $\cM$. Since $G(D,H)=a(D)/2$, the
+$G$-orthogonal complement of $K$ is contained in $\{a(D)=0\}$, where
+$G=-B$. In a basis of $K$ followed by lifts of a basis of $\cQ$ the
+matrix of $\cM$ is the Schur complement
+\begin{equation}\label{eq:schur}
+ \mathsf M=-B_{QQ}+B_{QK}B_{KK}^{-1}B_{KQ};
+\end{equation}
+here $B_{KK}$ is invertible because it differs from the negative definite
+matrix $-G_{KK}$ by the rank-one term $\tfrac3{2v}aa^{T}$ and
+$a^{T}G_{KK}^{-1}a=4G(H,H)=2v$. When $m=1$ and $K=\RR H$, a class $D$
+spanning a complement gives
+\begin{equation}\label{eq:rank-one}
+ \mu_1=\frac{\sum_i(D\cdot C_i)^2}{a(D)^2/v-B(D,D)} .
+\end{equation}

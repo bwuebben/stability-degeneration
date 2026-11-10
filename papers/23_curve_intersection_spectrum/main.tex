@@ -1,0 +1,896 @@
+\pdfoutput=1
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{booktabs,adjustbox,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdfauthor={Bernd Johannes Wuebben},
+  pdftitle={Small eigenvalues on degenerating curves and the intersection form}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Sing}{\operatorname{Sing}}
+\newcommand{\area}{\operatorname{Area}}
+\newcommand{\dc}{d^c}
+\title[Small eigenvalues on degenerating curves]{Small eigenvalues on degenerating curves\\and the intersection form}
+\author{Bernd Johannes Wuebben}
+\subjclass[2020]{58J50 (primary); 14D06, 32G20, 05C50 (secondary)}
+\keywords{Laplacian, small eigenvalue, degeneration of Riemann surfaces,
+intersection form, dual graph, plane curve singularity}
+\date{November 10, 2026\\This version: November 10, 2026}
+\begin{document}
+\begin{abstract}
+Let a holomorphic family of compact Riemann surfaces over a disc, with
+smooth total space, degenerate to a reduced curve with $N$ irreducible
+components and arbitrary singularities, and let the fibres carry the
+metrics induced by a Riemannian metric on the total space that is
+Hermitian near the singular points of the central fibre. We prove that
+the $N-1$ eigenvalues of the Laplace--Beltrami operator on functions that
+tend to zero, multiplied by $\log(1/|s|)$, where $s$ is the parameter,
+converge to $2\pi$ times the eigenvalues
+of the negative intersection matrix of the components relative to the
+diagonal matrix of their areas, and that the remaining positive
+eigenvalues stay bounded away from zero. Equivalently, the small
+eigenvalues are asymptotic to those of a finite weighted graph on the
+components whose edge weights are intersection numbers, in analogy with
+Burger's theorem for hyperbolic surfaces. This answers questions of Dai
+and Yoshikawa on the existence and geometric meaning of these limits, and
+evaluates the constant in their asymptotic formula for the product of the
+small eigenvalues as a weighted count of spanning trees. For K\"ahler
+metrics the limits can also be derived from recent work of Cao on the
+Archimedean height pairing combined with the eigenvalue bounds of Dai and
+Yoshikawa; the proof given here is direct. It uses the logarithms of local equations of the components
+as explicit harmonic functions on the smooth fibres, whose Dirichlet
+energies are computed by winding numbers.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{The result}
+Let $X$ be a connected complex surface, $\mathbb D\subset\CC$ a disc centred
+at the origin, and
+\[
+ \pi:X\longrightarrow\mathbb D
+\]
+a proper surjective holomorphic map with connected fibres $X_s=\pi^{-1}(s)$,
+which is a submersion over $\mathbb D\setminus\{0\}$. We assume that the
+central fibre $X_0$ is a reduced divisor; equivalently, $\pi$ has finitely
+many critical points, and these are the singular points of $X_0$: a
+reduced local equation of a curve has vanishing differential exactly at
+its singular points, and a multiple component would be critical along a
+curve. The fibre $X_0$ is connected, as a limit of connected fibres of a
+proper map. Let
+$C_1,\ldots,C_N$ be the irreducible components of $X_0$. No further
+condition is imposed on the singularities of $X_0$.
+
+Let $g$ be a smooth Riemannian metric on $X$ that is Hermitian on a
+neighbourhood of $\Sing X_0$, and let $g_s$ be its restriction to $X_s$ for $s\ne0$, and $g_0$ its
+restriction to $X_0\setminus\Sing X_0$.
+For $s\ne0$ let
+\[
+ 0=\lambda_0(s)<\lambda_1(s)\le\lambda_2(s)\le\cdots
+\]
+be the eigenvalues of the Laplacian $\Delta_s=d^*d$ of $(X_s,g_s)$ acting
+on functions. Let $A_i$ be the area of $C_i\setminus\Sing X_0$ with respect
+to $g$.
+
+On $\RR^N$ consider the two quadratic forms
+\begin{equation}\label{eq:forms}
+ q(F)=\sum_{i<j}(C_i\cdot C_j)\,(F_i-F_j)^2,\qquad
+ m(F)=\sum_{i}A_iF_i^2,
+\end{equation}
+where $C_i\cdot C_j$ is the intersection number in $X$. Since
+$\sum_iC_i=X_0$ is a fibre, $C_i\cdot X_0=0$, and therefore
+\begin{equation}\label{eq:q-intersection}
+ q(F)=-\Bigl(\sum_iF_iC_i\Bigr)^2 .
+\end{equation}
+Thus $q$ is the negative of the intersection form on the span of the
+components. It is positive semidefinite, and its kernel consists of the
+constant vectors because $X_0$ is connected; this is Zariski's lemma
+\cite[Chapter~III, Lemma~8.2]{bhpv}, and in the present form it is also
+evident from \eqref{eq:forms}. Let
+\[
+ 0=\mu_0<\mu_1\le\cdots\le\mu_{N-1}
+\]
+be the eigenvalues of $q$ relative to $m$, that is, the roots of
+$\det(Q-\mu\operatorname{diag}(A_i))=0$, where $Q$ is the matrix of $q$.
+
+\begin{theorem}\label{thm:main}
+With the preceding notation,
+\begin{equation}\label{eq:main}
+ \lim_{s\to0}\,\log(1/|s|)\,\lambda_k(s)=2\pi\mu_k
+ \qquad(1\le k\le N-1),
+\end{equation}
+and $\liminf_{s\to0}\lambda_N(s)>0$.
+\end{theorem}
+
+The limit depends on the metric only through the areas of the components,
+and on the singularities of $X_0$ only through the local intersection
+multiplicities of distinct components. For a finite graph with
+weights (conductances) $c_e>0$ on the edges and masses $m_v>0$ at the
+vertices, we call the eigenvalues of the form
+$\sum_ec_e(F_{e^+}-F_{e^-})^2$ relative to $\sum_vm_vF_v^2$ the eigenvalues
+of the weighted graph. If $X_0$ has only ordinary nodes,
+the matrix of $q$ is the Laplacian of the dual graph of $X_0$, and
+\eqref{eq:main} says that the small eigenvalues are asymptotic to those of
+the dual graph with conductance $2\pi/\log(1/|s|)$ on each edge and mass
+$A_i$ at each vertex. A point where two components are simply tangent
+counts as two edges, and an ordinary $d$-fold point through which $d$
+components pass contributes a complete graph on those components
+(Section~\ref{sec:examples}).
+
+\begin{corollary}\label{cor:two}
+If $N=2$, then
+\[
+ \lambda_1(s)=\frac{2\pi\,(C_1\cdot C_2)\,(A_1+A_2)}{A_1A_2}\,
+ \frac{1+o(1)}{\log(1/|s|)} .
+\]
+\end{corollary}
+
+\begin{corollary}\label{cor:product}
+Let $\kappa$ be the common value of the principal cofactors of the matrix
+of $q$; by the matrix-tree theorem \cite{chaiken} it is the sum over the spanning trees
+$\mathcal T$ of the complete graph on $\{1,\ldots,N\}$ of
+$\prod_{\{i,j\}\in\mathcal T}(C_i\cdot C_j)$. Then
+\[
+ \prod_{k=1}^{N-1}\lambda_k(s)
+ =\Bigl(\frac{2\pi}{\log(1/|s|)}\Bigr)^{N-1}
+ \Bigl(\frac{\kappa\,\sum_iA_i}{\prod_iA_i}+o(1)\Bigr).
+\]
+\end{corollary}
+
+\subsection{Relation to earlier work}
+For compact hyperbolic surfaces, Schoen, Wolpert and Yau \cite{swy}
+bounded the small eigenvalues above and below by sums of lengths of short
+geodesics, and Burger \cite[Theorem~1.1]{burger} proved that they are
+asymptotic to the eigenvalues of a weighted graph: the vertices are the
+components of the complement of the short geodesics, with masses
+$2\gamma_v-2+n_v$, where $\gamma_v$ is the genus and $n_v$ the number of
+boundary geodesics and cusps of the component, and the edges are the
+geodesics, with weights their lengths; the ratio of each small eigenvalue
+of the surface to the corresponding eigenvalue of the graph tends to
+$1/(2\pi^2)$.
+
+For metrics induced from the total space, Dai and Yoshikawa
+\cite{dai-yoshikawa} work in the setting above, with $X$ a complex
+surface carrying a positive line bundle, $g$ K\"ahler and $X_0$ reduced
+and reducible. They prove that
+$\lambda_1,\ldots,\lambda_{N-1}$ are bounded above and below by constant
+multiples of $1/\log(1/|s|)$ \cite[Theorem~0.2]{dai-yoshikawa}, and that
+$(\log(1/|s|))^{N-1}\prod_{k=1}^{N-1}\lambda_k(s)$ has a positive limit
+\cite[Theorem~0.3]{dai-yoshikawa}; in particular
+$\lambda_1(s)\log(1/|s|)$ converges when $N=2$. The proof compares ratios of analytic torsions with determinants of period
+integrals. The constant is not evaluated. They ask whether
+$\lambda_k(s)\log(1/|s|)$ converges when $N>2$, for a geometric expression
+of the limit, and whether there is a finite weighted graph whose
+eigenvalues are asymptotic to the small eigenvalues
+\cite[Problems~9.2 and~9.4]{dai-yoshikawa}. Theorem~\ref{thm:main}
+answers these questions in the setting of that paper: the graph has
+vertices the components, masses $A_i$ and conductances
+$2\pi(C_i\cdot C_j)/\log(1/|s|)$, and Corollary~\ref{cor:product}
+evaluates the constant in their product formula. Their Laplacian is
+$\bar\partial^*\bar\partial=\tfrac12d^*d$, so in their normalization
+$2\pi$ is replaced by~$\pi$.
+
+Cao \cite{cao-kahler} extends the two-sided bounds to the scalar Laplacian
+on degenerations of K\"ahler manifolds of any dimension, and conjectures
+that the rescaled small eigenvalues converge to those of a weighted dual
+graph, without specifying the edge weights
+\cite[Theorem~0.4 and Section~3.C]{cao-kahler}. Theorem~\ref{thm:main}
+confirms this for degenerations of curves with reduced central fibre and
+identifies the edge weights as the intersection numbers $C_i\cdot C_j$. In \cite{cao-pairing} he
+studies, for degenerating curves, the Archimedean height pairing of two-forms, defined by
+solving $dd^c\varphi=-\alpha$ on the fibres (with $d^c$ normalized as in
+that paper; see Remark~\ref{rem:cao}), and proves that its
+logarithmic coefficient is given by the Moore--Penrose inverse of the
+intersection matrix of the components
+\cite[Theorem~0.2]{cao-pairing}. That result concerns the Green operator on the small eigenspaces, and
+Theorem~\ref{thm:main} the eigenvalues themselves. For K\"ahler metrics,
+which include the setting of \cite{dai-yoshikawa}, the limits
+\eqref{eq:main} can also be derived from \cite{cao-pairing} and the bounds
+of \cite{dai-yoshikawa} by a finite-dimensional argument that is carried
+out in neither paper; we sketch it in Remark~\ref{rem:cao}. What is added
+here is a direct proof that does not use the Green operator or analytic
+torsion, the extension to metrics that are only Hermitian near
+$\Sing X_0$, and the explicit identification of the graph and of the
+constants.
+
+Ji and Wentworth \cite{ji-wentworth} prove spectral convergence for
+plumbing families with the Bergman metric and, for a separating node,
+suggest a heuristic for the rate of $\lambda_1$
+\cite[Remark~5.10]{ji-wentworth}; see Remark~\ref{rem:jw}.
+
+\subsection{Method}
+Near a singular point $p$ of $X_0$ write $\pi=\prod_if_i$, where $f_i$ is
+a local equation of $C_i$. On a smooth fibre the functions $\log|f_i|$ are
+harmonic and sum to $\log|s|$. For $F\in\RR^N$ the function
+\[
+ h_F=\frac1{\log|s|}\sum_iF_i\log|f_i|
+\]
+is harmonic, takes values between $\min F_i$ and $\max F_i$, and is close
+to $F_i$ on the part of the fibre near $C_i$ and away from $p$. By
+Stokes' theorem its Dirichlet energy is a sum of boundary terms, each the
+product of a boundary value $F_i$ and a winding number of some $f_j$ along
+a boundary circle. These winding numbers are local intersection
+multiplicities, and the energy is $2\pi/\log(1/|s|)$ times the local
+contribution to $q(F)$, up to an error of order $|F|^2/\log(1/|s|)^2$
+(Lemma~\ref{lem:energy}). Used as test functions the $h_F$ give the upper
+bound; they play the role of the capacitary potentials of the
+neighbourhoods of the singular points in the fibre. For the lower bound we pair the differential of an arbitrary
+function of small energy with $\dc h_F$, where $\dc=i(\bar\partial-\partial)$; the Cauchy--Schwarz inequality
+then bounds its energy below by the same quantity
+(Lemma~\ref{lem:capacity}). No resolution of the singularities of $X_0$
+and no semistable reduction is used.
+
+\subsection{Conventions}
+We write $\dc=i(\bar\partial-\partial)$. On a Riemann surface with a
+conformal metric, $\dc u=*du$ for real functions $u$, so that
+$du\wedge\dc u=|du|^2\,dA$, and a function $u$ is harmonic if and only if
+$d\dc u=0$. If $f$ is holomorphic and nowhere zero, $\dc\log|f|=d\arg f$.
+The Dirichlet energy of $u$ over a domain $M$ is
+$E_M(u)=\int_M|du|^2\,dA$, with associated bilinear form $E_M(u,v)$;
+we write $E=E_{X_s}$. Norms without subscript are $L^2$ norms on
+$(X_s,g_s)$. The letter $C$ denotes constants that depend only on
+$(X,\pi,g)$, and $c(r)$ denotes constants that depend in addition on a
+radius $r$; neither depends on $s$, and their values may change from line
+to line. For $F\in\RR^N$ we put $|F|=\max_i|F_i|$.
+
+\section{Local structure near the singular points}\label{sec:local}
+
+\subsection{Coordinates and local equations}
+Let $\Sigma=\Sing X_0$. For each $p\in\Sigma$ choose holomorphic
+coordinates $z=(z_1,z_2)$ centred at $p$ on an open set $U_p$ on which $g$
+is Hermitian, such that neither $\pi(z_1,0)$ nor $\pi(0,z_2)$ vanishes
+identically. Write $B_p(r)=\{|z|<r\}$ and $S_p(r)=\partial B_p(r)$.
+Since $X_0$ is reduced, the germ of $\pi$ at $p$ is a product of pairwise
+non-associated irreducible germs, one for each local branch $\beta$ of
+$X_0$ at $p$. Collecting the branches that lie on the same component, and
+absorbing the unit into one factor, we obtain holomorphic functions
+$f_{1},\ldots,f_{N}$ on $U_p$, after shrinking it, with
+\begin{equation}\label{eq:factor}
+ \pi=\prod_{i=1}^Nf_i\quad\text{on }U_p,\qquad
+ \{f_i=0\}=C_i\cap U_p ,
+\end{equation}
+where $f_i$ vanishes to first order along $C_i\cap U_p$ and
+$f_i\equiv1$ if $p\notin C_i$. Shrinking $U_p$ again, $|f_i|<1$ whenever
+$p\in C_i$. For a branch $\beta$ let $i(\beta)$ be the index of the
+component containing it, and for $j\ne i(\beta)$ let $(\beta\cdot C_j)_p$
+be the intersection multiplicity of $\beta$ with $C_j$ at $p$, that is,
+the order of vanishing at $p$ of $f_j$ along the normalization of $\beta$.
+Then
+\begin{equation}\label{eq:local-intersection}
+ \sum_{\beta\subset C_i}(\beta\cdot C_j)_p=(C_i\cdot C_j)_p,\qquad
+ \sum_{p\in\Sigma}(C_i\cdot C_j)_p=C_i\cdot C_j\qquad(i\ne j).
+\end{equation}
+
+\subsection{Radii}
+Each branch $\beta$ of $X_0$ at $p$ has an injective holomorphic
+parametrization $\tau\mapsto\phi(\tau)$ on a disc, with $\phi(0)=p$ and
+$|\phi(\tau)|^2=c|\tau|^{2n}(1+O(|\tau|))$ for some $c>0$ and $n\ge1$, so
+that $|\phi|$ is strictly increasing along rays for small $|\tau|$. Hence
+there is $\rho_0>0$ such that for every $p\in\Sigma$ the ball
+$\overline{B_p(4\rho_0)}$ lies in $U_p$, these closed balls are pairwise
+disjoint, and for $0<r\le4\rho_0$ the sphere $S_p(r)$ meets $X_0$
+transversally, each branch $\beta$ meeting $B_p(r)$ in the image of a
+disc $\{|\phi|<r\}$ that is star-shaped about $0$, whose boundary circle
+$\gamma_\beta^0(r)=\beta\cap S_p(r)$ therefore winds once around $p$ in
+the normalization of $\beta$; compare the conic structure theorem
+\cite[Section~2]{milnor}. For $0<r\le2\rho_0$ put
+\[
+ K_r=X\setminus\bigcup_{p\in\Sigma}B_p(r),\qquad
+ \Omega_i^0(r)=C_i\cap K_r .
+\]
+Each $\Omega_i^0(r)$ is a compact connected surface with boundary: its
+preimage in the normalization of $C_i$ is the complement of finitely many
+discs. The sets $\Omega^0_i(r)$, $1\le i\le N$, are pairwise disjoint.
+
+\begin{lemma}\label{lem:thick}
+For every $r\in(0,2\rho_0]$ there are $\delta(r)>0$ and a smooth map
+\[
+ \Phi:(X_0\cap K_r)\times\{|s|<\delta(r)\}\longrightarrow K_r,
+\]
+a diffeomorphism onto $\pi^{-1}(\{|s|<\delta(r)\})\cap K_r$, with
+$\pi\circ\Phi(x,s)=s$ and $\Phi(x,0)=x$. For $0<|s|<\delta(r)$:
+\begin{enumerate}
+\item $X_s\cap K_r$ is the disjoint union of the connected surfaces
+$\Omega_i(r,s)=\Phi(\Omega^0_i(r),s)$, and the metrics
+$\Phi(\cdot,s)^*g_s$ converge to $g_0$ in every $C^k$ norm on
+$X_0\cap K_r$ as $s\to0$;
+\item $X_s$ meets each $S_p(r)$ transversally, in a disjoint union of
+circles $\gamma_\beta(r,s)$, one for each branch $\beta$ at $p$,
+with $\gamma_\beta(r,s)\to\gamma^0_\beta(r)$ in $C^1$ as $s\to0$;
+\item $M_p(r,s)=X_s\cap\overline{B_p(r)}$ is a compact surface with
+boundary $\bigcup_\beta\gamma_\beta(r,s)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+The map $\pi$ has no critical points on $X_0\cap K_r$, and its restriction
+to the boundary spheres has none on $X_0\cap\partial K_r$, by
+transversality. The set of points of $K_r$ at which $\pi$ or
+$\pi|_{\partial K_r}$ fails to be a submersion is closed and disjoint from
+$X_0$; since $\pi$ is proper, its image misses a disc
+$\{|s|<\delta(r)\}$. Over this disc the real coordinate vector fields of
+$\mathbb D$ have lifts to $K_r$ that are tangent to $\partial K_r$: such
+lifts exist locally, at boundary points because $\pi|_{\partial K_r}$ is a
+submersion, and the two conditions are preserved by a partition of unity.
+Composing the flows of the two lifts gives $\Phi$, as in Ehresmann's
+theorem. Assertion (1) follows because $\Phi$ is smooth and
+$\Phi(\cdot,0)$ is the identity. Since $\pi|_{S_p(r)}$ is a submersion
+along $X_s\cap S_p(r)$, the fibre $X_s$ is transverse to $S_p(r)$, and
+$X_s\cap S_p(r)=\Phi(X_0\cap S_p(r),s)$; this gives (2) and (3).
+\end{proof}
+
+We always take $|s|$ smaller than $\delta$ of every radius involved, without further mention. The maps $\Phi$ for different radii
+need not agree, but the sets they define are compatible for small $s$:
+$\Omega_i(r,s)$ is the unique connected component of $X_s\cap K_r$
+contained in a prescribed small neighbourhood of $\Omega^0_i(r)$ in $X$,
+because $\Phi^{-1}$ is continuous and the $\Omega^0_j(r)$ are compact and
+pairwise disjoint. Consequently, for $r'<r$ and small $s$,
+$\Omega_i(r,s)\subset\Omega_i(r',s)$, the circle $\gamma_\beta(r,s)$
+lies in the interior of $\Omega_{i(\beta)}(r',s)$ and is a boundary
+component of $\Omega_{i(\beta)}(r,s)$, and both lie in the set $W_\beta$
+of Lemma~\ref{lem:collar} below.
+
+\begin{lemma}\label{lem:area}
+After decreasing $\rho_0$ there is $C$ such that
+$\area(X_s\cap B_p(r))\le Cr^2$ for all $p\in\Sigma$, all
+$r\in(0,4\rho_0]$ and all sufficiently small $s$, including $s=0$.
+Consequently
+\begin{equation}\label{eq:area-limit}
+ A_i-Cr^2\le\lim_{s\to0}\area\Omega_i(r,s)=\area\Omega^0_i(r)\le A_i .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $n_2$ be the order of vanishing of $\pi(0,z_2)$ at $z_2=0$. Choose
+$\rho''>0$ with $\pi(0,z_2)\ne0$ for $0<|z_2|\le\rho''$. By Rouch\'e's
+theorem there are $\rho'>0$ and $\delta'>0$ such that for $|z_1|\le\rho'$
+and $|s|\le\delta'$ the function $z_2\mapsto\pi(z_1,z_2)-s$ has exactly
+$n_2$ zeros in $\{|z_2|<\rho''\}$, counted with multiplicity. Thus, if
+$4\rho_0\le\min(\rho',\rho'')$, the projection of $X_s\cap B_p(r)$ to the
+$z_1$-axis has image in the disc of radius $r$ and at most $n_2$ points in
+each fibre, so
+$\int_{X_s\cap B_p(r)}\tfrac i2dz_1\wedge d\bar z_1\le n_2\pi r^2$.
+The same holds with the two coordinates exchanged. The sum of the two
+integrals is the area of the complex curve $X_s\cap B_p(r)$ for the flat
+metric of the chart, and $g$ is bounded by a constant multiple of that
+metric on $B_p(4\rho_0)$. The convergence in \eqref{eq:area-limit} is
+Lemma~\ref{lem:thick}(1), and the inequalities follow from the first
+assertion at $s=0$.
+\end{proof}
+
+\subsection{The harmonic functions}
+Fix $p\in\Sigma$. For $s\ne0$ the functions $f_i$ of \eqref{eq:factor} are
+holomorphic and nowhere zero on $X_s\cap U_p$, and
+$\sum_i\log|f_i|=\log|s|$ there. For $F\in\RR^N$ define
+\begin{equation}\label{eq:hF}
+ h_F=\frac1{\log|s|}\sum_{i=1}^NF_i\log|f_i|
+ \qquad\text{on }X_s\cap U_p .
+\end{equation}
+It is harmonic and linear in $F$. The numbers
+$t_i=\log|f_i|/\log|s|$ are nonnegative for $|s|<1$ and sum to one, so
+\begin{equation}\label{eq:hF-bounds}
+ \min_iF_i\le h_F\le\max_iF_i .
+\end{equation}
+
+\begin{lemma}\label{lem:collar}
+Let $0<r\le\rho_0$. For every branch $\beta$ at $p$, with $i=i(\beta)$,
+there is a neighbourhood $W_\beta$ in $X$ of
+$\beta\cap(\overline{B_p(4\rho_0)}\setminus B_p(r/2))$ such that, for all
+sufficiently small $s\ne0$, the set
+$X_s\cap(\overline{B_p(4\rho_0)}\setminus B_p(r/2))$ is contained in the
+disjoint union of the $W_\beta$, and on $X_s\cap W_\beta$
+\begin{equation}\label{eq:collar}
+ h_F-F_i=\frac1{\log|s|}\sum_{j\ne i}(F_j-F_i)\log|f_j|,\qquad
+ |h_F-F_i|+|dh_F|_{g_s}\le\frac{c(r)\,|F|}{\log(1/|s|)} .
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $j\ne i$ the function $f_j$ vanishes only on $C_j$, which meets
+$\beta$ in $B_p(4\rho_0)$ only at $p$. Hence $\log|f_j|$ is smooth and
+bounded with bounded differential on a neighbourhood $W_\beta$ of the
+compact set $\beta\cap(\overline{B_p(4\rho_0)}\setminus B_p(r/2))$, and
+these neighbourhoods may be taken pairwise disjoint. By
+Lemma~\ref{lem:thick} the fibre $X_s$ lies in their union over the given
+region for small $s$. The identity in \eqref{eq:collar} follows from
+$\log|f_i|=\log|s|-\sum_{j\ne i}\log|f_j|$, and the estimate from the
+identity.
+\end{proof}
+
+Define the local forms
+\begin{equation}\label{eq:qp}
+ q_p(F,G)=\sum_{i<j}(C_i\cdot C_j)_p\,(F_i-F_j)(G_i-G_j),
+ \qquad q=\sum_{p\in\Sigma}q_p ,
+\end{equation}
+the second identity being \eqref{eq:local-intersection}; here $q(F,G)$ is
+the bilinear form of \eqref{eq:forms}.
+
+\begin{lemma}[Energy identity]\label{lem:energy}
+Let $0<r\le\rho_0$ and $M=M_p(r,s)$. For $F,G\in\RR^N$,
+\begin{equation}\label{eq:flux}
+ \sum_\beta F_{i(\beta)}\int_{\gamma_\beta(r,s)}\dc h_G
+ =\frac{2\pi}{\log(1/|s|)}\,q_p(F,G),
+\end{equation}
+where the circles carry the orientation induced from $M$, and
+\begin{equation}\label{eq:energy}
+ \Bigl|E_M(h_F,h_G)-\frac{2\pi}{\log(1/|s|)}\,q_p(F,G)\Bigr|
+ \le\frac{c(r)\,|F|\,|G|}{\log(1/|s|)^2} .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $\beta$ be a branch with $i=i(\beta)$, and let $j\ne i$. On
+$W_\beta$ the form $\dc\log|f_j|=d\arg f_j$ is closed, and by
+Lemma~\ref{lem:thick}(2) the circle $\gamma_\beta(r,s)$ is homotopic in
+$W_\beta$ to $\gamma^0_\beta(r)$, with matching orientations. The latter
+is the boundary of the disc $\beta\cap B_p(r)$ and winds once around $p$
+in the normalization of $\beta$, so the argument principle gives
+\[
+ \int_{\gamma_\beta(r,s)}\dc\log|f_j|=2\pi\,(\beta\cdot C_j)_p
+ \qquad(j\ne i).
+\]
+Since $\log|f_i|=\log|s|-\sum_{j\ne i}\log|f_j|$ on $X_s$,
+\[
+ \int_{\gamma_\beta(r,s)}\dc h_G
+ =\frac{2\pi}{\log|s|}\sum_{j\ne i}(G_j-G_i)\,(\beta\cdot C_j)_p .
+\]
+Multiply by $F_i$ and sum over the branches. By
+\eqref{eq:local-intersection} the result is
+\[
+ \frac{2\pi}{\log|s|}\sum_{i}\sum_{j\ne i}F_i(G_j-G_i)(C_i\cdot C_j)_p
+ =-\frac{2\pi}{\log|s|}\sum_{i<j}(C_i\cdot C_j)_p(F_i-F_j)(G_i-G_j),
+\]
+which is \eqref{eq:flux}. Since $h_G$ is harmonic, Stokes' theorem gives
+\[
+ E_M(h_F,h_G)=\int_Mdh_F\wedge\dc h_G
+ =\sum_\beta\int_{\gamma_\beta(r,s)}h_F\,\dc h_G .
+\]
+On $\gamma_\beta(r,s)$ we have $|h_F-F_{i(\beta)}|\le c(r)|F|/\log(1/|s|)$
+and $|\dc h_G|\le c(r)|G|/\log(1/|s|)$ by Lemma~\ref{lem:collar}, and the
+lengths of these circles are bounded. Replacing $h_F$ by $F_{i(\beta)}$
+and applying \eqref{eq:flux} proves \eqref{eq:energy}.
+\end{proof}
+
+\section{The upper bound}\label{sec:upper}
+
+\begin{proposition}\label{prop:upper}
+For $1\le k\le N-1$,
+$\limsup_{s\to0}\log(1/|s|)\,\lambda_k(s)\le2\pi\mu_k$.
+\end{proposition}
+\begin{proof}
+Fix $r\in(0,\rho_0]$ and write $L=\log(1/|s|)$. For each $p\in\Sigma$ let
+$\chi_p$ be a smooth function on $X$ with values in $[0,1]$, equal to one
+on $B_p(r)$ and supported in $B_p(2r)$. For $F\in\RR^N$ define a function
+$U_F$ on $X_s$ by
+\[
+ U_F=\begin{cases}
+ F_i&\text{on }\Omega_i(2r,s),\\
+ F_{i(\beta)}+\chi_p\,(h_F-F_{i(\beta)})&\text{on }X_s\cap W_\beta\cap
+     \overline{B_p(2r)},\\
+ h_F&\text{on }M_p(r,s),
+ \end{cases}
+\]
+where $h_F$ is the function \eqref{eq:hF} at $p$. By
+Lemmas~\ref{lem:thick} and~\ref{lem:collar} these prescriptions agree on
+overlaps for small $s$ and define a smooth function, linear in $F$. The
+energy of $U_F$ vanishes on the $\Omega_i(2r,s)$ and equals
+$E_{M_p(r,s)}(h_F)$ on $M_p(r,s)$. On the collars
+$X_s\cap(B_p(2r)\setminus B_p(r))$, which have bounded area,
+Lemma~\ref{lem:collar} gives
+$|dU_F|\le|d\chi_p||h_F-F_{i(\beta)}|+|dh_F|\le c(r)|F|/L$. Hence by
+Lemma~\ref{lem:energy}
+\begin{equation}\label{eq:upper-energy}
+ \Bigl|E(U_F)-\frac{2\pi}{L}\,q(F)\Bigr|\le\frac{c(r)|F|^2}{L^2}.
+\end{equation}
+By \eqref{eq:hF-bounds}, $U_F$ is everywhere a convex combination of the
+$F_i$, so $|U_F|\le|F|$. Lemma~\ref{lem:area} therefore
+gives
+\begin{equation}\label{eq:upper-mass}
+ \Bigl|\,\|U_F\|^2-\sum_iF_i^2\area\Omega_i(2r,s)\Bigr|\le Cr^2|F|^2,
+ \qquad
+ \liminf_{s\to0}\|U_F\|^2\ge m(F)-Cr^2|F|^2 .
+\end{equation}
+Let $V_k\subset\RR^N$ be the span of eigenvectors of $q$ relative to $m$
+for $\mu_0,\ldots,\mu_k$. Note that $|F|^2\le m(F)/\min_iA_i$, and that the convergence of
+the areas in \eqref{eq:upper-mass} is uniform on the unit sphere of
+$\RR^N$. If $r$ is small, \eqref{eq:upper-mass} shows
+that $F\mapsto U_F$ is injective on $V_k$ for small $s$, so
+$\{U_F:F\in V_k\}$ has dimension $k+1$. On $V_k$ we have
+$q(F)\le\mu_km(F)$. The min--max principle,
+\eqref{eq:upper-energy} and \eqref{eq:upper-mass} give
+\[
+ \limsup_{s\to0}L\,\lambda_k(s)
+ \le\sup_{F\in V_k\setminus\{0\}}\frac{2\pi\,q(F)}{m(F)-Cr^2|F|^2}
+ \le\frac{2\pi\mu_k}{1-Cr^2/\min_iA_i}.
+\]
+Let $r\to0$.
+\end{proof}
+
+\section{The lower bound}\label{sec:lower}
+
+Throughout this section $u$ denotes an eigenfunction of $\Delta_s$ with
+eigenvalue $\lambda\le1$ and $\|u\|=1$, and $r\in(0,\rho_0]$ is fixed.
+Let $a_i=a_i(u)$ be the mean value of $u$ over $\Omega_i(r/2,s)$.
+
+\begin{lemma}\label{lem:thick-estimates}
+For sufficiently small $s$,
+\begin{enumerate}
+\item $|a_i|\le C$;
+\item $\|u-a_i\|_{L^2(\Omega_i(r/2,s))}\le c(r)\lambda^{1/2}$;
+\item $\sup_{\gamma_\beta(r,s)}|u-a_{i(\beta)}|\le c(r)\lambda^{1/2}$ for
+every branch $\beta$ at every $p\in\Sigma$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+By the Cauchy--Schwarz inequality,
+$|a_i|\le\area(\Omega_i(r/2,s))^{-1/2}$, and (1) follows from
+\eqref{eq:area-limit} once $\rho_0$ is small. For (2) and (3) transport
+$u$ to the fixed surface $\Omega_i^0(r/2)$ by the diffeomorphisms of
+Lemma~\ref{lem:thick}. The transported metrics converge smoothly to
+$g_0$, so the Poincar\'e inequality on the connected surface
+$\Omega^0_i(r/2)$ holds for them with a uniform constant; since
+$E(u)=\lambda$, this is (2). The function $v=u-a_i$ satisfies
+$\Delta_sv=\lambda u$, whose $L^2$ norm is at most $\lambda$. The curves
+$\gamma_\beta(r,s)$ with $i(\beta)=i$ remain in a fixed compact subset of
+the interior of $\Omega_i^0(r/2)$ after transport. Interior elliptic
+estimates with uniformly controlled coefficients and the Sobolev embedding
+$W^{2,2}\subset C^0$ in dimension two give
+$\sup_{\gamma_\beta}|v|\le c(r)(\|\Delta_sv\|_{L^2}+\|v\|_{L^2})
+\le c(r)\lambda^{1/2}$, the norms being taken over $\Omega_i(r/2,s)$.
+\end{proof}
+
+\begin{lemma}\label{lem:milnor-mass}
+For sufficiently small $s$ and every $p\in\Sigma$,
+\[
+ \int_{M_p(r,s)}u^2\,dA\le Cr^2+c(r)\lambda^{1/2}.
+\]
+\end{lemma}
+\begin{proof}
+Let $M=M_p(r,s)$ and let $h$ be the harmonic function on $M$ with
+boundary values $u$. Then $w=u-h$ vanishes on $\partial M$, and
+$E_M(w)\le E_M(u)\le\lambda$, because $E_M(u)=E_M(h)+E_M(w)$ for $h$
+harmonic and $w$ vanishing on the boundary. By the maximum
+principle and Lemma~\ref{lem:thick-estimates},
+$|h|\le C+c(r)\lambda^{1/2}$, so Lemma~\ref{lem:area} gives
+$\int_Mh^2\,dA\le Cr^2(C+c(r)\lambda^{1/2})^2$.
+
+For $w$ we compare with the flat metric of the chart. Let $dA_0$ be the
+area form on $X_s\cap U_p$ induced by that metric. Both induced metrics
+are Hermitian on the Riemann surface $X_s\cap U_p$, hence conformal; the
+Dirichlet energy is the same for both, and $dA\le C\,dA_0$. Since
+$d\dc|z|^2$ restricts to $4\,dA_0$ on a complex curve, Stokes' theorem
+gives
+\[
+ 4\int_Mw^2\,dA_0=-2\int_Mw\,dw\wedge\dc|z|^2
+ \le4r\Bigl(\int_Mw^2\,dA_0\Bigr)^{1/2}E_M(w)^{1/2},
+\]
+because $|d|z|^2|\le2|z|\le2r$ on $M$. Hence
+$\int_Mw^2\,dA\le Cr^2\lambda$. The lemma follows from
+$u^2\le2h^2+2w^2$.
+\end{proof}
+
+Lemmas~\ref{lem:thick-estimates} and~\ref{lem:milnor-mass} extend to
+linear combinations $u=\sum_{l=1}^n\zeta_lu_l$ of orthonormal eigenfunctions
+with eigenvalues at most $\lambda\le1$ and $\sum_l\zeta_l^2=1$, with constants
+multiplied by a factor depending only on $n$: the means $a_i(u)$ are
+linear in $u$, the estimates of Lemma~\ref{lem:thick-estimates} transfer
+by the triangle inequality, and $E(u)=\sum_l\zeta_l^2\lambda_l\le\lambda$, which
+is all that the proof of Lemma~\ref{lem:milnor-mass} uses besides them.
+
+\begin{lemma}[Energy lower bound]\label{lem:capacity}
+For sufficiently small $s$, every $p\in\Sigma$ and $a=(a_i(u))_i$,
+\[
+ E_{M_p(r,s)}(u)\ge\frac{2\pi}{\log(1/|s|)}\,q_p(a)
+ -\frac{c(r)}{\log(1/|s|)}\Bigl(\lambda^{1/2}+\frac1{\log(1/|s|)}\Bigr).
+\]
+The same inequality holds, with $c(r)$ multiplied by a constant depending
+only on $n$, for $u=\sum_{l=1}^n\zeta_lu_l$, where $u_1,\ldots,u_n$ are
+orthonormal eigenfunctions with eigenvalues at most $\lambda$,
+$\sum_l\zeta_l^2=1$, and $a=\sum_l\zeta_la(u_l)$.
+\end{lemma}
+\begin{proof}
+Write $M=M_p(r,s)$ and $L=\log(1/|s|)$, and let $h_a$ be the function
+\eqref{eq:hF} for $F=a$. It is harmonic and smooth up to $\partial M$, so
+\[
+ I:=\int_Mdu\wedge\dc h_a
+ =\sum_\beta a_{i(\beta)}\int_{\gamma_\beta(r,s)}\dc h_a
+ +\sum_\beta\int_{\gamma_\beta(r,s)}(u-a_{i(\beta)})\,\dc h_a .
+\]
+The first sum equals $P:=(2\pi/L)\,q_p(a)\ge0$ by \eqref{eq:flux}. By
+Lemmas~\ref{lem:collar} and~\ref{lem:thick-estimates}, the second is
+bounded in absolute value by $e:=c(r)\lambda^{1/2}/L$. By
+Lemma~\ref{lem:energy}, $E_M(h_a)\le P+\theta$ with
+$\theta=c(r)/L^2$. If $P\le e$ there is nothing to prove. Otherwise
+$I\ge P-e>0$, and the Cauchy--Schwarz inequality
+$I^2\le E_M(u)E_M(h_a)$ gives
+\[
+ E_M(u)\ge\frac{(P-e)^2}{P+\theta}\ge P-2e-\theta .
+\]
+For a combination $u=\sum\zeta_lu_l$ the same argument applies, by the
+paragraph preceding the lemma.
+\end{proof}
+
+\begin{proposition}\label{prop:lower}
+For $1\le k\le N-1$,
+\[
+ \liminf_{s\to0}\log(1/|s|)\,\lambda_k(s)\ge2\pi\mu_k .
+\]
+Moreover
+$\liminf_{s\to0}\lambda_N(s)>0$.
+\end{proposition}
+\begin{proof}
+Let $n\le N+1$ and let $u_1,\ldots,u_n$ be orthonormal eigenfunctions of
+$\Delta_s$ with eigenvalues at most $\lambda\le1$. Let $V$ be their span
+and $\Theta:V\to\RR^N$ the linear map $u\mapsto(a_i(u))_i$. For
+$u=\sum \zeta_lu_l$ with $\sum \zeta_l^2=1$, the triangle inequality in $L^2$ and
+Lemmas~\ref{lem:thick-estimates} and~\ref{lem:milnor-mass} give
+\[
+ \int_{\Omega_i(r,s)}u^2\,dA\le a_i^2\area\Omega_i(r,s)
+ +c(r)\lambda^{1/2},\qquad
+ \int_{M_p(r,s)}u^2\,dA\le C r^2+c(r)\lambda^{1/2},
+\]
+with constants depending on $N$. Since $X_s$ is the union of the
+$\Omega_i(r,s)$ and the $M_p(r,s)$, summing and using
+\eqref{eq:area-limit} yields
+\begin{equation}\label{eq:mass-lower}
+ m(\Theta u)\ge\bigl(1-Cr^2-c(r)\lambda^{1/2}-o(1)\bigr)\|u\|^2
+ \qquad(u\in V),
+\end{equation}
+where $o(1)\to0$ as $s\to0$ for fixed $r$.
+
+\emph{The gap.} Suppose $\lambda_N(s_l)\to0$ along a sequence
+$s_l\to0$. Apply the preceding with $n=N+1$, the eigenfunctions for
+$\lambda_0,\ldots,\lambda_N$ and $\lambda=\lambda_N(s_l)$. Choosing $r$
+with $Cr^2<1/2$, \eqref{eq:mass-lower} shows that $\Theta$ is injective for
+large $l$, which is impossible since $\dim V=N+1$.
+
+\emph{The limits.} Let $1\le k\le N-1$, $n=k+1$, and take the
+eigenfunctions for $\lambda_0,\ldots,\lambda_k$, with
+$\lambda=\lambda_k(s)$. By Proposition~\ref{prop:upper},
+$\lambda\le C/L$ with $L=\log(1/|s|)$. For $r$ small and then $s$ small,
+\eqref{eq:mass-lower} shows that $\Theta$ is injective, so $\Theta(V)$ has
+dimension $k+1$ and contains a vector $\Theta u$, $\|u\|=1$, with
+$q(\Theta u)\ge\mu_k\,m(\Theta u)$. For this $u$,
+Lemma~\ref{lem:capacity}, summed over $p\in\Sigma$, and
+\eqref{eq:mass-lower} give
+\[
+ \lambda_k(s)\ge E(u)\ge\sum_{p\in\Sigma}E_{M_p(r,s)}(u)
+ \ge\frac{2\pi\mu_k}{L}\bigl(1-Cr^2-o(1)\bigr)
+ -\frac{c(r)}{L^{3/2}} .
+\]
+Multiply by $L$, let $s\to0$ and then $r\to0$.
+\end{proof}
+
+Propositions~\ref{prop:upper} and~\ref{prop:lower} prove
+Theorem~\ref{thm:main}.
+
+\begin{proof}[Proof of Corollaries~\ref{cor:two} and~\ref{cor:product}]
+Let $Q$ be the matrix of $q$ and $A=\operatorname{diag}(A_i)$. The
+$\mu_k$ are the roots of $\det(Q-tA)$. This polynomial has leading
+coefficient $(-1)^N\prod_iA_i$, no constant term, and linear coefficient
+$-\sum_iA_i\det Q^{(i)}$, where $Q^{(i)}$ is obtained by deleting the
+$i$th row and column. Since $Q$ is a weighted graph Laplacian, all
+$\det Q^{(i)}$ are equal to the weighted number $\kappa$ of spanning trees
+\cite{chaiken}. Hence
+$\prod_{k\ge1}\mu_k=\kappa\sum_iA_i/\prod_iA_i$, and
+Corollary~\ref{cor:product} follows from \eqref{eq:main}. For $N=2$,
+$\kappa=C_1\cdot C_2$.
+\end{proof}
+
+\section{Examples and remarks}\label{sec:examples}
+
+\begin{example}[Nodal fibres]\label{ex:nodal}
+If $X_0$ has only ordinary nodes, $C_i\cdot C_j$ is the number of nodes
+joining $C_i$ and $C_j$, and nodes of a single component do not enter.
+The matrix of $q$ is the Laplacian of the dual graph of $X_0$ with loops
+removed.
+\end{example}
+
+\begin{example}[Tangency and higher contact]\label{ex:tacnode}
+Let two components be given near $p$ by $f_1=y$ and $f_2=y-x^n$, with
+$\pi=f_1f_2$. Then $(C_1\cdot C_2)_p=n$: the point contributes as $n$
+nodes. We sketch a direct argument. On the fibre $\{y(y-x^n)=s\}$ the
+function $y$ omits zero, and each of its values other than the two square
+roots of $s$ is taken at the $n$ solutions of $x^n=y-s/y$. After removing from the
+local fibre and from the annulus sets on which $\log|y|/\log|s|$ has
+energy $O(\log(1/|s|)^{-2})$, $y$ therefore exhibits the local fibre as an
+$n$-sheeted branched cover of an annulus $\{c^{-1}|s|<|y|<c\}$. The
+function $\log|y|/\log|s|$ has energy $2\pi\log(c^2/|s|)/\log(1/|s|)^2$
+on the annulus and $n$ times as much on the cover.
+\end{example}
+
+\begin{example}[Ordinary multiple points]\label{ex:multiple}
+Suppose $d$ distinct components pass through $p$ with pairwise distinct
+tangents. Then $q_p$ is the Laplacian form of the complete graph on these
+$d$ components. This follows from $(C_i\cdot C_j)_p=1$. It can be
+interpreted as follows, although the theorem does not apply to the
+non-reduced fibre of the blown-up family: in the blow-up of $p$ the exceptional curve
+appears with multiplicity $d$ and meets each strict transform once; the
+corresponding star-shaped network, with conductance $d$ on each edge and
+no mass at the centre, has the complete graph with unit conductances as
+its star--mesh reduction to the outer vertices, that is, the Schur
+complement of its Laplacian with respect to the centre.
+\end{example}
+
+\begin{example}[The Fermat pencil]\label{ex:fermat}
+Let $d\ge2$ and
+\[
+ X=\{(s,[x:y:z])\in\mathbb D\times\PP^2:\ x^d+y^d+sz^d=0\},
+\]
+with $\pi$ the first projection and $g$ the restriction of the product of
+the flat metric on $\mathbb D$ and the Fubini--Study metric, so that $g_s$
+is the Fubini--Study metric on the plane curve $X_s$. This is
+\cite[Example~8.1]{dai-yoshikawa}. The surface $X$ is smooth, and $X_0$
+consists of $d$ lines through $[0:0:1]$, with $\pi=-\prod_\zeta(x-\zeta y)$
+in the coordinates $(x,y)$ at that point, the product over the $d$th
+roots of $-1$. Thus $N=d$, $C_i\cdot C_j=1$ for $i\ne j$, and all $A_i$
+equal the area $A$ of a line. The Laplacian of the complete graph has
+the single nonzero eigenvalue $d$, of multiplicity $d-1$, so
+\[
+ \lambda_k(s)=\frac{2\pi d}{A}\,\frac{1+o(1)}{\log(1/|s|)}
+ \qquad(1\le k\le d-1).
+\]
+\end{example}
+
+\begin{remark}[Burger's theorem]\label{rem:burger}
+The hyperbolic metrics on the fibres of a degenerating family of stable
+curves are not induced by a smooth metric on the total space, and
+Theorem~\ref{thm:main} does not apply to them. Nevertheless, after the
+following conversion Burger's graph coincides with the graph of
+Theorem~\ref{thm:main}. At a node with plumbing parameter $t$, that is,
+with local equation $xy=t$ in the family, the short
+geodesic has length $\ell=2\pi^2/\log(1/|t|)+O(\log(1/|t|)^{-2})$
+\cite[Example~4.3]{wolpert}, and the hyperbolic area of a component is
+$2\pi(2\gamma_v-2+n_v)$. Burger's ratio $1/(2\pi^2)$ for edge weight $\ell$ and
+vertex mass $2\gamma_v-2+n_v$ \cite[Theorem~1.1]{burger} therefore corresponds
+to conductance $2\pi/\log(1/|t|)$ per node and mass equal to the area, as
+in Example~\ref{ex:nodal}. Burger's theorem moreover allows the lengths to
+tend to zero at independent rates, which is outside the one-parameter
+setting considered here.
+\end{remark}
+
+\begin{remark}[The pairing of Cao]\label{rem:cao}
+Let $\mathsf M=(C_i\cdot C_j)$ be the intersection matrix, so that
+$-\mathsf M$ is the matrix of $q$. For a K\"ahler metric on $X$ and reduced $X_0$, Cao
+considers the pairing
+$\langle\alpha,\alpha'\rangle(s)=\int_{X_s}\varphi_s\alpha'$ of smooth
+two-forms with vanishing fibre integrals, where $\varphi_s$ solves
+$dd^c\varphi_s=-\alpha|_{X_s}$ with his normalization $d^c=\frac{i}{4\pi}(\bar\partial-\partial)$, and proves
+that $\langle\alpha,\alpha'\rangle-c_{\alpha,\alpha'}\log|s|^2$ extends
+continuously to $\mathbb D$, with $c_{\alpha,\alpha'}=v_\alpha^{T}\mathsf M^+v_{\alpha'}$,
+$v_\alpha=(\int_{C_i}\alpha)_i$, and $\mathsf M^+$ the Moore--Penrose inverse
+\cite[Theorem~0.2]{cao-pairing}. Since
+$\langle\alpha,\alpha\rangle$ equals
+$4\pi\sum_{k\ge1}\lambda_k^{-1}(\int_{X_s}\Phi_k\alpha)^2$ for an orthonormal
+basis of eigenfunctions $\Phi_k$, the logarithmic term is carried by the
+$N-1$ small eigenvalues. Cao also shows that the corresponding
+eigenfunctions are, up to errors of order $\log(1/|s|)^{-1/2}$ in $L^2$,
+combinations of functions that are constant on the parts of $X_s$ near the
+components \cite[Theorem~2.10]{cao-pairing}. We sketch how the limits \eqref{eq:main} follow. The period vectors
+$v_\alpha$ exhaust the vectors with zero sum, and from these statements
+and the two-sided bounds of \cite{dai-yoshikawa} one can deduce, by
+comparing two quadratic forms on that space along subsequences, that
+$\lambda_k(s)\log(1/|s|)$ converges to $2\pi\mu_k$. Thus for K\"ahler
+metrics the limits \eqref{eq:main} also follow from \cite{cao-pairing}
+together with \cite{dai-yoshikawa}, although they are not stated there;
+the two results describe the same leading behaviour of the Green operator
+on the small eigenspaces from complementary sides.
+\end{remark}
+
+\begin{remark}[A heuristic of Ji and Wentworth]\label{rem:jw}
+For a plumbing family with a separating node and the Bergman metric,
+which is not induced from the total space, \cite[Remark~5.10]{ji-wentworth}
+suggests that $\lambda_1$ should behave like the first Dirichlet
+eigenvalue of one of the two components with a disc of radius
+$\varepsilon\sim|t|^{1/2}$ removed, namely
+$2\pi/(A_i\log(1/\varepsilon))$ to leading order, and concludes that
+$\lambda_1$ is expected to be bounded above by a multiple of
+$1/\log(1/|t|)$. Taken literally the heuristic gives
+$4\pi/(A_i\log(1/|t|))$. For induced metrics, Corollary~\ref{cor:two}
+gives $2\pi(1/A_1+1/A_2)/\log(1/|t|)$ at a single node, which coincides
+with that value exactly when $A_1=A_2$.
+\end{remark}
+
+\begin{remark}[Hypotheses]\label{rem:hypotheses}
+The Hermitian condition on $g$ is used only in the balls $B_p(4\rho_0)$,
+where it makes the Dirichlet energy on the fibres conformally invariant
+and the functions $h_F$ harmonic. If $X_0$ is not reduced the functions
+\eqref{eq:hF} are still defined, with $f_i$ replaced by $f_i^{m_i}$ for the
+multiplicities $m_i$, but the fibre near a multiple component is a
+covering of it that need not be connected, and according to \cite[Theorem~0.4]{cao-kahler} the number of small
+eigenvalues is the number of components of the central fibre after a base
+change and normalization, minus one; we do not treat
+this case. In higher dimension, for
+two-forms on Calabi--Yau threefolds in conifold transitions with
+Ricci-flat metrics, it is shown in the preprint \cite{wuebben-conifold}
+that the small eigenvalues have the same rate and the same
+constant $2\pi$ per node, with the intersection form on divisor classes in
+the role of $m$ and the periods over the exceptional curves in the role of
+the differences $F_i-F_j$.
+\end{remark}
+
+\begin{thebibliography}{BHPV04}
+
+\bibitem[BHPV04]{bhpv}
+W.~P. Barth, K. Hulek, C.~A.~M. Peters and A. Van de Ven,
+\emph{Compact complex surfaces}, 2nd ed.,
+Ergebnisse der Mathematik und ihrer Grenzgebiete (3), vol.~4,
+Springer, Berlin, 2004.
+
+\bibitem[Bur90]{burger}
+M. Burger,
+\emph{Small eigenvalues of Riemann surfaces and graphs},
+Math. Z. \textbf{205} (1990), 395--420.
+\href{https://doi.org/10.1007/BF02571252}{doi:10.1007/BF02571252}.
+
+\bibitem[Cao26a]{cao-pairing}
+J. Cao,
+\emph{The Archimedean height pairing for differential forms on degeneration of
+Riemann surfaces},
+preprint, 2026.
+\href{https://arxiv.org/abs/2603.04802v1}{arXiv:2603.04802v1}.
+
+\bibitem[Cao26b]{cao-kahler}
+J. Cao,
+\emph{Asymptotics of small eigenvalues on degenerations of K\"ahler manifolds},
+preprint, 2026.
+\href{https://arxiv.org/abs/2605.08023v1}{arXiv:2605.08023v1}.
+
+\bibitem[Cha82]{chaiken}
+S. Chaiken,
+\emph{A combinatorial proof of the all minors matrix tree theorem},
+SIAM J. Algebraic Discrete Methods \textbf{3} (1982), no.~3, 319--329.
+\href{https://doi.org/10.1137/0603033}{doi:10.1137/0603033}.
+
+\bibitem[DY26]{dai-yoshikawa}
+X. Dai and K.-I. Yoshikawa,
+\emph{Degeneration of Riemann surfaces and small eigenvalues of the Laplacian},
+to appear in Courant Journal of Pure and Applied Mathematics, 2026 preprint.
+\href{https://arxiv.org/abs/2509.06151v3}{arXiv:2509.06151v3}.
+
+\bibitem[JW92]{ji-wentworth}
+L. Ji and R. Wentworth,
+\emph{Spectral convergence on degenerating surfaces},
+Duke Math. J. \textbf{66} (1992), no.~3, 469--501.
+\href{https://doi.org/10.1215/S0012-7094-92-06615-4}{doi:10.1215/S0012-7094-92-06615-4}.
+Correction: Duke Math. J. \textbf{90} (1997), no.~1, 205--207.
+
+\bibitem[Mil68]{milnor}
+J. Milnor,
+\emph{Singular points of complex hypersurfaces},
+Annals of Mathematics Studies, no.~61,
+Princeton University Press, Princeton, NJ, 1968.
+
+\bibitem[SWY80]{swy}
+R. Schoen, S. Wolpert and S.-T. Yau,
+\emph{Geometric bounds on the low eigenvalues of a compact surface},
+in \emph{Geometry of the Laplace operator},
+Proc. Sympos. Pure Math., vol.~36,
+American Mathematical Society, Providence, RI, 1980, 279--285.
+\href{https://doi.org/10.1090/pspum/036/573440}{doi:10.1090/pspum/036/573440}.
+
+\bibitem[Wol90]{wolpert}
+S.~A. Wolpert,
+\emph{The hyperbolic metric and the geometry of the universal curve},
+J. Differential Geom. \textbf{31} (1990), no.~2, 417--472.
+\href{https://doi.org/10.4310/jdg/1214444322}{doi:10.4310/jdg/1214444322}.
+
+\bibitem[W26]{wuebben-conifold}
+B.~J.~Wuebben,
+\emph{Integral topology and small eigenvalues in Calabi--Yau conifold
+transitions},
+preprint, November~9, 2026.
+\href{https://doi.org/10.5281/zenodo.24096887}{doi:10.5281/zenodo.24096887}.
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,161 @@
+\section{Small spectrum and rescaled linearized evolution}\label{sec:spectrum}
+
+This section concerns the HYM linearization at the constant flat metric,
+and therefore the scalar Laplacian on matrix entries. It supplies an
+operator identification and uniform Hilbert-space estimates. It makes no
+assertion that a nonstationary metric has the same instantaneous spectrum.
+
+Let $V=\RR^N$ with inner product
+$\langle a,b\rangle_A=\sum_iA_i a_i b_i$. Define
+\[
+ q(a)=\sum_{p:\,i\leftrightarrow j}(a_i-a_j)^2,
+ \qquad B=2\pi A^{-1}Q,
+\]
+where $Q$ is the symmetric matrix of $q$. The component graph is connected,
+so its kernel consists of constant vectors. Write
+$0=\mu_0<\mu_1\le\cdots\le\mu_{N-1}$ for the eigenvalues of
+$A^{-1}Q$. Let $0=\lambda_0(t)<\lambda_1(t)\le\cdots$ be the
+scalar fibre spectrum, counted with multiplicity, and let $S_t$ be the
+span of the first $N$ eigenfunctions.
+
+Let $\Omega_i(r,t)$ denote the image under Lemma~\ref{lem:plumbing}
+of $C_i$ with the discs of coordinate radius $r$ about all its node
+punctures removed. Here $r$ is fixed, positive, and smaller than the
+chosen outer plumbing radius. In this section $o_r(1)$ denotes a quantity
+tending to zero as $t\to0$ with $r$ fixed.
+
+We use the following scalar facts from \cite{wuebben-curves}. They hold
+for the present induced K\"ahler metrics, and indeed under weaker
+hypotheses in that paper:
+\begin{equation}\label{eq:scalar-law}
+ L\lambda_j(t)\longrightarrow2\pi\mu_j\quad(0\le j<N),
+ \qquad\lambda_N(t)\ge\gamma>0.
+\end{equation}
+We also need the compactness and form estimates in its proof, rather
+than eigenvalues alone. For clarity we state precisely the consequences
+used here. On every fixed thick component subset, a unit vector in $S_t$
+differs in $L^2$ from its component average by $O_r(L^{-1/2})$.
+Its squared mass in fixed node neighbourhoods of radius $r$ is at
+most $Cr^2+o_r(1)$. These estimates hold uniformly for all combinations
+of the $N$ eigenfunctions. Finally the capacitary lower bound gives
+\begin{equation}\label{eq:scalar-form-lower}
+ L\int_{X_t}|du|^2\,dA_t
+ \ge2\pi q(a(u))-o_r(1)\|u\|^2\qquad(u\in S_t),
+\end{equation}
+where $a(u)$ consists of averages over $\Omega_i(r,t)$, using the
+same fixed coordinate radius as the capacitary cutoffs.
+In \cite[Section~4]{wuebben-curves} these statements
+are the thick estimates, the node-mass estimate, their extension to
+finite combinations, and the energy lower bound. The lower bound is
+obtained by pairing $du$ with the differentials of logarithmic
+capacitary potentials. Thus it applies to an entire low subspace,
+not only to individual eigenfunctions.
+
+Fix a sufficiently small outer radius $r_0$, and define
+\[
+ T_t:S_t\to V,\qquad (T_tu)_i=
+ \frac{1}{\operatorname{area}\Omega_i(r_0,t)}
+              \int_{\Omega_i(r_0,t)}u\,dA_t.
+\]
+Adjoints in what follows use the actual fibre $L^2$ inner product and
+the weighted inner product on $V$.
+
+\begin{theorem}\label{thm:operator}
+For sufficiently small $t$, the averaging map $T_t$ is invertible.
+The polar identification
+\begin{equation}\label{eq:polar}
+ J_t=T_t^*(T_tT_t^*)^{-1/2}:V\longrightarrow S_t
+\end{equation}
+is an isometry, and
+\begin{equation}\label{eq:operator-limit}
+ \|J_t^*L\Delta_tJ_t-B\|_{V\to V}\longrightarrow0.
+\end{equation}
+For every $T<\infty$,
+\begin{equation}\label{eq:low-heat}
+ \sup_{0\le\tau\le T}
+ \|J_t^*e^{-L\tau\Delta_t}J_t-e^{-\tau B}\|\longrightarrow0.
+\end{equation}
+For $0<\delta<T$, regarding $J_t$ as an embedding into the full
+fibre $L^2$ space,
+\begin{equation}\label{eq:full-heat}
+ \sup_{\delta\le\tau\le T}
+ \|e^{-L\tau\Delta_t}-J_te^{-\tau B}J_t^*\|_{L^2\to L^2}
+ \longrightarrow0.
+\end{equation}
+The shifted finite resolvents converge uniformly when their positive
+shift ranges over a compact interval. On $S_t^\perp$,
+\begin{equation}\label{eq:complement-bounds}
+ \|\Delta_t^{-1}\|_{L^2\to L^2}\le\gamma^{-1},\qquad
+ \|e^{-s\Delta_t}\|_{L^2\to L^2}\le e^{-\gamma s}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+First we prove that $T_t$ is asymptotically isometric. Choose a fixed
+smaller radius $r<r_0$. The thick Poincar\'e estimate implies that
+the means at $r$ and $r_0$ differ by
+$O_r(L^{-1/2})\|u\|$. On the thick pieces, the mass is the area
+times the squared mean, up to $o_r(1)\|u\|^2$. The omitted mass is
+bounded by $Cr^2\|u\|^2+o_r(1)\|u\|^2$, and the omitted component
+area is $O(r^2)$. Uniformly on the unit sphere of $S_t$,
+\[
+ \bigl|\|T_tu\|_A^2-\|u\|^2\bigr|
+ \le(Cr^2+o_r(1))\|u\|^2.
+\]
+Let $t\to0$ for fixed $r$ and then $r\to0$. This proves
+$T_t^*T_t=I+o(1)$. Both spaces have dimension $N$, so $T_t$ is
+invertible for small $t$; \eqref{eq:polar} is an isometry and
+$T_tJ_t=(T_tT_t^*)^{1/2}\to I$.
+
+Put $B_t=J_t^*L\Delta_tJ_t$. Use a fixed capacity radius compatible
+with $r_0$ in \eqref{eq:scalar-form-lower}; changing between two
+fixed averaging radii only adds $O(L^{-1/2})\|u\|$ to the means.
+Substituting $u=J_ta$ gives, uniformly on $V$,
+\[
+ \langle B_ta,a\rangle_A
+ \ge\langle Ba,a\rangle_A-\varepsilon_t\|a\|_A^2,
+ \qquad\varepsilon_t\to0.
+\]
+The eigenvalues of $B_t$ are $L\lambda_j(t)$ for $0\le j<N$.
+Equation~\eqref{eq:scalar-law} therefore gives
+$\tr(B_t-B)\to0$. For the self-adjoint difference $D_t=B_t-B$,
+\[
+ \lambda_{\min}(D_t)\ge-\varepsilon_t,\qquad
+ \lambda_{\max}(D_t)\le\tr D_t+(N-1)\varepsilon_t.
+\]
+This proves \eqref{eq:operator-limit}, including when limiting
+eigenvalues are repeated. The form inequality is the information
+which makes this inference stronger than convergence of spectra.
+
+Since $S_t$ is a spectral subspace,
+$J_t^*e^{-L\tau\Delta_t}J_t=e^{-\tau B_t}$.
+Duhamel's formula for nonnegative self-adjoint matrices gives
+\[
+ \|e^{-\tau B_t}-e^{-\tau B}\|\le\tau\|B_t-B\|.
+\]
+The resolvent identity similarly gives the bound
+$z^{-2}\|B_t-B\|$ for shifts $z>0$.
+The spectral gap in \eqref{eq:scalar-law} proves
+\eqref{eq:complement-bounds}. Decomposing the full fibre space into
+$S_t\oplus S_t^\perp$ bounds the difference in \eqref{eq:full-heat}
+by $T\|B_t-B\|+e^{-\gamma L\delta}$.
+\end{proof}
+
+The exclusion of $\tau=0$ in \eqref{eq:full-heat} is necessary:
+the identity on the orthogonal complement cannot disappear in
+operator norm at time zero. The polar identification need not carry
+the finite constant vector to an exactly constant function for
+each nonzero $t$; it does so asymptotically. No unshifted inverse
+on a space containing a kernel is asserted.
+
+Let $\mathfrak p_r$ be the real space of trace-free Hermitian matrices,
+of dimension $r^2-1$. Tensoring Theorem~\ref{thm:operator} with its
+identity proves all corresponding HYM linearization statements.
+The finite equation linearized at $H_i=I$ is
+\[
+ A_i\partial_\tau u_i=2\pi\sum_{p:\,i\leftrightarrow j}(u_j-u_i),
+\]
+which is exactly $-B\otimes I_{\mathfrak p_r}$. The estimates
+\eqref{eq:complement-bounds} are Hilbert-space inverse and heat
+bounds, not global unweighted higher-regularity estimates. The
+nonlinear proof instead uses Lemma~\ref{lem:comparison} and the
+fixed-chart scalar mean-value inequality.

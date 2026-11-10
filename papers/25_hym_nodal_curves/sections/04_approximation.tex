@@ -1,0 +1,221 @@
+\section{Construction of an approximate trajectory}\label{sec:approximation}
+
+Throughout this section $L=\log(1/|t|)$, $\rho=L^{-1}$ and $\tau=s/L$.
+We construct a smooth global metric by matching corrected component
+metrics to exact stationary neck profiles. The endpoint matrices move
+in slow time; the resulting neck profile therefore has a small time
+residual, although its curvature vanishes exactly.
+
+\subsection{Component metrics}
+On a component punctured at radius $\rho/2$, put
+\begin{equation}\label{eq:component-metric}
+ K_i(\tau,z)=H_i(\tau)\exp(\xi_i(\tau,z)/L).
+\end{equation}
+It is positive Hermitian with determinant one. By
+\eqref{eq:potential-bounds}, $|\xi_i|/L=O_T(\log L/L)$ there.
+Transfer its matrix entries to the corresponding part of $X_t$
+using Lemma~\ref{lem:plumbing}.
+
+\begin{lemma}\label{lem:component-residual}
+On the transferred component regions,
+\begin{equation}\label{eq:component-residual}
+ \int |R(K_i)|\,dA_t
+ \le C_T\frac{1+\log L}{L^2}+C_Te^{-L}L^n.
+\end{equation}
+On every fixed compact subset away from the punctures, the residual
+and its fixed finite spatial derivatives are $O_T(L^{-2})$.
+\end{lemma}
+\begin{proof}
+First calculate on the central component. Write $h=\xi_i/L$ and
+suppress the component index. For bounded small $h$,
+\[
+ e^{-h}\partial e^h
+ =\int_0^1 e^{-ah}(\partial h)e^{ah}\,da
+ =\Phi(\operatorname{ad}_h)\partial h,
+\]
+where $\Phi$ is smooth, $\Phi(0)=I$, and its derivatives are bounded.
+After applying $\bar\partial$ and contracting, the difference from
+the linear term is bounded by
+\[
+ |2i\Lambda F_{He^h}-\Delta h|
+ \le C_T(|h||\Delta h|+|\nabla h|^2).
+\]
+All commutators remain in this expression. The reference matrix $H$
+is spatially constant. For the time derivative,
+\[
+ (He^h)^{-1}\partial_s(He^h)
+ =L^{-1}e^{-h}Ve^h+e^{-h}\partial_s e^h,
+\]
+whose difference from $V/L$ is bounded by
+$C_TL^{-2}(|\xi||V|+|\partial_\tau\xi|)$. Thus
+\begin{equation}\label{eq:thick-expansion}
+ R(K_i)=L^{-1}(V_i+\Delta_i\xi_i)
+ +O_T\!\left(L^{-2}\bigl(|\xi_i||V_i|+|\partial_\tau\xi_i|
+             +|\nabla\xi_i|^2+|\xi_i||\Delta_i\xi_i|\bigr)\right).
+\end{equation}
+The first term vanishes by \eqref{eq:compatibility}. Integration of
+the other terms uses \eqref{eq:potential-bounds} and proves the first
+term of \eqref{eq:component-residual}. The coordinate and coefficient
+errors in Lemma~\ref{lem:plumbing}, multiplied by the polynomial
+derivative bounds of the potentials, contribute $O_T(e^{-L}L^n)$.
+On a fixed compact subset every potential derivative is bounded,
+which proves the local assertion.
+\end{proof}
+
+\subsection{Geodesic necks}
+At a node $p$ joining $C_i,C_j$, write
+\begin{equation}\label{eq:regular-parts}
+ \xi_i=-B_{ij}\log|u|+c_{i,p}+q_{i,p}(u),\qquad q_{i,p}(0)=0,
+\end{equation}
+where the regular part is smooth, with bounded slow-time derivatives.
+Use the analogous expansion on the $v$ branch. Set
+\[
+ P_{i,p}=H_i\exp(c_{i,p}/L),\qquad
+ P_{j,p}=H_j\exp(c_{j,p}/L),
+\]
+and on $uv=t$ define
+\begin{equation}\label{eq:neck-profile}
+ N_p(\tau,u)=\Geo(P_{i,p},P_{j,p};\theta),
+ \qquad \theta=-\frac{\log|u|}{L}.
+\end{equation}
+Since $1-\theta=-\log|v|/L$, the same expression from the opposite
+end is obtained by reversing the geodesic. In the neck region used
+below, $0\le\theta\le1$.
+
+\begin{lemma}\label{lem:neck}
+For every fixed $\tau$, the metric $N_p$ has zero Chern curvature.
+On $|u|,|v|\le2\rho$ its time residual satisfies
+\begin{equation}\label{eq:neck-residual}
+ |R(N_p)|\le C_T/L,\qquad
+ \int |R(N_p)|\,dA_t\le C_T\rho^2/L.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $S=\log(P_{i,p}^{-1/2}P_{j,p}P_{i,p}^{-1/2})$. The spatial
+connection is exactly
+\[
+ N_p^{-1}\partial N_p
+ =P_{i,p}^{-1/2}SP_{i,p}^{1/2}\,\partial\theta.
+\]
+The coefficient matrix is spatially constant and $\theta$ is harmonic,
+so its $\bar\partial$ derivative is zero. The matrices $P_{i,p}$ and
+their slow-time derivatives stay in bounded sets, and geodesic
+interpolation is smooth on their compact range. Thus
+$|N_p^{-1}\partial_sN_p|\le C_T/L$. The area estimate is
+Lemma~\ref{lem:plumbing}(3).
+\end{proof}
+
+\subsection{Differentiated matching}
+Near the $i$ end use the logarithmic matrix coordinate
+$\ell_i(K)=\log(H_i^{-1}K)$. It takes values in the space of
+$H_i$-self-adjoint trace-free endomorphisms. All its derivatives
+needed here are bounded on the compact matrix range.
+
+\begin{lemma}\label{lem:matching}
+On the transition annulus $\rho\le|u|\le2\rho$, for $k=0,1,2$,
+\begin{equation}\label{eq:matching}
+ |D^k(\ell_i(K_i)-\ell_i(N_p))|
+ \le C_T\left(\frac{\rho^{1-k}}{L}
+       +\frac{1+|\log\rho|}{L^2\rho^k}\right).
+\end{equation}
+The same estimate holds after any fixed number of slow-time
+derivatives. The corresponding assertion holds at the other end.
+\end{lemma}
+\begin{proof}
+Write $\varepsilon=L^{-1}$ and, at a fixed slow time, consider
+\[
+ F(\varepsilon,\theta)=\ell_i\!\left(
+ \Geo(H_i e^{\varepsilon c_{i,p}},
+       H_j e^{\varepsilon c_{j,p}};\theta)\right).
+\]
+Its derivatives are uniformly bounded for $\theta\in[0,1]$ and
+small $\varepsilon$. Exactly,
+$F(0,\theta)=\theta B_{ij}$ and $F(\varepsilon,0)=\varepsilon c_{i,p}$.
+The difference from their sum vanishes on both coordinate axes.
+The double integral of its mixed derivative therefore gives
+\[
+ F(\varepsilon,\theta)
+ =\theta B_{ij}+\varepsilon c_{i,p}
+     +\varepsilon\theta G(\varepsilon,\theta,\tau),
+\]
+with $G$ and its required derivatives uniformly bounded. On the
+annulus, $\theta=-\varepsilon\log|u|$ and
+$D^k\theta=O(\varepsilon\rho^{-k})$ for $k=1,2$. The component
+logarithm is
+\[
+ \ell_i(K_i)=\theta B_{ij}+\varepsilon c_{i,p}
+                         +\varepsilon q_{i,p}(u).
+\]
+Since $q_{i,p}$ is smooth and zero at the puncture,
+$|D^kq_{i,p}|\le C_T\rho^{1-k}$ for $k\le2$, using a harmless
+weaker bound when $k=2$. Subtraction and the chain rule give
+\eqref{eq:matching}. The same calculation after slow-time
+differentiation uses the bounded derivatives of the finite flow.
+No pair of the matrices has been assumed to commute.
+\end{proof}
+
+Choose a cutoff $\chi(|u|/\rho)$ equal to zero near the inner end
+and one near the outer end of the transition annulus. Set there
+\begin{equation}\label{eq:interpolation}
+ \widehat H_t=H_i\exp\!\left(
+       \ell_i(N_p)+\chi(\ell_i(K_i)-\ell_i(N_p))\right).
+\end{equation}
+Use $K_i$ on the thick pieces and $N_p$ on the middle necks.
+The formula is positive Hermitian with determinant one and agrees
+with the adjacent metrics on neighbourhoods of the boundaries.
+It thus defines a smooth global metric. Positivity and uniform
+two-sided bounds follow from compactness of the component tuple,
+smallness of $\xi_i/L$ on the thick pieces, and compactness of the
+neck geodesics.
+
+\begin{proposition}\label{prop:residual}
+For every fixed $T<\infty$, the constructed metrics satisfy
+\begin{equation}\label{eq:residual-spatial}
+ \sup_{0\le s\le TL}\int_{X_t}|R(\widehat H_t(s))|\,dA_t
+ \le C_T\frac{(1+\log L)^2}{L^2},
+\end{equation}
+and consequently
+\begin{equation}\label{eq:residual-integrated}
+ \int_0^{TL}\!\int_{X_t}|R(\widehat H_t(s))|\,dA_t\,ds
+ \le C_T\frac{(1+\log L)^2}{L}.
+\end{equation}
+On a fixed compact component subset the residual is $O_T(L^{-2})$,
+and \eqref{eq:approx-thick-intro} holds.
+\end{proposition}
+\begin{proof}
+It remains to estimate the transition annuli. Put
+$n=\ell_i(N_p)$ and $\delta=\chi(\ell_i(K_i)-n)$.
+The curvature operator in logarithmic coordinates is a second-order
+expression with smooth coefficients on the compact matrix range.
+Compare its value at $n+\delta$ with its value at $n$, which is
+exactly zero. The difference is bounded by a constant times
+\begin{equation}\label{eq:operator-difference}
+ |D^2\delta|+|Dn||D\delta|
+ +|\delta|(|D^2n|+|Dn|^2)+|D\delta|^2.
+\end{equation}
+Here $|Dn|\le C_T/(L\rho)$,
+$|D^2n|\le C_T/(L\rho^2)$, and each cutoff derivative of order
+$k$ is $O(\rho^{-k})$. Applying \eqref{eq:matching} in
+\eqref{eq:operator-difference} and integrating over area
+$O(\rho^2)$ gives
+\[
+ \int_{\rm transition}|2i\Lambda F_{\widehat H_t}|\,dA_t
+ \le C_T\left(\frac\rho L+\frac{(1+\log L)^2}{L^2}\right).
+\]
+The logarithmic time derivative is bounded by $C_T/L$ throughout
+the annulus, so its integral is at most $C_T\rho^2/L$.
+In particular it fits the same bound. Using the exactly flat
+profile in \eqref{eq:operator-difference} is essential: a bound on
+the full interpolant Hessian would produce an order $L^{-1}$
+integral and would not suffice after time integration.
+
+Sum these estimates over finitely many nodes and components, and
+use Lemmas~\ref{lem:component-residual} and~\ref{lem:neck}.
+For $\rho=L^{-1}$ the exponentially small plumbing errors are
+absorbed in the right side of \eqref{eq:residual-spatial}.
+Integration over the physical interval of length $TL$ proves
+\eqref{eq:residual-integrated}. A fixed compact component subset
+eventually lies entirely in a thick region. There the last assertion
+follows from \eqref{eq:component-metric} and
+Lemma~\ref{lem:component-residual}.
+\end{proof}

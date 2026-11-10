@@ -1,0 +1,126 @@
+\section{Proof of the main theorem}\label{sec:proof}
+
+\begin{lemma}[Dodziuk]\label{lem:dodziuk}
+Let $g,\bar g$ be smooth metrics on a closed $n$-manifold with
+$(1-\delta)\bar g\le g\le(1+\delta)\bar g$, $0<\delta<1/2$. Then the
+ordered positive eigenvalues of the Hodge Laplacians in each degree $p$
+satisfy
+\[
+ \Theta(\delta)^{-1}\lambda^+_{p,j}(\bar g)\le\lambda^+_{p,j}(g)
+ \le\Theta(\delta)\,\lambda^+_{p,j}(\bar g),\qquad
+ \Theta(\delta)=1+O_n(\delta).
+\]
+\end{lemma}
+\begin{proof}
+This follows from \cite[Proposition~3.3]{dodziuk}. The positive spectrum in degree
+$p$ is the union of the squared singular values of $d$ on
+$\operatorname{Dom}d/\ker d$ in degrees $p$ and $p-1$, with the quotient
+$L^2$ norms; these norms and the norms of the images are changed by
+factors $1+O_n(\delta)$, and neither the operator $d$ nor its domain
+depends on the metric.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $t_l\to0$ be a sequence, and write $t_l=\epsilon_l^2u_l^2$ as in
+\eqref{eq:scale}. Passing to a subsequence, $u_l\to u_0$. Fix $R$ and
+$A$. By Lemma~\ref{lem:condition-N}, $X_{t_l}$ is identified with
+$\overline X_{\epsilon_l,u_0}$ in such a way that $g_{t_l}$ and
+$\bar g^{R,A}_{\epsilon_l,u_0}$ differ, relative to the latter, by at
+most $\delta_l$ with $\limsup_l\delta_l\le\delta(R,A):=C(R+A^{-2})$.
+Both manifolds have $s$ zero eigenvalues in degree two and none in degree
+one. By Lemma~\ref{lem:dodziuk}, Proposition~\ref{prop:count} and
+Theorem~\ref{thm:model-law}, if $\delta(R,A)<1/4$ then for large $l$
+exactly $m$ positive degree-two eigenvalues of $g_{t_l}$ are small, the
+degree-one spectrum and the other positive degree-two eigenvalues are
+bounded below by a positive constant, and
+\begin{align*}
+ \Theta(2\delta(R,A))^{-1}c\,\mu_j(R)
+ &\le\liminf_l\log(1/\epsilon_l)\lambda^+_{2,j}(t_l)\\
+ &\le\limsup_l\log(1/\epsilon_l)\lambda^+_{2,j}(t_l)
+ \le\Theta(2\delta(R,A))\,c\,\mu_j(R).
+\end{align*}
+Let $R\to0$ and $A\to\infty$ and use \eqref{eq:mass-limit}: along the
+subsequence, $\log(1/\epsilon_l)\lambda^+_{2,j}(t_l)\to c\,\mu_j=\pi\mu_j$.
+Since $\log(1/\epsilon)=\tfrac12\log(1/|t|)$ this is \eqref{eq:main}
+along the subsequence. As every sequence has such a subsequence,
+\eqref{eq:main} holds, and so do the count and the uniform lower bound
+for the remaining spectrum.
+
+Let $\psi$ be an eigenform for a small eigenvalue $\lambda$, with $|t|$
+so small that $\lambda$ is below the bound $\gamma$ for the degree-one
+spectrum. Then $d^*\psi$ is a one-form with $\Delta d^*\psi=\lambda
+d^*\psi$, hence zero, and $\psi=\lambda^{-1}d^*d\psi$ is coexact. Since
+$g_t$ is K\"ahler, $\Lambda$ commutes with $\Delta$, so $\Lambda\psi$ is
+a function with $\Delta\Lambda\psi=\lambda\Lambda\psi$. The positive
+spectrum on functions is the spectrum on exact one-forms and is at least
+$\gamma$; hence $\Lambda\psi=0$. The type is the subject of the next
+proposition.
+\end{proof}
+
+\begin{proposition}\label{prop:type}
+For $|t|$ sufficiently small, every eigenform of
+$(X_t,g_t)$ for one of the eigenvalues
+$\lambda^+_{2,1}(t),\ldots,\lambda^+_{2,m}(t)$ is of type $(1,1)$.
+\end{proposition}
+\begin{proof}
+Let $S_t$ be the span of these eigenforms and $P_t$ the pointwise
+orthogonal projection of two-forms on $X_t$ onto the forms of type
+$(2,0)+(0,2)$. Since $g_t$ is K\"ahler, $P_t$ commutes with $\Delta$; it
+therefore preserves $S_t$, and its restriction to $S_t$ is an orthogonal
+projection. It suffices to show that $\|P_t\psi\|\le\tfrac12$ for all
+unit $\psi\in S_t$ and all small $t$. Suppose not; then there are
+$t_l\to0$ and unit $\psi_l\in S_{t_l}$ with $\|P_{t_l}\psi_l\|>\tfrac12$.
+Fix $R,A$ and pass to a subsequence as in the preceding proof, so that
+$g=g_{t_l}$ is a metric on $\overline X_{\epsilon_l,u_0}$ within relative
+distance $\delta\le2\delta(R,A)$ of the model metric $\bar g$. Constants
+$C$ below are independent of $R$, $A$ and $l$.
+
+\emph{Comparison with the small eigenforms of the model.} Let
+$\mathcal Z$ be the space of closed square-integrable two-forms and
+$\bar\psi_l$ the component of $\psi_l$ orthogonal to $\mathcal Z$ for
+$\bar g$. Then $d\bar\psi_l=d\psi_l$ and $\bar\psi_l$ is coexact for
+$\bar g$. Since $\psi_l$ is orthogonal to $\mathcal Z$ for $g$,
+\[
+ \|\bar\psi_l\|_{\bar g}=\operatorname{dist}_{\bar g}(\psi_l,\mathcal Z)
+ \ge(1-C\delta)\operatorname{dist}_{g}(\psi_l,\mathcal Z)=1-C\delta,
+ \qquad\|\psi_l\|_{\bar g}\le1+C\delta,
+\]
+so $\|\psi_l-\bar\psi_l\|^2_{\bar g}=\|\psi_l\|^2_{\bar g}
+-\|\bar\psi_l\|^2_{\bar g}\le C\delta$. Moreover
+$\|d\bar\psi_l\|^2_{\bar g}\le(1+C\delta)\lambda^+_{2,m}(t_l)\to0$. By
+Proposition~\ref{prop:count} the coexact two-forms of the model have $m$
+small eigenvalues and a gap above them, so the distance in $L^2(\bar g)$
+from $\bar\psi_l$ to the span $\bar S_l$ of the corresponding eigenforms
+tends to zero.
+
+\emph{Limits.} By Proposition~\ref{prop:compactness} and the first step
+of the proof of Theorem~\ref{thm:model-law}, after passing to a
+subsequence, unit elements of $\bar S_l$ converge, smoothly on compact
+subsets of $M_0$ and without loss of $L^2$ norm, to forms $\eta^R_D$
+with $D$ orthogonal to $K$ for $G_R$. For such $D$ the form
+$\eta^R_D-\eta_D$ lies in the closure of the exact forms in the domain
+of $d_{\min}$, to which $\eta_D$ is orthogonal for $g_0$, and $\eta^R_D$
+minimizes the norm of $g_0^R$ in its class; with
+\eqref{eq:interpolation-errors} this gives
+\[
+ \|\eta^R_D-\eta_D\|^2_{g_0}=\|\eta^R_D\|^2_{g_0}-\|\eta_D\|^2_{g_0}
+ \le CR\,\|\eta_D\|^2_{g_0}.
+\]
+The forms $\eta_D$ are of type $(1,1)$ on $M_0$ by
+Proposition~\ref{prop:harmonic}.
+
+\emph{Conclusion.} For $\rho>0$ let $W_\rho=M_0\cap\{r\ge\rho\}$. The
+identifications $\Phi_{t}$ of Lemma~\ref{lem:condition-N} restrict to
+embeddings of $W_\rho$ into $X_t$ that depend smoothly on $t$ and are the
+inclusion at $t=0$, so the complex structures $\Phi_t^*J_t$ converge
+smoothly to that of $M_0$ on $W_\rho$, and so do the projections
+$P_t$ to the projection $P_0$ on $M_0$. Combining the two steps, on
+$W_\rho$ the forms $\psi_l$ are within $C(\delta^{1/2}+R^{1/2})+o(1)$ in
+$L^2$ of a form $\eta_D$ of norm at most $2$, for which $P_0\eta_D=0$;
+and the $L^2$ norm of $\psi_l$ on the complement of $W_\rho$ is at most
+$C(\delta^{1/2}+R^{1/2})+o(1)+\sup\|\eta_D\|_{L^2(\{r<\rho\})}$, the
+supremum over $D$ with $G(D,D)\le4$, which tends to zero with $\rho$.
+Since $|P_t\psi|\le|\psi|$ pointwise, choosing first $R$ small and $A$
+large, then $\rho$ small, gives $\|P_{t_l}\psi_l\|<\tfrac12$ for large
+$l$, a contradiction.
+\end{proof}

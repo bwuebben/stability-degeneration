@@ -1,0 +1,159 @@
+\section{Matrix metrics and flow comparison}\label{sec:matrix}
+
+\subsection{The finite flow}
+The space $\cP_r$ is a complete simply connected manifold of
+nonpositive sectional curvature. The geodesic from $P$ to $Q$ is
+\begin{equation}\label{eq:geodesic}
+ \Geo(P,Q;\theta)=P^{1/2}
+   \exp\!\bigl(\theta\log(P^{-1/2}QP^{-1/2})\bigr)P^{1/2}.
+\end{equation}
+Its initial velocity is
+$\Log_PQ=P\log(P^{-1}Q)$. These formulas and the distance
+\eqref{eq:target-metric} are standard \cite[Sections~2.3--2.6]{bhatia}.
+The determinant-one space is totally geodesic: the logarithm of the
+determinant along \eqref{eq:geodesic} is the affine interpolation of
+the endpoint logarithmic determinants. Squared distance is jointly
+convex along pairs of geodesics, and every two points have a unique
+geodesic. All maps in \eqref{eq:geodesic} are smooth, including at
+repeated eigenvalues.
+
+\begin{lemma}\label{lem:finite-flow}
+Equation~\eqref{eq:finite-flow} is the negative gradient flow of
+\eqref{eq:graph-energy} for the product metric with weights $A_i$.
+It preserves determinant one and exists for all $\tau\ge0$ in a
+compact subset depending only on its initial tuple and the areas.
+All its derivatives of each fixed order are bounded on bounded
+time intervals.
+\end{lemma}
+\begin{proof}
+The gradient of $\frac12d(P,Q)^2$ in the first variable is
+$-\Log_PQ$; applying this identity at each vertex gives
+\eqref{eq:finite-flow}, including the factor $2\pi$ and the weight
+$A_i^{-1}$. The same intrinsic graph-gradient formula appears in
+\cite[Section~III]{tav}.
+Since $\tr\log(H_i^{-1}H_j)=0$, determinant one is preserved.
+
+Let $o=(I,\ldots,I)$ in the product, and write $d_A$ for its weighted
+distance. Geodesic convexity and $\mathscr E(o)=0$ give
+\[
+ \langle\nabla\mathscr E(\mathbf H),\Log_{\mathbf H}o\rangle_A
+ \le-\mathscr E(\mathbf H).
+\]
+Along the negative gradient flow this is
+\[
+ \frac d{d\tau}\frac12d_A(\mathbf H,o)^2
+ \le-\mathscr E(\mathbf H)\le0.
+\]
+Closed bounded sets in this finite-dimensional complete manifold are
+compact. The smooth vector field therefore continues for all time,
+and differentiation of the ordinary differential equation gives the
+stated derivative bounds.
+\end{proof}
+
+\subsection{The exact HYM equation}
+In a holomorphic coordinate $z=x+iy$, write
+$\omega_t=(i/2)a(z)\,dz\wedge d\bar z$. The nonnegative real
+scalar Laplacian is $\Delta_t=-4a^{-1}\partial_z\partial_{\bar z}$.
+Equation~\eqref{eq:hym-intro} reads
+\begin{equation}\label{eq:complex-hym}
+ \partial_sH=4a^{-1}(H_{z\bar z}-H_{\bar z}H^{-1}H_z).
+\end{equation}
+Indeed $F_H=-\partial_{\bar z}(H^{-1}H_z)\,dz\wedge d\bar z$.
+Expanding the complex derivatives gives
+\begin{equation}\label{eq:real-hym}
+ \begin{split}
+ a\partial_sH={}&H_{xx}+H_{yy}-H_xH^{-1}H_x-H_yH^{-1}H_y\\
+ &+i(H_xH^{-1}H_y-H_yH^{-1}H_x).
+ \end{split}
+\end{equation}
+The final term is Hermitian. It is generally nonzero and is absent
+from ordinary symmetric-space harmonic-map heat flow. For example,
+take $H(x,y)=\exp(xU+yV)$ with noncommuting trace-free Hermitian
+matrices $U,V$. At the origin the first four terms cancel, whereas
+the last is $i[U,V]$. The proof below makes no assumption that this
+term vanishes for an actual solution.
+
+In rank one $H=e^u$ gives $\partial_su=-\Delta_tu$. Taking the
+trace of the logarithmic velocity in general gives the same heat
+equation for $\log\det H$, so the determinant normalization persists.
+Linearization at a constant identity matrix is consequently
+$\partial_su=-\Delta_tu$ on trace-free Hermitian entries.
+
+\subsection{A comparison estimate with a residual}
+For a smooth comparison family $K(s)$ define
+\begin{equation}\label{eq:residual}
+ R(K)=K^{-1}\partial_sK+2i\Lambda_{\omega_t}F_K.
+\end{equation}
+It is self-adjoint with respect to $K$. Its pointwise norm below is
+the operator norm in that metric.
+
+\begin{lemma}\label{lem:comparison}
+Let $H(s)$ be an exact HYM solution on a fixed compact fibre, and
+$K(s)$ any smooth positive comparison family. With $h=H^{-1}K$,
+\begin{equation}\label{eq:forced-sigma}
+ (\partial_s+\Delta_t)\sigma(H,K)
+ \le\tr((h-h^{-1})R(K)).
+\end{equation}
+If $mI\le H,K\le MI$ throughout the interval, then
+\begin{equation}\label{eq:integrated-sigma}
+ \int_{X_t}\sigma(H(s),K(s))\,dA_t
+ \le\int_{X_t}\sigma(H(0),K(0))\,dA_t
+ +\frac{2rM}{m}\int_0^s\!\int_{X_t}|R(K)|\,dA_t\,du.
+\end{equation}
+The constants do not use a spectral gap or a Sobolev constant of $X_t$.
+\end{lemma}
+\begin{proof}
+For two exact flows, the Donaldson trace calculation gives
+$(\partial_s+\Delta_t)\sigma\le0$; see also
+\cite[Definition~2.3 and Proposition~2.4]{wang}, with the bundle
+morphism zero. We recall the pointwise calculation to fix conventions.
+Choose a time-independent holomorphic frame normal for $H$ at the
+point, with $H=I$ and $\partial H=0$. The curvature terms cancel
+between the time derivative and the scalar Laplacian of
+$\tr(H^{-1}K)$, leaving
+\[
+ -4a^{-1}\tr(K_{\bar z}K^{-1}K_z)\le0.
+\]
+This is nonpositive because $K_{\bar z}=K_z^*$. Interchanging
+$H,K$ proves the same assertion for the inverse trace.
+
+Relative to the exact comparison velocity, the actual velocity of
+$K$ has the additional term $KR(K)$. Its contribution to the two
+trace derivatives is respectively $\tr(hR)$ and $-\tr(Rh^{-1})$.
+This proves \eqref{eq:forced-sigma}. Both $h$ and $R$ are
+$K$-self-adjoint, since $Kh=KH^{-1}K$ is Hermitian. Therefore
+\[
+ |\tr((h-h^{-1})R)|
+ \le(\tr h+\tr h^{-1})|R|
+ \le 2r(M/m)|R|.
+\]
+Integration over the whole compact fibre removes the Laplacian;
+the metric and area form are fixed during the flow. This gives
+\eqref{eq:integrated-sigma}.
+\end{proof}
+
+If $e^{b_j}$ are the eigenvalues of $H^{-1}K$, then
+\[
+ d(H,K)^2=\sum_j b_j^2
+ \le\sum_j(e^{b_j}+e^{-b_j}-2)=\sigma(H,K),
+\]
+which proves the inequality in \eqref{eq:sigma}.
+
+\begin{lemma}\label{lem:existence-bounds}
+For every fixed smooth compact fibre and smooth positive initial
+metric, the HYM metric flow exists smoothly for all $s\ge0$.
+For the trivial holomorphic bundle, initial bounds $cI\le H(0)\le CI$
+imply the same bounds at every later time. These comparison constants
+are independent of the degeneration parameter.
+\end{lemma}
+\begin{proof}
+The first assertion is the classical compact-base existence theorem
+for Donaldson's heat flow \cite{donaldson}; the convention
+\eqref{eq:hym-intro} and the all-time statement are also given in
+\cite[Section~4.1, equation~(4.8) and following paragraph]{hkkp}.
+The order-preservation principle
+\cite[Proposition~4.3]{hkkp} compares the solution with the two
+stationary constant matrix metrics $cI,CI$. Neither comparison
+changes as the base parameter varies. Determinant one follows from
+the scalar heat equation for $\log\det H$.
+\end{proof}

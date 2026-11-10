@@ -754,5 +754,99 @@
     ],
     "number": 22,
     "directory": "22_cy_hodge_spectrum"
+  },
+  {
+    "paper": "curve_intersection_spectrum",
+    "title": "Small eigenvalues on degenerating curves and the intersection form",
+    "date": "2026-11-10",
+    "revision_date": "2026-11-10",
+    "website_slug": "curve-intersection-spectrum",
+    "pages": 11,
+    "pdf_sha256": "23313f9655829dfe3108fe36f4eb7ce7cdcc339c3457a1f4948d62cd8627afb0",
+    "source_sha256": "2ec04c24d4889b60b47d1534fc0bfde02cdc689ebd0a8e122c28dd2aa220ab26",
+    "download_filename": "curve-intersection-spectrum.pdf",
+    "source_files_sha256": {
+      "main.tex": "2ec04c24d4889b60b47d1534fc0bfde02cdc689ebd0a8e122c28dd2aa220ab26",
+      "curve-intersection-spectrum.pdf": "23313f9655829dfe3108fe36f4eb7ce7cdcc339c3457a1f4948d62cd8627afb0",
+      "README.md": "5589b8c1e01bb4619fddb0932808ddf305d4387d725293ad03cd3000fcfaaea8"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.24120959",
+      "conceptdoi": "10.5281/zenodo.24120958",
+      "record_url": "https://zenodo.org/records/24120959",
+      "created": "2026-11-10T22:26:07.943548+00:00",
+      "id": 24120959
+    },
+    "number": 23,
+    "directory": "23_curve_intersection_spectrum"
+  },
+  {
+    "paper": "nodal_threefold_spectrum",
+    "title": "Small Hodge eigenvalues on nodal degenerations of threefolds",
+    "date": "2026-11-10",
+    "revision_date": "2026-11-10",
+    "website_slug": "nodal-threefold-spectrum",
+    "pages": 17,
+    "pdf_sha256": "2d59643aa6a03d026d1f0b29678372fd249acdb0aad729fb9c162e6ae5848c80",
+    "source_sha256": "a9fbe267a3716fa7cbd01a76bec96dbccd8e3684c35b7316dad011a71923b45c",
+    "download_filename": "nodal-threefold-spectrum.pdf",
+    "source_files_sha256": {
+      "main.tex": "a9fbe267a3716fa7cbd01a76bec96dbccd8e3684c35b7316dad011a71923b45c",
+      "preamble.tex": "4fda290d4acc87af7fa51316bf35e295ef02206737df8e39346264909df44524",
+      "references.tex": "e2de42012ccd770123cc083c321c5bf09852f571bf9844208a4460b16a59cb6b",
+      "sections/01_intro.tex": "a333f121e82bcfd7b7ba6b98de8c8055b84b05561dcb356f18d40c99bacd5dcd",
+      "sections/02_node.tex": "bc9119f39671dac479381634ca14e9433e92d609cc731317e2e180a6013c0906",
+      "sections/03_harmonic.tex": "468ad80f55923426d830936b7ec879270d0be76735ba6191dadd7025dfccba46",
+      "sections/04_models.tex": "1281d838b8527d57e8cab03a60e5bbd9fe4aa5de15589944136373591b04bdca",
+      "sections/05_proof.tex": "d75690e4cda47c6fccb8dd21f818ac90df64a7ba85ce256dde708077c11c30cb",
+      "sections/06_examples.tex": "ffedd8eb48a7b5b3560d9f474079e3ebcf760a7ea6284742ef10f9e10cb2c0fe",
+      "nodal-threefold-spectrum.pdf": "2d59643aa6a03d026d1f0b29678372fd249acdb0aad729fb9c162e6ae5848c80",
+      "README.md": "e90c6e83ebf6619bef4810e0f986c12373538932a20fb2daa294beb7c44b9844"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.24120961",
+      "conceptdoi": "10.5281/zenodo.24120960",
+      "record_url": "https://zenodo.org/records/24120961",
+      "created": "2026-11-10T22:26:11.529114+00:00",
+      "id": 24120961
+    },
+    "number": 24,
+    "directory": "24_nodal_threefold_spectrum"
+  },
+  {
+    "paper": "hym_nodal_curves",
+    "title": "Effective Hermitian–Yang–Mills flow on nodal degenerations of curves",
+    "date": "2026-11-10",
+    "revision_date": "2026-11-10",
+    "website_slug": "effective-hym-nodal-curves",
+    "pages": 16,
+    "pdf_sha256": "dec34cd32e400b9a53e8d81e1c10504fe27ba54d22d670751d7a542b4c3b6e9d",
+    "source_sha256": "595f633638d60fb0db7c66ff4e95d35c975746eaa9e63905bdf00c4417df284b",
+    "download_filename": "effective-hym-nodal-curves.pdf",
+    "source_files_sha256": {
+      "main.tex": "595f633638d60fb0db7c66ff4e95d35c975746eaa9e63905bdf00c4417df284b",
+      "preamble.tex": "d335f65f8bf0ab0692e7ce995bb2e9d004dda68ef866a45a90a496f5bded4886",
+      "references.tex": "4e12b8d04141b960e91cdfcc7f4c9ee316ff6632a718af93c56ea09cb95e61da",
+      "sections/01_introduction.tex": "954bc2d1420dd5a42c9438ebd57b8024cc41ac67f588ee008b9b4195b8449110",
+      "sections/02_matrix_flow.tex": "80468cacfe0a46fc663b06cbc49c13f8b51382b9ac597c2a4cd3a9943e89fa6f",
+      "sections/03_plumbing.tex": "431fd78b62ddf5661026b9d5d2858e5c73a9d99b12e8fd9fb7b82814a7953a01",
+      "sections/04_approximation.tex": "8191052666407295d88be555abc70a665d3c9825093e17e66cf6468c6565506e",
+      "sections/05_tracking.tex": "60d6ba255951f8acd4807f25bc8ca9184847eb09736545d520151aa38ad77507",
+      "sections/06_spectrum.tex": "8476946cf73e45d35b447bc4370e18bd11de81248b084b985d61fee4d8c6083a",
+      "sections/07_example.tex": "ba810a7f8f7ad26dabf245a86c27be11199e90a44bf8d1778226d61d9c9c44fe",
+      "effective-hym-nodal-curves.pdf": "dec34cd32e400b9a53e8d81e1c10504fe27ba54d22d670751d7a542b4c3b6e9d",
+      "figures/code/compute_initial_model.py": "6b6422cba134ec622a5e7f289f3512d42f86d2b02f2acf48954bbcc8834e8a92",
+      "figures/code/compute_initial_model.json": "00551e03fc7506814f5a04f26deca14ab7791a4e0402e38ceecb7aa642b7a7c9",
+      "README.md": "0c67d90565189a4e49bc44955f116b91020dd8314631170ff03f5b294332e23a"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.24120966",
+      "conceptdoi": "10.5281/zenodo.24120965",
+      "record_url": "https://zenodo.org/records/24120966",
+      "created": "2026-11-10T22:27:23.229828+00:00",
+      "id": 24120966
+    },
+    "number": 25,
+    "directory": "25_hym_nodal_curves"
   }
 ]

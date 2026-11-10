@@ -1,0 +1,82 @@
+\section{Tracking the actual metric flow}\label{sec:tracking}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The construction in Section~\ref{sec:approximation} defines
+$\widehat H_t$ from the global finite trajectory. It gives uniform
+matrix bounds on each bounded slow-time interval and proves
+\eqref{eq:approx-thick-intro}.
+Lemma~\ref{lem:existence-bounds} gives the actual solution for all
+physical times and preserves its initial bounds $cI\le H_t\le CI$.
+Thus actual and comparison metrics satisfy common two-sided bounds
+on $0\le s\le TL$, independently of $t$.
+
+Apply Lemma~\ref{lem:comparison} to the two families and use
+Proposition~\ref{prop:residual}. Uniformly for $0\le s\le TL$,
+\begin{equation}\label{eq:global-sigma}
+ \int_{X_t}\sigma(H_t(s),\widehat H_t(s))\,dA_t
+ \le\eta_t+C_T\frac{(1+\log L)^2}{L}.
+\end{equation}
+Since $d^2\le\sigma$, this proves \eqref{eq:global-main}. The
+integration is on the entire smooth compact fibre; no boundary
+terms from truncated components have been omitted.
+
+Fix $K_i\Subset U_i\Subset C_i\setminus\operatorname{Sing}X_0$.
+The transported base geometry is uniformly smooth and elliptic on
+$U_i$. For small $t$, the approximate residual there is
+$O_T(L^{-2})$. The nonnegative scalar function
+$u=\sigma(H_t,\widehat H_t)$ therefore satisfies
+\[
+ (\partial_s+\Delta_t)u\le C_TL^{-2}
+\]
+on that region. Choose finitely many interior coordinate balls
+covering $K_i$, with doubled balls contained in $U_i$ and radii
+at most $1/2$. All choices are independent of $t$.
+
+For a backwards parabolic cylinder ending at $s_0\ge1$, the
+function $u+C_TL^{-2}(s_0-s)$ is a nonnegative homogeneous
+subsolution. The local scalar parabolic mean-value inequality
+\cite[Theorem~5.1]{saloff-coste}, with exponent one, gives
+\[
+ \sup_{K_i(t)}u(s_0)
+ \le C_{K_i,T}\left(
+       \int_{s_0-1}^{s_0}\!\int_{X_t}u\,dA_t\,ds+L^{-2}\right).
+\]
+The ball radii and coefficient bounds determine the constant. Only
+fixed compact charts are used, so no global Sobolev constant of the
+degenerating fibre enters. The bound holds up to the upper time
+endpoint by continuity. Substituting \eqref{eq:global-sigma} and
+then using \eqref{eq:approx-thick-intro} and the triangle inequality
+for $d$ proves \eqref{eq:local-main}.
+\end{proof}
+
+\begin{corollary}\label{cor:initial-components}
+Suppose $cI\le H_t^{\mathrm{in}}\le CI$ and, on every fixed compact
+component subset, the initial metric matrices converge in $L^2$ to
+$H_i^0$. Then the initial-error hypothesis of Theorem~\ref{thm:main}
+holds. In particular initial derivatives may be unbounded as $t\to0$.
+\end{corollary}
+\begin{proof}
+On a common compact range of positive matrices, $\sigma$ is bounded
+by a constant times squared Euclidean matrix difference. On each
+fixed thick subset, $\widehat H_t(0)$ converges uniformly to $H_i^0$,
+so the integral of $\sigma(H_t^{\mathrm{in}},\widehat H_t(0))$ there
+tends to zero. The trace function is uniformly bounded everywhere.
+The omitted node regions have area at most $C\rho_0^2$ for a fixed
+small outer cutoff $\rho_0$, by Lemma~\ref{lem:plumbing}.
+First send $t\to0$ for fixed $\rho_0$, then $\rho_0\to0$.
+\end{proof}
+
+The local estimate uses a fixed physical transient of length one;
+any fixed positive transient can be obtained by choosing smaller
+interior cylinders. On a fixed interval $\delta\le\tau\le T$ with
+$\delta>0$, this transient is automatically passed for small $t$.
+The global estimate applies from the initial time. It allows bounded
+initial variation on the neck because its area tends to zero, but
+does not imply pointwise approximation of that variation at time zero.
+
+The finite equation is the leading evolution on the specified time
+scale. The reconstructed metrics contain additional component and
+endpoint corrections needed to make their accumulated residual small.
+The argument does not identify the finite equation with an exact
+invariant-manifold restriction of HYM at fixed $t$, and does not
+replace finite $T$ by an unbounded slow-time interval.

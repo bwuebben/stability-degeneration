@@ -1,0 +1,83 @@
+\section{Examples and remarks}\label{sec:examples}
+
+\begin{example}[Determinantal hypersurfaces]\label{ex:determinantal}
+Let $d\ge2$, let $l_1,l_2$ be independent linear forms on $\PP^4$ and
+$f_1,f_2$ general forms of degree $d-1$, and put
+\[
+ X_0=\{F_0=0\},\quad F_0=l_1f_2-l_2f_1,\qquad
+ \cX=\{(t,x)\in\DD\times\PP^4:\ F_0(x)+tP(x)=0\},
+\]
+where $P$ is a form of degree $d$ that does not vanish at the points of
+$\{l_1=l_2=f_1=f_2=0\}$, and $\DD$ is a small disc. Let $\omega$ be the
+restriction to $\cX$ of $\tfrac i2dt\wedge d\bar t+\omega_{FS}$, where
+$\omega_{FS}$ is the Fubini--Study form with $[\omega_{FS}]=c_1(\OO(1))$;
+thus $g_t$ is the Fubini--Study metric on the hypersurface $X_t$.
+
+The singular set of $X_0$ consists of the $(d-1)^2$ points of
+$\{f_1=f_2=0\}$ in the plane $\{l_1=l_2=0\}$, which are ordinary double
+points: there $(l_1,l_2,f_1,f_2)$ are local coordinates on $\PP^4$. The
+total space $\cX$ is smooth at these points because
+$\partial_t(F_0+tP)=P\ne0$, and smooth elsewhere near $X_0$. A small
+resolution is the complete intersection
+\[
+ Y=\{\zeta_0l_1+\zeta_1l_2=0,\ \zeta_0f_1+\zeta_1f_2=0\}
+ \subset\PP^4\times\PP^1 ,
+\]
+of the ample classes $H+L$ and $(d-1)H+L$, where $H$ and $L$ are the
+hyperplane classes of the factors. The first divisor is the blow-up of
+$\PP^4$ along the plane, on which the second linear system is base-point
+free, so $Y$ is smooth for general $f_1,f_2$ by Bertini's theorem, and
+$X_0$ is smooth away from the $(d-1)^2$ points because $Y\to X_0$ is an
+isomorphism there. By the Lefschetz theorem, applied
+twice, $b_1(Y)=0$ and $H^2(Y;\ZZ)=\ZZ H\oplus\ZZ L$, and likewise
+$b_2(X_t)=1$. Thus the hypotheses of Theorem~\ref{thm:main} hold, with
+$K=\RR H$ and $m=1$. From the class of $Y$,
+\[
+ \int_YH^3=d,\qquad\int_YH^2L=d-1,\qquad\int_YHL^2=0,
+\]
+and each exceptional curve is a fibre of the projection to $\PP^4$, so
+$H\cdot C_i=0$ and $L\cdot C_i=1$. By \eqref{eq:rank-one} with $D=L$,
+\[
+ \mu_1=\frac{(d-1)^2}{(d-1)^2/d-0}=d,\qquad
+ \lambda^+_{2,1}(t)=\frac{2\pi d}{\log(1/|t|)}\,(1+o(1)).
+\]
+For $d=5$ this is the split quintic, and the coefficient $10\pi$ is the
+one found in \cite{wuebben-conifold} for the Ricci-flat metrics in the
+class $c_1(\OO(1))$.
+\end{example}
+
+\begin{remark}[Dependence on the metric]\label{rem:metric}
+The limits in Theorem~\ref{thm:main} depend on $\omega$ only through the
+class $H$. For the Ricci-flat metrics of a polarized Calabi--Yau conifold
+transition the same limits are proved in \cite{wuebben-conifold}, with the
+logarithm taken along a ray. There the tangent cone at a node is the
+Ricci-flat conifold, with radial function homogeneous of degree $2/3$ in
+the coordinates of \eqref{eq:normal-form}; the constant
+\eqref{eq:link-constant} is $2\pi/3$ and the scale is $|t|^{1/3}$, in
+place of $\pi$ and $|t|^{1/2}$, and the product
+$c/\log(1/\epsilon)=2\pi/\log(1/|t|)$ is the same. In both cases
+$\|\vartheta\|^2_{L^2(L)}=2\pi\alpha\cdot(-\int_{Z_\sigma}\vartheta_Z^2)
+=\pi\alpha$ and $\epsilon=|t|^{\alpha/2}$, where $\alpha$ is the degree of
+homogeneity of the radial function in the coordinates of
+\eqref{eq:normal-form} ($\alpha=1$ here and $\alpha=2/3$ for the
+Ricci-flat cone).
+\end{remark}
+
+\begin{remark}[The form $G$]\label{rem:G}
+The form $G$ of \eqref{eq:gram} agrees with the Hodge--Riemann form of
+the class $H$ on the primitive classes and is positive on $\RR H$: it is $-\int_YD^2H$ on classes
+with $\int_YDH^2=0$, and $\tfrac12\int_YH^3$ on $H$. The resolution $Y$ enters
+only through its cohomology ring; the form $B$ is unchanged by flops of
+the curves $C_i$, since $H\cdot C_i=0$, and $\per$ changes by signs, so $\cE$, $\cM$ and the
+$\mu_j$ are unchanged.
+\end{remark}
+
+\begin{remark}[Scope]\label{rem:scope}
+The theorem concerns one-parameter families with smooth total space, so
+that every node is smoothed to first order; families in which the nodes
+are smoothed at different rates, and the next term in
+\eqref{eq:main}, are not addressed. The small two-form eigenvalues are
+accompanied by eigenvalues of the same size on exact three-forms and on
+their Hodge duals, and we do not determine the complete small spectrum in
+degree three.
+\end{remark}

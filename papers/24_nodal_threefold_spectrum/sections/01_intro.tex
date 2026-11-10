@@ -1,0 +1,178 @@
+\section{Introduction}\label{sec:intro}
+
+\subsection{The result}
+Let $\cX$ be a connected complex manifold of dimension four with a
+K\"ahler form $\omega$, let $\DD\subset\CC$ be a disc centred at the
+origin, and let
+\[
+ \pi:\cX\longrightarrow\DD
+\]
+be a proper surjective holomorphic map with connected fibres
+$X_t=\pi^{-1}(t)$, which is a submersion over $\DD\setminus\{0\}$. We
+assume that the fibre over the origin is reduced and that $X_0$ has
+exactly $N\ge1$ singular points
+$p_1,\ldots,p_N$, each an ordinary double point. For $t\ne0$ let $g_t$ be
+the K\"ahler metric induced by $\omega$ on the smooth threefold $X_t$,
+and let
+\[
+ 0<\lambda^+_{2,1}(t)\le\lambda^+_{2,2}(t)\le\cdots
+\]
+be the positive eigenvalues of its Hodge Laplacian $dd^*+d^*d$ on real
+two-forms, with multiplicity.
+
+Let $q:Y\to X_0$ be a small resolution: $Y$ is a complex manifold, $q$ is
+an isomorphism over $X_0\setminus\{p_1,\ldots,p_N\}$, and the
+$C_i=q^{-1}(p_i)$ are smooth rational curves. Small resolutions exist as complex manifolds, since each node has two
+local ones; $Y$ need not be K\"ahler, and the hypotheses below do not
+require it. We assume
+\begin{equation}\label{eq:hypotheses}
+ b_1(Y)=0,\qquad H^2(Y;\RR)\ \text{is spanned by first Chern classes of
+ holomorphic line bundles.}
+\end{equation}
+Both conditions hold, for instance, when $Y$ is projective with
+$H^1(Y,\OO_Y)=H^2(Y,\OO_Y)=0$. Put $V=H^2(Y;\RR)$ and
+$H=[q^*\omega]\in V$, and define
+\begin{equation}\label{eq:intro-data}
+\begin{split}
+ \per&:V\longrightarrow\RR^N,\qquad \per(D)=(D\cdot C_i)_i,\qquad K=\ker\per,\\
+ G(D,E)&=-\int_YD\,E\,H+\frac{3\,(\int_YD\,H^2)(\int_YE\,H^2)}
+ {2\int_YH^3}.
+\end{split}
+\end{equation}
+The vector $\per(D)$ records the degrees of $D$ on the exceptional
+curves. The kernel $K$ is the image of $H^2(X_t;\RR)$ under restriction to the
+complement of small neighbourhoods of the nodes, which is common to all
+fibres, and it contains $H$ (Lemma~\ref{lem:topology}). We show that $G$ is
+positive definite; it is the $L^2$ inner product of the harmonic
+representatives on the regular part of $X_0$, and on
+$\{\int_YDH^2=0\}$ it agrees with the Hodge--Riemann form
+$-\int_YD\,E\,H$ of $H$. These classes are $G$-orthogonal to $H$, and
+$G(H,H)=\tfrac12\int_YH^3$. Let $\cM$
+be the form induced by $G$ on $V/K$, that is, the restriction of $G$ to
+the $G$-orthogonal complement of $K$; equivalently
+\[
+ \cM([D],[D])=\min_{k\in K}G(D+k,D+k).
+\]
+Let $\cE([D],[E])=\per(D)\cdot\per(E)$, and let
+\[
+ 0<\mu_1\le\cdots\le\mu_m,\qquad m=\dim V/K=b_2(Y)-b_2(X_t),
+\]
+be the eigenvalues of $\cE$ relative to $\cM$, that is, the roots of
+$\det(\cE-\mu\cM)=0$. They do not depend on the choice of small
+resolution (Remark~\ref{rem:G}).
+
+\begin{theorem}\label{thm:main}
+Under the preceding hypotheses,
+\begin{equation}\label{eq:main}
+ \lim_{t\to0}\,\log(1/|t|)\,\lambda^+_{2,j}(t)=2\pi\mu_j
+ \qquad(1\le j\le m).
+\end{equation}
+There is $\gamma>0$ such that, for all sufficiently small $t\ne0$, the
+positive eigenvalues of the Hodge Laplacian on one-forms and the
+eigenvalues $\lambda^+_{2,j}(t)$ with $j>m$ are at least $\gamma$. For
+such $t$ the eigenforms for $\lambda^+_{2,1}(t),\ldots,\lambda^+_{2,m}(t)$
+are coexact, primitive and of type $(1,1)$.
+\end{theorem}
+
+Thus the number of small eigenvalues is the number of independent classes
+in $H^2(Y)$ that do not extend to the smooth fibres, and the limits are
+computed from the intersection form of $Y$, the class of the metric and
+the degrees of these classes on the exceptional curves. When $m=1$ and
+$K=\RR H$,
+\begin{equation}\label{eq:intro-rank-one}
+ \lambda^+_{2,1}(t)=\frac{2\pi\sum_i(D\cdot C_i)^2}
+ {(\int_YDH^2)^2/\int_YH^3-\int_YD^2H}\ \frac{1+o(1)}{\log(1/|t|)}
+\end{equation}
+for any class $D$ independent of $H$. For the determinantal hypersurface
+$\{l_1f_2-l_2f_1=0\}\subset\PP^4$ of degree $d\ge2$, with $(d-1)^2$
+nodes, smoothed in a pencil and given the Fubini--Study metric with lines
+of area one, the coefficient is $2\pi d$
+(Example~\ref{ex:determinantal}).
+
+\subsection{Relation to earlier work}
+Ann\'e and Takahashi \cite{anne-takahashi} study the Hodge--de Rham
+operator on a manifold in which a compact piece with conical boundary is
+scaled to zero. They determine the multiplicity of zero in the limit
+spectrum and obtain convergence of the remaining spectrum; in degrees
+related to the cohomology of the link they construct test forms of
+energy $O(1/|\log\epsilon|)$ in the scaling parameter $\epsilon$, which
+bounds certain eigenvalues above. We use their compactness results
+\cite[Corollary~17 and Lemma~18]{anne-takahashi}. The leading constants of such eigenvalues are not determined there.
+
+In \cite{wuebben-conifold} the limits \eqref{eq:main} are proved, along
+rays $t\to0$, for the Ricci-flat K\"ahler metrics in a polarized
+Calabi--Yau conifold transition, with the same forms $\cE$ and $\cM$.
+That proof uses the description of the Ricci-flat metrics near the
+singular fibre due to Hein and Sun \cite{hein-sun} and Benabida
+\cite{benabida}. For the induced metrics considered here the geometry
+near the nodes is explicit (Lemma~\ref{lem:normal-form}), no condition
+on the canonical bundle is needed, and the limit is taken over all
+$t\to0$, not only along rays. The tangent cone at a node, its link, the local smoothing of the cone,
+and the constants attached to them differ from the Ricci-flat case, while the
+limits agree whenever both theorems apply
+(Remark~\ref{rem:metric}); the limits depend on the K\"ahler metric only
+through its class, because the squared norm of the harmonic form on the
+link and the logarithm of the scale of the local smoothing change by the
+same factor (Remark~\ref{rem:metric}). The statement about types is proved differently
+here, without a parallel holomorphic volume form
+(Proposition~\ref{prop:type}).
+
+The spectral argument of Section~\ref{sec:spectrum} adapts that of
+\cite[Sections~4--6]{wuebben-conifold} to the cone $\{\sum_j\sigma_jw_j^2=0\}\subset\CC^4$ of
+Section~\ref{sec:node}; we
+give it in full, so that no result of \cite{wuebben-conifold} is used.
+New here are the models of Section~\ref{sec:node},
+the construction of the harmonic representatives without a Ricci-flat
+background (Proposition~\ref{prop:harmonic}), the passage to arbitrary
+$t\to0$ (Lemma~\ref{lem:condition-N}), and the proof of the statement
+about types.
+
+For functions, small eigenvalues of metrics induced on degenerating
+families are studied by Dai and Yoshikawa \cite{dai-yoshikawa} for curves
+and by Cao \cite{cao} in all dimensions; they have order
+$1/\log(1/|t|)$, and for a reduced central fibre their number is the
+number of its components minus one
+\cite[Theorem~0.2]{dai-yoshikawa}, \cite[Theorem~0.4]{cao}. Dai and Yoshikawa raise the question
+of small eigenvalues for forms of higher degree: for $(n,0)$-forms with
+induced metrics and for forms of type $(p,q)$ with K\"ahler--Einstein
+metrics of negative scalar curvature
+\cite[Conjecture~9.5 and Problem~9.7]{dai-yoshikawa}.
+Theorem~\ref{thm:main} is a result of this kind in a case not covered by
+those formulations, two-forms of type $(1,1)$ with induced metrics
+on threefolds acquiring ordinary double points; here the central fibre
+is irreducible and there are no small eigenvalues on functions.
+
+\subsection{Method}
+In suitable holomorphic coordinates at a node the map $\pi$ is a
+diagonal quadratic form $\sum_j\sigma_jw_j^2$ and $\omega$ is the flat
+K\"ahler form up to terms vanishing at the node. For the flat form, the
+fibres of $\pi$ near the node are exact rescalings, by $|t|^{1/2}$, of
+the affine quadric $\{\sum_j\sigma_jw_j^2=1\}$, and the central fibre is
+the cone over a circle bundle $L_\sigma$ over a quadric surface. The
+harmonic two-form on $L_\sigma$ representing a generator of
+$H^2(L_\sigma;\ZZ)$ has squared $L^2$ norm $\pi$, independently of $\sigma$ (Lemma~\ref{lem:link-form}).
+
+A class $D\in V$ has a closed and coclosed representative on the regular
+part of $X_0$, asymptotic to $(D\cdot C_i)$ times that form at the
+$i$th node (Proposition~\ref{prop:harmonic}). It extends to a closed
+form on $X_t$ only if all these periods vanish. Otherwise, cutting it
+off between the scale $|t|^{1/2}$ of the rescaled affine quadric and a
+fixed scale costs energy, that is $\|d\psi\|^2+\|d^*\psi\|^2$, equal to
+$\pi\sum_i(D\cdot C_i)^2/\log(1/|t|^{1/2})$ to leading order, and a lower bound for the energy on the affine quadric shows that no form with the same periods
+has less (Lemma~\ref{lem:cap-energy}). The limits \eqref{eq:main} follow
+from this on the model manifolds of Definition~\ref{def:model}, which
+are exactly conical near the nodes (Theorem~\ref{thm:model-law}), using the compactness theorem of
+\cite{anne-takahashi}, and are transferred to the metrics $g_t$ by
+Dodziuk's comparison of Hodge eigenvalues for uniformly equivalent
+metrics \cite{dodziuk}, which requires only that $g_t$ be close to the
+models in $C^0$ (Lemma~\ref{lem:condition-N}). The statement about types
+follows because the projection onto forms of type $(2,0)+(0,2)$ commutes
+with the Laplacian of a K\"ahler metric, while the limits of the small
+eigenforms are of type $(1,1)$.
+
+\subsection{Organization}
+Section~\ref{sec:node} contains the local geometry and the models,
+Section~\ref{sec:harmonic} the harmonic representatives and the form $G$,
+Section~\ref{sec:spectrum} the spectral analysis of the models, and
+Section~\ref{sec:proof} the proof of Theorem~\ref{thm:main}.
+Section~\ref{sec:examples} contains the example and remarks.

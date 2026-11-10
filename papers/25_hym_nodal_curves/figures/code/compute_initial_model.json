@@ -1,0 +1,49 @@
+{
+  "status": "finite algebra passed; no analytic theorem certified",
+  "H1": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "H2": [
+    [
+      "2",
+      "0"
+    ],
+    [
+      "0",
+      "1/2"
+    ]
+  ],
+  "H3": [
+    [
+      "5/3",
+      "4/3"
+    ],
+    [
+      "4/3",
+      "5/3"
+    ]
+  ],
+  "commutator": [
+    [
+      "0",
+      "2"
+    ],
+    [
+      "-2",
+      "0"
+    ]
+  ],
+  "graph_eigenvalues": {
+    "3": 2,
+    "0": 1
+  },
+  "rank_two_positive_mode_count": 6,
+  "rank_two_leading_coefficient": "6*pi"
+}

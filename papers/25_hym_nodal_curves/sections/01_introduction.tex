@@ -1,0 +1,189 @@
+\section{Introduction}\label{sec:intro}
+
+When a compact curve separates into several components, the scalar
+Laplacian acquires small eigenvalues associated with functions that are
+nearly constant on each component. For a bundle with parallel
+endomorphisms, the same phenomenon occurs in the linearization of
+Hermitian--Yang--Mills metric flow. We ask whether the evolving component
+metrics admit a finite-dimensional description with an error tending to
+zero as the curve degenerates.
+
+We prove such a description for a trivial holomorphic bundle. Its finite
+variables are positive Hermitian matrices, coupled across each node by
+their Riemannian logarithm. Component areas supply the masses. The
+equation is nonlinear even for the trivial bundle: metrics on three
+components need not admit a simultaneous diagonalization. The comparison
+holds for actual HYM solutions on intervals whose physical length grows
+like the logarithm of the inverse smoothing parameter.
+
+\subsection{The family and finite equation}
+Let $\pi:\cX\to\Delta$ be a proper holomorphic map from a smooth complex
+surface to a disc, with connected fibres. Assume that $\cX$ carries a
+smooth K\"ahler form $\omega$, that $X_t=\pi^{-1}(t)$ is smooth for
+$t\ne0$, and that $X_0=C_1\cup\cdots\cup C_N$ is reduced, with smooth
+irreducible components and only ordinary nodes. Each node joins two
+distinct components. Let $\mathcal E$ be the set of nodes, regarded as
+edges of the component graph, retaining repeated edges. Put
+\[
+ A_i=\int_{C_i}\omega>0,\qquad L=L(t)=\log(1/|t|).
+\]
+All statements are uniform in the argument of sufficiently small $t$.
+The induced metric on $X_t$ stays fixed during each flow.
+
+Fix the trivial holomorphic rank-$r$ bundle, $r\ge2$, with its global
+frame and determinant metric one. Write
+\[
+ \cP_r=\{H=H^*>0:\det H=1\}.
+\]
+Its symmetric-space metric and distance are
+\begin{equation}\label{eq:target-metric}
+ g_H(U,V)=\tr(H^{-1}UH^{-1}V),\qquad
+ d(H,K)^2=\tr\bigl(\log(H^{-1/2}KH^{-1/2})^2\bigr).
+\end{equation}
+The principal matrix logarithm $\log(H^{-1}K)$ is self-adjoint for $H$;
+it need not be Hermitian in the fixed frame.
+
+Given $\mathbf H^0\in\cP_r^N$, define $\mathbf H(\tau)$ by
+\begin{equation}\label{eq:finite-flow}
+ A_iH_i^{-1}\frac{dH_i}{d\tau}
+ =2\pi\sum_{p:\,i\leftrightarrow j}\log(H_i^{-1}H_j),
+ \qquad H_i(0)=H_i^0.
+\end{equation}
+There is one summand for each incident node. This is the negative
+gradient flow of
+\begin{equation}\label{eq:graph-energy}
+ \mathscr E(\mathbf H)=\pi\sum_{p:\,i\leftrightarrow j}d(H_i,H_j)^2
+\end{equation}
+for the product metric with weights $A_i$, each edge occurring once in
+the energy. It has a global solution in a compact subset of $\cP_r^N$
+(Lemma~\ref{lem:finite-flow}). For later comparison put
+\begin{equation}\label{eq:sigma}
+ \sigma(H,K)=\tr(H^{-1}K)+\tr(K^{-1}H)-2r\ge d(H,K)^2.
+\end{equation}
+
+\subsection{Actual-flow tracking}
+Our HYM convention is
+\begin{equation}\label{eq:hym-intro}
+ H^{-1}\partial_sH=-2i\Lambda_{\omega_t}F_H,
+ \qquad F_H=\bar\partial(H^{-1}\partial H).
+\end{equation}
+The degree and central curvature constant are zero. The variable $s$
+is physical time and $\tau=s/L$ is slow time. For compact
+$K_i\Subset C_i\setminus\operatorname{Sing}X_0$, let $K_i(t)\subset X_t$
+be its image under the identifications of Lemma~\ref{lem:plumbing}.
+All global integrals use $dA_t=\omega|_{X_t}$.
+
+\begin{theorem}\label{thm:main}
+For every initial tuple $\mathbf H^0$ there are smooth determinant-one
+metrics $\widehat H_t(s)$ on the trivial bundle with the following
+properties. For every fixed $T<\infty$, they and their inverses are
+uniformly bounded for $0\le s\le TL$, and
+\begin{equation}\label{eq:approx-thick-intro}
+ \sup_{0\le s\le TL}\sup_{K_i(t)}
+ d(\widehat H_t(s),H_i(s/L))\le C_{K_i,T}/L.
+\end{equation}
+Let $H_t^{\mathrm{in}}$ be smooth determinant-one metrics satisfying
+$cI\le H_t^{\mathrm{in}}\le CI$ with constants independent of $t$, and
+assume that
+\[
+ \eta_t=\int_{X_t}\sigma(H_t^{\mathrm{in}},\widehat H_t(0))\,dA_t
+ \longrightarrow0.
+\]
+The actual HYM solution $H_t(s)$ exists smoothly for all $s\ge0$, and
+\begin{equation}\label{eq:global-main}
+ \sup_{0\le s\le TL}\int_{X_t}d(H_t(s),\widehat H_t(s))^2\,dA_t
+ \le\eta_t+C_T\frac{(1+\log L)^2}{L}.
+\end{equation}
+For each fixed compact $K_i$ one also has
+\begin{equation}\label{eq:local-main}
+ \sup_{1\le s\le TL}\sup_{K_i(t)}d(H_t(s),H_i(s/L))^2
+ \le C_{K_i,T}\left(\eta_t+\frac{(1+\log L)^2}{L}\right).
+\end{equation}
+The constants may depend on the fixed family, rank, initial tuple,
+$c,C$ and $T$, but not on $t$ or the spatial derivatives of the initial
+metrics. The interval in \eqref{eq:local-main} is nonempty for small $t$.
+\end{theorem}
+
+The comparison metrics are constructed from component Green functions,
+matrix exponentials and geodesics. In particular the initial class is
+nonempty: take $H_t^{\mathrm{in}}=\widehat H_t(0)$. Uniform bounds and
+$L^2$ convergence of the initial metrics to $H_i^0$ on every fixed
+compact component subset also imply $\eta_t\to0$, by the node-area bound.
+Initial derivatives and bounded initial neck values are unrestricted.
+
+The global estimate has no waiting time. The pointwise estimate has a
+fixed physical-time transient, equal to $1/L$ in slow time. It concerns
+fixed compact subsets away from the nodes and makes no assertion of
+uniform pointwise tracking through the shrinking neck. The theorem also
+does not assert tracking uniform as $T\to\infty$.
+
+\subsection{Linearized evolution and a compact example}
+At the constant identity metric, \eqref{eq:hym-intro} linearizes to the
+scalar heat equation on trace-free Hermitian matrix entries. Write $Q$
+for the component graph Laplacian, $A=\operatorname{diag}(A_i)$ and
+$B=2\pi A^{-1}Q$. The scalar theorem of \cite{wuebben-curves} gives
+$N-1$ small positive eigenvalues and a complementary gap.
+Theorem~\ref{thm:operator} identifies the low space by component averages
+and proves convergence of the rescaled heat evolution to $e^{-\tau B}$
+in operator norm. Tensoring gives $(N-1)(r^2-1)$ small positive modes
+and $r^2-1$ exact parallel modes. The finite matrix flow has the same
+linearization at a constant tuple.
+
+The cubic family $xyz=t(x^3+y^3+z^3)$ has a central triangle with
+component areas one in the normalized Fubini--Study metric. The tuple
+\begin{equation}\label{eq:example-tuple-intro}
+ I,\qquad\begin{pmatrix}2&0\\0&1/2\end{pmatrix},\qquad
+ \begin{pmatrix}5/3&4/3\\4/3&5/3\end{pmatrix}
+\end{equation}
+cannot be simultaneously diagonalized by a fixed complex congruence.
+Section~\ref{sec:example} verifies the geometry and the genuinely
+noncommuting initial data. Its rank-two positive linearized cluster
+has six modes, each asymptotic to $6\pi/L$.
+
+\subsection{Predecessors and proof}
+Donaldson's heat flow and metric comparison provide the analytic
+framework \cite{donaldson,hkkp}. Haiden--Katzarkov--Kontsevich--Pandit
+describe algebraically determined asymptotics on a fixed curve, and
+Lam treats broader fixed compact K\"ahler backgrounds under his stated
+hypotheses \cite{lam}. The local spectral and phase comparisons in
+\cite{wuebben-local,wuebben-phase} also concern fixed smooth
+backgrounds; their regularity constants cannot be assumed uniform
+under a nodal degeneration.
+
+Daskalopoulos--Wentworth already study actual Yang--Mills flow near
+the boundary of Teichm\"uller space \cite{dw}. Their uniform long-time
+argument uses a positive adjoint spectral gap when the limiting
+representations on the normalization components are irreducible;
+their spectral analysis also detects small adjoint eigenvalues.
+The componentwise parallel endomorphisms of the trivial bundle lie
+outside that gap regime. The present theorem computes their finite
+nonlinear evolution on logarithmic time and reconstructs actual flows.
+
+The intrinsic squared-distance graph energy and its logarithmic
+gradient are established constructions \cite{tav}. The assertion here
+is their occurrence with these geometric masses and capacities in an
+HYM degeneration. The HYM equation contains a commutator term absent
+from ordinary symmetric-space harmonic-map heat flow
+\eqref{eq:real-hym}. We retain that term and use exact stationary
+one-variable profiles only on the necks.
+
+Harmonic-map degeneration has a separate compactness theory.
+Zhu \cite{zhu} proves energy identities and compactness criteria for
+bounded-energy sequences of harmonic maps from degenerating hyperbolic
+surfaces to a compact target. Rupflin--Topping--Zhu \cite{rtz} study
+Teichm\"uller harmonic map flow, in which both the map and its hyperbolic
+domain metric evolve; for global solutions degenerating only at infinite
+time, they obtain subsequential limits given by branched minimal
+immersions or constant maps on compactified components. Here each induced
+fibre metric remains fixed during its HYM flow, and the comparison is
+uniform on bounded logarithmic time intervals. The commutator in
+\eqref{eq:real-hym} also distinguishes the two evolution equations.
+
+The proof adds Green-function corrections to the component metrics
+and matches them to geodesic neck profiles. The resulting curvature
+residual has space-time $L^1$ norm tending to zero on $0\le s\le TL$.
+A forced Donaldson trace inequality proves global tracking, and local
+scalar parabolic estimates give pointwise convergence away from the
+nodes. The argument does not require a global unweighted Schauder
+estimate uniform under degeneration. The separate spectral comparison
+provides uniform Hilbert-space inverse and heat bounds on the complement.

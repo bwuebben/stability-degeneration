@@ -1,0 +1,343 @@
+\section{The spectrum of the conic surgery models}\label{sec:spectrum}
+
+In this section $R$, $A$ and the unit $u$ are fixed, and we study the
+models $(\overline X_{\epsilon,u},\bar g_{\epsilon,u}^{R,A})$ of
+Definition~\ref{def:model} as $\epsilon\to0$. We abbreviate them
+$(\overline X_\epsilon,\bar g_\epsilon)$ and write $b=\dim V$, $s=\dim K$,
+$m=b-s$, $c=\pi$ for the constant of \eqref{eq:link-constant}, and
+$\ell_\epsilon=\log(1/\epsilon)$. The arguments follow
+\cite[Sections~4--6]{wuebben-conifold}, where the cone is the Ricci-flat
+conifold; we give them in full, since the cone, its link and the cap are
+different here and only the properties recorded in
+Section~\ref{sec:node} are used.
+
+\subsection{The energy of a period across a cap}
+For a smooth two-form $\psi$ on a region of a cone or of a cap that
+contains the section $\{r=T\}$, let
+\begin{equation}\label{eq:boundary-coefficient}
+ \mathsf B_\psi(T)=c^{-1}\int_{L}\psi_T\wedge*_h\vartheta ,
+\end{equation}
+where $\psi_T$ is the pull-back of $\psi$ to the link at radius $T$,
+regarded as a form on $L$. Since $*_h\vartheta$ is closed, $\mathsf
+B_\psi(T)$ is the coefficient of $\vartheta$ in the harmonic part of
+$\psi_T$, and it depends only on the class of $\psi_T$ when $\psi_T$ is
+closed.
+
+\begin{lemma}\label{lem:cap-energy}
+Let $(V_\sigma,g_V^A)$ be a cap, with radial function $r$ on its conical
+part $\{r\ge2A\}$. There is $C_A$ such that for every $T>2A$ and every
+smooth two-form $\psi$ on $V_\sigma\cap\{r\le T\}$,
+\begin{equation}\label{eq:cap-energy}
+ \int_{\{r\le T\}}\bigl(|d\psi|^2+|d^*\psi|^2\bigr)\,dV
+ \ge\frac{c\,|\mathsf B_\psi(T)|^2}{\log T+C_A}.
+\end{equation}
+The left side is unchanged when the metric is multiplied by a constant.
+\end{lemma}
+\begin{proof}
+By \eqref{eq:cap-topology} there is a closed three-form $\Xi$ on the
+compact set $\{r\le2A\}$ whose restriction to the boundary is
+$*_h\vartheta$. Stokes' theorem and the Cauchy--Schwarz inequality give
+\[
+ c\,\mathsf B_\psi(2A)=\int_{\{r\le2A\}}d\psi\wedge\Xi,\qquad
+ \int_{\{r\le2A\}}|d\psi|^2\ge\kappa_A|\mathsf B_\psi(2A)|^2,
+ \quad\kappa_A=c^2/\|\Xi\|^2_{L^2}.
+\]
+On the conical part write $\psi=\psi_r+dr\wedge\beta(r)$. The component
+of $d\psi$ along $dr\wedge\vartheta$ is $\mathsf B_\psi'(r)\,dr\wedge
+\vartheta$, because $d_L^*\vartheta=0$. Since
+$|dr\wedge\vartheta|^2=r^{-4}|\vartheta|_h^2$ and the volume density is
+$r^5dr\,dV_h$,
+\[
+ \int_{\{2A\le r\le T\}}|d\psi|^2\ge c\int_{2A}^Tr\,|\mathsf B_\psi'(r)|^2dr .
+\]
+Applying the Cauchy--Schwarz inequality to
+$\mathsf B_\psi(T)=\mathsf B_\psi(2A)+\int_{2A}^T\mathsf B_\psi'$ gives
+\[
+ |\mathsf B_\psi(T)|^2\le\Bigl(\kappa_A^{-1}+c^{-1}\log\frac T{2A}\Bigr)
+ \int_{\{r\le T\}}|d\psi|^2 ,
+\]
+which is \eqref{eq:cap-energy}. In dimension six the integrals of
+$|d\psi|^2$ and $|d^*\psi|^2$ for a two-form scale by
+$\epsilon^{6-6}$ and $\epsilon^{6-4-2}$ under $g\mapsto\epsilon^2g$.
+\end{proof}
+
+\subsection{Central harmonic forms}
+\begin{lemma}\label{lem:central-kernels}
+For the metric $g_0^R$ on $M_0$:
+\begin{enumerate}
+\item every smooth square-integrable closed and coclosed one-form
+vanishes;
+\item the smooth square-integrable closed and coclosed two-forms form a
+space $\mathcal H_R$ that maps isomorphically onto $V$; write
+$\eta^R_D$ for the element with class $D$;
+\item on the conical part $\{r<R\}$ of the end at $p_i$,
+\begin{equation}\label{eq:cone-expansion}
+ \eta^R_D=\per_i(D)\,\vartheta_i+d\beta_{D},\qquad
+ |\beta_D|=O(r^{\kappa-1}),\quad|d\beta_D|=O(r^{\kappa-2}),
+\end{equation}
+for some $\kappa>0$, with $\beta_D$ a one-form without $dr$-component whose
+restriction to each link section is coclosed, and with differentiated
+bounds;
+\item these forms lie in the minimal domain of $d+d^*$, that is, they are
+limits in the graph norm of compactly supported smooth forms.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+On an exactly conical end write a closed and coclosed two-form as
+$\psi=a(r)+dr\wedge b(r)$ and decompose
+$a(r)=c_0(r)\vartheta+d_Lv(r)$ with $v(r)$ coclosed on the link; there are
+no harmonic one-forms on $L$. Closedness gives $c_0'=0$ and that $b-v'$
+is closed; coclosedness then makes $b-v'$ harmonic, hence zero, and
+\[
+ b=v',\qquad r^{-2}\Delta_Lv-v''-3r^{-1}v'=0 .
+\]
+On the eigenspace of coclosed one-forms on $L$ with eigenvalue
+$\lambda_L>0$ the solutions are $r^{k_\pm}$ with
+$k_\pm=-1\pm\sqrt{1+\lambda_L}$. The corresponding two-forms have
+pointwise size $r^{k_\pm-2}$, and are square integrable near the vertex
+exactly when $k_\pm>-1$, since their squared radial norm is proportional
+to $\int_0^{r_0}r^{2k_\pm+1}\,dr$; this excludes $k_-<-2$. This gives
+\eqref{eq:cone-expansion} with $\beta_D$ the sum of the terms with
+$k_+>0$ and $\kappa=\min k_+$; convergence and the differentiated bounds
+follow from the expansion in eigenforms and elliptic estimates on
+annuli of fixed ratio. The term $\per_i(D)\vartheta_i$ is identified by its
+class.
+
+For (4), cut off the term $\vartheta_i$ with a function $\chi_\rho$ equal
+to zero for $r\le\rho^2$ and one for $r\ge\rho$, with
+$|d\chi_\rho|\le C/(r|\log\rho|)$; since $\vartheta_i$ is closed and
+coclosed with $|\vartheta_i|=O(r^{-2})$, the graph-norm error is
+$O(|\log\rho|^{-1/2})$. Cut off $d\beta_D$ with an ordinary cutoff at
+scale $\rho$; the error is $O(\rho^{\kappa})$.
+
+For (2), injectivity is Lemma~\ref{lem:uniqueness}. For surjectivity
+consider the closure $d_{\min}$ of $d$ on compactly supported forms. The
+orthogonal complement in $\ker d_{\min}$ of the closure of the image of
+$d_{\min}$ consists of closed and coclosed forms, which are smooth by
+elliptic regularity. The forms $\eta_D$ of
+Proposition~\ref{prop:harmonic} are closed, square integrable for
+$g_0^R$, which is uniformly equivalent to $g_0$, and lie in the domain of
+$d_{\min}$ by the cutoff argument just given. Their images in the
+quotient $\ker d_{\min}/\overline{\im d_{\min}}$ are independent, because
+the pairings with compactly supported closed four-forms representing a
+basis of $H^4_c(M_0)$ are continuous in $L^2$ and vanish on
+$\overline{\im d_{\min}}$. Hence $\dim\mathcal H_R\ge b$.
+
+For (1), the same analysis on an end shows that a closed and coclosed
+square-integrable one-form is, near the vertex, the differential of a
+sum of homogeneous harmonic functions with exponents
+$-2+\sqrt{4+\lambda_L}>0$, for eigenvalues $\lambda_L$ of the link; the remaining solutions $r^{-5}dr$ and those with
+negative exponents are not square integrable. Since $H^1(M_0)=0$ the
+form has a global primitive, bounded near the nodes, and the cutoff
+argument of Lemma~\ref{lem:uniqueness} shows that it vanishes.
+\end{proof}
+
+Let $G_R(D,E)=\langle\eta^R_D,\eta^R_E\rangle_{L^2(g_0^R)}$ and let
+$\cM_R$ be its quotient on $\cQ$. Each $\eta^R_D$ minimizes the $L^2$
+norm of $g_0^R$ among closed forms in the domain of $d_{\min}$ with
+class $D$, and the same holds for $\eta_D$ and $g_0$. Since the two
+norms differ by a factor $1+O(R)$ by \eqref{eq:interpolation-errors},
+\begin{equation}\label{eq:mass-limit}
+ G_R=(1+O(R))\,G,\qquad\cM_R=(1+O(R))\,\cM,
+\end{equation}
+as quadratic forms, and the eigenvalues $\mu_j(R)$ of $\cE$ relative to
+$\cM_R$ converge to $\mu_j$ as $R\to0$.
+
+\subsection{The caps}
+\begin{lemma}\label{lem:cap-kernels}
+For the complete metric $g_V^A$ on $V_\sigma$:
+\begin{enumerate}
+\item there are no nonzero square-integrable harmonic forms;
+\item if $\psi$ is a smooth solution of $(d+d^*)\psi=0$ with
+$|\psi|=O(r^{-3})$ at infinity, then the part of $\psi$ that is
+homogeneous of pointwise order $r^{-3}$ has form degree three.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+The metric $g_V^A$ is exactly conical outside a compact set. By
+\cite[Theorem~1A]{hhm} its space of $L^2$ harmonic forms of degree $j$ is
+$H^j_c(V_\sigma)$ for $j<3$, $H^j(V_\sigma)$ for $j>3$, and the image of
+$H^3_c(V_\sigma)\to H^3(V_\sigma)$ for $j=3$. Since $V_\sigma\simeq
+T^*S^3$, the first two vanish, and the third is zero because the map is
+the Euler class of the cotangent bundle of $S^3$. This proves (1).
+
+For (2), first $d\psi=d^*\psi=0$ separately: for a cutoff $\chi_T$ equal
+to one for $r\le T$ and supported in $r\le2T$,
+$\|(d+d^*)(\chi_T\psi)\|^2\le CT^{-2}\int_{T\le r\le2T}|\psi|^2\le
+CT^{-2}$, and for compactly supported forms this norm is
+$\|d(\chi_T\psi)\|^2+\|d^*(\chi_T\psi)\|^2$. A closed and coclosed form
+of pure degree $p$, homogeneous of pointwise order $r^{-3}$ on the cone,
+is $r^{p-3}a+dr\wedge r^{p-4}b$ with $a,b$ on the link and
+\[
+ d_La=0,\quad(p-3)a=d_Lb,\quad d_L^*b=0,\quad d_L^*a+(p-3)b=0 .
+\]
+For $p\ne3$ these give $\Delta_Lb=-(p-3)^2b$, so $b=0$ and $a=0$.
+\end{proof}
+
+\subsection{Compactness}
+\begin{proposition}\label{prop:compactness}
+Let $p\in\{1,2\}$ and let $\psi^1_\epsilon,\ldots,\psi^n_\epsilon$ be
+orthonormal eigenforms of degree $p$ on $(\overline X_\epsilon,\bar
+g_\epsilon)$ with eigenvalues tending to zero along a sequence
+$\epsilon\to0$. Then, after passing to a subsequence, they converge
+smoothly on compact subsets of $M_0$, and without loss of mass, in the sense that
+$\langle\psi^a_\epsilon,\psi^b_\epsilon\rangle\to\langle\psi^a_0,
+\psi^b_0\rangle$, to square-integrable closed and coclosed $p$-forms
+$\psi^a_0$ for $g_0^R$. In particular the limits are orthonormal.
+\end{proposition}
+\begin{proof}
+The model is of the kind treated by Ann\'e and Takahashi
+\cite{anne-takahashi}: a fixed manifold with exactly conical ends at
+finitely many points, to which complete manifolds with exactly conical
+ends, scaled by $\epsilon$, are glued along the cones. Their analysis is carried out for one cap; nothing in it uses
+connectedness of the cap, and it applies to finitely many, because the
+tangential operator, the Poisson extensions and the boundary operators
+on the caps, and the transmission conditions on the collars
+\cite[Sections~2--4]{anne-takahashi} are direct sums over the nodes, and
+the radial estimates are sums of integrals over disjoint collars. No
+condition on the spectrum of the link is imposed there. Their
+decomposition of a family of eigenforms with bounded eigenvalues
+\cite[Corollary~17 and Lemma~18]{anne-takahashi} gives, on the central
+part,
+\[
+ \psi^a_\epsilon=\Phi^a_\epsilon+\mathcal V^a_\epsilon
+ +\mathcal C^a_\epsilon+o_{L^2}(1),\qquad
+ \Phi^a_\epsilon\longrightarrow\psi^a_0\ \text{ in }L^2 ,
+\]
+where $\mathcal V^a_\epsilon$ comes from square-integrable solutions of
+$(d+d^*)\psi=0$ on the complete caps and $\mathcal C^a_\epsilon$ from
+solutions with $|\psi|=O(r^{-3})$, normalized by
+$\ell_\epsilon^{-1/2}$, and the three terms are asymptotically
+orthogonal:
+\begin{equation}\label{eq:gram-limit}
+ \lim\langle\psi^a_\epsilon,\psi^b_\epsilon\rangle
+ =\langle\psi^a_0,\psi^b_0\rangle+\sum_i\langle v^a_i,v^b_i\rangle
+ +\sum_i\langle\varsigma^a_i,\varsigma^b_i\rangle ,
+\end{equation}
+with $v_i^a$ the square-integrable cap solutions and $\varsigma_i^a$ the
+coefficients of the solutions of order $r^{-3}$. By
+Lemma~\ref{lem:cap-kernels}(1) the $v^a_i$ vanish. Since the eigenvalues
+tend to zero, the limits $\psi^a_0$ are closed and coclosed of degree
+$p$. The coefficients $\varsigma^a_i$ are leading coefficients of actual
+solutions of $(d+d^*)\psi=0$ on the complete caps with
+$|\psi|=O(r^{-3})$, by \cite[Proposition~11]{anne-takahashi} and the first
+step of the proof of \cite[Proposition~12]{anne-takahashi}. By
+Lemma~\ref{lem:cap-kernels}(2) the leading part of
+$\mathcal C^a_\epsilon$ therefore has degree three; projecting the decomposition
+onto forms of degree three, where $\psi^a_\epsilon$ and $\psi^a_0$ have
+no component, shows that $\mathcal C^a_\epsilon\to0$ in $L^2$, so the
+$\varsigma^a_i$ vanish. Then \eqref{eq:gram-limit} is the assertion.
+\end{proof}
+
+\begin{proposition}\label{prop:count}
+The models have exactly $m$ positive eigenvalues in degree two tending to
+zero as $\epsilon\to0$, and the degree-one spectrum and the remaining
+positive degree-two spectrum are bounded below by a positive constant
+depending on $R$, $A$ and $u$.
+\end{proposition}
+\begin{proof}
+By Proposition~\ref{prop:compactness} and
+Lemma~\ref{lem:central-kernels}, at most $b$ eigenvalues in degree two
+and none in degree one tend to zero, counted with the zero eigenvalue.
+Conversely, by Lemma~\ref{lem:central-kernels}(4) an orthonormal basis of
+$\mathcal H_R$ is approximated in the graph norm of $d+d^*$ by compactly
+supported forms; extended by zero to the model, they show by the min--max
+principle that at least $b$ eigenvalues tend to zero. The model is
+diffeomorphic to $X_t$ by Lemma~\ref{lem:condition-N}, so exactly
+$s=b_2(X_t)$ of them are zero, by Lemma~\ref{lem:topology}.
+\end{proof}
+
+\subsection{The leading asymptotics}
+Let $\bar\lambda_1(\epsilon)\le\cdots\le\bar\lambda_m(\epsilon)$ be the
+small positive eigenvalues of the model in degree two.
+
+\begin{theorem}\label{thm:model-law}
+For fixed $R$, $A$ and $u$,
+\[
+ \lim_{\epsilon\to0}\log(1/\epsilon)\,\bar\lambda_j(\epsilon)=c\,\mu_j(R)
+ \qquad(1\le j\le m),
+\]
+where $c=\pi$ and $\mu_j(R)$ are the eigenvalues of $\cE$ relative to
+$\cM_R$.
+\end{theorem}
+\begin{proof}
+\emph{The harmonic space of the model.} For $k\in K$ the form $\eta^R_k$
+has no $\vartheta_i$-terms, so by \eqref{eq:cone-expansion} it equals
+$d\beta_k$ near each node, and
+$\gamma_{k,\rho}=\eta^R_k-d(\chi_\rho\beta_k)$, with $\chi_\rho$ equal to
+one near the nodes and supported in $\{r<2\rho\}$, is a compactly
+supported closed form in the class $k$ with
+$\|\gamma_{k,\rho}-\eta^R_k\|^2=O(\rho^{2\kappa+2})$. Extended by zero it
+is a closed form on the model representing the class in
+$H^2(\overline X_\epsilon)$ that corresponds to $k$. Hence the harmonic
+representative $h_\epsilon(k)$ of that class satisfies
+$\limsup\|h_\epsilon(k)\|^2\le G_R(k,k)$. Conversely, by
+Proposition~\ref{prop:compactness}, applied to the harmonic forms, a
+subsequence converges without loss of norm to an element of
+$\mathcal H_R$, whose class is $k$ by pairing with compactly supported
+closed four-forms. Thus the Gram matrix of the harmonic forms of the
+model on $K$ converges to $G_R|_K$, and the harmonic forms converge in
+$L^2$ to the $\eta^R_k$.
+
+\emph{Upper bound.} Let $D$ be $G_R$-orthogonal to $K$. With
+\[
+ \chi_\epsilon(r)=\frac{\log(r/2A\epsilon)}{\log(R/2A\epsilon)}
+ \quad(2A\epsilon\le r\le R),
+\]
+extended by zero and one, put $T_\epsilon D=\chi_\epsilon\eta^R_D$,
+extended by zero over the caps; it lies in the form domain of the model.
+The metric is exactly conical where $\chi_\epsilon$ varies, and
+$dT_\epsilon D=d\chi_\epsilon\wedge\eta^R_D$,
+$d^*T_\epsilon D=-\iota_{\nabla\chi_\epsilon}\eta^R_D$. By
+\eqref{eq:cone-expansion} and $\iota_{\partial_r}\vartheta_i=0$, the
+leading term is $d\chi_\epsilon\wedge \per_i(D)\vartheta_i$, of squared norm
+$c\,\per_i(D)^2\int r|\chi_\epsilon'|^2dr=c\,\per_i(D)^2/\log(R/2A\epsilon)$;
+the cross term with $d\chi_\epsilon\wedge d\beta_D$ vanishes after
+integration over the link because the tangential part of $d\beta_D$ is
+exact on the link and $\vartheta_i$ is coclosed; and the remaining terms
+are $O(\ell_\epsilon^{-2})\int_0^Rr^{2\kappa-1}dr$. Write $\bar q_\epsilon(\psi)=\|d\psi\|^2+\|d^*\psi\|^2$ for the energy
+of a form on the model. Then
+\begin{equation}\label{eq:trial}
+\begin{split}
+ \bar q_\epsilon(T_\epsilon D)&=\frac{c\,\cE([D],[D])}{\ell_\epsilon}
+ +O(\ell_\epsilon^{-2})\|D\|^2,\\
+ \langle T_\epsilon D,T_\epsilon E\rangle&=\cM_R([D],[E])
+ +O(\ell_\epsilon^{-1})\|D\|\|E\| ;
+\end{split}
+\end{equation}
+the second holds because $|1-\chi_\epsilon|\le C(1+|\log r|)/\ell_\epsilon$
+is integrable against $|\eta^R_D|^2dV=O(r\,dr)$, and
+because $G_R=\cM_R$ on the $G_R$-orthogonal complement of $K$. Subtract
+from $T_\epsilon D$ its projection onto the harmonic forms of the model.
+By the first step and $G_R(D,K)=0$ this changes the norm by $o(1)$, and
+it does not change $\bar q_\epsilon$. The min--max principle on the span
+of the first $j$ eigenvectors of $(\cE,\cM_R)$ gives
+\[
+ \limsup_{\epsilon\to0}\ell_\epsilon\bar\lambda_j(\epsilon)\le c\,\mu_j(R).
+\]
+
+\emph{Lower bound.} Choose a sequence along which
+$\ell_\epsilon\bar\lambda_j(\epsilon)$ tends to its lower limit $\ell$.
+By Proposition~\ref{prop:compactness} the first $j$ orthonormal
+eigenforms $\psi^1_\epsilon,\ldots,\psi^j_\epsilon$ have, along a
+subsequence, orthonormal limits $\psi^a_0\in\mathcal H_R$, which are
+$L^2$-orthogonal to the $\eta^R_k$, $k\in K$, by the first step. For
+$z\in\RR^j$ put $\psi_\epsilon(z)=\sum z_a\psi^a_\epsilon$ and
+$\psi_0(z)=\sum z_a\psi^a_0=\eta^R_{D(z)}$, with $D(z)$ in the
+$G_R$-orthogonal complement of $K$ and $\cM_R([D(z)])=|z|^2$. At the
+fixed sections $\{r=R/2\}$ the forms converge smoothly, so
+$\mathsf B_{\psi_\epsilon(z)}(R/2)\to \per_i(D(z))$ at the node $p_i$. The
+part of the model inside this section at $p_i$ is isometric to a
+truncated cap with the metric $\epsilon^2g^A_V$, by an identification
+that differs from the chart by the unit $u$ and so preserves
+$\vartheta_i$, and
+Lemma~\ref{lem:cap-energy} gives
+\[
+ \bar\lambda_j(\epsilon)|z|^2\ge\bar q_\epsilon(\psi_\epsilon(z))\ge
+ \sum_i\frac{c\,|\mathsf B_{\psi_\epsilon(z)}(R/2)|^2}
+ {\log(R/2\epsilon)+C_A}.
+\]
+Multiplying by $\ell_\epsilon$ and passing to the limit,
+$c\,\cE([D(z)])\le\ell\,\cM_R([D(z)])$ for all $z$. The classes $[D(z)]$
+fill a $j$-dimensional subspace of $\cQ$, so $\ell\ge c\,\mu_j(R)$.
+\end{proof}

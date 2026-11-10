@@ -1,0 +1,124 @@
+\section{Plumbing geometry and component potentials}\label{sec:plumbing}
+
+The smooth total-space and nodal-fibre assumptions give holomorphic
+coordinates $u,v$ at each node in which $\pi=uv$. Choose disjoint
+such bidiscs and a fixed small outer radius $r_*>0$. On the two
+central branches, $u$ and $v$ are puncture coordinates. We use the
+same coordinates to normalize the logarithmic parts of Green functions.
+
+\begin{lemma}\label{lem:plumbing}
+There are identifications of the thick part of $X_t$ with the
+components punctured at radius $\rho$, for $|t|\ll\rho^2$ and
+$0<\rho\ll r_*$, having the following properties.
+\begin{enumerate}
+\item In the shrinking branch collars they are exactly
+$u\mapsto(u,t/u)$ or $v\mapsto(t/v,v)$. On a fixed exterior they
+depend smoothly on the real and imaginary parts of $t$ and equal
+the identity at $t=0$.
+\item In each fixed derivative order $k$, pulled-back metric and
+complex-structure coefficients differ from the central ones by at
+most $C_k|t|\rho^{-n_k}$ for some fixed integer $n_k$.
+\item The middle part of each neck, where $|u|,|v|\le2\rho$, has
+area at most $C\rho^2$. Each transition annulus $|u|\asymp\rho$
+has area $O(\rho^2)$ and metric uniformly comparable to that of the
+central branch.
+\end{enumerate}
+All constants are uniform in the argument of $t$.
+\end{lemma}
+\begin{proof}
+Remove fixed small node discs from the central components. The map
+$\pi$ is a submersion on a compact neighbourhood of the resulting
+exterior, including its boundary. Choose smooth horizontal lifts
+of the two real parameter directions. On a collar of each boundary,
+choose the lifts that keep $u$, or respectively $v$, fixed. A partition
+of unity interpolates these lifts only on fixed annuli, where all
+coefficients are smooth and bounded. Flow along the straight segment
+from zero to $t$. This gives a smooth trivialization of the fixed
+exterior which agrees with the coordinate identification on smaller
+boundary collars. Extend it inward by $u\mapsto(u,t/u)$ on each
+branch. The two branch images are disjoint when $|t|\ll\rho^2$.
+
+On the fixed exterior all coefficient differences are $O_k(|t|)$.
+On the shrinking collar,
+\[
+ |D^k(t/u)|\le C_k|t|\rho^{-k-1}.
+\]
+The induced metric is the restriction of a smooth ambient tensor
+along this map. Differentiating it gives a finite power of
+$\rho^{-1}$ in every fixed order. The complex coordinate on the
+collar is exactly $u$, so its complex structure needs no correction
+there. The smooth branch metric is nondegenerate through the
+puncture, and the same estimates hold for inverse coefficients.
+
+The ambient metric is bounded above by a fixed multiple of the flat
+metric in the bidisc. In the parameter $u$, its fibre area is bounded by
+\[
+ C\int_{|t|/(2\rho)\le|u|\le2\rho}
+       (1+|t|^2/|u|^4)\,dx\,dy\le C'\rho^2.
+\]
+On $|u|\asymp\rho$ the second term is uniformly small, and the
+induced metric is comparable to the branch metric. The estimates
+involve only $|t|$.
+\end{proof}
+
+We shall take
+\begin{equation}\label{eq:cutoff-radius}
+ \rho=L^{-1}.
+\end{equation}
+Every geometric coefficient error required below is then bounded
+by $C e^{-L}L^n$, and is smaller than any negative power of $L$.
+Fixed compact subsets are transported by the exterior identifications
+from Lemma~\ref{lem:plumbing}.
+
+\begin{lemma}\label{lem:green}
+For each node puncture $p\in C_i$, there is a real mean-zero function
+$g_{i,p}$, smooth off $p$, such that
+\begin{equation}\label{eq:green}
+ \Delta_i g_{i,p}=-2\pi\delta_p+\frac{2\pi}{A_i},
+ \qquad\int_{C_i}g_{i,p}\,dA_i=0.
+\end{equation}
+In the assigned puncture coordinate $u$, it has the form
+$g_{i,p}=\log|u|+\gamma_{i,p}(u)$, with $\gamma_{i,p}$ smooth.
+\end{lemma}
+\begin{proof}
+For the nonnegative Laplacian,
+$\Delta\log|u|=-2\pi\delta_0$. Multiply the logarithm by a cutoff
+equal to one near the puncture. Its Laplacian is the stated point
+mass plus a smooth function. The right side of \eqref{eq:green}
+has integral zero, so the difference is a smooth mean-zero function.
+Invert the scalar Laplacian on the mean-zero functions of the fixed
+compact smooth component and adjust the additive constant. Elliptic
+regularity makes the correction smooth. This also proves uniqueness.
+\end{proof}
+
+Along the finite trajectory let
+$B_{ij}(\tau)=\log(H_i(\tau)^{-1}H_j(\tau))$, and define
+\begin{equation}\label{eq:component-potential}
+ \xi_i(\tau,z)=-\sum_{p:\,i\leftrightarrow j}B_{ij}(\tau)g_{i,p}(z),
+ \qquad V_i=H_i^{-1}\partial_\tau H_i.
+\end{equation}
+These matrices are $H_i$-self-adjoint and trace free. The essential
+compatibility condition is
+\begin{equation}\label{eq:compatibility}
+ \Delta_i\xi_i=-V_i\qquad\text{away from the punctures}.
+\end{equation}
+Indeed \eqref{eq:green} gives the left side as
+$-(2\pi/A_i)\sum B_{ij}$, exactly the negative of
+\eqref{eq:finite-flow}.
+
+For $\tau\in[0,T]$, the finite trajectory and its derivatives are
+bounded. Consequently, away from discs of radius $\rho$,
+\begin{equation}\label{eq:potential-bounds}
+ \begin{gathered}
+ |\xi_i|\le C_T(1+|\log\rho|),\qquad
+ |\nabla\xi_i|\le C_T(1+r^{-1}),\\
+ |\nabla^2\xi_i|\le C_T(1+r^{-2}),\qquad
+ \int|\xi_i|\,dA_i\le C_T,\qquad
+ \int|\nabla\xi_i|^2\,dA_i\le C_T(1+|\log\rho|),
+ \end{gathered}
+\end{equation}
+where $r$ is distance in a puncture chart when near a puncture.
+The same bounds hold after any fixed number of slow-time derivatives.
+They follow by integrating $|\log r|$ and $r^{-2}$ against the
+smooth component area. All norms of matrices in this proof are
+equivalent on the compact range of the component metrics.
