@@ -57,6 +57,6 @@ Run `python3 reproduce.py` from the repository root to regenerate the finite com
 
 The heterotic K3 application resolves three leading vector masses with ratio-independent relative geometric error. Its defined first-order tree vector pencil includes the leading metric and two-form towers. The scalar interaction is a leading large-volume coefficient taken before the degeneration at fixed positive amplitude ratio; it does not establish exact string poles or a uniform finite-string-scale curvature remainder.
 
-The Zenodo records preserve the released manuscripts. Papers 01–10 await arXiv submission. Papers 17–20 were released without an arXiv submission or queue entry. Paper 21 has a prepared source package; its arXiv submission remains pending.
+The Zenodo records preserve the released manuscripts. Papers 01–10 await arXiv submission. Papers 17–20 and 22 were released without an arXiv submission or queue entry. Paper 21 has a prepared source package; its arXiv submission remains pending.
 
 Copyright © 2026 Bernd Johannes Wuebben. All rights reserved; this repository applies no blanket code license to the manuscripts.
