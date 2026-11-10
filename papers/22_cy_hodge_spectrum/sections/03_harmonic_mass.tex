@@ -1,30 +1,28 @@
 \section{Harmonic representatives and intersection mass}\label{sec:mass}
 
-\subsection{The two global cohomology directions}
+\subsection{Central cohomology and harmonic representatives}
 Write $M_0=X_0^\reg=Y\setminus\bigcup_iC_i$. Removing a submanifold of
 real codimension four does not change cohomology in degrees one and two.
 The Thom sequence consequently gives
 \begin{equation}\label{eq:central-cohomology}
- H^1(M_0;\RR)=0,\qquad H^2(M_0;\RR)=\RR H\oplus\RR D.
+ H^1(M_0;\RR)=0,\qquad H^2(M_0;\RR)=H^2(Y;\RR)=V.
 \end{equation}
 The common exterior has boundary a disjoint union of copies of
 $S^2\times S^3$. In the smoothing each filling has zero second
 cohomology. Mayer--Vietoris therefore identifies the image of $H^2(X_t)$
-in $H^2(M_0)$ with the kernel of restriction to these links. This image
-is exactly $\RR H$, and the restriction vector of $D$ is $(b_i)$.
-In particular it is nonzero. In fact $b_i\ne0$ for every $i$: otherwise
-$H\cdot C_i=D\cdot C_i=0$ would make the effective curve $C_i$
-numerically zero against every divisor class on the projective $Y$.
+in $H^2(M_0)$ with the kernel of restriction to these links. For the general hypotheses of Theorem~\ref{thm:matrix}, this image is
+$K=\ker r$ and has dimension $s$. In the rank-one setting it is $\RR H$;
+then a class $D$ independent of $H$ has nonzero restriction vector $(b_i)$.
+Indeed every $b_i$ is nonzero in that setting: otherwise the effective
+curve $C_i$ would pair trivially with all divisor classes on projective $Y$.
 
-The smooth fibres are simply connected. This follows from van Kampen,
-since replacing either filling by the other preserves the fundamental
-group: the fillings and links are simply connected. Both $Y$ and $X_t$ are compact, simply
-connected K\"ahler threefolds with trivial canonical bundle, and admit
-Ricci-flat metrics. They have full $\mathrm{SU}(3)$ holonomy in this setting. A nontrivial de Rham decomposition would have
-a one-complex-dimensional Ricci-flat factor, whose compact simply
-connected cover cannot exist; the irreducible hyperk\"ahler alternative
-has even complex dimension. Thus $H^{2,0}(Y)=0$, consistently with the
-divisor interpretation of all real second-cohomology directions.
+Van Kampen gives simple connectivity of $X_t$, since the links and both
+fillings are simply connected. For either compact K\"ahler threefold,
+$b_1=0$ implies $H^1(\OO)=0$. Serre duality and $K\simeq\OO$ give
+$H^2(\OO)=0$, and Hodge symmetry gives $H^{2,0}=0$.
+The integral second-cohomology classes are consequently divisor classes.
+For the next proposition take any integral $D$ independent of $H$, with
+$a,d,v,b_i,M$ as in \eqref{eq:intersection-data}.
 
 \begin{proposition}\label{prop:mass}
 There is a real closed $(1,1)$-form $\eta$ on $M_0$ representing $D$,
@@ -126,8 +124,7 @@ and the primitive star identity proves
  \|\alpha\|^2=-\int\left(\eta-\frac av\omega\right)^2\omega
  =-d+\frac{a^2}{v}.
 \]
-Primitivity gives pointwise orthogonality to $\omega$. The nonzero
-restriction vector implies $\alpha\ne0$, so this norm is positive.
+Primitivity gives pointwise orthogonality to $\omega$. The nonzero class $D-(a/v)H$ implies $\alpha\ne0$, so this norm is positive.
 The expansion \eqref{eq:alpha-expansion} follows from the scalar estimate;
 the bounded term proportional to $\omega$ is absorbed by $\nu<1$.
 
@@ -147,10 +144,113 @@ particular $\alpha$ is in the Friedrichs kernel. The same argument
 applies to $\omega$.
 \end{proof}
 
-The norm in \eqref{eq:mass-identity} is the quotient norm after removing
-the surviving K\"ahler direction. This identifies the global mass
+In the rank-one setting, \eqref{eq:mass-identity} is the quotient norm
+after removing the surviving K\"ahler direction. This identifies the global mass
 needed in the spectral comparison without leaving an unspecified
 analytic coefficient among the input data.
+
+\subsection{The full harmonic space and its quotient norm}
+Put $V=H^2(Y;\RR)$ and let $r:V\to\RR^k$ be the exceptional-period
+map. The Thom and Mayer--Vietoris arguments of
+Proposition~\ref{prop:restriction-spectrum} give
+\[
+ K:=\ker r=\im\bigl(H^2(X_t;\RR)\longrightarrow V\bigr),
+ \qquad \dim K=s.
+\]
+In particular $H\in K$. Write
+\begin{equation}\label{eq:full-intersection-forms}
+ B(D,E)=\int_YDEH,\qquad a(D)=\int_YDH^2,\qquad v=\int_YH^3.
+\end{equation}
+Simple connectivity transfers to the smoothing by van Kampen, as before.
+Both smooth spaces have $H^{2,0}=0$, so integral second-cohomology
+classes are represented by line bundles.
+
+Apply the curvature construction and scalar correction in the proof of
+Proposition~\ref{prop:mass} to an integral basis of $V$, and extend
+linearly. For $D\in V$ this gives a closed and coclosed real $(1,1)$-form
+$\eta_D$ with class $D$, constant contraction $3a(D)/v$, and link
+coefficients $r_i(D)$. The scalar inverse is fixed and linear; its
+solvability condition uses $a(D)$. The local Picard calculation,
+transgression estimates and logarithmic domain cutoffs do not use the
+dimension of $V$. After taking the minimum of finitely many positive
+rates, the resulting estimates hold uniformly on bounded subsets of $V$.
+Polarizing \eqref{eq:mass-identity} gives
+\begin{equation}\label{eq:full-harmonic-gram}
+ G(D,E):=\langle\eta_D,\eta_E\rangle
+ =-B(D,E)+\frac{3a(D)a(E)}{2v}.
+\end{equation}
+Indeed the primitive parts have pairing
+$-B(D,E)+a(D)a(E)/v$, and $\|\omega\|^2=v/2$.
+The independent classes of the $\eta_D$ make $G$ positive definite.
+
+We record uniqueness for closed and coclosed $L^2$ representatives.
+
+\begin{lemma}\label{lem:actual-harmonic-uniqueness}
+Let a smooth metric on $M_0$ be uniformly equivalent near each end to
+the six-dimensional cone metric. Every smooth globally exact $L^2$
+two-form $u$ has an $L^2$ primitive in $\operatorname{Dom}d_{\min}$.
+Consequently a smooth $L^2$ closed and formally coclosed two-form is
+determined by its ordinary de Rham class.
+\end{lemma}
+\begin{proof}
+On one end write $u=a(r)+dr\wedge b(r)$ in fixed link coordinates.
+Choose $v_0$ with $d_Lv_0=a(r_0)$ and set
+\[
+ \beta(r)=v_0+\int_{r_0}^r b(x)\,dx.
+\]
+Closedness gives $d\beta=u$. In the fixed link norm put
+$B_0(x)=\|b(x)\|_{L^2(L,h)}$. Cone equivalence then implies
+$\int_0^{r_0}x^3B_0(x)^2dx<\infty$.
+For $0<r<\delta<r_0$, Cauchy--Schwarz gives
+\[
+ r\|\beta(r)\|_{L^2(L)}
+ \le rC_\delta+2^{-1/2}
+       \left(\int_0^\delta x^3B_0(x)^2dx\right)^{1/2}.
+\]
+First let $r\to0$, then $\delta\to0$. Thus
+$r\|\beta(r)\|_{L^2(L)}\to0$. The one-form $\beta$ is $L^2$,
+since its squared cone norm has radial weight $r^3$. If $\chi_\rho$
+vanishes below $\rho$ and equals one above $2\rho$, with derivative
+bounded by $C/\rho$, then
+\[
+ \|d\chi_\rho\wedge\beta\|^2
+ \le C\rho^{-2}\int_\rho^{2\rho}
+        r^3\|\beta(r)\|_{L^2(L)}^2dr=o(1).
+\]
+The $L^2$ tails of $\beta$ and $d\beta=u$ also vanish.
+
+Let $w_0$ be a global smooth primitive. On the end $w_0-\beta$ is
+closed and hence exact, since $H^1(L)=0$. Subtracting the differential
+of a cutoff potential patches $w_0$ to $\beta$ near each tip without
+changing its differential. The resulting global $w$ is $L^2$, and the
+preceding cutoff estimate proves $w\in\operatorname{Dom}d_{\min}$.
+If $u$ is formally coclosed, testing on the compactly supported core
+and passing to its graph closure gives
+$u\in\operatorname{Dom}d_{\min}^*$ and $d_{\min}^*u=0$. Hence
+$\|u\|^2=\langle d_{\min}w,u\rangle=0$.
+Apply this to the difference of two forms to obtain uniqueness.
+\end{proof}
+
+For the actual central metric, this lemma and the $b$ constructed forms
+identify the smooth $L^2$ harmonic two-form space with $V$.
+Give $\mathcal Q=V/K$ the quotient norm $\mathcal M$ induced by $G$.
+The $G$-orthogonal lift $D^\perp$ of $[D]$ is primitive, because
+$G(D,H)=a(D)/2$. Thus
+\begin{equation}\label{eq:quotient-mass-matrix}
+ \mathcal M([D],[E])=-B(D^\perp,E^\perp),\qquad
+ D^\perp\perp_B K.
+\end{equation}
+The restriction of $B$ to $K$ is nondegenerate: its decomposition
+$K=\RR H\oplus(K\cap\ker a)$ has one positive direction and a
+negative-definite primitive part. In a basis of $K$ followed by
+quotient lifts, the mass matrix is therefore
+\begin{equation}\label{eq:mass-schur}
+ \mathsf M=-B_{DD}+B_{DK}B_{KK}^{-1}B_{KD}.
+\end{equation}
+The period form
+$\mathcal E([D],[E])=r(D)\cdot r(E)$ is positive definite on $\mathcal Q$.
+Subtracting the polarization component alone would not give this
+quotient mass when $s>1$.
 
 \subsection{The restriction map in topology and in the spectral law}
 The attachment sequence below is classical conifold topology

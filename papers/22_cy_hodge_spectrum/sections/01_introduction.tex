@@ -105,10 +105,10 @@ $H^2(X_t;\RR)$. Define the forms
 \begin{split}
  G(D,E)&=-\int_YDEH+
      \frac{3(\int_YDH^2)(\int_YEH^2)}{2\int_YH^3},\\
- E([D],[E])&=r(D)\cdot r(E).
+ \mathcal E([D],[E])&=r(D)\cdot r(E).
 \end{split}
 \end{equation}
-Let $M$ be the quotient form induced by $G$ on $\mathcal Q$,
+Let $\mathcal M$ be the quotient form induced by $G$ on $\mathcal Q$,
 equivalently the minimum squared norm over each coset.
 The theorem includes the positivity needed for this definition.
 Write $\lambda^+_{2,j}(t)$ for the ordered positive real degree-two
@@ -116,9 +116,9 @@ eigenvalues, with multiplicity.
 
 \begin{theorem}\label{thm:matrix}
 The form $G$ is the positive-definite inner product of central harmonic
-representatives, and $E,M$ are positive definite on the $m$-dimensional
+representatives, and $\mathcal E,\mathcal M$ are positive definite on the $m$-dimensional
 space $\mathcal Q$. If $0<\mu_1\le\cdots\le\mu_m$ are the
-generalized eigenvalues of $E$ relative to $M$, then
+generalized eigenvalues of $\mathcal E$ relative to $\mathcal M$, then
 \begin{equation}\label{eq:matrix-law}
  \lambda^+_{2,j}(t)=\frac{2\pi\mu_j}{|\log t|}(1+o(1)),
  \qquad 1\le j\le m.
@@ -134,7 +134,7 @@ degenerating node-scale ratios or two-sided next-order error is asserted.
 The quotient removes all surviving harmonic directions, rather than
 only $H$. It is calculated by the intersection Schur complement
 \eqref{eq:mass-schur}. When $b=2$ and $s=1$, this gives the coefficient
-of Theorem~\ref{thm:main}; its one-sided sharper upper bound was proved
+of Theorem~\ref{thm:main}; its one-sided sharper upper bound is proved
 separately. Section~\ref{sec:multiple} supplies the full kernel
 projection and the ordered lower bounds needed for
 Theorem~\ref{thm:matrix}.
@@ -147,135 +147,50 @@ small-eigenvalue coefficients. We combine those metric results with
 conic spectral compactness and a sharp capacity calculation to prove
 \eqref{eq:main-law} and the ordered matrix law \eqref{eq:matrix-law}.
 
-Ann\'e--Takahashi identify the spectral limits in exact-cone surgery in
-terms of the central operator, complete-cap harmonic forms and critical
-extended solutions \cite{anne-takahashi}. Their work already contains
-logarithmic cutoff mechanisms and small coexact forms. The additional
-analytic conclusion here is the explicit coefficient in
-\eqref{eq:main-law}, including the matching lower bound for the actual
-Ricci-flat metrics. Its proof has three steps. First, the integral
-restriction map identifies the boundary periods of the lost divisor
-class; a scalar correction and vanishing boundary terms compute its
-primitive harmonic norm from cup products. Second, a sharp logarithmic
-capacity estimate on each Stenzel cap gives the local energy, and the
-actual tensor comparison controls the transported trial form and its
-codifferential. Third, conic spectral compactness excludes further small
-modes and mass loss; the same cap estimate gives the matching lower
-bound. A derivative-free comparison transfers that bound from exact-cone
-models to the actual metrics, with auxiliary radii sent to their limits
-after the family parameter.
+Ann\'e--Takahashi describe the spectral limits in exact-cone surgery
+in terms of the central operator, complete-cap harmonic forms and critical
+extended solutions \cite{anne-takahashi}. We use their norm decomposition
+for finitely many caps, with the critical terms excluded in physical
+degrees one and two. The proof then has three steps. The restriction map
+fixes the harmonic link periods, and a scalar correction computes the
+central harmonic Gram form from intersections. On exactly conical models,
+logarithmic cutoffs give upper bounds and cap capacity gives matching lower
+bounds on every limiting spectral subspace. Dodziuk's comparison of Hodge
+eigenvalues under equivalent metrics transfers the entire ordered cluster
+to the actual Ricci-flat family \cite{dodziuk}.
 
-For several lost directions, the harmonic norm must be quotiented by
-the entire surviving cohomology. We prove convergence of that harmonic
-space using closed compact approximants and uniqueness of harmonic
-representatives for the central metric. The lower bound is applied to every linear combination in a
-limiting spectral subspace; min--max then identifies each ordered
-coefficient. This supplies both the multiplicities and the matrix law.
+The leading law requires only the $C^0$ condition stated in
+Definition~\ref{def:C0-comparison}; its geometric verification is separate
+from the model argument. The differentiated estimate of
+Proposition~\ref{prop:metric-comparison} is used for the sharper rank-one
+upper remainder. Projection off all surviving harmonic classes is performed
+on the models, where the needed compact convergence follows from the fixed
+central elliptic problem.
 
-\subsection{Integral topology and geometry on one compact transition}
-Choose independent linear forms $l_1,l_2$ and quartics $q_1,q_2$ on
-$\PP^4$. Put $\Pi=\{l_1=l_2=0\}$ and assume that the restricted
-quartics meet transversely in sixteen points, that
-$X_0=\{l_1q_2-l_2q_1=0\}$ is smooth away from $\Pi$, and that
+\subsection{Three compact applications}
+For independent linear forms $l_1,l_2$ and general quartics $q_1,q_2$ on
+$\PP^4$, the split quintic $X_0=\{l_1q_2-l_2q_1=0\}$ has sixteen
+nodes on the plane $\{l_1=l_2=0\}$. Its incidence resolution lies in
+$\PP^4\times\PP^1$, with hyperplane classes $H,L$.
+
+\begin{corollary}\label{cor:quintic}
+Let $X_t=\{l_1q_2-l_2q_1+tG=0\}$, where the quintic $G$ is nonzero
+at every node. For the Ricci-flat metrics in class $H$,
 \[
- Y=\{ul_1+vl_2=0,\ uq_1+vq_2=0\}
-       \subset\PP^4\times\PP^1
+ \lambda_2^+(t)\sim\frac{10\pi}{|\log t|}.
 \]
-is smooth. These are nonempty open conditions. Choose a quintic $G$
-nonzero at the sixteen nodes and let
-$X_t=\{l_1q_2-l_2q_1+tG=0\}$, for sufficiently small $t$.
-The projective construction, the hyperplane markings $H,L$, and the
-chosen smoothing ray are the global inputs. The complement ring and
-attachment maps below are calculated, rather than assumed.
+The eigenvalue has all the simplicity, type, gap and one-sided remainder
+properties of Theorem~\ref{thm:main}.
+\end{corollary}
 
-Let $U$ be the common compact exterior, $q:Y\to X_0$ the projection,
-and $s_t:X_t\to X_0$ the continuous Milnor collapse along the ray.
-Mark the degree-two link generators by the exceptional rulings.
-Write
-\[
- \Lambda=\ZZ^{16},\qquad \mathbf1=(1,\ldots,1),\qquad
- \Lambda_0=\ker(\Sigma:\Lambda\to\ZZ),\qquad W=\Lambda/\ZZ\mathbf1.
-\]
-Here $\Sigma$ is coordinate summation. Let $J_{15}$ be the
-$15\times15$ all-ones matrix.
+Here $r(L)=(1,\ldots,1)$ and $M=16/5$. The same primitive diagonal
+vector generates the integral relation among the cohomological vanishing
+cycles. The marked transition, including its full integral rings and
+monodromy image of index sixteen, is stated in
+Theorem~\ref{thm:integrated} and proved in Appendices~\ref{sec:integral-topology}
+and~\ref{sec:tangent}.
 
-\begin{theorem}[The marked split-quintic transition]\label{thm:integrated}\label{cor:quintic}
-The preceding construction has the following compatible properties.
-\begin{enumerate}
-\item The smooth threefolds $Y$ and $X_t$ are simply connected and
-have torsion-free integral cohomology, with the full rings and Chern
-classes in Table~\ref{tab:integral-rings}. Their third Betti numbers
-are $174$ and $204$; their degree-three products are unimodular
-alternating pairings times the point class. In both cases
-$H^0=H^6=\ZZ$ and $H^1=H^5=0$. The integral groups of $U$ and $X_0$ are free,
-with Betti vectors
-\[
- (1,0,2,189,1,15,0),\qquad (1,0,1,189,2,0,1),
-\]
-respectively. The central ring and both specialization pullbacks are
-given by \eqref{eq:central-ring} and the degree-three description in
-Section~\ref{sec:specialization}; in particular
-$\im s_t^*=\ker(T^*-I)$ in integral degree-three cohomology,
-where $T$ is monodromy about a positive simple loop.
-
-\item The degree-two boundary restriction is
-$r(hH+\ell L)=\ell\mathbf1$. It occurs in the integral exact sequence
-\begin{equation}\label{eq:split-exact-sequence}
- 0\longrightarrow\ZZ H\longrightarrow\ZZ H\oplus\ZZ L
- \xrightarrow{\ r\ }\Lambda\xrightarrow{\ \partial\ }
- H^3(X_t;\ZZ)\longrightarrow H^3(U;\ZZ)\longrightarrow0.
-\end{equation}
-The classes $\partial e_i$ are the left Poincar\'e duals of the
-vanishing spheres. They generate the primitive isotropic lattice $W$,
-with the single relation $\sum_i\partial e_i=0$. Under Poincar\'e
-duality the nonzero monodromy block is $\pm(I_{15}+J_{15})$, whose
-Smith form is $\operatorname{diag}(1^{14},16)$. Thus the monodromy
-image has index sixteen in the primitive vanishing lattice.
-
-\item Use the actual Ricci-flat class $H+s^2L$ on $Y$ and class $H$
-on $X_t$, where $s,t>0$ are independent branch parameters. Both
-branches converge to the same metric completion $(X_0,d_{g_0})$,
-homeomorphic to $X_0$, with the local rescaled resolved-conifold and
-Stenzel limits. Every exceptional area on $Y$ equals $s^2$.
-The same class $L$ has period one at every link, and its central
-primitive harmonic representative $\alpha$ satisfies
-\begin{equation}\label{eq:split-compatibility}
- [\alpha]=L-\tfrac45H,\qquad
- \|\alpha\|_{L^2(g_0)}^2=\tfrac{16}{5},\qquad
- \lim_{t\downarrow0}|\log t|\lambda_2^+(t)
- =\frac{2\pi\|r(L)\|^2}{16/5}=10\pi.
-\end{equation}
-The eigenvalue has the simplicity, type, gap and one-sided upper-error
-properties of Theorem~\ref{thm:main}. The resolution and smoothing
-limits require no relation between $s$ and $t$.
-
-\item The tangent bundles on the smooth spaces are stable and their
-Ricci-flat tangent connections are Hermitian--Einstein. The relative
-tangent sheaf of the smoothing is flat, with central fibre $E_0$ and
-\[
- 0\longrightarrow E_0\longrightarrow T_{X_0}
- \longrightarrow\bigoplus_{i=1}^{16}\CC_{p_i}\longrightarrow0,
- \qquad E_0^{**}=q_*T_Y=T_{X_0},\qquad R^jq_*T_Y=0\ (j>0).
-\]
-These extensions agree on the regular locus. Their actual tangent
-connections have the local limits and curvature-energy bounds in
-Proposition~\ref{prop:tangent-metrics}.
-\end{enumerate}
-\end{theorem}
-
-The common restriction map in \eqref{eq:split-exact-sequence} and
-\eqref{eq:split-compatibility} is essential. Its kernel gives the
-surviving divisor direction, its image gives the vanishing-cycle
-relation, and its periods give the local terms in the spectral energy.
-The polarized cup product supplies the global harmonic norm.
-Proposition~\ref{prop:restriction-spectrum} proves this compatibility
-for the general rank-one setting. Sections~\ref{sec:quintic}
-and~\ref{sec:tangent} calculate the compact example and complete the
-proof of Theorem~\ref{thm:integrated}. The topology asserted here is
-the integral cohomology and the specified maps; a classification of
-homotopy or diffeomorphism types is not asserted.
-
-\subsection{An eight-node toric transition}
+\subsubsection*{Eight nodes}
 Let $B=\PP^1\times\PP^1$ and
 $Z=\PP_B(\OO\oplus\OO(1,-1))\times_B
 \PP_B(\OO\oplus\OO(1,-1))$. In the quotient convention write
@@ -307,7 +222,7 @@ the additional polarized-family hypotheses and proves the corollary.
 This is an application of Theorem~\ref{thm:matrix}; it makes no new
 integral saturation assertion for the eight-node family.
 
-\subsection{A four-node toric transition}
+\subsubsection*{Four nodes}
 Let $X'_9$ be the four-node partial resolution on the nonmirror side of
 \cite[Section~11.1]{wuebben-cy-mirror}, with the chosen projective
 small resolution $Y$. Section~\ref{sec:cy-x9} specifies the ample
@@ -343,137 +258,53 @@ harmonic quotient. The resulting spectral law is an additional
 consequence on the established original-side geometry; it is not a
 claim about the mixed-singularity $X_9$ or the distinct mirror family.
 
-\subsection{Global inputs and the earlier reconstruction results}
-The small-spectrum theorem for two-step bundles
-\cite[Theorem~1.1]{wuebben-two-step} and the local
-Hermitian--Einstein reduction \cite[Theorem~1.1]{wuebben-local-he}
-relate finite degeneration data to endomorphism Dolbeault spectra on
-a smooth base. The present operator is the real Hodge Laplacian on a
-degenerating threefold. Those fixed-background estimates are not
-premises of its spectral proof. The shared question is which global
-geometric data must be retained to determine the limiting analysis.
+\subsection{Relation to earlier work}
+The split-quintic construction and conifold attachment sequences are
+classical \cite{greene-morrison-strominger,rossi,lee-lin-wang}.
+Our two toric applications use specific earlier geometric constructions:
+\cite[Appendix~A, Proposition~A.1]{wuebben-chambers} supplies the eight-node
+contraction and Picard rank, while \cite[Section~11.1]{wuebben-cy-mirror}
+supplies the four-node threefold $X'_9$ and its exceptional circuits.
+The nodal specialization of \cite[Theorems~2.5 and~4.5]{wuebben-cy-smoothing}
+provides the latter's deformation tangent and smooth deformation base.
+In both applications we check first-order smoothing and extension of the
+specified ample class before applying the spectral theorem.
 
-The local link and its two fillings do not determine the compact
-cohomology ring. They must be attached to a specified global exterior.
-In the K3 bundle-moduli setting,
-\cite[Theorem~3.1 and Proposition~3.2]{wuebben-reconstruction}
-retains the marked complement and geometric overlap maps; its
-monodromy example explains why local fibre rings are insufficient.
-The explicit calculations in \cite{wuebben-exceptional,wuebben-attachments}
-supply such global information for particular compact contractions.
-Theorem~\ref{thm:integrated} follows the same distinction: the projective
-family supplies the information from which its exterior ring and
-attachment maps are computed. For Theorem~\ref{thm:main} alone, the
-intersection numbers and restriction vector remain global inputs.
-
-The K3 results concern moduli spaces of bundles on a smooth surface;
-their harmonic metric is the $L^2$ metric on bundle deformations.
-The canonical singular Ricci-flat metrics in
-\cite[Theorem~1.1]{wuebben-singular-k3} concern compact K3 moduli
-spaces that admit neither a symplectic resolution nor a smoothing.
-Here the compact base threefold admits both branches of a conifold
-transition, and its Ricci-flat metric defines the Hodge operator.
-We use projective complete-intersection topology, ordinary-node surgery,
-and conical Ricci-flat analysis in place of the K3 Mukai lattice and
-hyperk\"ahler local moduli models. These K3 papers provide the
-reconstruction questions and precedents; the proofs below establish
-the conifold conclusions in the new setting.
-
-The role of \cite[Appendix~A, Proposition~A.1]{wuebben-chambers} is
-different: its compact construction and calculated exceptional data are
-used directly in Corollary~\ref{cor:eight-node}. Theorem~\ref{thm:matrix}
-extends the analytic result to the two lost directions of that family.
-The earlier work distinguishes tangent-bundle stability walls from
-toric birational walls and Calabi--Yau cycle relations; the spectral
-application preserves that distinction.
-
-The spectral law is a forward determination from the marked geometric
-data. Its finite set of coefficients does not recover the whole intersection
-ring, complex structure or metric. Likewise the tangent connection,
-being induced by the Ricci-flat metric, requires no separate arbitrary-
-bundle existence theorem. It does not provide the general bundle or
-flow analysis of \cite{wuebben-local-he,wuebben-hym-phase} on a
-collapsing background.
-
-\subsection{Conifold topology and deformation theory}
-The split-quintic transition and its cohomological relations are classical
-\cite{greene-morrison-strominger,rossi}; the relation between exceptional
-and vanishing cycles is also central to the conifold analysis of
-\cite{lee-lin-wang}. Singular Ricci-flat metrics with bounded potentials
-and their conical asymptotics are supplied by
-Eyssidieux--Guedj--Zeriahi and Hein--Sun \cite{egz,hein-sun}.
-Benabida proves the metric-valued expansions for actual resolutions and
-smoothings used here \cite{benabida}. These existence and local metric
-results are inputs to our quantitative comparison.
-
-CY~IV proves a vanishing-cycle obstruction for smoothings with nodes
-and specified del Pezzo cone points, allowing arbitrary analytic
-smoothing arcs \cite[Theorem~6.1]{wuebben-cy-obstruction}.
-CY~V identifies the image of the global deformation tangent map and
-proves smoothness of the selected deformation bases, giving a criterion
-for the prescribed mixed singularities
-\cite[Theorems~2.5, 4.5 and~4.7]{wuebben-cy-smoothing}.
-Their purely nodal specialization is the classical full-support
-exceptional-curve relation criterion. An arbitrary smoothing arc need
-not satisfy \eqref{eq:simple-smoothing}; the selected tangent and the
-extension of the specified polarization must be checked separately.
-Neither the mixed-singularity criterion nor its nodal specialization
-computes the harmonic norm or the small Hodge spectrum studied here.
-
-The relevant two maps have different domains. Over $\QQ$, set
+The curve-class map and the divisor-period map are transposes:
 \begin{equation}\label{eq:curve-period-duality}
  A:\QQ^k\longrightarrow H_2(Y;\QQ),\quad e_i\longmapsto[C_i],
  \qquad r=A^*,\qquad \im r=(\ker A)^\perp.
 \end{equation}
-Here $r(D)=(D\cdot C_i)_i$, and the annihilator uses the marked node
-coordinates. The space $\ker A$ supplies localized deformation tangents;
-$\ker r$ is the surviving second cohomology, and $\im r$ supplies the
-spectral periods. The divisor-pairing description already appears in
-\cite[Proposition~8.3]{wuebben-cy-obstruction}. The transpose identity
-is elementary linear algebra. Our spectral conclusion additionally
-requires the specified polarization, all its mixed cubic intersections,
-and the harmonic quotient by the entire surviving space. A relation
-lattice alone determines none of those norms.
+The space $\ker A$ governs localized deformation tangents, whereas $\ker r$
+is the surviving second cohomology and $\im r$ supplies the spectral
+periods. The harmonic quotient also requires the polarized intersection
+form. Integral saturation is proved from the actual attachments where it
+is asserted; it does not follow from \eqref{eq:curve-period-duality}.
 
-CY~VI identifies the original-side exceptional-curve relation lattice
-with a vanishing-sphere relation lattice on the prescribed Batyrev mirror
-\cite[Theorem~A]{wuebben-cy-mirror}. This is distinct from the
-same-transition attachment duality in
-Proposition~\ref{prop:restriction-spectrum}, where the relations among
-the smoothing's vanishing classes are $\im r$, not $\ker A$.
-The integral exterior sequence in CY~VI, Section~9.7, is a preceding
-use of the same classical surgery tools. Its mirror theorem is not a
-premise of the general spectral proof. Over the integers, actual
-attachments and torsion must still be retained; a rational annihilator
-identity does not establish saturation or the complete cohomology ring.
+Ann\'e--Takahashi's conic surgery theorem includes logarithmic modes
+\cite{anne-takahashi}. Rowlett proves spectral and heat convergence under
+her asymptotically conic convergence hypotheses \cite{rowlett}.
+Guillarmou--Sher's low-energy resolvent theorem \cite[Theorem~1]{guillarmou-sher}
+excludes the harmonic link two-form channel present here through its
+condition~(4). For scalar Laplacians in different degenerations, Cao proves
+two-sided inverse-logarithmic orders for induced total-space metrics
+\cite[Theorems~0.2--0.4]{cao}, and Dai--Yoshikawa obtain small-eigenvalue
+orders and the leading product in reduced curve degenerations
+\cite[Theorems~0.2--0.3]{dai-yoshikawa}. These results concern different
+operators and metrics. Here the conclusion is the individual leading
+coefficient of every lost-divisor mode for the actual polarized Ricci-flat
+metrics, computed from the full quotient harmonic norm.
 
-Spectral convergence and low-energy resolvent analysis in related conic
-geometries are developed in \cite{rowlett,guillarmou-sher}. The latter's
-Theorem~1 excludes the present harmonic link two-form channel through
-its condition~(4). For tangent bundles, Collins--Picard--Yau prove HYM
-existence and local control on balanced conifold transitions
-\cite{collins-picard-yau}. Our tangent result uses the Chern connections
-of the actual Ricci-flat K\"ahler metrics and separately identifies the
-flat central sheaf and its reflexive hull.
+The tangent connections in Appendix~\ref{sec:tangent} are induced by those
+Ricci-flat metrics. Collins--Picard--Yau treat tangent-bundle HYM geometry
+on balanced conifold transitions \cite{collins-picard-yau}; our appendix
+identifies the flat tangent-sheaf limit and its reflexive hull for the
+specified K\"ahler family.
 
-For the integrated result, integral Lefschetz and the projective cubic
-form first determine the smooth rings. Thom and Mayer--Vietoris
-sequences compute the exterior and its attachments. Naturality of the
-actual contraction and Milnor collapse then gives the specialization
-maps and identifies the primitive vanishing lattice and monodromy.
-The class used in these calculations is the same $L$ used for exceptional
-areas and the primitive harmonic norm. Finally the relative Jacobian
-sequence identifies the tangent sheaf, while the actual metric limits
-give its geometric interpretation. These calculations make the global
-inputs to the new spectral coefficient explicit; classical topology
-and metric existence are not claimed as separate new theories.
-
-Section~\ref{sec:geometry} fixes the analytic normalization and actual
-metric comparison. Sections~\ref{sec:mass}--\ref{sec:lower} prove the
-restriction, harmonic-mass and spectral assertions.
-Section~\ref{sec:multiple} proves the complete fixed-family cluster law.
-Sections~\ref{sec:quintic}--\ref{sec:tangent} prove the compact integrated
-result. Sections~\ref{sec:eight-node} and~\ref{sec:cy-x9} apply the
-cluster law to established families in the two programmes.
-Section~\ref{sec:further} records the remaining
-reconstruction and analytic questions.
+Section~\ref{sec:geometry} establishes the actual metric comparison.
+Section~\ref{sec:mass} calculates the harmonic norm and the integral
+restriction map. Sections~\ref{sec:capacity}--\ref{sec:multiple} prove the
+model spectral law, transfer it using only $C^0$ comparison, and isolate
+the stronger rank-one remainder. Sections~\ref{sec:quintic},
+\ref{sec:eight-node} and~\ref{sec:cy-x9} give the three applications.
+The appendices retain the supporting integral and tangent calculations.

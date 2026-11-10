@@ -1,0 +1,309 @@
+\section{The ordered spectral law and its transfer}\label{sec:multiple}
+
+\subsection{The surviving model harmonic space}
+Fix $R,A$. For $k\in K$, let $\eta_k^R$ be its central harmonic
+representative. Its harmonic link coefficients vanish. The exact-cone
+expansion \eqref{eq:cone-harmonic-expansion} gives an end primitive
+$\beta_k$ of size $O(r^{\nu-1})$, for some $\nu>0$, with differentiated
+bounds. If $\chi_\rho$ equals one near each tip and zero above $2\rho$,
+then replacing the form on its ends by
+\begin{equation}\label{eq:closed-compact-approximation}
+ \gamma_{k,\rho}=\eta_k^R-d(\chi_\rho\beta_k)
+\end{equation}
+gives a compactly supported closed representative of $k$ converging in
+$L^2$ to $\eta_k^R$. The squared tail and cutoff error is
+$O(\rho^{2\nu+2})$.
+
+Let $h_\epsilon^R(k)$ be the harmonic representative on the model of the
+corresponding surviving class. Extend \eqref{eq:closed-compact-approximation}
+by zero over the caps. Minimization first in the fixed model and then
+$\rho\downarrow0$ gives
+\[
+ \limsup_{\epsilon\to0}\|h_\epsilon^R(k)\|^2\le G_R(k,k).
+\]
+For nonzero $k$, a fixed compactly supported closed dual four-form bounds
+these norms below. Proposition~\ref{prop:multicap-compactness} at eigenvalue
+zero gives a central limit without lost norm. Compactly supported dual
+pairings identify its class as $k$, and Lemma~\ref{lem:central-kernels}
+identifies the limit as $\eta_k^R$. Consequently the full harmonic Gram
+matrix on $K$ converges to $G_R|_K$. All elliptic convergence used here
+is on the fixed central model metric. No assertion about derivatives of
+harmonic representatives for arbitrary metrics satisfying \textup{(N)}
+is needed.
+
+\subsection{Upper and lower bounds on every model subspace}
+Let $D\in K^{\perp_{G_R}}$. On end $i$ write
+\[
+ \eta_D^R=r_i(D)\vartheta_i+dv_{+,D},\qquad
+ |dv_{+,D}|=O(r^{\kappa-2}),\quad \kappa>0.
+\]
+Take the Lipschitz cutoff equal to zero below $2A\epsilon$, equal to one
+above $R$, and equal to
+\[
+ \chi_\epsilon(r)=
+ \frac{\log(r/(2A\epsilon))}{\log(R/(2A\epsilon))}
+\]
+between these radii. The form $T_\epsilon D=\chi_\epsilon\eta_D^R$,
+extended by zero over the caps, lies in the model Hodge form domain.
+The metric is exactly conical where the cutoff varies. Closedness and
+coclosedness of $\eta_D^R$ give
+$dT_\epsilon D=d\chi_\epsilon\wedge\eta_D^R$ and
+$d^*T_\epsilon D=-\iota_{\nabla\chi_\epsilon}\eta_D^R$.
+The radial contraction of $\vartheta_i$ vanishes, and its tangential
+pairing with $d_Lv_{+,D}$ is zero. With $L_\epsilon=\log(1/\epsilon)$
+and $c=2\pi/3$, it follows that
+\begin{align}
+ \bar q_\epsilon(T_\epsilon D)
+ &=\frac{c\mathcal E([D],[D])}{L_\epsilon}
+       +O_{R,A}(L_\epsilon^{-2})\|D\|^2,
+       \label{eq:matrix-trial-energy}\\
+ \langle T_\epsilon D,T_\epsilon F\rangle
+ &=\mathcal M_R([D],[F])+O_{R,A}(L_\epsilon^{-1})\|D\|\|F\|.
+       \label{eq:matrix-trial-mass}
+\end{align}
+Here any fixed norm on $V$ may be used. The remainder energy and mass
+error are bounded, respectively, by
+\[
+ CL_\epsilon^{-2}\int_0^R r^{2\kappa-1}\,dr,
+ \qquad CL_\epsilon^{-1}\int_0^R r(1+|\log r|)\,dr+O(\epsilon^2).
+\]
+Polarization gives the bilinear estimates, uniformly on this fixed
+finite-dimensional space.
+
+Subtract the full model harmonic projection. Its norm is $o(1)$ by the
+preceding harmonic convergence and $G_R(D,K)=0$; the energy is unchanged.
+Min--max on the first $j$ generalized eigendirections of $(\mathcal E,\mathcal M_R)$ gives
+\begin{equation}\label{eq:matrix-upper}
+ \limsup_{\epsilon\to0}L_\epsilon\bar\lambda_j(\epsilon;R,A)
+ \le c\mu_j(R),\qquad 1\le j\le m.
+\end{equation}
+The $o(1)$ projection estimate suffices for this leading limit and does
+not assert a second-order eigenvalue remainder.
+
+For the lower bound choose a sequence on which
+$L_\epsilon\bar\lambda_j$ tends to its lower limit $\ell$; the upper
+bound makes it finite. The first $j$ orthonormal model eigenforms have a
+common subsequence with orthonormal central limits
+$v_1,\ldots,v_j\in K^{\perp_{G_R}}$, by
+Proposition~\ref{prop:multicap-compactness} and convergence of the model
+kernel. For $z\in\RR^j$ their combination $u_\epsilon(z)$ has
+\[
+ \bar q_\epsilon(u_\epsilon(z))\le\bar\lambda_j|z|^2,
+ \qquad v(z)=\sum_{a=1}^jz_av_a.
+\]
+At the fixed sections $r_*=R/2$, its harmonic boundary coefficients
+converge smoothly to $r_i(v(z))$. Each inner region is a scaled fixed
+cap with an exact conical end. Lemma~\ref{lem:capacity} gives
+\[
+ \bar q_\epsilon(u_\epsilon(z))\ge
+ \sum_i\frac{c|B_{i,\epsilon}(z)|^2}
+                    {\log(r_*/\epsilon)+C_{i,A}}.
+\]
+The regions are disjoint. Multiplying by $L_\epsilon$ and taking the
+limit yields, simultaneously for the finite basis and hence every $z$,
+\[
+ c\mathcal E(v(z),v(z))\le\ell|z|^2=\ell \mathcal M_R(v(z),v(z)).
+\]
+The largest generalized Rayleigh quotient on this $j$-dimensional span is
+at least $\mu_j(R)$. Together with \eqref{eq:matrix-upper}, this proves
+\begin{equation}\label{eq:matrix-model-law}
+ \lim_{\epsilon\to0}L_\epsilon\bar\lambda_j(\epsilon;R,A)
+       =c\mu_j(R),\qquad 1\le j\le m.
+\end{equation}
+The constants $C_{i,A}$ require no uniform bound as $A$ varies, since the
+family limit has been taken first.
+
+\subsection{Transfer under \texorpdfstring{$C^0$}{C0} comparison}
+\begin{lemma}[Dodziuk comparison]\label{lem:metric-spectra}
+Let $g,h$ be smooth metrics on a closed $n$-manifold and suppose
+$(1-\delta)g\le h\le(1+\delta)g$, with $0<\delta<1/2$.
+For every ordered positive Hodge eigenvalue in degree $p$,
+\[
+ K(\delta)^{-1}\lambda_{p,j}^+(g)
+ \le\lambda_{p,j}^+(h)\le K(\delta)\lambda_{p,j}^+(g),
+ \qquad K(\delta)=1+O_n(\delta).
+\]
+No derivatives of the metric comparison are required.
+\end{lemma}
+\begin{proof}
+This is the closed-manifold form of \cite[Proposition~3.3]{dodziuk}.
+We recall the variational argument to specify the metric dependence.
+The squared $L^2$ norms of $p$-forms satisfy
+\[
+ a_p\|u\|_g^2\le\|u\|_h^2\le b_p\|u\|_g^2,
+ \quad a_p=(1-\delta)^{n/2}(1+\delta)^{-p},\quad
+ b_p=(1+\delta)^{n/2}(1-\delta)^{-p}.
+\]
+The distributional differential $d$ and its graph domain are unchanged
+under equivalent norms. Set $Z^p=\ker d$ and give
+$\operatorname{Dom}d/Z^p$ the quotient norm
+$\|[u]\|_{g,q}^2=\inf_{z\in Z^p}\|u+z\|_g^2$.
+The same constants compare these quotient norms. The coexact positive
+$p$-eigenvalues are the squared singular values of $d$ on this quotient,
+with min--max quotient $\|du\|_{p+1,g}^2/\|[u]\|_{g,q}^2$.
+Its comparison factors are $a_{p+1}/b_p$ and $b_{p+1}/a_p$.
+The positive exact $p$-spectrum equals the coexact $(p-1)$-spectrum.
+The full positive spectrum is the ordered union of these two lists,
+with multiplicity; the same common multiplicative bounds hold for their
+ordered union. This proves the lemma and avoids comparing codifferentials
+pointwise.
+\end{proof}
+
+\begin{theorem}[Spectral consequence of condition \textup{(N)}]
+\label{thm:C0-spectrum}
+Under the geometric hypotheses of Theorem~\ref{thm:matrix}, let
+$h_\epsilon$ be any smooth metric family satisfying condition \textup{(N)}
+relative to the central metric $g_0$. Then exactly $m$ positive degree-two
+eigenvalues tend to zero, with
+\[
+ \lim_{\epsilon\downarrow0}\log(1/\epsilon)
+             \lambda^+_{2,j}(h_\epsilon)=\frac{2\pi}{3}\mu_j,
+ \qquad 1\le j\le m.
+\]
+There are uniform positive complementary gaps in degrees one and two.
+If these metrics are Ricci-flat K\"ahler with trivial canonical bundle,
+the small spectral space is coexact and primitive of real type $(1,1)$.
+\end{theorem}
+\begin{proof}
+Fix $R,A$. For every $\eta>0$ and all sufficiently small $\epsilon$,
+condition \textup{(N)} bounds the relative metric error by
+$\delta(R,A)+\eta$. Take this sum small enough for
+Lemma~\ref{lem:metric-spectra}. Its multiplicative factor
+$K(\delta+\eta)$ bounds each ordered positive eigenvalue above and below.
+Using \eqref{eq:matrix-model-law}, then letting $\eta\downarrow0$,
+$R\downarrow0$ and $A\to\infty$, proves the coefficient because
+$\mu_j(R)\to\mu_j$. One fixed admissible pair $R,A$ transfers the
+model complementary gaps by a fixed positive factor. No gap uniform in
+the auxiliary radii is needed. The K\"ahler assertion follows from the
+next lemma.
+\end{proof}
+
+\begin{lemma}\label{lem:small-type}
+On a compact Ricci-flat K\"ahler threefold with trivial canonical bundle,
+every real two-form eigenvector with positive eigenvalue below the first
+positive one-form eigenvalue is coexact and primitive of type $(1,1)$.
+\end{lemma}
+\begin{proof}
+A nowhere-zero holomorphic three-form $\Omega$ is parallel. Using the
+complex-bilinear metric to raise indices, the map
+\[
+ T:\Lambda^{0,1}\longrightarrow\Lambda^{2,0},\qquad
+ T\beta=\iota_{\beta^\sharp}\Omega
+\]
+is a complex-linear parallel bundle isomorphism, equivariant for $SU(3)$
+and hence for the actual holonomy group. It intertwines the Hodge
+Laplacians: both the rough term and the curvature term $q(R)$ in the
+Weitzenb\"ock formula are natural under this holonomy intertwiner
+\cite[\S\S2.4, 2.6, Definition~2.4 and Example~1]{semmelmann-weingart}.
+Explicitly, $q(R)=\sum_\alpha\rho(X_\alpha)\rho(R(X_\alpha))$ in an
+orthonormal holonomy-algebra frame. Thus a nonzero $(2,0)$ eigencomponent
+would give a nonzero $(0,1)$ eigenform of the same eigenvalue via $T^{-1}$,
+contradicting the one-form gap. Reality removes the conjugate component.
+
+K\"ahler commutation makes $\Lambda u$ a scalar eigenfunction of the
+same positive eigenvalue. If nonzero, its differential gives the same
+contradiction. Similarly $d^*u$ must vanish. Hence $\Lambda u=0$ and
+$u=\lambda^{-1}d^*du$. The argument applies to the entire eigenspace and
+requires no simplicity hypothesis.
+\end{proof}
+
+Lemma~\ref{lem:model-comparison} establishes condition \textup{(N)} for
+the actual polarized Ricci-flat metrics. Substituting
+$\epsilon=t^{1/3}$ in Theorem~\ref{thm:C0-spectrum} proves
+Theorem~\ref{thm:matrix}. A simple $\mu_j$ is separated from its neighbours;
+the ordered laws and complete count imply eventual simplicity. In rank
+one the quotient mass is \eqref{eq:mass-identity}, so the same proof gives
+all assertions of Theorem~\ref{thm:main} except its sharper upper remainder.
+
+\subsection{The differentiated rank-one remainder}
+The remaining assertion uses the stronger full-central estimate
+\eqref{eq:actual-comparison}, including its first derivative. Impose
+$b_2(Y)=2$, $b_2(X_t)=1$ for the rest of this subsection.
+We now use the global form $\alpha$ of Proposition~\ref{prop:mass}.
+Put $L_\epsilon=\log(1/\epsilon)$. On end $i$ choose a cutoff
+$\chi_{i,\epsilon}$ vanishing below $A_i\epsilon$, equal to one
+above a fixed small $R_i$, and logarithmic between these radii:
+\[
+ \chi_{i,\epsilon}(r)=
+ \frac{\log(r/(A_i\epsilon))}{\log(R_i/(A_i\epsilon))}.
+\]
+Round its endpoints smoothly on fixed multiplicative annuli, making
+it flat at the inner endpoint. The rounding changes energy by
+$O(L_\epsilon^{-2})$. Denote the denominator by
+$L_i=L_\epsilon+O(1)$. Transport $\chi_\epsilon\alpha$ using
+$F_\epsilon$ and extend by zero across the cores, obtaining a smooth
+real two-form $u_\epsilon$ on $X_t$.
+
+\begin{proposition}\label{prop:upper}
+For the actual Ricci-flat metrics,
+\begin{equation}\label{eq:epsilon-upper}
+ \lambda_2^+(\epsilon)
+ \le\frac{c\sum_i b_i^2}{M L_\epsilon}+O(L_\epsilon^{-2}),
+ \qquad c=2\pi/3.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Pullback commutes with $d$, so $du_\epsilon$ is the transport of
+$d\chi_\epsilon\wedge\alpha$. On end $i$ its leading energy is
+$c b_i^2\int r|\chi_i'|^2dr=c b_i^2/L_i+O(L_\epsilon^{-2})$.
+The errors in the form, central metric and actual metric carry respectively
+positive factors $r^\nu$, $r^\mu$ and $(\epsilon/r)^{a_0}$.
+Their integrals against $dr/r$ are bounded, and each has prefactor
+$O(L_\epsilon^{-2})$. Thus
+\begin{equation}\label{eq:d-trial}
+ \|du_\epsilon\|^2=\frac{c\sum_i b_i^2}{L_\epsilon}
+ +O(L_\epsilon^{-2}).
+\end{equation}
+
+The actual codifferential requires a separate estimate.
+Proposition~\ref{prop:metric-comparison} and the differentiated
+$O(r^{-2})$ bound for $\alpha$ give
+\[
+ |(d^*_{g_\epsilon}-d^*_{g_0})\alpha|
+ \le C(\epsilon/r)^{a_0}r^{-3}.
+\]
+Since $d^*_{g_0}\alpha=0$, the contribution multiplied by $\chi_i$
+has squared norm at most
+\[
+ C\int_{A_i\epsilon}^{R_i}\chi_i^2(\epsilon/r)^{2a_0}\frac{dr}{r}
+ \le \frac C{L_\epsilon^2}
+ \int_{A_i}^{\infty}(1+\log(s/A_i))^2s^{-1-2a_0}ds
+ =O(L_\epsilon^{-2}).
+\]
+The product-rule contraction obeys
+\[
+ |\iota_{\nabla_{g_\epsilon}\chi_i}\alpha|
+ \le C|\chi_i'|\bigl(r^{\nu-2}+(\epsilon/r)^{a_0}r^{-2}\bigr),
+\]
+because the radial cone contraction of $\vartheta_i$ vanishes.
+Its squared norm has bounded radial integrals
+$\int r^{2\nu-1}dr$ and $\int(\epsilon/r)^{2a_0}dr/r$, again with
+prefactor $O(L_\epsilon^{-2})$. On the fixed exterior the squared
+error is $O(\epsilon^{2a_0})$. Combining with \eqref{eq:d-trial},
+\begin{equation}\label{eq:q-trial}
+ q_\epsilon(u_\epsilon):=\|du_\epsilon\|^2+\|d^*u_\epsilon\|^2
+ =\frac{c\sum_i b_i^2}{L_\epsilon}+O(L_\epsilon^{-2}).
+\end{equation}
+
+The mass density of $\alpha$ is $O(r\,dr)$, and the removed inner
+mass is $O(\epsilon^2)$. On the remainder,
+$|1-\chi_i|\le C(1+|\log r|)/L_\epsilon$, which is integrable
+against that density. The actual metric error integrates to
+$O(\epsilon^{\min(a_0,2)}(1+|\log\epsilon|))$. Therefore
+\[
+ \|u_\epsilon\|^2=M+O(L_\epsilon^{-1}).
+\]
+The K\"ahler-form comparison and pointwise central primitivity similarly
+give $\langle u_\epsilon,\omega_\epsilon\rangle=O(L_\epsilon^{-1})$.
+Subtract its orthogonal projection onto $\omega_\epsilon$.
+Since $\|\omega_\epsilon\|^2=v/2$, this changes the squared norm by
+$O(L_\epsilon^{-2})$ and leaves $q_\epsilon$ unchanged. It removes
+the whole harmonic kernel because $b_2(X_t)=1$. The Rayleigh principle
+then proves \eqref{eq:epsilon-upper}.
+\end{proof}
+
+Since $\log(1/\epsilon)=|\log t|/3$, Proposition~\ref{prop:upper}
+gives \eqref{eq:main-upper} and completes the proof of
+Theorem~\ref{thm:main}. This estimate is separate from the $C^0$ transfer
+and has only the stated one-sided conclusion.

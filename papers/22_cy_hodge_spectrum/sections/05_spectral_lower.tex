@@ -1,96 +1,13 @@
-\section{Spectral compactness and the matching lower bound}\label{sec:lower}
+\section{Compactness and the number of small modes}\label{sec:lower}
 
-The upper bound uses only one trial direction. To prove that its coefficient
-is sharp, we must identify the limit of every low-energy two-form and exclude
-mass concentrated in the caps. We first make the metrics exactly conical,
-apply conic spectral compactness at fixed auxiliary radii, and then remove
-that modification by a multiplicative comparison of eigenvalues.
-
-\subsection{Comparison without derivatives of the metrics}
-\begin{lemma}\label{lem:metric-spectra}
-Let $g,h$ be smooth metrics on a closed $n$-manifold and suppose
-$(1-\delta)g\le h\le(1+\delta)g$, with $0<\delta<1/2$.
-For every ordered positive Hodge eigenvalue in degree $p$,
-\[
- K(\delta)^{-1}\lambda_{p,j}^+(g)
- \le\lambda_{p,j}^+(h)\le K(\delta)\lambda_{p,j}^+(g),
- \qquad K(\delta)=1+O_n(\delta).
-\]
-No derivatives of the metric comparison are required.
-\end{lemma}
-\begin{proof}
-The squared $L^2$ norms of $p$-forms satisfy
-\[
- a_p\|u\|_g^2\le\|u\|_h^2\le b_p\|u\|_g^2,
- \quad a_p=(1-\delta)^{n/2}(1+\delta)^{-p},\quad
- b_p=(1+\delta)^{n/2}(1-\delta)^{-p}.
-\]
-The distributional differential $d$ and its graph domain are unchanged
-under equivalent norms. Set $Z^p=\ker d$ and give
-$\operatorname{Dom}d/Z^p$ the quotient norm
-$\|[u]\|_{g,q}^2=\inf_{z\in Z^p}\|u+z\|_g^2$.
-The same constants compare these quotient norms. The coexact positive
-$p$-eigenvalues are the squared singular values of $d$ on this quotient,
-with min--max quotient $\|du\|_{p+1,g}^2/\|[u]\|_{g,q}^2$.
-Its comparison factors are $a_{p+1}/b_p$ and $b_{p+1}/a_p$.
-The positive exact $p$-spectrum equals the coexact $(p-1)$-spectrum.
-The full positive spectrum is the ordered union of these two lists,
-with multiplicity; the same common multiplicative bounds hold for their
-ordered union. This proves the lemma and avoids comparing codifferentials
-pointwise.
-\end{proof}
-
-\subsection{Fixed conic models}
-On the cap end choose the radial variable $1/\rho_2$ from the product
-corner in Section~\ref{sec:geometry}. In the notation of
-\cite[\S5.3.2]{benabida}, its restriction is
-$\sqrt{1+\widetilde r^2}$, where $\widetilde r$ is the original cap
-radius. This changes that radius by a relative $O(\widetilde r^{-2})$
-term, with differentiated bounds, and preserves the asymptotically
-conical estimates after decreasing their positive decay rate if needed.
-Fix a small central radius $R>0$ and a large cap radius $A>0$.
-Let $g_0^R$ equal $g_0$ outside $r=2R$, equal $g_C$ inside $r=R$,
-and interpolate between them. Let $g_{\mathrm{St}}^A$ agree with the
-normalized Stenzel metric up to radius $A$, with $g_C$ beyond $2A$,
-and interpolate on the intervening annulus. These are smooth positive
-metrics; they need not be K\"ahler. Their relative errors are respectively
-$O(R^\mu)$ and $O(A^{-a_1})$.
-
-For $2A\epsilon<R$, glue the fixed central metric to the scaled metrics
-$\epsilon^2g_{\mathrm{St}}^A$, using the actual link attachments. The
-overlap is an exact cone. Fixed local normalization factors are absorbed
-in the finitely many cap metrics. Denote the resulting smooth metric on
-the same differentiable fibre by $\bar g_\epsilon^{R,A}$.
-
-\begin{lemma}\label{lem:model-comparison}
-For some $b>0$,
-\begin{equation}\label{eq:model-comparison}
- \limsup_{\epsilon\downarrow0}\sup_{X_t}
- |g_\epsilon-\bar g_\epsilon^{R,A}|_{\bar g_\epsilon^{R,A}}
- \le C(R^\mu+A^{-b}).
-\end{equation}
-The family limit is taken with $R,A$ fixed.
-\end{lemma}
-\begin{proof}
-On $r\ge R$, the actual metric converges to $g_0$, and the central
-interpolation costs $O(R^\mu)$. On each fixed rescaled cap the actual
-metric converges to Stenzel, and the cap interpolation costs
-$O(A^{-a_1})$. In the intervening region $A\epsilon\le r\le R$,
-Proposition~\ref{prop:metric-comparison} and
-\eqref{eq:central-rate} give relative cone error
-$O(r^\mu)+O((\epsilon/r)^{a_0})$, bounded by
-$C(R^\mu+A^{-a_0})$. The corner coordinates agree at the two faces:
-$r=\rho_1$ and the cap radius is $r/\epsilon=1/\rho_2$.
-Thus these estimates compare the same conic frames. Taking
-$b=\min(a_0,a_1)$ proves the assertion. The errors tending to zero
-with $\epsilon$ may depend on $R,A$, which is why the limits are ordered.
-\end{proof}
+All auxiliary central and cap metrics in this section are fixed. We work
+with $b=\dim V$, $s=\dim K$ and $m=b-s$ from Theorem~\ref{thm:matrix}.
 
 \subsection{Central harmonic forms and their domains}
 \begin{lemma}\label{lem:central-kernels}
 For $g_0^R$, the smooth $L^2$ closed and coclosed one-forms vanish.
 The corresponding two-form space maps isomorphically to
-$H^2(M_0;\RR)=\RR H\oplus\RR D$. Every such two-form lies in the
+$H^2(M_0;\RR)=V$. Every such two-form lies in the
 minimal graph domain of $d+d^*$.
 \end{lemma}
 \begin{proof}
@@ -100,14 +17,11 @@ $u=a(r)+dr\wedge b(r)$. Link Hodge decomposition gives
  a(r)=\sum_jc_j(r)\vartheta_j+d_Lv(r),\qquad d_L^*v=0,
 \]
 where $v$ is orthogonal to harmonic one-forms. The closedness equations
-imply $c_j'=0$ and $b-v'$ closed. Coclosedness then gives
-$b=v'+b_H$ with $b_H$ harmonic, and
+imply $c_j'=0$ and $b-v'$ closed. Coclosedness makes the latter
+harmonic. Since $H^1(T^{1,1})=0$, it vanishes, and
 \[
- r^{-2}\Delta_Lv-v''-3r^{-1}v'=0,
- \qquad b_H'+3r^{-1}b_H=0.
-\]
-The latter term is $r^{-3}B_H$; as a radial two-form it is not $L^2$
-at zero unless zero. On a positive coexact one-form eigenspace of
+ b=v',\qquad r^{-2}\Delta_Lv-v''-3r^{-1}v'=0.
+\] On a positive coexact one-form eigenspace of
 link eigenvalue $\lambda$, the radial exponents of $v$ are
 \[
  k_\pm=-1\pm\sqrt{1+\lambda}.
@@ -137,14 +51,14 @@ Thus the map to ordinary cohomology is injective.
 For surjectivity, use the closed minimal de Rham complex. Its reduced
 cohomology $\ker d_{\min}/\overline{\im d_{\min}}$ has harmonic
 representatives by Hilbert-space orthogonal decomposition; no closed-range
-assertion is needed for this reduced statement. The forms $\omega,\eta$
-from Proposition~\ref{prop:mass} remain closed minimal-domain forms for
+assertion is needed for this reduced statement. The forms $\eta_D$ for a basis of $V$, constructed in
+Section~\ref{sec:mass}, remain closed minimal-domain forms for
 $g_0^R$, by norm equivalence. Their reduced classes are independent:
-pair them with compactly supported closed four-forms dual to $H,D$
+pair them with compactly supported closed four-forms dual to that basis
 under $H^2(M_0)\times H_c^4(M_0)$. Those pairings are $L^2$-continuous
 and vanish on the closure of minimal exact forms. The resulting reduced
 harmonic representatives are smooth, closed and coclosed on the interior.
-Injectivity into the two-dimensional ordinary cohomology now gives the
+Injectivity into the $b$-dimensional ordinary cohomology now gives the
 isomorphism.
 
 For degree one, the cone calculation gives tangential harmonic link
@@ -156,25 +70,23 @@ cutoff error has squared norm $O(\rho^4)$. The same adjoint argument
 makes the form zero.
 \end{proof}
 
-Let $H_R,D_R$ be the harmonic representatives in the lemma and set
+Let $G_R$ be the harmonic Gram form on $V$ for $g_0^R$, and let
+$\mathcal M_R$ be its quotient form on $V/K$. Since $g_0^R$ differs relatively
+from $g_0$ by $O(R^\mu)$, their norms define the same closed minimal
+complex and reduced cohomology. Minimization over each class gives
+comparison factors $1+O(R^\mu)$ for its harmonic norm. Polarization and
+finite-dimensional minimization over $K$ therefore give
+\begin{equation}\label{eq:mass-limit}
+ G_R\longrightarrow G,\qquad \mathcal M_R\longrightarrow\mathcal M.
+\end{equation}
+In particular the generalized eigenvalues $\mu_j(R)$ of $(\mathcal E,\mathcal M_R)$
+converge to $\mu_j$. In rank one, if $H_R,D_R$ are the central harmonic
+representatives, this quotient norm is
 \begin{equation}\label{eq:model-mass}
  \alpha_R=D_R-\frac{\langle D_R,H_R\rangle}{\|H_R\|^2}H_R,
- \qquad M_R=\|\alpha_R\|^2.
+ \qquad \mathcal M_R([D],[D])=\|\alpha_R\|^2.
 \end{equation}
-Then
-\begin{equation}\label{eq:mass-limit}
- M_R\longrightarrow M\quad\text{as }R\downarrow0.
-\end{equation}
-Indeed $g_0^R$ and $g_0$ differ relatively by $O(R^\mu)$.
-Their equivalent norms define the same closed minimal complex and
-reduced cohomology. The harmonic norm of a class is the infimum over
-its closed representatives modulo the closed exact subspace. Hence all
-these norms differ by factors $1+O(R^\mu)$. Polarization on the
-fixed two-dimensional space gives convergence of the Gram matrices,
-and their Schur complements converge as well. The limiting harmonic
-representatives are $\omega,\eta$ from Proposition~\ref{prop:mass}.
-On the $i$th exact cone the harmonic link coefficient of $\alpha_R$
-is the constant $b_i$, since $H$ has zero restriction there.
+The link coefficients of a representative remain its periods $r_i(D)$.
 
 \subsection{Cap kernels and the critical degree}
 We record the two facts needed to exclude cap mass in the spectral
@@ -233,148 +145,106 @@ $\sqrt{|\log\epsilon|}$, its contribution to the critical term
 therefore tends to zero in $L^2$.
 \end{proof}
 
-\subsection{Counting the small eigenvalues}
-\begin{proposition}\label{prop:model-count}
-For each fixed $R,A$, the metrics $\bar g_\epsilon^{R,A}$ have a
-uniform positive degree-one gap and exactly one positive degree-two
-eigenvalue tending to zero. That eigenvalue is eventually simple and
-coexact; the remaining positive degree-two spectrum has a uniform gap.
-Its normalized real eigenforms converge, along subsequences and after
-choice of sign, strongly on the central part and smoothly on fixed
-compact subsets to $\alpha_R/\sqrt{M_R}$.
+\subsection{Several-cap norm compactness}
+
+\begin{proposition}\label{prop:multicap-compactness}
+Fix $R,A$. For any finite orthonormal collection of pure degree-$p$
+eigenforms on $(\overline X_\epsilon,\bar g_\epsilon^{R,A})$, $p=1,2$,
+with eigenvalues tending to zero, a common subsequence converges smoothly
+on fixed central compact subsets and strongly in central $L^2$ to closed
+and coclosed pure degree-$p$ forms. There is no cap or critical mass loss,
+and the limiting Gram matrix is the identity.
 \end{proposition}
 \begin{proof}
-We apply the compactness and norm decomposition in
-\cite[Theorems~A--B, Corollary~17, equations~(24)--(26), Lemma~18]{anne-takahashi}.
-We retain the central extension selected by the cap trace space $W$
-in \cite[equation~(7)]{anne-takahashi}. The additional link gap in
-\cite[\S5.1, p.~1047]{anne-takahashi} identifies the minimal and
-maximal Gauss--Bonnet domains and allows a cohomological description
-of the full kernel. We do not use that identification. Instead,
-Lemma~\ref{lem:central-kernels} places every relevant pure-degree
-closed and coclosed limit in the minimal domain, which is contained
-in the selected domain for every $W$.
-Its geometric hypotheses are satisfied: the compact exterior is fixed
-and exactly conical near its boundary, each compact cap has a conical
-collar, and the caps are scaled by a common $\epsilon$, with fixed
-normalizations. Several disjoint caps replace the boundary operator
-and cap spaces by finite direct sums. All the local estimates in the
-proof sum over those components; this introduces no independent
-vanishing parameter.
+We specify the finite-cap consequence of \cite{anne-takahashi}. Retain
+the closed Gauss--Bonnet extension $D_W$ selected by its cap trace space
+$W$ in equation~(7), with Laplace operator $D_W^*D_W$. No identification of minimal and maximal domains, and no
+invariance of the boundary projectors under physical degree, is assumed.
+The pure-degree central kernels in Lemma~\ref{lem:central-kernels} lie
+in the minimal graph domain and hence in every such selected domain.
 
-For clarity, the consequence used here is the following norm
-compactness statement. A normalized sequence of eigenforms with
-vanishing eigenvalues has a subsequential central limit and possible
-additional mass in complete-cap $L^2$ harmonic forms and critical
-extended cap solutions. On the central region the sequence, up to an
-$L^2$ error tending to zero, is the sum of a term converging strongly
-to the central limit, a complete-cap tail, and a logarithmically
-normalized critical term. The squared norm is the sum of the limiting
-squared norms of those terms; orthogonality of finite collections is
-preserved. The critical term is the radial extension of the trace of
-an actual critical cap solution, with normalization
-$|\log\epsilon|^{-1/2}$.
+Take the finite direct sum of the tangential operators $A_i$ on the links.
+On each connected cap, Proposition~2 of the source gives the elliptic
+estimate; summing its squares and taking a finite maximum gives the
+estimate for their disjoint union. The Poisson extensions, Dirac--Neumann
+maps $T_i,T_{C,i}$ and spaces $W_i,I_{1/2,i}$ in its equations~(5)--(8)
+are direct sums. Proposition~11 gives ellipticity and a finite-dimensional kernel for
+$T_i+T_{C,i}$, and closedness of the relevant restricted image of $T_i$. No condition
+couples the boundary values of different cap components.
 
-Apply this statement to pure $p$-form eigenvectors $u_j$, $p=1,2$,
-with $\lambda_j\to0$. On the compact smooth manifolds,
-\[
- \|du_j\|^2+\|d^*u_j\|^2=\lambda_j\longrightarrow0.
-\]
-The central limit is pure degree $p$, since it agrees with the local
-limit of $u_j$ on every fixed compact subset. Testing the separate
-energy bounds gives separate closedness and coclosedness. It is
-therefore in the space of Lemma~\ref{lem:central-kernels}. This
-argument makes no assertion that an arbitrary mixed-degree kernel of
-a central Gauss--Bonnet extension is invariant under degree projection.
+The transmission formulas (9)--(15) and the radial estimates of
+Lemmas~5--8 apply on each collar. In every bounded spectral interval the
+finite union of link spectra has only finitely many eigenvalues, so the
+required positive separations can be chosen uniformly over these links.
+Propositions~9--12 give the cap and critical limits componentwise.
+Propositions~13--15 and Lemma~16 estimate sums of disjoint radial integrals;
+their tail and almost-orthogonality estimates therefore sum. The exterior
+elliptic estimate of Lemma~4 is unchanged. A common subsequence suffices
+for finitely many caps and vectors. Thus Corollary~17, equations~(24)--(25),
+and Lemma~18, equation~(26), give on the central region
+\begin{equation}\label{eq:multicap-decomposition}
+ u_\epsilon^a=\Phi_\epsilon^a+V_\epsilon^a+C_\epsilon^a+o_{L^2}(1),
+ \qquad \Phi_\epsilon^a\longrightarrow u_0^a\quad\text{strongly},
+\end{equation}
+where $V$ is the complete-cap harmonic tail and $C$ is the logarithmically
+normalized critical tail. If $v_i^a$ is the full complete-cap harmonic
+limit and $\sigma_i^a$ its critical trace, the simultaneous decomposition
+and almost orthogonality give, with the left pairing on the full glued manifold,
+\begin{equation}\label{eq:multicap-gram}
+ \lim\langle u_\epsilon^a,u_\epsilon^b\rangle
+ =\langle u_0^a,u_0^b\rangle+
+   \sum_i\langle v_i^a,v_i^b\rangle+
+   \sum_i\langle\sigma_i^a,\sigma_i^b\rangle.
+\end{equation}
+The full norm of $v_i^a$ includes its cap core. Polarization of the
+simultaneous decomposition gives the cross terms, rather than inferring
+them from separate unit-norm statements.
 
-The complete-cap term vanishes by the $L^2$ calculation above. Write
-the remaining three-term decomposition on the central part as
-$u_j=\Phi_j+\widetilde\Phi_j+\overline\Phi_j+o_{L^2}(1)$.
-Here $\Phi_j$ converges strongly to the central limit,
-$\widetilde\Phi_j\to0$ by the cap-kernel vanishing, and
-$\overline\Phi_j$ is the critical term. By
-Lemma~\ref{lem:critical-degree} the latter has physical degree three,
-up to an error tending to zero. Projecting this identity onto degree
-three kills $u_j$ and its central limit; hence
-$\|\overline\Phi_j\|\to0$. The norm identity now gives central norm
-one, with no lost mass. This projection is applied to the actual
-three-term decomposition, not commuted through its tangential spectral
-projectors.
+The critical coefficient first occurs in $\ker(A_i-1/2)$. The first
+step of Proposition~12 places it in the kernel of the obstruction from
+Proposition~11. That proposition supplies a faster trace $\eta_i$ with
+$T_i(\sigma_i+\eta_i)=0$. It is therefore the trace of a global
+complete-cap $d+d^*$ solution with no slower terms, namely the leading-coefficient image of an element of the critical trace
+quotient $I_{1/2,i}$ in equation~(8). This extension property is
+essential when applying Lemma~\ref{lem:critical-degree}. In particular,
+the extra formal endpoint channel in Remark~20 of the source, from
+coexact link two-forms with eigenvalue one, is not presumed absent; an
+actual critical trace in that channel must satisfy the same global
+closedness and coclosedness argument.
 
-The central dimensions zero and two give the upper counts in degrees
-one and two. Conversely approximate an orthonormal basis of the two
-central harmonic two-forms by compactly supported pure two-forms in
-the minimal graph domain. Their energies tend to zero and their Gram
-matrix tends to the identity. For each fixed cutoff extend them by
-zero across the shrinking caps. The model agrees with the central
-metric on their supports when $\epsilon$ is small. Min--max, first
-in $\epsilon$ and then in the cutoff radius, gives at least two
-eigenvalues tending to zero, including the harmonic eigenvalue.
-Since $b_1(X_t)=0$ and $b_2(X_t)=1$, precisely one positive two-form
-eigenvalue tends to zero. Failure of either asserted complementary
-gap would produce too many orthonormal zero-limit forms by compactness.
-The same count implies eventual simplicity. The degree-one gap
-excludes an exact small two-form, by compact Hodge decomposition.
+The complete-cap $L^2$ kernels vanish by the calculation above, so $V$ and
+all $v_i^a$ vanish. Since $\|du_\epsilon^a\|^2+\|d^*u_\epsilon^a\|^2\to0$,
+the central limits are separately closed and coclosed, and have the original
+physical degree. Lemma~\ref{lem:critical-degree} puts the leading part of
+$C$ in degree three, with its faster remainder tending to zero after
+logarithmic normalization. Apply degree-three projection to the actual
+identity \eqref{eq:multicap-decomposition}. The original form and limiting
+central form project to zero. Hence $C\to0$ in norm. Equation~\eqref{eq:multicap-gram}
+now proves the result. This projection has not been commuted through a
+boundary spectral projector.
 
-It remains to identify its limit. Since $H$ restricts trivially to
-the links, it has a compactly supported closed representative
-$\gamma_H$ on $M_0$. Extend this by zero across the caps. Its model
-harmonic representative has bounded norm by minimization, and a fixed
-nonzero compactly supported dual pairing bounds its norm below.
-The preceding compactness at eigenvalue zero gives convergence without
-mass loss to $H_R$; compactly supported dual pairings identify its
-class uniquely. The small eigenform is orthogonal to this harmonic
-direction, so its central limit is $\pm\alpha_R/\sqrt{M_R}$.
-Interior elliptic estimates upgrade convergence to smooth convergence
-on fixed compact subsets. This proves the last assertion.
+The source proof has thus been used only through estimates on the fixed
+exterior and finitely many individual cap problems. Connectedness of their
+union is unnecessary. The topology of the resulting manifold was computed
+separately from its actual attachments in Section~\ref{sec:capacity}.
 \end{proof}
 
-\subsection{Sharp lower bound and proof of the main theorem}
-Fix $R,A$ and a cone section $r_*=R/2$ on each end. Let
-$B_{i,\epsilon}$ be the harmonic boundary coefficient of a normalized
-small model eigenform on that section. Proposition~\ref{prop:model-count}
-and \eqref{eq:cone-harmonic-expansion} imply, along every convergent
-subsequence and up to common sign,
-\[
- B_{i,\epsilon}\longrightarrow b_i/\sqrt{M_R}.
-\]
-Inside the section the metric is a scaled fixed exact-cone-ended cap.
-Lemma~\ref{lem:capacity} therefore gives energy at least
-\[
- \frac{cB_{i,\epsilon}^2}{\log(r_*/\epsilon)+C_{i,A}}.
-\]
-These regions are disjoint. Summing and using unit total norm yields
-\begin{equation}\label{eq:model-liminf}
- \liminf_{\epsilon\downarrow0}
- \bar\lambda_2^+(\epsilon;R,A)\log(1/\epsilon)
- \ge \frac{c\sum_i b_i^2}{M_R}.
-\end{equation}
-The sign has disappeared on squaring. The argument applies to every
-sequence by subsequence compactness, so it establishes the full lower
-limit. The constants $C_{i,A}$ need no uniform bound in $A$, since the
-family limit is taken first.
-
-Lemmas~\ref{lem:metric-spectra} and~\ref{lem:model-comparison} transfer
-\eqref{eq:model-liminf} to the actual metrics with factor tending to
-one as $A\to\infty$ and $R\downarrow0$. By \eqref{eq:mass-limit},
-\[
- \liminf_{\epsilon\downarrow0}\lambda_2^+(\epsilon)\log(1/\epsilon)
- \ge\frac{c\sum_i b_i^2}{M}.
-\]
-Proposition~\ref{prop:upper} is the matching upper limit. Substitution
-of $c=2\pi/3$ and $\log(1/\epsilon)=|\log t|/3$ proves
-\eqref{eq:main-law}, and \eqref{eq:epsilon-upper} proves
-\eqref{eq:main-upper}.
-
-For the gaps, fix a single admissible pair $R,A$ with small metric
-comparison error. The model gaps transfer by a fixed positive factor.
-Thus there is no need for a model gap uniform under the auxiliary
-limits. Simplicity and coexactness follow as in
-Proposition~\ref{prop:model-count}. On the actual K\"ahler manifold,
-type and conjugation commute with the Laplacian. A nonzero $(2,0)$
-component would supply two independent real eigenvectors, contradicting
-simplicity. The eigenform is therefore real $(1,1)$. Its contraction
-by $\Lambda_\omega$ is a scalar eigenfunction with the same positive
-eigenvalue; if nonzero, its differential contradicts the degree-one
-gap. The eigenform is primitive. This completes the proof of
-Theorem~\ref{thm:main}.
+\subsection{Counting the modes}
+\begin{proposition}\label{prop:model-count}
+For fixed $R,A$, the conic models have exactly $m=b-s$ positive degree-two
+eigenvalues tending to zero, and uniform positive lower bounds for the
+degree-one spectrum and the remaining positive degree-two spectrum.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{prop:multicap-compactness} and the central dimensions zero
+and $b$ give the upper counts, including topological zeros. Conversely,
+approximate an orthonormal basis of all $b$ central harmonic two-forms by
+compactly supported pure two-forms in the minimal graph norm. Their energies
+tend to zero and their Gram matrix tends to the identity. For each fixed
+approximation extend by zero across the caps; the model equals the central
+metric on its support for small $\epsilon$. Min--max, first in $\epsilon$
+and then in the approximation, gives at least $b$ zero-limit eigenvalues.
+Exactly $s$ are identically zero by the exterior attachment calculation.
+Failure of either complementary positive gap would produce too many
+orthonormal central limits by the same compactness proposition.
+\end{proof}

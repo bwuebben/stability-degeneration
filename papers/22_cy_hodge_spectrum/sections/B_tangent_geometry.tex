@@ -132,19 +132,36 @@ no atom at a node.
 \end{proposition}
 \begin{proof}
 Existence of the smooth Ricci-flat metrics is Yau's theorem \cite{yau}.
-The holonomy argument following \eqref{eq:central-cohomology} gives
-full $\mathrm{SU}(3)$. Ricci-flatness makes the tangent connection
+These compact simply connected K\"ahler threefolds have full
+$\mathrm{SU}(3)$ holonomy. A nontrivial de Rham decomposition would have
+a one-complex-dimensional Ricci-flat factor, whose compact simply connected
+cover cannot exist; the irreducible hyperk\"ahler alternative has even
+complex dimension. Ricci-flatness makes the tangent connection
 Hermitian--Einstein of zero slope; irreducibility and the
 Hermitian--Einstein stability implication give stability
 \cite[Theorem~5.8.3]{kobayashi}. These bundles are nontrivial since their
 second Chern pairing with $H$ is $50$.
 
+The common metric completion and transition convergence are given by
+\cite[Theorem~1.1]{rong-zhang}, and its identification with the nodal
+variety by \cite[Theorem~1.1 and Corollary~1.2]{song}. For the local
+estimates and quantitative distance bound we use the finer expansions.
 The actual smoothing expansion was verified in
 Proposition~\ref{prop:metric-comparison}. On the resolution all local
 areas are $\int_{C_i}(H+\epsilon^2L)=\epsilon^2$. Thus the local AC
 K\"ahler classes lie in the restriction image of the single global
 class $L$, exactly Assumption R of Benabida's Theorem~B
 \cite{benabida}; his Example~1.5 also treats this split quintic.
+For completeness, the finite-node scalar estimate in
+Proposition~\ref{prop:metric-comparison} applies equally to the disjoint
+union of resolved-conifold caps. The low central holomorphic germs pull
+back through each small resolution, so their local $\partial\bar\partial$
+vanishes there. The formal tensor orders and uniform corner extraction
+therefore apply on this branch as well. In \cite[\S5.3.1]{benabida},
+choose the initial gluing with the specified global class $L$ under
+Assumption R. Its class is exactly $H+\epsilon^2L$ in our normalization,
+and all later corrections are $\partial\bar\partial$-exact. Uniqueness
+identifies the resulting metric with the prescribed resolution metric.
 The face restrictions give the claimed central and rescaled local
 limits, with all derivatives. For tangent connections these follow
 by differentiation of the actual metrics and complex structures.
@@ -193,7 +210,7 @@ calculated transition.
 \begin{proof}[Proof of Theorem~\ref{thm:integrated}]
 Proposition~\ref{prop:split-existence} establishes the genuine projective
 family, the chosen resolution and the smooth fibres. The complete
-intersection calculation in Section~\ref{sec:quintic} gives the
+intersection calculation in Appendix~\ref{sec:integral-topology} gives the
 torsion-free smooth rings, their Chern classes and pairings. The Thom
 and Mayer--Vietoris calculations there determine the exterior ring and
 all cohomological attachments. The contraction and Milnor collapse

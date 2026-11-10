@@ -78,6 +78,29 @@ The individual cap scales have fixed positive leading ratios to $\epsilon$.
 Multiplying a local normalization by a fixed constant changes a logarithmic
 length by a bounded term.
 
+\begin{lemma}[Uniform corner extraction]\label{lem:corner-extraction}
+Let $f(\rho_1,\rho_2,y)$ be a polyhomogeneous tensor coefficient on a
+compact product corner. Suppose its index sets at both faces have only
+log-free order-zero terms and terms of strictly positive real order, and
+let $f_0(\rho_1,y)$ be its trace at $\rho_2=0$. There is $a_0>0$ such
+that, for every fixed number of b-derivatives,
+\begin{equation}\label{eq:corner-extraction}
+ |D_b^j(f-f_0)|\le C_j\rho_2^{a_0}
+\end{equation}
+uniformly up to $\rho_1=0$.
+\end{lemma}
+\begin{proof}
+Discreteness of the index set gives a positive gap above zero at the
+$\rho_2$ face. Choose $a_0$ below that gap and a positive remainder order.
+Expansion coefficients and their fixed b-derivatives are bounded at the
+other face, since its index set has no negative orders or order-zero
+logarithms. Subtracting the trace removes the order-zero term; positive
+powers absorb the remaining finite logarithmic powers. The conormal
+remainder has the same bound. A finite corner cover makes the constants
+uniform. Pointwise convergence at fixed $\rho_1>0$ alone would not imply
+this conclusion.
+\end{proof}
+
 \begin{proposition}[Actual metric comparison]\label{prop:metric-comparison}
 There are collar-compatible exterior identifications $F_\epsilon$ and
 constants $a_0>0$, $r_0>0$ such that, for fixed sufficiently large $A$,
@@ -93,47 +116,155 @@ all derivatives to the normalized Stenzel metric.
 \end{proposition}
 
 \begin{proof}
-We specify the consequence of Benabida's Theorem~C used here, including
-its differentiable identification. The ordinary-node model verifies the
-positive weighted smoothing hypothesis S.1; the Stenzel K\"ahler form is
-exact outside a compact set, as required by S.2. The family is polarized
-with trivial relative canonical bundle, and the central metric satisfies
-\eqref{eq:central-rate}. The finite-node modification is the one described
-in \cite[Remark~5.2]{benabida}; the corners are disjoint and their leading
-scale ratios are fixed.
+We use the construction of \cite[Theorem~C]{benabida}, with the following
+finite-node extension and tensor deduction. The cited work is published;
+our numbered references to its proof refer to arXiv version~3, as specified
+in the bibliography. Remark~5.2 there describes the extension, but its
+Lemma~5.4 is formulated with one cap face. We give the global estimate
+needed to replace that hypothesis.
 
-In the product corner of \cite[\S5.3.2, Proposition~5.9]{benabida}, let
-$\rho_1,\rho_2$ be boundary functions with $\epsilon=\rho_1\rho_2$.
-Map the central point $(y,r,0)$ to $(y,r,\epsilon/r)$ on the smoothing.
-This preserves the central collar radius $r=\rho_1$. Extend these maps
-across the fixed exterior by choosing a horizontal lift agreeing with
-the prescribed collar lifts, using a partition of unity away from the
-smaller collars. Its flow supplies a trivialization smooth to the central
-face. No holomorphicity of $F_\epsilon$ is asserted.
+\emph{The normalized scalar inverse.}
+Let $\rho_\epsilon$ be a positive radius, equal to the central radius on
+the necks and comparable to $\epsilon$ on the cores. For $-4<\beta<0$ put
+\[
+ \|u\|_{H_\beta^q}^2=
+ \sum_{j=0}^q\int |\rho_\epsilon^{j-\beta}\nabla^ju|^2
+                         \rho_\epsilon^{-6}\,dV.
+\]
+The CS space in \cite[Definitions~11.1 and~11.6]{pacini} is the connected
+central regular locus; the AC space is the disjoint union of the normalized
+Stenzel caps. Disconnected AC spaces are allowed. All ends are filled at
+scale $\epsilon$, with fixed ratios absorbed into the caps. Choose a smooth
+density $\zeta$ of integral one supported in a fixed central compact set.
+Theorem~12.3(1) of \cite{pacini} gives the estimate
+\begin{equation}\label{eq:uniform-scalar-inverse}
+ \|u\|_{H_\beta^{q+2}}\le C_q\|\Delta_\epsilon u\|_{H_{\beta-2}^q},
+ \qquad u\in E_\epsilon:=\left\{\int\zeta u=0\right\},
+\end{equation}
+uniformly in $\epsilon$, for its parametric connected-sum metric. The
+complement is precisely the pullback of the fixed central complement in
+that proof: the cutoff used there is one on $\operatorname{supp}\zeta$.
+The restricted Laplacian has the same image as the full Laplacian. On the
+connected closed smoothing this image is
+$\{f:\int f\,dV_\epsilon=0\}$, and the kernel is the single space of
+constants. Thus the range condition is global; there is no separate
+normalization or mean-zero condition for each cap.
 
-The vertical b-tangent frame is
-$\rho_1\partial_{\rho_1}-\rho_2\partial_{\rho_2},\partial_{y_j}$.
-Dividing by $\rho_1$ gives, after pullback, the cone frame
-$\partial_r,r^{-1}\partial_{y_j}$. The final metric-valued expansion
-is the Ricci-flat conclusion of \cite[Theorem~C]{benabida}, expressed
-in the vertical conic bundle of \cite[Definition~5.1]{benabida}.
-The formal correction in \cite[Proposition~6.1]{benabida} has positive
-tensor weights, and the final correction at the end of its \S7 is flat
-at the boundary. Thus the corrected metric retains the prescribed face
-values; in particular its $\rho_2=0$ value is the full central metric
-$g_0$. Its nonnegative index sets and finite boundary
-value imply that the difference of coefficients is
-$O(\rho_2^{a_0})$ for some $a_0>0$, after decreasing the exponent to
-absorb positive-power logarithms. The assertion persists under
-b-differentiation, and an ordinary cone derivative costs $r^{-1}$.
-This gives \eqref{eq:actual-comparison}. The K\"ahler-form and complex
-structure expansions give the corresponding form assertion. The fixed
-exterior estimate and rescaled-cap convergence are the respective face
-restrictions of the same expansion.
+The initial K\"ahler tensor in \cite[Proposition~5.9]{benabida} has the
+prescribed central and cap traces with positive orders at the opposite
+faces. Compare it with Pacini's metric, interpolated at
+$r=\epsilon^\tau$, $0<\tau<1$. On the central and cap sides, its initial
+face expansions give errors bounded by positive powers of
+$\epsilon^{1-\tau}$ and $\epsilon^\tau$. On the intervening annuli,
+\eqref{eq:central-rate} and the AC rate give the same conclusion in every
+fixed scaled differentiability norm. Therefore
+\[
+ \|\Delta_{\rm initial}-\Delta_{\rm Pacini}\|
+       _{H_\beta^{q+2}\to H_{\beta-2}^q}=o(1).
+\]
+Absorption in \eqref{eq:uniform-scalar-inverse} proves the estimate for the
+initial family and its subsequent boundary-vanishing formal corrections.
+This comparison uses the initial compactification, not any estimate for
+the final Ricci-flat metric. Theorem~11.7 of \cite{pacini} supplies the
+uniform scaled Sobolev and multiplication estimates used in the nonlinear
+argument.
+
+\emph{Finite-node formal corrections.}
+The surgery space has one connected central face and finitely many pairwise
+disjoint cap faces. The central coefficient problems of
+\cite[\S\S5--6]{benabida} are scalar equations on that one connected
+conifold, with one integral compatibility condition. The finite-end
+positive-weight inverse includes the low harmonic terms at every end
+\cite[Proposition~3.4]{benabida}. These terms cannot be discarded when
+differentiating the potentials. For the node, the first scalar link
+eigenvalues are $0,33/4,12$, with growth rates $0,3/2,2$; below growth two
+the terms are constants and the real and imaginary parts of the four
+holomorphic linear coordinates \cite[Theorem~2.14(1), Example~2.16]{hein-sun}.
+Extend the corresponding central holomorphic germs through the smoothing
+charts and multiply by disjoint cutoffs equal to one near the nodes.
+Their fibrewise $\partial\bar\partial$ vanishes near the corners, and
+all cutoff derivatives have fixed exterior support. Consequently the low
+terms introduce no negative corner tensor order.
+
+The AC coefficient equations are a finite direct sum of the inverses in
+\cite[Proposition~3.6]{benabida}. Their decaying weight range has no
+componentwise integral obstruction. The global volume normalization gives
+the compatibility for the central equation. More explicitly, each cap's
+volume starts at order $\epsilon^6$, so a central residual coefficient
+of order less than six has zero integral by the push-forward argument of
+\cite[Proposition~5.5]{benabida}. At the next stage one improves the
+central residual to almost order six and the cap residuals to almost order
+four, factors out $\epsilon^{4-\eta}$ for a sufficiently small $\eta>0$,
+and repeats the same procedure. Multiplication by this scalar preserves
+the global zero-integral identity. Cap contributions add in that identity;
+they are not required to vanish individually. Finitely many disjoint faces
+permit common choices of weights and the same Borel summation.
+
+At a product corner write $\epsilon=\rho_1\rho_2$. The tensor orders in
+\cite[proof of Proposition~6.1]{benabida} are the following. A central
+potential correction $\epsilon^\delta w$, after removing the
+pluriharmonic terms just treated, has $w$ of weight $a>2-\delta$.
+Choose $\max(\delta/2,2-a)<\delta'<\delta$. Its twice-differentiated
+conic tensor has order
+\[
+ \rho_2^{\delta'}\rho_1^{a-2+\delta'}.
+\]
+Both exponents are positive, logarithms are absorbed by the loss in
+$\delta'$, and $2\delta'>\delta$ improves the nonlinear residual.
+A cap correction has tensor order
+$\rho_1^{\delta'}\rho_2^{a+2+\delta'}$, with positive exponents;
+the cap weight choice preserves the previously improved central order.
+These are tensor estimates, not merely positive orders for potentials.
+
+The inverse \eqref{eq:uniform-scalar-inverse} and the scaled nonlinear
+bounds give the final correction as in \cite[\S7]{benabida}. With the
+same normalization for every order, uniqueness and Sobolev embedding give
+\[
+ |\nabla^j\phi_\epsilon|\le C_{N,j}\epsilon^N
+                           \rho_\epsilon^{\beta-j}
+ \quad\text{for every fixed }N,j.
+\]
+Since $\epsilon=\rho_1\rho_2$ and $\rho_\epsilon$ is comparable to
+$\rho_1$, its metric correction is flat at both faces after any fixed
+number of conic derivatives. Joint flatness follows by differentiating
+the normalized parameter equation: the coefficient derivatives cost only
+fixed powers, and the same uniform linearized inverse gives the displayed
+arbitrary-order decay inductively. Thus fibrewise estimates are not being
+used alone to infer transverse regularity.
+
+The final tensors consequently have nonnegative polyhomogeneous index
+families in the vertical conic bundles: the order-zero term at each face
+is log-free, and every other exponent has positive real part. The face
+values asserted in Theorem~C are unchanged. The central value is the full
+$g_0$; on a cap, $\epsilon^{-2}g_\epsilon$ restricts to its normalized
+Stenzel metric. In the conic bundle the latter is
+$\rho_2^2g_{\rm St}$ in the cap b-frame. Since
+$\rho_2=(1+\widetilde r^2)^{-1/2}$, it is bounded up to the corner
+and has the cone trace there.
+
+\emph{Extraction in the conic frame.}
+The index families just obtained satisfy Lemma~\ref{lem:corner-extraction}.
+Map $(y,r,0)$ to $(y,r,\epsilon/r)$, taking $r=\rho_1$. The vertical
+b-frame is $\rho_1\partial_{\rho_1}-\rho_2\partial_{\rho_2},\partial_y$.
+After division by $\rho_1$ its pullback is the cone frame
+$\partial_r,r^{-1}\partial_y$. A cone covariant derivative costs $r^{-1}$
+and bounded b-differentiation. Equation~\eqref{eq:corner-extraction} gives
+\eqref{eq:actual-comparison}. Extend the prescribed collar lifts by a
+partition of unity on the smooth fixed exterior; their flow gives compatible
+identifications. There is no holomorphicity requirement. The exterior and
+rescaled-cap estimates follow from the respective face restrictions. The
+same argument applies to the K\"ahler tensors.
+
+Finally, the initial form in \cite[Proposition~5.9]{benabida} is obtained
+from curvature on the actual polarizing line bundle. The Stenzel form has
+a global potential, and the gluing and all subsequent corrections are
+fibrewise $\partial\bar\partial$-exact. The construction therefore stays
+in $2\pi c_1(\mathcal L_t)$. Ricci-flat uniqueness in this class, followed
+by the fixed rescaling already specified, identifies it with $g_t$ on the
+prescribed complex family.
 \end{proof}
 
-It matters that \eqref{eq:actual-comparison} compares with the full
-central metric. A triangle inequality through $g_C$ leaves an
-$O(r^\mu)$ term independent of $\epsilon$, which is insufficient for
-the upper bound below. Nor does a positive-order expansion of a scalar
-potential alone establish this tensor assertion.
+The trace in \eqref{eq:corner-extraction} is the full central tensor.
+Comparing both metrics separately with the cone would leave an
+$O(r^\mu)$ term independent of $\epsilon$; that weaker estimate is not
+used for the differentiated remainder argument.

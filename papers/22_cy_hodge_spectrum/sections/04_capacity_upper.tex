@@ -1,4 +1,4 @@
-\section{Capacity and the actual upper bound}\label{sec:capacity}
+\section{Logarithmic capacity and conic models}\label{sec:capacity}
 
 \subsection{A sharp cap estimate}
 Let $(Z,g)$ be an oriented complete six-manifold with one asymptotically
@@ -97,87 +97,69 @@ An outer physical radius $R$ therefore gives capacity
  \frac{2\pi}{3\log(R/\epsilon)}+O(\log^{-2}(R/\epsilon)).
 \end{equation}
 
-\subsection{A trial form for the actual Ricci-flat metric}
-We now use the global form $\alpha$ of Proposition~\ref{prop:mass}.
-Put $L_\epsilon=\log(1/\epsilon)$. On end $i$ choose a cutoff
-$\chi_{i,\epsilon}$ vanishing below $A_i\epsilon$, equal to one
-above a fixed small $R_i$, and logarithmic between these radii:
-\[
- \chi_{i,\epsilon}(r)=
- \frac{\log(r/(A_i\epsilon))}{\log(R_i/(A_i\epsilon))}.
-\]
-Round its endpoints smoothly on fixed multiplicative annuli, making
-it flat at the inner endpoint. The rounding changes energy by
-$O(L_\epsilon^{-2})$. Denote the denominator by
-$L_i=L_\epsilon+O(1)$. Transport $\chi_\epsilon\alpha$ using
-$F_\epsilon$ and extend by zero across the cores, obtaining a smooth
-real two-form $u_\epsilon$ on $X_t$.
+\subsection{Fixed conic models}
+On the cap end choose the radial variable $1/\rho_2$ from the product
+corner in Section~\ref{sec:geometry}. In the notation of
+\cite[\S5.3.2]{benabida}, its restriction is
+$\sqrt{1+\widetilde r^2}$, where $\widetilde r$ is the original cap
+radius. This changes that radius by a relative $O(\widetilde r^{-2})$
+term, with differentiated bounds, and preserves the asymptotically
+conical estimates after decreasing their positive decay rate if needed.
+Fix a small central radius $R>0$ and a large cap radius $A>0$.
+Let $g_0^R$ equal $g_0$ outside $r=2R$, equal $g_C$ inside $r=R$,
+and interpolate between them. Let $g_{\mathrm{St}}^A$ agree with the
+normalized Stenzel metric up to radius $A$, with $g_C$ beyond $2A$,
+and interpolate on the intervening annulus. These are smooth positive
+metrics; they need not be K\"ahler. Their relative errors are respectively
+$O(R^\mu)$ and $O(A^{-a_1})$.
 
-\begin{proposition}\label{prop:upper}
-For the actual Ricci-flat metrics,
-\begin{equation}\label{eq:epsilon-upper}
- \lambda_2^+(\epsilon)
- \le\frac{c\sum_i b_i^2}{M L_\epsilon}+O(L_\epsilon^{-2}),
- \qquad c=2\pi/3.
+For $2A\epsilon<R$, glue the fixed central metric to the scaled metrics
+$\epsilon^2g_{\mathrm{St}}^A$, using the actual link attachments. The
+overlap is an exact cone. Fixed local normalization factors are absorbed
+in the finitely many cap metrics. Denote the resulting surgery manifold by $\overline X_\epsilon$ and its
+metric by $\bar g_\epsilon^{R,A}$. Its exterior and attachments are those
+of $X_t$; thus it is diffeomorphic to $X_t$, and the same Mayer--Vietoris
+sequence gives $b_1(\overline X_\epsilon)=0$ and
+$b_2(\overline X_\epsilon)=s$.
+
+\begin{definition}[$C^0$ comparison]\label{def:C0-comparison}
+A family of smooth metrics $h_\epsilon$ on the smoothing fibres satisfies
+condition \textup{(N)} if, for every sufficiently small $R$ and large $A$,
+there are diffeomorphisms
+$\Phi_\epsilon:\overline X_\epsilon\longrightarrow X_{\epsilon^3}$ such that
+\begin{equation}\label{eq:condition-N}
+ \limsup_{\epsilon\downarrow0}\sup_{\overline X_\epsilon}
+ |\Phi_\epsilon^*h_\epsilon-\bar g_\epsilon^{R,A}|_{\bar g_\epsilon^{R,A}}
+ \le\delta(R,A),\qquad
+ \delta(R,A)\longrightarrow0\quad(R\downarrow0,\ A\to\infty).
 \end{equation}
-\end{proposition}
+The family limit is taken first. No derivatives or complex-structure
+compatibility of these diffeomorphisms are required.
+\end{definition}
 
+\begin{lemma}\label{lem:model-comparison}
+The actual Ricci-flat family satisfies condition \textup{(N)}. More
+precisely, under the collar-compatible identifications of
+Proposition~\ref{prop:metric-comparison}, for some $b>0$,
+\begin{equation}\label{eq:model-comparison}
+ \limsup_{\epsilon\downarrow0}\sup_{X_t}
+ |g_\epsilon-\bar g_\epsilon^{R,A}|_{\bar g_\epsilon^{R,A}}
+ \le C(R^\mu+A^{-b}).
+\end{equation}
+The family limit is taken with $R,A$ fixed.
+\end{lemma}
 \begin{proof}
-Pullback commutes with $d$, so $du_\epsilon$ is the transport of
-$d\chi_\epsilon\wedge\alpha$. On end $i$ its leading energy is
-$c b_i^2\int r|\chi_i'|^2dr=c b_i^2/L_i+O(L_\epsilon^{-2})$.
-The errors in the form, central metric and actual metric carry respectively
-positive factors $r^\nu$, $r^\mu$ and $(\epsilon/r)^{a_0}$.
-Their integrals against $dr/r$ are bounded, and each has prefactor
-$O(L_\epsilon^{-2})$. Thus
-\begin{equation}\label{eq:d-trial}
- \|du_\epsilon\|^2=\frac{c\sum_i b_i^2}{L_\epsilon}
- +O(L_\epsilon^{-2}).
-\end{equation}
-
-The actual codifferential requires a separate estimate.
-Proposition~\ref{prop:metric-comparison} and the differentiated
-$O(r^{-2})$ bound for $\alpha$ give
-\[
- |(d^*_{g_\epsilon}-d^*_{g_0})\alpha|
- \le C(\epsilon/r)^{a_0}r^{-3}.
-\]
-Since $d^*_{g_0}\alpha=0$, the contribution multiplied by $\chi_i$
-has squared norm at most
-\[
- C\int_{A_i\epsilon}^{R_i}\chi_i^2(\epsilon/r)^{2a_0}\frac{dr}{r}
- \le \frac C{L_\epsilon^2}
- \int_{A_i}^{\infty}(1+\log(s/A_i))^2s^{-1-2a_0}ds
- =O(L_\epsilon^{-2}).
-\]
-The product-rule contraction obeys
-\[
- |\iota_{\nabla_{g_\epsilon}\chi_i}\alpha|
- \le C|\chi_i'|\bigl(r^{\nu-2}+(\epsilon/r)^{a_0}r^{-2}\bigr),
-\]
-because the radial cone contraction of $\vartheta_i$ vanishes.
-Its squared norm has bounded radial integrals
-$\int r^{2\nu-1}dr$ and $\int(\epsilon/r)^{2a_0}dr/r$, again with
-prefactor $O(L_\epsilon^{-2})$. On the fixed exterior the squared
-error is $O(\epsilon^{2a_0})$. Combining with \eqref{eq:d-trial},
-\begin{equation}\label{eq:q-trial}
- q_\epsilon(u_\epsilon):=\|du_\epsilon\|^2+\|d^*u_\epsilon\|^2
- =\frac{c\sum_i b_i^2}{L_\epsilon}+O(L_\epsilon^{-2}).
-\end{equation}
-
-The mass density of $\alpha$ is $O(r\,dr)$, and the removed inner
-mass is $O(\epsilon^2)$. On the remainder,
-$|1-\chi_i|\le C(1+|\log r|)/L_\epsilon$, which is integrable
-against that density. The actual metric error integrates to
-$O(\epsilon^{\min(a_0,2)}(1+|\log\epsilon|))$. Therefore
-\[
- \|u_\epsilon\|^2=M+O(L_\epsilon^{-1}).
-\]
-The K\"ahler-form comparison and pointwise central primitivity similarly
-give $\langle u_\epsilon,\omega_\epsilon\rangle=O(L_\epsilon^{-1})$.
-Subtract its orthogonal projection onto $\omega_\epsilon$.
-Since $\|\omega_\epsilon\|^2=v/2$, this changes the squared norm by
-$O(L_\epsilon^{-2})$ and leaves $q_\epsilon$ unchanged. It removes
-the whole harmonic kernel because $b_2(X_t)=1$. The Rayleigh principle
-then proves \eqref{eq:epsilon-upper}.
+On $r\ge R$, the actual metric converges to $g_0$, and the central
+interpolation costs $O(R^\mu)$. On each fixed rescaled cap the actual
+metric converges to Stenzel, and the cap interpolation costs
+$O(A^{-a_1})$. In the intervening region $A\epsilon\le r\le R$,
+Proposition~\ref{prop:metric-comparison} and
+\eqref{eq:central-rate} give relative cone error
+$O(r^\mu)+O((\epsilon/r)^{a_0})$, bounded by
+$C(R^\mu+A^{-a_0})$. The corner coordinates agree at the two faces:
+$r=\rho_1$ and the cap radius is $r/\epsilon=1/\rho_2$.
+Thus these estimates compare the same conic frames. Taking
+$b=\min(a_0,a_1)$ proves the assertion. The errors tending to zero
+with $\epsilon$ may depend on $R,A$, which is why the limits are ordered.
 \end{proof}
+
