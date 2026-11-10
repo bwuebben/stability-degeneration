@@ -1,0 +1,178 @@
+\section{The eight-node transition and its two small modes}\label{sec:eight-node}
+
+We apply Theorem~\ref{thm:matrix} to the compact transition constructed
+in stability--degeneration Paper~2,
+\cite[Appendix~A, Proposition~A.1]{wuebben-chambers}. This uses its
+geometric realization and exceptional-curve data as premises. The
+additional deformation argument below supplies a polarized smoothing
+with the precise first-order and canonical-bundle properties required
+by the analytic theorem.
+This family has dual-edge length four at its nontriangular toric faces;
+it is outside the length-one admissible class of CY~VI
+\cite[Definition~2.1]{wuebben-cy-mirror}.
+
+\subsection{A polarized simple smoothing of the earlier example}
+Let $B=\PP^1\times\PP^1$, $L=\OO_B(1,-1)$, and
+\begin{equation}\label{eq:eight-ambient}
+ Z=\PP_B(\OO\oplus L)\times_B\PP_B(\OO\oplus L).
+\end{equation}
+Use the quotient convention for the tautological classes $\xi_1,\xi_2$,
+and write $f,g$ for the base hyperplane classes. Let $\bar Z$ be the
+anticanonical model, $Y\subset Z$ a general anticanonical hypersurface
+chosen simultaneously nondegenerate for its toric polytope, and
+$q:Y\to X_0\subset\bar Z$ the induced contraction. Set
+\begin{equation}\label{eq:eight-polarization}
+ \mathcal L_0=(-K_{\bar Z})|_{X_0},\qquad
+ H=c_1(q^*\mathcal L_0)=(4g+2\xi_1+2\xi_2)|_Y.
+\end{equation}
+
+\begin{proposition}\label{prop:eight-family}
+The threefold $X_0$ has eight ordinary double points and the displayed
+map is a smooth simply connected projective small crepant resolution.
+There is a proper flat projective smoothing over a disc, with trivial
+relative canonical bundle and a relatively ample line bundle restricting
+to the exact $\mathcal L_0$, such that every local smoothing function
+has nonzero first derivative. The smooth fibres are simply connected,
+and the second Betti numbers of $Y$ and $X_t$ are four and two.
+\end{proposition}
+\begin{proof}
+The cited construction proves that $\bar Z$ has two disjoint singular
+projective lines with transverse ordinary-node singularities. A general
+anticanonical section meets each in four simple points. Its projective
+crepant toric refinement restricts to $q$, and the resulting smooth
+$Y$ has Hodge pair $(4,60)$, trivial canonical bundle and
+$H^1(\OO_Y)=H^2(\OO_Y)=0$. Rationality of the nodes transfers both
+vanishings to $X_0$. The model $\bar Z$ is Gorenstein Fano, so
+$\mathcal L_0$ is ample and Cartier. The canonical-class calculation
+in the quotient convention gives \eqref{eq:eight-polarization}, and
+Cartier adjunction gives $\omega_{X_0}\simeq\OO_{X_0}$.
+
+In the rational divisor basis $(f,g,\xi_1,\xi_2)$, that proposition
+calculates four exceptional curves of each of the two types
+\begin{equation}\label{eq:eight-period-types}
+ \Gamma_f=(1,0,0,0),\qquad \Gamma_g=(0,1,-1,-1).
+\end{equation}
+Its full rational relation space is given by separate sum-zero
+conditions on these two groups of four. In particular
+$(1,1,1,-3;1,1,1,-3)$ has full support.
+The first-order criterion of
+\cite[Theorem~1.2 and Section~3, (3.2)]{rollenske-thomas} gives a
+deformation tangent nonzero in every local node-smoothing space.
+Theorem~1.6 of \cite{friedman-unobstructed} makes this tangent
+unobstructed: $X_0$ is a compact Gorenstein Calabi--Yau threefold,
+its isolated rational lci singularities are Du~Bois, its projective
+resolution satisfies the $\partial\bar\partial$ lemma, and
+$H^1(\OO_{X_0})=0$.
+
+We verify projective effectivity and the exact polarization.
+Choose $N$ so that $\mathcal L_0^N$ is very ample and
+$H^1(\mathcal L_0^N)=0$. Over a small Artin extension, the
+vanishing of $H^2(\OO_{X_0})$ lifts the embedding line bundle,
+and $H^1(\mathcal L_0^N)=0$ lifts its coordinate sections.
+The lifted morphism remains a closed immersion over the nilpotent
+thickening. Thus embedded deformations map formally smoothly to
+abstract deformations; equivalently the restricted Euler sequence
+gives $H^1(T_{\PP^M}|_{X_0})=0$.
+The corresponding Hilbert-scheme germ is smooth. Retain a lift of the
+selected tangent and shrink to a neighbourhood $S$ with integral fibres.
+
+Perform the Picard construction over this scheme $S$ before choosing
+the analytic disc. After an \'etale neighbourhood, the universal family
+has a section through a smooth point of $X_0$
+\cite[Tag~055S]{stacks}. Its proper integral fibres give the universal
+identity $\OO_T\simeq p_{T*}\OO$ under base change, where $p$ is the universal family projection.
+The relative Picard scheme exists, and the section supplies a universal
+Poincar\'e line bundle, normalized along that section
+\cite[Theorems~2.5(2), 4.8; Exercises~3.11, 4.3 and their Appendix~A
+solutions]{kleiman-picard}. Since $H^2(\OO_{X_0})=0$, the Picard
+morphism is smooth at $[\mathcal L_0]$
+\cite[Proposition~5.19]{kleiman-picard}. A further \'etale
+neighbourhood gives a section through this point; pulling back the
+Poincar\'e bundle extends precisely $\mathcal L_0$.
+Ampleness is open. Both base changes have isomorphic tangent maps at
+the chosen complex points. A holomorphic disc in the resulting smooth
+base with the prescribed tangent therefore gives a relatively polarized
+projective family and retains every nonzero local derivative. No
+ramified reparametrization or replacement of $H$ by $NH$ occurs.
+
+At a node the local equation is
+$\sum z_j^2=\tau_i(t)$ with $\tau_i'(0)\ne0$, so the total
+space is smooth. Properness allows the disc to be shrunk so that
+the entire total space is smooth and the family is Gorenstein.
+Its relative dualizing line bundle restricts to
+$\omega_{X_0}\simeq\OO_{X_0}$. Since
+$H^1(\omega_{X_0})=0$, cohomology and base change lifts a central
+nowhere-zero generator to a relative section. Its zero set has proper
+image missing the origin. Shrinking the disc removes that image and
+trivializes the actual relative canonical bundle.
+
+For simple connectivity, apply
+\cite[Corollary~1.9]{batyrev-kreuzer} to the nondegenerate toric
+hypersurface and the smooth projective crepant subdivision in the
+construction. Its lattice quotient is zero: the relevant dual-polytope
+vertices include the lattice basis $e_1,e_2,f_0,g_0$.
+Thus $\pi_1(Y)=0$. The common exterior has simply connected links
+$S^2\times S^3$, and the two kinds of filling retract onto $S^2$
+and $S^3$. Van Kampen gives $\pi_1(X_t)=\pi_1(Y)=0$.
+Finally the two independent exceptional classes give
+$b_2(X_t)=4-2=2$, as also computed in the earlier proposition.
+\end{proof}
+
+These properties verify the general smoothability hypothesis of
+Hein--Sun and the smoothing hypotheses of Benabida used in
+Section~\ref{sec:geometry}. Locally write $\tau_i(t)=t u_i(t)$
+with $u_i(0)\ne0$; a holomorphic square root of $u_i$ changes the
+coordinates to the model $\sum z_j^2=t$ over the same base.
+The Stenzel metric supplies the exact affine K\"ahler model. The
+finite-node construction has fixed positive leading scale ratios,
+and neither metric theorem imposes $b_2(X_t)=1$.
+In particular the actual metrics in class $H$ satisfy the comparisons
+used in Theorem~\ref{thm:matrix}.
+
+\subsection{The quotient mass and the two coefficients}
+The earlier construction calculates
+\begin{equation}\label{eq:eight-intersection}
+ \left(\int_YD_iD_jH\right)_{i,j}
+ =\begin{pmatrix}
+ 0&8&4&4\\8&0&12&12\\4&12&-8&0\\4&12&0&-8
+ \end{pmatrix},\qquad (D_i)=(f,g,\xi_1,\xi_2).
+\end{equation}
+It follows directly from
+$f^2=g^2=0$, $\xi_i^2=(f-g)\xi_i$ and
+$\int_Zfg\xi_1\xi_2=1$, by integrating $D_iD_j(-K_Z)^2$;
+the same calculation gives $H^3=320$.
+The restriction kernel has basis
+\[
+ k_1=g+\xi_1,\qquad k_2=g+\xi_2,
+ \qquad H=2k_1+2k_2.
+\]
+Choose quotient lifts $f,g$. By \eqref{eq:eight-period-types}, their
+period vectors have disjoint four-entry unit supports. The energy
+matrix is $\mathsf E=4I_2$. The intersection blocks are
+\[
+ B_{KK}=\begin{pmatrix}16&24\\24&16\end{pmatrix},\quad
+ B_{DK}=\begin{pmatrix}12&12\\12&12\end{pmatrix},\quad
+ B_{DD}=\begin{pmatrix}0&8\\8&0\end{pmatrix}.
+\]
+Consequently \eqref{eq:mass-schur} gives
+\begin{equation}\label{eq:eight-mass}
+ \mathsf M=\frac45\begin{pmatrix}9&-1\\-1&9\end{pmatrix}.
+\end{equation}
+The orthogonal primitive lifts
+\[
+ D_-=f-g,\qquad D_+=f+g-\frac35(k_1+k_2)
+\]
+have squared masses $16$ and $64/5$, respectively, and both have
+squared period norm $8$. Thus the generalized eigenvalues of
+$(\mathsf E,\mathsf M)$ are $1/2$ and $5/8$.
+Theorem~\ref{thm:matrix} proves \eqref{eq:eight-spectral-law},
+including the count, eventual simplicity, type and gaps, and completes
+the proof of Corollary~\ref{cor:eight-node}.
+
+Only rational divisor data are used here. No new integral basis,
+saturation or full cohomology-ring assertion is made for this family.
+The application uses the earlier compact construction to derive new
+information about its actual metric operators. It preserves the
+distinction established there between tangent-stability walls in the
+ambient fourfold, toric contraction circuits and Calabi--Yau cycle
+relations.

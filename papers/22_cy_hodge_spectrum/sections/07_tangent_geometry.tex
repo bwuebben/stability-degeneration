@@ -1,0 +1,242 @@
+\section{Tangent sheaves and Hermitian--Einstein limits}\label{sec:tangent}
+
+The tangent bundles provide compatible nontrivial holomorphic data on the
+same transition. Their Hermitian--Einstein connections are intrinsic to
+the Ricci-flat metrics, but their algebraic extensions across the central
+fibre require a separate calculation. We make that distinction explicit.
+
+\subsection{The flat limit and its reflexive hull}
+For the family \eqref{eq:split-equations}, put
+\[
+ \mathcal A=T_{\PP^4}|_{\mathcal X},\qquad
+ \mathcal B=\OO_{\mathcal X}(5),\qquad
+ \mathcal K=\ker(\mathcal A\xrightarrow{d_{\PP^4}(F_0+tG)}\mathcal B).
+\]
+Thus $\mathcal K=T_{\mathcal X/\Delta}$, and set
+$E_0=\mathcal K|_{X_0}$. Write $Q=\bigoplus_{i=1}^{16}\CC_{p_i}$.
+
+\begin{proposition}\label{prop:tangent-sheaf}
+The sheaf $\mathcal K$ is flat over the disc and restricts to $T_{X_t}$
+for $t\ne0$. There are identities and an exact sequence
+\begin{equation}\label{eq:tangent-specialization}
+ 0\to E_0\to T_{X_0}\to Q\to0,\qquad
+ E_0^{**}=T_{X_0},\qquad q_*T_Y=T_{X_0},\qquad
+ R^jq_*T_Y=0\quad(j>0).
+\end{equation}
+At each node $T_{X_0}$ is reflexive of depth two, whereas $E_0$ has
+depth one and is not reflexive. On each exceptional curve,
+\begin{equation}\label{eq:tangent-splitting}
+ T_Y|_{C_i}=\OO(2)\oplus\OO(-1)^{\oplus2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Let $\mathcal I$ and $\mathcal Q$ be the image and cokernel of the
+relative Jacobian map. Locally the total space is smooth and the
+projection has equation $\sum z_j^2=t$. Hence $\mathcal Q$ is a
+length-one skyscraper at each node, annihilated by $t$, and vanishes
+elsewhere near the central fibre. Both $\mathcal I\subset\mathcal B$
+and $\mathcal K\subset\mathcal A$ have no base-parameter torsion,
+so they are flat over the smooth one-dimensional base. Tensor the
+sequences
+\[
+ 0\to\mathcal K\to\mathcal A\to\mathcal I\to0,
+ \qquad 0\to\mathcal I\to\mathcal B\to\mathcal Q\to0
+\]
+with the central fibre. The first stays left exact, and the second
+gives $\ker(\mathcal I_0\to\mathcal B_0)=
+\operatorname{Tor}_1^{\OO_\Delta}(\mathcal Q,\CC)=Q$.
+The kernel of $\mathcal A_0\to\mathcal B_0$ is $T_{X_0}$, so the
+snake lemma gives the first sequence in \eqref{eq:tangent-specialization}.
+
+At a node let $R=\CC\{z_1,\ldots,z_4\}/(\sum z_j^2)$ and let
+$\mathfrak m$ be its maximal ideal. The tangent module is the kernel
+of $R^4\to\mathfrak m$. The sequence
+$0\to\mathfrak m\to R\to\CC\to0$ gives depth one for $\mathfrak m$,
+and the kernel consequently has depth two. It is torsion-free and
+locally free off the node, hence reflexive on this normal threefold.
+The sequence with nonzero length-one quotient then gives depth one
+for $E_0$. Both sheaves agree off codimension three, so their reflexive
+hulls agree.
+
+The exceptional locus in the smooth $Y$ has complex codimension two. Holomorphic sections of its tangent bundle extend
+across those curves. On the common regular locus this identifies
+$q_*T_Y$ with the reflexive extension $T_{X_0}$
+\cite[Tags 0EBJ and 0AY6]{stacks}.
+For the higher direct images, the tangent-normal sequence over $C_i$
+splits because $H^1(\PP^1,\OO(3))=0$, giving
+\eqref{eq:tangent-splitting}. If $I$ is the exceptional ideal,
+$I^n/I^{n+1}=\OO(n)^{\oplus(n+1)}$. Tensoring with the tangent
+restriction gives degrees $n+2$ and $n-1$, whose first cohomology
+vanishes for every $n\ge0$. Induction through the thickening sequences
+therefore gives $H^1(T_Y/I^{n+1}T_Y)=0$.
+In an incidence chart the node coordinates are the entries of
+$\left(\begin{smallmatrix}a&b\\ua&ub\end{smallmatrix}\right)$;
+the pulled-back node ideal is $(a,b)=I$. These are exactly the
+thickenings required by formal functions, not merely an equivalent
+informal neighborhood model. Formal functions and faithful flatness
+of completion give $R^1q_*T_Y=0$ \cite[Tag 02OC]{stacks}.
+The fibres have dimension at most one, so all higher direct images
+vanish as well.
+\end{proof}
+
+The exceptional splitting rules out locally free descent across the
+contracted point. In particular the resolution direct image is the
+reflexive hull, not the flat central fibre $E_0$. Compatibility is
+through the common regular tangent bundle and the specified coherent
+extensions. The exterior identifications on the smoothing side are
+differentiable, not generally biholomorphic. No single flat family
+containing both the resolution and smoothing branches is asserted.
+
+Every smooth deformation has its intrinsic relative tangent bundle.
+Thus this bundle choice introduces no additional existence obstruction
+on smooth base deformations. The singular flatness calculation above
+uses the actual one-dimensional family with nonzero linear local
+smoothing terms. It is not a flatness theorem over an arbitrary
+higher-dimensional singular deformation base. As a consistency check,
+proper flatness, \eqref{eq:tangent-specialization} and the direct images
+imply the holomorphic Euler-characteristic identity
+$\chi(Y,T_Y)-\chi(X_t,T_{X_t})=16$, distinct from the topological
+Euler-characteristic difference $32$.
+
+\subsection{Actual metrics and controlled local curvature}
+On the resolution use the K\"ahler class $H+\epsilon^2L$, the restriction
+of a positive product class, and on the smoothing use $H$ with
+$t=\epsilon^3$. Denote either branch by $Z_\epsilon$, with its actual
+Ricci-flat metric $g_\epsilon$.
+
+\begin{proposition}\label{prop:tangent-metrics}
+The nontrivial tangent bundles $T_Y$ and $T_{X_t}$ are stable for these
+classes. Their Ricci-flat tangent connections are irreducible zero-slope
+Hermitian--Einstein connections. Both branches converge to the same
+metric completion $(X_0,d_{g_0})$, homeomorphic to $X_0$, smoothly on
+fixed regular compact subsets. Near each node, after rescaling by
+$\epsilon^{-2}$, the metrics and tangent connections converge with all
+derivatives to the normalized nonflat resolved-conifold or Stenzel
+model.
+
+For each node there is a collar radius $r$, extended over the cap with
+$r+\epsilon\asymp\epsilon$ there, and fixed constants such that
+\begin{equation}\label{eq:tangent-bounds}
+ \begin{aligned}
+ |\nabla^j\Rm(g_\epsilon)|&\le C_j(r+\epsilon)^{-2-j},\qquad j\ge0,\\
+ \vol\{r<\rho\}&\le C\rho^6,\qquad
+ \int_{\{r<\rho\}}|F_{T_{Z_\epsilon}}|^2dV\le C\rho^2,
+ \qquad \epsilon\le\rho\le\rho_0,\\
+ d_{GH}((Z_\epsilon,g_\epsilon),(X_0,d_{g_0}))&\le C\epsilon^\theta
+ \quad\text{for some }\theta>0.
+ \end{aligned}
+\end{equation}
+All tensor norms, derivatives and volumes in this display use the actual
+metric. In particular the unscaled tangent curvature-energy measure has
+no atom at a node.
+\end{proposition}
+\begin{proof}
+Existence of the smooth Ricci-flat metrics is Yau's theorem \cite{yau}.
+The holonomy argument following \eqref{eq:central-cohomology} gives
+full $\mathrm{SU}(3)$. Ricci-flatness makes the tangent connection
+Hermitian--Einstein of zero slope; irreducibility and the
+Hermitian--Einstein stability implication give stability
+\cite[Theorem~5.8.3]{kobayashi}. These bundles are nontrivial since their
+second Chern pairing with $H$ is $50$.
+
+The actual smoothing expansion was verified in
+Proposition~\ref{prop:metric-comparison}. On the resolution all local
+areas are $\int_{C_i}(H+\epsilon^2L)=\epsilon^2$. Thus the local AC
+K\"ahler classes lie in the restriction image of the single global
+class $L$, exactly Assumption R of Benabida's Theorem~B
+\cite{benabida}; his Example~1.5 also treats this split quintic.
+The face restrictions give the claimed central and rescaled local
+limits, with all derivatives. For tangent connections these follow
+by differentiation of the actual metrics and complex structures.
+
+The positive face metrics and the bounded differentiated coefficients
+in conic frames give uniform cone comparison on annuli and scaled
+AC comparison on the core. Every physical derivative costs
+$(r+\epsilon)^{-1}$; two derivatives give curvature. This proves the
+first line of \eqref{eq:tangent-bounds} and core volume $O(\epsilon^6)$.
+Integrating the annular volume comparison gives the displayed
+$C\rho^6$ bound. On a dyadic annulus of radius $s\ge\epsilon$,
+the tangent curvature energy is bounded by $Cs^{-4}s^6=Cs^2$.
+Summing to the core, whose energy is $O(\epsilon^2)$, gives $C\rho^2$.
+The central cone comparison adds one point in the metric completion
+at each node and identifies its topology with the algebraic cone,
+so the completion is homeomorphic to $X_0$.
+
+We give the global distance estimate explicitly. Each filled region
+$\{r<\rho\}$ has intrinsic diameter at most $C\rho$: radial annular
+lengths sum to $O(\rho)$, fixed-radius links have diameter $O(\rho)$,
+and the core has diameter $O(\epsilon)$. Collapsing the sixteen
+regions to points changes Gromov--Hausdorff distance by at most
+$C\rho$. Indeed a shortest quotient chain need visit each collapsed
+point at most once, and each jump can be replaced by a path of its
+intrinsic diameter. The same applies to the central space. On the
+common exterior the actual tensor comparison, and its resolution
+analogue from Theorem~B, give relative error $O((\epsilon/\rho)^{a_0})$.
+The resulting quotient spaces have uniformly bounded diameter and
+are bilipschitz with factor $1+O((\epsilon/\rho)^{a_0})$.
+Consequently
+\[
+ d_{GH}(Z_\epsilon,X_0)\le C\bigl(\rho+(\epsilon/\rho)^{a_0}\bigr).
+\]
+Taking $\rho=\epsilon^{a_0/(1+a_0)}$ proves the last line of
+\eqref{eq:tangent-bounds}, with a possibly smaller common exponent
+for the two branches.
+\end{proof}
+
+The energy statement allows nonflat rescaled limits and unbounded
+pointwise curvature. It supplies neither uniform estimates for arbitrary
+gauge bundles nor a theorem for their HYM flows. Its role here is to
+identify the actual tangent geometry compatible with the explicitly
+calculated transition.
+
+\subsection{Proof of the integrated theorem}
+\begin{proof}[Proof of Theorem~\ref{thm:integrated}]
+Proposition~\ref{prop:split-existence} establishes the genuine projective
+family, the chosen resolution and the smooth fibres. The complete
+intersection calculation in Section~\ref{sec:quintic} gives the
+torsion-free smooth rings, their Chern classes and pairings. The Thom
+and Mayer--Vietoris calculations there determine the exterior ring and
+all cohomological attachments. The contraction and Milnor collapse
+give the central ring and specialization maps by the relative pair
+sequences, with the naturality described in
+Section~\ref{sec:specialization}. This proves part~(1).
+
+Use the collar-compatible trivialization of
+Proposition~\ref{prop:metric-comparison} as the exterior identification
+in the attachment calculation. Its horizontal lift agrees with the
+prescribed node collars and is defined over the fixed ray. Two such
+extensions away from the collars are isotopic along that ray, so they
+induce the same marked cohomology maps. Thus the analytic and
+topological link generators can be chosen identically.
+Proposition~\ref{prop:restriction-spectrum} gives
+\eqref{eq:split-exact-sequence}, since the hyperplane class $H$ is
+primitive on the smooth quintic and $r(L)=\mathbf1$.
+The freeness of $H^3(U;\ZZ)$ makes its vanishing sublattice primitive.
+The disjoint vanishing spheres make it isotropic. The calculated
+factorization $\Lambda_0\hookrightarrow\Lambda\twoheadrightarrow W$ gives
+the displayed Picard--Lefschetz block and its Smith form, proving
+part~(2).
+
+For part~(3), the same integral class $L$ has
+$L\cdot C_i=1$ and cubic data $(H^3,LH^2,L^2H)=(5,4,0)$.
+It determines the exceptional areas $s^2$ in class $H+s^2L$.
+On the central regular locus, Proposition~\ref{prop:mass} represents
+$L-4H/5$ by the primitive harmonic form of squared norm $16/5$.
+Identity~\eqref{eq:period-capacity-identification} identifies its
+sixteen boundary coefficients with the same $r(L)=\mathbf1$.
+The spectral theorem therefore gives $10\pi$, with its stated
+count, type and error. Proposition~\ref{prop:tangent-metrics}
+supplies the actual metric limits on the two branches. Apply its
+resolution assertion with $\epsilon=s$ and its smoothing assertion
+with $\epsilon=t^{1/3}$ separately; no ratio of $s$ and $t$ is used.
+
+Finally, Proposition~\ref{prop:tangent-sheaf} identifies the flat
+central tangent sheaf and its distinct reflexive hull, and
+Proposition~\ref{prop:tangent-metrics} proves the tangent stability
+and actual connection limits. This proves part~(4). These statements
+use the same central regular tangent bundle; they do not identify
+the flat central sheaf with the resolution direct image, or assert a
+flat family containing both branches. The restriction, primitive norm
+and actual collar identifications above provide the compatibility
+between the topological and analytic assertions.
+\end{proof}

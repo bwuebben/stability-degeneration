@@ -1,0 +1,261 @@
+\section{Several lost divisor directions}\label{sec:multiple}
+
+We now retain the geometric hypotheses of Section~\ref{sec:introduction}
+but replace \eqref{eq:betti-hypotheses} by
+$b_2(Y)=b$ and $b_2(X_t)=s$, with $m=b-s>0$.
+The local metric, scalar and capacity arguments above do not depend on
+these dimensions. The additional issue is global: the trial forms must
+be projected off the entire $s$-dimensional harmonic space, and a lower
+bound is needed on every subspace of the small spectral cluster.
+
+\subsection{The full harmonic space and its quotient norm}
+Put $V=H^2(Y;\RR)$ and let $r:V\to\RR^k$ be the exceptional-period
+map. The Thom and Mayer--Vietoris arguments of
+Proposition~\ref{prop:restriction-spectrum} give
+\[
+ K:=\ker r=\im\bigl(H^2(X_t;\RR)\longrightarrow V\bigr),
+ \qquad \dim K=s.
+\]
+In particular $H\in K$. Write
+\begin{equation}\label{eq:full-intersection-forms}
+ B(D,E)=\int_YDEH,\qquad a(D)=\int_YDH^2,\qquad v=\int_YH^3.
+\end{equation}
+Simple connectivity transfers to the smoothing by van Kampen, as before.
+Both smooth spaces have $H^{2,0}=0$, so integral second-cohomology
+classes are represented by line bundles.
+
+Apply the curvature construction and scalar correction in the proof of
+Proposition~\ref{prop:mass} to an integral basis of $V$, and extend
+linearly. For $D\in V$ this gives a closed and coclosed real $(1,1)$-form
+$\eta_D$ with class $D$, constant contraction $3a(D)/v$, and link
+coefficients $r_i(D)$. The scalar inverse is fixed and linear; its
+solvability condition uses $a(D)$. The local Picard calculation,
+transgression estimates and logarithmic domain cutoffs do not use the
+dimension of $V$. After taking the minimum of finitely many positive
+rates, the resulting estimates hold uniformly on bounded subsets of $V$.
+Polarizing \eqref{eq:mass-identity} gives
+\begin{equation}\label{eq:full-harmonic-gram}
+ G(D,E):=\langle\eta_D,\eta_E\rangle
+ =-B(D,E)+\frac{3a(D)a(E)}{2v}.
+\end{equation}
+Indeed the primitive parts have pairing
+$-B(D,E)+a(D)a(E)/v$, and $\|\omega\|^2=v/2$.
+The independent classes of the $\eta_D$ make $G$ positive definite.
+
+We will need uniqueness for limits on the actual central metric, as
+well as on the exact-cone modifications.
+
+\begin{lemma}\label{lem:actual-harmonic-uniqueness}
+Let a smooth metric on $M_0$ be uniformly equivalent near each end to
+the six-dimensional cone metric. Every smooth globally exact $L^2$
+two-form $u$ has an $L^2$ primitive in $\operatorname{Dom}d_{\min}$.
+Consequently a smooth $L^2$ closed and formally coclosed two-form is
+determined by its ordinary de Rham class.
+\end{lemma}
+\begin{proof}
+On one end write $u=a(r)+dr\wedge b(r)$ in fixed link coordinates.
+Choose $v_0$ with $d_Lv_0=a(r_0)$ and set
+\[
+ \beta(r)=v_0+\int_{r_0}^r b(x)\,dx.
+\]
+Closedness gives $d\beta=u$. In the fixed link norm put
+$B_0(x)=\|b(x)\|_{L^2(L,h)}$. Cone equivalence then implies
+$\int_0^{r_0}x^3B_0(x)^2dx<\infty$.
+For $0<r<\delta<r_0$, Cauchy--Schwarz gives
+\[
+ r\|\beta(r)\|_{L^2(L)}
+ \le rC_\delta+2^{-1/2}
+       \left(\int_0^\delta x^3B_0(x)^2dx\right)^{1/2}.
+\]
+First let $r\to0$, then $\delta\to0$. Thus
+$r\|\beta(r)\|_{L^2(L)}\to0$. The one-form $\beta$ is $L^2$,
+since its squared cone norm has radial weight $r^3$. If $\chi_\rho$
+vanishes below $\rho$ and equals one above $2\rho$, with derivative
+bounded by $C/\rho$, then
+\[
+ \|d\chi_\rho\wedge\beta\|^2
+ \le C\rho^{-2}\int_\rho^{2\rho}
+        r^3\|\beta(r)\|_{L^2(L)}^2dr=o(1).
+\]
+The $L^2$ tails of $\beta$ and $d\beta=u$ also vanish.
+
+Let $w_0$ be a global smooth primitive. On the end $w_0-\beta$ is
+closed and hence exact, since $H^1(L)=0$. Subtracting the differential
+of a cutoff potential patches $w_0$ to $\beta$ near each tip without
+changing its differential. The resulting global $w$ is $L^2$, and the
+preceding cutoff estimate proves $w\in\operatorname{Dom}d_{\min}$.
+If $u$ is formally coclosed, testing on the compactly supported core
+and passing to its graph closure gives
+$u\in\operatorname{Dom}d_{\min}^*$ and $d_{\min}^*u=0$. Hence
+$\|u\|^2=\langle d_{\min}w,u\rangle=0$.
+Apply this to the difference of two forms to obtain uniqueness.
+\end{proof}
+
+For the actual central metric, this lemma and the $b$ constructed forms
+identify the smooth $L^2$ harmonic two-form space with $V$.
+For $g_0^R$, the proof of Lemma~\ref{lem:central-kernels} applies to
+a basis of $b$ classes: compactly supported dual four-forms give $b$
+independent reduced classes, while its local expansion gives injection
+into ordinary cohomology. Its degree-one kernel is still zero.
+Denote the resulting central harmonic Gram form by $G_R$.
+Minimization in the same closed reduced complex and norm equivalence
+give $G_R\to G$, exactly as in \eqref{eq:mass-limit}.
+
+Give $\mathcal Q=V/K$ the quotient norm $M$ induced by $G$.
+The $G$-orthogonal lift $D^\perp$ of $[D]$ is primitive, because
+$G(D,H)=a(D)/2$. Thus
+\begin{equation}\label{eq:quotient-mass-matrix}
+ M([D],[E])=-B(D^\perp,E^\perp),\qquad
+ D^\perp\perp_B K.
+\end{equation}
+The restriction of $B$ to $K$ is nondegenerate: its decomposition
+$K=\RR H\oplus(K\cap\ker a)$ has one positive direction and a
+negative-definite primitive part. In a basis of $K$ followed by
+quotient lifts, the mass matrix is therefore
+\begin{equation}\label{eq:mass-schur}
+ \mathsf M=-B_{DD}+B_{DK}B_{KK}^{-1}B_{KD}.
+\end{equation}
+The period form
+$E([D],[E])=r(D)\cdot r(E)$ is positive definite on $\mathcal Q$.
+For $g_0^R$ let $M_R$ be the quotient norm induced by $G_R$.
+Then $M_R\to M$, and the generalized eigenvalues
+$\mu_j(R)$ of $(E,M_R)$ converge to those of $(E,M)$.
+Subtracting the polarization component alone would not give this
+quotient mass when $s>1$.
+
+\subsection{The surviving harmonic directions}
+For $k\in K$, the form $\eta_k$ has zero harmonic link coefficient.
+It admits on each end a primitive $\beta_k$ of cone size
+$O(r^{\nu-1})$, with differentiated bounds. Indeed, write
+$\eta_k=a(r)+dr\wedge b(r)$. Its tangential coefficients in fixed
+link coordinates are $O(r^\nu)$, and
+$\partial_ra=d_Lb$. Thus $\beta_k(r)=\int_0^r b(x)dx$ is a
+primitive with the claimed estimate. The bounded K\"ahler component
+satisfies the same bound after decreasing $\nu$.
+
+Choose $\chi_\rho$ equal one near the tip and zero for $r\ge2\rho$.
+Replacing $\eta_k$ on each end by
+\begin{equation}\label{eq:closed-compact-approximation}
+ \gamma_{k,\rho}=\eta_k-d(\chi_\rho\beta_k)
+\end{equation}
+gives a compactly supported closed form representing $k$, converging
+in $L^2$ to $\eta_k$. The removed tail and cutoff correction have
+squared norm $O(\rho^{2\nu+2})$.
+For fixed $g_0^R$ its exact-cone expansion gives the same construction.
+
+Let $h_t(k)$ be the actual harmonic representative of the corresponding
+class on $X_t$. Transport \eqref{eq:closed-compact-approximation} and
+extend it by zero. It remains closed in that class, so minimization gives
+\[
+ \limsup_{t\to0}\|h_t(k)\|^2
+ \le\|\gamma_{k,\rho}\|_{g_0}^2.
+\]
+Letting $\rho\to0$ bounds this by $G(k,k)$. Local elliptic estimates
+give a subsequential smooth formally harmonic limit $h_0$ on $M_0$,
+which is $L^2$ by Fatou. Pairing with compactly supported closed dual
+four-forms identifies its class as $k$. Lemma~\ref{lem:actual-harmonic-uniqueness}
+applied to $h_0-\eta_k$ therefore gives $h_0=\eta_k$.
+Lower semicontinuity proves the reverse norm inequality.
+Consequently the norms converge, no mass remains in the shrinking ends,
+and the convergence holds for the full family. Polarization over a
+basis proves convergence of the whole harmonic Gram matrix on $K$.
+The same proof works for each fixed exact-cone model with $G_R$.
+
+\subsection{Upper bounds on all small subspaces}
+For $D\in K^{\perp_G}$ apply the logarithmic trial construction of
+Section~\ref{sec:capacity} linearly to $\eta_D$. Write $T_\epsilon D$
+for the transported form, $L_\epsilon=\log(1/\epsilon)$ and $c=2\pi/3$.
+The estimates there, polarized on this fixed finite-dimensional space,
+give
+\begin{align}
+ q_\epsilon(T_\epsilon D)
+  &=\frac{cE(D,D)}{L_\epsilon}
+          +O(L_\epsilon^{-2})\|D\|^2,\label{eq:matrix-trial-energy}\\
+ \langle T_\epsilon D,T_\epsilon E\rangle
+  &=M(D,E)+O(L_\epsilon^{-1})\|D\|\|E\|.\label{eq:matrix-trial-mass}
+\end{align}
+The finite-dimensional norm on the right is arbitrary and fixed.
+The same mass estimates give strong exterior convergence to $\eta_D$
+and uniformly vanishing $L^2$ tails on bounded sets of $D$.
+
+Project orthogonally onto actual real $(1,1)$-forms. The K\"ahler
+Hodge Laplacian preserves bidegree, so this projection does not increase
+$q_\epsilon$. It changes the $L^2$ norm by $o(1)$: on fixed exterior
+compacts the complex structures converge and $\eta_D$ is of type
+$(1,1)$; the tail estimate controls the remaining region. Next subtract
+the full harmonic projection. Its norm is $o(1)$ by the preceding
+subsection and $G(D,K)=0$, and its removal leaves the energy unchanged.
+The resulting real $(1,1)$-forms $v_\epsilon(D)$ are orthogonal to
+the harmonic kernel, with mass Gram form tending to $M$.
+
+Let $\mu_1\le\cdots\le\mu_m$ be the generalized eigenvalues of
+$(E,M)$. Apply min--max to the image under $v_\epsilon$ of the first
+$j$ generalized eigendirections. Its dimension is $j$ for small
+$\epsilon$, and \eqref{eq:matrix-trial-energy} gives
+\begin{equation}\label{eq:matrix-upper}
+ \limsup_{\epsilon\to0}L_\epsilon\lambda_{2,j}^+(\epsilon)
+ \le c\mu_j,\qquad 1\le j\le m.
+\end{equation}
+The same bound holds within real $(1,1)$-forms. Only an $o(1)$ estimate
+was needed for the full kernel projection; this argument does not claim
+the stronger upper remainder of the rank-one theorem.
+
+\subsection{Counting and the ordered lower bounds}
+Fix the auxiliary radii $R,A$ in the exact-cone model. The cap-kernel
+vanishing and physical-degree argument in
+Proposition~\ref{prop:model-count} remain unchanged. The norm
+decomposition preserves every finite orthonormal collection of
+zero-limit one- or two-form eigenvectors as a central collection,
+without cap or critical mass. The central dimensions are now zero
+and $b$. Conversely graph-norm approximation of a basis of all $b$
+central harmonic two-forms gives $b$ zero-limit eigenvalues by
+min--max. Exactly $s$ of these are the topological zeros. Hence there
+are precisely $m$ positive small eigenvalues, and the complementary
+degree-one and positive degree-two gaps hold. Their orthonormal central
+limits belong to $K^{\perp_{G_R}}$, because the model's full harmonic
+kernel converges to $K$ by the preceding argument.
+
+Write $\bar\lambda_j(\epsilon;R,A)$ for these ordered positive
+model eigenvalues. Choose a sequence on which
+$L_\epsilon\bar\lambda_j$ has finite lower limit $\ell$; an
+infinite lower limit requires no proof. The first $j$ orthonormal
+eigenforms have a subsequence with orthonormal central limits
+$v_1,\ldots,v_j\in K^{\perp_{G_R}}$. Every fixed linear combination
+$u_\epsilon(z)$ satisfies
+\[
+ q(u_\epsilon(z))\le\bar\lambda_j|z|^2,
+ \qquad v(z)=\sum_{a=1}^jz_av_a.
+\]
+At the fixed sections $r_*=R/2$, its harmonic boundary coefficients
+converge to $r_i(v(z))$. Apply Lemma~\ref{lem:capacity} to this
+combination on every disjoint cap region and sum. It follows that
+\[
+ cE(v(z),v(z))\le\ell |z|^2
+                  =\ell M_R(v(z),v(z)).
+\]
+One subsequence suffices for the finite basis, hence for every fixed
+combination; equivalently first use a countable dense set of $z$ and
+then continuity. The largest generalized Rayleigh quotient on this
+$j$-dimensional span is at least $\mu_j(R)$. Therefore
+\begin{equation}\label{eq:matrix-model-lower}
+ \liminf_{\epsilon\to0}L_\epsilon\bar\lambda_j(\epsilon;R,A)
+ \ge c\mu_j(R).
+\end{equation}
+
+The derivative-free comparison transfers this inequality to the actual
+metrics. Taking the family limit first, then $A\to\infty$ and
+$R\to0$, removes its multiplicative error and sends $\mu_j(R)$ to
+$\mu_j$. Together with \eqref{eq:matrix-upper} and
+$L_\epsilon=|\log t|/3$, this proves the law in
+Theorem~\ref{thm:matrix}. One fixed admissible pair $R,A$ transfers
+the complementary positive gaps.
+
+Finally, \eqref{eq:matrix-upper} supplies $m$ small eigenvalues in
+real $(1,1)$-forms, and the total count is exactly $m$. Thus this type
+exhausts the small cluster. The degree-one gap excludes an exact small
+two-form. Contraction by $\Lambda_\omega$ commutes with the K\"ahler
+Laplacian; a nonzero contraction would give a positive scalar eigenfunction
+whose differential contradicts that same gap. Hence every small
+eigenform is primitive and coexact. A simple generalized eigenvalue
+$\mu_j$ is isolated from its neighbours, so the leading law and total
+count imply eventual simplicity. This completes the proof.

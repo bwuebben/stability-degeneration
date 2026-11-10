@@ -1,0 +1,284 @@
+\section{Three small modes on a four-node toric transition}\label{sec:cy-x9}
+
+We now use the original-side nodal partial resolution $X'_9$ constructed
+in CY~VI \cite[Section~11.1 and Appendix~G.1]{wuebben-cy-mirror}.
+That paper supplies its four nodes, a projective small resolution and
+the integral exceptional-curve relation. The deformation results of
+CY~V supply a prescribed first-order smoothing tangent and its
+integrability. We specify an exact polarization, verify the remaining
+family hypotheses, and compute three spectral coefficients from the
+full quotient harmonic norm. This connects the earlier geometric
+construction to Theorem~\ref{thm:matrix}.
+
+The notation distinguishes three spaces. The original $X_9$ of CY~V
+has two nodes and a degree-seven del Pezzo cone; it does not satisfy
+our nodal hypotheses. Its partial resolution $X'_9$ has four nodes.
+The four-node mirror studied elsewhere in CY~VI is a different
+threefold. Only $X'_9$ is used in this section.
+
+\subsection{The earlier nodal model and its polarization}
+The eleven rays $v_0,\ldots,v_{10}$ of the original-side ambient fan
+are the columns of
+\begin{equation}\label{eq:x9-rays}
+ \begin{pmatrix}
+ 1&0&-1&0&0&-4&-4&3&2&-1&-2\\
+ 0&1&-1&0&0&-2&-2&1&1&0&-1\\
+ 0&0&0&1&0&-1&0&1&1&0&0\\
+ 0&0&0&0&1&0&-1&1&1&0&0
+ \end{pmatrix}.
+\end{equation}
+The first nine are the vertices of the reflexive polytope $\Delta_9$;
+$v_9$ is interior to a facet and $v_{10}$ is the pentagon centre.
+Use the source's integral support vector
+\begin{equation}\label{eq:x9-height}
+ h=(2,2,2,3,3,3,3,2,2,1,2),\qquad
+ P_h=\{u\in\RR^4:h_i+\langle u,v_i\rangle\ge0\text{ for all }i\}.
+\end{equation}
+Its normal fan is the source fan $\Sigma'$ with twenty-one maximal
+cones. The vertices of $P_h$ are
+\begin{equation}\label{eq:x9-cartier-vertices}
+\begin{array}{rrr}
+(-2,-2,-3,15)&(-2,-2,-3,9)&(-2,-2,15,-3)\\
+(-2,-2,9,-3)&(-2,-2,15,15)&(-2,4,-3,3)\\
+(-2,4,3,-3)&(-2,4,3,3)&(1,-2,-3,3)\\
+(0,-2,-3,3)&(1,-2,-3,1)&(1,-2,3,-3)\\
+(0,-2,3,-3)&(1,-2,1,-3)&(1,-2,3,3)\\
+(0,2,-3,-1)&(0,2,-1,-3)&(0,2,-1,-1)\\
+(1,0,-3,-1)&(1,0,-1,-3)&(1,0,-1,-1).
+\end{array}
+\end{equation}
+Substitution in \eqref{eq:x9-height} gives the source cones as the
+active sets; every omitted inequality has margin at least one.
+The recession cone is zero: pairing with $v_0,v_1,v_2$ first forces
+the first two coordinates to vanish, and the remaining opposite
+coordinate pairs force the other two to vanish. Thus these integral
+vertices give a strictly convex Cartier support function. On
+$P'=X_{\Sigma'}$, the divisor $A=\sum h_iD_i$ is ample and Cartier.
+Set
+\begin{equation}\label{eq:x9-polarization}
+ \mathcal L_0=A|_{X'_9},\qquad H=c_1(q^*\mathcal L_0).
+\end{equation}
+Here $X'_9$ is the proper transform of a sufficiently general
+nondegenerate anticanonical member for $\Delta_9$.
+
+For an explicit smooth ambient refinement, replace the heights by
+\begin{equation}\label{eq:x9-fine-height}
+ a_i=h_i-\frac{\mathbf1_{i=3}+\mathbf1_{i=4}}{100}
+             +\frac{i^2}{10^6}.
+\end{equation}
+The maximal cones of the normal fan of $P_a$ have ray-index sets
+\begin{equation}\label{eq:x9-fine-fan}
+\begin{gathered}
+\{0,1,3,6\},\ \{0,1,3,7\},\ \{0,1,4,5\},\ \{0,1,4,7\},\\
+\{0,1,5,6\},\ \{0,2,3,6\},\ \{0,2,3,7\},\ \{0,2,4,5\},\\
+\{0,2,4,7\},\ \{0,2,5,6\},\ \{1,3,6,9\},\ \{1,3,7,8\},\\
+\{1,3,8,9\},\ \{1,4,5,9\},\ \{1,4,7,8\},\ \{1,4,8,9\},\\
+\{1,5,6,9\},\ \{2,3,6,10\},\ \{2,3,7,8\},\ \{2,3,8,10\},\\
+\{2,4,5,10\},\ \{2,4,7,8\},\ \{2,4,8,10\},\ \{2,5,6,10\},\\
+\{3,6,9,10\},\ \{3,8,9,10\},\ \{4,5,9,10\},\ \{4,8,9,10\},\\
+\{5,6,9,10\}.
+\end{gathered}
+\end{equation}
+Each ray matrix has determinant $\pm1$, and each cone lies in a cone
+of $\Sigma'$ and in a facet of $\Delta_9$. Consequently its toric
+fourfold $T$ is smooth and projective and the refinement is crepant.
+At the four source parallelograms
+\begin{equation}\label{eq:x9-nodes}
+ q_1=(3,6,10,8),\quad q_2=(2,6,3,7),\quad
+ q_3=(4,5,10,8),\quad q_4=(2,5,4,7),
+\end{equation}
+the refinement uses the diagonal $\{a,c\}$ of $q=(a,b,c,d)$.
+Thus the anticanonical proper transform $Y\subset T$ is the source's
+chosen projective small resolution $q:Y\to X'_9$.
+Extra refinements over facet-interior strata do not change the
+hypersurface: those strata map to torus-fixed points missed by a
+nondegenerate member. In particular the additional nonsimplicial
+coarse cone with rays $\{2,7,8,10\}$ is contained in a single original
+facet and contributes no fifth node. These model identifications use
+\cite[Proposition~3.4]{wuebben-cy-mirror}.
+
+\subsection{A first-order family with the prescribed ample class}
+We state explicitly the additional deformation step. The nodal
+specializations of CY~V used here formulate the classical criterion;
+no mixed-cone extension of the spectral theorem is asserted.
+
+\begin{lemma}\label{lem:polarized-nodal-family}
+Let $Z$ be a connected normal projective nodal threefold over $\CC$
+with $\omega_Z\simeq\OO_Z$ and
+$H^1(\OO_Z)=H^2(\OO_Z)=0$, admitting a projective small crepant
+resolution. Suppose the exceptional-curve relation space contains a
+vector with no zero coordinate. For every ample Cartier line bundle
+$\mathcal L_0$ on $Z$, there is a proper flat projective smoothing
+over a disc, with trivial relative canonical bundle and a relatively
+ample line bundle restricting to exactly $\mathcal L_0$, such that
+every node is smoothed to first order.
+\end{lemma}
+\begin{proof}
+By \cite[Theorem~2.5]{wuebben-cy-smoothing}, the full-support relation
+lifts to a global deformation tangent whose image in every local
+node-smoothing space is nonzero. The common-volume-form
+identifications may rescale equation parameters by nonzero factors,
+which preserve this condition. The deformation base is smooth by
+\cite[Theorem~4.5]{wuebben-cy-smoothing}; its additional degree-six
+hypothesis is vacuous for nodes.
+
+The projective effectivity construction in
+Proposition~\ref{prop:eight-family} applies with this chosen tangent.
+For completeness, choose $N$ with $\mathcal L_0^N$ very ample and
+$H^1(\mathcal L_0^N)=0$. Across a small Artin extension, the
+obstruction to lifting this line bundle lies in $H^2(\OO_Z)$ and
+the obstruction to lifting its coordinate sections lies in
+$H^1(\mathcal L_0^N)$. Both vanish. The lifted map remains a closed
+immersion. Embedded deformations therefore map formally smoothly to
+abstract deformations, and the Hilbert germ is smooth with a lift of
+the selected tangent.
+
+Work on a finite-type Hilbert neighbourhood with integral fibres.
+An \'etale neighbourhood supplies a section through a smooth point of
+$Z$ \cite[Lemma~37.38.5, Tag~057G]{stacks}. The relative Picard
+scheme and its normalized Poincar\'e bundle then exist as in
+\cite[Theorems~2.5(2), 4.8 and Exercise~4.3]{kleiman-picard}.
+The Picard morphism is smooth at $[\mathcal L_0]$ because
+$H^2(\OO_Z)=0$ \cite[Proposition~5.19]{kleiman-picard}.
+A further \'etale-local section through that point extends
+$\mathcal L_0$ itself. Ampleness persists after shrinking.
+Both changes of base induce tangent isomorphisms. A disc with the
+chosen tangent in the resulting smooth base retains every nonzero
+local derivative. The auxiliary power $N$ neither changes the final
+polarization nor reparametrizes the disc.
+
+The equations $\sum z_j^2=\tau_i(t)$ with $\tau_i'(0)\ne0$
+make the total space smooth at the nodes. Properness and smoothness
+away from them permit shrinking so that the total space and every
+noncentral fibre are smooth. The relative dualizing line bundle
+restricts to $\omega_Z$. Since $H^1(\omega_Z)=0$, cohomology and
+base change lifts a central nowhere-zero generator to a relative
+section. Its zero locus has proper image missing the origin; after
+shrinking it is empty. This trivializes the relative canonical bundle.
+\end{proof}
+
+\begin{proposition}\label{prop:x9-family}
+The model $X'_9$, resolution $Y$ and exact polarization
+\eqref{eq:x9-polarization} admit a smoothing satisfying all geometric
+hypotheses of Theorem~\ref{thm:matrix}. Their second Betti numbers
+are $b_2(Y)=6$ and $b_2(X_t)=3$.
+\end{proposition}
+\begin{proof}
+The earlier construction gives exactly four nodes and no other
+singularities. Adjunction and crepancy give trivial dualizing sheaves.
+On the smooth projective toric fourfold $T$, the anticanonical sequence
+$0\to K_T\to\OO_T\to\OO_Y\to0$, toric structure-sheaf
+vanishing and Serre duality give $H^1(\OO_Y)=H^2(\OO_Y)=0$.
+Rationality of the nodes transfers the vanishings to $X'_9$.
+The source's full integral curve-relation lattice is
+\begin{equation}\label{eq:x9-curve-relation}
+ \left\{\ell\in\ZZ^4:\sum_i\ell_i[C_i]=0\right\}
+ =\ZZ(1,-1,-1,1)
+\end{equation}
+by \cite[Proposition~3.5 and Section~11.1]{wuebben-cy-mirror}.
+Lemma~\ref{lem:polarized-nodal-family} therefore supplies the exact
+polarized first-order smoothing and trivial relative canonical bundle.
+
+For simple connectivity, apply
+\cite[Corollary~1.9]{batyrev-kreuzer} to the nondegenerate hypersurface
+and the smooth projective crepant fan above. The relevant lattice
+contains all original vertices, in particular the basis
+$v_0,v_1,v_3,v_4$ of $\ZZ^4$. Its quotient, hence $\pi_1(Y)$,
+is zero. Van Kampen across the simply connected links and fillings
+gives $\pi_1(X_t)=0$.
+
+The source divisors span $H^2(Y;\QQ)$
+\cite[Lemma~3.3]{wuebben-cy-mirror}. There are four independent
+character relations, and $D_9|_Y=0$ because the facet-interior divisor
+misses the hypersurface. Thus $b_2(Y)\le6$. The nonsingular
+intersection matrix \eqref{eq:x9-intersection} below proves that
+six indicated classes are independent. The exceptional span has
+dimension three by \eqref{eq:x9-curve-relation}, so the attachment
+sequence gives $b_2(X_t)=6-3=3$.
+\end{proof}
+
+This constructs a suitable smoothing of the exact earlier central
+model. CY~VI's Theorem~9.25 supplies a proper analytic smoothing with
+projective fibres; it does not by itself assert the precise relative
+polarization or first-order condition used here. We do not identify
+the chosen disc with that theorem's arbitrary smoothing arc, or its
+metrics with those of a birational mirror model.
+
+\subsection{The three-dimensional harmonic quotient}
+Use the rational basis of integral divisor classes
+\[
+ (D_2,D_5,D_6,D_7,D_8,D_{10}).
+\]
+No assertion that this is an integral lattice basis is needed.
+The character relations, $D_9|_Y=0$ and \eqref{eq:x9-height} give
+\begin{equation}\label{eq:x9-h-coordinates}
+ H=(6,18,18,-12,-10,8),\qquad H^3=8712.
+\end{equation}
+The polarized intersection matrix is
+\begin{equation}\label{eq:x9-intersection}
+ B=\left(\int_Y D_iD_jH\right)=
+ \begin{pmatrix}
+ -18&6&6&6&0&0\\
+ 6&0&14&0&0&2\\
+ 6&14&0&0&0&2\\
+ 6&0&0&-22&12&0\\
+ 0&0&0&12&-16&2\\
+ 0&2&2&0&2&-6
+ \end{pmatrix},\qquad \det B=-5064192.
+\end{equation}
+These are intersection products in the toric ring with character
+relations $\sum_i\langle m,v_i\rangle D_i=0$ and the
+Stanley--Reisner relations of \eqref{eq:x9-fine-fan}. Every maximal
+cone product integrates to one, and $[Y]=\sum_iD_i$.
+These relations, together with the displayed rays and cones, determine
+every entry of \eqref{eq:x9-intersection} and the volume in
+\eqref{eq:x9-h-coordinates}.
+
+For $q=(a,b,c,d)$ with the $ac$ diagonal, the integral source circuit
+is $e_b+e_d-e_a-e_c$. In the chosen basis the four circuits give
+\begin{equation}\label{eq:x9-period-matrix}
+ C=\begin{pmatrix}
+ 0&0&1&0&1&-1\\
+ -1&0&1&1&0&0\\
+ 0&1&0&0&1&-1\\
+ -1&1&0&1&0&0
+ \end{pmatrix}.
+\end{equation}
+It has rank three, with the full surviving kernel spanned by
+\begin{equation}\label{eq:x9-kernel}
+ k_1=D_2+D_7,\quad k_2=D_5+D_6-D_7+D_{10},\quad
+ k_3=D_8+D_{10}.
+\end{equation}
+In particular $H=6k_1+18k_2-10k_3$. Choose quotient lifts
+$(D_2,D_5,D_6)$. The energy and the full Schur complement are
+\begin{equation}\label{eq:x9-forms}
+ E=\begin{pmatrix}2&-1&-1\\-1&2&0\\-1&0&2\end{pmatrix},
+ \qquad
+ M=\frac1{15}\begin{pmatrix}
+ 177&-79&-79\\-79&158&-52\\-79&-52&158
+ \end{pmatrix}.
+\end{equation}
+The leading principal minors of $E$ are $2,3,4$; those of $M$ are
+$59/5,869/9,17584/45$. Both forms are positive definite. Direct
+expansion gives
+\begin{equation}\label{eq:x9-polynomial}
+ \frac{\det(E-\mu M)}{-\det M}
+ =\left(\mu-\frac17\right)
+   \left(\mu^2-\frac{375}{628}\mu+\frac{45}{628}\right).
+\end{equation}
+The ordered roots are $1/7$ and
+$(375\mp3\sqrt{3065})/1256$. They are positive and distinct.
+Proposition~\ref{prop:x9-family} verifies the geometric assumptions,
+and Theorem~\ref{thm:matrix} now proves
+Corollary~\ref{cor:x9}, including its multiplicities, type and gaps.
+
+The earlier vector $(1,-1,-1,1)$ is the kernel of the curve-class
+map $A$ and provides a full-support smoothing tangent. Its annihilator
+is the three-dimensional period image of $C=A^*$ and counts the
+small modes. The new coefficients additionally use the global form
+\eqref{eq:x9-intersection} and projection off all three classes in
+\eqref{eq:x9-kernel}. The mirror equality of relation lattices in
+CY~VI is not used to calculate that norm. Thus the earlier construction
+and deformation theorems are actual premises of this application,
+while the quantitative spectral conclusion follows from the analysis
+of the present paper.

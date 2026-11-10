@@ -8,7 +8,9 @@ root = Path(__file__).resolve().parent
 programs = sorted(p for p in (root / 'papers').glob('*/figures/code/*.py') if p.name not in {'exact_linear.py', 'cech_model.py', 'finite_models.py'})
 for program in programs:
     print(str(program.relative_to(root)), flush=True)
-    if (program.parents[2] / 'requirements.txt').exists():
+    if program.parents[2].name == '22_cy_hodge_spectrum' and program.name == 'compute03_x9.py':
+        command = ['sage', '-python', str(program), '--output', str(program.parents[2] / 'figures/data/x9_exact.json')]
+    elif (program.parents[2] / 'requirements.txt').exists():
         command = ['uv', 'run', '--no-project', '--with-requirements', str(program.parents[2] / 'requirements.txt'), 'python', '-B', str(program)]
     else:
         command = [sys.executable, '-B', str(program)]

@@ -698,5 +698,51 @@
     ],
     "number": 21,
     "directory": "21_heterotic_k3_enhancement"
+  },
+  {
+    "paper": "cy_hodge_spectrum",
+    "title": "Integral topology and small eigenvalues in Calabi–Yau conifold transitions",
+    "date": "2026-11-09",
+    "revision_date": "2026-11-09",
+    "website_slug": "cy-conifold-hodge-spectrum",
+    "pages": 41,
+    "pdf_sha256": "2b986c9ea0e6da09b52e50fd1872ad1a52f1f53aad6feb680ca82af9991cc931",
+    "source_sha256": "07adfd89020a761b0bac784b5f20799316d76a82a093b06846b6055efe709c73",
+    "download_filename": "cy-conifold-hodge-spectrum.pdf",
+    "source_files_sha256": {
+      "main.tex": "07adfd89020a761b0bac784b5f20799316d76a82a093b06846b6055efe709c73",
+      "preamble.tex": "79ff6c8061d8c97a5b11924661277df615499d937ed98319aeb159d559b27637",
+      "references.tex": "599302238356126b491199f22609ff65a2b5257c29b8ff0e34b6a83bd5e923e8",
+      "sections/01_introduction.tex": "342d26f3352f147604606d37d7f5b32a2019ebd1c9cb2daee4e52d39194a470e",
+      "sections/02_geometry.tex": "39879242a56c70969a98026b82b21a9e6483cdd6fa20d75ac29f18ea47fd341b",
+      "sections/03_harmonic_mass.tex": "0927825b43f38c47e71bb618db814411eef66c7359f75b0ba12d10a29c53d8dc",
+      "sections/04_capacity_upper.tex": "afd89bdbb7136167491b99ad21ccca7e2cb24c7e62ab84d89b3bb50b8a420623",
+      "sections/05_spectral_lower.tex": "52f1a490a001bffb874d4d0f5acb711c8514148675c1858e399663e68848e79f",
+      "sections/05b_multiple_directions.tex": "52153e2a20ea4e9fef556a81518ca6ac57313706faed39bca5c393c56f2a88c3",
+      "sections/06_split_quintic.tex": "1aa110ca565e502bd3f764d30e8751a8047f75dd76abb04da057c07dfb4f1bdd",
+      "sections/07_tangent_geometry.tex": "0387337dbcb720361ca4ab789b0f40faa8a131700861918cd33938221d54f303",
+      "sections/08_eight_node.tex": "d2fe078ad9b4e586625a7643506d2dcd615007f2723e8ba6520491c2dad57ee2",
+      "sections/08_further_directions.tex": "38f695871ad5e573115112ac3824003130961f9b3da93b8935de061d2330ae31",
+      "sections/09_cy_x9.tex": "55ef8b77303a3d66a1ae7b6c76eb46406e6d0be447ed8989b77152913bcd9c71",
+      "cy-conifold-hodge-spectrum.pdf": "2b986c9ea0e6da09b52e50fd1872ad1a52f1f53aad6feb680ca82af9991cc931",
+      "figures/code/compute01_split_quintic.py": "5bbe3ae9935ccb7042b727cd19fc0be28d0e78dddf8d45880f74579d39102fb2",
+      "figures/code/compute02_eight_node.py": "6df0251709a2684988ec31eeb450b9f02f7ede9d31381017c96567037a0581df",
+      "figures/code/compute03_x9.py": "3f48851251781bca00825ba33d9574d3386e21fadc1ac61edf096f8720356cdc",
+      "figures/output/fig01_transition.pdf": "cb6e99f9699ebfd29df7c7e63bbfc6f7d92985cbf8e4fddd92ccb21e956118c0",
+      "figures/code/fig01_transition.tex": "e6580d1bf3b5de23db74b83ac0aa2c9a0642dbe72f14b26e938681366cbf8829",
+      "figures/data/split_quintic.json": "303ef28853e3734d72d0b7dd60b4c20db8433007f535d33cf98ea4952491aae6",
+      "figures/data/eight_node.json": "e6d4073751c6b571a86761ae3d41acada53023a0946a4117623e574fcf6acc1a",
+      "figures/data/x9_exact.json": "9ac4e46e840008251d67da33bcf095bd1ebbb610089e531fe615252c39a011ad",
+      "README.md": "4581e3ac1f00b1f1c738fc98702d380c1ba5d34715ef2c802f190804ae78ee7b"
+    },
+    "archive": {
+      "doi": "10.5281/zenodo.24094892",
+      "conceptdoi": "10.5281/zenodo.24094891",
+      "record_url": "https://zenodo.org/records/24094892",
+      "created": "2026-11-10T00:06:05.910263+00:00",
+      "id": 24094892
+    },
+    "number": 22,
+    "directory": "22_cy_hodge_spectrum"
   }
 ]

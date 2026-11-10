@@ -1,0 +1,139 @@
+\section{Conifold geometry and actual metric comparison}\label{sec:geometry}
+
+\subsection{The link and its integral normalization}
+An ordinary double point is analytically the cone $\sum_{j=1}^4z_j^2=0$.
+Its Ricci-flat metric cone is $g_C=dr^2+r^2h$, where the homogeneous
+metric on $T^{1,1}\simeq S^2\times S^3$ is
+\begin{equation}\label{eq:link-metric}
+ h=\frac19\eta_c^2+
+ \frac16\sum_{j=1}^2(d\theta_j^2+\sin^2\theta_j\,d\phi_j^2),\qquad
+ \eta_c=d\psi+\cos\theta_1d\phi_1+\cos\theta_2d\phi_2.
+\end{equation}
+Here $\psi$ has period $4\pi$ and $\Ric_h=4h$.
+Put $\sigma_j=\sin\theta_jd\theta_j\wedge d\phi_j$ and
+\begin{equation}\label{eq:link-form}
+ \vartheta=\frac{\sigma_1-\sigma_2}{8\pi}.
+\end{equation}
+The circle bundle over $\PP^1\times\PP^1$ has Chern class $(1,1)$ up
+to a common sign. A primitive two-cycle projects with degrees $(1,-1)$;
+therefore $\vartheta$ has period one. It is harmonic: it is closed,
+its horizontal part is anti-self-dual, and wedging that part with
+$d\eta_c=-(\sigma_1+\sigma_2)$ gives zero. In the orthonormal frame,
+\begin{equation}\label{eq:link-norm}
+ |\vartheta|_h^2=\frac9{8\pi^2},\qquad
+ \vol(T^{1,1},h)=\frac{16\pi^3}{27},\qquad
+ c:=\|\vartheta\|_{L^2(h)}^2=\frac{2\pi}{3}.
+\end{equation}
+The selected small-resolution ruling fixes the sign of its primitive
+period. On a cone, $\vartheta$ is a primitive real $(1,1)$-form, of
+pointwise size $O(r^{-2})$.
+
+The smoothing cap is $T^*S^3$ with the Stenzel metric, asymptotic with
+positive differentiated rate to this cone \cite{stenzel,candelas-ossa}.
+The small-resolution cap is the total space of
+$\OO_{\PP^1}(-1)^{\oplus2}$ with its Ricci-flat resolved-conifold metric.
+The two caps have the same link but retain different primitive cohomology:
+restriction to the link is an isomorphism in degree three for the smoothing
+cap and in degree two for the resolution cap.
+
+\subsection{The central metric and the smoothing scale}
+Let $X_0^\reg$ carry the singular Ricci-flat K\"ahler form $\omega$ in
+class $H$. The bounded-potential construction \cite[\S7.2, Theorem~7.5 and Corollary~7.6]{egz} gives a closed positive pullback current on $Y$. Its
+Bedford--Taylor products have their cohomological masses and give no mass
+to the exceptional analytic set. The conical theorem of Hein--Sun
+\cite[Theorem~1.4 and Corollary~1.5]{hein-sun} supplies holomorphic node
+charts such that, for some $\mu>0$,
+\begin{equation}\label{eq:central-rate}
+ |\nabla_C^j(g_0-g_C)|_{g_C}\le C_jr^{\mu-j}
+ \quad (j\ge0).
+\end{equation}
+Use the minimum rate over the finitely many ends. Benabida's Theorem~A
+provides the corresponding polyhomogeneous expansion \cite{benabida}.
+The cited metric theorems use the class $2\pi c_1(\mathcal L)$ for
+the polarizing line bundle $\mathcal L$. We rescale their metrics by
+$(2\pi)^{-1}$ to obtain our class $H=c_1(\mathcal L)$, with the corresponding fixed rescaling
+of cone radii and cap normalizations. Written as $dr^2+r^2h$, the
+normalized link metric and \eqref{eq:link-norm} are unchanged.
+
+Condition~\eqref{eq:simple-smoothing} makes the total-space projection a
+holomorphic Morse function near each node. The local family therefore
+has the weighted ordinary-node model, with weights $3/2$ on the coordinates
+and $3$ on the algebraic smoothing parameter. This model is compatible
+with the central conical chart. Indeed, the transition between two
+ordinary-quadric charts lifts to an ambient holomorphic germ $\Phi$ with
+$Q\circ\Phi=uQ$, where $Q=\sum z_j^2$ and $u$ is a holomorphic unit.
+Its linear part $A$ satisfies $Q(Az)=u(0)Q(z)$ and extends to the
+weighted smoothing after a fixed rescaling of the base. Since all
+coordinate weights are $3/2$, the terms $\Phi-A=O(|z|^2)$ have relative
+conic order $O(r^{3/2})$, with differentiated bounds. After this linear
+normalization, \eqref{eq:central-rate} therefore holds in the family
+chart, with $\mu$ decreased if necessary. Along the fixed positive ray
+we use the reference metric scale
+\begin{equation}\label{eq:metric-scale}
+ \epsilon=t^{1/3}.
+\end{equation}
+On the smoothing branch, metrics, K\"ahler forms and eigenvalues indexed
+by $\epsilon$ are evaluated at the algebraic parameter $t=\epsilon^3$.
+The individual cap scales have fixed positive leading ratios to $\epsilon$.
+Multiplying a local normalization by a fixed constant changes a logarithmic
+length by a bounded term.
+
+\begin{proposition}[Actual metric comparison]\label{prop:metric-comparison}
+There are collar-compatible exterior identifications $F_\epsilon$ and
+constants $a_0>0$, $r_0>0$ such that, for fixed sufficiently large $A$,
+\begin{equation}\label{eq:actual-comparison}
+ |\nabla_C^j(F_\epsilon^*g_\epsilon-g_0)|_{g_C}
+ \le C_j(\epsilon/r)^{a_0}r^{-j},
+ \quad A\epsilon\le r\le r_0,\quad j=0,1.
+\end{equation}
+The same comparison holds for the K\"ahler forms. On fixed exterior
+compact sets the $C^1$ differences are $O(\epsilon^{a_0})$.
+On fixed compact subsets of each rescaled cap, the metrics converge in
+all derivatives to the normalized Stenzel metric.
+\end{proposition}
+
+\begin{proof}
+We specify the consequence of Benabida's Theorem~C used here, including
+its differentiable identification. The ordinary-node model verifies the
+positive weighted smoothing hypothesis S.1; the Stenzel K\"ahler form is
+exact outside a compact set, as required by S.2. The family is polarized
+with trivial relative canonical bundle, and the central metric satisfies
+\eqref{eq:central-rate}. The finite-node modification is the one described
+in \cite[Remark~5.2]{benabida}; the corners are disjoint and their leading
+scale ratios are fixed.
+
+In the product corner of \cite[\S5.3.2, Proposition~5.9]{benabida}, let
+$\rho_1,\rho_2$ be boundary functions with $\epsilon=\rho_1\rho_2$.
+Map the central point $(y,r,0)$ to $(y,r,\epsilon/r)$ on the smoothing.
+This preserves the central collar radius $r=\rho_1$. Extend these maps
+across the fixed exterior by choosing a horizontal lift agreeing with
+the prescribed collar lifts, using a partition of unity away from the
+smaller collars. Its flow supplies a trivialization smooth to the central
+face. No holomorphicity of $F_\epsilon$ is asserted.
+
+The vertical b-tangent frame is
+$\rho_1\partial_{\rho_1}-\rho_2\partial_{\rho_2},\partial_{y_j}$.
+Dividing by $\rho_1$ gives, after pullback, the cone frame
+$\partial_r,r^{-1}\partial_{y_j}$. The final metric-valued expansion
+is the Ricci-flat conclusion of \cite[Theorem~C]{benabida}, expressed
+in the vertical conic bundle of \cite[Definition~5.1]{benabida}.
+The formal correction in \cite[Proposition~6.1]{benabida} has positive
+tensor weights, and the final correction at the end of its \S7 is flat
+at the boundary. Thus the corrected metric retains the prescribed face
+values; in particular its $\rho_2=0$ value is the full central metric
+$g_0$. Its nonnegative index sets and finite boundary
+value imply that the difference of coefficients is
+$O(\rho_2^{a_0})$ for some $a_0>0$, after decreasing the exponent to
+absorb positive-power logarithms. The assertion persists under
+b-differentiation, and an ordinary cone derivative costs $r^{-1}$.
+This gives \eqref{eq:actual-comparison}. The K\"ahler-form and complex
+structure expansions give the corresponding form assertion. The fixed
+exterior estimate and rescaled-cap convergence are the respective face
+restrictions of the same expansion.
+\end{proof}
+
+It matters that \eqref{eq:actual-comparison} compares with the full
+central metric. A triangle inequality through $g_C$ leaves an
+$O(r^\mu)$ term independent of $\epsilon$, which is insufficient for
+the upper bound below. Nor does a positive-order expansion of a scalar
+potential alone establish this tensor assertion.

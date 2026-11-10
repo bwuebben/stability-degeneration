@@ -1,0 +1,263 @@
+\section{Harmonic representatives and intersection mass}\label{sec:mass}
+
+\subsection{The two global cohomology directions}
+Write $M_0=X_0^\reg=Y\setminus\bigcup_iC_i$. Removing a submanifold of
+real codimension four does not change cohomology in degrees one and two.
+The Thom sequence consequently gives
+\begin{equation}\label{eq:central-cohomology}
+ H^1(M_0;\RR)=0,\qquad H^2(M_0;\RR)=\RR H\oplus\RR D.
+\end{equation}
+The common exterior has boundary a disjoint union of copies of
+$S^2\times S^3$. In the smoothing each filling has zero second
+cohomology. Mayer--Vietoris therefore identifies the image of $H^2(X_t)$
+in $H^2(M_0)$ with the kernel of restriction to these links. This image
+is exactly $\RR H$, and the restriction vector of $D$ is $(b_i)$.
+In particular it is nonzero. In fact $b_i\ne0$ for every $i$: otherwise
+$H\cdot C_i=D\cdot C_i=0$ would make the effective curve $C_i$
+numerically zero against every divisor class on the projective $Y$.
+
+The smooth fibres are simply connected. This follows from van Kampen,
+since replacing either filling by the other preserves the fundamental
+group: the fillings and links are simply connected. Both $Y$ and $X_t$ are compact, simply
+connected K\"ahler threefolds with trivial canonical bundle, and admit
+Ricci-flat metrics. They have full $\mathrm{SU}(3)$ holonomy in this setting. A nontrivial de Rham decomposition would have
+a one-complex-dimensional Ricci-flat factor, whose compact simply
+connected cover cannot exist; the irreducible hyperk\"ahler alternative
+has even complex dimension. Thus $H^{2,0}(Y)=0$, consistently with the
+divisor interpretation of all real second-cohomology directions.
+
+\begin{proposition}\label{prop:mass}
+There is a real closed $(1,1)$-form $\eta$ on $M_0$ representing $D$,
+with $\Lambda_\omega\eta=3a/v$, such that
+\begin{equation}\label{eq:primitive-form}
+ \alpha=\eta-\frac av\omega
+\end{equation}
+is closed, coclosed, primitive and in the Friedrichs form domain.
+For some $\nu>0$ its expansion on end $i$ is
+\begin{equation}\label{eq:alpha-expansion}
+ \alpha=b_i\vartheta_i+O(r^{\nu-2}),\qquad
+ \nabla_C^j(\alpha-b_i\vartheta_i)=O(r^{\nu-2-j}),
+\end{equation}
+for every $j\ge0$. Its norm and orthogonality are
+\begin{equation}\label{eq:mass-identity}
+ \|\alpha\|_{L^2(g_0)}^2=\frac{a^2}{v}-d=M>0,
+ \qquad \langle\alpha,\omega\rangle_{L^2}=0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+We use $d^c=\frac i2(\bar\partial-\partial)$, so $dd^c=i\partial\bar\partial$.
+Choose a smooth Hermitian metric on the line bundle with class $D$ on
+$Y$, and let $\theta_b$ be its real normalized curvature form. A local
+small-resolution neighborhood retracts onto its exceptional $\PP^1$.
+The node is rational, and the higher direct images of its structure sheaf
+vanish. On the inverse image of a sufficiently small Stein neighborhood,
+$H^1(\OO)=H^2(\OO)=0$; equivalently one can use the infinitesimal-neighborhood
+filtration with quotients $\OO(n)^{\oplus(n+1)}$. The exponential sequence
+identifies the local Picard group with $\ZZ$, by exceptional degree.
+Thus the line bundle is the $b_i$th power of the selected ruling bundle.
+
+The normalized curvature $\sigma_1/(4\pi)$ of that ruling differs from
+\eqref{eq:link-form} by $(\sigma_1+\sigma_2)/(8\pi)$, a constant
+multiple of $dd^c\log r$. Changing the local Hermitian metric therefore
+makes its curvature $b_i\vartheta_i$. The local logarithmic metric ratios
+$u_i$ satisfy $u_i=O(1+|\log r|)$ and
+$\nabla_C^ju_i=O(r^{-j})$ for $j\ge1$. Patch them with disjoint cutoffs.
+Then
+\[
+ \theta=\theta_b+dd^cu
+\]
+is a global real closed $(1,1)$-form representing $D$, equal to
+$b_i\vartheta_i$ near each end. The original smooth curvature has
+cone size $O(r^{-2})$ with differentiated bounds. Since the cone charts
+are holomorphic, type is preserved in this construction. Cone primitivity
+and \eqref{eq:central-rate} give
+$\Lambda_\omega\theta=O(r^{\mu-2})$.
+
+The bounded-potential intersection products on $Y$ give
+\begin{equation}\label{eq:base-intersections}
+ \int_{M_0}\omega^3=v,\qquad
+ \int_{M_0}\theta_b\omega^2=a,\qquad
+ \int_{M_0}\theta_b^2\omega=d.
+\end{equation}
+For the mixed products, pairing the closed current with smooth closed
+forms gives their cohomological values by Stokes. The products have no
+mass on the exceptional curves. Positivity of $\theta_b$ is unnecessary:
+write it as the difference of two smooth positive forms, using a large
+multiple of a fixed K\"ahler form, and apply linearity to the bounded-
+potential products \cite{bedford-taylor,egz}.
+
+Truncate every end at $r=\rho$. The transgression for replacing
+$\theta_b$ by $\theta$ in the second integral of
+\eqref{eq:base-intersections} is $d^cu\wedge\omega^2$, whose boundary
+integral is $O(\rho^4)$. In the third integral it is
+$d^cu\wedge(\theta+\theta_b)\wedge\omega$, with boundary integral
+$O(\rho^2)$. Both vanish. The bulk terms are absolutely integrable,
+since their worst size is $O(r^{-4})$ against volume $O(r^5dr)$.
+Consequently $\int\theta\omega^2=a$ and $\int\theta^2\omega=d$.
+
+Choose $0<\nu<\min(\mu,1)$ away from scalar indicial roots. The conical
+scalar Poisson isomorphism \cite[Proposition~3.4]{benabida}, with one
+cutoff constant for each end, solves
+\begin{equation}\label{eq:scalar-correction}
+ \Lambda_\omega dd^cf=\frac{3a}{v}-\Lambda_\omega\theta,
+ \qquad \int_{M_0}f\,dV=0.
+\end{equation}
+Here the right side has zero integral because
+$\Lambda\theta\,dV=\theta\omega^2/2$ and $\vol(M_0)=v/6$.
+It has weighted order $O(r^{\nu-2})$. The operator on the left is
+$-\Delta_0/2$ in our convention. The link Ricci bound implies that the
+first positive scalar homogeneous rate is at least one; below $\nu$
+only constants occur. The solution therefore has
+$f=f_i+O(r^\nu)$, with differentiated bounds on each end. The finite-end
+version is the direct sum of these constant asymptotic terms.
+
+Put $\eta=\theta+dd^cf$. It has the required constant contraction,
+and \eqref{eq:primitive-form} is primitive and closed. The K\"ahler
+identity $*\alpha=-\alpha\wedge\omega$ implies coclosedness. The
+new transgressions are $d^cf\wedge\omega^2$ and
+$d^cf\wedge(\eta+\theta)\wedge\omega$, with boundary integrals
+$O(\rho^{\nu+4})$ and $O(\rho^{\nu+2})$. Hence
+\[
+ \int\eta\omega^2=a,\qquad \int\eta^2\omega=d,
+\]
+and the primitive star identity proves
+\[
+ \|\alpha\|^2=-\int\left(\eta-\frac av\omega\right)^2\omega
+ =-d+\frac{a^2}{v}.
+\]
+Primitivity gives pointwise orthogonality to $\omega$. The nonzero
+restriction vector implies $\alpha\ne0$, so this norm is positive.
+The expansion \eqref{eq:alpha-expansion} follows from the scalar estimate;
+the bounded term proportional to $\omega$ is absorbed by $\nu<1$.
+
+Finally, let $\chi_\rho$ vanish for $r\le\rho^2$, equal one for
+$r\ge\rho$, and interpolate smoothly with
+$|\chi_\rho'|\le C/(r|\log\rho|)$. The removed $L^2$ mass is
+$O(\rho^2)$. Since $d\alpha=d^*\alpha=0$,
+\[
+ \|d(\chi_\rho\alpha)\|^2+
+ \|d^*(\chi_\rho\alpha)\|^2
+ \le\frac{C}{|\log\rho|^2}\int_{\rho^2}^{\rho}\frac{dr}{r}
+ \longrightarrow0.
+\]
+This approximates $\alpha$ in the closed Friedrichs quadratic-form norm
+by compactly supported forms and proves the domain assertion. In
+particular $\alpha$ is in the Friedrichs kernel. The same argument
+applies to $\omega$.
+\end{proof}
+
+The norm in \eqref{eq:mass-identity} is the quotient norm after removing
+the surviving K\"ahler direction. This identifies the global mass
+needed in the spectral comparison without leaving an unspecified
+analytic coefficient among the input data.
+
+\subsection{The restriction map in topology and in the spectral law}
+The attachment sequence below is classical conifold topology
+\cite{rossi,lee-lin-wang}; compare the integral exterior sequence in
+\cite[Section~9.7]{wuebben-cy-mirror}. We retain its marked integral maps
+to identify the same divisor periods in the spectral coefficient.
+The curve-class map used in the smoothing criteria of
+\cite{wuebben-cy-obstruction,wuebben-cy-smoothing} is its dual, as in
+\eqref{eq:curve-period-duality}. No mirror identification is used here.
+Let $U$ be a compact truncation of $M_0$, with marked boundary
+$\coprod_i\mathcal L_i$. Let $F_i$ be the smoothing filling, a disk
+cotangent bundle of $S^3$, and write $\delta_i$ for its oriented zero
+section in $X_t$. We use integral cohomology until real coefficients
+are specified. A left Poincar\'e dual is characterized by
+$\int_{X_t}\PD_L(\delta_i)\wedge\zeta=\int_{\delta_i}\zeta$.
+The integral class itself is defined by the oriented Thom class,
+so this convention also applies when its global image is torsion.
+
+\begin{proposition}[Restriction and spectral coefficient]\label{prop:restriction-spectrum}
+Under the geometric hypotheses of Theorem~\ref{thm:matrix}, the actual attachments
+give the integral exact sequence
+\begin{equation}\label{eq:general-restriction}
+\begin{split}
+0\longrightarrow H^2(X_t;\ZZ)\longrightarrow H^2(Y;\ZZ)
+\xrightarrow{\ r\ }\ZZ^k\xrightarrow{\ \partial\ }
+H^3(X_t;\ZZ)\longrightarrow H^3(U;\ZZ)\longrightarrow0,\\
+r(D)=(D\cdot C_i)_i,\qquad \partial e_i=\PD_L(\delta_i).
+\end{split}
+\end{equation}
+Thus $\im r$ is exactly the group of integral relations between the
+cohomological vanishing classes. In the rank-one case
+\eqref{eq:betti-hypotheses}, $\ker(r\otimes\RR)=\RR H$.
+On its one-dimensional quotient
+$\mathcal Q=H^2(Y;\RR)/\RR H$, put
+\[
+ P_HD=D-\frac{DH^2}{H^3}H,\qquad
+ m_H([D])=-\int_Y(P_HD)^2H.
+\]
+The form $m_H$ is positive definite, and the induced restriction
+$r:\mathcal Q\to\RR^k$ satisfies
+\begin{equation}\label{eq:restriction-quotient-law}
+ \lim_{t\downarrow0}|\log t|\lambda_2^+(t)
+ =\frac{2\pi\|r([D])\|^2}{m_H([D])}
+ \quad\text{for every }[D]\ne0.
+\end{equation}
+Here the Euclidean norm uses the primitive integral link generators.
+The same restriction coordinates are the boundary coefficients of
+the central primitive harmonic form used in the spectral proof.
+\end{proposition}
+\begin{proof}
+The integral Thom isomorphism gives
+$H^j(Y,U;\ZZ)=\bigoplus_iH^{j-4}(C_i;\ZZ)$.
+Consequently $H^2(Y;\ZZ)\to H^2(U;\ZZ)$ is an isomorphism.
+The resolution filling retracts onto $C_i$, and its restriction
+in degree two to $\mathcal L_i$ is an isomorphism. Thus its marked
+boundary coefficient is $D\cdot C_i$.
+
+Apply Mayer--Vietoris to $X_t=U\cup\coprod_iF_i$, with difference
+$j_U^*-j_F^*$. Since $H^1(\mathcal L_i)=H^2(F_i)=0$, its degree-two
+part has the initial terms in \eqref{eq:general-restriction}.
+In degree three the filling restriction is an integral isomorphism,
+so the next difference map is
+\[
+ H^3(U;\ZZ)\oplus\ZZ^k\longrightarrow\ZZ^k,
+ \qquad (y,z)\longmapsto r_3(y)-z.
+\]
+Its kernel is the graph of $r_3$, canonically isomorphic to $H^3(U;\ZZ)$
+by projection. This proves exactness through the final exterior
+restriction. For the connecting class at the $i$th link, naturality
+factors the map through
+\[
+ H^2(\mathcal L_i;\ZZ)\longrightarrow
+ H^3(F_i,\mathcal L_i;\ZZ)\longrightarrow H^3(X_t;\ZZ).
+\]
+The first arrow takes the marked fibre-sphere generator to the integral
+Thom class of the zero section. The second is extension by excision.
+Orienting $\delta_i$ by the chosen collar convention identifies its
+image with $\PD_L(\delta_i)$. This proves the relation assertion
+integrally, without discarding torsion.
+
+For the remaining assertions impose \eqref{eq:betti-hypotheses}.
+After passage to real coefficients, the image of $H^2(X_t)$ is
+one-dimensional and contains $H$, hence is $\RR H$. The projection
+$P_HD$ is unchanged by adding a multiple of $H$. Proposition~\ref{prop:mass}
+represents it by $\alpha$ and proves
+\[
+ m_H([D])=\|\alpha\|^2=\frac{(DH^2)^2}{H^3}-D^2H>0.
+\]
+On every link section,
+$[\alpha|_{\mathcal L_i}]=(D\cdot C_i)[\vartheta_i]$.
+Since $*_h\vartheta_i$ is closed, an exact discrepancy does not
+contribute to its pairing. Therefore, with $c=2\pi/3$,
+\begin{equation}\label{eq:period-capacity-identification}
+ c^{-1}\int_{\mathcal L_i}\alpha|_{\mathcal L_i}
+       \wedge *_h\vartheta_i=D\cdot C_i.
+\end{equation}
+This is exactly the scalar boundary projection in
+Lemma~\ref{lem:capacity}. The upper and lower bounds proving
+Theorem~\ref{thm:main} use these coefficients, normalized by the
+same harmonic mass. Substitution gives
+\eqref{eq:restriction-quotient-law}. Scaling $[D]$ multiplies its
+numerator and denominator by the same square.
+\end{proof}
+
+The proposition identifies the topological data in the spectral theorem;
+the analytic conclusion still requires its full metric and compactness
+arguments. In the general integral sequence, neither
+$\ZZ^k/\im r$ nor $H^3(U;\ZZ)$ has been assumed torsion-free.
+Primitivity of the vanishing lattice is a separate conclusion in the
+split-quintic calculation below.

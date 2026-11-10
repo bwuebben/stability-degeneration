@@ -1,0 +1,89 @@
+{
+  "status": "PASS: exact finite arithmetic only",
+  "limit": "No smoothing-existence, metric, PDE, integral-saturation or asymptotic proof.",
+  "source": "Wuebben, Nonsimplicial local stability chambers of toric tangent bundles, Appendix A, Proposition A.1",
+  "source_sha256_at_verification": "e5078553511b2a06d65397130e1701e74e84793082b0aa29e4fa432069046727",
+  "polarization": [
+    0,
+    4,
+    2,
+    2
+  ],
+  "volume_intersection": 320,
+  "intersection_matrix": [
+    [
+      "0",
+      "8",
+      "4",
+      "4"
+    ],
+    [
+      "8",
+      "0",
+      "12",
+      "12"
+    ],
+    [
+      "4",
+      "12",
+      "-8",
+      "0"
+    ],
+    [
+      "4",
+      "12",
+      "0",
+      "-8"
+    ]
+  ],
+  "quotient_mass": [
+    [
+      "36/5",
+      "-4/5"
+    ],
+    [
+      "-4/5",
+      "36/5"
+    ]
+  ],
+  "period_energy": [
+    [
+      "4",
+      "0"
+    ],
+    [
+      "0",
+      "4"
+    ]
+  ],
+  "modes": [
+    {
+      "quotient_vector": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "squared_mass": "16",
+      "squared_period_norm": "8",
+      "mu": "1/2",
+      "coefficient_in_units_of_pi": "1"
+    },
+    {
+      "quotient_vector": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "squared_mass": "64/5",
+      "squared_period_norm": "8",
+      "mu": "5/8",
+      "coefficient_in_units_of_pi": "5/4"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+\section{Capacity and the actual upper bound}\label{sec:capacity}
+
+\subsection{A sharp cap estimate}
+Let $(Z,g)$ be an oriented complete six-manifold with one asymptotically
+conical end, with cone $dr^2+r^2h$ and
+\[
+ |\nabla_C^j(g-g_C)|_{g_C}\le C_jr^{-a_1-j},\qquad j=0,1,
+ \qquad a_1>0.
+\]
+Let $\vartheta$ be a harmonic two-form on the link and write
+$c=\|\vartheta\|_{L^2(h)}^2>0$. Assume that the class of
+$*_h\vartheta$ extends to a closed three-form on a compact truncation
+$Z_A$. For a smooth two-form $u$ on $Z_T$, let $u_T$ denote its
+tangential boundary trace and set
+\[
+ B_u(T)=c^{-1}\int_Lu_T\wedge *_h\vartheta,\qquad
+ \Capacity(T)=\inf_{B_u(T)=1}\int_{Z_T}(|du|^2+|d_g^*u|^2)\,dV_g.
+\]
+The infimum is over all smooth competitors; no elliptic boundary
+condition or existence of a minimizer is assumed.
+
+\begin{lemma}\label{lem:capacity}
+For this fixed cap,
+\begin{equation}\label{eq:capacity}
+ \Capacity(T)=\frac c{\log T}+O((\log T)^{-2}).
+\end{equation}
+More precisely, every competitor satisfies
+\begin{equation}\label{eq:capacity-lower}
+ \int_{Z_T}(|du|^2+|d_g^*u|^2)\,dV_g
+ \ge \frac{c\,|B_u(T)|^2}{\log T+C_A}
+\end{equation}
+for a fixed $C_A$ and sufficiently large $T$.
+\end{lemma}
+
+\begin{proof}
+Choose a closed three-form $\Psi$ on $Z_A$ whose boundary value is
+exactly $*_h\vartheta$. To obtain the exact value from a cohomological
+extension, subtract the discrepancy by an exact collar correction.
+Stokes and Cauchy--Schwarz give
+\[
+ cB_u(A)=\int_{Z_A}du\wedge\Psi,\qquad
+ E_A(u)\ge\kappa_A|B_u(A)|^2,
+ \quad \kappa_A=\frac{c^2}{\|\Psi\|_{L^2(Z_A)}^2}>0.
+\]
+On the end write $u=u_T(r)+dr\wedge v(r)$ and $B(r)=B_u(r)$.
+The projection of the radial component of $du$ onto
+$dr\wedge\vartheta$ is $B'(r)dr\wedge\vartheta$, because
+$d_L^*\vartheta=0$. Hence
+\[
+ \int_{A<r<T}|du|_{g_C}^2dV_C\ge c\int_A^Tr|B'(r)|^2dr.
+\]
+The factor $r$ follows from $|dr\wedge\vartheta|^2=r^{-4}|\vartheta|_h^2$
+and the six-dimensional volume density. For large fixed $A$, the AC
+comparison gives $w(r)=1-Cr^{-a_1}\ge1/2$ such that
+\[
+ E_T(u)\ge\kappa_AB(A)^2+c\int_A^Trw(r)|B'(r)|^2dr.
+\]
+Applying Cauchy--Schwarz to $B(T)=B(A)+\int_A^TB'(r)dr$ gives
+\[
+ |B(T)|^2\le
+ \left(\kappa_A^{-1}+c^{-1}\int_A^T\frac{dr}{rw(r)}\right)E_T(u).
+\]
+The radial integral is $\log(T/A)+O_A(1)$, which proves
+\eqref{eq:capacity-lower}.
+
+For the upper estimate, choose a smooth $f$ vanishing near $A$ and
+agreeing with $\log(r/A)$ for $r\ge2A$. Extend
+$u=f(r)\vartheta/\log(T/A)$ by zero across the core. Its boundary
+coefficient is one and its exterior-differential energy is
+$c/\log(T/A)+O_A(\log^{-2}T)$. The metric error has integrable
+radial weight $r^{-1-a_1}$ after the logarithmic factor is removed.
+For the codifferential, the cone identities
+$d_C^*\vartheta=0$ and $\iota_{\nabla_Cf}\vartheta=0$ imply
+\[
+ |d_g^*\vartheta|\le Cr^{-3-a_1},\qquad
+ |\iota_{\nabla_gf}\vartheta|\le C|f'|r^{-2-a_1}.
+\]
+The product rule consequently gives
+\[
+ \|d_g^*u\|^2\le
+ \frac{C_A}{\log^2(T/A)}
+ \left(1+\int_{2A}^T(1+\log(r/A))^2r^{-1-2a_1}dr\right)
+ =O_A(\log^{-2}T).
+\]
+This proves the matching upper estimate.
+\end{proof}
+
+For the Stenzel cap the extension condition holds: a compact truncation
+is the disk cotangent bundle of $S^3$, and restriction
+$H^3(Z_A;\RR)\to H^3(S^2\times S^3;\RR)$ is an isomorphism.
+With the primitive normalization \eqref{eq:link-norm}, $c=2\pi/3$.
+Under $g\mapsto\epsilon^2g$ the energy of two-forms is unchanged.
+Indeed the $du$ term scales by $\epsilon^{6-2\cdot3}=1$; the other
+term has the same factor since $d^*_{\epsilon^2g}=\epsilon^{-2}d_g^*$.
+An outer physical radius $R$ therefore gives capacity
+\begin{equation}\label{eq:scaled-capacity}
+ \frac{2\pi}{3\log(R/\epsilon)}+O(\log^{-2}(R/\epsilon)).
+\end{equation}
+
+\subsection{A trial form for the actual Ricci-flat metric}
+We now use the global form $\alpha$ of Proposition~\ref{prop:mass}.
+Put $L_\epsilon=\log(1/\epsilon)$. On end $i$ choose a cutoff
+$\chi_{i,\epsilon}$ vanishing below $A_i\epsilon$, equal to one
+above a fixed small $R_i$, and logarithmic between these radii:
+\[
+ \chi_{i,\epsilon}(r)=
+ \frac{\log(r/(A_i\epsilon))}{\log(R_i/(A_i\epsilon))}.
+\]
+Round its endpoints smoothly on fixed multiplicative annuli, making
+it flat at the inner endpoint. The rounding changes energy by
+$O(L_\epsilon^{-2})$. Denote the denominator by
+$L_i=L_\epsilon+O(1)$. Transport $\chi_\epsilon\alpha$ using
+$F_\epsilon$ and extend by zero across the cores, obtaining a smooth
+real two-form $u_\epsilon$ on $X_t$.
+
+\begin{proposition}\label{prop:upper}
+For the actual Ricci-flat metrics,
+\begin{equation}\label{eq:epsilon-upper}
+ \lambda_2^+(\epsilon)
+ \le\frac{c\sum_i b_i^2}{M L_\epsilon}+O(L_\epsilon^{-2}),
+ \qquad c=2\pi/3.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Pullback commutes with $d$, so $du_\epsilon$ is the transport of
+$d\chi_\epsilon\wedge\alpha$. On end $i$ its leading energy is
+$c b_i^2\int r|\chi_i'|^2dr=c b_i^2/L_i+O(L_\epsilon^{-2})$.
+The errors in the form, central metric and actual metric carry respectively
+positive factors $r^\nu$, $r^\mu$ and $(\epsilon/r)^{a_0}$.
+Their integrals against $dr/r$ are bounded, and each has prefactor
+$O(L_\epsilon^{-2})$. Thus
+\begin{equation}\label{eq:d-trial}
+ \|du_\epsilon\|^2=\frac{c\sum_i b_i^2}{L_\epsilon}
+ +O(L_\epsilon^{-2}).
+\end{equation}
+
+The actual codifferential requires a separate estimate.
+Proposition~\ref{prop:metric-comparison} and the differentiated
+$O(r^{-2})$ bound for $\alpha$ give
+\[
+ |(d^*_{g_\epsilon}-d^*_{g_0})\alpha|
+ \le C(\epsilon/r)^{a_0}r^{-3}.
+\]
+Since $d^*_{g_0}\alpha=0$, the contribution multiplied by $\chi_i$
+has squared norm at most
+\[
+ C\int_{A_i\epsilon}^{R_i}\chi_i^2(\epsilon/r)^{2a_0}\frac{dr}{r}
+ \le \frac C{L_\epsilon^2}
+ \int_{A_i}^{\infty}(1+\log(s/A_i))^2s^{-1-2a_0}ds
+ =O(L_\epsilon^{-2}).
+\]
+The product-rule contraction obeys
+\[
+ |\iota_{\nabla_{g_\epsilon}\chi_i}\alpha|
+ \le C|\chi_i'|\bigl(r^{\nu-2}+(\epsilon/r)^{a_0}r^{-2}\bigr),
+\]
+because the radial cone contraction of $\vartheta_i$ vanishes.
+Its squared norm has bounded radial integrals
+$\int r^{2\nu-1}dr$ and $\int(\epsilon/r)^{2a_0}dr/r$, again with
+prefactor $O(L_\epsilon^{-2})$. On the fixed exterior the squared
+error is $O(\epsilon^{2a_0})$. Combining with \eqref{eq:d-trial},
+\begin{equation}\label{eq:q-trial}
+ q_\epsilon(u_\epsilon):=\|du_\epsilon\|^2+\|d^*u_\epsilon\|^2
+ =\frac{c\sum_i b_i^2}{L_\epsilon}+O(L_\epsilon^{-2}).
+\end{equation}
+
+The mass density of $\alpha$ is $O(r\,dr)$, and the removed inner
+mass is $O(\epsilon^2)$. On the remainder,
+$|1-\chi_i|\le C(1+|\log r|)/L_\epsilon$, which is integrable
+against that density. The actual metric error integrates to
+$O(\epsilon^{\min(a_0,2)}(1+|\log\epsilon|))$. Therefore
+\[
+ \|u_\epsilon\|^2=M+O(L_\epsilon^{-1}).
+\]
+The K\"ahler-form comparison and pointwise central primitivity similarly
+give $\langle u_\epsilon,\omega_\epsilon\rangle=O(L_\epsilon^{-1})$.
+Subtract its orthogonal projection onto $\omega_\epsilon$.
+Since $\|\omega_\epsilon\|^2=v/2$, this changes the squared norm by
+$O(L_\epsilon^{-2})$ and leaves $q_\epsilon$ unchanged. It removes
+the whole harmonic kernel because $b_2(X_t)=1$. The Rayleigh principle
+then proves \eqref{eq:epsilon-upper}.
+\end{proof}
