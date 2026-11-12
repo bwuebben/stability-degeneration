@@ -1,0 +1,386 @@
+\section{Parameter estimates and a comparison trajectory}
+\label{sec:parameter-trajectory}
+
+The correction in Section~\ref{sec:projected-correction} was obtained
+at each fixed \(a\). We now control its parameter derivative. The
+derivative estimates still allow repeated line factors. The scalar
+trajectory constructed at the end of this section requires
+\(L\not\simeq M\).
+
+\subsection{Differentiation in a fixed unitary bundle}
+
+Write \(H_a=H_0T_a\), with \(T_a\) as in
+\eqref{eq:compact-metric}. The isometry
+\(U_a=T_a^{1/2}:(V,H_a)\to(V,H_0)\) satisfies
+\(a\partial_aU_a=\frac12U_ak_a\), since \(T_a\) and its
+parameter derivative commute. For a moving Hermitian section
+define its derivative in this fixed unitary identification by
+\begin{equation}\label{eq:unitary-parameter-derivative}
+ \dot s=a\partial_as+\tfrac12[k_a,s].
+\end{equation}
+A dot on an operator has the same meaning. The base volume and
+the Hilbert inner product in the identified bundle are fixed.
+
+\begin{lemma}\label{lem:background-parameter}
+The explicit family satisfies
+\begin{equation}\label{eq:background-parameter-bounds}
+ \|k_a\|_{X_a}\le C,\qquad
+ \|\dot\Phi_a\|_{Y_a}\le Ca,\qquad
+ \|\dot{\mathcal L}_a\|_{X_a\to Y_a}\le C.
+\end{equation}
+Moreover
+\begin{equation}\label{eq:parameter-linearization}
+ \dot\Phi_a=\mathcal L_ak_a,\qquad
+ \|Q_ak_a\|_{X_a}\le Ca\ell(a).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+On the annuli the identification by \(U_a\) fixes the unitary
+graded frame: \(U_aF_a=F_0\), because its two multipliers are
+\[
+ w^{1/2}u_a^{-1/2}=u_0^{-1/2},\qquad
+ w^{-1/2}u_a^{1/2}=u_0^{1/2}.
+\]
+Thus ordinary parameter differentiation of the normalized
+graded matrices is exactly \eqref{eq:unitary-parameter-derivative}.
+Applying \(a\partial_a\) to the explicit rational factors
+with denominator \(a+u_0\) preserves their symbol estimates.
+In particular, the cancelled residual formulas in
+Proposition~\ref{prop:residual}, including their spatial
+derivatives, remain \(O(a r^{-2-j})\).
+The expression \eqref{eq:parameter-direction} similarly
+has uniformly bounded scaled derivatives. This argument
+differentiates the formulas and their cancellations, not
+an unspecified remainder estimate.
+
+On the core use \(z=\sqrt a\,y\). The base and line data
+have vanishing first jets. Their integral second-order
+Taylor remainders, and every fixed number of \(y\) derivatives,
+are \(O(a)\), also after a logarithmic derivative at fixed
+\(y\). Differentiation at fixed \(z\) is
+\(a\partial_a-\frac12y\cdot\partial_y\) in these expressions.
+Both terms preserve the bounds on a fixed enlarged ball.
+The flat leading contracted curvature is identically zero.
+Its physical residual and its logarithmic parameter derivative
+are therefore bounded in every fixed \(y\) norm. The unitary
+normalization and its derivative are uniformly bounded there.
+This proves the first two estimates in
+\eqref{eq:background-parameter-bounds} on the core as well.
+The fixed exterior follows directly from smooth formulas.
+
+The unitary variation of the Chern connection is the one-form
+\[
+ B_a=\tfrac12(D'_ak_a-D''_ak_a),
+\]
+acting by commutator on endomorphisms. It follows by
+differentiating the Chern change formula and \(U_a\).
+The bounds just proved give
+\(|D_a^jB_a|\le C_j\rho_a^{-1-j}\).
+Differentiation of \(\frac12D_a^*D_a\) has first-order
+terms with coefficient \(B_a\) and zeroth-order terms
+with one derivative of \(B_a\). The scaled Hölder
+coefficient bounds prove the third estimate in
+\eqref{eq:background-parameter-bounds}.
+There is no derivative of the inner product in this
+unitary identification. Finally the centered linearization
+in the preceding section, applied to the metric velocity
+\(k_a\), gives \(\dot\Phi_a=\mathcal L_ak_a\).
+Apply \(G_a\) and \eqref{eq:log-inverse} to obtain
+the second assertion in \eqref{eq:parameter-linearization}.
+\end{proof}
+
+\begin{proposition}\label{prop:correction-parameter}
+The family \(v_a\) is smooth for \(a>0\), and
+\begin{equation}\label{eq:correction-parameter}
+ \|\dot v_a\|_{X_a}\le Ca\ell(a)^3.
+\end{equation}
+If the velocity of \(\widehat H_a\) is centered to \(H_a\) by
+\[
+ \widehat k_a^{\,c}
+ =e^{v_a/2}\bigl(\widehat H_a^{-1}a\partial_a\widehat H_a\bigr)
+     e^{-v_a/2},
+\]
+then
+\begin{equation}\label{eq:corrected-tangent}
+ \|\widehat k_a^{\,c}-k_a\|_\infty\le Ca\ell(a)^3.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Use the fixed resolvent circle \(|z|=c/2\). Its distance from
+both the low spectrum and the complementary spectrum is
+bounded below. On that circle,
+\[
+ \|(z-\mathcal L_a)^{-1}\|_{Y_a\to X_a}\le C\ell(a).
+\]
+For the low summands this follows from
+\eqref{eq:low-projection}. On the complement, multiply the
+heat representation by \(e^{zt}\). Its short-time bound is
+unchanged, and its large-time tail still decays exponentially
+because \(\operatorname{Re}z\le c/2\). The kernel and scaled
+Schauder arguments in Lemma~\ref{lem:weighted-inverse} apply.
+The resolvent derivative and
+\eqref{eq:background-parameter-bounds} consequently give
+\begin{equation}\label{eq:projection-derivative}
+ \|\dot\Pi_a\|_{Y_a\to X_a}\le C\ell(a)^2.
+\end{equation}
+Both resolvents map \(Y_a\) to \(X_a\); the middle
+operator derivative maps \(X_a\) to \(Y_a\).
+The bounded embedding \(X_a\to Y_a\) permits use of
+the same estimate on \(X_a\). Differentiating
+\(\Pi_a^2=\Pi_a\) shows that \(\dot\Pi_a\) exchanges
+the low and complementary spaces; in particular
+\(\Pi_a\dot\Pi_a\Pi_a=0\). No separation of eigenvalues
+within the low cluster is required.
+
+With \(v\) held fixed in the unitary identification, the
+parameter derivative of the quadratic remainder obeys
+\begin{equation}\label{eq:nonlinear-parameter}
+ \|\dot N_a^{\,\mathrm{par}}(v)\|_{Y_a}\le C\|v\|_{X_a}^2.
+\end{equation}
+To see this, differentiate the finite curvature formula
+after subtracting its value and first Fréchet derivative.
+The scaled coefficients and their required parameter
+derivatives are uniformly bounded by the explicit annular
+and core calculations above. The second Fréchet derivative,
+and its parameter derivative, are therefore uniformly
+bounded on a fixed small ball. Matrix Taylor's formula
+proves \eqref{eq:nonlinear-parameter}. The estimate includes
+second-jet terms. The logarithmic derivative of \(\rho_a\)
+is bounded, so the statement is in the same scaled norms
+at the parameter under consideration.
+
+The complementary derivative of the equation is invertible:
+\begin{equation}\label{eq:perturbed-inverse}
+ \left\|\bigl((\mathcal L_a+Q_aDN_a(v_a))|_{Q_aX_a}\bigr)^{-1}
+       \right\|_{Q_aY_a\to Q_aX_a}\le C\ell(a).
+\end{equation}
+Indeed the perturbation times \(G_a\) is \(O(a\ell(a)^2)\),
+so a Neumann series applies. On compact positive parameter
+intervals, the projection and coefficients are smooth.
+A local smooth identification of \(Q_a\) makes the
+ordinary implicit function theorem applicable. Uniqueness
+in Theorem~\ref{thm:projected-correction} identifies the local
+solutions and proves smoothness for \(a>0\).
+
+Put \(\mathcal F_a(v)=\Phi_a+N_a(v)\).
+Differentiating \(\Pi_av_a=0\) gives
+\[
+ \Pi_a\dot v_a=-\dot\Pi_av_a,
+ \qquad \|\Pi_a\dot v_a\|_{X_a}\le Ca\ell(a)^3.
+\]
+Differentiating
+\(\mathcal L_av_a+Q_a\mathcal F_a(v_a)=0\) and projecting
+onto \(Q_a\) gives
+\begin{align*}
+ (\mathcal L_a+Q_aDN_a(v_a))Q_a\dot v_a
+ ={}&-Q_a\dot{\mathcal L}_av_a
+      +Q_a\dot\Pi_a\mathcal F_a(v_a)-Q_a\dot\Phi_a\\
+    &-Q_a\dot N_a^{\,\mathrm{par}}(v_a)
+      -Q_aDN_a(v_a)\Pi_a\dot v_a.
+\end{align*}
+The five terms have \(Y_a\) norms
+\[
+ O(a\ell(a)),\quad O(a\ell(a)^2),\quad O(a),\quad
+ O(a^2\ell(a)^2),\quad O(a^2\ell(a)^4),
+\]
+respectively. Their sum is \(O(a\ell(a)^2)\).
+Applying \eqref{eq:perturbed-inverse} proves
+\eqref{eq:correction-parameter}.
+
+For the tangent, differentiation of the exponential yields
+the exact identity
+\begin{equation}\label{eq:centered-tangent-formula}
+ \widehat k_a^{\,c}
+ =\cosh(\operatorname{ad}_{v_a}/2)k_a+
+   \frac{\sinh(\operatorname{ad}_{v_a}/2)}
+        {\operatorname{ad}_{v_a}/2}\,\dot v_a.
+\end{equation}
+Substitute
+\(a\partial_av_a=\dot v_a-\frac12[k_a,v_a]\)
+in the integral derivative formula for \(e^{v_a}\);
+the two \(k_a\) terms combine to the displayed hyperbolic
+cosine. The quotient is defined by its entire power
+series at zero. Its operator norm is bounded on the
+small supremum ball, and the cosine differs from the
+identity by \(O(|v_a|^2)\).
+Estimates~\eqref{eq:corrected-bounds} and
+\eqref{eq:correction-parameter} prove
+\eqref{eq:corrected-tangent}.
+\end{proof}
+
+\subsection{The single small eigenvalue}
+
+From now on assume \(L\not\simeq M\). Set
+\begin{equation}\label{eq:scalar-coefficient}
+ e_a=\Pi_ak_a,\qquad b_0=\frac{2\pi^2\sigma}{v_0}.
+\end{equation}
+The section \(e_a\) is nonzero for small \(a\): its mass tends
+to \(2v_0\) by \eqref{eq:parameter-pairing} and
+\eqref{eq:parameter-linearization}.
+
+\begin{proposition}\label{prop:sharp-small-eigenvalue}
+There is a smooth positive scalar \(b(a)\), for \(a\)
+sufficiently small, such that
+\begin{equation}\label{eq:remaining-scalar-curvature}
+ \mathcal M_a(v_a)=b(a)e_a,\qquad b(a)=b_0a+o(a).
+\end{equation}
+For the real connection operators of \(H_a\) and
+\(\widehat H_a\),
+\begin{equation}\label{eq:sharp-small-eigenvalue}
+ \lambda_1(\mathcal L_a)=b_0a+o(a),\qquad
+ \lambda_1(\widehat{\mathcal L}_a)=b_0a+o(a),\qquad
+ \lambda_2(\widehat{\mathcal L}_a)\ge c'>0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The remaining centered curvature belongs to the
+one-dimensional space spanned by \(e_a\), defining \(b(a)\).
+Pairing with \(k_a\) and using self-adjointness gives
+\begin{align*}
+ b(a)\|e_a\|_2^2
+ &=\langle\Phi_a,k_a\rangle
+   +\langle v_a,\mathcal L_ak_a\rangle
+   +\langle N_a(v_a),k_a\rangle\\
+ &=4\pi^2\sigma a+o(a)+O(a^2\ell(a))+O(a^2\ell(a)^2).
+\end{align*}
+Here \(\|\mathcal L_ak_a\|_1=\|\dot\Phi_a\|_1=O(a)\).
+Since \(\|e_a\|_2^2\to2v_0\), this proves
+\eqref{eq:remaining-scalar-curvature}, including positivity.
+
+We compute the eigenvalue separately. Put \(J=2P-I\) and
+\(\zeta=u_0/(u_0+a)\), so \(k_a=\zeta J\) and \(u_a=a\zeta\).
+In the unitary splitting, the diagonal derivative of \(\zeta\)
+and off-diagonal derivative of \(J\) are orthogonal. Hence
+\begin{equation}\label{eq:parameter-energy-density}
+ |D_a''k_a|^2
+ =\frac{2a^2|\partial u_0|^2+4a^2u_0^4|\beta|_0^2}{(u_0+a)^4}
+ =\frac{4a^2u_0e_0-2a^2|\partial u_0|^2}{(u_0+a)^4}.
+\end{equation}
+The second equality uses \eqref{eq:full-inclusion-energy}
+for \(H_0\). At a normalized reduced point,
+\[
+ u_0=\lambda_pr^2+O(r^4),\qquad
+ e_0(p)=4\lambda_p,\qquad
+ |\partial u_0|^2=2\lambda_p^2r^2+O(r^4).
+\]
+The density in \eqref{eq:parameter-energy-density} is
+nonnegative and bounded by \(Ca^2r^2/(a+r^2)^4\).
+After \(z=\sqrt a\,y\) and division of its integral by \(a\),
+the dominating function is
+\(C|y|^2/(1+|y|^2)^4\), integrable in four real dimensions.
+The leading integral at \(p\) is
+\[
+ 12\pi^2a^2\lambda_p^2
+ \int_0^\infty\frac{s^2}{(a+\lambda_ps)^4}\,\dd s
+ =\frac{4\pi^2a}{\lambda_p},
+\]
+since \(\int_0^\infty t^2(1+t)^{-4}\,\dd t=1/3\).
+The fixed exterior is \(O(a^2)\). Thus
+\(\mathfrak q_a(k_a,k_a)=4\pi^2\sigma a+o(a)\).
+The complementary energy is
+\[
+ \mathfrak q_a(Q_ak_a,Q_ak_a)
+ =\langle Q_ak_a,\mathcal L_ak_a\rangle
+ =O(a^2\ell(a))=o(a).
+\]
+As \(e_a\) spans the first eigenspace and
+\(\|e_a\|_2^2\to2v_0\), this proves the reference eigenvalue
+equivalent.
+
+Under the isometry \(e^{v_a/2}\), the corrected unitary
+connection differs from \(D_a\) by a one-form \(A_a\) with
+\(|A_a|\le C|D_av_a|\). The weighted derivative bound gives
+\[
+ \|A_a\|_4\le Ca\ell(a)^{5/4},\qquad
+ \int_X\rho_a^{-4}\,\dd V\le C\ell(a).
+\]
+For every real Hermitian trace-free section \(s\), the
+uniform Sobolev inequality yields
+\[
+ \|A_as\|_2
+ \le Ca\ell(a)^{5/4}
+       \bigl(\mathfrak q_a(s,s)+\|s\|_2^2\bigr)^{1/2}.
+\]
+Expansion of the corrected connection energy and the
+product inequality with parameter \(\sqrt a\) imply
+\begin{equation}\label{eq:corrected-form-comparison}
+ |\widehat{\mathfrak q}_a(s,s)-\mathfrak q_a(s,s)|
+ \le C\sqrt a\,\mathfrak q_a(s,s)
+      +Ca^{3/2}\ell(a)^{5/2}\|s\|_2^2.
+\end{equation}
+A term of order \(a^{3/2}\ell(a)^{5/2}\mathfrak q_a\)
+is absorbed into the first term for small \(a\).
+The mass forms are identical under the isometry.
+Min--max, the reference equivalent and its complementary
+gap prove the remaining assertions in
+\eqref{eq:sharp-small-eigenvalue}.
+\end{proof}
+
+\subsection{A trajectory with integrable flow error}
+
+Choose a sufficiently small fixed \(a_{\mathrm{in}}>0\) and solve
+\begin{equation}\label{eq:comparison-ode}
+ a'(T)=-2a(T)b(a(T)),\qquad a(0)=a_{\mathrm{in}}.
+\end{equation}
+Define \(\overline H(T)=\widehat H_{a(T)}\). This is a curve
+of smooth metrics on the original compact bundle.
+
+\begin{proposition}\label{prop:comparison-trajectory}
+The curve exists for all \(T\ge0\), and
+\begin{equation}\label{eq:comparison-asymptotic}
+ a(T)\sim\frac1{2b_0T},\qquad
+ \overline Z(T)\sim\frac{v_0^2}{4\pi^2\sigma T}.
+\end{equation}
+Its metric-flow error
+\[
+ \mathcal R(T)=\overline H^{-1}\partial_T\overline H
+                 +2\Phi_{\overline H}
+\]
+obeys
+\begin{equation}\label{eq:integrable-flow-error}
+ \|\mathcal R(T)\|_{\infty,\overline H}
+ \le Ca(T)^2\ell(a(T))^3,\qquad
+ \int_T^\infty\|\mathcal R(t)\|_\infty\,\dd t
+ \le Ca(T)\ell(a(T))^3.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For small \(a\), \(b(a)/a\) lies between two positive
+constants. The solution stays positive, decreases to zero
+and exists for all nonnegative time. Its reciprocal
+satisfies
+\[
+ (1/a)'=2b(a)/a\longrightarrow2b_0.
+\]
+Integration proves the first equivalent in
+\eqref{eq:comparison-asymptotic}; the corrected mass
+in \eqref{eq:corrected-energy} proves the second.
+Centering the error gives the exact expression
+\[
+ e^{v_a/2}\mathcal R e^{-v_a/2}
+     =2b(a)\bigl(e_a-\widehat k_a^{\,c}\bigr).
+\]
+The term in parentheses has supremum norm
+\(O(a\ell(a)^3)\) by
+\eqref{eq:parameter-linearization} and
+\eqref{eq:corrected-tangent}. Since \(b(a)=O(a)\),
+this proves the first estimate in
+\eqref{eq:integrable-flow-error}. For the second, substitute
+\(\dd T=-\dd a/(2ab(a))\) and use \(b(a)\ge ca\).
+The tail is bounded by
+\[
+ C\int_0^{a(T)}(1+|\log x|)^3\,\dd x
+ \le Ca(T)\ell(a(T))^3.
+\]
+\end{proof}
+
+The coefficient and time scale in this proposition belong so far
+to the constructed curve. The next section proves convergence of
+every actual flow with the fixed determinant to that curve. In
+particular, integrability of the error alone will first give
+bounded metric distance; the small positive eigenvalue supplies
+the additional decay.

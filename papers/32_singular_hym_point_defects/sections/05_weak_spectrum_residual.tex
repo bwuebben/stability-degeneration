@@ -1,0 +1,367 @@
+\section{Small connection eigenvalues and mean curvature}
+\label{sec:weak-spectrum}
+
+We first identify all small eigenvalues of a real connection operator for
+the compact metrics \(H_a\). The argument applies to an arbitrary finite
+defect. We then use the normalized reference metric of
+Lemma~\ref{lem:normalized-reference} to estimate the mean curvature when
+the defect is reduced. All constants in this section concern the fixed
+extension, base metric and reference metric.
+
+\subsection{The real connection operator}
+
+Let \(D_a\) be the Chern connection of \(H_a\). On the real bundle of
+\(H_a\)-Hermitian trace-free endomorphisms, set
+\begin{equation}\label{eq:connection-form}
+ \mathfrak q_a(s,t)
+ =\operatorname{Re}\int_X\langle D_a''s,D_a''t\rangle\,\dd V
+ =\frac12\operatorname{Re}\int_X\langle D_as,D_at\rangle\,\dd V,
+ \qquad \|s\|_a^2=\int_X\tr(s^2)\,\dd V.
+\end{equation}
+The second equality follows from Hermitian adjunction and real
+polarization. The associated self-adjoint operator is
+\(\mathcal L_a=\frac12D_a^*D_a\). We write its eigenvalues, counted with
+multiplicity, as \(\lambda_1(a)\le\lambda_2(a)\le\cdots\).
+At a metric with noncentral mean curvature the complex operator
+\((D_a'')^*D_a''\) on all endomorphisms need not preserve Hermitian
+sections. The real operator in \eqref{eq:connection-form} is the one
+used throughout the proof.
+
+Let \(\mathcal P\) be the space of parallel Hermitian trace-free
+endomorphisms of the smooth graded connection \(D_*\) in
+\eqref{eq:graded-connection}. Then
+\begin{equation}\label{eq:weak-dimension}
+ k=\dim_{\RR}\mathcal P=
+ \begin{cases}
+  1,&L\not\simeq M,\\
+  3,&L\simeq M.
+ \end{cases}
+\end{equation}
+Indeed a nonzero parallel off-diagonal map is a line-bundle
+isomorphism. If the two line bundles are isomorphic, their HE metrics
+differ, after identification, by a positive constant; the logarithmic
+ratio is harmonic. A normalized isomorphism is therefore parallel.
+It supplies two real off-diagonal directions in addition to the
+diagonal trace-free direction.
+
+\begin{proposition}\label{prop:weak-spectrum}
+For the family \eqref{eq:compact-metric} with any smooth reference
+metric of the fixed determinant, all \(\lambda_j(a)\) are positive.
+There are \(a_0,c>0\) such that
+\begin{equation}\label{eq:complete-cluster}
+ \lambda_k(a)\longrightarrow0,\qquad
+ \lambda_{k+1}(a)\ge c\quad(0<a\le a_0).
+\end{equation}
+If \(W\) is reduced, then \(\lambda_k(a)\le Ca\).
+The small spectral space converges, on every compact subset of
+\(X\setminus\Supp W\), to \(\mathcal P\) under the unitary
+identifications specified below. In particular, it contains every
+normalized mode whose connection energy tends to zero.
+\end{proposition}
+
+\begin{proof}
+Put \(U=X\setminus\Sigma\), where \(\Sigma=\Supp W\), and let \(\tau\)
+be the \(H_0\)-orthogonal right inverse of the quotient map.
+The splitting \((\iota,\tau)\) has metric
+\(\diag(u_ah_L,u_a^{-1}h_M)\). Consequently
+\begin{equation}\label{eq:graded-unitary-map}
+ F_a(l,m)=u_a^{-1/2}\iota(l)+u_a^{1/2}\tau(m)
+\end{equation}
+is a unitary isomorphism from \((L\oplus M,h_L\oplus h_M)\) to
+\((V,H_a)\) over \(U\). Write \(\db\tau=\iota\beta\), with the
+fixed line metric on \(\operatorname{Hom}(M,L)\) understood.
+The diagonal connection differences in this unitary splitting are
+opposite copies of
+\(\frac12(\partial-\db)\log u_a\); the off-diagonal blocks have
+norm \(u_a|\beta|_0\). Thus
+\begin{equation}\label{eq:graded-connection-error}
+ |F_a^*D_a-D_*|
+ \le C\bigl(|\dd\log u_a|+u_a|\beta|_0\bigr).
+\end{equation}
+Since \(\log u_a=\log a-\log(1+a/u_0)\), this difference and all
+its fixed derivatives are \(O_K(a)\) on each \(K\Subset U\).
+
+The scalar Sobolev inequality on the fixed four-dimensional base,
+together with Kato's inequality, gives
+\begin{align}
+ \|s\|_{L^4(a)}^2
+ &\le C\bigl(2\mathfrak q_a(s,s)+\|s\|_a^2\bigr),
+                                                   \label{eq:uniform-sobolev}\\
+ \int_{B_\rho(\Sigma)}|s|_a^2\,\dd V
+ &\le C\rho^2\bigl(2\mathfrak q_a(s,s)+\|s\|_a^2\bigr).
+                                                   \label{eq:no-point-mass}
+\end{align}
+The second estimate uses the \(O(\rho^4)\) volume of the finitely
+many balls. Both are intrinsic estimates on the original smooth
+bundle and require no curvature bound.
+
+Suppose \(a_n\downarrow0\), \(\|s_n\|_{a_n}=1\), and
+\(\mathfrak q_{a_n}(s_n,s_n)\to0\).
+Transport by \(F_{a_n}\) on fixed compact subsets of \(U\).
+The convergence of the connection coefficients and the covariant
+derivative bound give local \(H^1\) bounds. Rellich compactness,
+followed by a diagonal subsequence, gives strong local \(L^2\)
+convergence to a section \(s_*\) satisfying \(D_*s_*=0\).
+It is smooth by elliptic regularity. Its holomorphic coefficients
+extend over the isolated points by Hartogs' theorem, and the
+extension is parallel. Estimate~\eqref{eq:no-point-mass}, first
+with fixed \(\rho\) and then with \(\rho\downarrow0\), shows that
+the limit has norm one. Applying the same argument to sums of
+finitely many sequences preserves their real inner products.
+
+To obtain test sections, choose a cutoff \(\chi_\rho\) equal to
+zero on \(B_\rho(\Sigma)\), equal to one outside \(B_{2\rho}(\Sigma)\),
+and satisfying \(|\dd\chi_\rho|\le C/\rho\). For \(b\in\mathcal P\),
+extend
+\[
+ T_{a,\rho}b=\chi_\rho F_abF_a^{-1}
+\]
+by zero across the points. Its mass is exactly
+\(\int\chi_\rho^2|b|^2\,\dd V\). For fixed \(\rho\), its energy
+tends as \(a\downarrow0\) to
+\(\frac12\int|\dd\chi_\rho|^2|b|^2\,\dd V\le C\rho^2|b|^2\).
+These statements are uniform on the unit sphere of \(\mathcal P\).
+Min--max, first with \(\rho\) fixed and then with
+\(\rho\downarrow0\), proves \(\lambda_k(a)\to0\).
+If the complementary bound in \eqref{eq:complete-cluster} failed,
+there would be \(k+1\) orthonormal eigensections with vanishing
+energy. The preceding compactness argument would give \(k+1\)
+orthonormal elements of \(\mathcal P\), a contradiction.
+
+For positivity at a fixed \(a\), a zero mode would be a nonzero
+parallel Hermitian trace-free endomorphism. Its two eigenlines
+would split \(V=A\oplus B\) holomorphically. Projecting \(\iota\)
+to the factors gives sections of \(A\otimes L^{-1}\) and
+\(B\otimes L^{-1}\). If both are nonzero, their zero divisors
+have nonnegative Kähler degrees whose sum is
+\[
+ \deg A+\deg B-2\deg L=\deg V-2\deg L=0.
+\]
+Both sections are then nowhere zero, contrary to the nonempty
+zero scheme of \(\iota\). If only one projection is nonzero,
+its zero set would be a nonempty finite set; a line-bundle
+section on a smooth surface has either a divisor of zeros or
+no zeros. This is again impossible. Thus \(\ker\mathcal L_a=0\).
+This argument does not assert simplicity of \(V\); a holomorphic
+nilpotent endomorphism in the repeated-factor case is not
+Hermitian and parallel.
+
+If \(W\) is reduced, in each fixed coordinate ball
+\[
+ u_0\asymp r^2,\qquad |\dd u_0|\le Cr,\qquad
+ |\beta|_0\le Cr^{-3}.
+\]
+For the last bound, the numerator in
+\(\tau=H_0^{-1}q^*/(qH_0^{-1}q^*)\) is \(O(r)\) and the
+denominator is comparable to \(r^2\). Hence
+\(\db\tau=O(r^{-2})\), and division by the inclusion,
+whose norm is comparable to \(r\), gives the assertion.
+For \(r\ge\sqrt a\), \eqref{eq:graded-connection-error} is
+therefore bounded by \(Ca/r^3\). Choose the cutoff at radius
+\(\sqrt a\). Its derivative contributes \(O(a)\) to the energy,
+and the connection term contributes at most
+\[
+ Ca^2\int_{\sqrt a}^{R}r^{-6}r^3\,\dd r\le Ca.
+\]
+The fixed exterior contributes \(O(a^2)\), whereas the omitted
+mass is \(O(a^2)\). Min--max proves \(\lambda_k(a)\le Ca\).
+
+For precision about the subspaces, let \(\Pi_a\) be the orthogonal
+projection onto the first \(k\) eigensections and let \(T_a\)
+be the just constructed cutoff map. With the full graded
+\(L^2\) inner product on \(\mathcal P\), the complementary gap gives
+\begin{equation}\label{eq:spectral-identification}
+ \|(I-\Pi_a)T_ab\|_a^2\le Ca\|b\|_*^2,\qquad
+ R_a^*R_a=I+O(a),\qquad R_a=\Pi_aT_a.
+\end{equation}
+Thus \(R_a\) is an isomorphism onto the complete small spectral
+space. On fixed compact subsets the transported \(T_ab\) equals
+\(b\), so \(R_ab\to b\) in local \(L^2\). Expand \(R_ab\) in a
+normalized low eigenbasis. Its coefficients are bounded, and the
+transported elliptic operators have uniformly smooth coefficients
+there. Interior estimates give convergence in every fixed
+\(C^j\) norm. For a general finite \(W\), choose a sequence
+\(\rho_j\downarrow0\) and then thresholds \(a_j\downarrow0\)
+so that the fixed-\(\rho_j\) connection error is at most
+\(\rho_j^2\) whenever \(a\le a_j\). Using those cutoffs successively
+gives mass \(I+o(1)\) and energy \(o(1)\), and the same proof
+applies. No parameter regularity of that last cutoff choice is needed.
+\end{proof}
+
+\subsection{The normalized mean-curvature residual}
+
+For the remainder of this section assume \(W\) is reduced and use
+Lemma~\ref{lem:normalized-reference}. Choose a smooth positive weight
+\(\rho_a\) comparable to \(\sqrt{a+|z|^2}\) on the fixed balls and
+comparable to one on their complement. For example one can take the
+square root of \(a\) plus a fixed smooth function equal to \(|z|^2\)
+near each point and positive elsewhere. Define
+\[
+ \Phi_a=i\Lambda_\omega F_{H_a}-\kappa I,\qquad
+ \ell(a)=1+|\log a|.
+\]
+
+\begin{proposition}\label{prop:residual}
+For each fixed nonnegative integer \(j\),
+\begin{equation}\label{eq:weighted-residual}
+ |D_a^j\Phi_a|_{H_a}\le C_j a\rho_a^{-2-j}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:residual-lp}
+ \|\Phi_a\|_p\le
+ \begin{cases}
+  C_pa,&1\le p<2,\\
+  Ca\sqrt{\ell(a)},&p=2,\\
+  C_pa^{2/p},&2<p<\infty,
+ \end{cases}
+ \qquad \|\Phi_a\|_\infty\le C.
+\end{equation}
+The smooth parameter direction
+\begin{equation}\label{eq:parameter-direction}
+ k_a=H_a^{-1}a\partial_aH_a
+     =\frac{2S-u_0I}{u_0+a}
+\end{equation}
+satisfies
+\begin{equation}\label{eq:parameter-pairing}
+ \|k_a\|_a^2\longrightarrow2v_0,\qquad
+ \langle\Phi_a,k_a\rangle_a
+ =\frac{2\mathcal E_a}{a}=4\pi^2\sigma a+o(a).
+\end{equation}
+These assertions allow \(L\simeq M\).
+\end{proposition}
+
+\begin{proof}
+In the normalized frames near \(p\), put \(s=|z|^2\) and
+\(c=\lambda_p\sqrt{h_M/h_L}\). Then
+\[
+ u_0=cs,\quad u_a=\frac{acs}{a+cs},\quad
+ c=\lambda_p+O(r^2),\quad \dd c=O(r),
+ \quad g=g_{\mathrm E}+O(r^2).
+\]
+The orthogonal quotient lift and its \(\db\) derivative are
+\begin{equation}\label{eq:normalized-splitting}
+ \tau=\lambda_p^{-1/2}\frac{(\bar z_2,\bar z_1)^{\mathsf t}}s,
+ \qquad
+ \beta=\frac{\bar z_1\dd\bar z_2-\bar z_2\dd\bar z_1}
+                  {\lambda_p s^2}.
+\end{equation}
+Since the line weight on \(\operatorname{Hom}(M,L)\) is
+\((\lambda_p/c)^2\) and \(|\dd z_j|^2=2\),
+\begin{equation}\label{eq:beta-leading}
+ |\beta|_0^2=\frac{2}{c^2s^3}+O(s^{-2}).
+\end{equation}
+Write \(\Delta=-\Delta_0\) for the nonpositive real scalar
+Laplacian. In the unitary splitting the diagonal residual is
+\begin{equation}\label{eq:diagonal-residual}
+ (\Phi_a)_{11}=u_a^2|\beta|_0^2-\frac12\Delta\log u_a,
+ \qquad(\Phi_a)_{22}=-(\Phi_a)_{11}.
+\end{equation}
+For example, the first identity follows directly by substituting
+\eqref{eq:full-inclusion-energy} into
+\(\Delta u_a=2e_a-2u_a(\Phi_a)_{11}\). The trace identity follows
+from the fixed HE determinant.
+
+For \(v=cs\) one has
+\(\Delta v=8c+O(s)\) and
+\(|\dd v|^2=4c^2s+O(s^2)\). The derivatives of
+\(f(v)=\log a+\log v-\log(v+a)\) are
+\[
+ f'(v)=\frac{a}{v(v+a)},\qquad
+ f''(v)=-\frac{a(2v+a)}{v^2(v+a)^2}.
+\]
+The chain rule therefore gives
+\begin{align}
+ \Delta\log u_a
+ &=\frac{4a^2}{s(a+cs)^2}
+       +O\left(\frac{a}{a+s}\right),\\
+ u_a^2|\beta|_0^2
+ &=\frac{2a^2}{s(a+cs)^2}
+       +O\left(\frac{a^2}{(a+s)^2}\right).
+\end{align}
+For the first error, multiply \(O(s)\) by
+\(|f'|\le Ca/[s(s+a)]\), and \(O(s^2)\) by
+\(|f''|\le Ca/[s^2(s+a)]\). The leading terms cancel in
+\eqref{eq:diagonal-residual}, leaving \(Ca/(a+s)\).
+
+The upper off-diagonal curvature block in the unnormalized
+splitting is
+\[
+ D'_0\beta+2\partial\log u_a\wedge\beta.
+\]
+After unitary normalization its contraction has norm at most
+\(Cu_a|\Lambda(D'_0\beta+2\partial\log u_a\wedge\beta)|_0\).
+Direct differentiation in the flat metric gives
+\[
+ \Lambda_{\mathrm E}\partial\beta=0,\qquad
+ \Lambda_{\mathrm E}(\partial s\wedge\beta)=0.
+\]
+The contraction error is \(O(s)\), the fixed line connection is
+\(O(r)\), and \(\partial\beta=O(r^{-4})\). It follows that
+\(|\Lambda D'_0\beta|_0\le Cs^{-1}\); multiplication by
+\(u_a\le Cas/(a+s)\) gives the required bound. Finally
+\[
+ \partial\log u_a
+ =\frac{a}{s(a+cs)}\partial s+
+   \frac{a}{c(a+cs)}\partial c.
+\]
+The flat contraction of the first term with \(\beta\) vanishes.
+The base-metric error and the second term each have norm at most
+\(Ca/[s(a+s)]\) before multiplication by \(u_a\). Their
+normalized contributions are at most \(Ca^2/(a+s)^2\).
+Hermitian symmetry treats the other off-diagonal block. This
+proves \eqref{eq:weighted-residual} for \(j=0\).
+
+On \(r\ge\sqrt a\), differentiating these formulas and their
+cancellations costs at most \(C_jr^{-j}\). The connection in
+the normalized splitting is \(O(r^{-1})\), with derivatives
+of order \(j\) bounded by \(C_jr^{-1-j}\). Conversion to
+covariant derivatives preserves the estimate
+\(C_jar^{-2-j}\). At the center use the smooth holomorphic
+frame instead. Under \(z=\sqrt a\,y\), on a fixed \(y\)-ball,
+\[
+ H_a(\sqrt a\,y)=H^{\mathrm{flat}}_{\lambda_p}(y)+O_{C^j}(a),
+ \qquad g(\sqrt a\,y)=g_{\mathrm E}+O_{C^j}(a).
+\]
+The leading metric is the local HYM metric of
+Lemma~\ref{lem:local-metric}, with a fixed dilation and sign
+change. Its metric and inverse are uniformly bounded on
+the fixed ball. The physical curvature contraction has a
+factor \(a^{-1}\), while its leading term is zero and its
+error is \(O_{C^j}(a)\). Thus the physical \(\Phi_a\) and its
+\(y\)-covariant derivatives are bounded. Returning to physical
+derivatives costs \(a^{-j/2}\), which is precisely
+\eqref{eq:weighted-residual} on \(r\le2\sqrt a\).
+On the fixed exterior, \eqref{eq:graded-connection-error}
+gives \(O(a)\) in every fixed derivative. This proves the
+global estimate. Integrating
+\[
+ Ca^p\int_0^R\frac{r^3}{(a+r^2)^p}\,\dd r
+\]
+proves \eqref{eq:residual-lp}, including the logarithm at \(p=2\).
+
+Differentiating the two eigenvalues \(w,w^{-1}\) in
+\eqref{eq:compact-local-expression}, with \(P\) independent
+of \(a\), gives
+\[
+ k_a=\frac{u_0}{u_0+a}(2P-I)=\frac{2S-u_0I}{u_0+a}.
+\]
+The second expression is smooth across the points. Its
+eigenvalues are opposite, bounded in absolute value by one,
+and tend to \(\pm1\) off \(\Sigma\). Bounded convergence gives
+the mass limit in \eqref{eq:parameter-pairing}. Since \(\Phi_a\)
+is trace-free,
+\[
+ \tr(\Phi_ak_a)=\frac2a u_a(\Phi_a)_{11}.
+\]
+The integrated Bochner identity for the smooth global section
+\(\iota\) says that the integral of \(u_a(\Phi_a)_{11}\) is
+\(\mathcal E_a\). There is no puncture boundary term. The
+balanced static energy \eqref{eq:balanced-static} now proves
+the exact pairing and its asymptotic.
+\end{proof}
+
+The residual is small in each finite \(L^p\) space, but the estimate
+does not tend to zero in \(L^\infty\). A correction is therefore
+needed before \(H_a\) can provide a sufficiently accurate comparison
+for the flow. The complete dimension in \eqref{eq:weak-dimension}
+will also be retained in that correction.

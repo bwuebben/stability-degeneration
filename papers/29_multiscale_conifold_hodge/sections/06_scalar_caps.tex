@@ -1,0 +1,195 @@
+\section{Scalar estimates on Stenzel caps}\label{sec:scalar-caps}
+
+The passage from the surgery metrics to the Ricci-flat metrics requires
+a scalar inverse which does not lose powers of the smallest cap scale.
+We first identify the entire low-growth harmonic space on the complete
+Stenzel manifold. The distinction between its pluriharmonic and
+quadratic directions will also determine the nonlinear construction.
+
+\subsection{The fifteen low-growth harmonic functions}
+
+Let
+\[
+ Z=\{z\in\CC^4:Q(z)=z_1^2+\cdots+z_4^2=1\},\qquad
+ \omega=\mathrm i\partial\bar\partial\phi,\qquad
+ \phi=F(s),\quad s=|z|^2,
+\]
+carry one fixed normalization of the Stenzel metric $g$.
+Put $\rho=s^{1/3}\ge1$ and $B_t=\{\rho<t\}$. The radial potential
+has the differentiated asymptotic expansion
+$\phi=c_0\rho^2+o(\rho^2)$, with $c_0>0$.
+The radius $\rho$ is comparable to the metric cone radius.
+Write
+\[
+ P=\Lambda_\omega\mathrm i\partial\bar\partial,\qquad P\phi=3.
+\]
+Thus $P$ differs from the positive real scalar Laplacian by a fixed
+nonzero factor and sign. This convention will be used throughout the
+metric construction.
+
+For $q>6$, use the weighted norms
+\begin{equation}\label{eq:cap-sobolev-norm}
+ \|v\|_{W^{k,q}_\delta}^q
+ =\sum_{j=0}^k\int_Z
+       \bigl(\rho^{j-\delta}|\nabla^jv|\bigr)^q\rho^{-6}\,\dd V_g.
+\end{equation}
+The scalar Fredholm theory of
+\cite[Theorem~7.9, Proposition~7.11, Corollary~9.4 and Section~10]{pacini}
+gives surjectivity for nonexceptional weights $\delta>-4$,
+index zero for $-4<\delta<0$, and index jumps equal to the
+multiplicity of each crossed indicial root. For the ordinary double
+point, the nonnegative scalar indicial roots strictly below three are
+\[
+ 0,\quad \frac32,\quad 2,
+ \qquad\text{with real multiplicities }1,\ 8,\ 6;
+\]
+the next root is three. These are the roots of the full link spectrum
+in \cite[Example~2.16, equations (2.41)--(2.42)]{hein-sun}.
+In particular the kernel at every weight $2<\delta<3$ has dimension
+fifteen.
+
+\begin{lemma}\label{lem:cap-harmonic-basis}
+At a weight $2<\delta<3$, the real kernel of $P$ is spanned by
+$1$, $\operatorname{Re}z_j$, $\operatorname{Im}z_j$ for $1\le j\le4$,
+and
+\begin{equation}\label{eq:quadratic-cap-mode}
+ q_A(z)=2F'(s)z^*Az,\qquad A\in\mathrm i\mathfrak{so}(4,\RR).
+\end{equation}
+The first nine functions have zero complex Hessian. The remaining six
+have degree-two leading terms and satisfy, for every $j\ge0$,
+\begin{equation}\label{eq:quadratic-hessian}
+ \sup_Z\rho^j
+   |\nabla^j(\mathrm i\partial\bar\partial q_A)|_g\le C_j|A|.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The first nine functions are pluriharmonic. If
+$A\in\mathrm i\mathfrak{so}(4,\RR)$, then $A$ is Hermitian,
+$A^{\mathsf T}=-A$, and $G_t=e^{tA}$ preserves $Q$ and its
+residue volume form. Pulling back the Stenzel Calabi--Yau identity
+by $G_t$ and differentiating gives
+\[
+ 3\mathrm i\partial\bar\partial
+       \left.\frac{\dd}{\dd t}\right|_{t=0}\phi(G_tz)
+       \wedge\omega^2=0.
+\]
+The derivative is \eqref{eq:quadratic-cap-mode}, so $Pq_A=0$.
+The radial Stenzel formula and its differentiated asymptotics, as in
+\cite[Lemma~5.14]{conlon-hein}, give the leading term
+\[
+ \frac{4c_0}{3}s^{-1/3}z^*Az.
+\]
+This map of $A$ is injective. Indeed write $A=\mathrm i B$ with
+$B$ real skew-symmetric and evaluate $z^*Az$ on the null vectors
+$z=e_j+\mathrm i e_k$: these values recover, up to a fixed
+nonzero factor, every entry $B_{jk}$. The six leading terms are
+therefore independent. Together with the lower-degree functions
+they exhaust the fifteen-dimensional Fredholm kernel. Smoothness
+on the fixed core and the differentiated expansion on the end prove
+\eqref{eq:quadratic-hessian}.
+\end{proof}
+
+Choose a basis $H_1,\ldots,H_{15}$ as in the lemma and denote its
+growth degrees by $d_a\in\{0,3/2,2\}$. For all sufficiently large $T$,
+\begin{equation}\label{eq:annular-harmonic-coefficients}
+ \sum_a|b_a|T^{d_a}
+   \le C\left\|\sum_ab_aH_a\right\|_{L^\infty(B_{2T}\setminus B_T)}.
+\end{equation}
+To prove this, dilate the annulus to a fixed cone annulus. The
+normalized functions $T^{-d_a}H_a$ converge there to independent
+homogeneous functions: within each degree their link terms are
+independent, and distinct degrees have different radial powers.
+Their limiting $L^2$ Gram matrix is positive definite. Its least
+eigenvalue stays positive for all large $T$, which proves the estimate.
+
+\subsection{A local complex-Hessian estimate}
+
+For $\varepsilon>0$ put
+$g_\varepsilon=\varepsilon^2g$, $r_\varepsilon=\varepsilon\rho$,
+and $P_\varepsilon=\varepsilon^{-2}P$. All derivatives in the
+following statement use $g_\varepsilon$.
+
+\begin{proposition}\label{prop:local-hessian}
+For every $\mu>0$ and integer $m\ge0$ there are $C,T_0>0$ such
+that the following holds. Suppose $T=R/\varepsilon\ge T_0$,
+$P_\varepsilon u=f$ on $B_{4T}$, and $c\in\RR$. Set
+\[
+ K=\max_{0\le j\le m+1}\sup_{B_{4T}}
+       r_\varepsilon^{j-\mu}|\nabla^j(f-c)|.
+\]
+Then
+\begin{equation}\label{eq:local-hessian}
+ \max_{0\le j\le m}\sup_{B_T}
+ r_\varepsilon^j|\nabla^j(\mathrm i\partial\bar\partial u)|
+ \le C\left(R^{-2}\|u\|_{L^\infty(B_{4T})}
+                +|c|+R^\mu K\right).
+\end{equation}
+The constants are independent of $\varepsilon$ and of the phase in
+a holomorphic identification of a smoothing quadric with $Z$.
+\end{proposition}
+\begin{proof}
+Choose $0<\eta<\min(\mu,1)$ and put $\delta=2+\eta$.
+The fixed-cap Fredholm theory gives a bounded right inverse
+\[
+ G_\delta:W^{m+1,q}_{\delta-2}\longrightarrow
+                    W^{m+3,q}_\delta,\qquad PG_\delta=\operatorname{Id}.
+\]
+Weighted Sobolev embedding gives
+\begin{equation}\label{eq:cap-inverse-embedding}
+ \sup_Z\rho^{j-\delta}|\nabla^jG_\delta F|
+       \le C\|F\|_{W^{m+1,q}_{\delta-2}},\qquad j\le m+2.
+\end{equation}
+First take $c=0$. On the unit cap the equation is $Pu=\varepsilon^2f$,
+and $|\nabla_g^jf|\le K\varepsilon^\mu\rho^{\mu-j}$.
+Choose $\chi_T$ equal to one on $B_{2T}$ and zero outside $B_{3T}$,
+with the usual scaled derivative bounds. Put
+\[
+ U=\|u\|_{L^\infty(B_{4T})},\qquad
+ \mathcal B=U+R^{2+\mu}K.
+\]
+Interior estimates on the transition annulus bound the commutator
+$[P,\chi_T]u$ in $W^{m+1,q}_{\delta-2}$ by $CT^{-\delta}\mathcal B$.
+The interior source has the same bound, since
+\[
+ \|\chi_T\varepsilon^2f\|_{W^{m+1,q}_{\delta-2}}
+   \le CK\varepsilon^{2+\mu}T^{\mu-\eta}
+   =CT^{-\delta}R^{2+\mu}K.
+\]
+Here the radial integral is bounded by
+$C\int_1^{3T}\rho^{q(\mu-\eta)}\,\dd\rho/\rho$;
+the strict inequality $\eta<\mu$ avoids a logarithmic loss.
+
+Define $v=G_\delta P(\chi_Tu)$ and $H=\chi_Tu-v$. The latter
+belongs to the complete-cap harmonic kernel. On
+$B_{2T}\setminus B_T$, \eqref{eq:cap-inverse-embedding} bounds
+$v$ and $H$ by $C\mathcal B$. Equation
+\eqref{eq:annular-harmonic-coefficients} bounds the six quadratic
+coefficients of $H$ by $CT^{-2}\mathcal B$; the other nine modes
+have zero complex Hessian. Thus
+\[
+ \sup_{B_T}\rho^j|\nabla_g^j(\mathrm i\partial\bar\partial H)|
+       \le CT^{-2}\mathcal B,\qquad j\le m.
+\]
+For $v$, \eqref{eq:cap-inverse-embedding} gives the bound
+$CT^{-\delta}\mathcal B\rho^{\delta-2}
+\le CT^{-2}\mathcal B$. Since $u=H+v$ on $B_T$, this proves
+the unit-metric estimate, including the core.
+Under homothety its left side gains $\varepsilon^{-2}$, and
+$\varepsilon^{-2}T^{-2}=R^{-2}$. This proves
+\eqref{eq:local-hessian} for $c=0$.
+
+For general $c$, subtract $(c/3)\varepsilon^2\phi$. Its
+$P_\varepsilon$-image is $c$, its supremum is at most
+$C|c|R^2$, and its complex Hessian is the parallel tensor
+$(c/3)\omega_\varepsilon$. This gives the remaining term.
+A phase change is a scalar unitary coordinate change, so the
+constants are unchanged.
+\end{proof}
+
+The positive order of the nonconstant forcing is essential to this
+argument. On the cone, if $Y$ is a root-two link eigenfunction, then
+$P(r^2\log r\,Y)$ is a nonzero constant multiple of $Y$. Thus a
+bounded angular source can produce a logarithmic complex Hessian.
+In particular, a nonlinear proof cannot discard the quadratic
+directions on the ground that their Hessians are bounded. We will
+incorporate their exact automorphism family.

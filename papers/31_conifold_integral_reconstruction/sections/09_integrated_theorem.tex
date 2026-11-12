@@ -1,0 +1,467 @@
+\section{The attachment map, weak spectra and HYM dynamics}
+\label{sec:integrated-theorem}
+
+We now identify the maps relating integral reconstruction to the
+analytic results on the selected family. The lattice inclusion is
+recovered from middle-dimensional periods. Its kernel is already
+present in the degree-two restriction problem, but that kernel does
+not determine its image in marked middle homology. For the bundle,
+the same infinitesimal unitary action determines the weak section
+energy and the vertical directions in the harmonic quotient metric.
+The invariant flow graph supplies a further identification with the
+Hessian at an HE metric. Each assertion concerns its specified
+space; none requires identifying these spaces with one another.
+
+Write $V_{\rm lost}=H^2(Y_{h_*};\RR)/K_H$, and use the
+$G$-orthogonal representatives from Section~\ref{sec:analytic-family}.
+The curve restriction map descends to
+\begin{equation}\label{eq:lost-restriction}
+ \mathsf r:V_{\rm lost}\longrightarrow\RR^8,\qquad
+ \mathsf r(x_f,x_g)=x_fv_f+x_gv_g.
+\end{equation}
+Here $v_f,v_g$ have the orientations fixed in
+\eqref{eq:integral-attachment}. On the real tangent space of
+$\mathcal W$ put
+\begin{equation}\label{eq:arrow-mass}
+ G_{0,p}(q,q)=2c_+(p)\|q_A\|_{\rm HS}^2+
+                              2c_-(p)\|q_B\|_{\rm HS}^2.
+\end{equation}
+The fundamental vector of the compact action is
+\begin{equation}\label{eq:fundamental-action}
+ \rho_z(\mathrm iS)
+   =\mathrm i(S_+A-AS_-,\,S_-B-BS_+),\qquad S\in\mathfrak h.
+\end{equation}
+The total scalar action is ineffective, so $\mathrm i\mathfrak h$
+contains all the effective compact action directions.
+
+\begin{theorem}[Reconstruction and analysis on the same family]
+\label{thm:integrated}
+Fix the selected coefficient $h_*$, the evaluated family
+of Theorem~\ref{thm:evaluated-periods}, and a finite $m\ge4$.
+On the common domain of Proposition~\ref{prop:analytic-reapplication}
+the following conclusions hold.
+
+\begin{enumerate}
+\item For every $p\in B_{\rm an}^{\circ}$, the integral map $D$
+recovered by Theorem~\ref{thm:integral-reconstruction} is the
+vanishing-cycle map in the attachment sequence, and
+\begin{equation}\label{eq:attachment-hodge-identity}
+ \im\mathsf r=\ker(D\otimes\RR),\qquad
+ \ker D=\ZZ v_f\oplus\ZZ v_g,\qquad
+ E_H(p)(x)=\sum_i\kappa_i(p)|(\mathsf r x)_i|^2.
+\end{equation}
+With mass $M_H$ in \eqref{eq:hodge-model}, this energy controls
+the complete positive weak two-form spectrum and its observed
+forms as in Theorem~\ref{thm:hodge-input}, for the actual
+Ricci-flat metric on this $X_p$.
+
+\item On the same $X_p$, the rank-four bundles in
+Theorem~\ref{thm:bundle-input} have $c_2H=32$ and the stated
+semistable and polystable types. For every sufficiently small
+$z\in\mu_{2,p}^{-1}(0)$ put $w=\chi_p(z)$ and fix its actual
+HE metric $h_0$. The invariant graph of
+Theorem~\ref{thm:flow-input} defines
+\[
+ I(S)=h_0e^{Z(S)},\qquad Z(S)=S+\psi(S).
+\]
+On its actual HYM region, its finite field is the negative
+gradient of twice the Donaldson functional restricted to $I$,
+for the pullback of the invariant $L^2$ metric. At the HE origin,
+in logarithmic metric coordinates,
+\begin{equation}\label{eq:exact-spectral-flow}
+ \begin{split}
+ J_0&=I_{\mathfrak h}+D\psi(0)
+                  =(\Pi|_{S_{B,p,w}})^{-1},\\
+ J_0Df(0)&=-\mathcal L_{p,w}J_0,\\
+ g_{{\rm fin},0}(S,T)
+      &=M_B(S,T)+\langle D\psi(0)S,D\psi(0)T\rangle_2 .
+ \end{split}
+\end{equation}
+Here $S_{B,p,w}$ is the entire seven-dimensional low section
+space, including its kernel. If $H_{\rm fin}$ is this finite
+Hessian, then
+\begin{equation}\label{eq:integrated-flow-hessian}
+ |g_{{\rm fin},0}-M_B|\le C|z|^4M_B,\qquad
+ (1-C|z|)E_B\le H_{\rm fin}\le(1+C|z|)E_B.
+\end{equation}
+In particular its kernel is exactly $\ker E_B$, and
+\[
+ |(H_{\rm fin}-E_B)(S,T)|
+       \le C|z|\sqrt{E_B(S)E_B(T)}.
+\]
+The complete low spectrum in Theorem~\ref{thm:bundle-input}
+and the all-time actual-flow comparison in
+Theorem~\ref{thm:flow-input} consequently use these same
+finite metric coordinates.
+
+\item The weak bundle energy is the norm of the action map:
+\begin{equation}\label{eq:action-energy-identity}
+ E_B(p,z)(S)=G_{0,p}(\rho_z(\mathrm iS),\rho_z(\mathrm iS)).
+\end{equation}
+For genuine tangents $q$ to a zero-level orbit-type stratum,
+the actual harmonic connection metric is relatively
+$1+O(|z|)$ equivalent to
+\begin{equation}\label{eq:integrated-quotient}
+ \inf_{\xi\in\mathrm i\mathfrak h}
+       G_{0,p}(q-\rho_z\xi,q-\rho_z\xi).
+\end{equation}
+Thus $\ker\rho_z$ describes the constant infinitesimal
+stabilizer, whereas $\im\rho_z$ describes the vertical
+deformation tangents. The genuine class map, confined
+distances, completion and tangent cone are those of
+Theorem~\ref{thm:moduli-input}.
+
+\item The integral observation and recovery procedure applies
+to each of these fibres and is unchanged by unitary bundle
+gauge transformations or by HYM metric evolution with $p,w$
+fixed. Its coordinate transformations are
+\eqref{eq:target-covariance} and the signed source changes
+in Section~\ref{sec:integral-recovery}. This assertion uses
+the independently represented cycles and period enclosures;
+they are not supplied by the finite HYM trajectory.
+\end{enumerate}
+
+The comparisons are uniform over arbitrary node-capacity
+ratios, arbitrary positive bundle-rate ratios and independent
+base and bundle limits in the stated domain. Observation
+paths may lie in the larger $B_{\rm ev}^{\circ}$. The analytic
+radius need not be computable, and no uniformity over varying
+central coefficients is asserted.
+\end{theorem}
+
+The Hodge, bundle, flow and harmonic metric estimates are
+imported in their full stated forms from \cite{W_Hodge,W_HYM},
+with their hypotheses checked in
+Proposition~\ref{prop:analytic-reapplication}. The proof below
+establishes their compatibility with the integral construction.
+It also records the spectral--flow and action-map
+identifications explicitly; the corresponding analytic
+arguments are in \cite[Sections~10--12]{W_HYM}.
+
+\subsection{The actual attachment sequence}
+
+The integral Thom sequence \eqref{eq:integral-attachment}
+identifies the restriction of a divisor class to the $i$th
+link with its degree on the $i$th exceptional curve.
+The next map sends that link generator to the Thom class
+Poincar\'e dual to the oriented vanishing sphere. After the
+duality and excision identifications, it is exactly
+$e_i\mapsto\delta_i$. Its matrix in the geometric marking
+constructed here is $D$, because
+Theorem~\ref{thm:integral-reconstruction} recovers the
+coordinates of these spheres from their actual period jumps.
+
+The image of the integral restriction map is
+$\ZZ v_f\oplus\ZZ v_g$, as computed in
+Section~\ref{sec:algebraic-family}. Exactness gives
+the kernel assertion in \eqref{eq:attachment-hodge-identity}.
+Over $\RR$, the kernel of restriction is the full surviving
+two-dimensional space $K_H$. Its quotient therefore gives
+\eqref{eq:lost-restriction} and $\im\mathsf r=\ker(D\otimes\RR)$.
+The normalized link generator has capacity $\kappa_i$.
+The sum of its squared restrictions weighted by these
+capacities is precisely $E_H$. Minimizing the central mass
+over all representatives modulo $K_H$ gives $M_H$.
+The actual-metric comparison then follows from
+Theorem~\ref{thm:hodge-input}, including its complete
+kernel and complementary gap.
+
+In particular, the two lost degree-two directions and the
+six-dimensional vanishing-cycle span are distinct terms
+of this exact sequence. The recovered placement of that
+span in $\ZZ^{134}$, its saturation and its individual
+columns add information beyond the known kernel of $D$.
+No small-spectrum measurement has been used to perform
+this integer recovery.
+
+\subsection{The graph tangent and the finite Hessian}
+
+For the space of determinant-normalized Hermitian metrics
+on the fixed holomorphic bundle, let
+\[
+ \mathcal G_h(a,b)=\int_{X_p}
+       \tr(h^{-1}a\,h^{-1}b)\,\dd V_{g_p}.
+\]
+The HYM field $h^{-1}\dot h=-2\mathrm i\Lambda F_h$ is
+the negative gradient of $\mathcal F=2\mathcal D$, where
+$\mathcal D$ is Donaldson's functional with first variation
+$\dd\mathcal D_h(a)=\int\tr(\mathrm i\Lambda F_h\,h^{-1}a)\dd V$.
+On the inner region of the invariant graph,
+$dI\,f=-\operatorname{grad}_{\mathcal G}\mathcal F\circ I$.
+For every finite tangent $a$ this implies
+\[
+ (I^*\mathcal G)(f,a)
+   =\mathcal G(dI\,f,dI\,a)
+   =-\dd\mathcal F(dI\,a)
+   =-\dd(\mathcal F\circ I)(a).
+\]
+This proves the finite gradient assertion on its actual
+domain; no such assertion is needed for the auxiliary
+cutoff field outside that domain.
+
+The graph construction gives $\Pi D\psi=0$ and
+$D\psi=O(|w|^2)$ in $X$. Its linearized invariance equation
+at the critical origin gives
+$J_0Df(0)=-\mathcal L_{p,w}J_0$.
+The image of $J_0$ is in the elliptic operator domain and
+is invariant under the self-adjoint $\mathcal L_{p,w}$.
+The bound $Df(0)=O(|w|^2)$ puts its seven eigenvalues
+below the fixed complementary gap. It is therefore
+the whole low space. Since $\Pi J_0=I_{\mathfrak h}$,
+$J_0$ is exactly the inverse restricted observer in
+\eqref{eq:exact-spectral-flow}.
+
+At a critical point the second derivative of $I$ is
+paired with $\dd\mathcal F=0$ in the Hessian chain rule.
+Consequently the exact observed forms are
+\begin{equation}\label{eq:observed-graph-forms}
+ N(S,T)=\langle J_0S,J_0T\rangle_2,\qquad
+ H_{\rm fin}(S,T)=
+              \langle\mathcal L_{p,w}J_0S,J_0T\rangle_2.
+\end{equation}
+Orthogonality of $\mathfrak h$ and $QX$ proves the mass
+identity and its relative $O(|w|^4)$ bound.
+
+For completeness, the passage from ordered eigenvalues
+to the entire Hessian retains all weak directions.
+The primitive section estimate of
+\cite[Section~6]{W_HYM} is, with $r=|w|$,
+\begin{equation}\label{eq:primitive-bundle-form}
+ (1-Cr)\{E_B(p,w)(S)+q_{p,0}(v)\}
+ \le q_{p,w}(S+v)
+ \le(1+Cr)\{E_B(p,w)(S)+q_{p,0}(v)\},
+\end{equation}
+for every $v\perp\mathfrak h$ in $H^1$, where
+$q_{p,w}(u)=\|D_{p,w}u\|_2^2$ and
+$q_{p,0}(v)\ge c\|v\|_2^2$. The energy notation
+$E_B(p,w)$ means the formula in \eqref{eq:bundle-model}
+with arrows $w_A,w_B$.
+Taking $S+v=J_0S$ gives
+$H_{\rm fin}\ge(1-Cr)E_B(p,w)$.
+The kernels agree: both correspond to the constant
+Hermitian stabilizer, and $J_0$ fixes those constant
+kernel directions.
+
+Pass to the quotient by this kernel and denote the
+induced energies by $\bar H,\bar E$ and the quotient
+masses by $\bar N,\bar M$. A quotient mass is the
+infimum over representatives. It preserves the comparison
+$N=(1+O(r^4))M_B$.
+The positive generalized eigenvalues of $(H_{\rm fin},N)$
+are the positive low eigenvalues of $\mathcal L_{p,w}$.
+Their relative comparison in the $w$ coordinates,
+proved from \eqref{eq:primitive-bundle-form}, gives
+\[
+ \frac{\det\bar H}{\det\bar E}
+  =\frac{\prod_{\lambda_j>0}\lambda_j}
+          {\prod_{\nu_j>0}\nu_j}
+       \frac{\det\bar N}{\det\bar M}
+  =1+O(r).
+\]
+Every eigenvalue of $\bar E^{-1/2}\bar H\bar E^{-1/2}$
+is at least $1-Cr$, their product is $1+O(r)$,
+and their number is at most seven. Each is therefore
+at most $1+Cr$. For a zero-dimensional quotient the
+claim is immediate. This gives the whole relative
+Hessian bound without a lower bound on a positive
+weak rate.
+
+Finally real $K_B$-equivariance implies
+\[
+ \rho_w(\mathrm iS)=d\chi_p(z)\rho_z(\mathrm iS).
+\]
+The derivative is $I+O(|z|)$ in the uniformly positive
+norm $G_{0,p}$. Taking its squared norm proves
+$E_B(p,w)=(1+O(|z|))E_B(p,z)$ as quadratic forms,
+with the same kernel. This proves
+\eqref{eq:integrated-flow-hessian}. On the quotient by that
+kernel the normalized symmetric error has operator
+norm at most $C|z|$; Cauchy--Schwarz proves the stated
+bilinear estimate.
+
+The phase relation is consistent with this identification.
+After the basin shrink in Theorem~\ref{thm:flow-input},
+both the solution shifted by $t$ and its tracking graph
+trajectory remain in the phase domain. The exponential
+tracking phase is unique: two finite trajectories tracking
+at rate $c$ have initial separation bounded by their
+separation at time $T$ times $e^{L_fT}$, which tends to
+zero since $L_f<c$. Thus
+$\Gamma(u(t))=\phi_t\Gamma(u(0))$.
+On graph data $\Gamma(Z(S))=S$.
+This identifies the actual evolution and its full-data
+phase; it does not replace that phase by the initial
+projection $\Pi u_0$.
+
+\subsection{The shared action and the harmonic metric}
+
+Equation~\eqref{eq:action-energy-identity} follows directly
+from \eqref{eq:bundle-model} and
+\eqref{eq:fundamental-action}. Its metric meaning requires
+minimizing over all spatial gauge directions.
+For the actual connection map $\mathcal A_p(w)$, the
+estimate proved in \cite[Section~12]{W_HYM} is
+\begin{equation}\label{eq:spatial-gauge-comparison}
+ \begin{split}
+ (1-C|w|)\{G_{0,p}(q,q)+\|D_0v\|_2^2\}
+ &\le\|d\mathcal A_p(w)q-D_{\mathcal A_p(w)}v\|_2^2\\
+ &\le(1+C|w|)\{G_{0,p}(q,q)+\|D_0v\|_2^2\},
+ \end{split}
+\end{equation}
+for every $q\in\mathcal W$ and complementary trace-free
+skew-Hermitian $v\in QH^1$.
+Its proof uses harmonic orthogonality of the linear
+connection increment to $D_0v$, the connection remainder
+of order $O(|w|)$ relative to these two terms, and the
+uniform complementary section gap.
+
+Infimizing first in $v$ preserves the lower bound by
+$G_{0,p}$; taking $v=0$ proves the upper bound.
+Every remaining gauge direction is a constant
+$\xi\in\mathrm i\mathfrak h$. Exact equivariance gives
+$d\mathcal A_p(w)(\rho_w\xi)=-D_{\mathcal A_p(w)}\xi$.
+Hence, after reversing the sign of $\xi$, apply the
+same inequality to every residual $q-\rho_w\xi$ and
+then take its infimum. The finite image of $\rho_w$
+is closed at each fixed parameter. No bound for the
+norm of a minimizing $\xi$, and no inverse of a small
+positive orbit singular value, is required.
+
+The identity $d\chi_p(z)\rho_z\xi=\rho_w\xi$ transfers
+this comparison to $z$ inside each residual, before
+minimization. For a tangent to an actual HE orbit-type
+stratum, the full minimum is the Coulomb representative.
+The linearized integrability and mean-curvature equations,
+together with the K\"ahler identities, make its $(0,1)$
+part Dolbeault harmonic. Its real connection norm is twice
+the Dolbeault harmonic norm. This is exactly the convention
+used in \eqref{eq:arrow-mass} and
+Theorem~\ref{thm:moduli-input}.
+The actual class and stabilizer assertions in that theorem
+then give the genuine quotient interpretation.
+This proves \eqref{eq:integrated-quotient} through every
+stabilizer type.
+
+In particular the flow graph metric acts on metrics
+of one fixed holomorphic bundle, while the harmonic
+metric acts on deformation tangents modulo $\im\rho_z$.
+Their relationship is the common action map and its
+stabilizer, rather than equality of the two metrics.
+
+\subsection{Compatibility of the integral observations}
+
+At a fixed $p$, the equations of $X_p$, the residue form
+$\Psi_p$, the marked cycles and their transports are
+unaffected by changing the metric or gauge of a bundle
+on $X_p$. The exact observations
+$\Delta_{ai}=p_i(Jd_i)_a$ are therefore unchanged.
+The strict separation lemma recovers their unique
+integer values from any sufficiently refined valid
+enclosures. Running the procedure before or after
+bundle metric evolution or gauge change gives the
+same marked $D$.
+
+A change of middle-homology marking acts differently:
+if $\gamma'=\gamma S$, then
+$J'=S^TJS$, $\Delta_i'=S^T\Delta_i$ and
+$d_i'=S^{-1}d_i$. Error bounds transform by the actual
+norm of $S^T$, or are recomputed from the new chains.
+Signed node changes transform the source relations
+as well as the columns. These are the covariance
+statements already proved in
+Section~\ref{sec:integral-recovery}.
+
+The same node labels enter $\mathsf r$, the periods
+$p_i$, and the smoothing functions $\tau_i=p_i/U_i$.
+Thus \eqref{eq:capacity-digits} relates the required
+absolute period precision to the actual capacity
+weights. It does not identify period error with the
+relative spectral error $e(p)$. Proposition
+\ref{prop:analytic-reapplication} ensures that both
+constructions concern these same target fibres even
+when observation paths leave $B_{\rm an}$.
+This proves the remaining assertion of
+Theorem~\ref{thm:integrated}.
+
+\subsection{Independent base and bundle scales}
+
+\begin{corollary}\label{cor:independent-scales}
+Let $F(h),G(h)\to+\infty$ and set
+\[
+ p(h)=(a,a,a,-3a;\ b,b,b,-3b),\qquad
+ a=e^{-F(h)},\quad b=e^{-G(h)}.
+\]
+For all sufficiently small $h$ these are actual smooth
+fibres of the selected family, with
+$w_f\sim8\pi/F$ and $w_g\sim8\pi/G$.
+If $F/G\to0$, their larger and smaller positive weak
+Hodge rates satisfy respectively
+\[
+ \lambda_+\sim\frac{9\pi}{8F},\qquad
+ \lambda_-\sim\frac{10\pi}{9G}.
+\]
+Independently, for any $q>1$ and $s\downarrow0$, take
+\[
+ \sqrt{c_+(p)}\,A=\sqrt{c_-(p)}\,B
+                              =\diag(s,s+s^q).
+\]
+Their actual HE images have one trace-free zero mode,
+two positive rates
+$(2/V_H)s^{2q}(1+O(s))$, and four rates asymptotic to
+$(8/V_H)s^2$. The actual HYM comparison holds through
+times of order $s^{-2q}$ and all later times.
+The harmonic quotient and integral reconstruction
+conclusions apply on these same fibres.
+\end{corollary}
+
+\begin{proof}
+The two sum-zero relations hold identically and no
+coordinate vanishes. The evaluated full period ball
+contains all sufficiently small points of this path.
+The residue units are bounded above and below, so
+the logarithms in each group differ from $F$ or $G$
+by bounded quantities. This proves the capacity
+asymptotics. Formula~\eqref{eq:hodge-roots}, or its
+trace and determinant, gives the two displayed
+Hodge rates when $F/G\to0$; relative actual-metric
+comparison preserves them.
+
+The weighted arrows are equal diagonal matrices,
+so their quadratic moment map vanishes exactly.
+For positive diagonal entries $u_1,u_2$, the seven
+finite section rates are
+\[
+ 0,\quad \frac{8u_1^2}{V_H},\quad\frac{8u_2^2}{V_H},
+ \quad\frac{2(u_1-u_2)^2}{V_H}\ \text{(twice)},\quad
+ \frac{2(u_1+u_2)^2}{V_H}\ \text{(twice)}.
+\]
+This follows by separating diagonal Hermitian entries
+and the real and imaginary parts of each off-diagonal
+entry in \eqref{eq:bundle-model}; the weighted arrow
+masses cancel. Substitution gives the asserted
+hierarchy, and Theorem~\ref{thm:bundle-input} gives
+the relative $O(s)$ actual comparison.
+The domains of Theorems~\ref{thm:flow-input} and
+\ref{thm:integrated} impose no relation between
+$h$ and $s$, proving the remaining assertions.
+\end{proof}
+
+Finite-order holomorphic arcs have a single logarithmic
+order, with coefficients depending on their vanishing
+orders. The paths in the corollary may have genuinely
+separated logarithmic scales and need not be holomorphic
+at the origin. When the ratio of the group scales has
+no limit, the pointwise comparisons remain valid;
+limiting hierarchies require subsequences or parameter
+sectors. The restriction and action maps above do not
+by themselves construct a filtered elliptic complex.
+
+The integrated theorem is on smooth base fibres,
+polystable bundle parameters and the stated spatial
+metric basin. Singular graded concentration requires
+additional local data and is a separate problem.
+The theorem supplies neither singular-fibre HYM
+evolution nor a completion of a larger moduli space.
+Its finite evolution is the exact corrected field,
+and its all-time error is absolute; a relative
+nonlinear decay expansion requires further estimates.

@@ -1,0 +1,241 @@
+\section{Relative reduction through a specified observation}
+\label{sec:relative}
+
+We first give the spectral argument used to pass from geometric estimates
+to the complete low space. Its hypotheses concern trial functions,
+observed energies and low-energy mass. They do not assume the desired
+eigenvalue asymptotics or an identification of the low eigenspace.
+
+\subsection{Forms and geometric estimates}
+
+Let $p$ range over a parameter space with a specified limit. Auxiliary
+parameters may vary without converging, provided the following estimates
+are uniform. For each $p$, let $\cH_p$ be a real Hilbert space and
+$q_p$ a densely defined nonnegative closed quadratic form with compactly
+embedded form domain. Let $L_p$ be its associated self-adjoint operator,
+and order its eigenvalues, including zeros, as
+$\lambda_0(p)\le\lambda_1(p)\le\cdots$.
+
+Independently of this spectrum, suppose that geometry supplies a real
+space $V_p$ of dimension $1\le n_p\le N$, a positive definite mass $M_p$,
+and a nonnegative energy $E_p$. We use the same letters for their
+polarizations. Write
+\begin{equation}\label{eq:model-largest}
+ \sigma_p=\sup_{x\ne0}\frac{E_p(x)}{M_p(x)}\longrightarrow0,\qquad
+ \mu_0(p)\le\cdots\le\mu_{n_p-1}(p)=\sigma_p
+\end{equation}
+for the largest and all the generalized eigenvalues of $(E_p,M_p)$.
+There are three assumptions.
+
+\smallskip\noindent
+\emph{Linear trials.}
+There is a linear map $T_p:V_p\to\Dom q_p$ such that
+\begin{equation}\label{eq:trial-assumption}
+ \|T_px\|^2\ge(1-a_p)M_p(x),\qquad
+ q_p(T_px)\le(1+a_p)E_p(x),\qquad a_p\to0.
+\end{equation}
+Thus $T_p$ is injective for sufficiently small parameters. A trial
+construction depending on a fixed auxiliary cutoff is enough if, for
+each error tolerance, one proves a uniform parameter threshold and one
+linear trial map on that domain. A diagonal choice of cutoffs gives
+\eqref{eq:trial-assumption}; smooth dependence of that choice is not
+needed.
+
+\smallskip\noindent
+\emph{Weighted observation.}
+A specified linear map $\cA_p:\Dom q_p\to V_p$ satisfies
+\begin{equation}\label{eq:observation-assumption}
+ E_p(\cA_pu)\le(1+b_p)q_p(u),\qquad b_p\to0.
+\end{equation}
+The error multiplies the entire energy. An additive $o(\sigma_p)$
+bound is insufficient.
+
+\smallskip\noindent
+\emph{Low-energy mass capture.}
+If $S$ is spanned by at most $n_p+1$ orthonormal eigenvectors with
+eigenvalue at most $s$, then
+\begin{equation}\label{eq:capture-assumption}
+ \bigl|M_p(\cA_pu)-\|u\|^2\bigr|
+       \le\omega(p,s)\|u\|^2\quad(u\in S),\qquad
+ \lim_{s\downarrow0}\limsup_{p\to0}\omega(p,s)=0.
+\end{equation}
+We take $\omega$ nonnegative and nondecreasing in $s$. A bound for
+every form-domain vector of Rayleigh quotient at most $s$ is stronger
+than required. In the geometric applications, this estimate includes
+the analysis that excludes additional concentration modes.
+
+No positive lower bound is imposed on the nonzero ratios
+$\mu_j/\sigma_p$. The kernels of $E_p$ and $L_p$ may change dimension.
+The three assumptions must hold uniformly through the asserted changes.
+
+\begin{theorem}\label{thm:relative-reduction}
+Under \eqref{eq:model-largest}--\eqref{eq:capture-assumption}, there
+are a fixed $\gamma>0$ and $e_p\to0$ such that the spectral subspace
+$S_p$ of $L_p$ below $\gamma$ has dimension $n_p$, and
+\begin{equation}\label{eq:abstract-rates}
+ (1-e_p)\mu_j(p)\le\lambda_j(p)\le(1+e_p)\mu_j(p)
+       \quad(0\le j<n_p),\qquad
+ \lambda_{n_p}(p)\ge\gamma.
+\end{equation}
+The map $\cA_p:S_p\to V_p$ is an isomorphism and maps
+$\ker L_p$ onto $\ker E_p$. Define
+\begin{equation}\label{eq:abstract-observed-forms}
+ N_p(x,y)=\langle\cA_p^{-1}x,\cA_p^{-1}y\rangle_{\cH_p},\qquad
+ Q_p(x,y)=q_p(\cA_p^{-1}x,\cA_p^{-1}y).
+\end{equation}
+Then, as forms on the entire $V_p$,
+\begin{equation}\label{eq:abstract-relative-forms}
+ (1-e_p)M_p\le N_p\le(1+e_p)M_p,\qquad
+ (1-e_p)E_p\le Q_p\le(1+e_p)E_p.
+\end{equation}
+The error is controlled by the dimension bound and the three hypothesis
+errors. It contains no condition number of the positive part of $E_p$.
+\end{theorem}
+
+\begin{proof}
+Put $c_p=(1+a_p)/(1-a_p)$. Applying min--max to the linear trial
+map gives
+\begin{equation}\label{eq:abstract-upper}
+ \lambda_j\le c_p\mu_j\quad(j<n_p),\qquad
+ \lambda_{n_p-1}\le c_p\sigma_p.
+\end{equation}
+If there were no uniform complementary gap, a sequence tending to the
+limit would have $\lambda_{n_p}\to0$. Choose $s>0$ small enough that
+$\limsup_{p\to0}\omega(p,s)<1/2$. Eventually the first $n_p+1$
+eigenvectors have eigenvalue below $s$ and $\omega(p,s)<3/4$.
+Equation~\eqref{eq:capture-assumption} would make $\cA_p$ injective
+on their span, contradicting $\dim V_p=n_p$. This proves the gap.
+Together with \eqref{eq:abstract-upper}, it identifies precisely
+$n_p$ low eigenvalues.
+
+Let $d_p=\omega(p,c_p\sigma_p)$. For each fixed $s>0$, eventually
+$c_p\sigma_p\le s$, and hence
+$\limsup_{p\to0}d_p\le\limsup_{p\to0}\omega(p,s)$. Letting $s\downarrow0$
+shows $d_p\to0$, also when $\sigma_p=0$. The mass-capture estimate
+makes $\cA_p$ injective on $S_p$, hence an isomorphism, and gives
+\begin{equation}\label{eq:observed-mass-bounds}
+ (1+d_p)^{-1}M_p\le N_p\le(1-d_p)^{-1}M_p.
+\end{equation}
+
+The trial map sends $\ker E_p$ injectively into $\ker L_p$. Conversely,
+the observation inequality sends $\ker L_p$ to $\ker E_p$, and
+mass capture is injective on this actual kernel. The two nullities
+are therefore equal and $\cA_p$ identifies the kernels exactly.
+
+For $j<n_p$, the image under $\cA_p$ of the first $j+1$ eigenvectors
+has dimension $j+1$. Finite-dimensional min--max gives a nonzero
+vector $u$ in that span such that
+$E_p(\cA_pu)\ge\mu_jM_p(\cA_pu)$. Thus
+\[
+ (1+b_p)\lambda_j\|u\|^2
+       \ge E_p(\cA_pu)
+       \ge\mu_j(1-d_p)\|u\|^2,
+\]
+and consequently
+\begin{equation}\label{eq:abstract-lower}
+ \lambda_j\ge\frac{1-d_p}{1+b_p}\mu_j.
+\end{equation}
+This proves the relative eigenvalue comparison. The mass statement
+already follows from \eqref{eq:observed-mass-bounds}.
+
+For the stronger energy statement,
+\eqref{eq:observation-assumption} gives
+$E_p\le(1+b_p)Q_p$. Their kernels agree by the preceding argument;
+denote this common kernel by $K_p$. Both energies descend to positive
+forms on $V_p/K_p$. On this quotient define the masses
+\begin{equation}\label{eq:quotient-masses}
+ \overline M_p([x])=\inf_{k\in K_p}M_p(x+k),\qquad
+ \overline N_p([x])=\inf_{k\in K_p}N_p(x+k).
+\end{equation}
+Taking infima preserves \eqref{eq:observed-mass-bounds}. The positive
+generalized eigenvalues of the original pairs are exactly the
+generalized eigenvalues of their quotient pairs: in each class the
+mass minimizer is perpendicular to $K_p$ for the corresponding mass,
+and the energy is constant on that class.
+
+Put $k_p=\dim(V_p/K_p)\le N$. If $k_p=0$, both energies vanish and
+there is nothing to prove. Otherwise their quotient determinants in
+any common basis satisfy
+\begin{equation}\label{eq:quotient-determinant}
+ \frac{\det\overline Q_p}{\det\overline E_p}
+   =\prod_{\lambda_j>0}\frac{\lambda_j}{\mu_j}
+           \frac{\det\overline N_p}{\det\overline M_p}.
+\end{equation}
+In fixed Euclidean coordinates on the quotient, consider
+$B_p=\overline E_p^{-1/2}\overline Q_p\overline E_p^{-1/2}$.
+Every eigenvalue of $B_p$ is at least $(1+b_p)^{-1}$. The upper
+eigenvalue and mass bounds imply
+\[
+ \det B_p\le c_p^{k_p}(1-d_p)^{-k_p}.
+\]
+Dividing this product by the lower bounds for the other $k_p-1$
+eigenvalues gives
+\begin{equation}\label{eq:determinant-upgrade}
+ \lambda_{\max}(B_p)
+       \le c_p^{k_p}(1-d_p)^{-k_p}(1+b_p)^{k_p-1}.
+\end{equation}
+Both bounds tend to one uniformly for $k_p\le N$, independently of
+the smallest positive energy. Hence the quotient energies are
+relatively equivalent. Their identical kernels lift this equivalence
+to all of $V_p$, proving \eqref{eq:abstract-relative-forms}.
+\end{proof}
+
+\begin{corollary}\label{cor:observed-matrices}
+Let $u_0,\ldots,u_{n_p-1}$ be an orthonormal eigenbasis of $S_p$,
+let $C_p$ have columns $\cA_pu_j$, and put
+$\Lambda_p=\operatorname{diag}(\lambda_0,\ldots,\lambda_{n_p-1})$.
+After enlarging $e_p$ by a fixed factor,
+\begin{equation}\label{eq:general-observed-matrices}
+ \bigl|M_p(C_pz)-|z|^2\bigr|\le e_p|z|^2,\qquad
+ \bigl|E_p(C_pz)-z^T\Lambda_pz\bigr|
+                            \le e_p z^T\Lambda_pz.
+\end{equation}
+Each positive-mode cross-error in the energy matrix is bounded by
+$e_p\sqrt{\lambda_i\lambda_j}$; every kernel row and column is
+exactly zero.
+\end{corollary}
+\begin{proof}
+The definitions give $C_p^TN_pC_p=I$ and $C_p^TQ_pC_p=\Lambda_p$.
+Conjugate \eqref{eq:abstract-relative-forms} by $C_p$. On the positive
+block, conjugation also by $\Lambda_p^{-1/2}$ bounds the normalized
+operator norm and hence every entry. Equality of kernels gives the
+remaining rows and columns.
+\end{proof}
+
+\subsection{Why the observation matters}
+
+The conclusion is a comparison in the prescribed geometric coordinates.
+A near-identity change to a different orthonormal basis need not preserve
+relative error at the weakest scale. For example, let
+$E_\varepsilon=\operatorname{diag}(\varepsilon^2,\varepsilon)$ and
+let $R_\theta$ be a Euclidean rotation with $\theta\to0$. Then
+\[
+ \|R_\theta^TE_\varepsilon R_\theta-E_\varepsilon\|
+       =o(\varepsilon),
+\]
+whereas the ratio of the first diagonal entries is
+$\cos^2\theta+\varepsilon^{-1}\sin^2\theta$. For
+$\theta=\varepsilon^{1/4}$ this ratio diverges. Rotating a zero
+eigendirection similarly changes the kernel in fixed coordinates.
+An additive estimate at the largest small eigenvalue scale therefore does not
+give \eqref{eq:abstract-relative-forms}.
+
+This does not prevent a change of coordinates in the same geometric
+construction. For an invertible $S_p^f:V'_p\to V_p$, take
+\[
+ M'_p=(S_p^f)^*M_p,\quad E'_p=(S_p^f)^*E_p,\quad
+ T'_p=T_pS_p^f,\quad \cA'_p=(S_p^f)^{-1}\cA_p.
+\]
+All hypotheses and conclusions transform by exact congruence. There is
+no Euclidean condition-number assumption on $S_p^f$, since all the
+forms and maps are transported together.
+
+In the applications, an energy may be written $E=d^*Wd$, where the
+adjoint uses a declared reference inner product and $W$ is positive on
+the target. Its mass-normalized matrix is
+$M^{-1/2}d^*WdM^{-1/2}$. This elementary factorization does not
+construct an entire elliptic complex or determine the spectrum in
+another degree. Nor does Theorem~\ref{thm:relative-reduction} identify
+$Q_p(x)$ with the minimum of $q_p$ over all sections satisfying
+$\cA_pu=x$. It is the energy on the actual low spectral subspace.
+No exact identity $\cA_pT_p=I$ is assumed.

@@ -1,0 +1,586 @@
+\section{Exact balancing and holomorphic polystability}
+\label{sec:balancing}
+
+The finite residual is the moment map of an actual symplectic
+form on the matrix parameter space. We first normalize this form
+by an equivariant change of real coordinates. A separate
+correction within complex orbits then identifies the holomorphic
+polystable locus.
+
+\subsection{The actual Hamiltonian structure}
+
+On the affine space of unitary connections on $(E^{\rm sp},h_0)$,
+with anti-Hermitian endomorphism-valued one-form tangents, put
+\begin{equation}\label{eq:connection-symplectic}
+ \Omega_{\rm conn}(a,b)
+       =-\int_{X_p}\tr(a\wedge b)\wedge\frac{\omega_p^2}{2}.
+\end{equation}
+This is a constant closed real form. For the gauge action
+$D\mapsto kDk^{-1}$ the infinitesimal vector is
+$Y_\xi=-D\xi$. In the convention $\dd H_\xi=\iota_{Y_\xi}\Omega$,
+its Hamiltonian is
+\[
+ H_\xi(\mathcal A)
+       =-\int_{X_p}\tr(\xi F_{\mathcal A})\wedge\frac{\omega_p^2}{2}.
+\]
+Indeed differentiation in direction $a$ and integration by
+parts give
+$\dd H_\xi(a)=\int\tr(D\xi\wedge a)\omega_p^2/2
+=\Omega_{\rm conn}(Y_\xi,a)$.
+This is the usual connection moment map
+\cite[Section 1.1 and Lemma 1.5]{ACG}, on the affine space
+of all unitary connections.
+
+Pull back by the actual map $w\mapsto\mathcal A_p(w)$.
+The resulting closed $K$-invariant form $\Omega_p$ has,
+for $S\in\mathfrak h$, Hamiltonian
+\begin{equation}\label{eq:actual-paired-hamiltonian}
+       H_{\mathrm iS,p}(w)=-V\tr(S\Psi_p(w)).
+\end{equation}
+At zero the linear connection map is
+$\eta_p(v)-\eta_p(v)^*$, so the type calculation in a
+unitary coframe gives
+\begin{equation}\label{eq:flat-pullback-form}
+ \Omega_{0,p}(v,v'):=\Omega_p(0)(v,v')
+ =2\operatorname{Im}\{c_+\tr(v_A^*v_A')+c_-\tr(v_B^*v_B')\}.
+\end{equation}
+The sign agrees with the convention that the circle action
+on $(\CC,2\dd x\wedge\dd y)$ has Hamiltonian $-|z|^2$.
+The constant form \eqref{eq:flat-pullback-form} is uniformly
+nondegenerate. The connection derivative estimates prove
+$\|\Omega_p(w)-\Omega_{0,p}\|\le C|w|$, with uniform
+higher matrix derivatives. Thus $\Omega_p$ is symplectic
+on one common small ball. The quadratic Hamiltonian of
+the same action for $\Omega_{0,p}$ is
+$-V\tr(S\mu_{2,p}(z))$, by direct differentiation of
+\eqref{eq:quadratic-moment}.
+
+\begin{proposition}\label{prop:exact-balancing-coordinates}
+There is a smooth $K$-equivariant diffeomorphism $\chi_p$
+on a common neighbourhood of zero, whose image contains
+a common neighbourhood, such that
+\begin{equation}\label{eq:exact-balancing}
+ \Psi_p(\chi_p(z))=\mu_{2,p}(z),\qquad
+ \chi_p(z)=z+O(|z|^2),\quad d\chi_p(z)=I+O(|z|).
+\end{equation}
+Its fixed-order higher matrix derivatives are uniformly
+bounded on smaller common balls. For every
+$z\in\mu_{2,p}^{-1}(0)$ there is an actual HE connection
+$\mathcal A_p(\chi_p(z))$, and its complete small spectrum
+is given by \eqref{eq:finite-bundle-energy} and $M$ with
+relative error $O(|z|)$, including its changing kernel.
+\end{proposition}
+
+\begin{proof}
+Set $\sigma_p=\Omega_p-\Omega_{0,p}$. The radial homotopy
+one-form
+\[
+ \alpha_p(z)(v)=\int_0^1 t\,\sigma_p(tz)(z,v)\,\dd t
+\]
+is $K$-invariant, satisfies $\dd\alpha_p=\sigma_p$, and
+has size $O(|z|^2)$ and derivative $O(|z|)$.
+For $0\le t\le1$ the forms
+$\Omega_{p,t}=\Omega_{0,p}+t\sigma_p$ are uniformly
+nondegenerate on a common small ball. Define
+$\iota_{Z_{p,t}}\Omega_{p,t}=-\alpha_p$.
+Then $Z_{p,t}=O(|z|^2)$, $dZ_{p,t}=O(|z|)$, and it
+is equivariant. Its flow $\phi_{p,t}$ exists to time one
+on a smaller common ball: the scalar bound
+$r'\le Cr^2$ keeps its trajectories inside the original
+ball. Differentiating the ODE gives
+$\phi_{p,1}=I+O(|z|^2)$ and $d\phi_{p,1}=I+O(|z|)$,
+with the stated higher bounds. The reverse flow shows
+that its image contains a common neighbourhood.
+Cartan's formula gives
+\[
+ \frac{\dd}{\dd t}\phi_{p,t}^*\Omega_{p,t}
+   =\phi_{p,t}^*(\sigma_p+\dd\iota_{Z_{p,t}}\Omega_{p,t})=0.
+\]
+Thus $\chi_p:=\phi_{p,1}$ pulls $\Omega_p$ back to
+$\Omega_{0,p}$.
+
+Equivariance identifies the differentials of
+$H_{\mathrm iS,p}\circ\chi_p$ and
+$-V\tr(S\mu_{2,p})$. Both vanish at zero, so the
+Hamiltonians agree exactly. The trace pairing on
+$\mathfrak h$ is nondegenerate, proving
+\eqref{eq:exact-balancing}. The diagonal central circle
+has identically zero Hamiltonian and leaves no scalar
+ambiguity. Therefore the actual finite zero set, on the
+image under consideration, is exactly
+$\chi_p(\mu_{2,p}^{-1}(0))$.
+
+For $w=\chi_p(z)$, differentiate equivariance along the
+compact action:
+\[
+       \mathrm i\delta_wS=d\chi_p(z)[\mathrm i\delta_zS].
+\]
+The derivative estimate and the positive bounded masses
+imply $(1-C|z|)E_{p,z}\le E_{p,w}\le(1+C|z|)E_{p,z}$,
+including exact equality of their kernels. Combine this
+with Theorem~\ref{thm:complete-bundle-spectrum}.
+The connection is the actual Chern connection of the
+constructed holomorphic bundle, and its determinant and
+nonzero Chern pairing are unchanged.
+\end{proof}
+
+The map $\chi_p$ is a real symplectic normalization.
+It is not asserted to be holomorphic or to preserve
+complex $G$-orbits. Its equivariance and injectivity do
+give $K_{\chi_p(z)}=K_z$ as compact stabilizer groups.
+
+\subsection{Balanced normal forms and stable factors}
+
+Introduce the normalized arrows
+\begin{equation}\label{eq:normalized-arrows}
+ q=T_pz=(X,Y)=(\sqrt{c_+(p)}A,\sqrt{c_-(p)}B).
+\end{equation}
+The linear map $T_p$ is equivariant and uniformly
+invertible, and the flat balanced equations are
+\begin{equation}\label{eq:balanced-equations}
+                    XX^*=Y^*Y,\qquad YY^*=X^*X.
+\end{equation}
+Singular-value decomposition makes $X=D$ diagonal
+nonnegative by the $K$ action. Then $Y^*Y=YY^*=D^2$,
+so $Y$ is normal and commutes with $D^2$. On a positive
+singular-value block $d$, $Y/d$ is unitary and can be
+diagonalized by the same unitary change at both vertices.
+On the zero block it vanishes. Thus every balanced point
+has a normal form
+\begin{equation}\label{eq:balanced-normal-form}
+ X=\diag(d_1,d_2),\qquad
+ Y=\diag(d_1e^{\mathrm i\theta_1},d_2e^{\mathrm i\theta_2}),
+                                      \qquad d_j\ge0.
+\end{equation}
+Let $m_\lambda$ count the entries with a given nonzero
+$\lambda=d_j^2e^{\mathrm i\theta_j}$ and let $m_0$ count
+the zero entries. The compact stabilizer is
+\begin{equation}\label{eq:balanced-stabilizer}
+ \prod_{\lambda\ne0}U(m_\lambda)\times U(m_0)\times U(m_0).
+\end{equation}
+Indeed the first stabilizer equation preserves $D^2$,
+and the second separates the phase eigenspaces on each
+positive block. The two zero vertex spaces transform
+independently.
+
+At the actual HE connection with coordinate $\chi_p(z)$,
+Theorem~\ref{thm:complete-bundle-spectrum} identifies the
+full Hermitian parallel algebra, after adding the scalar
+identity, with the stabilizer algebra in
+\eqref{eq:balanced-stabilizer}. Its complexification is
+\begin{equation}\label{eq:parallel-matrix-algebra}
+ \bigoplus_{\lambda\ne0}\operatorname{Mat}_{m_\lambda}(\CC)
+       \oplus\operatorname{Mat}_{m_0}(\CC)
+       \oplus\operatorname{Mat}_{m_0}(\CC).
+\end{equation}
+Every complex parallel section is the sum of Hermitian
+real and imaginary parts, so this is the entire parallel
+algebra. Its minimal orthogonal projections define actual
+parallel holomorphic subbundles. A minimal projection in
+a nonzero block has smooth bundle $L_p\oplus L_p^{-1}$
+and only scalar parallel endomorphisms. The HE decomposition
+theorem \cite[Theorem 5.8.3 and Proposition 5.7.6]{Kobayashi}
+makes it slope stable, with stability understood against
+coherent subsheaves. It has rank two, determinant $\OO$
+and $c_2H=16$. Here the determinant is holomorphically
+trivial because its integral first Chern class is zero
+and $H^1(X_p,\OO)=0$.
+
+Parallel matrix units identify the $m_\lambda$ copies.
+Factors belonging to different nonzero blocks are
+nonisomorphic within this bundle: a holomorphic
+homomorphism of same-slope HE factors is parallel by
+the section Bochner identity on their Hom bundle.
+The zero blocks give $L_p$ and $L_p^{-1}$, each repeated
+$m_0$ times; their holomorphic type is again fixed by
+injectivity of the first Chern-class map on the Picard
+group. Consequently the complete possibilities are
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Normalized cycle type & Zero modes & Positive small modes\\
+\midrule
+Two distinct nonzero cycles & 1 & 6\\
+One repeated nonzero cycle & 3 & 4\\
+One nonzero cycle and one zero entry & 2 & 5\\
+Both entries zero & 7 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+Zero modes here are trace-free Hermitian endomorphisms.
+Their number is $\sum_{\lambda\ne0}m_\lambda^2+2m_0^2-1$.
+All remaining eigenvalues have the complementary gap
+already proved. The table imposes no comparability
+condition on its positive small eigenvalues.
+
+\subsection{A correction within complex orbits}
+
+We give the finite correction from \cite[Section 2]{W_Wall}
+with the normalization and bounds needed here. For a finite
+quiver of total vertex dimension $m$, put
+\[
+ (C_qU)_a=U_{h(a)}q_a-q_aU_{t(a)},\qquad
+ \mathfrak a=\bigoplus_i\Herm(W_i),\qquad
+ \omega_0(v,v')=-\operatorname{Im}\sum_a\tr(v_a^*v'_a).
+\]
+The incoming-minus-outgoing moment $\mu$ satisfies
+\[
+ \dd\tr(\mu U)=2\omega_0(\mathrm iC_qU,\cdot),
+ \qquad\omega_0(\mathrm iC_qU,C_qU)=\|C_qU\|^2.
+\]
+Suppose $\Omega$ is a closed $K$-invariant form on a ball
+$B_R$ and $\rho$ is its equivariant moment in this convention,
+normalized at zero, with
+\begin{equation}\label{eq:perturbed-moment-hypotheses}
+ \rho(0)=0,\qquad
+ \dd\tr(\rho U)=2\Omega(\mathrm iC_qU,\cdot),\qquad
+                   \|\Omega-\omega_0\|_{B_R}\le\epsilon.
+\end{equation}
+No type-$(1,1)$ assumption on $\Omega$ is needed.
+
+\begin{lemma}\label{lem:complex-orbit-correction}
+Let $A_0=2m$ and
+$\epsilon<\log2/(16A_0)$. If $x\in B_{R/4}$ satisfies
+$\mu(x)=0$, there is a Hermitian tuple $S$ such that
+$\rho(e^Sx)=0$ and $\|S\|_{\rm op}\le A_0\epsilon$.
+It can be chosen in the centralizer of $K_x$.
+The reverse conclusion holds starting from $\rho(y)=0$.
+In a fixed complex orbit, either zero set contains at most
+one compact orbit. These corrections induce inverse
+continuous maps between the two local compact quotients
+on nested neighbourhoods, including stabilizer changes.
+\end{lemma}
+
+\begin{proof}
+For a tuple of orthogonal projections $P$, split $q=n+u$
+into preserving and crossing arrow blocks. The circle
+generated by $\mathrm iP$ fixes $n$. Both normalized
+paired moments vanish on its fixed linear subspace, by
+their Hamiltonian identities and their value at zero.
+Integrate along the orthogonal segment $n+tu$ to obtain
+\begin{equation}\label{eq:projection-relative-moment}
+ |\tr((\rho-\mu)(q)P)|
+ \le2\int_0^1t\epsilon\|u\|^2\,\dd t
+                        =\epsilon\|C_qP\|^2.
+\end{equation}
+This estimate retains the crossing energy even when it
+is arbitrarily small.
+
+Let $H=K_x$, let
+$\mathfrak h_x=\ker(C_x|_{\mathfrak a})$, and let
+$\mathfrak c$ be the Hermitian centralizer of $H$.
+Set $\mathfrak p=\mathfrak c\cap\mathfrak h_x^\perp$
+for the trace pairing. On the fixed space $W^H$, both
+moments take values in $\mathfrak p$: equivariance gives
+$\mathfrak c$, while the generating fields for
+$\mathfrak h_x$ vanish there, so their paired moments
+vanish by normalization. All the homotopies below
+therefore have values in this fixed real vector space.
+
+For $S\in\mathfrak p$ of operator norm $a>0$, its total
+trace is zero. Among its $m$ eigenvalues over all vertices
+there is an adjacent gap at least $a/(m-1)$; the case
+$m=1$ is trivial. Let $P$ project above such a gap.
+Then $\|C_xP\|>0$. Otherwise $P,I-P\in\mathfrak h_x$,
+as they also commute with $H$, and orthogonality gives
+$\tr(SP)=\tr(S(I-P))=0$. The mean eigenvalues above
+and below a strict gap cannot both be zero.
+
+Take $a=A_0\epsilon$ and consider on the operator-norm
+ball in $\mathfrak p$ the homotopy
+\[
+ F_t(S)=\mu(e^Sx)+t(\rho-\mu)(e^Sx),\qquad0\le t\le1.
+\]
+Every argument remains in $B_{R/2}$.
+At a boundary point use the projection just chosen.
+An upward crossing entry with eigenvalue difference
+$d\ge a/(m-1)$ contributes $e^{2d}-1$ times its
+squared norm to the paired moment difference; a downward
+one contributes $1-e^{2d}$. Since $|d|\le2a$,
+\begin{equation}\label{eq:degree-boundary-estimate}
+ \begin{aligned}
+ \tr((\mu(e^Sx)-\mu(x))P)
+    &\ge2e^{-4a}\frac{a}{m-1}\|C_xP\|^2,\\
+ |\tr((\rho-\mu)(e^Sx)P)|
+    &\le\epsilon e^{4a}\|C_xP\|^2.
+ \end{aligned}
+\end{equation}
+Our constants make the first coefficient larger, so
+there is no boundary zero throughout the homotopy.
+At $t=0$ the unique zero is $S=0$, because
+\[
+ \frac{\dd}{\dd t}\tr(\mu(e^{tS}x)S)
+                         =2\|C_{e^{tS}x}S\|^2>0
+\]
+for nonzero $S\in\mathfrak p$. Its derivative at zero
+has positive quadratic form $2\|C_xS\|^2$, hence degree
+$+1$. Brouwer degree gives a zero at $t=1$.
+If $\mathfrak p=0$ or $\epsilon=0$, the asserted zero
+requires no correction.
+
+For the reverse direction form the corresponding space
+at $y$ and use
+\[
+ G_t(S)=\mu(e^Sy)-\mu(y)-t(\rho-\mu)(y).
+\]
+The initial degree calculation holds without assuming
+$\mu(y)=0$. The first inequality in
+\eqref{eq:degree-boundary-estimate} dominates
+\eqref{eq:projection-relative-moment} at $y$.
+At $t=1$ a zero satisfies $\mu(e^Sy)=\rho(y)=0$.
+
+For uniqueness, polar-decompose a complex transformation
+as $ke^U$ and use equivariance to compare $y$ and $e^Uy$.
+The squared norm of $e^{tU}y$ is a sum of nonnegative
+exponentials and is convex. If its endpoints are in
+$B_R$, the entire path stays there. Along it,
+\[
+ \frac{\dd}{\dd t}\tr(\rho(e^{tU}y)U)
+             \ge2(1-\epsilon)\|C_{e^{tU}y}U\|^2.
+\]
+If both endpoints are zeros, their paired values agree,
+so $C_yU=0$ and they are compact-equivalent. The same
+argument with $\epsilon=0$ proves flat uniqueness.
+
+Finally a convergent sequence of starting representatives
+has bounded correction tuples. A convergent subsequence
+of those tuples produces a zero in the same complex orbit
+as the limiting starting point. Uniqueness determines
+its compact orbit independently of the subsequence.
+This proves continuity even if the centralizer space
+changes in the limit. With the corrections from $B_{R/4}$
+to $B_{R/2}$, restriction makes the quotient maps inverse
+on nested neighbourhoods. More explicitly the flat
+quotient of $B_{R/8}$ maps onto its inverse image under
+the reverse map on the perturbed quotient of $B_{R/4}$,
+and this image contains the perturbed quotient of
+$B_{R/16}$.
+\end{proof}
+
+In our coordinates \eqref{eq:normalized-arrows}, set
+\begin{equation}\label{eq:orbit-correction-normalization}
+ \rho_p(q)=V\Psi_p(T_p^{-1}q),\qquad
+ \widetilde\Omega_p=-\tfrac12(T_p^{-1})^*\Omega_p.
+\end{equation}
+Equations \eqref{eq:actual-paired-hamiltonian} and
+\eqref{eq:flat-pullback-form} give exactly
+\eqref{eq:perturbed-moment-hypotheses}, with
+$\widetilde\Omega_p(0)=\omega_0$ and
+$\|\widetilde\Omega_p-\omega_0\|_{B_R}\le CR$.
+Here $m=4$ and $A_0=8$.
+Apply the lemma with $R=8|q_0|$, after choosing a common
+outer domain. A flat-balanced $q_0$ has an actual zero
+$q_1=e^Sq_0$ in the same complex orbit with
+\begin{equation}\label{eq:small-orbit-correction}
+ \|S\|_{\rm op}\le C|q_0|,\qquad
+                    |q_1|\le e^{2C|q_0|}|q_0|.
+\end{equation}
+The origin has zero correction. The reverse assertion
+holds with the same type of bound. These are distinct
+maps from the real diffeomorphism $\chi_p$.
+
+\subsection{Actual equivariance and semistability}
+
+We record how these finite transformations act on the
+holomorphic bundles. The effective étale roof of
+Proposition~\ref{prop:effective-bundles} has a jointly
+analytic group action near the identity and the zero
+section. After two shrinks of the base and matrix
+neighbourhood, compactness of the inner closure gives
+a group neighbourhood $U_G$ of the identity such that
+\begin{equation}\label{eq:local-actual-equivariance}
+             \cE_{p,gw}\simeq\cE_{p,w}
+\end{equation}
+whenever $g\in U_G$ and the two representatives are in
+the inner region. The lifts agree by uniqueness of the
+inverse étale branch. If a piecewise smooth path $g(t)$
+in $G$ stays in this coordinate region when applied to
+$w$, subdivide its compact time interval so that successive
+group increments lie in $U_G$, and compose these actual
+isomorphisms. The resulting isomorphism can have arbitrarily
+large norm. A path on $0<t\le1$ is treated on every
+$[t,1]$ separately, without extending the group operation
+to $t=0$.
+
+The étale chart also identifies infinitesimal
+automorphisms throughout a smaller neighbourhood:
+\begin{equation}\label{eq:automorphism-dimensions}
+ \operatorname{Lie}\Aut(\cE_{p,w})
+             \simeq\operatorname{Lie}G_w,
+ \qquad\dim_\CC\Aut(\cE_{p,w})=\dim_\CC G_w.
+\end{equation}
+Infinitesimal isomorphisms lift uniquely through the
+étale diagonal; see \cite[Tag 0CJ1]{Stacks}.
+Both groups are the open unit groups in finite-dimensional
+complex endomorphism algebras, hence are smooth.
+This proves the dimension assertion without presuming
+that all isomorphisms between different chart points
+come from $G$.
+
+The algebraic family before pullback is locally free
+and flat over its coefficient and bundle parameters.
+Its central split bundle is Gieseker polystable for the
+symmetric polarization. Indeed each line is stable as
+a rank-one torsion-free sheaf on the integral central
+fibre: a proper same-rank subsheaf subtracts a nonzero
+torsion Hilbert polynomial, and a line has no nonzero
+rank-zero subsheaf. The two reduced Hilbert polynomials
+coincide by the Koszul calculation. Openness of Gieseker
+semistability in a projective flat family
+\cite[Proposition 2.3.1]{HL} therefore gives a product
+neighbourhood of $(0,0)$ in which every bundle is
+semistable. That source does not require smooth fibres.
+Analytification and pullback to the prescribed period
+ball preserve this open condition. On smooth fibres
+Gieseker semistability implies slope semistability
+\cite[Lemma 1.2.13]{HL}.
+
+We shall also use that a slope-polystable,
+Gieseker-semistable bundle is Gieseker polystable.
+Its slope-stable summands are locally free and Gieseker
+stable. Their reduced Hilbert polynomials are at most
+that of the whole bundle, whereas their positive
+rank-weighted average equals it. For all sufficiently
+large integers the differences are nonnegative and their
+weighted sum is zero. Each difference therefore vanishes
+as a polynomial, which proves the assertion.
+
+\begin{theorem}\label{thm:local-polystability}
+There is a common matrix neighbourhood on the full small
+smooth period base in which every $\cE_{p,w}$ is slope
+semistable. It is slope polystable if and only if $w$ is
+a semisimple two-arrow representation, equivalently its
+affine complex orbit is closed. Every such object has an
+actual HE representative in the family constructed above.
+Its stable factors are the rank-two factors and line
+factors already described, so no bundle in this rank-four
+neighbourhood is slope stable. The chart contains an open
+neighbourhood of the split object in the local bundle
+stack, and the assertion applies to every polystable
+object in this neighbourhood.
+\end{theorem}
+
+\begin{proof}
+For a simple two-arrow representation $(X,Y)$, the
+endomorphism $(XY,YX)$ commutes with both arrows and
+hence is a scalar $\lambda$ by Schur's lemma. If
+$\lambda\ne0$, the arrows are inverse isomorphisms up
+to that scalar. Identifying the two spaces by one arrow
+makes the other $\lambda I$, so simplicity forces
+vertex dimensions $(1,1)$. If $\lambda=0$ and $X\ne0$,
+then $(\im X,0)$ is a proper nonzero subrepresentation,
+since $YX=0$; the same holds for $Y\ne0$. With both
+arrows zero, a simple representation is one-dimensional
+at just one vertex. Thus the simple types are
+\[
+ (1,0),\qquad(0,1),\qquad(1,1)\text{ with cycle }\lambda\ne0.
+\]
+
+Take any composition series and orthogonally split its
+flags at the vertices. Each arrow sends block $j$ only
+to blocks $i\le j$. Assign integer weight $\ell-j$ to
+the $j$th block of a length-$\ell$ series.
+The corresponding one-parameter group multiplies an
+$i,j$ arrow block by $t^{j-i}$. Consequently
+\begin{equation}\label{eq:bounded-semisimplification}
+ q(t)=g(t)q\longrightarrow q_{\rm ss},\qquad
+ |q(t)|^2=\sum_{i\le j}|t|^{2(j-i)}\|q_{ij}\|^2
+                   \le|q|^2\quad(|t|\le1).
+\end{equation}
+The disc is polynomial, and its limit is the direct
+sum of simple quotients. Orthogonal splitting ensures
+the norm bound in the original metric.
+
+Balance each nonzero $(1,1)$ pair $(x_j,y_j)$ in
+$q_{\rm ss}$ by the positive ratio
+$r_j=\sqrt{|y_j|/|x_j|}$ between vertex scalars.
+Both resulting magnitudes are $\sqrt{|x_jy_j|}$, and
+$2|x_jy_j|\le|x_j|^2+|y_j|^2$.
+Along the Hermitian exponential path the squared norm
+is convex, hence never exceeds its endpoint maximum.
+After a unitary change the result has
+\eqref{eq:balanced-normal-form}. If $q$ is semisimple,
+this balanced point $q_0$ lies in its orbit and has
+$|q_0|\le|q|$. To realize a bounded path directly from
+$q$, choose $gq=q_0$ and write $g=ke^U$.
+The exponential path stays in the ball by convexity,
+and a compact-group path reaches $q_0$ at unchanged
+norm. Equation \eqref{eq:local-actual-equivariance}
+and the small correction
+\eqref{eq:small-orbit-correction} give an actual HE
+bundle isomorphic to $\cE_{p,T_p^{-1}q}$.
+This proves polystability for semisimple parameters.
+
+For arbitrary $q$, \eqref{eq:bounded-semisimplification}
+pulls back the actual locally free family to a
+holomorphic disc on the fixed smooth fibre. Each
+nonzero member is isomorphic to the original bundle,
+by the bounded-path realization on compact subintervals.
+The central member is the semisimple limit, which has
+an HE representative by the preceding argument.
+Choose the initial neighbourhood with slack for the
+final small correction, so all these parameters stay
+in the common Gieseker-semistable region.
+
+The projective moduli space of Gieseker-semistable sheaves
+classifies S-equivalence
+\cite[Theorems 4.3.3--4.3.4]{HL}. The analytified coarse
+moduli map composed with this holomorphic disc is
+constant away from zero and continuous into a separated
+space, so it has the same value at zero. Thus the original
+bundle and its semisimple limit are S-equivalent.
+If the original bundle were slope polystable, both
+would be Gieseker polystable by the preceding polynomial
+argument. Uniqueness of the polystable representative
+\cite[Proposition 1.5.2 and Definitions 1.5.3--1.5.4]{HL}
+would make them isomorphic. If $q$ were nonsemisimple,
+$q_{\rm ss}$ would lie in the boundary of its orbit.
+An algebraic orbit is open in its irreducible closure;
+every boundary orbit has smaller dimension. Hence
+$\dim G_{q_{\rm ss}}>\dim G_q$, contradicting
+\eqref{eq:automorphism-dimensions} for the isomorphic
+bundles. Therefore polystability forces semisimplicity.
+Closed affine orbits are exactly semisimple representations
+by \cite[Proposition 3.2(i), $\theta=0$]{King}.
+
+For the precise factor types in these complex-orbit
+coordinates, choose the correction $S$ in the Hermitian
+centralizer of $H=K_{q_0}$, as in
+Lemma~\ref{lem:complex-orbit-correction}. Then
+$H\subset K_{e^Sq_0}$. The complex stabilizer of the
+normal form is
+$\prod_{\lambda\ne0}\GL(m_\lambda,\CC)\times\GL(m_0,\CC)^2$,
+whose complex dimension equals $\dim_\RR H$.
+The stabilizer of $e^Sq_0$ is conjugate to it, and the
+real dimension of a compact matrix subgroup cannot
+exceed that complex dimension: its real Lie generators
+are complex-linearly independent, since a Hermitian
+matrix cannot equal a nonzero anti-Hermitian matrix.
+The inclusion therefore gives equality of the compact
+Lie algebras. By the exact kernel theorem, the actual
+parallel algebra is precisely
+\eqref{eq:parallel-matrix-algebra}. Its minimal projections
+give the same stable rank-two factors and the two line
+types, with the same multiplicities. Each rank-four
+case has more than one stable summand. A stable bundle
+would be polystable and hence in one of these cases,
+which is impossible.
+
+Finally the effective chart is étale as a morphism of
+local stacks, and its atlas is smooth and open.
+The image of a small analytic product neighbourhood
+therefore contains an open neighbourhood of the split
+object. Every polystable object in that image on a
+smooth fibre has a representative in the chart; the
+criterion just proved and the bounded correction give
+its controlled HE representative. This is local
+surjectivity of the actual deformation germ.
+\end{proof}
+
+The controlled representative is uniformly small.
+A gauge taking an arbitrary unbalanced representative
+to it can be arbitrarily ill-conditioned.
+Injectivity on actual bundle isomorphism classes and
+the harmonic metric on their quotient will be proved
+in Section~\ref{sec:harmonic-quotient}; neither follows
+from local surjectivity alone.

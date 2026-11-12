@@ -1,0 +1,410 @@
+\section{Exact-cone trials, quotient mass and weighted lower bounds}
+\label{sec:model-energy}
+
+This section fixes the central and cap geometries while their scales vary
+independently. The estimates are statements about the resulting surgery
+metrics. The comparison with the actual Ricci-flat metrics is a separate
+step.
+
+\subsection{Fixed models and central representatives}
+
+Fix an outer radius $R>0$ and a cap parameter $A>0$. Let $g_0^R$ be
+the central metric made exactly conical on each punctured node region
+$0<r<R$, and let $g_i^A$ be the completed smoothing cap, exactly
+conical beyond radius $2A$. These are the fixed models of
+\cite[Sections~4--5]{wuebben-hodge}. On the $i$-th cone write
+$g_0^R=\dd r^2+r^2h_i$. Its unit-period harmonic link two-form
+$\vartheta_i$ is normalized by
+\begin{equation}\label{eq:link-normalization}
+ \|\vartheta_i\|_{L^2(h_i)}^2=c_i=\frac{2\pi}{3}.
+\end{equation}
+The link is the ordinary conifold link, diffeomorphic to $S^2\times S^3$.
+
+Let $M_0$ denote the punctured central space and identify
+$V=H^2(M_0;\RR)$ with $H^2(Y;\RR)$. The fixed central Hodge input is
+the following precise statement. Each class $D\in V$ has a central
+$L^2$ harmonic representative $\eta_D$, chosen linearly, and on every
+end
+\begin{equation}\label{eq:central-end-expansion}
+ \eta_D=a_i(D)\vartheta_i+\dd v_{i,D},\qquad
+ |v_{i,D}|\le C\|D\|r^{\beta-1},\qquad
+ |\dd v_{i,D}|\le C\|D\|r^{\beta-2}
+\end{equation}
+for a common $\beta>0$, with the corresponding differentiated estimates.
+The coefficients $a_i(D)$ are the actual link restrictions
+$D\cdot C_i$. This is the fixed-model harmonic expansion proved in
+\cite[Lemma~5.1]{wuebben-hodge}. Its finite-dimensional representatives
+and primitives are fixed before the cap scales vary.
+
+Define the central mass and surviving subspace by
+\begin{equation}\label{eq:model-central-mass}
+ G_R(D,F)=\langle\eta_D,\eta_F\rangle_{g_0^R},\qquad
+ r(D)=(a_i(D))_i,\qquad K=\ker r,\qquad W_R=K^{\perp_{G_R}}.
+\end{equation}
+The restriction of $G_R$ to $W_R$ is denoted $M_R$. The attachment
+calculation identifies the degree-two cohomology of every smooth
+surgery with $K$. For our family, $\dim V=4$ and
+$\dim K=\dim W_R=2$.
+
+For arbitrary scales $\varepsilon_i>0$ with
+$\ell_i=2A\varepsilon_i<R$, glue the scaled metric
+$\varepsilon_i^2g_i^A$ to the central part along its exact cone.
+The resulting closed smooth manifold and metric are denoted
+$(N_\varepsilon,g_\varepsilon)$. Set
+\begin{equation}\label{eq:model-lengths-energy}
+ L_i=\log(R/\ell_i),\qquad L_*=\min_iL_i,\qquad
+ E_\varepsilon(D,F)
+     =\sum_i\frac{c_i}{L_i}a_i(D)a_i(F).
+\end{equation}
+Every assertion in this section is uniform as $L_*\to\infty$;
+no ratio of lengths is bounded. Constants may depend on the fixed
+$R,A$ and central and cap models.
+
+\subsection{Trials with exact energy}
+
+Let $\chi_i$ vanish for $r\le\ell_i$, equal
+$\log(r/\ell_i)/L_i$ on $\ell_i<r<R$, and equal one for $r\ge R$.
+Define a global two-form $T_\varepsilon D$ to be $\eta_D$ outside
+the ends, zero on the caps $r\le\ell_i$, and
+\begin{equation}\label{eq:corrected-trial}
+ T_\varepsilon D
+   =a_i(D)\chi_i\vartheta_i+\dd(\chi_i v_{i,D})
+\end{equation}
+on the conical annulus.
+
+The differential here is distributional. The normal component may jump
+at an interface, since $\dd\chi_i$ does. Its tangential trace is zero
+at the inner interface and agrees with $\eta_D$ at the outer one.
+There is consequently no delta contribution to its exterior derivative.
+Equivalently the exact correction is differentiated from a continuous
+piecewise $H^1$ one-form on each collar. This gives a trial in the graph
+domain of $\dd$, without yet asserting membership in the graph domain
+of $\delta_\varepsilon$.
+
+Let $Z_\varepsilon$ be the closed subspace of distributionally closed
+$L^2$ two-forms on $N_\varepsilon$, and let $P_\varepsilon$ be
+orthogonal projection onto $Z_\varepsilon^\perp$.
+
+\begin{lemma}\label{lem:exact-trial-energy}
+The coexact trial $U_\varepsilon D=P_\varepsilon T_\varepsilon D$
+belongs to the Hodge form domain and satisfies
+\begin{equation}\label{eq:exact-model-energy}
+ q_\varepsilon(U_\varepsilon D)
+ =\|\dd T_\varepsilon D\|^2
+ =\sum_i\frac{c_i|a_i(D)|^2}{L_i},
+\end{equation}
+where $q_\varepsilon(u)=\|\dd u\|^2+\|\delta_\varepsilon u\|^2$.
+Under central identification and extension by zero over missing tips,
+\begin{equation}\label{eq:unprojected-trial-convergence}
+ \|\widetilde T_\varepsilon D-\eta_D\|_{L^2(M_0,g_0^R)}
+       \le C L_*^{-1}\|D\|_{G_R}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The exact correction contributes no exterior derivative. Thus
+$\dd T_\varepsilon D=\sum_i a_i(D)\dd\chi_i\wedge\vartheta_i$,
+including the interfaces just described. On a six-dimensional cone,
+$|\dd r\wedge\vartheta_i|^2=r^{-4}|\vartheta_i|_{h_i}^2$ and
+$\dd V=r^5\dd r\,\dd V_{h_i}$. The energy on the $i$-th annulus is
+\[
+ c_i|a_i(D)|^2\int_{\ell_i}^R r|\chi'_i|^2\,\dd r
+   =\frac{c_i|a_i(D)|^2}{L_i^2}
+          \int_{\ell_i}^R\frac{\dd r}{r}
+   =\frac{c_i|a_i(D)|^2}{L_i}.
+\]
+The annuli are disjoint, which proves the unprojected identity.
+
+The removed part $(I-P_\varepsilon)T_\varepsilon D$ is closed.
+Hence $\dd U_\varepsilon D=\dd T_\varepsilon D$. Orthogonality
+to every smooth exact two-form gives
+$\delta_\varepsilon U_\varepsilon D=0$ distributionally. On a
+closed smooth manifold the joint graph domain of $\dd,\delta$ is
+the Hodge form domain, and $Z_\varepsilon^\perp$ is its coexact
+subspace. This proves \eqref{eq:exact-model-energy}.
+
+On an annulus the central difference is
+\[
+ a_i(D)(\chi_i-1)\vartheta_i+
+       (\chi_i-1)\dd v_{i,D}+\dd\chi_i\wedge v_{i,D}.
+\]
+Its squared link-term norm, including the missing tip, is bounded by
+a constant times $\|D\|^2$ times
+\[
+ \ell_i^2+L_i^{-2}\int_0^R r\log^2(R/r)\,\dd r.
+\]
+The remaining squared norm is bounded by a constant times $\|D\|^2$
+times
+\[
+ \ell_i^{2\beta+2}
+   +L_i^{-2}\int_0^R r^{2\beta+1}
+                     (1+\log^2(R/r))\,\dd r.
+\]
+Both integrals are finite. Since $\ell_i=Re^{-L_i}$, the tip terms
+are also bounded by a constant times $L_*^{-2}$. Summing over
+finitely many ends proves \eqref{eq:unprojected-trial-convergence}.
+\end{proof}
+
+An end on which $a_i(D)=0$ contributes exactly zero to the energy.
+This is essential for relative estimates. Cutting off the whole
+representative without the exact correction would introduce an
+unwanted additive term on such an end.
+
+\subsection{The mass after coexact projection}
+
+The strong convergence of $T_\varepsilon D$ does not alone control
+the norm of $P_\varepsilon T_\varepsilon D$. To do so we construct
+closed compactly supported dual forms.
+
+\begin{lemma}\label{lem:compact-duals}
+For every sufficiently small $\rho>0$ there is a linear map
+$D\mapsto\Psi_{D,\rho}$ from $V$ to smooth compactly supported
+closed four-forms on $M_0$, vanishing on every end for $r<\rho$,
+such that
+\begin{equation}\label{eq:compact-dual-properties}
+ \|\Psi_{D,\rho}-*_0\eta_D\|_{L^2(g_0^R)}
+       \le C\rho\|D\|_{G_R},\qquad
+ \int_{M_0}\eta_F\wedge\Psi_{D,\rho}=G_R(F,D).
+\end{equation}
+The constant is independent of $\rho$.
+\end{lemma}
+\begin{proof}
+The form $\omega_D=*_0\eta_D$ is closed and has size at most
+$C\|D\|r^{-2}$. Write it as
+$\alpha_D(r)+\dd r\wedge\beta_D(r)$ in fixed link coordinates.
+Then
+$|\alpha_D(r)|_h\le C\|D\|r^2$ and
+$|\beta_D(r)|_h\le C\|D\|r$.
+Closedness gives
+$\dd_L\alpha_D=0$, $\partial_r\alpha_D=\dd_L\beta_D$.
+The tangential three-form
+$B_D(r)=\int_0^r\beta_D(s)\,\dd s$ converges with its link
+derivatives and satisfies
+$\dd B_D=\omega_D$, since $\alpha_D(0)=0$. Its conic norm is
+at most $C\|D\|r^{-1}$.
+
+Choose $\chi_\rho=1$ for $r\le\rho$, zero for $r\ge2\rho$, with
+$|\dd\chi_\rho|\le C/\rho$, and set
+\[
+ \Psi_{D,\rho}=*_0\eta_D-\sum_i\dd(\chi_\rho B_{i,D}).
+\]
+This is closed and vanishes near every tip. The squared norm of its
+change is bounded by $C\|D\|^2\int_0^{2\rho}r\,\dd r$, including
+the cutoff-derivative term, which has size $O(\rho^{-2})$ on its
+shell. This proves the first estimate.
+
+For the pairing, integrate
+$\eta_F\wedge\dd(\chi_\rho B_D)$ on the space truncated at $r=\delta$.
+The tip boundary term is bounded by
+$C\|F\|\|D\|\delta^5\delta^{-2}\delta^{-1}
+=C\|F\|\|D\|\delta^2$. It tends to zero. All volume integrals
+converge, so Stokes makes the correction pairing exactly zero.
+\end{proof}
+
+\begin{proposition}\label{prop:trial-quotient-mass}
+For $D\in W_R$ and sufficiently large $L_*$,
+\begin{equation}\label{eq:projection-mass-loss}
+ \|(I-P_\varepsilon)T_\varepsilon D\|
+       \le C L_*^{-1}\|D\|_{G_R}.
+\end{equation}
+For $D,F\in W_R$,
+\begin{equation}\label{eq:trial-gram}
+ \bigl|\langle U_\varepsilon D,U_\varepsilon F\rangle
+                         -G_R(D,F)\bigr|
+       \le C L_*^{-1}\|D\|_{G_R}\|F\|_{G_R},\qquad
+ q_\varepsilon(U_\varepsilon D,U_\varepsilon F)
+       =E_\varepsilon(D,F).
+\end{equation}
+Consequently, if $\nu_j(\varepsilon)$ are the generalized
+eigenvalues of $(E_\varepsilon,M_R)$ on $W_R$, the ordered positive
+coexact two-form eigenvalues satisfy
+\begin{equation}\label{eq:model-upper-bounds}
+ \lambda^{\mathrm{coex}}_{2,j}(N_\varepsilon)
+       \le(1+C/L_*)\nu_j(\varepsilon),\qquad
+                   1\le j\le\dim W_R.
+\end{equation}
+\end{proposition}
+\begin{proof}
+If $\max_i\ell_i<\rho$, extend $\Psi_{D,\rho}$ by zero onto
+$N_\varepsilon$. For a smooth closed two-form $z$ on that space,
+its exterior class lies in $K$; call it $k$. Compactly supported
+cohomological pairing gives
+\[
+ \int_{N_\varepsilon}z\wedge\Psi_{D,\rho}
+     =\int_{M_0}\eta_k\wedge\Psi_{D,\rho}
+     =G_R(k,D)=0.
+\]
+Only the class on a common exterior containing the support is used;
+no smooth extension of $z$ over the missing central tips is required.
+The equality extends to every closed $L^2$ form by heat regularization
+on each fixed closed smoothing. This regularization needs no estimate
+uniform in $\varepsilon$.
+
+Since $*^2=1$ in degrees two and four in dimension six,
+$V_{\varepsilon,\rho}D=*_\varepsilon\Psi_{D,\rho}$ is perpendicular
+to $Z_\varepsilon$. Its support is in the unchanged central metric.
+Lemma~\ref{lem:compact-duals} and
+\eqref{eq:unprojected-trial-convergence} give
+\[
+ \|T_\varepsilon D-V_{\varepsilon,\rho}D\|
+       \le C(L_*^{-1}+\rho)\|D\|_{G_R}.
+\]
+Take $\rho=R/(1+L_*)$. For large $L_*$, the support condition and
+$2\rho<R$ hold. Orthogonal projection now proves
+\eqref{eq:projection-mass-loss}.
+
+The unprojected Gram matrix converges at rate $O(L_*^{-1})$ by
+\eqref{eq:unprojected-trial-convergence}. The projected Gram matrix
+differs by
+\[
+ -\langle(I-P_\varepsilon)T_\varepsilon D,
+                (I-P_\varepsilon)T_\varepsilon F\rangle,
+\]
+which is $O(L_*^{-2})\|D\|\|F\|$. This proves the mass assertion;
+polarization of \eqref{eq:exact-model-energy} proves the energy
+identity. On $W_R$, the energy is positive definite. The mass bound
+makes $U_\varepsilon$ injective. Apply coexact min--max to the first
+$j$ generalized eigendirections to obtain
+$\nu_j/(1-C/L_*)$, which implies \eqref{eq:model-upper-bounds}.
+\end{proof}
+
+The proof uses orthogonality to the full surviving space $K$.
+Orthogonality only to the polarizing class would not annihilate every
+closed smoothing form in the compactly supported pairing.
+
+\subsection{A fixed exterior projection}
+
+Let $C$ be the compact central exterior with boundary $r=r_*=R/2$.
+It has fixed geometry and $H^2(C;\RR)=V$. Let $Z_C$ be the maximal
+distributional closed subspace of $L^2$ two-forms on $C$, imposing
+no tangential trace condition, and let $\Pi_C$ be its orthogonal
+projection. Absolute harmonic representation gives a bounded class
+map from $Z_C$ to $V$. Set
+\begin{equation}\label{eq:model-observer}
+ \cA_\varepsilon u
+   =\pr_{W_R}^{G_R}[\Pi_C(u|_C)].
+\end{equation}
+The subscript specifies the changing domain; the exterior operation
+itself is fixed.
+
+\begin{lemma}\label{lem:exterior-projection}
+For $u|_C$ in the maximal domain of $\dd$,
+\begin{equation}\label{eq:exterior-derivative-bound}
+ \|(I-\Pi_C)u\|_{H^1(C)}\le C\|\dd u\|_{L^2(C)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $v=(I-\Pi_C)u$. Then $\dd v=\dd u$. For every one-form
+$\phi$ in the maximal domain of $\dd$, its differential lies in
+$Z_C$, so $\langle v,\dd\phi\rangle=0$. By the adjoint-domain
+definition, $v$ belongs to the minimal codifferential domain and
+$\delta v=0$. This includes its weak zero normal trace.
+
+The first-order absolute boundary regularity theorem gives
+\[
+ \|v\|_{H^1(C)}
+       \le C(\|\dd v\|+\|\delta v\|+\|v\|).
+\]
+The weak domain and regularity used here are those of
+\cite[Definition~1.2.5, Lemma~1.2.10 and Theorem~4.3.8]{frey}.
+There is no imposed normal trace condition on $\dd v$.
+
+On this subspace also $\|v\|\le C\|\dd v\|$. Otherwise unit
+vectors in $Z_C^\perp$ with differential tending to zero would be
+$H^1$ bounded. Rellich compactness would give a unit strong $L^2$
+limit in both $Z_C$ and $Z_C^\perp$, a contradiction. Combining
+the two estimates proves \eqref{eq:exterior-derivative-bound}.
+\end{proof}
+
+\subsection{Boundary coefficients and capacity}
+
+For a smooth two-form, let
+\begin{equation}\label{eq:boundary-coefficient}
+ B_i(u)=c_i^{-1}\int_{\{r=r_*\}}u_T\wedge *_h\vartheta_i.
+\end{equation}
+This integrates the tangential trace over the whole five-dimensional
+boundary against a smooth three-form. It is a bounded $H^1$ trace
+functional, not an integral of an arbitrary $H^1$ two-form over a
+codimension-three cycle.
+
+For $\zeta=\Pi_Cu$, the harmonic boundary coefficient is the
+restriction coordinate $a_i([\zeta])$. This follows by pairing the
+closed tangential class with $*_h\vartheta_i$. For smooth data,
+first-order boundary regularity makes $\zeta$ smooth; approximation
+then gives the assertion in the weak setting. The fixed trace
+estimate and Lemma~\ref{lem:exterior-projection} yield
+\begin{equation}\label{eq:boundary-observer-error}
+ |B_i(u)-a_i(\cA_\varepsilon u)|
+       \le C\|\dd u\|_{L^2(C)}
+       \le C\sqrt{q_\varepsilon(u)}.
+\end{equation}
+Here $r$ vanishes on $K$, so taking the quotient projection has not
+changed the restriction coefficient.
+
+The cap and annulus capacity bound, with its exact normalization, is
+\begin{equation}\label{eq:cap-capacity}
+ q_{\varepsilon,i}(u)
+       \ge\frac{c_i|B_i(u)|^2}
+                    {\log(r_*/\varepsilon_i)+C_i}.
+\end{equation}
+We recall its variational reason from
+\cite[Section~4]{wuebben-hodge}. The closed three-form
+$*_h\vartheta_i$ extends into the fixed smoothing cap. Stokes and
+Cauchy--Schwarz bound its inner boundary coefficient by the cap
+$\dd$-energy. On the conical annulus the harmonic component of
+$\dd u$ controls $c_i\int r|B'_i(r)|^2\,\dd r$. Adding the two
+resistances gives \eqref{eq:cap-capacity}. The energy of a two-form
+in real dimension six is invariant under constant metric scaling,
+so the cap constant is independent of $\varepsilon_i$. No special
+boundary condition is imposed on the competitor, and no other cap
+scale enters.
+
+\begin{proposition}\label{prop:weighted-observer-bound}
+For every form in the Hodge form domain, and sufficiently large $L_*$,
+\begin{equation}\label{eq:model-weighted-lower}
+ E_\varepsilon(\cA_\varepsilon u)
+       \le(1+CL_*^{-1/2})q_\varepsilon(u).
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:observer-bounded-closed}
+ \begin{aligned}
+ \|\cA_\varepsilon u\|_{G_R}\le C\|u\|,\qquad
+ &\cA_\varepsilon z=0\quad(z\in Z_\varepsilon),\\
+ \|\cA_\varepsilon U_\varepsilon D-D\|_{G_R}
+       &\le CL_*^{-1}\|D\|_{G_R}\quad(D\in W_R).
+ \end{aligned}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Put $w_i=c_i/L_i$. The denominator in \eqref{eq:cap-capacity}
+is $L_i$ plus a fixed bounded shift. Sum over the disjoint regions
+to obtain
+\[
+ \sum_iw_i|B_i(u)|^2\le(1+C/L_*)q_\varepsilon(u).
+\]
+Equation~\eqref{eq:boundary-observer-error}, the fixed number of
+ends and $w_i\le C/L_*$ give
+\[
+ \sum_iw_i|B_i(u)-a_i(\cA_\varepsilon u)|^2
+       \le C L_*^{-1}q_\varepsilon(u).
+\]
+The triangle inequality in this weighted Euclidean norm proves
+\eqref{eq:model-weighted-lower}, after squaring. Every boundary
+error is proportional to the energy of the same competitor.
+Smooth density extends the estimate to the form domain.
+
+For boundedness of $\cA_\varepsilon$, restriction and $\Pi_C$ are
+contractions, and absolute harmonic representation and the fixed
+finite quotient projection are bounded. A globally closed form has
+exterior class in $K$, proving the second assertion; closed $L^2$
+forms follow by regularization on each smoothing. Finally
+$\cA_\varepsilon\eta_D=D$ on $W_R$ and
+\eqref{eq:unprojected-trial-convergence} gives the last estimate
+for $T_\varepsilon D$. Its difference from $U_\varepsilon D$ is
+globally closed, so both have the same observation.
+\end{proof}
+
+The trials and weighted observation now verify the first two hypotheses
+of Theorem~\ref{thm:relative-reduction} on the model coexact sector.
+The remaining mass-capture estimate concerns arbitrary low-energy forms.
+It requires independent-cap compactness, not merely the mass convergence
+of the trials proved above.

@@ -1,0 +1,255 @@
+\section{Successive scales and relative spectral transport}
+\label{sec:hierarchies}
+
+The relative form estimates determine more than the
+ordered small eigenvalues. They transport groups of
+marked eigenspaces whenever those groups have a
+relative gap. For fixed restriction maps, the
+limiting groups have a direct description by
+successive kernels.
+
+\subsection{Successive kernels of fixed maps}
+
+Let $V$ be a finite-dimensional real space with
+positive mass $M$. For fixed linear maps $d_j$
+to Euclidean spaces, put $B_j(x)=\|d_jx\|^2$
+and
+\[
+ K_0=V,\quad K_j=\bigcap_{i\le j}\ker d_i,\quad
+ V_j=K_{j-1}\cap K_j^{\perp_M},\quad
+ r_j=\dim K_{j-1}-\dim K_j.
+\]
+Zero values of $r_j$ are allowed. Suppose
+$t_j>0$, $t_{j+1}/t_j\to0$, and
+$E_p=\sum_{j=1}^st_jB_j$. Let $Q_p,N_p$
+satisfy
+\begin{equation}\label{eq:hierarchy-relative-pair}
+ (1-e_p)E_p\le Q_p\le(1+e_p)E_p,\qquad
+ (1-e_p)M\le N_p\le(1+e_p)M,\qquad e_p\to0.
+\end{equation}
+
+\begin{theorem}\label{thm:fixed-map-hierarchy}
+For each $j$ with $r_j>0$, precisely $r_j$
+positive eigenvalues of $(Q_p,N_p)$ have
+scale $t_j$. Dividing them by $t_j$ gives,
+with multiplicity, the positive generalized
+eigenvalues of
+\begin{equation}\label{eq:hierarchy-leading-pair}
+ (B_j|_{K_{j-1}},M|_{K_{j-1}}).
+\end{equation}
+The exact kernel has dimension $\dim K_s$.
+The cumulative spectral space of all groups
+with index greater than $j$, together with
+the kernel, tends to $K_j$. The $j$-th
+group tends to $V_j$ in the $M$-Grassmannian.
+\end{theorem}
+\begin{proof}
+For fixed $j$ set
+$S_{p,j}=(N_p+Q_p/t_j)^{-1}N_p$.
+The vector $u=S_{p,j}f$ solves
+\begin{equation}\label{eq:hierarchy-resolvent}
+ N_p(u,x)+t_j^{-1}Q_p(u,x)=N_p(f,x).
+\end{equation}
+Testing with $x=u$ bounds $\|u\|_M$ and
+$E_p(u)/t_j$ by constants times
+$\|f\|_M$ and $\|f\|_M^2$, respectively.
+For $j>1$, positivity of
+$\sum_{i<j}B_i$ on $K_{j-1}^{\perp_M}$
+then gives
+\[
+ \operatorname{dist}_M(u,K_{j-1})^2
+       \le C(t_j/t_{j-1})\|f\|_M^2.
+\]
+For $j=1$ there is no excluded complement.
+
+The form estimate implies its bilinear
+version
+\begin{equation}\label{eq:relative-bilinear-error}
+ |(Q_p-E_p)(u,x)|
+       \le e_p\sqrt{E_p(u)}\sqrt{E_p(x)}.
+\end{equation}
+This follows by passing to the quotient by
+$\ker E_p$ and conjugating by its positive
+square root. For $x\in K_{j-1}$, all
+$B_i(u,x)$ with $i<j$ vanish exactly,
+and $E_p(x)/t_j$ is bounded. Divide
+\eqref{eq:hierarchy-resolvent} by the
+scales as written and pass to a subsequence.
+Every limit $u\in K_{j-1}$ satisfies
+\[
+ M(u,x)+B_j(u,x)=M(f,x),\qquad x\in K_{j-1}.
+\]
+This equation has a unique solution.
+Finite dimension therefore gives operator
+norm convergence of $S_{p,j}$ to the
+$M$-orthogonal compression of
+$(I+B_j|_{K_{j-1}})^{-1}$, extended by
+zero on the complement. Conjugating by
+the positive mass square roots turns this
+into ordinary self-adjoint norm convergence.
+
+The eigenvalues of $S_{p,j}$ are
+$(1+\lambda/t_j)^{-1}$. Their limits are
+zero on the fast complement, the $r_j$
+values strictly between zero and one
+specified by \eqref{eq:hierarchy-leading-pair},
+and one on $K_j$. This proves the scale
+and coefficient assertions. Repeating for
+all $j$ accounts for every dimension.
+The exact kernel is $K_s$ by
+\eqref{eq:hierarchy-relative-pair}.
+
+The isolated limit eigenvalue one gives
+convergence of the cumulative slow projector
+to the projector onto $K_j$. Differences
+of consecutive cumulative projectors give
+the projector onto
+$K_{j-1}\cap K_j^{\perp_M}$. This proves
+the subspace assertions, including steps
+with $r_j=0$.
+\end{proof}
+
+The pair \eqref{eq:hierarchy-leading-pair}
+can equivalently be taken on
+$K_{j-1}/K_j$, with its quotient mass
+$\inf_{k\in K_j}M(x+k)$.
+If positive row weights satisfy
+$w_e/t_j\to c_e\in(0,\infty)$ within
+each group, use
+$B_j=\sum_{e\text{ in group }j}c_ea_e^*a_e$.
+The relative error of this positive sum
+tends to zero without dividing by its
+smallest weight. Thus logarithmic and
+iterated-logarithmic scales are retained.
+The grouping is attached to a sector
+or path with those limits. It need not
+define one filtration on the entire
+multiparameter base.
+
+\subsection{A relative-gap estimate}
+
+At a single parameter, let $E\ge0$, $M>0$
+on a space of dimension at most $n$, and
+suppose $Q,N$ obey
+\[
+ (1-e)E\le Q\le(1+e)E,\qquad
+ (1-e)M\le N\le(1+e)M,\qquad 0<e<1/4.
+\]
+Order their generalized eigenvalues
+$\gamma_i$ and $\lambda_i$ in the same
+direction, including zeros. A consecutive
+positive index set $I$ is relatively
+separated by $\kappa$ if $0<\kappa\le1$
+and
+\begin{equation}\label{eq:relative-gap}
+ |\gamma_i-\gamma_j|
+       \ge\kappa\max(\gamma_i,\gamma_j),
+       \qquad j\in I,\ i\notin I.
+\end{equation}
+Let $F_I$ and $G_I$ be the corresponding
+finite and observed subspaces.
+
+\begin{lemma}\label{lem:relative-subspace-transport}
+If $e\le c_n\kappa$, then
+\begin{equation}\label{eq:relative-subspace-transport}
+ \|P^M_{F_I}-P^M_{G_I}\|_M\le C_ne/\kappa.
+\end{equation}
+The exact kernels coincide. There is no
+factor depending on the positive spectral
+condition number.
+\end{lemma}
+\begin{proof}
+Choose an $M$-orthonormal eigenbasis $u_i$
+of $(E,M)$ and an $N$-orthonormal eigenbasis
+$v_j$ of $(Q,N)$. Min--max gives
+$\lambda_j/\gamma_j$ between
+$(1-e)/(1+e)$ and $(1+e)/(1-e)$
+for positive eigenvalues, with zeros
+preserved. Testing the $v_j$ equation
+against $u_i$ yields
+\[
+ (\gamma_i-\lambda_j)M(u_i,v_j)
+   =-(Q-E)(u_i,v_j)+\lambda_j(N-M)(u_i,v_j).
+\]
+Since $E(v_j)\le\lambda_j/(1-e)$ and
+$M(v_j)\le(1-e)^{-1}$, the right side
+is at most
+$Ce(\sqrt{\gamma_i\lambda_j}+\lambda_j)$
+in absolute value. For $j\in I$, $i\notin I$,
+\eqref{eq:relative-gap} and smallness of
+$e/\kappa$ give
+\[
+ |\gamma_i-\lambda_j|
+       \ge c\kappa\max(\gamma_i,\lambda_j).
+\]
+Every off-block coefficient is therefore
+at most $Ce/\kappa$. A unit combination
+of at most $n$ columns has off-block
+norm at most $C_ne/\kappa$, after using
+mass equivalence. Equal dimensions and
+the principal-angle identity give
+\eqref{eq:relative-subspace-transport}.
+Explicitly, an $M$-orthonormal basis of
+$G_I$ whose off-block norm is at most
+$a$ has projection to $F_I$ with least
+singular value at least $\sqrt{1-a^2}$;
+its largest principal-angle sine is at
+most $a$. Kernel equality follows
+directly from the two-sided energy
+inequality.
+\end{proof}
+
+Through \eqref{eq:actual-fixed-observer},
+the lemma compares marked actual subspaces
+with the independently constructed finite
+subspaces. It does not identify forms
+on unrelated manifolds without that map.
+Individual vectors require an internal
+relative gap; repeated leading eigenvalues
+give subspace assertions.
+
+\subsection{Limits of the fixed-map description}
+
+The fixed-map hypothesis has mathematical
+content. With identity mass and target
+weight, the moving map
+\[
+ d_h=\begin{pmatrix}1&0\\1&h^m\end{pmatrix},
+ \qquad m>0,
+\]
+has row norms bounded away from zero,
+but $d_h^*d_h$ has trace $2+h^{2m}$
+and determinant $h^{2m}$. Its eigenvalues
+are asymptotic to $2$ and $h^{2m}/2$.
+Multiplying the energy by $t(h)\to0$
+gives two small eigenvalue scales $2t$ and
+$th^{2m}/2$. The rate at which the
+rows become dependent is additional
+data. Replacing the lower-right entry
+by $h^m-h^m+h^n$, $n>m$, replaces the
+second exponent by $2n$; cancellation
+must be performed before assigning
+orders to minors.
+
+The mass is equally necessary. For
+$E_h=h^2I$ and $M_h=\operatorname{diag}(h^2,1)$,
+the generalized eigenvalues are $1,h^2$.
+Vanishing energy on both coordinate
+vectors does not make both eigenvalues tend to zero.
+Finally, orthogonal conjugates of
+$\operatorname{diag}(h,h^2)$ have identical
+characteristic coefficients, but a
+nonconvergent rotation angle produces
+nonconvergent lines. Eigenvalues alone
+do not determine marked spectral
+subspaces.
+
+For the conifold theorem the restriction
+rows are fixed and the central mass is
+positive definite. Thus the hypotheses
+of Theorem~\ref{thm:fixed-map-hierarchy}
+are verified on every capacity-ratio
+sector. The two-dimensional pair also
+has a relative gap throughout the full
+domain, which gives a stronger pointwise
+eigenline statement.

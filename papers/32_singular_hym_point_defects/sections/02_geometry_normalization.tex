@@ -1,0 +1,250 @@
+\section{The extension and its normalization}\label{sec:geometry}
+
+Throughout the paper, $(X,\omega)$ is a connected compact K\"ahler
+surface and $V$ is a holomorphic vector bundle in an exact sequence
+\begin{equation}\label{eq:extension}
+ 0\longrightarrow L\xrightarrow{\iota}V
+       \xrightarrow{q}\cI_WM\longrightarrow0.
+\end{equation}
+Here $L$ and $M$ are line bundles of equal $\omega$-degree,
+$W$ is a nonempty zero-dimensional analytic subscheme, and $V$
+has rank two and is locally free. Existence of this extension is
+part of the hypotheses. Write $\Sigma=\Supp W$ and
+$U=X\setminus\Sigma$, and also denote by $q$ the composite
+$V\to\cI_WM\hookrightarrow M$.
+The positive asymptotic theorem will require $W$ to be reduced
+and $L\not\simeq M$. We retain the general setting in this section
+and in the residue estimate.
+
+\subsection{Metrics, norms and the fixed inclusion}
+
+Use the determinant identification induced by \eqref{eq:extension}.
+Choose Hermitian--Einstein metrics $h_L,h_M$ and put
+\begin{equation}\label{eq:fixed-normalization}
+ h_{\det}=h_Lh_M,\qquad
+ \dd V=\frac{\omega^2}{2},\qquad
+ v_0=\int_X\dd V,\qquad
+ \kappa=\frac{2\pi\deg_\omega L}{v_0}.
+\end{equation}
+Degrees are $\int_Xc_1(\,\cdot\,)\wedge\omega$.
+Both line curvature contractions equal $\kappa$.
+All integral norms use the volume form in
+\eqref{eq:fixed-normalization}. On Hermitian endomorphisms the
+real inner product is $\tr(st)$, and on skew-Hermitian
+endomorphisms it is $-\tr(st)$. Form norms are the ordinary real
+K\"ahler norms, extended to complex tensors. In Euclidean complex
+coordinates with $\omega_E=(i/2)\sum_j\dd z_j\wedge\dd\bar z_j$,
+one consequently has $|\dd z_j|^2=2$.
+
+For a smooth metric $H$ on $V$ with determinant $h_{\det}$, define
+\begin{equation}\label{eq:observables}
+ \begin{aligned}
+ \Phi_H&=i\Lambda_\omega F_H-\kappa I,&
+ u_H&=\iota^*H/h_L,\\
+ Z_H&=\int_Xu_H\,\dd V,&
+ \mathcal E_H&=\int_X
+       |D'_{H\otimes h_L^{-1}}\iota|^2\,\dd V .
+ \end{aligned}
+\end{equation}
+The endomorphism $\Phi_H$ is Hermitian and trace-free.
+The function $u_H$ is smooth on all of $X$, vanishes exactly on
+$\Sigma$, and is positive on $U$. The inclusion in
+\eqref{eq:extension} is a fixed holomorphic section of
+$V\otimes L^{-1}$; it is not renormalized as time varies.
+
+We use the nonnegative scalar Laplacian $\Delta_0=\dd^*\dd$.
+Thus $-\Delta_0=4\sum_j\partial_{z_j}\partial_{\bar z_j}$
+in Euclidean coordinates. The metric flow is
+\begin{equation}\label{eq:metric-flow}
+ H^{-1}\partial_TH=-2\Phi_H,\qquad
+ H(0)=H_{\mathrm{in}},\qquad \det H_{\mathrm{in}}=h_{\det}.
+\end{equation}
+The base, the holomorphic extension and the line metrics remain
+fixed along this equation.
+
+\subsection{The qualitative flow input}
+
+We state the standard convergence input in the form used below.
+Long-time existence holds for every smooth initial Hermitian
+metric on a compact K\"ahler base
+\cite[Theorem~6.8.25]{Kobayashi87}.
+The determinant solves its scalar heat equation, so the initial
+condition in \eqref{eq:metric-flow} preserves $h_{\det}$.
+The time in that reference is $t=2T$.
+
+The rank-one factors of \eqref{eq:extension} are stable of equal
+slope. Thus $V$ is semistable, with graded sheaf
+$G=L\oplus\cI_WM$ and reflexive hull $G^{**}=L\oplus M$.
+The corrected convergence theorem of Sibley--Wentworth
+\cite[Theorem~1.1 and Remark~1.2, with the appended erratum]{SibleyWentworth15}
+identifies the connection limit with
+\begin{equation}\label{eq:graded-connection}
+                 D_*=D_{h_L}\oplus D_{h_M}.
+\end{equation}
+More precisely, after identifying the evolving metrics with a
+fixed Hermitian bundle, every sequence $T_j\to\infty$ has
+subsequences and unitary gauges giving smooth convergence on
+compact subsets of $U$ to this connection. The singular set is
+$\Sigma$, and its multiplicity at $p$ is
+$\dim_\CC\OO_{W,p}$. The corrected multiplicity counts the full
+local length, including nonreduced structure. We use this
+connection theorem and its point cycle; it supplies no rate on
+a shrinking neighbourhood.
+
+The following scalar consequences were established in
+\cite[Section~5]{W_Singular}. We include their proof to fix the
+normalization and to separate the scalar assertion from a
+choice of limiting graded summand.
+
+\begin{proposition}\label{prop:qualitative-flow}
+For every solution of \eqref{eq:metric-flow},
+\begin{equation}\label{eq:exact-dissipation}
+       Z'(T)=-2\mathcal E(T),\qquad
+       \sup_Xu(T)\le CZ(T).
+\end{equation}
+For every compact $K\subset U$,
+\begin{equation}\label{eq:normalized-exterior}
+          \frac{u(T)}{Z(T)}\longrightarrow\frac1{v_0}
+                     \quad\hbox{in }C^\infty(K).
+\end{equation}
+The constant and convergence times may depend on the initial metric.
+\end{proposition}
+
+\begin{proof}
+The curvature contraction on $V\otimes L^{-1}$ is $\Phi_H$.
+Differentiating the norm of the fixed section and using its
+Bochner identity \cite[Proposition~3.1.8]{Kobayashi87} gives
+\[
+ \partial_Tu=-2\langle\Phi_H\iota,\iota\rangle,\qquad
+ -\Delta_0u=2|D'\iota|^2
+                         -2\langle\Phi_H\iota,\iota\rangle .
+\]
+Integration on the compact surface proves the first identity in
+\eqref{eq:exact-dissipation}. No singular boundary is introduced:
+the section and its finite-time metric are smooth across $\Sigma$.
+
+The mean-curvature heat identity, in the present time convention, is
+\begin{equation}\label{eq:mean-curvature-heat}
+ (\partial_T+\Delta_0)|\Phi_H|^2=-2|D_H\Phi_H|^2\le0;
+\end{equation}
+see \cite[Proposition~6.9.1 and equation~(6.9.2)]{Kobayashi87}.
+Its maximum principle bounds $\|\Phi_H\|_\infty$ by the initial
+value. The scalar Bochner inequality therefore gives
+$-\Delta_0u\ge-Cu$. The mean-value estimate on the fixed compact
+base yields $\sup u\le C\int u$, as asserted.
+
+Transport the inclusion isometrically to the fixed Hermitian
+bundle used in the connection convergence theorem and divide it
+by $Z(T)^{1/2}$. The resulting holomorphic section $j_T$ has
+integral squared norm one and a uniform pointwise norm bound.
+On a subsequence giving smooth connection convergence on $U$,
+interior estimates for its holomorphic equation give smooth
+subsequential convergence to a holomorphic section of
+$(L\oplus M)\otimes L^{-1}$ on $U$. Its coefficients extend
+over the isolated points by Hartogs' theorem. The resulting
+global bundle has zero contracted curvature, so its integrated
+Bochner identity makes the section parallel.
+
+The pointwise bound excludes loss of section mass at the points:
+the mass in a union of radius-$r$ coordinate balls is at most
+their volume times a fixed constant. First pass to the limit on
+the complement and then let $r\downarrow0$. The limiting parallel
+section still has squared integral norm one, and hence constant
+squared norm $1/v_0$. If the line factors coincide, different
+subsequences may give different parallel vectors; their squared
+norm is nevertheless the same. Since $|j_T|^2=u/Z$ is unchanged
+by the isometries and gauges, a subsequence contradiction proves
+the full scalar convergence \eqref{eq:normalized-exterior}.
+\end{proof}
+
+\subsection{Local defect data}
+
+In local holomorphic frames compatible with the determinant, the
+extension has the presentation
+\begin{equation}\label{eq:local-koszul}
+             \iota=(f,-g)^{\mathsf t},\qquad q=(g,f).
+\end{equation}
+The ideal $(f,g)$ has an isolated zero. In the regular local
+surface ring it is a regular sequence, so local complete
+intersection structure follows from the assumed locally free
+extension. Write $m_p=\dim_\CC\OO_{X,p}/(f,g)$.
+
+At a reduced point choose holomorphic coordinates orthonormal
+for the base metric at $p$. For any smooth determinant-fixed
+reference metric $H_0$ the function $u_0=\iota^*H_0/h_L$ has
+quadratic term
+\[
+                  u_0(z)=z^*Q_pz+O(|z|^3),
+                  \qquad Q_p>0 .
+\]
+The derivative of the inclusion is an isomorphism at a reduced
+zero. Its Gram determinant is independent of $H_0$ with fixed
+determinant: in the frames of \eqref{eq:local-koszul},
+\begin{equation}\label{eq:defect-constants}
+ d_p:=\det Q_p
+       =|\det\partial(f,g)(p)|^2\frac{h_M(p)}{h_L(p)},
+ \qquad
+ \lambda_p=\sqrt{d_p},\qquad
+ \sigma=\sum_{p\in\Sigma}\lambda_p^{-1}.
+\end{equation}
+These expressions retain the fixed inclusion, base and line
+normalizations. Unit changes of orthonormal coordinates and
+compatible frames do not change $d_p$.
+
+For later estimates we need more than a balanced value at the
+point: the reference metric must have a prescribed local form.
+
+\begin{lemma}\label{lem:normalized-reference}
+If $W$ is reduced, there are K\"ahler normal holomorphic
+coordinates at each point, determinant-compatible holomorphic
+frames, and one smooth global metric $H_0$ with determinant
+$h_{\det}$ such that, on disjoint coordinate balls,
+\begin{equation}\label{eq:normal-reference}
+ \begin{gathered}
+ \iota=\sqrt{\lambda_p}(z_1,-z_2)^{\mathsf t},\qquad
+ q=\sqrt{\lambda_p}(z_2,z_1),\\
+ H_0=hI,\qquad h=\sqrt{h_Lh_M},\qquad
+ u_0=c_p(z)|z|^2,\qquad
+ c_p=\lambda_p\sqrt{h_M/h_L}.
+ \end{gathered}
+\end{equation}
+The line weights equal one at the centre and have vanishing
+first derivatives. Consequently
+$h=1+O(|z|^2)$, $c_p=\lambda_p+O(|z|^2)$ and
+$\omega=\omega_E+O(|z|^2)$.
+\end{lemma}
+
+\begin{proof}
+Choose K\"ahler normal coordinates and normalize the
+holomorphic line frames by a constant and the exponential of a
+linear function. This fixes their values and first metric jets.
+Complete their product to a determinant-compatible frame of $V$.
+Let $v(z)$ be the inclusion column and $J=\partial v(0)$.
+We first remove its higher terms by a determinant-one frame
+change while leaving the base coordinates fixed.
+
+Write $v=A(z)z$, where $A(0)=J$ and $A$ is holomorphic and
+invertible on a smaller ball. Put $B=JA^{-1}$ and $d=\det B$.
+Then $Bv=Jz$ and $d(0)=1$. For $q_z=(-z_2,z_1)$ choose a
+holomorphic column $w$ with $q_zw=d^{-1}-1$; this is possible
+since the right side lies in the maximal ideal. The matrix
+$C=J(I+wq_z)J^{-1}$ fixes $Jz$ and has determinant $d^{-1}$.
+Thus $CB$ has determinant one and sends $v$ to $Jz$.
+
+A unitary change of the base-coordinate phase makes
+$\det J=-\lambda_p$. A constant determinant-one fibre change
+then makes $J=\sqrt{\lambda_p}\diag(1,-1)$.
+Determinant compatibility gives the quotient in
+\eqref{eq:normal-reference}. Prescribe $H_0=\sqrt{h_Lh_M}\,I$
+on smaller balls. Its determinant is exactly $h_{\det}$ and its
+inclusion norm is the one displayed. To extend these prescriptions,
+start with any global determinant-fixed metric. Express the local
+relative changes by trace-free self-adjoint logarithms, multiply
+by cutoffs supported in the disjoint balls, and exponentiate.
+The result agrees with the prescribed metrics near each point
+and retains the determinant everywhere.
+\end{proof}
+
+The hypotheses of this lemma are used only where reducedness is
+stated. A nonreduced ideal has a singular derivative and does not
+admit this linear local presentation.

@@ -1,0 +1,260 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Near a polystable bundle, a finite-dimensional deformation
+space describes the loss of rigidity of Hermitian--Einstein
+metrics. When the underlying Kähler manifold also degenerates,
+this description requires estimates uniform in the geometric
+parameters. An additive error in a finite operator is
+insufficient if some eigenvalues are much smaller than
+others. Likewise, a stationary reduction alone does not
+determine the trajectory selected by a spatially varying
+initial metric or the harmonic metric on nearby bundle
+classes. This paper proves these three comparisons on one
+nonflat bundle family over compact conifold smoothings.
+
+\subsection{The geometric family and the principal theorem}
+
+We use a polarized family $X_p$ of Calabi--Yau threefolds
+whose central fibre has eight ordinary double points.
+The base is a small ball in the six-dimensional space
+\begin{equation}\label{eq:intro-base}
+ \mathcal R=\left\{p\in\CC^8:
+       \sum_{i\in I_f}p_i=\sum_{i\in I_g}p_i=0\right\},
+ \qquad |I_f|=|I_g|=4.
+\end{equation}
+Its smooth locus is the complement of the eight coordinate
+hyperplanes. The node parameters satisfy
+$\tau_i(p)=p_i/u_i(p)$ for nonvanishing holomorphic units.
+The smooth fibres are complete intersections of bidegrees
+$(1,1),(1,1),(2,2)$ in $\PP^3\times\PP^3$.
+Write $H=\OO(2,2)$ and $L=\OO(1,-1)$ on each fibre.
+The actual Ricci-flat metric in $c_1(H)$ has volume
+$V=160/3$, and the split bundle is
+\[
+                 E^{\rm sp}=L\otimes\CC^2\oplus L^{-1}\otimes\CC^2.
+\]
+The polarized construction and the uniform actual-metric
+input are restated in Section~\ref{sec:geometry} from
+\cite{W_Hodge}. All subsequent bundle and flow estimates
+are proved here.
+
+The bundle deformation parameters are two matrices
+$z=(A,B)\in W=\operatorname{Mat}_2(\CC)\oplus\operatorname{Mat}_2(\CC)$,
+with compact action
+$(k_+,k_-)\cdot(A,B)=(k_+Ak_-^{-1},k_-Bk_+^{-1})$.
+The two harmonic extension forms have squared norms
+$c_+(p),c_-(p)>0$. They are uniformly bounded above
+and below and converge to positive central values.
+On the real seven-dimensional space
+\[
+ \mathfrak h=\{(S_+,S_-):S_\pm=S_\pm^*,\quad\tr S_++\tr S_-=0\}
+\]
+define the mass and energy
+\begin{equation}\label{eq:intro-finite-pair}
+ \begin{split}
+ M(S)&=V(\tr S_+^2+\tr S_-^2),\\
+ E_{p,z}(S)&=2c_+\|S_+A-AS_-\|_{\rm HS}^2
+                  +2c_-\|S_-B-BS_+\|_{\rm HS}^2.
+ \end{split}
+\end{equation}
+Let $\mu_1\le\cdots\le\mu_7$ be its generalized
+eigenvalues, including zeros. The quadratic moment is
+\[
+ \mu_{2,p}(A,B)=V^{-1}
+       (c_+AA^*-c_-B^*B,\ c_-BB^*-c_+A^*A).
+\]
+Its zero set becomes $XX^*=Y^*Y$, $YY^*=X^*X$
+under $X=\sqrt{c_+}A$, $Y=\sqrt{c_-}B$.
+
+\begin{theorem}\label{thm:main}
+On the family above there is an actual holomorphic
+rank-four bundle family $\mathcal E_{p,w}$ realizing
+the full local deformation germ of $E^{\rm sp}$, with
+$\det\mathcal E_{p,w}=\OO$ and $c_2(\mathcal E_{p,w})H=32$.
+After one common shrink, the following hold uniformly
+over every smooth $p$ and all small bundle parameters.
+
+\smallskip\noindent
+\textup{(i)} There is a real $K$-equivariant map
+$\chi_p(z)=z+O(|z|^2)$, $d\chi_p=I+O(|z|)$, such that
+every $z\in\mu_{2,p}^{-1}(0)$ gives an actual HE
+connection on $\mathcal E_{p,\chi_p(z)}$.
+These representatives cover the sufficiently small
+polystable objects in the stated local germ. The germ
+contains no stable rank-four objects.
+
+\smallskip\noindent
+\textup{(ii)} At these HE connections the positive
+operator linearizing $h^{-1}\dot h=-2\mathrm i\Lambda F_h$
+has complete small spectrum
+\[
+ (1-C|z|)\mu_j\le\lambda_j\le(1+C|z|)\mu_j
+       \quad(1\le j\le7),\qquad\lambda_8\ge c>0.
+\]
+Its exact trace-free kernel is the compact infinitesimal
+stabilizer. The comparison allows changing kernel dimension
+and arbitrary ratios of positive eigenvalues.
+
+\smallskip\noindent
+\textup{(iii)} Fix an HE member, write $r=|\chi_p(z)|$,
+and fix any finite graph regularity order $m\ge4$.
+There is a common spatial $C^1$ basin of smooth
+determinant-normalized initial metrics and a chosen
+$C^m$ seven-dimensional invariant graph. Every flow
+in that basin selects a $C^1$ finite initial phase
+and tracks the corresponding exact graph trajectory
+with error $CD_*e^{-ct}$ in the logarithmic $C^1$ norm.
+Here $D_*$ is its initial displacement from the graph.
+The selected graph trajectory remains in the actual
+equation for all positive time. Its finite metric is
+the pulled-back $L^2$ metric, its energy is twice
+Donaldson's functional, and its Hessian at the HE
+origin is relatively $1+O(|z|)$ equivalent to $E_{p,z}$
+in the same $S$ coordinates. The preparation time
+$4\sigma^{-1}\log(1/r)$ is negligible compared with
+every positive inverse weak rate.
+
+\smallskip\noindent
+\textup{(iv)} The local HE classes are parametrized by
+$\CC^2/\mathsf W$, where $\mathsf W=(\ZZ/2)^2\rtimes S_2$
+acts by signs and permutation. On every quotient stratum,
+their actual harmonic connection metric is relatively
+$1+O(|u|)$ equivalent to $4|\dd u|^2$.
+For paths confined to a fixed sufficiently small local
+locus, its metric completion is the corresponding
+closed parameter locus, and its unique tangent cone at
+the split bundle is $(\CC^2,4|\dd u|^2)/\mathsf W$.
+The rescaled distance error is $O(\rho)$ on bounded
+balls, uniformly in the degenerating base.
+\end{theorem}
+
+The theorem combines the precise statements proved below.
+The bundle realization is Proposition~\ref{prop:effective-bundles}.
+The relative spectrum and exact balancing are
+Theorem~\ref{thm:complete-bundle-spectrum} and
+Proposition~\ref{prop:exact-balancing-coordinates};
+Section~\ref{sec:balancing} proves holomorphic
+polystability and local completeness. The dynamical
+claims are Theorems~\ref{thm:spatial-entry},
+\ref{thm:invariant-graph}, \ref{thm:all-time-tracking}
+and Corollary~\ref{cor:relative-finite-hessian}.
+The actual quotient identification, harmonic metric and
+distance are Theorems~\ref{thm:unitary-rigidity},
+\ref{thm:harmonic-quotient} and \ref{thm:metric-cone}.
+Their proofs use the same connections and the same
+compact action. The flow parameters are fixed along
+each trajectory; uniformity permits them to approach
+their limits jointly when comparing different trajectories.
+
+The balanced normal form has two cycle parameters.
+Its four types have trace-free stabilizer dimensions
+$1,3,2,7$: two distinct nonzero cycles, a repeated
+nonzero cycle, one nonzero cycle and two zero vertex
+factors, and the split bundle. All occur in the theorem.
+The action in \eqref{eq:intro-finite-pair} controls
+both the zero rates and the unitary quotient directions.
+The graph metric, however, varies metrics on a fixed
+bundle, whereas the harmonic metric varies its
+holomorphic isomorphism class.
+
+A simple path exhibits two widely separated rates.
+Take $X=Y=\diag(h,h+h^b)$ with fixed $b>1$.
+There is one exact zero, two rates
+$2h^{2b}V^{-1}(1+O(h))$, and four rates
+$8h^2V^{-1}(1+o(1))$; see
+Proposition~\ref{prop:two-cycle-spectrum}.
+This permits an arbitrarily long weak time scale
+independently of every node scale. The all-time
+comparison uses the exact finite field, not a
+truncation whose error could accumulate on that scale.
+
+\subsection{Relation to earlier work}
+
+Local HE reduction and geometric invariant theory on a
+fixed compact Kähler manifold are established tools.
+Buchdahl--Schumacher construct equivariant local
+deformations and analytic GIT quotients
+\cite[Theorems 5--8]{BS}; their Proposition~5 identifies
+the harmonic form. Toda describes polystable sheaf
+germs by Ext-quivers with convergent relations
+\cite[Theorem 3.2]{Toda}. Delloque proves complementary
+correction and local quotient results for elliptic
+polynomial curvature equations, including HYM
+\cite[Propositions 4.3 and 4.5 and Theorem 7.4]{Delloque}.
+Here the relations vanish for a geometrically realized
+family, although its threefold Ext-two group is nonzero.
+The analytic estimates must also remain uniform as the
+underlying metric degenerates. The dense-stable
+hypothesis in \cite[Theorem 10]{BS} is absent in our
+rank-four neighbourhood, so that extension theorem
+does not provide the harmonic distance result used here.
+
+Nonflat HYM metrics through conifold transitions were
+constructed by Chuan \cite{Chuan}. Collins--Picard--Yau
+prove a tangent-bundle theorem with quantitative local
+profiles for the Fu--Li--Yau balanced backgrounds
+\cite[Theorem 1.1]{CPY}. Our background is the actual
+Ricci-flat Kähler metric, the bundle has rank four,
+and the base and bundle parameters may have independent
+scales. The additional conclusions concern the complete
+relative endomorphism spectrum, the spatial metric
+flow and the harmonic metric on actual bundle classes.
+
+Haiden--Katzarkov--Kontsevich--Pandit identify iterated
+weight filtrations and iterated-logarithmic asymptotics
+for finite algebra flows \cite{HKKPweights}, and prove
+actual bundle-flow asymptotics on curves
+\cite[Theorem 1.1]{HKKPflows}. Their order and
+integrable-forcing comparison in Section~4.2 of
+\cite{HKKPflows} applies in arbitrary compact Kähler
+dimension. Lam proves logarithmic and iterated-logarithmic
+asymptotics on a fixed smooth compact Kähler base for
+semistable bundles with locally free graded object and
+the stated rationality condition on the invariant inner
+product \cite[Theorem 8.2]{Lam}. His Proposition~8.6
+compares actual and reduced trajectories at bounded
+distance after a preliminary complex-gauge change.
+Our theorem instead concerns a uniform small basin
+around polystable HE metrics over degenerating geometry
+and gives decaying spatial tracking to a selected exact
+graph trajectory. It does not determine nonlinear
+decay exponents or leading coefficients of a trajectory.
+
+Invariant manifolds for parabolic equations are classical;
+see, for example, \cite[Theorem 2.1]{Simonett}.
+Here we prove the required $C^0$-to-$C^1$ heat estimates
+from scalar Ricci-flat heat bounds and controlled split
+connection coefficients. The logarithmic metric equation
+depends only on its first spatial jet. These facts give
+a direct graph construction without assuming uniform
+high-order coordinate estimates at the shrinking nodes.
+The metric-distance inequality then proves confinement
+for an open spatial basin and keeps the selected graph
+trajectory in the original equation.
+
+Earlier work in this series treats stationary local
+reduction on a fixed smooth background \cite{W_Local},
+finite phase reduction for trajectories satisfying its
+confinement hypotheses \cite{W_Phase}, and all-time
+approximation on degenerating curves with the stated
+spatial initial-data class \cite{W_Curves}.
+The present proof verifies the complementary estimates,
+confinement and quotient geometry anew on the nonflat
+conifold family. Its contribution is this geometric
+realization and the simultaneous uniformity of the
+spectral, dynamical and harmonic-metric comparisons.
+
+\subsection{Structure of the proof}
+
+Sections~\ref{sec:geometry}--\ref{sec:projected-he}
+construct the bundles and the uniform analytic estimates.
+Sections~\ref{sec:relative-spectrum}--\ref{sec:moving-scales}
+prove the complete relative spectrum, exact balancing,
+polystability classification and multiscale example.
+Sections~\ref{sec:spatial-entry}--\ref{sec:phase-tracking}
+construct the spatial basin, invariant graph and phase.
+Sections~\ref{sec:harmonic-quotient}--\ref{sec:metric-cone}
+identify actual classes and prove the harmonic metric
+and distance comparisons. All constants refer to the
+common small domains specified in these statements.

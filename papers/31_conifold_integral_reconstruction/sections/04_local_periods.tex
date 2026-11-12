@@ -1,0 +1,301 @@
+\section{Local periods and an effective inverse neighbourhood}
+\label{sec:local-periods}
+
+We construct local period coordinates with quantitative evaluation data.
+The central coefficients and the six transverse coefficient directions
+are algebraic. The inverse period section will generally have
+transcendental coefficients. We therefore distinguish exact algebraic
+operations from the evaluation of analytic functions throughout the
+construction.
+
+\subsection{Evaluation data}
+
+A name for a complex number supplies rational complex approximations
+with any prescribed positive absolute error. Statements about an
+arbitrary named parameter are relative to this access; they do not
+assert that every complex number is computable. For computable parameters
+the procedures below are ordinary algorithms.
+
+\begin{definition}\label{def:bounded-analytic}
+A bounded analytic presentation of a holomorphic function consists of
+a polydisc with specified positive rational radii, an evaluation procedure,
+and a known finite upper bound on a slightly larger closed polydisc.
+All derivative bounds are taken on specified strictly smaller domains.
+\end{definition}
+
+The larger complex domain is essential. Cauchy's formula both bounds
+derivatives and evaluates them by contour quadrature. We do not infer
+derivative access from an arbitrary pointwise evaluator.
+
+Let $c_*$ be an algebraic coefficient triple defining the eight-node
+central complete intersection in $\PP^3\times\PP^3$. Fix six algebraic
+coefficient directions for which the local period derivative has rank
+six, and write $s\in\CC^6$ for their coordinates. The resulting ordered
+triple of equations $F(s)$ has bidegrees $(1,1),(1,1),(2,2)$.
+Let $\Psi$ be its ordered relative residue form. The node labels and
+oriented block relations are those of Section~\ref{sec:algebraic-family};
+retain its space $R$ in \eqref{eq:period-space}.
+The map $\pi_R:R\longrightarrow\CC^6$ retains the first three
+coordinates in each block. Its inverse fills the fourth coordinate
+with the negative sum of the other three.
+
+\begin{theorem}\label{thm:evaluated-periods}
+From these algebraic data one can construct a positive rational radius
+$\rho$, a ball $B_{\rm ev}=\{p\in R:\|p\|<\rho\}$, and a
+holomorphic coefficient map $\sigma$ with the following properties.
+The fibres
+\[
+ X_p=Z\bigl(F(\sigma(\pi_Rp))\bigr)
+\]
+have local periods exactly $p_i$ for the form $\Psi_p$. Their
+discriminant is exactly $\bigcup_i\{p_i=0\}$, and every singularity
+of a fibre is one of the prescribed ordinary double points.
+The family is flat and projective, its total space is smooth, its
+polarization is $\OO(2,2)$, and its relative dualizing form is $\Psi$.
+The coefficient functions, local normal forms, residue units and
+derivatives of every prescribed finite order have bounded analytic
+presentations on specified smaller domains.
+
+One can also select an algebraic coefficient point $s_*$ whose fibre
+is smooth and whose evaluated period point $p_*$ belongs to
+$B_{\rm ev}^{\circ}=B_{\rm ev}\setminus\bigcup_i\{p_i=0\}$,
+with $s_* = \sigma(\pi_Rp_*)$.
+\end{theorem}
+
+No comparison between the nonzero coordinates $p_i$ occurs in this
+statement. The theorem supplies a known observation domain; it does
+not give a complexity bound as a period approaches zero.
+
+\subsection{An implicit function with bounds}
+
+We first give the analytic operation used in the proof. Suppose that
+$G(y,z)$ has a bounded analytic presentation, $G(0,0)=0$, and
+$A=D_yG(0,0)$ is invertible, with an evaluated inverse and a known
+upper bound for its norm. Use the maximum norm and its induced
+operator norm. Bounds on the second derivatives allow us to find
+positive rational $r,\eta$ such that, for $\|y\|\le r$ and
+$\|z\|\le\eta$,
+\begin{equation}\label{eq:implicit-bounds}
+ \|I-A^{-1}D_yG(y,z)\|\le q=\tfrac14,
+ \qquad \|A^{-1}G(0,z)\|\le r/4.
+\end{equation}
+One may first require strict stronger bounds, so their verification
+does not require an equality test on a named complex number.
+The map $T_z(y)=y-A^{-1}G(y,z)$ sends the closed $r$-ball into
+the $r/2$-ball and is a $q$-contraction. Its unique fixed point satisfies
+\begin{equation}\label{eq:implicit-tail}
+ \|y(z)-T_z^n(0)\|
+       \le \frac{q^n}{1-q}\,\frac r4.
+\end{equation}
+Choose $n$ to control this tail, then evaluate the finitely many
+compositions with errors whose propagated sum is smaller than the
+remaining tolerance. The interior margin keeps these compositions
+in their specified domains.
+
+Computable local inversion with derivative access is classical; see
+\cite[Theorem~13 in the arXiv-v2 text]{Ziegler}. Here the displayed
+contraction estimates provide the additional complex-domain bounds
+used by the subsequent period construction.
+
+Uniform convergence of the holomorphic iterates proves holomorphy of
+$y(z)$ and gives the bound $\|y\|\le r/2$. Cauchy's formula on
+an interior product contour evaluates any prescribed derivative.
+A bound on a larger interior contour controls the variation of the
+integrand, and therefore the error of its Riemann sums. This proves
+both derivative evaluation and derivative bounds. Sums, products,
+compositions with a known image margin, and reciprocals with a known
+positive denominator bound preserve these properties.
+
+\subsection{Parameter-preserving holomorphic Morse coordinates}
+
+At an algebraic central node, choose a nonzero two-equation Jacobian
+minor. The preceding construction eliminates two affine variables,
+leaving a bounded holomorphic equation $f(z,s)=0$ in four variables
+$z$. Its central Hessian is nonsingular. A second implicit solution,
+now of $D_zf=0$, gives the critical point $c(s)$. Set
+$\tau(s)=-f(c(s),s)$. Taylor's formula gives
+\begin{equation}\label{eq:integrated-hessian}
+ \begin{split}
+ f(c(s)+v,s)-f(c(s),s)&=v^TH(v,s)v,\\
+ H(v,s)&=\int_0^1(1-t)D_z^2f(c(s)+tv,s)\,\dd t.
+ \end{split}
+\end{equation}
+The integral is evaluated on a fixed real interval using a bound on
+the next derivative. Thus $H$ is a bounded evaluated holomorphic
+symmetric matrix. Its central value is algebraic and nonsingular.
+Symmetric elimination over the algebraic numbers gives $R_0$ with
+$R_0^TH(0,0)R_0=I$.
+
+Writing $v=R_0u$, put
+$K(u,s)=R_0^TH(R_0u,s)R_0-I$. On a known smaller domain
+$\|K\|\le1/4$. The series
+\begin{equation}\label{eq:morse-square-root}
+ C(u,s)=\sum_{j\ge0}\binom{1/2}{j}K(u,s)^j
+\end{equation}
+has remainder at most $q^{N+1}/(1-q)$ after degree $N$, where
+$q=1/4$. Each power of the symmetric matrix $K$ is symmetric,
+and the convergent series identity gives $C^TC=C^2=I+K$.
+Hence $u^T(I+K)u=(Cu)^T(Cu)$. The map $u\mapsto C(u,s)u$
+has derivative $I$ at the central point. Applying
+\eqref{eq:implicit-bounds} once more supplies an inverse with the
+parameter $s$ unchanged. In the resulting coordinates the equation is
+\begin{equation}\label{eq:quadric-normal-form}
+             Q(w)=w_1^2+w_2^2+w_3^2+w_4^2=\tau(s).
+\end{equation}
+All maps and inverses have known domains and derivative bounds.
+For the convergent analytic splitting lemma without these evaluation
+data, see \cite[Theorem~2.4 in the arXiv-v2 text]{GreuelPfister}.
+
+The ordered complete-intersection residue becomes
+\begin{equation}\label{eq:local-residue}
+ \Psi_s=a(w,s)\operatorname{Res}
+   \frac{\dd w_1\wedge\cdots\wedge\dd w_4}{Q(w)-\tau(s)}.
+\end{equation}
+The first elimination divides by the chosen equation minor; subsequent
+changes multiply by evaluated Jacobian determinants. The minor is
+bounded away from zero on a smaller domain. Thus $a$ has a bounded
+analytic presentation and $a(0,0)$ is nonzero and algebraic. The
+fixed local orientation can be included in the sign of $a$.
+
+\subsection{A period series valid at the discriminant}
+
+Choose a known rational $r>0$ and a parameter polydisc such that
+$a$ is holomorphic near their product with $\|w\|_\infty\le r$,
+and $|a|\le M$. Let $\alpha_0$ be half the standard oriented
+volume form on the unit sphere $S^3$, so $\int_{S^3}\alpha_0=\pi^2$.
+The function
+\[
+ A(q,s)=\int_{S^3}a(qy,s)\alpha_0(y)
+\]
+is holomorphic and even in $q$: the antipodal map of $S^3$ has
+degree $+1$. Consequently
+\begin{equation}\label{eq:even-period-series}
+ A(q,s)=\sum_{k\ge0}b_{2k}(s)q^{2k},
+ \qquad |b_{2k}(s)|\le\pi^2Mr^{-2k}.
+\end{equation}
+The bound is Cauchy's estimate on the $q$-circle.
+
+These coefficients can be evaluated without integrating a shrinking
+sphere. Write $a(w,s)=\sum_\alpha a_\alpha(s)w^\alpha$.
+Odd sphere moments vanish by reflection. Separating four Gaussian
+integrals and then using polar coordinates gives, for $|m|=k$,
+\[
+ \int_{S^3}y^{2m}\alpha_0
+ =\frac{\prod_{j=1}^4\Gamma(m_j+1/2)}{\Gamma(k+2)}
+ =\frac{\pi^2}{(k+1)!}
+       \prod_{j=1}^4\frac{(2m_j)!}{4^{m_j}m_j!}.
+\]
+It follows that
+\begin{equation}\label{eq:period-moments}
+ b_{2k}(s)=\frac{\pi^2}{(k+1)!}
+   \sum_{|m|=k}a_{2m}(s)
+           \prod_{j=1}^4\frac{(2m_j)!}{4^{m_j}m_j!}.
+\end{equation}
+Each coefficient $a_{2m}$ is a derivative divided by its factorial
+and is evaluated by the Cauchy procedure above.
+
+Define $U(t,s)=\sum_{k\ge0}b_{2k}(s)t^k$. For $|t|\le r^2/4$,
+\begin{equation}\label{eq:unit-series-tail}
+ \left|U(t,s)-\sum_{k=0}^Nb_{2k}(s)t^k\right|
+ \le\pi^2M\frac{(|t|/r^2)^{N+1}}{1-|t|/r^2}
+ \le\frac43\pi^2M\,4^{-(N+1)}.
+\end{equation}
+For $\tau\ne0$, parametrizing the local sphere by $w=qy$,
+$q^2=\tau$, multiplies the standard residue by $q^2$.
+The local period therefore has the holomorphic continuation
+\begin{equation}\label{eq:period-unit}
+                       P(s)=\tau(s)U(\tau(s),s).
+\end{equation}
+Either square root gives the same integral. Formula
+\eqref{eq:period-unit} evaluates the period even at $\tau=0$;
+it neither tests whether a named number is zero nor divides by $\tau$.
+
+Since $U(0,0)=\pi^2a(0,0)\ne0$, evaluation of its nonzero
+central value and derivative bounds give a further known shrink on
+which
+\begin{equation}\label{eq:known-unit-bounds}
+          0<c\le |U(\tau(s),s)|\le C.
+\end{equation}
+Repeating the construction at eight nodes and taking finitely many
+minima supplies one common coefficient neighbourhood, with the same
+evaluation properties for all the periods and their derivatives.
+
+\subsection{Excluding other singularities}
+
+Choose disjoint coordinate boxes about the eight algebraic nodes,
+with algebraic centres and rational side lengths. Their closures lie
+inside the elimination and inverse Morse domains. Shrink the boxes
+so that every common zero in each closure belongs to the uniquely
+eliminated branch; the strict implicit-function margins preserve this
+property under a known coefficient change.
+
+On the complement of these boxes in the compact ambient product use
+the fixed Fubini--Study metrics and connections. If
+$A_0=\nabla_xF(0)$, then
+\[
+        g_0(x)=|F(0,x)|^2+\lambda_{\min}(A_0A_0^*)
+\]
+is strictly positive there. A zero would be a singular common zero
+outside the eight boxes. A positive rational lower bound $m$ is found by
+successive finite meshes and known variation bounds. The central
+compact domains and coefficients are algebraic, so their coverage
+conditions can also be checked by real algebraic quantifier elimination.
+Polynomial dependence on $s$ and the eigenvalue perturbation inequality
+give a known coefficient radius on which $g_s\ge m/2$. Thus no new
+singularities occur on that complement. In each node box,
+\eqref{eq:quadric-normal-form} shows that a singularity occurs
+precisely when $\tau_i=0$ and is then an ordinary double point.
+
+At every fibre point the three equations form a regular sequence.
+At a smooth point this follows from their independent differentials;
+at a node two equations eliminate variables and the third is the
+nonzero quadratic hypersurface equation. The fixed-degree Koszul
+resolution gives a constant Hilbert polynomial and flatness over the
+coefficient neighbourhood. Adjunction gives the relative form $\Psi$.
+The same Koszul resolution gives
+$H^0(\OO_{X_s})=\CC$ and $H^1(\OO_{X_s})=H^2(\OO_{X_s})=0$.
+The fibres are normal, since they are local complete intersections
+with at most isolated nodes. Connected normal fibres are integral.
+The line bundle $\OO(2,2)$ remains relatively ample.
+
+\subsection{Period inversion and an algebraic reference fibre}
+
+The two sphere relations imply $P(s)\in R$. Set
+$Q_0(s)=\pi_RP(s)$. Its central derivative is the prescribed
+invertible matrix, with entries in $\pi^2\overline{\QQ}$.
+Apply the bounded implicit construction to $Q_0(s)-v=0$.
+It gives a holomorphic $s=\sigma(v)$ on a known neighbourhood, with
+\begin{equation}\label{eq:inverse-period-identity}
+                    P(\sigma(\pi_Rp))=p.
+\end{equation}
+Choose a rational ball $B_{\rm ev}\subset R$ whose image under
+$\pi_R$ lies strictly inside that neighbourhood and whose image under
+$\sigma\pi_R$ lies strictly inside the geometric coefficient domain.
+The computed image bounds give this choice. Equations
+\eqref{eq:period-unit}--\eqref{eq:known-unit-bounds} show that
+\[
+ \tau_i(\sigma(\pi_Rp))=p_i/U_i(p),\qquad
+                  0<c\le|U_i(p)|\le C.
+\]
+This proves the exact discriminant assertion. At a nodal point
+$\dd\tau_i=U_i^{-1}\dd p_i$; the coordinate functional $p_i$
+is nonzero on $R$. The total space is therefore smooth there,
+and it is smooth over every regular fibre point as well.
+
+There is also a known small coefficient ball on which
+$\sigma(Q_0(s))=s$ and $P(s)\in B_{\rm ev}$: shrink until the
+derivative bound for $Q_0$ puts its image inside the inverse domain,
+and use uniqueness of the implicit solution. Enumerate algebraic
+points in this ball. The smooth locus is nonempty and open, because
+the period map is locally invertible and no coordinate $p_i$ vanishes
+identically on $R$. Algebraic points are dense. At an algebraic
+candidate, smoothness is decided by the projective polynomial
+Jacobian rank tests. The search therefore finds a smooth $s_*$.
+The period $p_*=P(s_*)$ is evaluated by the series above and satisfies
+the assertions of Theorem~\ref{thm:evaluated-periods}.
+
+The reference fibre has algebraic equations, although its period point
+need not be algebraic. This is the fibre on which we use exact
+semialgebraic topology. At general period points we use analytic
+evaluations with strict margins, without applying algebraic sign
+tests to transcendental coefficients.

@@ -1,0 +1,202 @@
+\section{A level-set residue estimate for dissipation}
+\label{sec:residue}
+
+The local residue controls the full inclusion derivative energy
+on sublevel sets of its norm. This gives an actual-flow bound
+before constructing a comparison trajectory. The estimate
+allows nonreduced defects and coincident line factors.
+
+Fix a coordinate ball $B_R$ about one $p\in\Sigma$, with no
+other defect in its closure, and use \eqref{eq:local-koszul}.
+The base and line metrics extend smoothly to a neighbourhood
+of the closed ball. Set
+\begin{equation}\label{eq:jacobian-bound}
+ K_p(R)=\sup_{\overline B_R}
+       |\dd f\wedge\dd g|_\omega\sqrt{h_M/h_L},
+           \qquad m_p=\dim_\CC\OO_{X,p}/(f,g).
+\end{equation}
+The finite map germ $(f,g)$ has a Jacobian which is not
+identically zero, so $K_p(R)>0$ for small $R>0$.
+No evolving bundle metric enters this constant.
+
+\begin{lemma}\label{lem:level-set-residue}
+For every smooth Hermitian metric $H$ on $V|_{B_R}$ with the
+prescribed determinant, let $u=\iota^*H/h_L$ and
+$e=|D'_{H\otimes h_L^{-1}}\iota|^2$. Then
+\begin{equation}\label{eq:local-residue-bound}
+ \int_{B_R}e\,\dd V
+       \ge\frac{4\pi^2m_p}{K_p(R)}
+                      \left(\min_{\partial B_R}u\right)^2 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $\tau$ be the $H$-orthogonal right inverse of $q$ on the
+punctured ball, with $\db\tau=\iota\beta$. The form $\beta$
+is $\db$-closed, so
+$\Omega=\dd f\wedge\dd g\wedge\beta$ is closed.
+Its integral over every small outward sphere is
+\begin{equation}\label{eq:bm-residue}
+                  \int_{S_r}\Omega=4\pi^2m_p .
+\end{equation}
+Here is the normalization and its independence of the
+splitting. The right inverse
+$\tau_0=(\bar g,\bar f)^{\mathsf t}/(|f|^2+|g|^2)$
+has extension form
+\[
+ \beta_0=\frac{\bar f\,\dd\bar g-\bar g\,\dd\bar f}
+                       {(|f|^2+|g|^2)^2}.
+\]
+The Bochner--Martinelli degree formula gives
+\eqref{eq:bm-residue} for $\beta_0$, with local algebra
+length $m_p$; see
+\cite[Chapter~II, Section~5, Example~5.5; Chapter~IV,
+Section~2, Theorems~2.3--2.4]{Suwa05}.
+Any other right inverse differs by $\iota a$, and its
+extension form differs by $\db a$. The change in $\Omega$
+is the exact form $\dd(a\,\dd f\wedge\dd g)$, whose
+sphere integral vanishes.
+
+The orthogonal splitting has induced metrics
+$(uh_L,u^{-1}h_M)$. The same Chern calculation as in
+\eqref{eq:full-inclusion-energy} gives
+\[
+                    e=\frac{|\partial u|^2}{u}
+                                      +u^3|\beta|_0^2.
+\]
+The $(1,0)$ part of $\dd u$ wedges to zero with
+$\dd f\wedge\dd g$. The product inequality for the remaining
+forms, followed by $2AB\le A^2+B^2$, yields
+\begin{equation}\label{eq:weighted-residue-form}
+ \begin{split}
+ |\dd(u^2\Omega)|
+ &\le2u|\partial u|\,|\dd f\wedge\dd g|_\omega
+                                  \sqrt{h_M/h_L}\,|\beta|_0\\
+ &\le K_p(R)
+             \left(\frac{|\partial u|^2}{u}+u^3|\beta|_0^2\right).
+ \end{split}
+\end{equation}
+For top-degree complex forms the norm is the modulus of
+their coefficient relative to $\dd V$.
+In particular $|\dd z_1\wedge\dd z_2|=2$ in the
+Euclidean convention; this factor is retained in $K_p(R)$.
+
+Put $b_R=\min_{\partial B_R}u>0$. For a regular value
+$0<b<b_R$, the set $U_b=\{x\in B_R:u(x)<b\}$ has compact
+closure in $B_R$ and smooth boundary, on which $u=b$.
+It contains $p$. Stokes' theorem for $\Omega$ gives
+$\int_{\partial U_b}\Omega=4\pi^2m_p$; any component
+not containing $p$ contributes zero.
+
+We justify the puncture removal also for $u^2\Omega$.
+In fixed smooth coefficient norms put
+$|F|=(|f|^2+|g|^2)^{1/2}$. The orthogonal inverse is
+\[
+                  \tau=\frac{H^{-1}q^*}{qH^{-1}q^*}.
+\]
+Smooth positivity gives $qH^{-1}q^*\asymp|F|^2$ and
+$u\asymp|F|^2$. Differentiating, with constants allowed
+to depend on this fixed metric, gives
+\[
+ |\db\tau|\le C\left(\frac{|\dd F|}{|F|^2}
+                                  +\frac1{|F|}\right),
+ \qquad
+ |\beta|\le C\left(\frac{|\dd F|}{|F|^3}
+                                  +\frac1{|F|^2}\right).
+\]
+Consequently $|u^2\beta|\le C(|F|\,|\dd F|+|F|^2)$
+is bounded. Since $\dd f\wedge\dd g$ is bounded, the
+integral of $u^2\Omega$ over a radius-$\varepsilon$ sphere
+tends to zero. Also \eqref{eq:weighted-residue-form}
+makes its exterior derivative integrable, since $e$ is
+smooth on the whole ball. Stokes' theorem on
+$U_b\setminus B_\varepsilon$ followed by
+$\varepsilon\downarrow0$ thus gives
+\[
+ 4\pi^2m_pb^2
+      =\left|\int_{U_b}\dd(u^2\Omega)\right|
+      \le K_p(R)\int_{U_b}e\,\dd V.
+\]
+Choose regular values tending upward to $b_R$ to obtain
+\eqref{eq:local-residue-bound}. The metric-dependent bounds
+above justify puncture removal only; the final constant is
+the fixed geometric constant \eqref{eq:jacobian-bound}.
+\end{proof}
+
+\begin{theorem}\label{thm:general-upper-rate}
+Under the general hypotheses \eqref{eq:extension}, every
+solution of \eqref{eq:metric-flow} satisfies
+\begin{equation}\label{eq:general-upper-rate}
+                           Z(T)=O(T^{-1}).
+\end{equation}
+If $W$ has a nonreduced point, then
+\begin{equation}\label{eq:nonreduced-rate}
+       \frac{-Z'(T)}{Z(T)^2}\longrightarrow+\infty,
+                          \qquad TZ(T)\longrightarrow0 .
+\end{equation}
+If every point is reduced, define
+\begin{equation}\label{eq:mass-coefficient}
+                  C_*=\frac{4\pi^2\sigma}{v_0^2}.
+\end{equation}
+Then
+\begin{equation}\label{eq:reduced-liminf}
+ \liminf_{T\to\infty}\frac{-Z'(T)}{Z(T)^2}\ge C_*,
+             \qquad \limsup_{T\to\infty}TZ(T)\le C_*^{-1}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Take disjoint fixed coordinate balls about the defects.
+The actual metric is smooth at every finite time with
+the fixed determinant, so Lemma~\ref{lem:level-set-residue}
+applies on each ball. By
+Proposition~\ref{prop:qualitative-flow},
+$\min_{\partial B_R(p)}u(T)/Z(T)\to1/v_0$.
+The exact dissipation identity therefore gives
+\begin{equation}\label{eq:fixed-ball-liminf}
+ \liminf_{T\to\infty}\frac{-Z'(T)}{Z(T)^2}
+       \ge\frac{8\pi^2}{v_0^2}
+                          \sum_{p\in\Sigma}\frac{m_p}{K_p(R)}.
+\end{equation}
+For any such fixed balls the right side is positive.
+The derivative of $1/Z$ is thus eventually bounded
+below by a positive constant, which proves
+\eqref{eq:general-upper-rate}.
+
+At a reduced zero, \eqref{eq:defect-constants} and
+the real two-form norm give
+\[
+ |\dd f\wedge\dd g|_\omega(p)
+       =2|\det\partial(f,g)(p)|,\qquad
+                 K_p(R)\longrightarrow2\sqrt{d_p}.
+\]
+Let $R\downarrow0$ after taking the time limit in
+\eqref{eq:fixed-ball-liminf}. Since $m_p=1$, this
+proves the first assertion in \eqref{eq:reduced-liminf}.
+For every $c<C_*$ one has $(1/Z)'\ge c$ for all
+sufficiently large times. Integrate and then let
+$c\uparrow C_*$ to prove the second assertion.
+
+At a nonreduced zero the derivative of $(f,g)$ cannot
+be invertible: the holomorphic inverse theorem would
+otherwise give the maximal ideal and length one.
+Hence $\dd f\wedge\dd g$ vanishes at that point and
+$K_p(R)\to0$. Its summand in
+\eqref{eq:fixed-ball-liminf} becomes arbitrarily large.
+Given any positive constant, first choose a fixed
+radius small enough and then take time sufficiently
+large. This proves $(1/Z)'\to+\infty$.
+Integration gives $TZ(T)\to0$.
+\end{proof}
+
+For reduced points the static metrics
+\eqref{eq:balanced-static} satisfy
+$2\mathcal E_a/Z_a^2\to C_*$. Thus the coefficient in
+\eqref{eq:reduced-liminf} is attained by an explicit
+family of smooth compact metrics. This does not yet
+establish its attainment along the actual flow. The
+remainder of the paper supplies the elliptic correction
+and dynamical comparison in the distinct-factor case.
+The nonreduced conclusion \eqref{eq:nonreduced-rate}
+is an upper-rate statement and does not select a sharp
+power or a logarithmic correction.

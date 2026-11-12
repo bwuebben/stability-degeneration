@@ -1,0 +1,254 @@
+\section{The complete relative endomorphism spectrum}
+\label{sec:relative-spectrum}
+
+The complementary correction in Section~\ref{sec:projected-he}
+provides actual connections for every small matrix parameter,
+even before solving the remaining finite equation.
+The metric isometry $U_p(z)=e^{s_p(z)/2}$ transports the
+Chern connection of $(\dbar_0+b_p(z),h_0e^{s_p(z)})$ to a
+unitary connection $\mathcal A_p(z)$ for the fixed metric
+$h_0$. Its moment is exactly
+\[
+                 \mathrm i\Lambda F_{\mathcal A_p(z)}=\Psi_p(z).
+\]
+On the real Hilbert space of trace-free Hermitian endomorphisms
+let
+\begin{equation}\label{eq:actual-rough-form}
+ \mathcal L_{p,z}=D_{\mathcal A_p(z)}^*D_{\mathcal A_p(z)},
+ \qquad q_{p,z}(u)=\|D_{\mathcal A_p(z)}u\|_2^2.
+\end{equation}
+The form domain is $H^1$ on each compact smooth fibre;
+the operator has its usual elliptic domain. On the parallel
+space $\mathfrak h$ define
+\begin{equation}\label{eq:finite-bundle-energy}
+ \begin{split}
+ E_{p,z}(S)={}&2c_+(p)\|S_+A-AS_-\|_{\rm HS}^2\\
+             &+2c_-(p)\|S_-B-BS_+\|_{\rm HS}^2.
+ \end{split}
+\end{equation}
+Its mass is $M$ in \eqref{eq:split-mass}. This form uses
+all Hermitian matrix directions, including noncommuting
+ones. Denote its generalized eigenvalues, including zeros,
+by $\mu_1\le\cdots\le\mu_7$.
+
+\begin{theorem}\label{thm:complete-bundle-spectrum}
+Uniformly for $p\in\mathcal B^\circ$ near zero and $z$
+in a fixed small matrix ball, the whole form satisfies
+\begin{equation}\label{eq:whole-bundle-form}
+ \begin{split}
+ (1-C|z|)\{E_{p,z}(S)+q_{p,0}(w)\}
+ &\le q_{p,z}(S+w)\\
+ &\le(1+C|z|)\{E_{p,z}(S)+q_{p,0}(w)\},
+ \end{split}
+\end{equation}
+for $S\in\mathfrak h$, $w\perp\mathfrak h$ in $H^1$.
+The exact kernel consists of the constant sections
+\begin{equation}\label{eq:actual-stabilizer-kernel}
+ \{S\in\mathfrak h:S_+A=AS_-,\quad S_-B=BS_+\}.
+\end{equation}
+The ordered eigenvalues of $\mathcal L_{p,z}$, including
+zeros, satisfy
+\begin{equation}\label{eq:seven-eigenvalues}
+ (1-C|z|)\mu_j\le\lambda_j\le(1+C|z|)\mu_j
+       \quad(1\le j\le7),\qquad\lambda_8\ge c>0.
+\end{equation}
+The split projection $\Pi_p$ identifies the whole
+seven-dimensional spectral space with $\mathfrak h$,
+and its inverse differs from the constant inclusion by
+$O(|z|)$ in $L^2$ operator norm. All these conclusions
+allow arbitrary ratios among the positive $\mu_j$ and
+changing kernel dimension.
+At a zero of $\Psi_p$, this is the complete small spectrum
+of the linearization of
+$h^{-1}\partial_th=-2\mathrm i\Lambda F_h$.
+\end{theorem}
+
+\begin{proof}
+The transported $(0,1)$ coefficient is exactly
+\[
+ U_p b_p U_p^{-1}-(\dbar_0U_p)U_p^{-1}.
+\]
+The graph and parameter bounds for $s_p$, together with
+\eqref{eq:controlled-harmonic-gauge}, give
+\begin{equation}\label{eq:connection-expansion}
+ \begin{gathered}
+ \mathcal A_p(z)=\mathcal A_{0,p}+a_{1,p}(z)+\mathcal N_p(z),
+ \qquad a_{1,p}(z)=\eta_p(z)-\eta_p(z)^*,\\
+ \|a_p(z)\|_\infty\le C|z|,
+ \quad\|\mathcal N_p(z)\|_\infty\le C|z|^2,
+ \quad\|d_z\mathcal N_p(z)\|_\infty\le C|z|,
+ \end{gathered}
+\end{equation}
+where $a_p=\mathcal A_p-\mathcal A_{0,p}$.
+These maps are $K$-equivariant. For
+\[
+ \delta_zS=(S_+A-AS_-,\ S_-B-BS_+)
+\]
+the infinitesimal action of $\mathrm iS$ is
+$\mathrm i\delta_zS$. Differentiating equivariance gives
+\[
+ [\mathrm iS,\mathcal N_p(z)]
+             =d_z\mathcal N_p(z)[\mathrm i\delta_zS].
+\]
+The positive lower bounds for $c_\pm$ and fixed volume
+therefore imply the crucial directional estimate
+\begin{equation}\label{eq:relative-commutator}
+ \|[\mathcal N_p(z),S]\|_2
+                         \le C|z|\,E_{p,z}(S)^{1/2}.
+\end{equation}
+It holds also when $E_{p,z}(S)=0$, in which case the
+commutator vanishes exactly. This estimate differentiates
+the compact action, so it does not require a holomorphic
+connection remainder.
+
+The type components and the two off-diagonal blocks are
+orthogonal. Hence
+\[
+ \|[a_{1,p},S]\|_2^2
+          =2\|[\eta_p,S]\|_2^2=E_{p,z}(S).
+\]
+Moreover $a_{1,p}$ is coclosed for $D_0$: the $(0,1)$
+component is $\dbar_0$-coclosed by harmonicity, the other
+component is its adjoint, and the remaining adjoints have
+the wrong bidegrees. Since $S$ is parallel,
+\begin{equation}\label{eq:linear-orthogonality}
+       \langle D_0w,[a_{1,p},S]\rangle_2=0.
+\end{equation}
+The split section gap and \eqref{eq:connection-expansion}
+also give
+\[
+ \|[a_p,w]\|_2\le C|z|\|w\|_2
+                         \le C'|z|q_{p,0}(w)^{1/2}.
+\]
+Now expand
+\[
+ D_{\mathcal A_p(z)}(S+w)
+     =D_0w+[a_{1,p},S]+[\mathcal N_p,S]+[a_p,w].
+\]
+By \eqref{eq:linear-orthogonality} the squared norm of
+the first two terms is exactly $q_{p,0}(w)+E_{p,z}(S)$.
+The other two have norm at most $C|z|$ times its square
+root. Squaring proves \eqref{eq:whole-bundle-form}, first
+on smooth sections and then on the entire form domain.
+
+The lower bound forces $w=0$ and $E_{p,z}(S)=0$ for
+any vector in the kernel. Conversely these conditions
+annihilate both commutators, including the nonlinear
+one by \eqref{eq:relative-commutator}. This proves
+\eqref{eq:actual-stabilizer-kernel}.
+The comparison form $E_{p,z}(S)+q_{p,0}(w)$ is an
+orthogonal direct sum. Its first seven eigenvalues are
+$\mu_1,\ldots,\mu_7$, because $\mu_7\le C|z|^2$ while
+the complementary gap is fixed. Min--max applied to
+\eqref{eq:whole-bundle-form} proves
+\eqref{eq:seven-eigenvalues}, with the exact zero
+multiplicities already established.
+
+On the entire small spectral space the energy is at most
+$C|z|^2$ times the norm. If $v=S+w$ belongs to it, the
+lower comparison and split gap yield
+$\|w\|_2\le C|z|\|v\|_2$. Thus $\Pi_p$ is injective
+there and hence an isomorphism onto the seven-dimensional
+space $\mathfrak h$, with the asserted inverse estimate.
+This is a whole-space identification, without a claim
+about individual nearly coincident eigenlines.
+
+At $\Psi_p(z)=0$ the corrected connection is HE.
+The section Kähler identity gives
+$\mathcal L_{p,z}=2\dbar_{\mathcal A_p(z)}^*
+\dbar_{\mathcal A_p(z)}$. The infinitesimal curvature
+moment for the variation $h\mapsto he^v$ is
+$\dbar^*\dbar v$. The prescribed metric flow therefore
+linearizes to $\partial_tv=-\mathcal L_{p,z}v$.
+Away from that zero set the theorem concerns the rough
+operator \eqref{eq:actual-rough-form}; it does not
+identify a Hessian at a noncritical metric.
+\end{proof}
+
+A useful second reconstruction minimizes energy at a
+fixed split projection. For each $S\in\mathfrak h$,
+let $w(S)\perp\mathfrak h$ minimize $q_{p,z}(S+w)$.
+Complementary coercivity gives a unique linear minimizer.
+The expansion in the proof shows
+\[
+ |q_{p,z}(S,w)|\le C|z|E_{p,z}(S)^{1/2}q_{p,0}(w)^{1/2}.
+\]
+Testing its equation with $w(S)$ gives
+\begin{equation}\label{eq:variational-reconstruction}
+ q_{p,0}(w(S))^{1/2}\le C|z|E_{p,z}(S)^{1/2}.
+\end{equation}
+Its mass is $M(S,S)+\|w(S)\|_2^2$, and the minimized
+energy is relatively equivalent to $E_{p,z}$.
+This variational reconstruction vanishes on the exact
+kernel. It need not be the inverse of the spectral
+projection used in Theorem~\ref{thm:complete-bundle-spectrum}.
+
+\subsection{The quadratic term of the actual finite moment}
+
+\begin{proposition}\label{prop:quadratic-moment}
+The map in \eqref{eq:finite-actual-moment} satisfies
+\begin{equation}\label{eq:moment-taylor}
+ \Psi_p(z)=\mu_{2,p}(z)+O(|z|^3),\qquad
+ d_z\Psi_p(z)=d_z\mu_{2,p}(z)+O(|z|^2),
+\end{equation}
+where
+\begin{equation}\label{eq:quadratic-moment}
+ \mu_{2,p}(A,B)=\frac1V
+ \bigl(c_+AA^*-c_-B^*B,\ c_-BB^*-c_+A^*A\bigr).
+\end{equation}
+The estimates are uniform in the full period domain.
+\end{proposition}
+
+\begin{proof}
+Pair the contracted differentiated curvature terms of
+$M_b$ with a parallel block matrix. The Kähler adjoint
+identities and integration by parts show that their
+projection is zero. Consequently
+\[
+ \Pi_p M_b=\Pi_p\mathrm i\Lambda(-b\wedge b^*-b^*\wedge b).
+\]
+Replacing $b$ by $\eta_p$ changes this by $O(|z|^3)$.
+In a unitary coframe with
+$\omega=\mathrm i\sum_j\theta^j\wedge\bar\theta^j$,
+if $\beta=\sum_jC_j\bar\theta^j$, then
+\[
+ \mathrm i\Lambda(-\beta\wedge\beta^*-\beta^*\wedge\beta)
+                                      =\sum_j[C_j,C_j^*].
+\]
+The two blocks of \eqref{eq:harmonic-arrow-form} therefore
+give the diagonal expression
+\[
+ \begin{pmatrix}
+ |\eta_p^+|^2AA^*-|\eta_p^-|^2B^*B&0\\
+ 0&|\eta_p^-|^2BB^*-|\eta_p^+|^2A^*A
+ \end{pmatrix}.
+\]
+Integration supplies the coefficients $c_\pm(p)$ and
+projection divides by $V$. The total trace is zero,
+so no further scalar correction occurs.
+The explicit expansion of
+\eqref{eq:finite-chern-change} also gives
+\[
+ \|\mathcal F_p(s,z)-M_b-P_ps\|_\infty
+       \le C(|z|+\|s\|_{\mathcal G})\|s\|_{\mathcal G}.
+\]
+At $s=s_p(z)=O(|z|^2)$ this is $O(|z|^3)$, and
+$\Pi_pP_ps=0$. This proves the first estimate.
+The uniform differentiated Taylor expansions give the
+second estimate.
+\end{proof}
+
+An additive cubic error in \eqref{eq:moment-taylor}
+can dominate an arbitrarily small quadratic component.
+We therefore solve the exact equation in the next
+section, instead of inferring its zeros from this
+expansion. For the spectral form itself, replacing
+$c_\pm(p)$ by $c_{\pm,0}$ is already legitimate:
+it changes \eqref{eq:finite-bundle-energy} by a relative
+factor $1+O(e(p))$, where
+\[
+ e(p)=\max_\pm|c_\pm(p)/c_{\pm,0}-1|\longrightarrow0.
+\]
+Thus the relative spectral error is $O(|z|)+O(e(p))$
+with these fixed central coefficients, for every joint
+base and bundle path in the stated domain.

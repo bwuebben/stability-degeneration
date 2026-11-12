@@ -1,0 +1,239 @@
+\section{Initial Kähler metrics on the full smoothing base}
+\label{sec:initial-metrics}
+
+We use the polarized family
+$(X_p,\mathcal L_p,\Omega_p)$ of Section~\ref{sec:geometry}.
+Let $\omega_0\in c_1(\mathcal L_0)$ be its central singular
+Ricci-flat metric. The central conical theorem of
+\cite[Theorem~1.4 and Lemma~A.1]{hein-sun} applies: the nodes
+have strongly regular Calabi--Yau cones, and a full-support
+line in the period base gives a polarized smoothing over a disc.
+It supplies fixed holomorphic conical charts with potentials
+\begin{equation}\label{eq:central-conical-potentials}
+ \phi_{0,i}=\phi_{C,i}+v_i,\qquad
+ \phi_{C,i}=c_i^{\,0}|z|^{4/3},\qquad
+ |\nabla_C^jv_i|\le C_jr_i^{2+\mu-j}
+\end{equation}
+for some $\mu>0$. Here $r_i$ is the fixed cone radius,
+comparable to $|z|^{2/3}$. We decrease $\mu$ so that $\mu\le3/2$.
+The constant $c_i^{\,0}$ in the potential is unrelated to the
+link norm $c_i$ in the capacity energy.
+
+\begin{proposition}\label{prop:initial-kahler}
+For every sufficiently small fixed $R>0$ and all sufficiently
+small $p\in B^\circ$, there is a smooth Kähler form
+$\widetilde\omega_p^R\in c_1(\mathcal L_p)$ with the following
+properties.
+
+On $r_i<R$ it is a normalized Stenzel form $\sigma_{i,p}$,
+of length scale
+\begin{equation}\label{eq:normalized-cap-scales}
+ \varepsilon_i=b_i(p)^{1/2}|\tau_i(p)|^{1/3},
+ \qquad b_i(p)\longrightarrow b_i(0)>0.
+\end{equation}
+Outside $r_i<2R$ it converges smoothly to $\omega_0$ under
+exterior family identifications.
+
+Let $\Theta_p$ be the positive density associated with
+$\Omega_p\wedge\overline{\Omega_p}$, with the fixed conventional
+complex factor, and put
+\[
+ V=\int_{X_p}c_1(\mathcal L_p)^3,\quad
+ I(p)=\int_{X_p}\Theta_p,\quad
+ \kappa(p)=V/I(p),\quad
+ F_p^R=\log\frac{\kappa(p)\Theta_p}
+                         {(\widetilde\omega_p^R)^3}.
+\]
+Then $I(p)\to I(0)>0$. There is a smooth radius function
+$\varrho_p$, comparable to the scaled Stenzel radius on the
+node regions and to one on the fixed exterior, such that, for
+every fixed $k$,
+\begin{equation}\label{eq:initial-residual}
+ \limsup_{\substack{p\to0\\p\in B^\circ}}
+ \max_{j\le k}\sup_{X_p}
+       \varrho_p^j|\nabla^j F_p^R|\le C_kR^\mu.
+\end{equation}
+On each Stenzel region the stronger identity and estimate hold:
+\begin{equation}\label{eq:pluriharmonic-residual}
+ F_p^R=\log\left|\frac{a_i(z,p)}{a_i(0,p)}\right|^2,
+ \qquad |\nabla^jF_p^R|\le C_j\varrho_p^{3/2-j},
+ \qquad \Omega_p=a_i(z,p)\Omega_{Q,\tau_i}.
+\end{equation}
+The derivatives use the initial metric. The constants are
+independent of the ratios and phases of the node parameters.
+The parameter neighbourhood can depend on $R$ and $k$.
+\end{proposition}
+
+\subsection{Family charts and Hermitian weights}
+
+The conical charts in \eqref{eq:central-conical-potentials} may
+be chosen compatibly with nearby quadric fibres. Indeed lift
+the fixed central transition to an invertible ambient holomorphic
+germ $\Phi$. Since it preserves the node, $Q\circ\Phi=uQ$ for
+a holomorphic unit $u$. After choosing a square root, the map
+$\Psi=u^{-1/2}\Phi$ satisfies $Q\circ\Psi=Q$ and is invertible.
+It therefore acts on all nearby fibres. The nonconstant scalar
+factor changes the central metric at relative order
+$O(|z|)=O(r_i^{3/2})$; its constant part changes only the fixed
+normalization and phase. Thus
+\eqref{eq:central-conical-potentials} holds in these family
+charts after decreasing $\mu$ if needed.
+
+The central form is the normalized Chern form of a Hermitian
+metric $h_0$ on $\mathcal L_0$ over $X_0^{\mathrm{reg}}$:
+use the bounded-potential Calabi--Yau solution relative to a
+smooth background Chern form. We normalize Hermitian weights
+so that their Chern form is $\mathrm i\partial\bar\partial\phi$
+and represents $c_1$; the factor $2\pi$ is included in the
+weight convention.
+
+Choose a holomorphic frame of $\mathcal L$ on each node
+neighbourhood. Its $h_0$-weight can be made exactly
+$\phi_{0,i}$. The difference is pluriharmonic on the punctured
+node. Since its link is $S^2\times S^3$, its first real
+cohomology vanishes; the difference is the real part of a
+single-valued holomorphic function. Hartogs extension on the
+normal threefold node extends that function across the vertex.
+Lift its germ to the ambient chart and extend the resulting
+frame change to the family.
+
+For fixed $R$, the complement of the radius-$R/2$ node
+regions is a compact smooth part of the family. Extend $h_0$
+smoothly there, for example by extending its logarithm relative
+to a background metric in a smooth tubular neighbourhood and
+using a partition of unity. Denote the extension by
+$h_{\mathrm{ext},p}$. On each fixed collar its weight
+$\phi_{\mathrm{ext},i,p}$ tends to $\phi_{0,i}$ in every
+$C^k$ norm. No rate uniform as $R\downarrow0$ is required.
+
+\subsection{Volume and the exact local normalization}
+
+Choose a holomorphic nonvanishing ambient representative for
+the coefficient $a_i$ in \eqref{eq:pluriharmonic-residual}.
+Its value at $(0,p)$ is taken in this chosen representative,
+even though $z=0$ does not belong to the smooth quadric.
+
+We first prove continuity of $I(p)$ without restricting the
+relative scales. Under $z=\sqrt{\tau}\,y$, the residue form
+pulls back to $\tau\Omega_{Q,1}$ and the Stenzel metric scales
+by $|\tau|^{2/3}$. The unit Stenzel volume has Euclidean
+growth in real dimension six. Consequently the
+$\Theta_{Q,\tau}$-volume of $r_i<s$ is at most $Cs^6$,
+uniformly for small $\tau$. If the region meets the cap
+core, the same estimate follows from the unit-cap volume
+bound for radii above its positive minimum. Boundedness
+of $a_i$ preserves this estimate. On the complement of
+these balls the densities converge smoothly. Letting $s$
+tend to zero proves $I(p)\to I(0)$ along every sequence in
+the base. The limit is positive on the fixed exterior.
+
+The intersection number $V$ is constant in the flat polarized
+family, so $\kappa(p)\to\kappa(0)>0$. Normalize the holomorphic
+scaling of the unit Stenzel form by
+$\omega_{\mathrm{St},\tau}^3=\kappa_{\mathrm{St}}\Theta_{Q,\tau}$
+and set
+\begin{equation}\label{eq:stenzel-volume-normalization}
+ b_i(p)=
+ \left(\frac{\kappa(p)|a_i(0,p)|^2}
+                  {\kappa_{\mathrm{St}}}\right)^{1/3},
+ \qquad
+ \sigma_{i,p}=b_i(p)\omega_{\mathrm{St},\tau_i(p)}.
+\end{equation}
+The limiting cone form of $\sigma_{i,p}$ is exactly
+$\omega_{C,i}$: both have the standard quadric shape in
+the chosen conical chart, and their volume coefficient is
+$\kappa(0)|a_i(0,0)|^2$. That coefficient fixes the positive
+metric scale. This proves \eqref{eq:normalized-cap-scales}.
+The Stenzel potentials $\psi_{i,p}$ can be normalized by
+constants so that they converge to $\phi_{C,i}$ with all
+derivatives on each fixed punctured annulus.
+
+\subsection{Gluing in the prescribed polarization}
+
+Choose $\chi_i=0$ on $r_i\le R$ and $\chi_i=1$ on
+$r_i\ge2R$, with $|\nabla^j\chi_i|\le C_jR^{-j}$.
+In the node frame use the Hermitian weight
+\begin{equation}\label{eq:initial-weight-gluing}
+ \widetilde\phi_{i,p}
+   =\psi_{i,p}+\chi_i
+                  (\phi_{\mathrm{ext},i,p}-\psi_{i,p}).
+\end{equation}
+It agrees with the exterior weight near the outer overlap.
+These weights define a global Hermitian metric on the
+original line bundle $\mathcal L_p$. Its normalized Chern
+form therefore represents exactly $c_1(\mathcal L_p)$.
+
+The form is positive on the core because it is Stenzel,
+and on the fixed exterior by convergence to $\omega_0$.
+On the transition annulus the limit at fixed $R$ is
+$\mathrm i\partial\bar\partial(\phi_{C,i}+\chi_iv_i)$.
+Every differentiated cutoff term has relative size
+$O(R^\mu)$ by \eqref{eq:central-conical-potentials}.
+For $R$ small the limiting form is positive, and for
+all sufficiently small $p$ positivity follows by smooth
+convergence on this fixed annulus.
+
+On the core, \eqref{eq:stenzel-volume-normalization} makes
+the logarithmic residual exactly
+\eqref{eq:pluriharmonic-residual}. A holomorphic logarithm
+exists on a smaller ambient neighbourhood. Its Taylor
+expansion has no $z$-constant term. A linear coordinate
+has conic degree $3/2$; its differentiated estimates are
+uniform on every scaled cap, including its core. The
+higher Taylor terms have higher degree, and the convergent
+series gives the stated estimate at every fixed order.
+On the transition annulus the metric error is $O(R^\mu)$
+with scaled derivatives, and the central volume coefficient
+varies by $O(R^{3/2})$. On the fixed exterior the residual
+tends smoothly to zero. These estimates prove
+\eqref{eq:initial-residual} and complete the proof of
+Proposition~\ref{prop:initial-kahler}. Notice the exact
+compatibility
+\begin{equation}\label{eq:initial-volume-compatibility}
+ \int_{X_p}e^{F_p^R}(\widetilde\omega_p^R)^3=V.
+\end{equation}
+
+\subsection{Comparison with the surgery metrics}
+
+The initial metrics satisfy
+\begin{equation}\label{eq:initial-model-comparison}
+ \limsup_{p\to0}\sup
+ |\Phi_p^*\widetilde g_p^R-
+       \bar g_{\varepsilon(p)}^{R,A}|
+                  _{\bar g_{\varepsilon(p)}^{R,A}}
+ \le C R^\mu+C e_{\mathrm{AC}}(A),
+ \qquad e_{\mathrm{AC}}(A)\longrightarrow0.
+\end{equation}
+Here the model metrics and their fixed central and cap
+modifications are those of Sections~\ref{sec:model-energy}
+and \ref{sec:model-compactness}. On the fixed exterior
+the initial metric tends to $g_0$, and its difference
+from the central model is $O(R^\mu)$. On each inner region
+it is exactly normalized Stenzel. The completed cap differs
+from that metric only by the fixed large-radius
+asymptotically conical error $e_{\mathrm{AC}}(A)$.
+The same bound covers the intervening annuli.
+
+The identifications can also accommodate all phases.
+The normal graph map between $Q=\tau$ and $Q=0$ tends
+to the identity away from the core; identifying the core
+with $Q=1$ uses a choice of $\sqrt{\tau}$. The two cone-end
+maps can differ by a bounded Reeb rotation, an isometry
+of the cone. Interpolate that rotation in $\log r$
+between $2A\varepsilon_i$ and $R$, keeping it constant
+near the endpoints. Its radial angular derivative in
+the unit frame is at most
+$C/\log(R/(2A\varepsilon_i))$. Thus its relative metric
+error tends to zero as that neck length tends to infinity.
+The finite maximum tends to zero without a ratio bound.
+The maps are chosen fibrewise; a single-valued
+trivialization around the discriminant is not asserted.
+This proves \eqref{eq:initial-model-comparison} on the
+entire manifold, in the order: fixed $R,A$, then $p\to0$.
+
+The construction parallels the Hermitian-weight method in
+\cite[Proposition~5.9]{benabida}; the uniform estimates here
+use the full period base. Neither
+\eqref{eq:initial-residual} nor
+\eqref{eq:initial-model-comparison} yet compares the
+actual Ricci-flat metric with the surgery model.

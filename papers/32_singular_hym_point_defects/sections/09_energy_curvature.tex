@@ -1,0 +1,308 @@
+\section{Derivative energy and curvature concentration}
+\label{sec:energy-curvature}
+
+We retain the reduced, distinct-factor hypotheses of
+Theorem~\ref{thm:actual-comparison}. All assertions below
+concern the actual solution \(H(T)\).
+
+\begin{theorem}\label{thm:energy-curvature}
+For sufficiently large \(T\),
+\begin{equation}\label{eq:actual-energy-bounds}
+ \|\Phi_{H(T)}\|_\infty\le\frac{C}{1+T},\qquad
+ \frac{c}{(1+T)^2}\le\mathcal E(T)\le\frac{C}{(1+T)^2}.
+\end{equation}
+At each \(p\in\Sigma\), the convergence
+\[
+ H(T,r_p(T)y)\longrightarrow H_{\mathrm{loc}}(y)
+\]
+holds in \(C^\infty\) on every compact \(y\)-set, in the
+fixed holomorphic frames of Lemma~\ref{lem:normalized-reference}.
+In particular, for every fixed \(R>0\),
+\begin{equation}\label{eq:actual-core-energy}
+ \int_{B_{Rr_p(T)}(p)}|F_{H(T)}|^2\,\dd V
+ \longrightarrow8\pi^2\mathfrak F(R),\qquad
+ \mathfrak F(R)=\frac{R^4(R^2+3)}{(1+R^2)^3}.
+\end{equation}
+The first radius \(r_{F,p}(T)\) where the curvature energy
+in the coordinate ball about \(p\) reaches \(4\pi^2\)
+satisfies
+\begin{equation}\label{eq:half-charge-radius}
+ r_{F,p}(T)=r_p(T)(1+o(1)).
+\end{equation}
+\end{theorem}
+
+\subsection{The Donaldson functional and mean-curvature decay}
+
+Use the Donaldson functional with an arbitrary additive constant
+and the first variation
+\begin{equation}\label{eq:donaldson-variation}
+ \dd\mathcal D_H(Hs)=\int_X\tr(\Phi_Hs)\,\dd V,
+ \qquad \dd V=\omega^2/2 .
+\end{equation}
+The first and second variations are given in
+\cite[(6.3.27), (6.3.29)--(6.3.34)]{Kobayashi87}.
+On a metric geodesic \(H_\theta=He^{\theta s}\), its
+acceleration is zero, so the general second-variation
+formula and integration by parts give
+\begin{equation}\label{eq:donaldson-convexity}
+ \frac{\dd^2}{\dd\theta^2}\mathcal D(H_\theta)
+       =\|D'_{H_\theta}s\|_2^2\ge0 .
+\end{equation}
+No HE endpoint is needed for this calculation. The actual
+flow in our time convention satisfies
+\begin{equation}\label{eq:donaldson-dissipation}
+ \frac{\dd}{\dd T}\mathcal D(H(T))
+       =-2\|\Phi_{H(T)}\|_2^2.
+\end{equation}
+All three identities use the same volume normalization.
+
+\begin{lemma}\label{lem:functional-decay}
+The functional has a finite infimum \(\mathcal D_{\inf}\)
+on the smooth metrics of determinant \(h_{\det}\), and
+\begin{equation}\label{eq:functional-decay}
+ 0\le\mathcal D(H(T))-\mathcal D_{\inf}\le C/T
+\end{equation}
+for large \(T\).
+\end{lemma}
+
+\begin{proof}
+The corrected family has
+\(\|\Phi_{\widehat H_a}\|_\infty\le Ca\) and bounded
+logarithmic-parameter velocity, by
+\eqref{eq:corrected-bounds} and \eqref{eq:corrected-tangent}.
+Thus \eqref{eq:donaldson-variation} gives
+\(|\partial_a\mathcal D(\widehat H_a)|\le C\).
+There is a finite limit \(\mathcal D_{\inf}\), with
+\[
+ |\mathcal D(\widehat H_a)-\mathcal D_{\inf}|\le Ca.
+\]
+For a fixed smooth determinant-fixed metric \(H\), the
+supremum distance to \(\widehat H_a\) is at most
+\(C_H+C|\log a|\). Indeed the reference eigenvalues
+\(w,w^{-1}\) lie between fixed positive multiples
+of \(a\) and \(a^{-1}\), and the correction is
+\(O(a\ell(a))\). Convexity at \(\widehat H_a\) gives
+\[
+ \mathcal D(H)\ge\mathcal D(\widehat H_a)
+ +\int_X\tr\bigl(\Phi_{\widehat H_a}
+             \log(\widehat H_a^{-1}H)\bigr)\,\dd V .
+\]
+The final term is \(O_H(a\ell(a))\). Letting \(a\downarrow0\)
+with \(H\) fixed proves that \(\mathcal D(H)\ge\mathcal D_{\inf}\).
+The comparison metrics attain this value in the limit,
+so it is the infimum.
+
+For any fixed smooth metric \(K\), let
+\(d_2(H,K)^2=\int_X|\log(H^{-1}K)|_H^2\,\dd V\).
+The endpoint variation of squared distance and convexity give
+\begin{equation}\label{eq:evi}
+ \frac12\frac{\dd}{\dd t}d_2(H(t),K)^2
+ \le2\{\mathcal D(K)-\mathcal D(H(t))\}.
+\end{equation}
+To check the sign and factor, the gradient of half squared
+distance at \(H\) is minus the logarithm toward \(K\);
+the velocity is \(-2\Phi_H\); and convexity bounds the
+pairing of \(\Phi_H\) with that logarithm by
+\(\mathcal D(K)-\mathcal D(H)\).
+
+For each final \(T\), fix \(K=\widehat H_{a(T)}\) while
+integrating \eqref{eq:evi} over \([T/2,T]\).
+The initial distance in that interval is uniformly bounded:
+Theorem~\ref{thm:actual-comparison} compares \(H(T/2)\) with
+\(\widehat H_{a(T/2)}\), and the bounded parameter velocity
+bounds the remaining distance by
+\(C|\log(a(T/2)/a(T))|\). The ratio tends to two.
+Since \(\mathcal D\) decreases along the actual flow,
+integration gives
+\(\mathcal D(H(T))-\mathcal D(K)\le C/T\).
+Adding the nonnegative comparison gap, at most \(Ca(T)\),
+proves \eqref{eq:functional-decay}.
+\end{proof}
+
+The mean-curvature identity \eqref{eq:mean-curvature-heat}
+makes \(\|\Phi(T)\|_2^2\) nonincreasing. Therefore
+\[
+ \frac T2\|\Phi(T)\|_2^2
+ \le\int_{T/2}^T\|\Phi(t)\|_2^2\,\dd t
+ \le\tfrac12\{\mathcal D(H(T/2))-\mathcal D_{\inf}\}
+ \le C/T .
+\]
+The unit-time scalar heat \(L^1\)-to-\(L^\infty\) estimate
+applied to \(|\Phi|^2\) gives
+\(\|\Phi(T)\|_\infty^2\le C\|\Phi(T-1)\|_2^2\).
+This proves the first estimate of
+\eqref{eq:actual-energy-bounds}.
+The exact integrated inclusion identity then gives
+\[
+ \mathcal E(T)
+ =\int_X\langle\Phi_H\iota,\iota\rangle\,\dd V
+ \le\|\Phi_H\|_\infty Z(T)\le C/T^2 .
+\]
+The lower bound follows from \eqref{eq:reduced-liminf}
+and \eqref{eq:actual-mass}. This argument estimates the
+whole inclusion derivative and does not differentiate
+the mass equivalent.
+
+\subsection{Smooth convergence on the intrinsic scale}
+
+Fix \(p\), a sequence \(T_n\to\infty\), and a finite
+\(R>0\). Put \(r_n=r_p(T_n)\) and use the rescaled
+cylinder \(B_{4R}(0)\times[-4,4]\), corresponding to
+\[
+ z=r_ny,\qquad T=T_n+r_n^2\tau .
+\]
+For large \(n\) it lies at positive times in the
+original coordinate ball. The rescaled base forms
+\(\omega_n=r_n^{-2}\delta_n^*\omega\), where
+\(\delta_n(y)=r_ny\), converge smoothly to the
+Euclidean form. Choose the time-independent scalar
+reference matrix
+\[
+ H_{0,n}(y)=\sqrt{h_L(r_ny)h_M(r_ny)}\,I .
+\]
+It has the exact rescaled determinant, uniformly
+bounded smooth coefficients and inverse, and zero
+trace-free mean curvature.
+
+Set \(G_n(y,\tau)=H(T_n+r_n^2\tau,r_ny)\).
+These matrices converge uniformly on the cylinder
+to \(H_{\mathrm{loc}}(y)\). Indeed \(a'=O(a^2)\)
+implies \(a(T_n+r_n^2\tau)/a(T_n)\to1\) uniformly,
+\(\alpha(T_n)/a(T_n)\to1\), and the global metric
+comparison \eqref{eq:actual-static-comparison} tends
+to equality throughout the indicated times.
+The explicit reference metrics have the stated limit.
+In particular \(G_n\) and \(H_{0,n}\) are uniformly
+comparable, and the relative logarithm is trace-free.
+The rescaled projective mean curvature is
+\(r_n^2\Phi_{H(T_n+r_n^2\tau)}\). It is uniformly
+bounded by \eqref{eq:actual-energy-bounds}; the original
+maximum-principle bound would already suffice here.
+
+Apply the unit-radius \(k=0\) interior estimate of
+\cite[Appendix~C, Theorem~C.1 and Proposition~C.2]{JacobWalpuski18}
+on nested balls at each time. Its inputs are bounded
+base and reference geometry, a bounded trace-free
+metric logarithm, and bounded projective mean curvature.
+All hold uniformly in these rescaled charts. The
+conclusion bounds the logarithm in \(W^{2,p}\) on
+smaller balls for every finite \(p\), hence in
+\(C^{1,\beta}\) for \(p>4\). A finite covering gives
+a uniform spatial gradient bound on \(B_{3R}\).
+We use the unit-radius conclusion after rescaling;
+metric comparability alone is not the hypothesis
+of this estimate.
+
+We give the remaining parabolic step explicitly.
+In the fixed holomorphic frames the rescaled metric
+equation has a uniformly parabolic scalar principal
+part on matrix entries, with coefficients determined
+by \(\omega_n\). The remaining terms are smooth
+quadratic expressions in the first spatial derivatives,
+the positive matrix and its inverse, together with
+the smooth zeroth-order term \(2\kappa r_n^2G_n\).
+The spatial gradient bound makes these terms uniformly
+bounded. Interior parabolic \(W^{2,1}_p\) estimates,
+with \(p>6\), give joint
+\(C^{1+\beta,(1+\beta)/2}\) bounds on a smaller
+cylinder. The right side is then Hölder, and
+parabolic Schauder estimates give
+\(C^{2+\beta,1+\beta/2}\). Differentiating the smooth
+equation and repeating on nested cylinders bounds
+every fixed parabolic derivative. At each step there
+is positive separation from the spatial and temporal
+boundaries. The reference matrix is independent of
+\(\tau\), so it contributes no reference velocity.
+This is the local bootstrap in
+\cite[proof of Theorem~2.5, (2.53)--(2.59)]{XiongYangYau26},
+with its prescribed-tensor term replaced here by
+the displayed smooth zeroth-order term.
+
+We have proved smooth precompactness on smaller
+cylinders. Every subsequential smooth limit is the
+already determined uniform limit \(H_{\mathrm{loc}}\).
+A subsequence contradiction gives full smooth
+convergence at \(\tau=0\) on \(B_R\). Since \(R\)
+and the sequence \(T_n\) were arbitrary, this proves
+the smooth convergence in Theorem~\ref{thm:energy-curvature}.
+No rate for the higher derivatives is needed or asserted.
+
+\subsection{Defect energy and the two radii}
+
+Chern curvature depends smoothly on the metric, its inverse
+and its first two derivatives. The smooth inner convergence
+therefore implies convergence of curvature in the rescaled
+holomorphic frames and fibre metrics. Four-dimensional
+curvature energy is unchanged by the constant spatial
+dilation and corresponding base rescaling. By
+\eqref{eq:local-densities},
+\[
+ \int_{B_R}|F_{H_{\mathrm{loc}}}|^2\,\dd V_{\mathrm E}
+ =48\pi^2\int_0^{R^2}\frac{s}{(1+s)^4}\,\dd s
+ =8\pi^2\mathfrak F(R).
+\]
+This proves \eqref{eq:actual-core-energy}.
+
+For completeness these local limits account for the full
+defect charge. An integrable unitary connection on a
+Kähler surface has self-dual part \((\Lambda F)\omega/2\).
+With our real norm, the self-dual decomposition gives
+\begin{equation}\label{eq:chern-weil-energy}
+ \int_X|F_H|^2\,\dd V
+ =\int_X\tr(F_H\wedge F_H)
+       +\int_X|\Lambda F_H|^2\,\dd V .
+\end{equation}
+The second term is \(2\kappa^2v_0+\|\Phi_H\|_2^2\).
+If \(N=\#\Sigma\), the exact sequence implies
+\[
+ \operatorname{ch}_2(V)
+ =\operatorname{ch}_2(L\oplus M)-N[\mathrm{pt}].
+\]
+Since
+\(\operatorname{ch}_2=-\tr(F\wedge F)/(8\pi^2)\),
+the topological first terms for \(V\) and \(L\oplus M\)
+differ by \(8\pi^2N\). Thus
+\begin{equation}\label{eq:total-curvature-limit}
+ \lim_{T\to\infty}\int_X|F_{H(T)}|^2\,\dd V
+ =\int_X|F_{D_*}|^2\,\dd V+8\pi^2N.
+\end{equation}
+This also checks the sign: the anti-self-dual local
+model contributes positive energy \(8\pi^2\).
+
+Fix disjoint radius-\(r\) coordinate balls and a fixed
+\(R>0\). The corrected connection convergence in
+Section~\ref{sec:geometry} gives convergence of the
+gauge-invariant curvature energy on their fixed
+exterior. Subtracting that exterior energy and the
+core limits from \eqref{eq:total-curvature-limit}
+therefore gives
+\begin{align}
+ \lim_{T\to\infty}\sum_p
+  \int_{B_r(p)\setminus B_{Rr_p(T)}(p)}
+             |F_{H(T)}|^2\,\dd V
+ ={}&8\pi^2N\{1-\mathfrak F(R)\}\notag\\
+    &+\sum_p\int_{B_r(p)}|F_{D_*}|^2\,\dd V .
+                                          \label{eq:ordered-tightness}
+\end{align}
+Let \(r\downarrow0\) and then \(R\uparrow\infty\).
+The right side tends to zero, proving tightness in
+this ordered-limit sense. Nonnegativity gives the
+same conclusion at each point. We assert no
+quantitative tail for a simultaneously varying \(R\).
+
+Finally \(\mathfrak F\) is continuous and strictly
+increasing on \(R>0\), and \(\mathfrak F(1)=1/2\).
+For any fixed \(0<\delta<1\), the actual energies
+inside \((1-\delta)r_p(T)\) and \((1+\delta)r_p(T)\)
+are eventually below and above \(4\pi^2\), respectively.
+Energy in a ball is continuous and nondecreasing
+in its radius, so the first radius reaching that
+value lies between the two. Letting
+\(\delta\downarrow0\) proves \eqref{eq:half-charge-radius}
+and completes the proof of
+Theorem~\ref{thm:energy-curvature}.
+By Corollary~\ref{cor:c0-inner}, the first half-height
+inclusion radius has the same leading value, uniformly
+in direction. The energy threshold here is half
+the defect quantum, not half the total curvature
+energy of the compact bundle.

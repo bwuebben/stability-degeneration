@@ -1,0 +1,283 @@
+\section{Uniform correction to the actual Ricci-flat metrics}
+\label{sec:ricci-flat}
+
+We now solve the Monge--Ampère equation on the prescribed fibres
+in their prescribed polarization. The six quadratic harmonic
+directions at each node are represented by finite automorphisms,
+so that their nonlinear volume contribution cancels exactly.
+
+\begin{theorem}\label{thm:ricci-flat-comparison}
+Let $\omega_p$ be the Ricci-flat Kähler form in $c_1(\mathcal L_p)$.
+With the fixed choices of Section~\ref{sec:global-inverse}, there
+are $R_1>0$ and $C_k$ such that, for each fixed $0<R<R_1$
+and sufficiently small $p\in B^\circ$,
+\[
+ \omega_p=\widetilde\omega_p^R
+                     +\mathrm i\partial\bar\partial u_p^R,
+ \qquad Q(u_p^R)=0,
+\]
+where $u_p^R$ is real and
+\begin{equation}\label{eq:actual-potential-bound}
+ \limsup_{\substack{p\to0\\p\in B^\circ}}
+ \max_{j\le k}\sup_{X_p}\varrho_p^j
+ |\nabla^j(\mathrm i\partial\bar\partial u_p^R)|
+                  _{\widetilde g_p^R}
+       \le C_kR^{\mu-\eta}.
+\end{equation}
+Consequently the compatible surgery identifications satisfy
+\begin{equation}\label{eq:actual-model-comparison}
+ \limsup_{\substack{p\to0\\p\in B^\circ}}\sup
+ |\Phi_p^*g_p-\bar g_{\varepsilon(p)}^{R,A}|
+                   _{\bar g_{\varepsilon(p)}^{R,A}}
+ \le C R^{\mu-\eta}+CR^\mu+C e_{\mathrm{AC}}(A).
+\end{equation}
+There is no restriction on scale ratios or phases. The limits
+are taken with $R,A$ fixed before $p\to0$, and then
+$R\downarrow0$, $A\to\infty$. No parameter-derivative estimate
+or arbitrary simultaneous choice $R=R(p)$ is asserted.
+\end{theorem}
+
+\subsection{The nonlinear potential coordinates}
+
+Use the moment decomposition of
+\eqref{eq:global-domain-norm}. Separate the nine
+pluriharmonic coefficients at each node from the
+six quadratic coefficients, and identify the
+latter with $A_i\in\mathrm i\mathfrak{so}(4,\RR)$
+using the fixed basis in
+Lemma~\ref{lem:cap-harmonic-basis}. For the Stenzel
+potential $\psi_{i,p}$ define
+\[
+ \Psi_{i,p}(A_i)(z)
+       =\psi_{i,p}(e^{A_i}z)-\psi_{i,p}(z).
+\]
+After shrinking the fixed charts this is defined
+for $A_i$ in a fixed small ball. Let $E_p^R$ be
+the product of the $Q$-zero, zero-core-moment
+remainder space and the finite coefficients
+$b=(b_{i,a})_{a\le9}$, $A=(A_i)$, with norm
+\[
+ \|x\|_E=\|v\|_{C^{k+2,\alpha}_{2+\eta}}
+                         +\sum_{i,a}|b_{i,a}|+\sum_i|A_i|.
+\]
+For $x=(v,b,A)$ put
+\begin{equation}\label{eq:nonlinear-potential-map}
+ S_p(x)=v+\sum_i\chi_i
+       \left(\sum_{a=1}^9b_{i,a}H_{i,a,p}
+                             +\Psi_{i,p}(A_i)\right).
+\end{equation}
+The derivative $J_p=DS_p(0)$ is the canonical
+linear identification with $X_{p,0}^R$ and has
+uniformly bounded inverse by the norm definition.
+Also $Q(S_p(x))=0$.
+
+For small $A$, the differentiated radial Stenzel
+formula gives
+\begin{equation}\label{eq:finite-automorphism-bounds}
+ \begin{split}
+ |\nabla^j\Psi_{i,p}(A)|
+       &\le C_j|A|\varrho_p^{2-j},\\
+ |\nabla^j(\sigma_{i,p,A}-\sigma_{i,p})|
+       &\le C_j|A|\varrho_p^{-j},
+ \qquad \sigma_{i,p,A}=(e^A)^*\sigma_{i,p}.
+ \end{split}
+\end{equation}
+Positive-order derivatives in $A$ have the same
+radius weights, with products of direction norms
+in place of $|A|$. The estimates include scaled
+Hölder norms. On the unit cap they follow from
+smoothness on its core and the differentiated
+asymptotic expansion on its end; the matrices
+$e^A$ and their inverses range in a compact set,
+so radii and scaled derivatives are comparable.
+Homothety proves uniformity in every
+$\varepsilon_i$.
+
+The exact identity
+\begin{equation}\label{eq:finite-automorphism-volume}
+ \sigma_{i,p,A}^{\,3}=\sigma_{i,p}^{\,3}
+\end{equation}
+is decisive. The matrix $e^A$ preserves the
+quadric and residue form because
+$A^{\mathsf T}=-A$ and $\tr A=0$. Pulling back
+the normalized Stenzel Calabi--Yau equation
+proves \eqref{eq:finite-automorphism-volume}
+for finite $A$.
+
+We do not assert that $S_p$ maps a uniform
+parameter ball into a uniform ball of the
+linear norm $X_p^R$. Its nonlinear degree-two
+angular profile need not have that property.
+Instead we estimate the volume operator
+directly on $E_p^R$. The variable remainder
+$v$ is not pulled back by $e^A$, so no
+differentiability loss from composition of
+variable Hölder functions is involved.
+
+\subsection{Uniform weighted nonlinear estimates}
+
+Define
+\begin{equation}\label{eq:nonlinear-log-volume}
+ \mathcal M_p^R(x)=
+  \log\frac{(\widetilde\omega_p^R+
+            \mathrm i\partial\bar\partial S_p(x))^3}
+                 {(\widetilde\omega_p^R)^3}.
+\end{equation}
+On a fixed sufficiently small ball in $E_p^R$
+the perturbed form is positive,
+$\mathcal M_p^R(x)\in Y_p^R$, and
+\begin{equation}\label{eq:nonlinear-derivative-bound}
+ \|D\mathcal M_p^R(x)-D\mathcal M_p^R(y)\|_{E\to Y}
+       \le C\|x-y\|_E.
+\end{equation}
+Here and below the radius and constants are
+independent of $R,p$.
+
+We verify the weight near a node. Write
+$e_i=\widetilde\omega_p^R-\sigma_{i,p}$;
+\eqref{eq:initial-local-derivatives} gives
+$e_i=O(\varrho_p^\mu)$ with scaled derivatives.
+On $r_i<r_0$ the cutoffs are constant and the
+pluriharmonic terms have zero complex Hessian.
+The perturbed form is therefore
+\[
+ \sigma_{i,p,A_i}+e_i+B,\qquad
+ B=\mathrm i\partial\bar\partial v
+       =O(\|v\|_E\varrho_p^\eta).
+\]
+By \eqref{eq:finite-automorphism-volume}, its
+logarithmic volume ratio is exactly
+\begin{equation}\label{eq:weighted-logdet-cancellation}
+ \log\det\bigl(I+\sigma_{i,p,A_i}^{-1}(e_i+B)\bigr)
+ -\log\det\bigl(I+\sigma_{i,p}^{-1}e_i\bigr).
+\end{equation}
+For small fixed $r_0$ and parameter radius,
+these matrices remain in a fixed positive
+cone. Inversion and logarithmic determinant
+have bounded derivatives there. Each variation
+in $v$ has weight $\eta$. A variation in $A$
+differentiates $\sigma_A^{-1}$ but retains
+the factor $e_i+B$; all pure $A$ derivatives
+vanish when $e_i=B=0$. Two $v$ variations have
+weight $2\eta$, and mixed variations have
+weight at least $\eta$, since $\mu>\eta$.
+Scaled Hölder product estimates prove membership
+in $Y$ and \eqref{eq:nonlinear-derivative-bound}.
+
+On the cutoff annuli and exterior, radii are
+bounded below by fixed $r_0$, so ordinary
+Hölder matrix estimates apply. Globally,
+\eqref{eq:finite-automorphism-bounds} gives
+\begin{equation}\label{eq:nonlinear-tensor-bound}
+ \max_{j\le k}\sup\varrho_p^j
+ |\nabla^j(\mathrm i\partial\bar\partial S_p(x))|
+                    _{\widetilde g_p^R}\le C\|x\|_E.
+\end{equation}
+Shrinking the parameter ball gives positivity.
+These arguments give a $C^2$ map and the
+stated uniform Lipschitz derivative.
+
+\subsection{The global volume constraint}
+
+Choose a nonnegative exterior bump supported
+away from the $\chi_i$ and positive on an
+open set. Normalize it to
+$\int a_p\,\dd V_{\widetilde g_p^R}=1$.
+Its $Y$ norm is uniformly bounded. The
+projection
+\[
+ \Pi_p f=f-a_p\int_{X_p}f\,\dd V_{\widetilde g_p^R}
+\]
+is bounded from $Y_p^R$ to $Y_{p,0}^R$,
+because the total volume is bounded and
+the weight is positive. Let
+$\mathcal N_p=\Pi_p\mathcal M_p^R$. Its
+derivative at zero is
+\[
+ D\mathcal N_p(0)=P_p^R J_p:
+                  E_p^R\longrightarrow Y_{p,0}^R.
+\]
+Theorem~\ref{thm:global-scalar-inverse} gives
+a uniform inverse. The contraction
+\begin{equation}\label{eq:nonlinear-contraction}
+ x\longmapsto (D\mathcal N_p(0))^{-1}
+ \left[\Pi_pF_p^R-
+       \bigl(\mathcal N_p(x)-D\mathcal N_p(0)x\bigr)\right]
+\end{equation}
+therefore solves
+$\mathcal N_p(x)=\Pi_pF_p^R$ for sufficiently
+small $\|F_p^R\|_Y$, with a threshold independent
+of $R,p$. More explicitly, the ball of radius
+$2C_{\mathrm{inv}}\|\Pi_pF_p^R\|_Y$ is
+preserved, and its Lipschitz constant is at
+most one half once this radius is below the
+fixed threshold from
+\eqref{eq:nonlinear-derivative-bound}. Hence
+\begin{equation}\label{eq:nonlinear-solution-bound}
+ \|x_p^R\|_E\le C\|F_p^R\|_Y.
+\end{equation}
+
+The projected equation implies
+$\mathcal M_p^R(x_p^R)-F_p^R=c a_p$.
+Both unprojected volume integrals equal $V$:
+one by \eqref{eq:initial-volume-compatibility},
+the other because $S_p(x_p^R)$ is a global
+potential in the same Kähler class.
+The function
+\[
+ c\longmapsto
+ \int_{X_p}e^{F_p^R+c a_p}(\widetilde\omega_p^R)^3
+\]
+is strictly increasing, since $a_p$ is
+nonnegative and positive on a set of positive
+volume. Thus $c=0$. We have solved the full
+Monge--Ampère equation with its single global
+compatibility condition.
+
+\subsection{Smallness of the actual residual and uniqueness}
+
+Proposition~\ref{prop:initial-kahler} gives
+the stronger weighted residual estimate
+\begin{equation}\label{eq:weighted-actual-residual}
+ \limsup_{p\to0}\|F_p^R\|_{C^{k,\alpha}_\eta}
+       \le C_kR^{\mu-\eta}.
+\end{equation}
+On the core, \eqref{eq:pluriharmonic-residual}
+gives $R^{3/2-\eta}$. On the radius-$R$
+transition its scaled derivatives are
+$O(R^\mu)$ and the weight contributes
+$R^{-\eta}$. On the fixed exterior the
+residual tends smoothly to zero.
+One further derivative gives the Hölder
+bound. Since $\mu\le3/2$, these estimates
+prove \eqref{eq:weighted-actual-residual}
+on the full admissible domain.
+
+Choose $R$ small enough for the uniform
+contraction threshold, and then $p$ small
+at that fixed $R$. Set $u_p^R=S_p(x_p^R)$.
+Equations \eqref{eq:nonlinear-tensor-bound},
+\eqref{eq:nonlinear-solution-bound} and
+\eqref{eq:weighted-actual-residual} prove
+\eqref{eq:actual-potential-bound}. The resulting
+positive form has volume $\kappa(p)\Theta_p$,
+so is Ricci-flat. Its class is exactly
+$c_1(\mathcal L_p)$. Uniqueness in the fixed
+Kähler class identifies it with $\omega_p$.
+Elliptic bootstrapping makes it smooth, and
+repeating the argument at any higher fixed
+order estimates the same metric by uniqueness.
+
+Combining \eqref{eq:actual-potential-bound}
+with \eqref{eq:initial-model-comparison}
+proves \eqref{eq:actual-model-comparison}.
+It covers every cap, intervening annulus
+and exterior point. The actual metric is
+independent of the auxiliary radius $R$.
+Taking successively smaller fixed $R$
+also proves smooth convergence to $g_0$
+on every fixed exterior compact set and
+to the normalized unit Stenzel metric on
+every fixed rescaled cap compact set.
+This completes the proof of
+Theorem~\ref{thm:ricci-flat-comparison}.

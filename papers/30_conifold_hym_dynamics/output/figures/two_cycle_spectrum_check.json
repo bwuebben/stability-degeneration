@@ -1,0 +1,16 @@
+{
+  "scope": "Exact finite energy/mass calculation and illustration; no actual metric or nonlinear-flow simulation",
+  "dimension": 7,
+  "basis_gram": "identity",
+  "characteristic_polynomial": "t*(-8*d**2 + t)*(-8*e**2 + t)*(-2*d**2 - 4*d*e - 2*e**2 + t)**2*(-2*d**2 + 4*d*e - 2*e**2 + t)**2",
+  "normalization": "Eigenvalues shown are V times the generalized eigenvalues",
+  "sampled_ratios": 801,
+  "maximum_error_scaled_by_largest_root": 4.353388980002574e-16,
+  "zero_multiplicities": {
+    "e=0<d": 2,
+    "e=d>0": 3,
+    "generic_positive_distinct": 1,
+    "d=e=0": 7
+  },
+  "result": "PASS"
+}

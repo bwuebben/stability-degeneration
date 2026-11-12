@@ -1,0 +1,122 @@
+\section{Integral topology and geometric observations}
+\label{sec:integral-topology}
+
+Throughout, a complete intersection has its scheme structure, and its
+complex orientation fixes Poincar\'e duality. Put $A=\PP^3\times\PP^3$.
+We first compute the integral topology of every smooth complete
+intersection of bidegrees $(1,1),(1,1),(2,2)$. This computation does
+not require its first two equations to cut out a smooth fourfold.
+
+\begin{proposition}\label{prop:middle-lattice}
+For any such smooth complete intersection $X$,
+\[
+ H_1(X;\ZZ)=0,\qquad H_2(X;\ZZ)=\ZZ^2,\qquad H_3(X;\ZZ)=\ZZ^{134}.
+\]
+The intersection form on $H_3(X;\ZZ)$ is unimodular and alternating.
+\end{proposition}
+
+\begin{proof}
+Consider the affine coefficient space
+\begin{equation}\label{eq:full-coefficients}
+ \mathcal C=H^0(A,\OO(1,1))^{\oplus2}
+                       \oplus H^0(A,\OO(2,2))\cong\CC^{132}.
+\end{equation}
+Its locus $\mathcal U$ of smooth three-dimensional intersections
+is Zariski open: the rank-deficient zero locus of the universal
+equations is closed and projective over $\mathcal C$, so its image
+is closed. A regular triple has nonempty zero set because its
+intersection class is nonzero. Successive Bertini for the very ample
+bundles gives a triple whose entire successive flag is smooth.
+
+The open set $\mathcal U$ is path connected. Two of its points
+can be joined through a third point along complex lines not contained
+in its algebraic complement; each line meets that complement in
+finitely many points, which a path can avoid. The universal family
+over $\mathcal U$ is proper and smooth. Transport along the resulting
+path identifies the oriented integral topology of $X$ with that of
+a smooth flag; see \cite[\S\S1,3]{Ehresmann} for the underlying
+proper-submersion transport.
+
+On the smooth flag the ambient dimensions are successively $6,5,4,3$.
+Integral Lefschetz for a smooth very ample divisor therefore preserves
+$H_1$ and $H_2$ at all three steps
+\cite[Corollary~7.3 and Theorem~7.4]{Milnor}. Those groups of $A$
+are respectively zero and $\ZZ^2$, proving the first two assertions.
+It also proves connectedness. The deformation is used only to
+compute topology; it does not replace the specific observation family.
+
+All groups are finitely generated. Universal coefficients give
+\[
+ 0\longrightarrow\operatorname{Ext}(H_2(X;\ZZ),\ZZ)
+ \longrightarrow H^3(X;\ZZ)
+ \longrightarrow\operatorname{Hom}(H_3(X;\ZZ),\ZZ)
+ \longrightarrow0.
+\]
+The left term vanishes, so $H^3$ is free. Integral Poincar\'e duality
+then makes $H_3$ free and its pairing unimodular
+\cite[Theorems~3.2, 3.30 and Proposition~3.38]{Hatcher}.
+Graded commutativity in degree three makes the pairing alternating.
+
+For the rank, let $x,y$ be the ambient hyperplane classes and put
+$s=x+y$. The tangent and normal bundle sequences give
+\begin{equation}\label{eq:cicy-euler-data}
+ [X]=2s^3,\qquad
+ c(TX)=\frac{(1+x)^4(1+y)^4}{(1+s)^2(1+2s)},\qquad
+ c_3(TX)=-2(x^3+y^3)-10(x^2y+xy^2).
+\end{equation}
+The coefficient of $x^3y^3$ in $2s^3c_3(TX)$ is $-128$.
+Thus $\chi(X)=-128$. Connectedness and duality give
+$b_0=b_6=1$, $b_1=b_5=0$, and $b_2=b_4=2$, whence $b_3=134$.
+\end{proof}
+
+\subsection{Markings and the observation map}
+
+\begin{definition}\label{def:geometric-marking}
+A geometric marking of $X$ consists of an integral basis
+$\gamma_1,\ldots,\gamma_{134}$ of $H_3(X;\ZZ)$, finite
+piecewise smooth integral singular cycles $c_a$ representing it,
+and the intersection matrix $J_{ab}=\langle\gamma_a,\gamma_b\rangle$.
+It is symplectic if $J$ is the chosen standard symplectic matrix.
+\end{definition}
+
+Such markings exist: a unimodular alternating lattice admits an
+integral symplectic basis, and smooth singular homology represents
+its classes by finite smooth chains. Section~\ref{sec:integral-marking}
+constructs the marking and derivative bounds from algebraic fibre
+equations. It does not require the coordinates of any vanishing cycle.
+
+For a smooth proper family along a loop $\ell$, choose a smooth
+horizontal splitting and let $F_\ell:X\longrightarrow X$ be the
+endpoint transport. For a closed three-form $\Psi$ on $X$, define
+\begin{equation}\label{eq:geometric-period-observations}
+ \Pi_a=\int_{c_a}\Psi,\qquad
+ \Pi_{a\ell}^{\rm end}=\int_{(F_\ell)_\#c_a}\Psi,\qquad
+ \Delta_{a\ell}=\Pi_{a\ell}^{\rm end}-\Pi_a.
+\end{equation}
+These operations transport and integrate the actual chain. They
+do not first decompose the endpoint in the original homology basis.
+The latter coordinates, intersections with local vanishing spheres,
+and monodromy matrices are not forward inputs.
+
+\begin{lemma}\label{lem:transport-independence}
+The quantities in \eqref{eq:geometric-period-observations} depend
+only on the homology marking, the homotopy class of the loop with
+fixed basepoint, and the cohomology class of $\Psi$. They are
+independent of the horizontal splitting.
+\end{lemma}
+
+\begin{proof}
+The pullback family over the compact path is proper. A horizontal
+lift therefore exists for the whole interval and is invertible by
+reversed transport. The right inverses defining two splittings are
+joined in their affine space. Lifting this family gives an isotopy
+between the endpoint diffeomorphisms. The same argument over a
+homotopy gives homology continuation depending only on the path
+class. Integration of a closed form depends only on homology.
+\end{proof}
+
+In our family $\Psi$ is a single-valued relative holomorphic top
+form, hence closed on each smooth fibre. Its value at a loop endpoint
+is the original $\Psi$, with no scalar monodromy to remove.
+The geometric definition above is meaningful independently of
+numerical access. The transport estimates below provide that access.

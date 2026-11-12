@@ -1,0 +1,176 @@
+\section{Consequences and examples}\label{sec:consequences}
+
+\subsection{Effective dissipation and logarithmic growth}
+
+For the fixed inclusion define the effective cubic dissipation
+coefficient
+\[
+ A(T)=\frac{-Z'(T)}{Z(T)^3}
+     =\frac{2\mathcal E(T)}{Z(T)^3}.
+\]
+The adjective refers only to this scalar identity; it does not
+assert that \(Z\) solves an autonomous scalar equation.
+
+\begin{corollary}\label{cor:dissipation-coefficient}
+Under the reduced, distinct-factor hypotheses,
+\begin{equation}\label{eq:effective-coefficient}
+ cT\le A(T)\le CT,\qquad
+ \liminf_{T\to\infty}\frac{A(T)}T\ge C_*^2,\qquad
+ \lim_{T\to\infty}\frac2{T^2}\int_0^T A(t)\,\dd t=C_*^2.
+\end{equation}
+On every compact subset of \(U\),
+\begin{equation}\label{eq:logarithmic-rate}
+ \log u(T)+\log T
+ \longrightarrow \log\frac{v_0}{4\pi^2\sigma}
+\end{equation}
+uniformly. In particular \(\log Z(T)/\log T\to-1\).
+\end{corollary}
+
+\begin{proof}
+The bounds follow from \(\mathcal E(T)\asymp T^{-2}\)
+and \(Z(T)\sim C_*^{-1}T^{-1}\).
+For the lower limit, write
+\[
+ \frac{A(T)}T
+ =\frac{-Z'(T)}{Z(T)^2}\,\frac1{TZ(T)}
+\]
+and apply \eqref{eq:reduced-liminf}. The exact identity
+\[
+ Z(T)^{-2}=Z(0)^{-2}+2\int_0^T A(t)\,\dd t
+\]
+and the mass equivalent prove the averaged limit.
+Finally \(u/Z\to1/v_0\) uniformly on each compact
+subset of \(U\); its limit is positive. Combining
+this with \eqref{eq:actual-mass} and taking logarithms
+proves \eqref{eq:logarithmic-rate}.
+\end{proof}
+
+Neither \eqref{eq:effective-coefficient} nor the mass equivalent
+asserts a pointwise equivalent for \(\mathcal E\) or \(A\).
+The mass equivalent excludes a nonconstant leading logarithmic
+multiplier in this class, but does not determine subleading terms.
+
+There is a precise comparison with the two-weight description
+in \cite[Section~3]{W_Singular}. In the category of equal-slope
+semistable sheaves modulo sheaves supported at finitely many
+points, the extension has subobject chain \(0<L<V\).
+Its rank-polarized weight problem minimizes
+\[
+ w_L^2+w_M^2\quad\text{subject to}\quad w_M-w_L\ge1,
+\]
+giving \((-1/2,1/2)\), with no further iterated weights.
+These are weights for squared metric norms. The proposed
+line metric \(T^{-1/2}h_L\) consequently has the same
+two-weight normalization as the finite model in
+\cite[Example~5.12]{HKKP23}.
+Formula~\eqref{eq:logarithmic-rate} gives the actual
+exponent \(-1\) for the present singular class.
+Thus the difference from \(-\frac12\log T\) is
+\(-\frac12\log T+O(1)\), not merely an unspecified
+unbounded negative remainder. The local ideal, its
+Jacobian determinant in the fixed metrics, and the
+matching through the compact extension supply information
+which that polarized chain does not record.
+
+\subsection{A toric tangent bundle}
+
+We spell out the specialization to the tangent-bundle example
+of \cite[Section~2]{W_Singular}. Let \(X\) have fan with cyclic rays
+\[
+ (1,0),\quad(1,1),\quad(0,1),\quad(-1,0),\quad(1,-1).
+\]
+Consecutive determinants are one. Removing \((1,1)\)
+gives the first Hirzebruch surface, so \(X\) is its
+blowup at the corresponding fixed point. With pullback
+section and fibre classes \(S,f\) and exceptional class \(E\),
+\[
+ S^2=-1,\quad Sf=1,\quad f^2=0,\quad E^2=-1,\quad SE=fE=0.
+\]
+Choose a Kähler form in \(4S+7f-2E\), and put
+\[
+ V=T_X,\qquad L=\OO_X(2S+f-E),\qquad M=\OO_X(2f).
+\]
+The torus direction \((1,0)\) gives a saturated tangent
+line. Its divisorial class is the sum of the two
+opposite-ray divisors, namely \(2S+f-E\).
+On the chart of the cone \(((1,1),(0,1))\), its
+inclusion and quotient have the presentation
+\[
+ \iota=(z_1,-z_2)^{\mathsf t},\qquad q=(z_2,z_1).
+\]
+All other maximal cones contain one of the two
+opposite rays; saturation there removes the divisorial
+zero and leaves a nonvanishing generator. Thus the
+only zero is the reduced fixed point \(p\), and
+\[
+ 0\longrightarrow L\longrightarrow T_X
+          \longrightarrow\cI_pM\longrightarrow0.
+\]
+The intersection pairing gives
+\[
+ \deg_\omega L=\deg_\omega M=8,\qquad
+ v_0=18,\qquad \kappa=8\pi/9,\qquad
+ c_2(T_X)-c_2(L\oplus M)=1.
+\]
+In particular the two factors are distinct and all
+hypotheses of the positive theorem hold.
+Writing \(\lambda=\lambda_p\) in the fixed normalization,
+\begin{equation}\label{eq:toric-asymptotic}
+ Z(T)\sim\frac{81\lambda}{\pi^2T},\qquad
+ r_p(T)\sim\frac{3}{\sqrt2\,\pi}\,T^{-1/2}.
+\end{equation}
+These follow by substituting \(\sigma=\lambda^{-1}\).
+The volume factor is evaluated here; the geometric
+constant \(\lambda\) has not been numerically computed.
+The radius formula is in base-orthonormal coordinates.
+The stationary family obtained by changing the
+polarization in \cite[Section~7]{W_Singular} is a
+different family; its parameter is not flow time.
+
+\subsection{Nonreduced points and repeated factors}
+
+For arbitrary finite \(W\), Theorem~\ref{thm:general-upper-rate}
+gives \(Z=O(T^{-1})\), and the presence of any nonreduced
+point gives \(TZ\to0\). The proof supplies neither a
+positive inner model nor a sharp nonreduced exponent.
+The simple-zero normalization in
+Lemma~\ref{lem:normalized-reference} is unavailable
+there. An extension to that setting must retain
+the full ideal germ, not just its length.
+
+When \(L\simeq M\), the real small spectral space
+has dimension three by \eqref{eq:weak-dimension}.
+The projected correction and its parameter bounds
+retain those directions. The scalar equation
+\eqref{eq:comparison-ode}, and hence our positive
+actual-flow comparison, are not proved for that case.
+In particular, one cannot remove two directions
+from the projection to infer the same scalar law.
+
+Both exclusions occur in a concrete example. On a
+projective K3 surface take a length-two curvilinear
+scheme with local ideal \((z_1^2,z_2)\).
+There is a locally free extension
+\[
+ 0\longrightarrow\OO_X\longrightarrow V
+                  \longrightarrow\cI_W\longrightarrow0.
+\]
+Indeed \(K_X=\OO_X\), and the Cayley--Bacharach
+condition for the Serre construction holds: a constant
+vanishing on a length-one subscheme vanishes on all
+of \(W\). Apply \cite[Theorem~5.1.1]{HuybrechtsLehn97};
+the local complete intersection condition is immediate
+from the displayed regular sequence. The determinant
+is trivial, \(c_2(V)=2\), and both factors have degree
+zero for every Kähler form. The general nonreduced
+conclusion applies, but the reduced-point profile
+and radius theorem do not.
+
+Finally, the positive result concerns a fixed compact surface
+and a fixed holomorphic extension. It does not classify
+singular graded sheaves of higher rank, varying holomorphic
+defects, or singular fibres in a degenerating threefold family.
+The centers here are fixed by \(W\); their leading radii
+are linked through one amplitude and the constants
+\(\lambda_p\). These are features of the stated problem,
+not a classification of all possible concentration parameters.

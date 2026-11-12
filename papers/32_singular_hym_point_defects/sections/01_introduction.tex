@@ -1,0 +1,249 @@
+\section{Introduction}
+
+Hermitian--Yang--Mills flow on a compact Kähler surface can
+converge away from finitely many points while its metric
+degenerates along a fixed holomorphic filtration. The
+limiting connection and point cycle identify the smooth
+graded bundle and the lost curvature charge. They do
+not, by themselves, determine the rate of the metric
+degeneration or the radius on which that charge
+concentrates. We determine both for a rank-two
+extension with distinct equal-degree line factors
+and reduced point defects.
+
+Let \((X,\omega)\) be a connected compact Kähler surface,
+and suppose that a locally free rank-two bundle \(V\)
+fits into an exact sequence
+\begin{equation}\label{eq:intro-extension}
+ 0\longrightarrow L\xrightarrow{\iota}V
+       \longrightarrow\mathcal I_WM\longrightarrow0 .
+\end{equation}
+The line bundles \(L,M\) have equal degree, and \(W\)
+is a nonempty finite scheme. Existence of the locally
+free middle bundle is a hypothesis. Fix HE metrics
+\(h_L,h_M\), the induced determinant metric \(h_Lh_M\),
+and the inclusion \(\iota\). Write
+\[
+ \dd V=\omega^2/2,\qquad v_0=\int_X\dd V,\qquad
+ \kappa=2\pi\deg_\omega L/v_0 .
+\]
+The metric flow is
+\[
+ H^{-1}\partial_TH=-2(i\Lambda_\omega F_H-\kappa I),
+ \qquad \det H(0)=h_Lh_M .
+\]
+Its inclusion norm, mass and full derivative energy are
+\begin{equation}\label{eq:intro-observables}
+ u(T)=\iota^*H(T)/h_L,\qquad
+ Z(T)=\int_Xu(T)\,\dd V,\qquad
+ \mathcal E(T)=\int_X|D'_{H(T)\otimes h_L^{-1}}\iota|^2\,\dd V .
+\end{equation}
+In particular \(Z'=-2\mathcal E\).
+
+At a reduced zero \(p\), use holomorphic coordinates
+orthonormal for the base metric at \(p\). The norm
+of the inclusion in any smooth reference metric
+of the fixed determinant has quadratic term \(z^*Q_pz\),
+with \(Q_p>0\). The determinant of this form is
+independent of that reference metric. Put
+\begin{equation}\label{eq:intro-constants}
+ \lambda_p=\sqrt{\det Q_p},\qquad
+ \sigma=\sum_{p\in W}\lambda_p^{-1},\qquad
+ \alpha(T)=Z(T)/v_0,\qquad
+ r_p(T)=\sqrt{\alpha(T)/\lambda_p}.
+\end{equation}
+These constants retain the prescribed inclusion,
+line metrics, determinant and base metric.
+
+\begin{theorem}\label{thm:main}
+Suppose \(L\not\simeq M\) and \(W\) is reduced.
+For every smooth initial metric of determinant
+\(h_Lh_M\), the flow exists for all \(T\ge0\) and
+has the following properties.
+\begin{enumerate}
+\item The actual inclusion mass and derivative energy satisfy
+\begin{equation}\label{eq:intro-mass}
+ Z(T)\sim\frac{v_0^2}{4\pi^2\sigma T},\qquad
+ cT^{-2}\le\mathcal E(T)\le CT^{-2}
+\end{equation}
+for large \(T\). The leading mass coefficient is
+independent of the initial metric.
+\item There is a fixed smooth reference metric \(H_0\)
+of the prescribed determinant, with
+\(u_0=\iota^*H_0/h_L\), and constants \(C>0\),
+\(0<\gamma<1\), such that
+\begin{equation}\label{eq:intro-profile}
+ \sup_X\left|\frac{u(T)}{Z(T)}
+       -\frac1{v_0}\frac{u_0}{u_0+\alpha(T)}\right|
+ \le CT^{-\gamma}.
+\end{equation}
+For small \(r>0\) and large \(T\), with constants
+independent of \(r,T\),
+\[
+ \sup_{X\setminus B_r(W)}
+ \left|\frac{u(T)}{Z(T)}-\frac1{v_0}\right|
+ \le C\{T^{-\gamma}+(Tr^2)^{-1}\}.
+\]
+\item In fixed normalized holomorphic coordinates and
+frames near \(p\), the metrics \(H(T,r_p(T)y)\)
+converge smoothly on compact \(y\)-sets to
+\begin{equation}\label{eq:intro-local-metric}
+ H_{\mathrm{loc}}(y)
+ =(1+|y|^2)I-\frac{|y|^2+2}{1+|y|^2}YY^*,
+ \qquad Y=(y_1,-y_2)^{\mathsf t}.
+\end{equation}
+This determinant-one metric is anti-self-dual and
+has curvature energy \(8\pi^2\). More precisely,
+for every fixed \(R>0\),
+\[
+ \int_{B_{Rr_p(T)}(p)}|F_{H(T)}|^2\,\dd V
+ \longrightarrow
+ 8\pi^2\frac{R^4(R^2+3)}{(1+R^2)^3}.
+\]
+The first inclusion half-height radius on each
+radial ray, defined by \(u(T)=\alpha(T)/2\),
+and the first ball radius with curvature energy
+\(4\pi^2\), are both \(r_p(T)(1+o(1))\);
+the first equivalent is uniform in direction.
+\end{enumerate}
+\end{theorem}
+
+The local coordinates are Kähler normal at \(p\).
+The frames normalize the line weights to one at \(p\)
+and put the inclusion in the form
+\(\sqrt{\lambda_p}(z_1,-z_2)^{\mathsf t}\);
+Lemma~\ref{lem:normalized-reference} constructs them
+without changing the determinant.
+The theorem follows from
+Theorems~\ref{thm:actual-comparison} and
+\ref{thm:energy-curvature}.
+The proof also accounts for all defect charge in
+the ordered limits \eqref{eq:ordered-tightness}.
+The energy assertion in \eqref{eq:intro-mass}
+is an order estimate, not a differentiated version
+of the mass equivalent.
+
+For a general finite defect we obtain a separate
+one-sided statement, allowing repeated factors.
+
+\begin{theorem}\label{thm:general-intro}
+Under \eqref{eq:intro-extension}, without reducedness
+or distinctness of the line factors, every smooth
+fixed-determinant flow satisfies \(Z(T)=O(T^{-1})\).
+If \(W\) has a nonreduced point, then
+\[
+ \frac{-Z'(T)}{Z(T)^2}\longrightarrow+\infty,
+ \qquad TZ(T)\longrightarrow0.
+\]
+\end{theorem}
+
+This is Theorem~\ref{thm:general-upper-rate}.
+The nonreduced conclusion makes the restriction
+in Theorem~\ref{thm:main} mathematically necessary
+for its positive mass coefficient. Repeated line
+factors present a different issue: the real small
+connection eigenspace has dimension three, whereas
+the scalar trajectory used here requires dimension one.
+
+\subsection{Relation to earlier work}
+
+Daskalopoulos--Wentworth identify the canonical
+connection limit of Yang--Mills flow on Kähler
+surfaces \cite{DaskalopoulosWentworth04}, with the
+correction \cite{DaskalopoulosWentworth07c}, and identify
+the blowup set and its multiplicities
+\cite{DaskalopoulosWentworth07b}.
+Sibley--Wentworth extend the analytic--algebraic
+cycle comparison to compact Kähler manifolds
+\cite{SibleyWentworth15}. We use their corrected
+multiplicity, which at an isolated surface point
+is the full length of the defect sheaf.
+These results determine the reflexive graded
+connection \(D_{h_L}\oplus D_{h_M}\) and the
+point charges in our setting.
+
+The predecessor \cite{W_Singular} treats
+\eqref{eq:intro-extension} with arbitrary nonempty
+finite \(W\). It proves
+\(Z=o(T^{-1/2})\) and fixed-compact convergence
+of \(u/Z\) to \(1/v_0\), using a residue estimate
+for every splitting. Its remaining rate question
+asks whether \(\log Z/\log T\) can still tend
+to \(-1/2\), particularly for its toric tangent
+bundle. Theorem~\ref{thm:main} gives the limit
+\(-1\) in the reduced, distinct-factor class,
+including that example. Theorem~\ref{thm:general-intro}
+also strengthens the one-sided estimate throughout
+the predecessor's class.
+
+Haiden--Katzarkov--Kontsevich--Pandit develop
+iterated-weight asymptotics for finite metric
+flows \cite{HKKP23} and prove an actual bundle-flow
+theorem on compact Riemann surfaces
+\cite[Theorem~1.1]{HKKP18}. Their comparison method
+for integrably forced metric flows also applies
+in higher complex dimension
+\cite[Section~4.2]{HKKP18}.
+Lam proves bounded-remainder asymptotics on a
+fixed compact Kähler base when the graded object
+is locally free, under the stated rationality
+condition on the induced invariant inner product
+\cite[Theorem~1.1, Theorem~8.2]{Lam26}.
+The singular-graded extension is discussed in
+\cite[Remark~8.3]{Lam26}, rather than included in
+that theorem. Our quotient \(\mathcal I_WM\)
+is singular, and the coefficient and spatial
+profile depend on its local presentation.
+
+The charge-one instanton is classical. We compute
+its holomorphic metric, inclusion norm and
+curvature in the normalization needed for the
+compact extension. For quantitative infinite-time
+bubbling on \(\RR^4\), Sire--Wei--Zheng construct
+Yang--Mills solutions with selected initial
+data and exponentially shrinking scale
+\cite[Theorem~1]{SireWeiZheng26}.
+Their base, data assertion and scale-selection
+problem differ from the fixed compact holomorphic
+extension considered here. The radius
+\(r_p(T)\asymp T^{-1/2}\) is selected by the
+compact inclusion mass and its determinant data.
+
+\subsection{The proof}
+
+The starting point is an explicit smooth family
+\(H_a\) on the original compact bundle. It has
+inclusion norm \(au_0/(u_0+a)\), an exact
+full-derivative identity, and the local limit
+\eqref{eq:intro-local-metric}. A level-set residue
+estimate gives a lower bound for the actual
+dissipation, including the strict nonreduced
+conclusion. The compact family itself is not
+a solution of the metric flow.
+
+The analytic step is to correct this family
+orthogonally to the full small eigenspace of
+the real operator \(\frac12D_a^*D_a\) on
+Hermitian trace-free endomorphisms. A fixed-base
+Sobolev estimate excludes additional modes
+concentrated at the points. Heat domination
+and the complementary gap give a logarithmic
+weighted inverse. The resulting nonlinear
+correction has uniformly small mean curvature,
+and parameter estimates identify its remaining
+one-dimensional curvature with its tangent
+up to an integrable error. The small eigenvalue
+has leading coefficient \(2\pi^2\sigma/v_0\).
+
+For an arbitrary initial metric, invariant
+metric distance first stays bounded by the
+forced comparison inequality. The small positive
+eigenvalue then gives polynomial decay of that
+distance, proving the mass coefficient and the
+global profile. Convexity of the Donaldson
+functional supplies the actual derivative-energy
+upper bound. Finally, rescaled elliptic and
+parabolic estimates upgrade the metric comparison
+to smooth inner convergence; Chern--Weil theory
+and the explicit local curvature integral
+identify the concentration radius and defect charge.

@@ -1,0 +1,294 @@
+\section{Recovery of integral cycles from period jumps}
+\label{sec:integral-recovery}
+
+We give the finite-accuracy argument independently of the construction
+of the observations. Let $\Lambda=H_3(X_p;\ZZ)$ and let
+$\gamma=(\gamma_1,\ldots,\gamma_{134})$ be an integral marking.
+Its intersection matrix $J$ is alternating and unimodular. Write
+$\delta_i=\gamma d_i$ for the oriented local vanishing spheres and
+set
+\begin{equation}\label{eq:unknown-map}
+ D=(d_1\ \cdots\ d_8):\ZZ^8\longrightarrow\Lambda,
+ \qquad n_i=Jd_i,\qquad t_i=\int_{\delta_i}\Psi_p=p_i.
+\end{equation}
+The two block relations are known; the columns of $D$ are the
+unknowns. No primitivity assertion is made for their image.
+
+In the positive Picard--Lefschetz convention in complex dimension three,
+\cite[Expos\'e~XIV, Theorem~3.2.11]{Deligne}, or directly in homology
+\cite[equation~(8) in the arXiv-v2 text]{LPPV},
+transport around a positive individual node meridian gives
+\begin{equation}\label{eq:PL-recovery}
+ T_i\gamma_a=\gamma_a+\langle\gamma_a,\delta_i\rangle\delta_i,
+ \qquad \Delta_{ai}=(n_i)_a t_i,
+ \qquad T_i=I-d_id_i^TJ.
+\end{equation}
+Here $\Delta_{ai}$ is the endpoint period minus the initial period
+of a transported geometric representative of $\gamma_a$. Its forward
+evaluation does not require the homology coordinates of that endpoint.
+The inversion of \eqref{eq:PL-recovery} is the classical rank-one
+Picard--Lefschetz argument; for recovery of homological monodromy from
+continued periods see \cite[\S3.5.2, equation~(38), arXiv-v2 text]{LPPV}.
+The issue addressed here is its use with
+absolute error in both the numerator and the nonzero denominator.
+
+\subsection{A strict stopping criterion}
+
+\begin{lemma}\label{lem:integer-separation}
+Suppose $\Delta=nt$ with $n\in\ZZ$ and $t\ne0$. Let
+$\widehat\Delta,\widehat t$ satisfy
+\[
+ |\widehat\Delta-\Delta|\le e_\Delta,
+ \qquad |\widehat t-t|\le e.
+\]
+If $|\widehat t|>e$, define
+\begin{equation}\label{eq:observed-height}
+ H_{\rm obs}=\frac{|\widehat\Delta|+e_\Delta}
+                        {|\widehat t|-e},
+ \qquad
+ r_{\rm obs}=\frac{e_\Delta+H_{\rm obs}e}{|\widehat t|}.
+\end{equation}
+If $r_{\rm obs}<1/2$, then $n$ is the unique nearest integer to
+$\operatorname{Re}(\widehat\Delta/\widehat t)$.
+For any sequence of valid enclosures with $e,e_\Delta\to0$,
+the two strict inequalities hold eventually.
+\end{lemma}
+
+\begin{proof}
+The triangle inequality gives
+$|n|=|\Delta|/|t|\le H_{\rm obs}$. Hence
+\[
+ \left|\frac{\widehat\Delta}{\widehat t}-n\right|
+ =\frac{|\widehat\Delta-\Delta+n(t-\widehat t)|}
+           {|\widehat t|}
+ \le r_{\rm obs}.
+\]
+Its real part lies strictly within $1/2$ of the integer $n$.
+As the errors tend to zero, $|\widehat t|\to|t|>0$,
+$H_{\rm obs}\to|n|$, and $r_{\rm obs}\to0$.
+\end{proof}
+
+Apply the lemma to the $134\cdot8=1072$ jumps and eight local
+periods. Refine all absolute enclosures and accept an entry only after
+the displayed strict inequalities have been verified with interval
+bounds. A failing strict test need not decide whether equality holds:
+one continues the refinement. At a fixed $p\in B_{\rm ev}^\circ$
+the lemma proves finite termination for all the entries. There is
+no prior bound on the unknown integer heights in this procedure.
+
+The resulting integer vectors give
+\begin{equation}\label{eq:recover-D}
+                    d_i=J^{-1}n_i\in\ZZ^{134}.
+\end{equation}
+Both the error in a local period and the absolute error in a small
+period difference are indispensable in this step. In particular, a
+relative error bound for each of two large endpoint integrals does
+not by itself control their small difference.
+
+\subsection{Image, saturation and monodromy}
+
+For this transition $D$ has rank six and
+\[
+ \ker D=\ZZ v_f\oplus\ZZ v_g,
+ \qquad v_f=\sum_{i\in I_f}e_i,
+ \qquad v_g=\sum_{i\in I_g}e_i.
+\]
+The identities $Dv_f=Dv_g=0$ and $D^TJD=0$ are useful consistency
+checks. They do not determine the marked inclusion $D$.
+Smith reduction of the recovered matrix gives positive integers
+$s_1\mid\cdots\mid s_6$ and unimodular changes of source and
+target coordinates. If $L=\im D$ and
+$L^{\rm sat}=(L\otimes\QQ)\cap\Lambda$, then
+\begin{equation}\label{eq:smith-outputs}
+ \Lambda/L\cong\ZZ^{128}\oplus\bigoplus_{j=1}^6\ZZ/s_j\ZZ,
+ \qquad [L^{\rm sat}:L]=\prod_{j=1}^6s_j.
+\end{equation}
+The Smith invariants are outputs of recovery; none is assumed to equal
+one. The full recovered columns retain the marked embedding beyond
+these abstract group invariants.
+
+Set $N_i=T_i-I$. The spheres have disjoint representatives, so
+$d_i^TJd_j=0$ and therefore $N_iN_j=0$ for all $i,j$. For every
+loop $\ell$ in $B_{\rm ev}^\circ$,
+\begin{equation}\label{eq:all-monodromy}
+ T_\ell=I+\sum_{i=1}^8w_i(\ell)N_i,
+ \qquad
+ w_i(\ell)=\frac1{2\pi\sqrt{-1}}\int_\ell\frac{\dd p_i}{p_i}.
+\end{equation}
+Indeed fill the loop by a disc in the convex ball. Perturb its interior
+to meet each hyperplane transversely and to avoid pairwise intersections,
+which have real codimension four. Removing small discs around the
+finitely many inverse images expresses the boundary monodromy as a
+product of conjugates of individual meridians. Each local sphere is
+fixed by every meridian, so the conjugates have the same action on
+homology. The signed numbers of intersections are the windings $w_i$.
+Finally all products of two $N_i$ vanish, which proves
+\eqref{eq:all-monodromy}. This argument makes no assumption that
+the fundamental group of the hyperplane complement is abelian.
+
+\subsection{Precision near a node}
+
+The stopping criterion is adaptive, but a sufficient precision can
+also be stated in terms of the true height
+$H=\max_a|(n_i)_a|$. Suppose that each initial period, endpoint
+period, and local period is evaluated with absolute error at most
+$A2^{-b}$, where $A\ge1$. The jump error is at most $2A2^{-b}$.
+The conditions
+\begin{equation}\label{eq:height-sufficient}
+ e_\Delta\le |t_i|/8,
+ \qquad e\le |t_i|/[8(H+1)]
+\end{equation}
+give the direct ratio error
+\[
+ \left|\frac{\widehat\Delta_{ai}}{\widehat t_i}-(n_i)_a\right|
+ \le\frac{e_\Delta+He}{|t_i|-e}<\frac27.
+\]
+They also imply the strict criterion of
+Lemma~\ref{lem:integer-separation}. To see this directly, write
+$x=e/|t_i|\le1/[8(H+1)]$. Then
+$H_{\rm obs}\le(H+1/4)/(1-2x)$ and
+\[
+ r_{\rm obs}\le
+ \frac{1/8+x(H+1/4)/(1-2x)}{1-x}
+ \le\frac27<\frac12.
+\]
+A sufficient common output precision is consequently
+\begin{equation}\label{eq:digit-count}
+       b\ge\left\lceil\log_2
+                      \frac{16A(H+1)}{|t_i|}\right\rceil.
+\end{equation}
+The integer height appears only in this explanatory bound, not among
+the inputs to the adaptive stopping rule.
+
+For sufficiently small parameters let
+$\kappa_i=2\pi/|\log|\tau_i||$. The bounded residue units give
+\[
+ |t_i|=|\tau_iU_i|\asymp
+                     \exp(-2\pi/\kappa_i).
+\]
+Thus a sufficient number of binary output digits is
+\begin{equation}\label{eq:capacity-digits}
+ b\ge \frac{2\pi}{\kappa_i\log2}
+       +\log_2A+\log_2(H+1)+O(1).
+\end{equation}
+The required absolute tolerance is exponentially small in inverse
+capacity; the sufficient number of digits grows linearly in inverse
+capacity. Bounds for transport and quadrature may deteriorate further.
+Equation~\eqref{eq:capacity-digits} is neither a running-time bound
+nor a bound on the internal precision of those constructions.
+
+\subsection{Changes of choices}
+
+For a target basis change $\gamma'=\gamma S$ with $S$ integral
+unimodular,
+\begin{equation}\label{eq:target-covariance}
+ \begin{aligned}
+ J'&=S^TJS,&d_i'&=S^{-1}d_i,& n_i'&=S^Tn_i,\\
+ \Delta_i'&=S^T\Delta_i,&T_i'&=S^{-1}T_iS.
+ \end{aligned}
+\end{equation}
+If both bases have the same standard symplectic matrix then $S$ is
+symplectic. Absolute observation errors transform with the corresponding
+operator norm of $S^T$.
+
+Reversing the orientation of $\delta_i$ changes $d_i,n_i,t_i$ by
+the same sign and leaves $\Delta_i,T_i$ unchanged. More generally,
+a signed permutation $P$ of the local source basis changes $D$ to
+$DP$ and the source relations to $P^{-1}v_f,P^{-1}v_g$. In
+particular, the all-positive block relations must not be retained
+after an isolated orientation reversal.
+
+A known meridian multiplicity $m\ne0$ multiplies its jump by $m$;
+division by $m$ also divides the absolute error by $|m|$. Without
+known winding data this primitive jump is not determined. A
+single-valued nowhere-zero scalar change of the relative form
+multiplies both the local period and the global period jump by the
+same scalar at the basepoint, so their ratio is unchanged. If a
+chosen form instead has known scalar monodromy, the endpoint must
+first be divided by that scalar before the initial period is
+subtracted. The canonical residue used here is single-valued.
+
+\subsection{What the observations distinguish}
+
+The marked inclusion cannot be recovered from local periods and the
+degree-two spectral data alone. This already follows on one fixed
+geometric fibre by changing its middle-dimensional marking. Choose
+a primitive $v\in\Lambda$ with $k=v^TJd_i\ne0$ for one nonzero
+column. The integral symplectic transformations
+\[
+ S_N=I-Nvv^TJ,\qquad S_N^{-1}=I+Nvv^TJ
+\]
+replace that column by $d_i+Nkv$. These columns are unbounded as
+$N$ varies, whereas the underlying fibre, local periods, abstract
+intersection form and degree-two observations remain the same.
+The represented global marking chains do change. Thus this argument
+does not produce indistinguishable inputs when the full geometric
+marking and all its jumps are retained.
+
+At the scalar level adjacent numerators $nt$ and $(n+1)t$ are
+separated by $|t|$; closed error discs of radius $|t|/2$ can meet.
+An uncertain denominator gives a further obstruction: $(n,t)$ and
+$(n+1,nt/(n+1))$ have the same numerator. These examples explain the
+strict half-integer threshold and the role of height in denominator
+errors. They are scalar observation obstructions, not sharp minimax
+lower bounds for the full geometric inverse problem.
+
+\subsection{The positive reconstruction theorem}
+
+\begin{theorem}\label{thm:integral-reconstruction}
+Fix the algebraic central member and six coefficient directions
+selected in Section~\ref{sec:algebraic-family}, and the resulting
+evaluated family over $B_{\rm ev}$.
+For every named $p\in B_{\rm ev}^{\circ}$ there is a terminating
+procedure, relative to its coordinate name, which constructs a
+geometric symplectic marking of $H_3(X_p;\ZZ)$ and recovers the
+marked homomorphism
+\[
+ D:\ZZ^8\longrightarrow H_3(X_p;\ZZ),\qquad e_i\longmapsto\delta_i.
+\]
+It returns the integral image, its saturation and saturation index,
+the quotient group including its torsion, and the individual
+monodromy matrices. These determine the entire homology
+representation by \eqref{eq:all-monodromy}.
+
+The forward observations are eight local periods and $1072$
+complex jumps of marked periods around represented individual
+meridians. Their absolute errors are obtained from the geometric
+construction and refined until
+Lemma~\ref{lem:integer-separation} applies. The two source relations
+and the ambient symplectic marking are known; the columns of $D$,
+their intersection vectors and the endpoint homology coordinates
+are not supplied to the forward calculation. For computable $p$
+this is an ordinary algorithm. Its sufficient output precision and
+its changes under choices are as stated above.
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:algebraic-choice} selects the central member;
+the rank and algebraic derivative calculation selects the slice.
+Theorem~\ref{thm:evaluated-periods} supplies the known inverse
+period domain and an algebraic smooth reference fibre.
+Theorem~\ref{thm:smooth-marking} constructs the integral marking
+there without identifying any local sphere in it.
+Theorem~\ref{thm:accessible-observations} transports that marking
+to the target, constructs individual meridians, and supplies the
+absolute period enclosures by equation-based transport and
+integration of represented chains.
+
+The Picard--Lefschetz identity \eqref{eq:PL-recovery} gives
+$\Delta_{ai}=(Jd_i)_a p_i$. Every $p_i$ is nonzero at the target.
+Lemma~\ref{lem:integer-separation} therefore terminates after
+finitely many refinements for every entry, without a height
+prior. Unimodularity gives the exact columns by
+\eqref{eq:recover-D}; finite integer Smith operations give the
+remaining lattice outputs in \eqref{eq:smith-outputs}.
+The flat-sphere argument and vanishing pairwise intersections
+give \eqref{eq:all-monodromy}. The covariance and precision
+statements have been proved above.
+\end{proof}
+
+The theorem establishes a construction and termination result.
+No numerical coefficient vector, marking, period matrix, attachment
+matrix or Smith invariant has been calculated here. The equations
+determine the geometry, while the specified procedure obtains the
+previously unsupplied marked local inclusion from scalar observations.

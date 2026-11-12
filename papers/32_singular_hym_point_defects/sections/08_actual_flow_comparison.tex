@@ -1,0 +1,238 @@
+\section{Comparison with the actual flow}
+\label{sec:actual-comparison}
+
+Assume that \(W\) is reduced and \(L\not\simeq M\).
+Let \(H(T)\) solve \eqref{eq:metric-flow} from any smooth
+initial metric with determinant \(h_{\det}\), and let
+\(\overline H(T)=\widehat H_{a(T)}\) be the curve in
+Proposition~\ref{prop:comparison-trajectory}. No smallness
+condition is imposed on the initial distance between them.
+
+\begin{theorem}\label{thm:actual-comparison}
+There are \(C>0\) and \(0<\gamma<1\), depending on the
+fixed data and the initial metric, such that
+\begin{equation}\label{eq:distance-decay}
+ \sup_X\left|\log\bigl(\overline H(T)^{-1}H(T)\bigr)\right|_{\overline H(T)}
+ \le C(1+T)^{-\gamma}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:actual-mass}
+ Z(T)\sim\frac{v_0^2}{4\pi^2\sigma T}.
+\end{equation}
+With the intrinsic amplitude \(\alpha(T)=Z(T)/v_0\),
+\begin{equation}\label{eq:global-inclusion-profile}
+ \sup_X\left|\frac{u(T)}{Z(T)}
+       -\frac1{v_0}\frac{u_0}{u_0+\alpha(T)}\right|
+ \le C(1+T)^{-\gamma}.
+\end{equation}
+The same estimate holds with \(a(T)\) in place of \(\alpha(T)\).
+There are fixed \(r_0,T_0>0\) such that for \(0<r\le r_0\)
+and \(T\ge T_0\),
+\begin{equation}\label{eq:shrinking-exterior}
+ \sup_{X\setminus B_r(\Sigma)}
+ \left|\frac{u(T)}{Z(T)}-\frac1{v_0}\right|
+ \le C\left(T^{-\gamma}+\frac1{Tr^2}\right).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+At each point the metrics with fixed determinant form the
+positive-matrix symmetric space with tangent norm
+\(\tr((H^{-1}\delta H)^2)\). Put
+\[
+ s=\log(\overline H^{-1}H),\qquad
+ H_\theta=\overline He^{\theta s},\qquad
+ d=|s|_{\overline H},\qquad e=\tfrac12d^2.
+\]
+The endomorphism \(s\) is trace-free and Hermitian for every
+\(H_\theta\). The metric-distance calculation for two
+solutions of HYM flow, in the convention
+\eqref{eq:metric-flow}, is
+\[
+ (\partial_T+\Delta_0)e
+ =-2\int_0^1|D'_{H_\theta}s|_{H_\theta}^2\,\dd\theta.
+\]
+This is \cite[Lemma~6.4.5]{Kobayashi87}, with book time
+\(t=2T\) and scalar operator \(\Delta_0/2\).
+For our second endpoint the additional velocity is
+\(\mathcal R=\overline H^{-1}\overline H_T+2\Phi_{\overline H}\).
+The first variation of squared symmetric-space distance
+has endpoint gradient of norm \(d\). Thus, with
+\(\varepsilon(T)=\|\mathcal R(T)\|_\infty\),
+\begin{equation}\label{eq:forced-square-distance}
+ (\partial_T+\Delta_0)e
+ \le-2\int_0^1|D'_{H_\theta}s|_{H_\theta}^2\,\dd\theta
+       +\varepsilon(T)d.
+\end{equation}
+This uses only the endpoint velocity, with no derivative
+of \(\mathcal R\).
+
+For every \(\theta\), metric compatibility and Kato's
+inequality give
+\[
+ |\nabla d|^2\le|D_{H_\theta}s|^2
+              =2|D'_{H_\theta}s|^2.
+\]
+Average over \(\theta\) and apply the chain rule to
+\eqref{eq:forced-square-distance}. The derivative term
+has the sign needed to give
+\begin{equation}\label{eq:forced-distance}
+ (\partial_T+\Delta_0)d\le\varepsilon(T).
+\end{equation}
+At \(d=0\) use \((d^2+\eta^2)^{1/2}\) and then
+\(\eta\downarrow0\). The maximum principle and
+\eqref{eq:integrable-flow-error} imply
+\begin{equation}\label{eq:bounded-distance}
+ \sup_Xd(T)\le
+ B:=\sup_Xd(0)+\int_0^\infty\varepsilon(t)\,\dd t<\infty.
+\end{equation}
+Every smooth positive initial metric on the compact
+bundle gives a finite \(B\).
+
+We use the first eigenvalue in
+\eqref{eq:sharp-small-eigenvalue} to improve boundedness
+to decay. Choose \(a_{\mathrm{in}}\) small enough that
+\(\lambda_1(\widehat{\mathcal L}_a)\ge c_1a\) throughout
+the comparison trajectory. The tensor \(D''s\) is the
+same for all \(H_\theta\), because the holomorphic
+structure is fixed. Its squared fibre norms differ
+by factors between \(e^{-2B}\) and \(e^{2B}\).
+For example, after diagonalizing \(s\) at a point,
+a matrix entry has factor \(e^{\theta(s_i-s_j)}\).
+As the \(D'\) and \(D''\) norms of a Hermitian
+section agree, it follows that
+\[
+ \int_X|D'_{H_\theta}s|^2\,\dd V
+ \ge e^{-2B}\widehat{\mathfrak q}_{a(T)}(s,s)
+ \ge e^{-2B}c_1a(T)\int_Xd^2\,\dd V.
+\]
+Put \(D(T)=\|d(T)\|_2\). Integration of
+\eqref{eq:forced-square-distance} and Cauchy--Schwarz
+give, with the usual regularization at \(D=0\),
+\begin{equation}\label{eq:distance-ode}
+ D'(T)\le-2e^{-2B}c_1a(T)D(T)+\sqrt{v_0}\,\varepsilon(T).
+\end{equation}
+Here \(a(T)\asymp(1+T)^{-1}\), while
+\[
+ \varepsilon(T)\le
+ C(1+T)^{-2}(1+\log(2+T))^3.
+\]
+Choose \(0<\gamma<1\) smaller than an eventual
+coefficient of \((1+T)^{-1}\) in the damping term.
+Multiplying \eqref{eq:distance-ode} by \((1+T)^\gamma\)
+and integrating gives \(D(T)\le C(1+T)^{-\gamma}\),
+since
+\(\int_1^\infty t^{\gamma-2}(1+\log t)^3\,\dd t<\infty\).
+The fixed scalar heat comparison for
+\eqref{eq:forced-distance} on \([T-1,T]\) now gives
+\[
+ \|d(T)\|_\infty
+ \le C D(T-1)+\int_{T-1}^T\varepsilon(t)\,\dd t
+ \le C(1+T)^{-\gamma}.
+\]
+This proves \eqref{eq:distance-decay}.
+
+The correction from \(H_{a(T)}\) to \(\overline H(T)\)
+has supremum logarithm \(O(a\ell(a))\). Decreasing
+\(\gamma\) if needed, the preceding estimate yields
+the relative quadratic-form bounds
+\begin{equation}\label{eq:actual-static-comparison}
+ e^{-CT^{-\gamma}}H_{a(T)}
+ \le H(T)\le e^{CT^{-\gamma}}H_{a(T)}.
+\end{equation}
+Evaluation on the fixed inclusion and integration give
+\[
+ u(T,x)=u_{a(T)}(x)(1+O(T^{-\gamma})),\qquad
+ Z(T)=Z_{a(T)}(1+O(T^{-\gamma})),
+\]
+with uniform errors off \(\Sigma\); both inclusion
+norms vanish on \(\Sigma\).
+For reduced \(W\), \eqref{eq:balanced-static} and
+\eqref{eq:compact-identities} say
+\[
+ Z_a=av_0+O(a^2),\qquad u_a=\frac{au_0}{u_0+a}.
+\]
+Together with \eqref{eq:comparison-asymptotic}, these
+prove \eqref{eq:actual-mass} and the profile with
+parameter \(a(T)\). They also give
+\(\alpha(T)/a(T)=1+O(T^{-\gamma})\).
+For \(u_0\ge0\), changing \(a\) to \(\alpha\) in
+\(u_0/(u_0+a)\) changes the result by at most
+\(C|\alpha/a-1|\), when this ratio is bounded above
+and below. This proves \eqref{eq:global-inclusion-profile}.
+
+Near the reduced zeros \(u_0\asymp r^2\), and \(u_0\)
+is bounded below on the fixed exterior. Hence
+\(u_0\ge cr^2\) on \(X\setminus B_r(\Sigma)\).
+The error in replacing \(u_0/(u_0+a)\) by one is
+at most \(a/u_0\le C/(Tr^2)\), proving
+\eqref{eq:shrinking-exterior}.
+\end{proof}
+
+In particular, a sufficient time for an exterior error at most
+\(\epsilon\), with constants depending only on the specified
+data and initial metric, is
+\[
+ T\ge C\max\{1,\epsilon^{-1/\gamma},(\epsilon r^2)^{-1}\}.
+\]
+This conclusion has joint time and radius quantifiers. It
+follows from the global comparison, rather than from qualitative
+convergence on a fixed compact set.
+
+\subsection{The intrinsic scale of the inclusion}
+
+For each reduced point put
+\begin{equation}\label{eq:intrinsic-radius}
+ r_p(T)=\sqrt{\frac{\alpha(T)}{\lambda_p}}.
+\end{equation}
+In the fixed normalized holomorphic coordinates and frames,
+define
+\begin{equation}\label{eq:inner-metric-limit}
+ H_{\mathrm{loc}}(y)
+ =(1+|y|^2)I-\frac{|y|^2+2}{1+|y|^2}
+      (y_1,-y_2)^{\mathsf t}(\bar y_1,-\bar y_2).
+\end{equation}
+This is the metric of Lemma~\ref{lem:local-metric} at
+parameter one, with the fixed unitary sign change.
+
+\begin{corollary}\label{cor:c0-inner}
+As \(T\to\infty\), uniformly on each compact \(y\)-set,
+\begin{equation}\label{eq:c0-inner}
+ H(T,r_p(T)y)\longrightarrow H_{\mathrm{loc}}(y),\qquad
+ \frac{u(T,r_p(T)y)}{\alpha(T)}
+       \longrightarrow\frac{|y|^2}{1+|y|^2}.
+\end{equation}
+Along each radial ray at \(p\), the first radius where
+\(u(T,\cdot)=\alpha(T)/2\) is
+\(r_p(T)(1+o(1))\), uniformly in direction.
+\end{corollary}
+
+\begin{proof}
+The normalized coordinates give \(u_0(z)=c(z)|z|^2\)
+with \(c(z)=\lambda_p+O(|z|^2)\). Thus
+\(u_0(r_py)/\alpha\to|y|^2\) smoothly on compact
+sets. Since \(\alpha/a\to1\), the exact compact
+metric formula converges there to
+\eqref{eq:inner-metric-limit}; its determinant weight
+tends to one. The limit and its inverse are bounded
+on each compact set. The relative estimate
+\eqref{eq:actual-static-comparison} therefore proves
+the first assertion in \eqref{eq:c0-inner}.
+Evaluation on
+\(\iota(r_py)/\sqrt\alpha=(y_1,-y_2)^{\mathsf t}\)
+proves the second.
+For \(0<\delta<1\), the scalar limit is strictly
+below \(1/2\) on \(|y|\le1-\delta\), and strictly
+above \(1/2\) on \(|y|=1+\delta\).
+For all sufficiently large \(T\) the same statements
+hold uniformly for the actual scalar norm. Every ray
+has a crossing between these two radii, and none
+before the smaller one. Letting \(\delta\downarrow0\)
+proves the claimed first-crossing equivalent.
+\end{proof}
+
+The metric convergence just proved is in \(C^0\). It does not
+yet imply convergence of curvature, and the radius defined by
+the inclusion need not agree by definition with any curvature
+radius. We establish the higher regularity and compare the two
+radii in the next section.

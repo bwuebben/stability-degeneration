@@ -1,0 +1,324 @@
+\section{A global scalar inverse with all low cap modes}
+\label{sec:global-inverse}
+
+Fix $k\ge2$, $0<\alpha<1$, and
+$0<\eta<\min(\mu,1)$, where $\mu$ is the rate in
+Section~\ref{sec:initial-metrics}. Put $\delta=2+\eta$.
+Choose a small fixed radius $r_0$ with disjoint node
+neighbourhoods of radius $6r_0$, and take $R<r_0/10$.
+For fixed $R$ all cap cores lie inside $r_i<R$ once
+$p$ is sufficiently small. Write
+\[
+ P_p^R=\Lambda_{\widetilde\omega_p^R}
+                           \mathrm i\partial\bar\partial.
+\]
+Weighted Hölder norms $C^{j,\alpha}_\gamma$ use the derivative
+weights $\varrho_p^{l-\gamma}$ and the Hölder seminorm on
+balls of radius $c\varrho_p$, with weight
+$\varrho_p^{j+\alpha-\gamma}$. All charts are rescaled by
+their radius; the fixed exterior uses ordinary Hölder norms.
+
+\subsection{The domain and its normalization}
+
+The explicit construction of the initial metric gives
+\begin{equation}\label{eq:initial-local-derivatives}
+ \|\widetilde g_p^R-\sigma_{i,p}\|_{C^{k+2,\alpha}_\mu
+                            (\{r_i<5r_0\},\sigma_{i,p})}
+       \le C.
+\end{equation}
+Here a tensor of weight $\mu$ has pointwise size
+$O(\varrho_p^\mu)$ in the indicated metric.
+This is a differentiated comparison in the actual
+holomorphic node chart. It follows directly on the
+core, where the difference is zero. On the radius-$R$
+transition, differentiation of
+\eqref{eq:initial-weight-gluing} gives the bound from
+the order $2+\mu$ central potential. On
+$2R<r_i<5r_0$, use the central conical expansion and
+smooth convergence at fixed $R$. The latter errors
+can be made at most one in this weighted norm by
+shrinking the parameter neighbourhood. Higher
+derivative bounds give its Hölder part. The constant
+in \eqref{eq:initial-local-derivatives} is independent
+of $R,p$; the permitted neighbourhood depends on $R$.
+
+Choose a nonnegative smooth density supported in a
+fixed compact subset of the unit cap and positive
+on an open set. The Gram matrix of the fifteen
+functions $H_a$ against this density is nonsingular:
+a vanishing combination on that open set vanishes
+everywhere by unique continuation, and its independent
+leading terms then have zero coefficients. Let
+$\ell_a$ be its dual moment functionals, so that
+$\ell_a(H_b)=\delta_{ab}$.
+
+On the $i$-th scaled cap define
+\begin{equation}\label{eq:physical-cap-moments}
+ H_{i,a,p}=\varepsilon_i^{d_a}H_a,\qquad
+ b_{i,a}(u)=\varepsilon_i^{-d_a}\ell_a(u|_i).
+\end{equation}
+The right side is read after pullback to the unit cap.
+Fix cutoffs $\chi_i=1$ for $r_i<r_0$ and $\chi_i=0$
+for $r_i>2r_0$. Their supports are disjoint, and they
+are one on the rescaled moment supports. Put
+\begin{equation}\label{eq:global-domain-norm}
+ v(u)=u-\sum_{i,a}b_{i,a}(u)\chi_iH_{i,a,p},
+ \qquad
+ \|u\|_{X_p^R}
+   =\|v(u)\|_{C^{k+2,\alpha}_{2+\eta}}
+                        +\sum_{i,a}|b_{i,a}(u)|.
+\end{equation}
+Every core moment of $v(u)$ is zero. Thus
+\eqref{eq:global-domain-norm} is a unique decomposition,
+equivalently a product of the closed zero-moment
+remainder space and the 120 real coefficients.
+For each fixed smooth fibre it is an equivalent
+norm on the ordinary Hölder space; uniform
+equivalence with the unweighted norm is not claimed.
+
+Choose a fixed exterior probability density whose
+support misses the cutoffs and transport it by the
+exterior identifications. Let $Q(u)$ be its integral
+against $u$. Define
+\[
+ \begin{split}
+ X_{p,0}^R&=\{u\in X_p^R:Q(u)=0\},\\
+ Y_p^R&=C^{k,\alpha}_\eta,\qquad
+ Y_{p,0}^R=\left\{f\in Y_p^R:
+                \int_{X_p}f\,\dd V_{\widetilde g_p^R}=0\right\}.
+ \end{split}
+\]
+The domain normalization and range compatibility
+use different densities.
+
+\begin{theorem}\label{thm:global-scalar-inverse}
+There are $R_1>0$ and $C$ such that, for each
+$0<R<R_1$ and all sufficiently small $p\in B^\circ$,
+\begin{equation}\label{eq:global-scalar-inverse}
+ P_p^R:X_{p,0}^R\longrightarrow Y_{p,0}^R
+ \quad\hbox{is an isomorphism},\qquad
+ \|(P_p^R)^{-1}f\|_{X_p^R}\le C\|f\|_{Y_p^R}.
+\end{equation}
+Its forward norm is also uniformly bounded. Moreover,
+\begin{equation}\label{eq:domain-hessian-control}
+ \|u\|_\infty+
+ \max_{j\le k}\sup\varrho_p^j
+   |\nabla^j(\mathrm i\partial\bar\partial u)|
+       \le C\|u\|_{X_p^R}.
+\end{equation}
+The constants depend on the fixed $r_0,\eta,k,\alpha$
+and central geometry, but not on $R$ or the relative
+cap scales.
+\end{theorem}
+
+\subsection{A negative-weight inverse and a global supremum bound}
+
+Fix $-4<\beta<0$ and $q>6$. Pacini's
+desingularization theorem
+\cite[Definition~11.6 and Theorem~12.3(1)]{pacini}
+applies to the original fixed central conical metric
+and the eight separate complete Stenzel caps.
+Its models $m_\varepsilon$ match at
+$r_i\asymp\varepsilon_i^\theta$ for one fixed
+$0<\theta<1$. Independent scales are allowed because
+the caps are separate connected components before
+gluing. The central space is connected, so the
+kernel consists of one global constant. Its
+complement can be chosen as $\ker Q$: the extension
+cutoff equals one on the fixed support of $Q$.
+The resulting negative-weight inverse constant is
+fixed before $R$ is chosen.
+
+We compare these models with the initial metric
+through scaled derivatives:
+\begin{equation}\label{eq:pacini-model-comparison}
+ \max_{j\le k+2}\sup\varrho_p^j
+ |\nabla_{m_\varepsilon}^j
+       (\Phi_p^*\widetilde g_p^R-m_\varepsilon)|
+ \le CR^\mu+e_R(p),\qquad e_R(p)\longrightarrow0.
+\end{equation}
+For fixed $R$, the gluing radii lie inside $R$.
+There the initial metric is Stenzel; at the model
+transition the conically singular and asymptotically
+conical errors tend to zero separately with each
+$\varepsilon_i$. Between that transition and $R$,
+the difference from the central metric is bounded by
+$CR^\mu$ and the cap tail. The initial transition
+and the exterior obey the same estimate.
+For phases choose $\theta<a<1$ and interpolate any
+bounded Reeb rotation between
+$\varepsilon_i^a$ and $\varepsilon_i^\theta$.
+Every scaled derivative of a smooth logarithmic
+interpolation is $O(1/|\log\varepsilon_i|)$.
+Both endpoints are asymptotically conical, since
+$\varepsilon_i^a/\varepsilon_i\to\infty$.
+This proves \eqref{eq:pacini-model-comparison},
+including phases and differentiated operator
+coefficients, without a ratio assumption.
+
+For the possibly non-Kähler model let $P_m$ be
+the same fixed multiple of the real scalar
+Laplacian as $P_p^R$ on the Kähler fibre.
+The augmented model map
+\[
+ (u,c)\longmapsto P_m u+c,\qquad Q(u)=0,
+\]
+is a uniform isomorphism from
+$(W^{k+2,q}_\beta\cap\ker Q)\oplus\RR$
+to $W^{k,q}_{\beta-2}$. Indeed $c$ is the
+model-volume mean of the target. Its norm is
+uniformly bounded by Hölder's inequality in the
+measure $\varrho^{-6}\dd V$: the required radial
+power is $\varrho^{q'(\beta+4)}$, which is
+integrable since $\beta>-4$. The total volume
+has a positive exterior lower bound, and constant
+functions have uniformly bounded domain and target
+norms at these negative weights. Pacini's
+normalized inverse handles the remaining mean-zero
+target.
+
+By \eqref{eq:pacini-model-comparison}, the two
+augmented maps differ by a small operator norm,
+first for small fixed $R$ and then small $p$.
+Neumann inversion gives the corresponding bound
+for the initial metric. If $f$ has zero current
+volume mean, integrating $P_p^Ru+c=f$ gives $c=0$.
+Consequently
+\begin{equation}\label{eq:negative-weight-inverse}
+ \|u\|_{W^{k+2,q}_\beta}
+ \le C\|f\|_{W^{k,q}_{\beta-2}}
+ \le C\|f\|_{Y_p^R},\qquad Q(u)=0.
+\end{equation}
+The second inequality uses the positive radial
+power $\eta-\beta+2$ and has no logarithmic loss.
+Weighted embedding bounds $u$ on the complement
+of the radius-$r_0$ regions.
+
+To control the cores, use the exact Stenzel
+potential $\phi_{i,p}=\varepsilon_i^2\phi$ as
+a barrier. It is bounded by $Cr_0^2$ there, and
+\eqref{eq:initial-local-derivatives}, with $r_0$
+small, gives
+\[
+ P_p^R\phi_{i,p}
+       =\tr_{\widetilde\omega_p^R}\sigma_{i,p}\ge c_*>0.
+\]
+Apply the maximum principle to
+$u\pm c_*^{-1}\|f\|_\infty\phi_{i,p}$ with
+boundary at radius $r_0$. This gives
+\begin{equation}\label{eq:uniform-potential-supremum}
+ \|u\|_\infty\le C(r_0)\|f\|_{Y_p^R}.
+\end{equation}
+Ordinary interior Schauder estimates now control
+all required norms on fixed-radius annuli.
+
+\subsection{The positive-weight cap expansion}
+
+On the fixed complete Stenzel cap,
+\cite[Theorems~2.9 and 2.11]{conlon-hein}
+gives a surjective Fredholm map
+$C^{k+2,\alpha}_{2+\eta}\to C^{k,\alpha}_\eta$.
+Its kernel is Lemma~\ref{lem:cap-harmonic-basis}.
+Subtract the core moments from a bounded right
+inverse to obtain $G_\delta$ with
+$\ell_a(G_\delta F)=0$.
+
+For completeness, the Hölder seminorm printed
+in that reference compares pairs below a fixed
+convexity radius. Our scaled input norm controls
+that norm, so the inverse first gives the weighted
+supremum estimate for its output. Schauder
+estimates on balls comparable to $\rho$ then give
+the full scaled Hölder estimate, with the compact
+core treated by fixed balls. Thus this inverse
+is bounded in precisely our norms, with no loss
+in $\eta$. Under homothety its physical norm
+remains uniform because $\delta=\eta+2$.
+
+Choose $\zeta=1$ for $r_i<3r_0$ and $\zeta=0$
+for $r_i>4r_0$. On the complete scaled cap set
+\begin{equation}\label{eq:global-local-expansion}
+ w=G_{\delta,i,p}P_{\sigma_{i,p}}(\zeta u),
+ \qquad
+ H=\zeta u-w=\sum_ab_aH_{i,a,p}.
+\end{equation}
+Since $w$ has zero core moments, these $b_a$
+are exactly \eqref{eq:physical-cap-moments}.
+Put $V_i=\|w\|_{C^{k+2,\alpha}_\delta}$ and
+$U=\|u\|_\infty$. The annular Gram estimate
+\eqref{eq:annular-harmonic-coefficients}, now at
+physical radius $r_0$, gives
+\begin{equation}\label{eq:global-quadratic-coefficients}
+ |b_{(2)}|\le C(r_0^{-2}U+r_0^\eta V_i)
+\end{equation}
+for the six degree-two coefficients.
+
+On $r_i<3r_0$, the source in
+\eqref{eq:global-local-expansion} is
+$f+(P_\sigma-P_p^R)u$, and $u=H+w$.
+The constant and coordinate components of $H$
+have identically zero complex Hessian for both
+Kähler metrics. For the other components,
+\eqref{eq:initial-local-derivatives} yields
+\[
+ \begin{split}
+ \|(P_\sigma-P_p^R)H\|_{C^{k,\alpha}_\eta}
+       &\le Cr_0^{\mu-\eta}|b_{(2)}|,\\
+ \|(P_\sigma-P_p^R)w\|_{C^{k,\alpha}_\eta}
+       &\le Cr_0^\mu V_i.
+ \end{split}
+\]
+The use of the complex Hessian is essential here;
+the real Hessians of the pluriharmonic coordinate
+functions do not vanish. On the cutoff annulus,
+\eqref{eq:uniform-potential-supremum} and ordinary
+Schauder estimates instead bound all source and
+commutator terms. The cap inverse therefore gives
+\[
+ V_i\le C\left(\|f\|_Y+r_0^{-\delta}U
+             +r_0^\mu V_i+r_0^{\mu-\eta}|b_{(2)}|\right).
+\]
+Insert \eqref{eq:global-quadratic-coefficients}
+and fix $r_0$ small enough to absorb the resulting
+$Cr_0^\mu V_i$. Equation
+\eqref{eq:uniform-potential-supremum} gives
+$V_i\le C(r_0)\|f\|_Y$. The same annular Gram
+estimate then bounds all fifteen coefficients,
+including degrees zero and $3/2$. On $r_i<r_0$
+the canonical remainder $v(u)$ equals $w$.
+On the fixed cutoff annuli and exterior its
+norm is controlled by the coefficient bounds
+and ordinary Schauder estimates. This proves
+the inverse estimate in
+\eqref{eq:global-scalar-inverse}.
+
+\subsection{Isomorphism and the tensor estimate}
+
+For each fixed smooth compact fibre, the scalar
+equation has a solution for every zero-volume-mean
+Hölder target, unique up to a constant. Impose
+$Q(u)=0$. The preceding estimates apply directly
+to these Hölder solutions by elliptic theory;
+no assertion of density of smooth functions in
+the full Hölder norm is needed.
+
+The forward map is also bounded. The remainder
+has weight $2+\eta$, so its image has weight
+$\eta$. On a node chart the pluriharmonic modes
+have zero image, and the quadratic modes have
+image $O(\varrho_p^\mu)$ by
+\eqref{eq:initial-local-derivatives}. Cutoff
+derivatives occur at fixed radius. Integration
+gives the required range condition, and the
+only global harmonic functions are constants,
+removed by $Q$.
+
+Finally the remainder has complex Hessian
+$O(\varrho_p^\eta)$; each quadratic mode has
+bounded complex Hessian with scaled derivatives;
+and each pluriharmonic mode has zero such
+Hessian where its cutoff is constant. All other
+terms occur at fixed radius. Their supremum
+norms are bounded as well. This proves
+\eqref{eq:domain-hessian-control} and completes
+the proof of Theorem~\ref{thm:global-scalar-inverse}.

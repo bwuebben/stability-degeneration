@@ -1,0 +1,249 @@
+\section{An integral marking by smooth singular cycles}
+\label{sec:integral-marking}
+
+The reference fibre in Theorem~\ref{thm:evaluated-periods} is a
+smooth complete intersection with algebraic coefficients. We now
+construct an integral marking on that fibre, together with smooth
+representatives suitable for integration. The construction uses the
+global fibre, but does not express any local vanishing sphere in the
+resulting basis.
+
+\begin{theorem}\label{thm:smooth-marking}
+Let $X\subset\PP^3\times\PP^3$ be a smooth complete intersection
+of bidegrees $(1,1)$, $(1,1)$ and $(2,2)$ with represented algebraic complex
+coefficients. There is a terminating procedure producing an integral
+symplectic basis of $H_3(X;\ZZ)$ and, for each basis element, a finite
+integral sum of smooth singular three-simplices in $X$.
+The face cancellations are exact. Each simplex map has a specified
+neighbourhood of the closed simplex on which it is smooth; its values
+and derivatives through order two are evaluated with known finite bounds.
+\end{theorem}
+
+The real and imaginary parts of an algebraic coefficient are supplied
+with their polynomial and isolating data. Exact real algebraic decisions
+below apply to this representation. They are not decisions about
+arbitrary computable real numbers.
+
+\subsection{A compact real algebraic presentation}
+
+Embed each factor $\PP^3$ in the real vector space of Hermitian
+matrices by its rank-one orthogonal projector. It is described by
+$P^*=P$, $P^2=P$, and $\tr P=1$. In the product embedding, the
+squared norm of a homogeneous equation on unit representatives is
+a polynomial in the two projector matrices: expand the squared
+modulus and replace $z_i\overline z_j$ by $P_{ij}$ in each factor.
+The three squared equations therefore give a compact real algebraic
+presentation of $X$.
+
+These squared equations need not have independent differentials.
+For tangent spaces we retain the original complex equations in
+projective affine charts. Their real derivative has rank six on
+$X$. Its kernel, carried into the projector embedding by the
+algebraic chart map, describes $TX$ effectively on a finite cover.
+
+The compatible semialgebraic triangulation theorem gives a finite
+simplicial complex $K$ and a semialgebraic homeomorphism
+$h:|K|\longrightarrow X$, with algebraic descriptions of its graphs
+on simplices \cite[Theorem~5.43 and Remark~11.46(b)]{BPR}.
+Here and below the locators for this reference are those of its
+2016 posted revision. We use the classical construction of a
+map into $X$, rather than a simplicial replacement known only
+to have the same homology. No differentiability of $h$ is assumed.
+
+\subsection{An effective normal tube}
+
+We give the required retraction construction for a compact smooth
+real algebraic submanifold $M\subset\RR^N$ with effective local
+regular equations. Its tangent descriptions give a semialgebraic
+normal bundle
+\[
+ NM=\{(x,v):x\in M,\ v\perp T_xM\}.
+\]
+The map $E(x,v)=x+v$ has invertible differential along the zero
+section. There exists $r_0>0$ such that it is locally invertible and
+injective on $\|v\|<r_0$. For injectivity, otherwise equal-image
+pairs with normal lengths tending to zero would, after passing to
+a subsequence, have the same limiting basepoint in the compact
+manifold. Both pairs would then lie in one inverse neighbourhood
+of its zero normal vector, a contradiction. Compactness also makes
+local invertibility uniform near the zero section.
+
+For a positive rational $r$, the assertions that $E$ is injective
+on $NM_{<r}$ and that its differential is invertible there are
+first-order conditions over the real algebraic numbers. Injectivity
+uses two normal vectors and equality of their images. Differential
+invertibility is checked in the finite semialgebraic normal-bundle
+charts; their derivative graphs are obtained by implicit
+differentiation. Real quantifier elimination decides these conditions.
+Testing $r=2^{-k}$ therefore terminates.
+
+The image of the accepted tube is exactly
+$T_r=\{y:\dist(y,M)<r\}$. A nearest point exists by compactness,
+and the difference from a nearest point is normal. Injectivity of
+$E$ proves that this point is unique for $y\in T_r$ and also
+for every image $E(x,v)$ with $\|v\|<r$. The first component of
+$E^{-1}$ is consequently a smooth nearest-point retraction
+\begin{equation}\label{eq:normal-retraction}
+                       r_M:T_r\longrightarrow M.
+\end{equation}
+Its graph is semialgebraic. This proves the particular retraction
+we need; general semialgebraic tubular-neighbourhood existence
+results alone would not supply its radius and derivative bounds.
+
+On the compact closed tube of radius $3r/4$, every fixed derivative
+of $r_M$ is bounded. Its graph is effectively semialgebraic, either
+by implicit differentiation in inverse charts or by the first-order
+definition of derivatives followed by quantifier elimination.
+Enumerating integer component bounds and deciding the universal
+inequalities produces finite bounds of any prescribed order.
+
+At an algebraic point in $T_r$, the unique value of $r_M$, and of
+each derivative, is algebraic and can be isolated. At a named point
+$y$ in the smaller tube of radius $r/2$, choose an algebraic
+$q$ with $\|q-y\|<r/8$. The joining segment lies in the tube
+of radius $3r/4$. A bound for one further derivative controls the
+error made by replacing $y$ by $q$. Refining $q$ and the algebraic
+isolation therefore evaluates $r_M(y)$ and its required derivatives.
+No sign or equality test on $y$ is used.
+
+\subsection{Face-compatible smoothing}
+
+Order the vertices of $K$ once. The graph of $h$ on a standard
+closed $d$-simplex has algebraic data, so values at algebraic points
+are algebraic. It also has an effective uniform modulus of
+continuity: for any rational $\epsilon>0$, search for a rational
+$\delta>0$ such that
+\begin{equation}\label{eq:triangulation-modulus}
+ \|u-v\|\le\delta\quad\Longrightarrow\quad
+             \|h(u)-h(v)\|\le\epsilon
+             \qquad (u,v\in\Delta^d).
+\end{equation}
+This is a first-order algebraic condition on the graph. Uniform
+continuity proves termination. Take minima over the finite complex,
+and obtain a common finite bound $R_0\ge1$ for $\|h\|$ in the
+same way.
+
+For barycentric coordinates $\lambda_0,\ldots,\lambda_d$, use
+one common degree $n\ge1$ and the Bernstein polynomial
+\begin{equation}\label{eq:bernstein-map}
+ B_nh(\lambda)=\sum_{|\alpha|=n}
+                 \frac{n!}{\alpha!}\lambda^\alpha h(\alpha/n).
+\end{equation}
+Its coefficients are algebraic. On a face all terms involving an
+omitted vertex vanish; the remaining terms give exactly the same
+polynomial as the construction on that face. The restrictions of
+the maps thus agree as parametrized maps, not just as sets.
+
+We record a uniform approximation bound. In the coordinates
+$(\lambda_1,\ldots,\lambda_d)$, let $A$ have the multinomial
+distribution with parameters $n,\lambda$. Then $B_nh$ is the
+expectation of $h(A/n)$, and
+\[
+ \mathbb E\left\|(A_1/n,\ldots,A_d/n)
+                    -(\lambda_1,\ldots,\lambda_d)\right\|^2
+                      \le d/(4n).
+\]
+Choose $\delta$ from \eqref{eq:triangulation-modulus} for
+$\epsilon/2$. Splitting at distance $\delta$ and applying
+Markov's inequality gives
+\begin{equation}\label{eq:bernstein-bound}
+       \|B_nh-h\|_\infty\le\epsilon/2
+                           +R_0d/(2n\delta^2).
+\end{equation}
+One common integer $n\ge\max_d R_0d/(\epsilon\delta^2)$
+therefore gives error at most $\epsilon$ on the entire complex.
+
+Apply the normal-tube construction to $M=X$ and choose
+$\epsilon<r/8$. Define, simplex by simplex,
+\begin{equation}\label{eq:smooth-simplex-map}
+                         g=r_X\circ B_nh.
+\end{equation}
+It has the same exact face identities. It is smooth on a known
+neighbourhood of each closed simplex: bound the polynomial derivatives
+on a larger compact box and choose a sufficiently small neighbourhood
+whose image stays in $T_{r/2}$. If $L$ bounds its first derivative,
+one may take a radius smaller than the box margin and
+$3r/[8(1+L)]$. The chain rule gives the evaluated bounds
+\begin{equation}\label{eq:smoothed-chain-derivatives}
+ \begin{split}
+ \|Dg\|&\le\|Dr_X\|\,\|D(B_nh)\|,\\
+ \|D^2g\|&\le\|D^2r_X\|\,\|D(B_nh)\|^2
+                       +\|Dr_X\|\,\|D^2(B_nh)\|.
+ \end{split}
+\end{equation}
+The face-compatible homotopy
+\[
+ (u,t)\longmapsto r_X\bigl((1-t)h(u)+tB_nh(u)\bigr)
+\]
+is defined because its argument stays within $\epsilon$ of $h(u)$.
+It identifies $g_*$ with $h_*$ on integral homology. We assert
+neither injectivity nor immersion for $g$. It produces smooth
+singular chains and does not require a $C^2$ triangulation theorem.
+
+\subsection{Integral homology and orientation}
+
+The integer boundary matrices of the ordered finite complex compute
+integral homology and cohomology by Smith reduction, including chain
+representatives. The smooth-CICY topology gives
+$H_1(X;\ZZ)=0$, $H_2(X;\ZZ)=\ZZ^2$, and free
+$H_3(X;\ZZ)$ of rank $134$. Thus its middle intersection form is
+unimodular and alternating. In particular these computations retain
+integral indices; rational linear algebra would not suffice.
+
+It remains to select the complex orientation. Choose either primitive
+generator $z_6$ of $H_6(K;\ZZ)$. For the fixed product Fubini--Study
+form $\omega_K$, put $\beta=(\omega_K|_X)^3/3!$. Since $g$ is
+homotopic to the homeomorphism $h$,
+\[
+                    \int_{g_\#z_6}\beta=\pm\Vol_{\omega_K}(X)\ne0.
+\]
+This sign is determined by integration with an absolute error bound.
+If $C_1,C_2$ bound the first two derivatives of a six-simplex map
+and $W_0,W_1$ bound a smooth ambient extension of $\beta$ and
+its first derivative, its pullback integrand has Lipschitz bound
+\begin{equation}\label{eq:orientation-quadrature}
+                    W_1C_1^7+6W_0C_1^5C_2.
+\end{equation}
+Subdivision and pointwise evaluation consequently give arbitrarily
+small absolute enclosures after summing with the absolute chain
+coefficients. Since the true integral is nonzero, an enclosure
+eventually excludes zero. Reverse $z_6$ if necessary. This determines
+the complex orientation using only the known ambient positive form.
+
+\subsection{Intersection form and symplectic basis}
+
+Let $\xi_1,\ldots,\xi_{134}$ be an integral cohomology basis
+computed on $K$. The simplicial cup product gives
+\[
+             Q_{ab}=\langle\xi_a\smile\xi_b,z_6\rangle.
+\]
+Use the left cap convention specified by
+\begin{equation}\label{eq:cap-convention}
+ \langle\eta,\xi\cap z_6\rangle
+                     =\langle\xi\smile\eta,z_6\rangle.
+\end{equation}
+Then $c_a=\xi_a\cap z_6$ are integral three-cycles whose classes
+are a basis by Poincar\'e duality. Their oriented homological
+intersection matrix is $Q$ in this convention. The cup/cap identities
+and integral duality are those of
+\cite[Theorem~3.30 and Proposition~3.38]{Hatcher}; the explicit
+order in \eqref{eq:cap-convention} fixes the sign in degree three.
+
+Integral symplectic reduction finds $S\in\operatorname{GL}_{134}(\ZZ)$
+with $S^TQS$ equal to the chosen standard symplectic matrix. To see
+termination directly, a primitive vector has a primitive pairing row
+by unimodularity, so B\'ezout's identity finds a partner pairing to
+one. Their hyperbolic plane splits integrally; the orthogonal
+projection uses integer pairing values. Compute a basis of the
+complement by Smith reduction and repeat.
+
+Apply these same integer combinations to the cycles $c_a$, and then
+apply $g_\#$. Exact face identities preserve every chain boundary
+cancellation. Equations \eqref{eq:normal-retraction}--\eqref{eq:smoothed-chain-derivatives}
+give the asserted domains, evaluations and bounds for their smooth
+simplex maps. This proves Theorem~\ref{thm:smooth-marking}.
+
+This construction supplies a marking of the actual fibre. It has
+used no local vanishing sphere, no intersection vector with such a
+sphere, and no homology decomposition of a transported endpoint.
+Those coordinates remain to be recovered by the period observations.

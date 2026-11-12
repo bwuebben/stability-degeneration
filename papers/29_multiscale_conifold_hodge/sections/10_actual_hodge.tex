@@ -1,0 +1,311 @@
+\section{The actual Hodge spectrum and its exterior marking}
+\label{sec:actual-hodge}
+
+We now prove the spectral and form assertions of
+Theorem~\ref{thm:main}. All norms in this section are the
+geometric, unnormalized $L^2$ norms. On each smooth fibre,
+the real Hodge Laplacian has its usual $H^2$ operator
+domain and $H^1$ quadratic-form domain. Put
+\[
+ L_{\min}(p)=\min_i|\log|\tau_i(p)||,\qquad
+ \mu_j(p)=\Eig_j(E_p,M),\quad j=1,2.
+\]
+
+\subsection{Multiplicative transfer and the complete count}
+
+We recall the variational metric comparison in a form
+which avoids differentiating the metric. If two metrics
+$g,h$ on a closed six-manifold satisfy
+$(1-\delta)g\le h\le(1+\delta)g$, their squared
+$L^2$ norms in every degree differ by factors
+$1+O(\delta)$. The differential $\dd$ and its graph
+domain are unchanged. On $\Dom\dd/\ker\dd$, the quotient
+norms differ by the same factors, since each is an
+infimum over the same closed subspace. Min--max for
+\[
+ \frac{\|\dd u\|^2}{\|[u]\|^2}
+\]
+therefore compares every ordered coexact eigenvalue
+multiplicatively. Exact positive eigenvalues in degree
+two are coexact positive eigenvalues in degree one.
+Taking the ordered union gives the full positive
+degree-two comparison. This is the variational
+comparison recalled in \cite[Section~6]{wuebben-hodge};
+it needs no estimate of the difference of
+codifferentials from a $C^0$ metric bound.
+
+Fix $R,A$. Theorem~\ref{thm:ricci-flat-comparison}
+compares the actual metric with the model by an
+error whose limiting bound tends to zero as
+$R\downarrow0$, $A\to\infty$. The model theorem
+gives exactly two small positive eigenvalues,
+relatively asymptotic to
+$\Eig_j(E_\varepsilon,M_R)$. Its complementary
+one-form and two-form gaps may depend on $R,A$.
+The actual normalized scales give
+\begin{equation}\label{eq:log-length-conversion}
+ \log\frac{R}{2A\varepsilon_i(p)}
+       =\frac13|\log|\tau_i(p)||+O_{R,A}(1).
+\end{equation}
+Since the link norm is $2\pi/3$, this implies
+relative equivalence of $E_\varepsilon$ and
+$E_p$, with error $O_{R,A}(L_{\min}^{-1})$.
+This is a comparison of each nonnegative summand,
+so it is independent of the condition number.
+The quotient masses $M_R$ tend relatively to
+$M$ under their common identification with $V/K$.
+Generalized min--max now gives
+\begin{equation}\label{eq:actual-relative-rates}
+ \lambda_{2,j}^+(p)=(1+o(1))\mu_j(p),\qquad j=1,2,
+\end{equation}
+first at fixed $R,A$ and then in the ordered
+limits. For each error tolerance the restriction
+on $p$ applies throughout the full smooth locus.
+
+Fixing one sufficiently accurate pair $R,A$
+transfers the complementary gaps. A gap uniform
+in all auxiliary choices is unnecessary.
+Topology gives $b_2(X_p)=2$ throughout the smooth
+family. Thus the full low two-form space consists
+of two harmonic forms and two positive modes,
+with no additional cap or exterior modes.
+
+\subsection{Complex type and primitivity}
+
+The parallel holomorphic volume form on a
+Ricci-flat Kähler threefold, together with the
+metric, gives a parallel $\operatorname{SU}(3)$-
+equivariant isomorphism
+$\Lambda^{0,1}\to\Lambda^{2,0}$.
+It intertwines the Hodge Laplacians: the
+connection terms agree under the parallel map,
+and the curvature terms are the same holonomy
+representation action. A nonzero positive
+$(2,0)$ eigencomponent below the one-form gap
+would therefore give a forbidden $(0,1)$
+eigenform. Reality excludes the conjugate
+component as well.
+
+The Kähler contraction $\Lambda$ commutes
+with the Laplacian. If $\Lambda u$ were
+nonzero for a small positive eigenform, its
+differential would be a nonzero one-form
+eigenvector at the same eigenvalue. Similarly
+$\delta u$ must vanish. Hence every small
+positive form is primitive, of real type
+$(1,1)$, and
+$u=\lambda^{-1}\delta\dd u$ is coexact.
+This applies to the entire space $S_p$.
+
+\subsection{A fixed observer and capture of the whole cluster}
+
+Choose the compact exterior $C_*$ from
+Section~\ref{sec:introduction}, with its
+central metric. Let $\Pi_*$ be its $L^2$
+projection onto distributionally closed
+two-forms with unrestricted tangential trace.
+The first-order estimate and harmonic
+cohomology map in Section~\ref{sec:model-energy}
+make
+\begin{equation}\label{eq:actual-fixed-observer}
+ \mathcal A u=\pr_W^G[\Pi_*(u|_{C_*})]
+\end{equation}
+a bounded operation on exterior $L^2$.
+The exterior identifications are fixed.
+It annihilates every globally closed form
+on $X_p$, whose restriction class lies in
+$K$. On a central harmonic representative
+$\eta_D$, it gives $\pr_W^G D$.
+The cohomology coefficients can be read
+from periods of the closed projection;
+we do not integrate an arbitrary unclosed
+$L^2$ form over cycles.
+
+Compare the model metric $g$ with the
+actual metric $h$ under the surgery maps.
+If their inner products differ relatively
+by $\delta$, their projections onto the
+orthogonal complement of the same closed
+space $\ker\dd$ differ in norm by $O(\delta)$.
+In particular, for $u\perp_h\ker\dd$
+and $v=P_gu$,
+\begin{equation}\label{eq:metric-coexact-projection}
+ \|u-v\|_g\le C\delta\|u\|_g,\qquad
+ \dd v=\dd u.
+\end{equation}
+Indeed for $z\in\ker\dd$, the inner product
+$\langle u,z\rangle_g$ is just the difference
+of the two metric inner products and is
+bounded by $C\delta\|u\|_g\|z\|_g$.
+Taking a supremum over unit $z$ proves
+the estimate. The subtracted form is closed.
+
+If $u\in S_p$ is a unit vector, its energy
+is at most $C/L_{\min}$. The model energy
+of $v$ is exactly $\|\dd v\|_g^2$.
+The complementary model gap bounds the
+component of $v$ outside the model small
+coexact space by
+$C_{R,A}L_{\min}^{-1/2}$ in norm.
+Thus $u$ is within $C\delta+o_{R,A}(1)$
+of that entire model space. Section
+\ref{sec:model-compactness} identifies it
+with $W_R$ through its trials and their
+mass convergence. On these trials the
+fixed observer tends to
+\[
+ J_R:W_R\longrightarrow W,\qquad
+                   D\longmapsto\pr_W^G D.
+\]
+Their central limits are closed representatives
+in class $D$, so the assertion holds in
+operator norm on the two-dimensional input
+space. The transported mass tends to $M$
+as $R\downarrow0$. Consequently
+\begin{equation}\label{eq:actual-cluster-mass}
+ \limsup_{p\to0}
+ \sup_{\substack{u\in S_p\\\|u\|_h=1}}
+ |M(\mathcal Au,\mathcal Au)-1|
+       \le C\delta(R,A)+e_M(R),\qquad e_M(R)\to0.
+\end{equation}
+The observer constants remain bounded for
+small $R$ because $C_*$ lies outside all
+modified central regions and the quotient
+masses tend to a positive form.
+
+Taking the ordered limits proves uniform
+mass convergence and injectivity of
+$\mathcal A$ on $S_p$. Since both dimensions
+are two, it is an isomorphism. In the
+notation of \eqref{eq:observed-pair-intro},
+polarization gives
+\begin{equation}\label{eq:actual-observed-mass}
+ (1-e(p))M\le N_p\le(1+e(p))M,\qquad e(p)\to0.
+\end{equation}
+No internal gap or eigenvalue-ratio assumption
+has entered this argument.
+
+\subsection{All surviving harmonic classes}
+
+For $k\in K$, let $h_g(k)$ and $h_h(k)$
+be model and actual harmonic representatives
+of the corresponding smoothing class.
+Their difference $e=h_h(k)-h_g(k)$ is exact.
+Using their respective orthogonality to
+exact forms gives
+\[
+ \begin{split}
+ \|e\|_h^2
+  &=-\langle h_g(k),e\rangle_h\\
+  &=-\bigl(\langle h_g(k),e\rangle_h
+                          -\langle h_g(k),e\rangle_g\bigr).
+ \end{split}
+\]
+Hence $\|e\|_h\le C\delta\|h_g(k)\|_g$.
+The model harmonic mass converges to
+$G_R|_K$, which tends to $G|_K$.
+The ordered limits prove the claimed
+actual harmonic mass on all of $K$.
+In particular both surviving classes,
+not just the polarizing class, are retained.
+
+\subsection{The weighted lower bound in the fixed marking}
+
+The relative eigenvalues and observed mass
+do not alone identify the marked energy.
+We first prove a one-sided form inequality.
+For an actual coexact $u$ take $v=P_gu$
+as above. Since $u-v$ is globally closed,
+\begin{equation}\label{eq:observer-projection-invariance}
+ \mathcal Au=\mathcal Av.
+\end{equation}
+Let $C_R$ be the model exterior,
+$\Pi_R$ its closed projection, and
+$\mathcal A_R$ its quotient observer.
+For small $R$, $C_*\subset C_R$.
+Set $\zeta=\Pi_R(v|_{C_R})$. Its class
+restricts unchanged to $C_*$, so
+$\mathcal A\zeta=J_R\mathcal A_Rv$.
+The first-order projection estimate gives
+\begin{equation}\label{eq:observer-derivative-discrepancy}
+ |\mathcal Av-J_R\mathcal A_Rv|
+       \le C_R\|\dd v\|_g.
+\end{equation}
+Indeed $v-\zeta$ has $H^1(C_R)$ norm
+bounded by that right side, and the fixed
+observer is bounded on $L^2(C_*)$.
+This derivative estimate is stronger than
+mere convergence of the two observers.
+
+The largest eigenvalue of $E_p$ in any
+fixed Euclidean coordinates is
+$O(L_{\min}^{-1})$. Also
+$E_p(J_RD)=E_p(D)$, since the restriction
+periods vanish on $K$. Combine
+\eqref{eq:model-weighted-lower},
+\eqref{eq:log-length-conversion} and
+\eqref{eq:observer-derivative-discrepancy}
+in the energy seminorm to obtain
+\[
+ \begin{split}
+ E_p(\mathcal Au)^{1/2}
+ &\le\bigl(1+o_{R,A}(1)+C_RL_{\min}^{-1/2}\bigr)
+                                      \|\dd v\|_g\\
+ &\le\bigl(1+C\delta(R,A)+o_{R,A}(1)\bigr)
+                                      \|\dd u\|_h.
+ \end{split}
+\]
+Every error is proportional to the input's
+own energy norm. Taking ordered limits,
+restricting to $S_p$ and transporting
+by $\mathcal A$ gives
+\begin{equation}\label{eq:actual-one-sided-energy}
+ E_p\le(1+e_1(p))Q_p,\qquad e_1(p)\to0.
+\end{equation}
+
+\subsection{Relative control of the full energy form}
+
+Under the observation isomorphism, the
+generalized eigenvalues of $(Q_p,N_p)$
+are the two actual eigenvalues. Therefore
+\eqref{eq:actual-relative-rates} and
+\eqref{eq:actual-observed-mass} imply
+\begin{equation}\label{eq:actual-energy-determinant}
+ \frac{\det Q_p}{\det E_p}
+  =\frac{\lambda_{2,1}^+\lambda_{2,2}^+}{\mu_1\mu_2}
+                       \frac{\det N_p}{\det M}
+       \longrightarrow1.
+\end{equation}
+Each eigenvalue of
+$B_p=E_p^{-1/2}Q_pE_p^{-1/2}$ is at least
+$(1+e_1(p))^{-1}$ by
+\eqref{eq:actual-one-sided-energy},
+while their product tends to one by
+\eqref{eq:actual-energy-determinant}.
+The larger is at most
+$\det(B_p)(1+e_1(p))$. Thus both tend to one,
+which proves
+\begin{equation}\label{eq:actual-observed-energy}
+ (1-e(p))E_p\le Q_p\le(1+e(p))E_p.
+\end{equation}
+This determinant argument never bounds
+$E_p^{-1}$ in a fixed norm.
+
+For an actual orthonormal eigenbasis,
+let $C_p$ have columns $\mathcal Au_j$.
+Then
+$C_p^{\mathsf T}N_pC_p=I$ and
+$C_p^{\mathsf T}Q_pC_p=\Lambda_p$.
+Conjugating \eqref{eq:actual-observed-mass}
+and \eqref{eq:actual-observed-energy}
+gives the two matrix estimates in
+\eqref{eq:marked-matrix-intro}. In particular the
+$(i,j)$ energy error is bounded by
+$e(p)\sqrt{\lambda_{2,i}^+\lambda_{2,j}^+}$.
+This remains meaningful for arbitrarily
+separated eigenvalues.
+
+Compactness gives a uniform error tending
+to zero, without an explicit rate.
+The eigenline and separated-path assertions
+are proved next.

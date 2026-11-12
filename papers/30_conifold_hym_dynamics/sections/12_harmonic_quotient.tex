@@ -1,0 +1,262 @@
+\section{The harmonic quotient metric and unitary rigidity}
+\label{sec:harmonic-quotient}
+
+We now vary the holomorphic bundle, while keeping the smooth
+base fibre fixed. The resulting harmonic metric has a different
+domain from the metric in \eqref{eq:finite-flow-metric}.
+For a skew-Hermitian connection one-form use
+$\|a\|_2^2=-\int\tr(a\wedge *a)$, with volume $\omega_p^3/3!$.
+On the matrix space $W=\operatorname{Mat}_2\oplus\operatorname{Mat}_2$
+put
+\begin{equation}\label{eq:flat-arrow-metric}
+ G_{0,p}(q,q)=2c_+(p)\|q_A\|_{\rm HS}^2
+                                  +2c_-(p)\|q_B\|_{\rm HS}^2.
+\end{equation}
+Let $\mathfrak k_0=\mathrm i\mathfrak h$ and let $Q$ also
+denote the split complementary projection on skew-Hermitian
+trace-free sections. The fundamental vector for the compact
+action is
+\[
+ \rho_w\xi=(\xi_+A-A\xi_-,\ \xi_-B-B\xi_+).
+\]
+Exact equivariance of the actual connection map gives
+\begin{equation}\label{eq:actual-gauge-action}
+       d\mathcal A_p(w)(\rho_w\xi)=-D_{\mathcal A_p(w)}\xi.
+\end{equation}
+The ineffective scalar may equivalently be included in the
+finite gauge algebra.
+
+\begin{theorem}\label{thm:harmonic-quotient}
+Uniformly in the base and every small $w$, for all $q\in W$
+and $v\in QH^1(\mathfrak{su}E^{\rm sp})$,
+\begin{equation}\label{eq:all-gauge-competitors}
+ \begin{split}
+ (1-C|w|)\{G_{0,p}(q,q)+\|D_0v\|_2^2\}
+ &\le\|d\mathcal A_p(w)q-D_{\mathcal A_p(w)}v\|_2^2\\
+ &\le(1+C|w|)\{G_{0,p}(q,q)+\|D_0v\|_2^2\}.
+ \end{split}
+\end{equation}
+Consequently the full unitary-gauge minimum is relatively
+equivalent, with error $O(|w|)$, to
+\begin{equation}\label{eq:finite-quotient-metric}
+             g^{\rm quot}_{0,p,w}(q)
+                    =\inf_{\xi\in\mathfrak k_0}G_{0,p}(q-\rho_w\xi,q-\rho_w\xi).
+\end{equation}
+Its kernel is exactly $\im\rho_w$.
+For $F_p(z)=\mathcal A_p(\chi_p(z))$ and genuine tangents
+to a smooth orbit-type stratum of $\mu_{2,p}^{-1}(0)$,
+the actual harmonic connection metric satisfies
+\begin{equation}\label{eq:harmonic-relative-metric}
+ (1-C|z|)g^{\rm quot}_{0,p,z}
+       \le F_p^*g_{\rm harm}\le(1+C|z|)g^{\rm quot}_{0,p,z}.
+\end{equation}
+This real metric is twice the Dolbeault harmonic
+Kodaira--Spencer metric. The estimates allow every change
+of stabilizer and all positive singular-value ratios of
+$\rho_z$.
+\end{theorem}
+
+\begin{proof}
+Split harmonicity and type orthogonality give
+\[
+ \|a_{1,p}(q)\|_2^2=2\|\eta_p(q)\|_2^2=G_{0,p}(q,q),
+ \qquad \langle a_{1,p}(q),D_0v\rangle_2=0.
+\]
+The connection expansion \eqref{eq:connection-expansion}
+and the split section gap imply
+\[
+ \begin{split}
+ \|d\mathcal A_p(w)q-D_{\mathcal A_p(w)}v
+                           -(a_{1,p}(q)-D_0v)\|_2
+ &\le\|d\mathcal N_p(w)q\|_2+\|[a_p(w),v]\|_2\\
+ &\le C|w|\{G_{0,p}(q,q)+\|D_0v\|_2^2\}^{1/2}.
+ \end{split}
+\]
+Squaring proves \eqref{eq:all-gauge-competitors}; density
+extends it to the stated $H^1$ domain. The minimum over
+$QH^1$ exists uniquely by coercivity. Infimizing the lower
+bound and taking $v=0$ for the upper bound gives a relative
+comparison with $G_{0,p}(q,q)$.
+
+Every full gauge direction is $\xi+v$. By
+\eqref{eq:actual-gauge-action}, its residual is
+$d\mathcal A_p(w)(q+\rho_w\xi)-D_{\mathcal A_p(w)}v$.
+Apply the preceding comparison to every $q+\rho_w\xi$
+and then infimize in $\xi$. Changing its sign gives
+\eqref{eq:finite-quotient-metric}. The finite range is
+closed at each parameter, so the kernel is precisely
+$\im\rho_w$. No estimate for the size of a minimizing
+$\xi$ has been used.
+
+Real equivariance gives
+$d\chi_p(z)\rho_z\xi=\rho_{\chi_p(z)}\xi$.
+Since $d\chi_p=I+O(|z|)$ in the uniformly positive arrow
+metric, the same comparison transfers through $\chi_p$
+inside every residual before minimization. This proves
+\eqref{eq:harmonic-relative-metric} as a quotient form.
+
+For its harmonic interpretation, take a smooth curve in
+one zero-level orbit-type stratum. Its actual derivative
+$a$ at the HE connection $D_A$ satisfies
+$(D_Aa)^{0,2}=0$ and $\mathrm i\Lambda D_Aa=0$.
+The full gauge minimum supplies the Coulomb representative
+$a_h=a-D_A\zeta$, with $D_A^*a_h=0$.
+Subtracting this vertical preserves the two linearized
+equations because $F_A^{0,2}=0$ and
+$\mathrm i\Lambda F_A=0$. The Kähler identities identify
+the Coulomb and contracted equations with the sum and
+difference of the two adjoint expressions, giving
+\[
+ \dbar_A(a_h^{0,1})=0,\qquad \dbar_A^*(a_h^{0,1})=0.
+\]
+This is the harmonic representative of the actual
+Kodaira--Spencer class; a unitary vertical is a Dolbeault
+coboundary. Type orthogonality gives the factor two in
+its real norm, in agreement with
+\cite[Section 7.2 and equations (7.6.5), (7.6.20)--(7.6.21)]{Kobayashi}.
+The orbit-type pieces of the zero level and their quotients
+by $K$ are smooth by \cite[Theorem 2.1]{SL}.
+The form is positive on their quotient tangents by its
+identified kernel. For fixed $p$ it is smooth on each
+stratum, by the elliptic inverse on the complement of
+the constant-dimensional parallel kernel. No uniform
+derivative across strata or through the singular base
+is asserted.
+\end{proof}
+
+The same action occurs in the weak endomorphism energy:
+\begin{equation}\label{eq:shared-action-energy}
+             E_{p,z}(S)=G_{0,p}(\rho_z(\mathrm iS),\rho_z(\mathrm iS)).
+\end{equation}
+Thus its kernel is the infinitesimal stabilizer, while
+the null directions of the quotient tangent metric are
+the image of the action. These are different spaces
+related by one specified map.
+
+\subsection{All unitary intertwiners are constant}
+
+An infinitesimal metric comparison does not identify
+different finite quotient points with different bundle
+classes. The following statement supplies that identification.
+
+\begin{theorem}\label{thm:unitary-rigidity}
+On a common small parameter ball, every unitary gauge
+transformation intertwining $\mathcal A_p(w_1)$ and
+$\mathcal A_p(w_2)$ is a split parallel block unitary
+$K\in U(2)\times U(2)$, and $w_2=K\cdot w_1$.
+At HE points, two constructed holomorphic bundles are
+isomorphic if and only if their parameters lie in the
+same $K$-orbit. The same assertion holds in the balanced
+$z$ coordinates.
+\end{theorem}
+
+\begin{proof}
+Put $\rho=\max(|w_1|,|w_2|)$ and abbreviate the connection
+increments by $a_j=a_p(w_j)$. The intertwining equation gives
+\[
+ D_0k=ka_1-a_2k,\qquad \|D_0k\|_\infty\le C\rho.
+\]
+Equation~\eqref{eq:connection-divergence} holds for every
+small slice parameter: its proof did not use the HE equation.
+Taking divergence therefore gives
+\[
+ L_0k=kD_0^*a_1-(D_0^*a_2)k
+       -\sum_j(D_{0,e_j}k)a_1(e_j)
+       +\sum_ja_2(e_j)D_{0,e_j}k=O_\infty(\rho^2).
+\]
+Let $\widehat\Pi$ project onto the full complex split
+parallel algebra $\operatorname{Mat}_2\oplus\operatorname{Mat}_2$.
+The full complex inverse in Lemma~\ref{lem:graph-inverse}
+implies
+\begin{equation}\label{eq:intertwiner-complement}
+                    \|k-\widehat\Pi k\|_{C^1(D_0)}\le C\rho^2.
+\end{equation}
+Since $k$ is unitary, $B=\widehat\Pi k$ satisfies
+$B^*B=I+O(\rho^2)$. Its block polar factor $K_0$
+is unitary and $\|K_0^{-1}k-I\|_{C^1(D_0)}\le C\rho^2$.
+In the finite skew-Hermitian block algebra solve
+\[
+                 \widehat\Pi\log(e^{-C}K_0^{-1}k)=0.
+\]
+The derivative in $C$ at the identity is $-I$ and differs
+from it by $O(\rho^2)$ for these data. A uniform finite
+contraction gives $|C|\le C\rho^2$. Thus
+\begin{equation}\label{eq:intertwiner-factorization}
+ k=Ke^\xi,\qquad K=K_0e^C\in K,\qquad
+ \widehat\Pi\xi=0,\qquad \|\xi\|_{C^1(D_0)}\le C\rho^2.
+\end{equation}
+The determinant connection is fixed, so $\det k$ is
+constant. The small logarithm makes $\tr\xi$ constant,
+and its zero parallel projection makes this trace zero.
+
+Conjugate the second connection by $K^{-1}$ and put
+$\delta=K^{-1}\cdot w_2-w_1$. The segment between these
+two parameters stays in the small slice, giving
+\[
+ a(K^{-1}\cdot w_2)-a(w_1)=a_{1,p}(\delta)+R_\delta,
+                         \qquad \|R_\delta\|_2\le C\rho|\delta|.
+\]
+The exact exponential gauge identity is
+\[
+ e^\xi D(w_1)e^{-\xi}-D(w_1)
+                 =-\int_0^1e^{t\xi}(D(w_1)\xi)e^{-t\xi}\,\dd t.
+\]
+The split gap on $\widehat\Pi^\perp$, together with
+\eqref{eq:intertwiner-factorization}, therefore gives
+\[
+ \|a_{1,p}(\delta)+D_0\xi\|_2
+                         \le C\rho(|\delta|+\|D_0\xi\|_2).
+\]
+The two terms on the left are orthogonal, and their
+squared norm is
+$G_{0,p}(\delta,\delta)+\|D_0\xi\|_2^2$.
+The uniform positive arrow masses allow absorption for
+small $\rho$. Hence $\delta=0$, $D_0\xi=0$, and then
+$\xi=0$. Every intertwiner is the constant $K$.
+
+For a holomorphic isomorphism $T$ between two HE members,
+the induced Hom connection has zero mean curvature.
+Its section Kähler identity gives
+$\|D_{\rm Hom}T\|_2^2=2\|\dbar_{\rm Hom}T\|_2^2=0$;
+see also \cite[Theorem 3.1.9(i)]{Kobayashi}.
+Thus $T$ and its positive polar factor are parallel,
+and its unitary polar factor is an intertwiner.
+The first assertion applies, without simplicity or
+stability assumptions. The converse is equivariance.
+Finally injectivity and equivariance of $\chi_p$ transfer
+the assertion to balanced parameters.
+\end{proof}
+
+\subsection{The topology of the actual local locus}
+
+On a fixed smooth fibre take the affine space of continuous
+unitary connections, with its $C^0$ topology, modulo $C^1$
+unitary gauge. This quotient is Hausdorff. Indeed, suppose
+$D_{j,n}\to D_j$ and $D_{2,n}=k_nD_{1,n}k_n^{-1}$.
+The intertwiners are pointwise unitary and
+\[
+ D_0k_n=k_n(D_{1,n}-D_0)-(D_{2,n}-D_0)k_n.
+\]
+Their first derivatives are bounded on this fixed compact
+manifold. Arzelà--Ascoli gives a uniformly convergent
+subsequence; the equation then gives convergence of the
+first derivatives and a $C^1$ unitary intertwiner in the
+limit. Hence the orbit relation is closed. The orbit
+projection is open because saturations are unions of
+translates, so the quotient is Hausdorff. For smooth
+endpoints the displayed equation bootstraps an intertwiner
+to smoothness, introducing no extra identifications.
+
+For any compact invariant subset of the balanced zero
+set, Theorem~\ref{thm:unitary-rigidity} makes its quotient
+map into actual connection classes continuous and
+injective. A compact-to-Hausdorff injection is a
+homeomorphism onto its image. These points are precisely
+distinct actual holomorphic bundle classes.
+The local completeness proved in Section~\ref{sec:balancing}
+shows that a nested such locus contains representatives
+of every sufficiently small polystable object in the
+specified local germ. This is the germ coverage already
+proved there; $\chi_p$ is a real parametrization and
+does not supply a holomorphic chart or an algebraic
+Cartesian square of moduli spaces.

@@ -1,0 +1,218 @@
+\section{Introduction}\label{sec:introduction}
+
+The small spectrum of a degenerating metric records both the topology of
+the degeneration and the energy required to join its limiting harmonic
+fields. When several local scales tend to zero independently, an estimate
+at the largest small eigenvalue can lose the smaller modes. We prove a
+relative comparison for the complete small two-form spectrum of actual
+Ricci-flat metrics on a compact Calabi--Yau conifold family. The family
+has eight nodes, two lost divisor directions, and six independent
+vanishing-period coordinates. It permits arbitrary separation of the
+two positive spectral scales.
+
+The central threefold and its small resolution are fixed throughout.
+They arise from the anticanonical contraction of
+\begin{equation}\label{eq:ambient-intro}
+ Z=\PP_{\PP^1\times\PP^1}(\OO\oplus\OO(1,-1))
+       \times_{\PP^1\times\PP^1}
+       \PP_{\PP^1\times\PP^1}(\OO\oplus\OO(1,-1)).
+\end{equation}
+For a general anticanonical hypersurface $Y\subset Z$, chosen also
+nondegenerate with respect to its toric polytope, the induced morphism
+$q:Y\to X_0$ contracts eight disjoint $(-1,-1)$ curves. They form two
+groups $I_f,I_g$ of four curves of the same respective homology types.
+This compact construction and its Picard data are established in
+\cite[Appendix~A]{wuebben-chambers}. We retain the exact polarization
+$\cL_0=(-K_{\bar Z})|_{X_0}$, where $\bar Z$ is the anticanonical
+model. Section~\ref{sec:geometry} describes the contraction and proves
+the required multiparameter smoothing statement.
+
+There is a ball $B$ about zero in
+\begin{equation}\label{eq:period-base-intro}
+ R=\left\{p\in\CC^8:
+       \sum_{i\in I_f}p_i=\sum_{i\in I_g}p_i=0\right\}
+\end{equation}
+and a polarized compact family $\pi:\mathcal X\to B$ with central
+fibre $X_0$. A nowhere-zero relative holomorphic three-form $\Omega$
+has oriented local vanishing periods $p_i$. In node coordinates the
+equations are
+\begin{equation}\label{eq:node-unit-intro}
+ z_1^2+z_2^2+z_3^2+z_4^2=\tau_i(p),\qquad
+ p_i=\tau_i(p)u_i(p),
+\end{equation}
+where the $u_i$ are holomorphic and bounded above and away from zero.
+The smooth locus is exactly $B^\circ=\{p\in B:\prod_i p_i\ne0\}$.
+Thus the node parameters are controlled by their periods even when one
+is smaller than every prescribed power of another. A first-order
+description of the deformation space would not give this conclusion.
+
+Let $g_p$ be the Ricci-flat K\"ahler metric in $c_1(\cL_p)$ on
+$X_p$, for $p\in B^\circ$. We use the real Hodge Laplacian
+$\Delta_p=\dd\delta_p+\delta_p\dd$, with its usual closed-manifold
+operator domain. Define
+\begin{equation}\label{eq:finite-pair-intro}
+ \kappa_i(p)=\frac{2\pi}{|\log|\tau_i(p)||},\qquad
+ w_\alpha(p)=\sum_{i\in I_\alpha}\kappa_i(p),\qquad
+ E_p=\begin{pmatrix}w_f&0\\0&w_g\end{pmatrix},\qquad
+ M=\frac45\begin{pmatrix}9&-1\\-1&9\end{pmatrix}.
+\end{equation}
+The energy is the capacity-weighted squared restriction of the lost
+divisor classes to the links. The mass is the central harmonic mass
+after orthogonal projection off all surviving cohomology. Both are
+constructed independently of the actual positive small eigenvalues.
+
+To specify the comparison of eigenspaces, fix a compact central exterior
+$C_*$ by deleting node balls of a small positive radius. Its central
+metric defines the $L^2$ projection $\Pi_*$ onto distributionally closed
+two-forms, with unrestricted tangential trace. Let $V=H^2(Y;\RR)$,
+let $G$ be its central harmonic mass, and let $K\subset V$ be the
+two-dimensional subspace of classes surviving on the smooth fibres.
+Put $W=K^{\perp_G}$. The cohomology of the exterior identifies its
+closed projection with a class in $V$. The observation map is
+\begin{equation}\label{eq:observer-intro}
+ \cA u=\pr_W^G[\Pi_*(u|_{C_*})].
+\end{equation}
+Here and below the restrictions to $C_*$ use fixed smooth exterior
+identifications. The closed projection and its cohomology map are
+bounded on exterior $L^2$ forms. Formula~\eqref{eq:observer-intro}
+therefore has a precise meaning for form-domain inputs; it does not
+take arbitrary cycle integrals of an unclosed $L^2$ form. We use the
+$G$-orthogonal lifts of the quotient classes $f,g$ as coordinates on $W$.
+
+\begin{theorem}\label{thm:main}
+After shrinking $B$, there are $\gamma>0$ and a function $e(p)\to0$
+as $p\to0$ in $B^\circ$ with the following properties.
+
+The harmonic two-form space of $(X_p,g_p)$ has dimension two. Its
+cohomological identification with $K$ transports its mass to a form
+converging to $G|_K$. Exactly two positive two-form eigenvalues lie below
+$\gamma$. If $\mu_1(p)\le\mu_2(p)$ are the generalized eigenvalues
+of $(E_p,M)$, these eigenvalues satisfy
+\begin{equation}\label{eq:main-rates}
+ (1-e(p))\mu_j(p)\le\lambda_{2,j}^+(p)
+                 \le(1+e(p))\mu_j(p),\qquad j=1,2.
+\end{equation}
+The first positive one-form eigenvalue and the third positive two-form
+eigenvalue are at least $\gamma$.
+
+The two-dimensional positive small spectral space $S_p$ consists of
+coexact primitive real $(1,1)$ forms. The restriction $\cA:S_p\to W$
+is an isomorphism. Its transported mass and energy,
+\begin{equation}\label{eq:observed-pair-intro}
+ N_p(x,y)=\langle\cA^{-1}x,\cA^{-1}y\rangle_{g_p},\qquad
+ Q_p(x,y)=\langle\dd\cA^{-1}x,\dd\cA^{-1}y\rangle_{g_p},
+\end{equation}
+satisfy the quadratic-form inequalities
+\begin{equation}\label{eq:main-forms}
+ (1-e(p))M\le N_p\le(1+e(p))M,\qquad
+ (1-e(p))E_p\le Q_p\le(1+e(p))E_p.
+\end{equation}
+All conclusions hold throughout $B^\circ$ as $p\to0$, with no bound
+on the ratios of the nonzero node parameters or of the positive model
+eigenvalues.
+\end{theorem}
+
+The whole-form conclusion retains mixed pairings in the prescribed
+coordinates. If $u_1,u_2$ are actual orthonormal eigenforms, $C_p$ has
+columns $\cA u_j$, and $\Lambda_p=\operatorname{diag}
+(\lambda_{2,1}^+,\lambda_{2,2}^+)$, it gives
+\begin{equation}\label{eq:marked-matrix-intro}
+ \|C_p^TMC_p-I\|\le e(p),\qquad
+ \|\Lambda_p^{-1/2}(C_p^TE_pC_p-\Lambda_p)
+                          \Lambda_p^{-1/2}\|\le e(p),
+\end{equation}
+after changing the error function by a fixed factor. In particular, an
+off-diagonal energy error is bounded by a vanishing multiple of
+$\sqrt{\lambda_{2,1}^+\lambda_{2,2}^+}$. No explicit rate is claimed
+for the compactness-derived part of $e(p)$.
+
+The finite eigenvalues are
+\begin{equation}\label{eq:finite-roots-intro}
+ \mu_\pm=
+ \frac{9(w_f+w_g)\pm\sqrt{81(w_f-w_g)^2+4w_fw_g}}{128}.
+\end{equation}
+They satisfy $0<\mu_-/\mu_+\le4/5$. The corresponding actual
+eigenvalues are consequently simple for all sufficiently small
+parameters. A relative subspace estimate identifies each actual
+eigenline, through $\cA$, with its finite generalized eigenline, with
+error tending to zero uniformly in $w_f/w_g$.
+
+For example, the admissible path
+\begin{equation}\label{eq:separated-path-intro}
+ p(h)=(a,a,a,-3a;b,b,b,-3b),\qquad
+ a=e^{-h^{-1}},\quad b=e^{-h^{-2}},\quad h\downarrow0,
+\end{equation}
+has actual asymptotics
+\begin{equation}\label{eq:separated-spectrum-intro}
+ \lambda_{2,1}^+(p(h))\sim\frac{10\pi}{9}h^2,
+ \qquad
+ \lambda_{2,2}^+(p(h))\sim\frac{9\pi}{8}h.
+\end{equation}
+More generally $a=e^{-F(h)}$, $b=e^{-G(h)}$, with positive
+$F,G\to\infty$ and $F/G\to0$, gives coefficients
+$9\pi/(8F)$ and $10\pi/(9G)$. These are paths in a holomorphic
+multiparameter family; they need not extend as holomorphic arcs at zero.
+
+\subsection{Relative reduction and earlier results}
+
+Relative small-spectrum comparison has substantial precedents. Burger's
+graph theorem for degenerating hyperbolic surfaces already permits
+unequal short-geodesic lengths and gives multiplicative scalar
+eigenvalue asymptotics \cite[Theorem~1.1]{burger}. In cusp surgery,
+Albin--Rochon--Sher identify positive small Hodge modes by a restriction
+difference and compute their leading rescaled energy
+\cite[Section~3, Lemma~3.2 and Theorem~3.3]{ars-cusps}.
+Anné--Takahashi's conic analysis retains the cap and critical extended
+solutions needed for a complete spectral count
+\cite[Theorems~A--B]{anne-takahashi}. The geometry and parameter domains
+of these theorems differ from the polarized Ricci-flat smoothing used
+here.
+
+For actual Ricci-flat conifolds, Hein--Sun establish the central conical
+metric asymptotics \cite[Theorem~1.4]{hein-sun}. Benabida proves
+polyhomogeneous smoothing expansions along prescribed rays
+\cite[Theorem~C]{benabida}. Pacini's scalar gluing estimates already
+allow independent scales on distinct cap components
+\cite[Theorems~11.7 and 12.3]{pacini}. We verify the scalar decomposition,
+initial K\"ahler family, global inverse and nonlinear correction on the
+whole period domain, then prove the complete two-form comparison there.
+The fixed-ray spectrum in \cite{wuebben-hodge} supplies the central
+geometric normalization, not the unequal-scale theorem by substitution.
+
+The metric proof first identifies all fifteen scalar harmonic modes
+of growth below three on a Stenzel cap. Nine are pluriharmonic; the
+remaining six are derivatives of complex orthogonal automorphisms.
+A global scalar inverse retains these modes separately from a
+positive-weight remainder. In the nonlinear equation we use the
+finite automorphisms themselves: their exact preservation of the
+Stenzel volume removes the nondecaying quadratic terms. This gives
+the actual Ricci-flat comparison on every cap and intervening annulus
+without a smallest-scale loss.
+
+For the two-form problem, corrected logarithmic trials have exactly
+the capacity energy, including zero contribution from a link on
+which the period vanishes. A weighted estimate on each independent
+cap prevents low-energy mass concentration in degrees one and two.
+A fixed exterior closed projection then gives a lower bound in the
+input's own energy norm. Multiplicative metric comparison transfers
+the full count and gaps to the actual metrics, while the exterior
+projection preserves the cohomological marking.
+
+The abstract argument in Section~\ref{sec:relative} isolates three
+geometric estimates: linear trials, a weighted lower energy inequality
+for the specified observation, and capture of low-energy mass. It
+allows the exact kernel to change and obtains relative energy on the
+entire observed low space. The final step uses a determinant on the
+quotient by the common kernel. It is useful precisely when an additive
+mass-plus-energy comparison would lose the weakest direction. The
+geometric estimates, rather than the finite matrix factorization alone,
+are the analytic content of an application.
+
+The hierarchy of the finite forms retains the capacities, the full
+restriction map and the harmonic mass. Its relation to the classical
+attachment sequence is explicit. It is distinct from the Leray
+filtration of a fixed adiabatic fibration
+\cite{mazzeo-melrose}, and from the corrected foliation spectral-sequence
+statements of Álvarez López--Kordyukov \cite{alvarez-kordyukov}.
+No new nearby-cycle functor or canonical integral lattice on a general
+small eigenspace is asserted.

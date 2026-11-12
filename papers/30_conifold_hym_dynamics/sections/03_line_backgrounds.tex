@@ -1,0 +1,241 @@
+\section{Uniform line metrics and the split endomorphism gap}
+\label{sec:line-backgrounds}
+
+All norms in this section use the actual Ricci-flat metric $g_p$.
+The positive scalar Laplacian is $\Delta=\dd^*\dd$, and
+$\dd V_p=\omega_p^3/3!$. For a line metric $h$ we use
+$F_h=\dbar(h^{-1}\partial h)$, so that
+$c_1(L)=[\mathrm iF_h/(2\pi)]$. In particular
+\begin{equation}\label{eq:line-conformal}
+ \mathrm i\Lambda\partial\dbar u=-\tfrac12\Delta u,
+ \qquad F_{h^{\rm ref}e^{-u}}=F_{h^{\rm ref}}+\partial\dbar u.
+\end{equation}
+Let $h_p^{\rm ref}$ be the restriction of the product line metric
+on $\OO_{\mathbf P}(1,-1)$.
+
+\begin{proposition}\label{prop:line-he}
+There is a unique real function $u_p$ of mean zero such that
+$h_p=h_p^{\rm ref}e^{-u_p}$ has $\mathrm i\Lambda F_{h_p}=0$.
+The functions $u_p$ are uniformly bounded on $\mathcal B^\circ$
+near zero, and have uniform bounds in every spatial derivative
+on each fixed compact exterior. The curvature form
+$\alpha_p=\mathrm iF_{h_p}/(2\pi)$ is the primitive harmonic
+representative of $D$, with
+\begin{equation}\label{eq:line-curvature-mass}
+ \|\alpha_p\|_2^2=16,
+ \qquad\|F_{h_p}\|_2^2=64\pi^2.
+\end{equation}
+\end{proposition}
+
+\subsection{Diameter and the scalar inverse}
+
+We first establish the geometric estimates used in the proof:
+\begin{equation}\label{eq:diameter-ambient}
+ \operatorname{diam}(X_p,g_p)\le D_*,\qquad
+                  g_p\ge c\,\iota_p^*g_{\mathbf P}.
+\end{equation}
+Here $g_{\mathbf P}$ is a fixed product Fubini--Study metric.
+Choose one auxiliary radius $R$ in
+\eqref{eq:ricci-flat-input} so small that its zeroth-order
+error is less than $1/4$. For all sufficiently small $p$,
+$g_p$ is uniformly comparable with $\widetilde g_p^R$.
+On a node chart the normalized Stenzel metric satisfies
+\begin{equation}\label{eq:stenzel-euclidean-lower}
+ \sigma_{i,p}\ge c(|z|^2+|\tau_i|)^{-1/3}
+                              g_{\rm eucl}|_{Q(z)=\tau_i}.
+\end{equation}
+To check the normalization, the metric on $Q(Z)=1$ is bounded
+below by $c(1+|Z|^2)^{-1/3}g_{\rm eucl}$, by positivity on
+the compact core and the conic expansion on its end.
+The change $z=\tau_i^{1/2}Z$ scales the Stenzel metric by
+$|\tau_i|^{2/3}$ and the Euclidean metric by $|\tau_i|$.
+This proves \eqref{eq:stenzel-euclidean-lower}; phase rotations
+are unitary and the volume-normalizing constants stay in a
+compact positive interval.
+
+The embedding $\iota$ is holomorphic on the total local
+hypersurface. Its coordinate functions extend holomorphically
+to the ambient chart, so their spatial derivatives are uniformly
+bounded on smaller charts. Hence
+$\iota_p^*g_{\mathbf P}\le Cg_{\rm eucl}$ there.
+On the fixed transition annuli and exterior the initial metrics
+converge smoothly to a positive metric. This proves the second
+inequality of \eqref{eq:diameter-ambient}. A Stenzel region
+of fixed conic radius has uniformly bounded intrinsic diameter:
+its core has diameter $O(|\tau_i|^{1/3})$, and its conical
+end has bounded radial length and angular diameter.
+The connected fixed exterior has bounded intrinsic diameter
+by smooth convergence. Joining each cap to that exterior
+proves the first inequality. In particular the logarithmic
+length governing capacity does not produce unbounded intrinsic
+diameter. The ambient reference curvature consequently satisfies
+\begin{equation}\label{eq:reference-contraction}
+ \|\mathrm i\Lambda_{\omega_p}F_{h_p^{\rm ref}}\|_\infty
+                                                    \le C_{\rm ref}.
+\end{equation}
+
+For completeness we derive the uniform scalar estimate used
+here from the Li--Yau Harnack inequality. On a connected
+compact real $n$-manifold with nonnegative Ricci curvature
+and diameter at most $D_*$, let $H_t(x,y)$ be the kernel of
+$e^{-t\Delta}$. The inequality
+\cite[Theorem 2.3]{LiYau}, with zero lower Ricci bound, gives
+\[
+ H_s(x,z)\le H_t(y,z)(t/s)^{n/2}
+             \exp\!\left(\frac{d(x,y)^2}{4(t-s)}\right).
+\]
+Set $T=D_*^2$, $s=T/2$, $t=T$, and integrate in $x$.
+The heat kernel has mass one, so
+\[
+ H_T(y,z)\ge\frac{c_n}{\Vol(X)},\qquad
+                        c_n=2^{-n/2}e^{-1/2}.
+\]
+Thus $e^{-T\Delta}=c_n\Pi+(1-c_n)Q$, where $\Pi$ is
+averaging and $Q$ has a nonnegative mass-one kernel.
+For mean-zero bounded $f$, iteration and the $L^\infty$
+contraction at intermediate times yield
+\begin{equation}\label{eq:scalar-sup-inverse}
+ \Delta^{-1}f=\int_0^\infty e^{-t\Delta}f\,\dd t,
+ \qquad
+ \|\Delta^{-1}f\|_\infty
+        \le 2^{n/2}\sqrt e\,D_*^2\|f\|_\infty.
+\end{equation}
+The integral converges uniformly. Testing against smooth
+functions proves the equation, and ordinary elliptic
+regularity on each smooth fibre gives the classical solution.
+It has mean zero and is unique. No injectivity-radius or
+sectional-curvature lower bound enters this argument.
+
+\begin{proof}[Proof of Proposition~\ref{prop:line-he}]
+Take $f_p=2\mathrm i\Lambda F_{h_p^{\rm ref}}$.
+By \eqref{eq:chern-numbers},
+\[
+ \int_{X_p} f_p\,\dd V_p
+ =2\int_{X_p}\mathrm iF_{h_p^{\rm ref}}\wedge\frac{\omega_p^2}{2}
+ =2\pi DH^2=0.
+\]
+Apply \eqref{eq:scalar-sup-inverse} in real dimension six
+and use \eqref{eq:reference-contraction}. The mean-zero
+solution of $\Delta_pu_p=f_p$ satisfies
+\[
+ \|u_p\|_\infty\le16\sqrt e\,D_*^2C_{\rm ref}.
+\]
+Equation \eqref{eq:line-conformal} proves the HE condition
+and uniqueness. In particular $h_p$ and $h_p^{\rm ref}$ are
+globally comparable. On a fixed exterior the coefficients
+of the equation have uniform bounds in all spatial derivatives
+and uniform ellipticity. Interior estimates on a slightly
+larger exterior give the stated derivative bounds for
+$u_p$ and its Chern connection. Fibrewise line-bundle
+existence is also \cite[Proposition 4.2.4]{Kobayashi}; the
+argument above supplies the uniform bound on this family.
+
+The real form $\alpha_p$ is closed, of type $(1,1)$, and
+primitive. On a Kähler threefold $*\alpha_p=-\alpha_p\wedge\omega_p$,
+so it is coclosed and harmonic. Therefore
+\[
+ \|\alpha_p\|_2^2=-\int_{X_p}\alpha_p^2\wedge\omega_p
+                            =-D^2H=16.
+\]
+This gives \eqref{eq:line-curvature-mass} with the specified
+curvature convention.
+\end{proof}
+
+\subsection{The complete split kernel and gap}
+
+Equip $E^{\rm sp}_p=L_p\otimes\CC^2\oplus L_p^{-1}\otimes\CC^2$
+with $h_{0,p}=h_p\otimes I_2\oplus h_p^{-1}\otimes I_2$.
+Let $D_{0,p}$ be the induced connection on endomorphisms.
+It will be abbreviated to $D_0$ on a fixed fibre.
+The section Bochner identity
+\cite[Chapter VII, Corollary 1.3]{Demailly} gives
+\begin{equation}\label{eq:split-bochner}
+ D_0^*D_0=2\dbar_0^*\dbar_0,
+\end{equation}
+because the contracted curvature acts by commutation with
+$\mathrm i\Lambda F_{h_{0,p}}=0$.
+
+\begin{proposition}\label{prop:split-gap}
+The kernel of $D_0^*D_0$ on complex endomorphism sections is
+exactly the constant diagonal-block space
+$\mathfrak{gl}_2\oplus\mathfrak{gl}_2$. There is $c>0$,
+independent of all node-scale ratios, such that
+\begin{equation}\label{eq:split-section-gap}
+ \|D_0s\|_2^2\ge c\|s\|_2^2
+ \quad\text{if }s\perp\ker D_0.
+\end{equation}
+On trace-free Hermitian sections the kernel is
+\begin{equation}\label{eq:seven-space}
+ \mathfrak h=\{(S_+,S_-)\in\Herm_2^2:
+                             \tr S_++\tr S_-=0\},
+\end{equation}
+a real seven-dimensional space, with exact mass
+\begin{equation}\label{eq:split-mass}
+ M(S,T)=V\{\tr(S_+T_+)+\tr(S_-T_-)\}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The endomorphism bundle splits orthogonally into the two
+trivial matrix blocks and the $L^{\pm2}$ matrix blocks.
+The former have the constant matrices as kernel, and the
+scalar Poincaré estimate controls their orthogonal complement.
+The latter have no holomorphic sections, by
+Proposition~\ref{prop:effective-bundles}; their covariant and
+Dolbeault section energies agree up to the factor two in
+\eqref{eq:split-bochner}. We must show their gaps are uniform.
+
+Suppose, to the contrary, that $p_j\to0$ and sections of
+$L_{p_j}^2$ satisfy
+$\|s_j\|_2=1$ and $\|D_0s_j\|_2\to0$.
+The Kato inequality and scalar Poincaré estimate imply
+\begin{equation}\label{eq:kato-no-loss}
+ \big\||s_j|-a_j\big\|_2\longrightarrow0,
+ \qquad a_j=V^{-1}\int|s_j|\,\dd V_{p_j}
+                         \longrightarrow V^{-1/2}.
+\end{equation}
+Indeed $|\dd|s_j||\le|D_0s_j|$ almost everywhere, with
+regularization at the zero set, and
+$1=\||s_j|-a_j\|_2^2+Va_j^2$.
+Choose a connected fixed compact exterior $C$ containing
+all topology outside small node neighbourhoods. The relative
+line bundle gives fixed smooth identifications there.
+Proposition~\ref{prop:line-he} allows a subsequence whose
+connections and metrics converge in every spatial derivative
+on a slightly larger exterior. In finitely many frames,
+the sections are bounded in $W^{1,2}$. Rellich compactness
+and \eqref{eq:kato-no-loss} give a smooth parallel limit
+$s_0$ on the interior of $C$, with constant norm $V^{-1/2}$.
+Thus the limiting connection of $L^2$ would be flat on $C$.
+
+This contradicts the line bundle's fixed exterior class.
+Removing the exceptional curves from the small resolution
+$Y$ preserves $H^2(Y;\RR)$: their real codimension is four,
+so the relative groups in degrees two and three in the Thom
+sequence vanish. The punctured resolution retracts onto $C$.
+The class of $L$ there is $D_Y=k_1-k_2$, and
+$D_Y^2H=-16$, hence $2D_Y|_C\ne0$. The limiting curvature
+still represents this class, either by its fixed reference
+connection and scalar correction, or by integration over
+fixed exterior two-cycles. It cannot vanish.
+The same argument applies to $L^{-2}$.
+
+Failure of a uniform bound on any smaller period ball would
+produce the sequence just excluded, irrespective of the
+relative node scales. Taking the minimum of the scalar and
+off-diagonal gaps proves \eqref{eq:split-section-gap}.
+The parallel Hermitian blocks each have real dimension four;
+one trace condition leaves seven. Their pointwise norm is
+the ordinary Hilbert--Schmidt norm, because the line metric
+cancels on endomorphisms. Integrating gives
+\eqref{eq:split-mass}.
+\end{proof}
+
+These estimates separate two geometric roles. The curvature
+$\alpha_p$ represents the surviving divisor class $D$ and
+has the fixed mass \eqref{eq:line-curvature-mass}. The weak
+endomorphisms to be studied are deformations of
+\eqref{eq:seven-space}. Neither space is the lost two-form
+cohomology quotient governing the positive small Hodge
+spectrum. The base metrics are shared, while the operators
+and their finite-dimensional spaces are different.

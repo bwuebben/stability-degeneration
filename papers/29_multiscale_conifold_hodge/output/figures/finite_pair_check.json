@@ -1,0 +1,12 @@
+{
+  "scope": "Exact rational characteristic coefficients and numerical checks of the finite pair only",
+  "samples": 801,
+  "capacity_ratio_range": [
+    0.0001,
+    10000.0
+  ],
+  "max_relative_formula_error": 9.325873406851315e-15,
+  "max_normalized_generalized_residual": 6.089040627734853e-16,
+  "max_eigenvalue_ratio": 0.8,
+  "result": "PASS"
+}

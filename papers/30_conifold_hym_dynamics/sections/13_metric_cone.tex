@@ -1,0 +1,224 @@
+\section{Local distance, completion and the metric tangent cone}
+\label{sec:metric-cone}
+
+Normalize the arrows by $T_p(A,B)=(\sqrt{c_+}A,\sqrt{c_-}B)$.
+The balanced set is
+\[
+ \mathcal Z=\{(X,Y):XX^*=Y^*Y,\ YY^*=X^*X\},
+\]
+with real metric $2(\|\dd X\|_{\rm HS}^2+\|\dd Y\|_{\rm HS}^2)$.
+Let $\mathsf W=(\ZZ/2)^2\rtimes S_2$ act on $\CC^2$
+by independent signs and permutation. For
+$u=(u_1,u_2)$ and $U=\diag(u_1,u_2)$, define
+\begin{equation}\label{eq:actual-moduli-parametrization}
+ \mathfrak F_p([u])=
+       [\mathcal A_p(\chi_p(T_p^{-1}(U,U)))].
+\end{equation}
+The brackets on the right denote actual unitary gauge
+classes, equivalently actual holomorphic bundle classes
+at these HE points.
+Choose one $R_0>0$ so that $|u|\le R_0$ lies strictly
+inside every construction domain, uniformly in $p$.
+Put $\mathcal M_p(R)=\mathfrak F_p(\overline B_R/\mathsf W)$
+for $0<R\le R_0$.
+
+An admissible path in this locus is continuous and has
+a finite subdivision into smooth paths in its quotient
+orbit-type strata, with improper endpoint lengths allowed.
+Its length is the integral of the actual harmonic
+connection norm of its bundle-deformation tangent.
+Let $d_{p,R}$ be the infimum of these lengths among
+paths confined to $\mathcal M_p(R)$.
+
+\begin{theorem}\label{thm:metric-cone}
+The map \eqref{eq:actual-moduli-parametrization} is a
+homeomorphism of $\overline B_R/\mathsf W$ onto its
+actual image, with smooth image-stratum parametrizations.
+On every stratum its harmonic metric satisfies
+\begin{equation}\label{eq:diagonal-harmonic-metric}
+       (1-C|u|)\,4|\dd u|^2
+       \le\mathfrak F_p^*g_{\rm harm}\le(1+C|u|)\,4|\dd u|^2.
+\end{equation}
+For $|u|,|v|\le R$, set
+$d_{\rm flat}([u],[v])=2\min_{\gamma\in\mathsf W}|u-\gamma v|$.
+Then
+\begin{equation}\label{eq:confined-distance-comparison}
+ \sqrt{1-CR}\,d_{\rm flat}([u],[v])
+ \le d_{p,R}(\mathfrak F_p[u],\mathfrak F_p[v])
+ \le\sqrt{1+CR}\,d_{\rm flat}([u],[v]).
+\end{equation}
+The open-radius locus completes isometrically to this
+closed-radius locus. On the unit quotient ball,
+\begin{equation}\label{eq:rescaled-distance}
+ \sup_{[u],[v]}
+ \left|\rho^{-1}d_{p,\rho}(\mathfrak F_p[\rho u],\mathfrak F_p[\rho v])
+                          -d_{\rm flat}([u],[v])\right|\le C\rho.
+\end{equation}
+The same estimate holds with the single fixed-locus
+distance $d_{p,R_0}$ for $\rho<R_0/8$.
+The actual local metric space therefore has the unique
+pointed metric tangent cone
+\begin{equation}\label{eq:moduli-cone}
+                         (\CC^2,4|\dd u|^2)/\mathsf W
+\end{equation}
+at the split bundle. These comparisons and the resulting
+Gromov--Hausdorff convergence are uniform over the smooth
+conifold base, including simultaneous approaches to its
+discriminant. The distances use paths in the specified
+local locus.
+\end{theorem}
+
+\subsection{The exact finite quotient}
+
+The balanced normal form in Section~\ref{sec:balancing}
+is $X=\diag(d_j)$, $Y=\diag(d_je^{\mathrm i\theta_j})$.
+Choose $u_j=d_je^{\mathrm i\theta_j/2}$.
+Acting by $k_+=\diag(e^{\mathrm i\theta_j/2})$, $k_-=I$
+makes both arrows equal $U$. The phase at a zero entry
+is immaterial. Under the compact action $XY$ changes by
+conjugation. For $(U,U)$ its eigenvalue multiset is
+$\{u_1^2,u_2^2\}$. Thus two section points can be
+equivalent only if they differ by $\mathsf W$.
+Conversely permutations are realized simultaneously in
+both blocks, and each sign change by a diagonal sign
+in the plus block alone. This proves the quotient
+identification, including repeated and zero entries.
+On a closed radius ball it is a homeomorphism by
+compactness, since
+$\|X\|_{\rm HS}^2+\|Y\|_{\rm HS}^2=2|u|^2$ and
+the compact group quotient is Hausdorff.
+
+The four strata are distinct nonzero squares, repeated
+nonzero squares, one zero square, and the origin.
+Their preimages are the complement of the four complex
+reflecting hyperplanes, the nonzero parts of $u_1=\pm u_2$,
+the nonzero parts of the coordinate axes, and the origin.
+They agree with the actual factor and stabilizer types.
+
+The section also gives smooth local coordinates on each
+stratum. On the balanced set $XY$ is normal and
+$XX^*=|XY|$, since
+$(XY)(XY)^*=(XX^*)^2=(XY)^*(XY)$.
+For distinct eigenvalues its spectral projections vary
+smoothly. For a nonzero eigenvalue $\lambda$, choose a
+smooth local square root $u$ and a smooth unit eigenvector
+$e_+$; then $e_-=X^*e_+/\bar u$ is unit and satisfies
+$Xe_-=ue_+$, $Ye_+=ue_-$.
+At a simple zero eigenvalue use smooth frames of the
+kernels, on which both arrows vanish. On the repeated
+nonzero stratum $XY=\lambda I$ and the same formula
+works with an arbitrary smooth plus frame. These are
+qualitative coordinates within a stratum; no uniform
+bound for their derivatives near another stratum is used.
+
+For a diagonal section tangent $(V,V)$ the ambient norm
+is $4\|V\|_{\rm HS}^2$. Its pairing with a vertical is
+\[
+ 2\operatorname{Re}\tr
+       V^*(\xi_+U-U\xi_-+\xi_-U-U\xi_+)
+   =2\operatorname{Re}\tr V^*[\xi_++\xi_-,U]=0.
+\]
+Thus these tangents are horizontal, and the stratum
+coordinates just proved exhaust the quotient tangents.
+The exact finite quotient metric is $4\sum_j|\dd u_j|^2$.
+On the repeated stratum it is $8|\dd u|^2$, and on
+the one-nonzero stratum it is $4|\dd u|^2$; the origin
+has zero stratum tangent.
+
+Its path distance on a closed ball is $d_{\rm flat}$.
+Local lifts of stratum paths and the triangle inequality
+give the lower bound. For the upper bound choose a
+minimizing $\gamma$ and project the straight segment
+from $u$ to $\gamma v$. Convexity keeps it in the ball.
+Each reflecting hyperplane meets the segment at at most
+one parameter unless it contains the segment; a finite
+subdivision therefore makes the projected segment
+admissible. Its length attains the stated lower bound.
+
+\subsection{Actual harmonic lengths and completion}
+
+Theorem~\ref{thm:unitary-rigidity} and the compact quotient
+argument of Section~\ref{sec:harmonic-quotient} identify
+the finite quotient homeomorphically with actual classes.
+Each image stratum is represented by a smooth family
+of integrable HE connections. Its harmonic tangent
+has no kernel beyond the compact vertical directions
+by Theorem~\ref{thm:harmonic-quotient}.
+Since $|T_p^{-1}(U,U)|\le C|u|$, that theorem and the
+exact horizontal metric prove
+\eqref{eq:diagonal-harmonic-metric}.
+Integrating it over any admissible path gives the lower
+bound in \eqref{eq:confined-distance-comparison}; using
+the projected straight segment gives the upper bound.
+In particular this is a finite nondegenerate distance
+with exactly the compact quotient topology.
+
+For interior endpoints the open-locus path distance
+equals the restriction of the closed-locus distance.
+One inequality is immediate. For the other, contract
+any finite-length closed-locus path by $u\mapsto(1-\epsilon)u$.
+The contracted pieces remain in their strata. The actual
+tensor is smooth there, so their speeds converge pointwise.
+Equation~\eqref{eq:diagonal-harmonic-metric} dominates
+them by a constant times the original Euclidean speed,
+which is integrable by the lower bound in that equation.
+Dominated convergence proves convergence of lengths,
+including improper endpoint integrals. Add short radial
+paths at the two interior endpoints; their lengths tend
+to zero. Infimizing gives equality of the distances.
+Radial contraction also proves density of the open
+locus in the complete compact closed locus, establishing
+the claimed completion.
+
+Homogeneity of $d_{\rm flat}$ and
+\eqref{eq:confined-distance-comparison} with $R=\rho$
+prove \eqref{eq:rescaled-distance}. The flat unit quotient
+ball has diameter at most four. The identity correspondence
+therefore has distortion $O(\rho)$, giving the uniform
+Gromov--Hausdorff bound directly.
+
+\subsection{Localization in a fixed local metric space}
+
+Shrink $R_0$ so that $CR_0<1/2$.
+For endpoints of parameter norm at most $\rho$, the
+straight-path upper bound is less than $5\rho$.
+The radius $|u|$ is well defined on the quotient, and
+its variation is at most half the finite length.
+Hence a path starting at radius at most $\rho$ and
+reaching $8\rho$ has actual length at least
+\[
+             2\sqrt{1-CR_0}(8\rho-\rho)>9\rho.
+\]
+Every path of length at most $6\rho$ between these
+endpoints stays inside radius $8\rho$. Near-minimizing
+paths can be chosen with this length bound. Along them
+the lower tensor factor is $1-8C\rho$, while the
+straight segment supplies the upper factor $1+C\rho$.
+Thus the fixed-locus distance satisfies the same relative
+comparison with error $O(\rho)$ for these endpoints.
+This proves its version of \eqref{eq:rescaled-distance}.
+
+To pass from parameter balls to actual metric balls,
+first the coarse comparison puts every small metric
+ball inside a comparable parameter ball. The sharper
+fixed-locus estimate then gives
+\[
+          d_{p,R_0}(0,\mathfrak F_p[u])=2|u|(1+O(|u|)).
+\]
+An actual ball of radius $2\rho$ lies between parameter
+balls of radii $\rho(1-C'\rho)$ and $\rho(1+C'\rho)$.
+Radial projection between these changes distances by
+$O(\rho^2)$. After rescaling, the distortion is $O(\rho)$.
+The same argument on every fixed multiple of $\rho$
+gives compatible pointed convergence to the full cone
+\eqref{eq:moduli-cone}, proving uniqueness of the tangent.
+
+Equivalently this cone is the symmetric square of
+$(\CC,4|\dd u|^2)/\{\pm1\}$, whose cone angle is $\pi$.
+The invariant coordinates $\lambda_j=u_j^2$ do not
+carry an ordinary Euclidean metric at zero.
+The theorem includes all local polystable factor types
+and every simultaneous admissible base approach. It
+concerns the harmonic metric on this actual local locus;
+it does not compare shortcuts through a larger moduli
+space or assert a metric on a singular base fibre.

@@ -27,4 +27,8 @@ wrappers = sorted((root / 'papers').glob('*/reproducibility/run_all.py'))
 for program in wrappers:
     print(str(program.relative_to(root)), flush=True)
     subprocess.run([sys.executable, '-B', str(program)], cwd=program.parents[1], check=True)
-print(f'Completed {len(programs) + len(examples) + len(k3_programs) + len(wrappers)} finite computations or suites.')
+scripts = sorted((root / 'papers').glob('*/scripts/plot_finite_pair.py'))
+for program in scripts:
+    print(str(program.relative_to(root)), flush=True)
+    subprocess.run(['uv', 'run', '--no-project', '--with-requirements', str(program.parents[1] / 'requirements.txt'), 'python', '-B', str(program)], cwd=program.parents[1], check=True)
+print(f'Completed {len(programs) + len(examples) + len(k3_programs) + len(wrappers) + len(scripts)} finite computations or suites.')

@@ -1,0 +1,439 @@
+\section{A uniform projected Hermitian--Einstein equation}
+\label{sec:projected-he}
+
+We now put the effective holomorphic bundle family in controlled
+coordinates and solve the infinite-dimensional part of the HE
+equation. The estimates use the section Laplacian and first
+derivatives. They do not require a uniform bound for the full
+curvature of the degenerating background.
+
+\subsection{The section inverse in a graph norm}
+
+Write $P_p=\dbar_0^*\dbar_0=\tfrac12D_0^*D_0$ on complex
+endomorphism sections, and let $\widehat\Pi_p$ be projection
+onto its parallel kernel $\widehat{\mathfrak h}
+=\mathfrak{gl}_2\oplus\mathfrak{gl}_2$.
+The unrestricted graph space is
+\[
+ \mathcal G_p=\{s\in W^{1,\infty}:P_ps\in L^\infty\},
+ \qquad
+ \|s\|_{\mathcal G}=\|s\|_\infty+\|D_0s\|_\infty+\|P_ps\|_\infty,
+\]
+where the equation is distributional. On trace-free Hermitian
+sections write $\Pi_p$ for projection onto
+$\mathfrak h$ in \eqref{eq:seven-space}, and put
+\begin{equation}\label{eq:real-graph-space}
+ \mathcal X_p^0=\{s\in\mathcal G_p:s=s^{*h_0},\ \tr s=0,
+                                          \ \Pi_ps=0\}.
+\end{equation}
+
+\begin{lemma}\label{lem:graph-inverse}
+The following bounds hold uniformly on the full smooth period
+base near zero:
+\begin{equation}\label{eq:graph-inverse}
+ \|s\|_\infty+\|D_0s\|_\infty
+                        \le C\|P_ps\|_\infty,
+                  \qquad\widehat\Pi_ps=0.
+\end{equation}
+Consequently $P_p^{-1}$ maps the $L^\infty$ complement uniformly
+into its graph domain, and in particular maps the real
+trace-free complement into $\mathcal X_p^0$.
+The spaces are Banach spaces; $\mathcal G_p$ is a Banach algebra
+with a uniform product constant. Moreover
+$\|\eta_p^\pm\|_\infty\le C$, and harmonic projection in
+endomorphism degree one is uniformly bounded on $L^\infty$.
+\end{lemma}
+
+\begin{proof}
+For scalar heat flow $H_t=e^{-t\Delta}$, Bochner's formula
+and nonnegative Ricci curvature give
+\begin{equation}\label{eq:reverse-poincare}
+ 2t|\dd H_tv|^2\le H_t(v^2)-(H_tv)^2
+                                        \le\|v\|_\infty^2.
+\end{equation}
+Indeed differentiation of $H_{t-a}((H_av)^2)$ yields
+\[
+ H_t(v^2)-(H_tv)^2
+       =2\int_0^t H_{t-a}(|\dd H_av|^2)\,\dd a.
+\]
+The Bochner gradient contraction bounds each integrand below
+by $|\dd H_tv|^2$. This also proves the inequality in the
+normalization of \cite[Section 2, Proposition 3]{Ledoux}.
+Taking real and imaginary parts and integrating
+$w=H_Tw+\int_0^T H_t\Delta w\,\dd t$ gives
+\begin{equation}\label{eq:scalar-gradient-estimate}
+ \|\dd w\|_\infty\le CT^{-1/2}\|w\|_\infty
+                              +C\sqrt T\|\Delta w\|_\infty.
+\end{equation}
+The $t^{-1/2}$ derivative bound is integrable at zero.
+Applied to the bounded line potential of
+Proposition~\ref{prop:line-he}, this proves
+$\|\dd u_p\|_\infty\le C$.
+
+Choose a fixed finite ambient holomorphic frame cover for
+$\OO(1,-1)$ and a subordinate partition with supports
+compactly contained in the frame charts. The restrictions
+of its cutoffs have uniformly bounded gradients and scalar
+Laplacians. The first bound follows from
+\eqref{eq:diameter-ambient}; the second follows from the
+Kähler trace of the fixed ambient complex Hessian.
+In the corresponding unitary line frame,
+\[
+ a_p=\tfrac12(\partial-\dbar)\log h_p=\mathrm i\vartheta_p
+\]
+is uniformly bounded. It also satisfies $\delta\vartheta_p=0$:
+on a Kähler chart $\delta\dd^c v=0$ because the parallel
+complex structure contracts the symmetric real Hessian
+antisymmetrically. The same statements hold for the
+$\pm2$ tensor powers. For a scalar coefficient $v$ of a
+section, their rough operator is
+\begin{equation}\label{eq:local-rough-operator}
+ D_0^*D_0v=\Delta v-2\mathrm i\langle\vartheta_p,\dd v\rangle
+                +(\mathrm i\delta\vartheta_p+|\vartheta_p|^2)v.
+\end{equation}
+Its first-order and zeroth-order coefficients are therefore
+uniformly bounded, with the divergence term zero.
+
+Parabolic Kato and the maximum principle give
+\[
+ |e^{-tP_p}f|\le H_{t/2}|f|.
+\]
+This follows by applying the scalar inequality to a
+regularized norm for the equation
+$\partial_ts=-\tfrac12D_0^*D_0s$; it uses no differentiated
+bundle domination assertion. At any fixed positive time
+the scalar heat kernel is uniformly bounded: apply the
+Li--Yau Harnack inequality to compare $H_T(x,y)$ with
+$H_{2T}(x,z)$ and integrate over $z$, using fixed volume
+and bounded diameter. Thus $e^{-P_p}$ maps $L^2$ uniformly
+to $L^\infty$. On $\widehat{\mathfrak h}^{\perp}$ the
+section gap gives, for $t\ge1$,
+\[
+ \|e^{-tP_p}f\|_\infty
+          \le Ce^{-c(t-1)}\|f\|_2
+          \le C'e^{-c(t-1)}\|f\|_\infty.
+\]
+Use contraction up to time one and integrate the semigroup
+to obtain $\|P_p^{-1}f\|_\infty\le C\|f\|_\infty$.
+
+For gradient control, localize each scalar line coefficient
+$v_j$ by its ambient cutoff $\chi_j$ and extend
+$w_j=\chi_jv_j$ by zero to the fibre. Equation
+\eqref{eq:local-rough-operator} gives
+\[
+ \|\Delta w_j\|_\infty\le C\bigl(\|P_ps\|_\infty
+                  +\|D_0s\|_\infty+\|s\|_\infty\bigr).
+\]
+Apply \eqref{eq:scalar-gradient-estimate} and sum over the
+fixed number of charts and matrix entries. Since the
+cutoffs sum to one and the connection forms are bounded,
+\[
+ \begin{split}
+ \|D_0s\|_\infty\le{}&C(T^{-1/2}+1)\|s\|_\infty\\
+ &+C\sqrt T\bigl(\|P_ps\|_\infty
+                        +\|D_0s\|_\infty+\|s\|_\infty\bigr).
+ \end{split}
+\]
+Choose one small $T$ to absorb the gradient on the right.
+Combined with the sup-norm inverse, this is
+\eqref{eq:graph-inverse}.
+
+Heat-smoothing a bounded right side preserves the
+orthogonal complement and its sup-norm bound. On each
+fixed smooth fibre, the inverses have weak-star limits in
+$W^{1,\infty}$ which solve the equation distributionally;
+uniqueness identifies them with the spectral inverse.
+The estimates pass to the limit. The graph spaces are
+complete because a Cauchy sequence converges in
+$W^{1,\infty}$ and its $P_p$ images converge in $L^\infty$;
+distributional continuity identifies the two limits.
+The unconstrained kernel is
+$\widehat{\mathfrak h}$, and its intersection with the
+orthogonal graph domain is zero. On the full graph space,
+\begin{equation}\label{eq:graph-product}
+ P_p(uv)=(P_pu)v+u(P_pv)
+                   -\sum_\ell(D_{0,e_\ell}u)(D_{0,e_\ell}v)
+\end{equation}
+proves the uniform algebra bound. The identity belongs to
+this unrestricted space. Product and chain rules on the
+weak domain follow from fixed-fibre $W^{2,q}$ regularity
+for every finite $q$; no uniform $W^{2,q}$ bound is needed.
+
+Finally the right sides in
+\eqref{eq:harmonic-section-projection} are bounded and
+supported on a fixed exterior. The gradient inverse gives
+$\|\eta_p^\pm\|_\infty\le C$. The eight harmonic matrix
+basis vectors have masses bounded below by
+\eqref{eq:extension-coefficients}. Their rank-one
+projection formulas, with fixed volume and bounded
+representatives, give the $L^\infty$ projection bound.
+\end{proof}
+
+\subsection{Controlled coordinates on the actual bundle family}
+
+Let $K=U(2)\times U(2)$ act by
+\eqref{eq:two-arrow-action}. The equivariant germ in
+Proposition~\ref{prop:effective-bundles} has a representative
+on a common $K$-invariant matrix ball $|z|<a$. Indeed the
+étale construction has an actual group action before local
+inversion; uniqueness of its branch makes the local inverse
+and its $K$-translates agree, and compactness of $K$ permits
+one common domain. This retains the independent full period
+ball after shrinking it.
+
+We construct determinant-preserving smooth identifications
+of these bundles with the split bundle, holomorphic in $z$,
+which are holomorphic in the space variable on smaller fixed
+node neighbourhoods. The total conifold space is smooth,
+and the actual bundle is locally free across its central
+nodes. On a finite cover of a neighbourhood of the compact
+central fibre, choose local holomorphic bundle frames.
+On each node neighbourhood these give an identification
+with the split bundle, equal to the identity at $z=0$.
+Average it over $K$. The average remains holomorphic in
+space and parameter and is the identity at zero, hence
+invertible on a smaller common ball. It is $K$-equivariant.
+
+Use these frames to define connections only in the matrix
+parameter directions. Patch them by a partition depending
+on the total-space point and not on $z$, choosing the node
+connection exclusively on each smaller core. Average this
+parameter connection over $K$ as well. Its coefficients
+remain holomorphic in $z$. Parallel transport along
+$t\mapsto tz$, $0\le t\le1$, gives an identification $T_z$
+which is smooth in space, holomorphic in $z$, and equivariant.
+The holomorphic parameter dependence follows directly from
+the iterated-integral solution of its linear ODE.
+On the cores it agrees with the chosen holomorphic
+identification. The determinant trivialization can also
+be chosen equivariantly, with its fixed determinant
+character at zero, by averaging and shrinking.
+If $\det T_z$ differs from it by $\delta(x,z)$, then
+$\delta(x,0)=1$. Replacing $T_z$ by $T_z\delta^{-1/4}$,
+with the branch near one, preserves these properties and
+fixes the determinant exactly.
+
+Consequently the actual holomorphic structures become
+$\dbar_0+\beta_p(z)$, where $\tr\beta_p(z)=0$,
+$\beta_p(0)=0$, and $\beta_p(z)$ vanishes on the fixed
+cores. Compactness of the exterior construction gives
+uniform spatial and matrix-parameter bounds of every
+fixed order. In particular
+\begin{equation}\label{eq:initial-beta-bounds}
+ \|\beta_p(z)\|_\infty+
+             \|\dbar_0^*\beta_p(z)\|_\infty\le C|z|.
+\end{equation}
+Normalize the two scalar Kodaira--Spencer frames to the
+Koszul classes $e_\pm$. A required change is a nonvanishing
+holomorphic scalar function of $p$, absorbed in the arrow
+coordinate on a smaller common ball. It leaves the base
+coordinates and the two-arrow action unchanged.
+Write $\beta_{1,p}(z)=d_z\beta_p(0)z$.
+Equivariance under $(tI_2,I_2)$ forces its diagonal
+blocks to vanish and its two off-diagonal blocks to have
+the corresponding arrow weights.
+
+Define the linear endomorphism and complex gauge
+\[
+ f_p(z)=P_p^{-1}\dbar_0^*\beta_{1,p}(z),
+                  \qquad g_p(z)=e^{-f_p(z)}.
+\]
+The inverse is on the off-diagonal blocks, whose kernel
+is zero. Lemma~\ref{lem:graph-inverse} gives
+$\|f_p(z)\|_{\mathcal G}\le C|z|$.
+It is trace-free, so the gauge has determinant one.
+The transformed coefficient
+\begin{equation}\label{eq:harmonic-gauge}
+ b_p(z)=g_p(z)^{-1}\beta_p(z)g_p(z)
+                         +g_p(z)^{-1}\dbar_0g_p(z)
+\end{equation}
+is integrable, trace-free and equivariant. Its linear
+part is $\beta_{1,p}-\dbar_0f_p$, which is closed,
+coclosed and in the prescribed class, hence equals
+$\eta_p(z)$ in \eqref{eq:harmonic-arrow-form}.
+
+The graph algebra \eqref{eq:graph-product} controls the
+exponential remainder, including its $P_p$ image:
+\[
+ \|g_p-I+f_p\|_{\mathcal G}
+              +\|g_p^{-1}-I-f_p\|_{\mathcal G}\le C|z|^2.
+\]
+For multiplication of a $(0,1)$-form by an endomorphism,
+the product rule for $\dbar_0^*$ has error bounded by
+the product of the endomorphism's first derivative and
+the form itself. Apply this on both sides of
+\eqref{eq:harmonic-gauge}. The linear terms are
+$\dbar_0^*\beta_{1,p}$ and $-P_pf_p$ and cancel exactly.
+We have therefore proved
+\begin{equation}\label{eq:controlled-harmonic-gauge}
+ \begin{gathered}
+ b_p(z)=\eta_p(z)+N_p(z),\qquad \|b_p(z)\|_\infty\le C|z|,\\
+ \|N_p(z)\|_\infty+\|\dbar_0^*b_p(z)\|_\infty\le C|z|^2,
+ \qquad\|d_zN_p(z)\|_\infty\le C|z|.
+ \end{gathered}
+\end{equation}
+Holomorphic transport and the uniformly convergent
+exponential series give bounds for every fixed matrix
+derivative on a smaller common ball. The contracted
+derivative estimate uses $P_pf_p$, not a full Hessian
+bound for $f_p$.
+
+\subsection{The projected equation}
+
+With $b=b_p(z)$, the Chern connection for $h_0$ has
+$D_b''=\dbar_0+b$ and $D_b'=D_0'-b^*$.
+On endomorphisms these additional terms act by commutators.
+For $s\in\mathcal X_p^0$ define
+\begin{equation}\label{eq:actual-he-map}
+ \mathcal F_p(s,z)=e^{s/2}
+       (\mathrm i\Lambda F_{h_0e^s,b})e^{-s/2}.
+\end{equation}
+The conjugation makes the output $h_0$-Hermitian, and
+its trace is zero because the determinant is fixed.
+
+\begin{proposition}\label{prop:projected-he}
+There are uniform small radii such that, for every $p$
+and $z$ in their domains, a unique small
+$s_p(z)\in\mathcal X_p^0$ solves
+\begin{equation}\label{eq:projected-equation}
+             (I-\Pi_p)\mathcal F_p(s_p(z),z)=0.
+\end{equation}
+The solution is smooth on each fibre, $K$-equivariant,
+and smooth in the real matrix parameters, with
+\begin{equation}\label{eq:he-complement-size}
+ \|s_p(z)\|_{\mathcal G}\le C|z|^2,
+ \qquad\|d_zs_p(z)\|_{\mathcal G}\le C|z|.
+\end{equation}
+Every fixed higher matrix derivative has a uniform bound
+on a smaller common ball. The remaining actual equation is
+\begin{equation}\label{eq:finite-actual-moment}
+ \Psi_p(z):=\Pi_p\mathcal F_p(s_p(z),z)=0,
+           \qquad\Psi_p(z)\in\mathfrak h,
+           \quad\|\Psi_p(z)\|\le C|z|^2.
+\end{equation}
+The metric $h_0e^{s_p(z)}$ is HE precisely on this zero set.
+\end{proposition}
+
+\begin{proof}
+Put $M_b=\mathrm i\Lambda F_{h_0,b}$.
+Before contraction its curvature difference is
+\[
+ D_0'b-\dbar_0b^*-b\wedge b^*-b^*\wedge b.
+\]
+The contracted linear terms are controlled by
+$\dbar_0^*b$ and its adjoint, by the Kähler identities.
+Thus \eqref{eq:controlled-harmonic-gauge} gives
+$\|M_b\|_\infty\le C|z|^2$.
+The exact finite change of Chern curvature is
+\begin{equation}\label{eq:finite-chern-change}
+ \mathrm i\Lambda F_{h_0e^s,b}
+       =M_b+\mathrm i\Lambda\dbar_b(e^{-s}D_b'e^s).
+\end{equation}
+This identity, with the displayed matrix order, is
+\cite[(2.10)]{CLZZ}; its infinitesimal version is
+\cite[(6.3.16)--(6.3.17)]{Kobayashi}.
+At $(s,z)=(0,0)$ the derivative in $s$ is
+\[
+ D_s\mathcal F_p(0,0)s
+       =\mathrm i\Lambda\dbar_0D_0's=P_ps.
+\]
+For scalars the normalization is
+$\delta(\mathrm i\Lambda F)=\tfrac12\Delta s$ for
+$h\mapsto he^s$.
+
+For a general endomorphism $v$, expand
+\[
+ \begin{split}
+ \dbar_bD_b'v={}&\dbar_0D_0'v-[\dbar_0b^*,v]
+             +[b^*,\dbar_0v]\\
+             &+[b,D_0'v]-[b,[b^*,v]],
+ \end{split}
+\]
+with graded brackets for one-forms. After contraction,
+\begin{equation}\label{eq:contracted-perturbation}
+ \begin{split}
+ \|\mathrm i\Lambda\dbar_bD_b'v-P_pv\|_\infty
+ \le C\bigl(&\|b\|_\infty\|D_0v\|_\infty\\
+ &+(\|\dbar_0^*b\|_\infty+\|b\|_\infty^2)\|v\|_\infty\bigr).
+ \end{split}
+\end{equation}
+No uncontracted derivative of $b$ occurs.
+In \eqref{eq:finite-chern-change}, expand
+\[
+ \dbar_b(e^{-s}D_b'e^s)
+   =(\dbar_be^{-s})\wedge D_b'e^s
+                            +e^{-s}\dbar_bD_b'e^s.
+\]
+The first term uses only first derivatives. Control the
+second by \eqref{eq:contracted-perturbation} and the graph
+product rule. The exponential series and conjugation in
+\eqref{eq:actual-he-map} are uniformly smooth maps in
+these norms. Their weak-domain formulas are legitimate
+by fixed-fibre $W^{2,q}$ regularity, without any assertion
+of density in the graph norm.
+
+Writing $\mathcal F_p(s,z)=P_ps+\mathcal R_p(s,z)$ gives
+\begin{equation}\label{eq:he-remainder}
+ \begin{aligned}
+ \|\mathcal R_p(0,z)\|_\infty&\le C|z|^2,\\
+ \|\mathcal R_p(s,z)-\mathcal R_p(t,z)\|_\infty
+  &\le C(|z|+\|s\|_{\mathcal G}+\|t\|_{\mathcal G})
+                                      \|s-t\|_{\mathcal G}.
+ \end{aligned}
+\end{equation}
+To check the vanishing factor in the second line, every
+term beyond $P_ps$ contains $b=O(|z|)$, an exponential
+remainder factor $s$ or $t$, or a first derivative of
+one of them. The contracted derivative of $b$ is
+$O(|z|^2)$. The product series and their differentiated
+series prove the estimate and bounded higher derivatives.
+
+Projection $\Pi_p$ is uniformly bounded on $L^\infty$,
+since it is averaging against parallel block matrices
+with the fixed mass \eqref{eq:split-mass}.
+Let $J_p$ be the real complementary inverse from
+Lemma~\ref{lem:graph-inverse}. Equation
+\eqref{eq:projected-equation} is equivalent to
+\[
+       s=-J_p(I-\Pi_p)\mathcal R_p(s,z).
+\]
+Choose a fixed small graph ball and then a common matrix
+ball so that its Lipschitz constant is less than $1/2$.
+The quadratic forcing makes the ball of radius
+$C_0|z|^2$ invariant. Contraction gives the solution and
+its quadratic bound. Every solution in the original
+small graph ball satisfies the same bound after
+absorption, and hence is this fixed point.
+Differentiating the uniformly smooth fixed-point equation
+gives the higher matrix bounds; $s_p(0)=d_zs_p(0)=0$
+gives the derivative estimate in
+\eqref{eq:he-complement-size}. All operations commute
+with $K$, so uniqueness proves equivariance.
+
+For each fixed smooth fibre the graph solution is in
+$W^{2,q}$ for all finite $q$, hence in $C^{1,\alpha}$.
+The coefficient of its contracted second derivative in
+\eqref{eq:actual-he-map} is
+\[
+ v\longmapsto e^{s/2}
+       \left(\int_0^1 e^{-ts}v e^{ts}\,\dd t\right)e^{-s/2}.
+\]
+It is the identity at zero and has a smooth pointwise
+inverse for small $s$. The equation therefore expresses
+$P_ps$ as a $C^{0,\alpha}$ function of first derivatives
+and smooth fixed-fibre data. Schauder regularity and
+iteration make $s$ smooth. This bootstrap uses no uniform
+higher unweighted spatial estimate. Finally
+$\Pi_pP_ps=0$ and \eqref{eq:he-remainder} give the size
+of $\Psi_p$. The projected equation makes the full
+transported curvature moment equal to $\Psi_p$, proving
+the final equivalence.
+\end{proof}
+
+The finite equation \eqref{eq:finite-actual-moment} will
+be solved below. At this stage the construction is an
+actual complementary metric correction for every small
+integrable matrix parameter. Its constants control matrix
+derivatives and the stated spatial norms throughout
+$\mathcal B^\circ$; they make no claim about derivatives
+in the degenerating base parameter.

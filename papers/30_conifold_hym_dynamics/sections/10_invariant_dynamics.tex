@@ -1,0 +1,325 @@
+\section{An invariant graph and its exact finite gradient flow}
+\label{sec:invariant-dynamics}
+
+The stationary metric correction of Section~\ref{sec:projected-he}
+does not define an invariant graph for metric evolution. We
+construct such a graph directly from the heat estimates of
+Section~\ref{sec:spatial-entry}. Fix a finite regularity order
+$m\ge4$. The constants and the chosen graph may depend on $m$.
+
+\begin{theorem}\label{thm:invariant-graph}
+After a common shrink there is a chosen $C^m$ map
+$\psi_{p,w}:\mathfrak h\to QX_p$, with $\psi_{p,w}(0)=0$,
+such that
+\begin{equation}\label{eq:graph-derivative-bounds}
+ \sup_S\|D_S^j\psi_{p,w}(S)\|_X\le C_mr^2
+                          \quad(0\le j\le m).
+\end{equation}
+For $j\le m-1$ the same bound holds for
+$L_0D_S^j\psi$ in $Y_p$. The graph is invariant for
+the extension defined below and locally invariant for actual
+HYM. Its complete finite field $f_{p,w}$ satisfies
+$\|f_{p,w}\|_{C^m}\le C_mr^2$.
+On a fixed inner ball, a trajectory of this field reconstructs
+the actual metric flow
+\begin{equation}\label{eq:graph-reconstruction}
+             h(t)=h_0\exp\{S(t)+\psi_{p,w}(S(t))\}.
+\end{equation}
+The graph points there are spatially smooth on each fixed fibre.
+At zero the tangent map $J_0=I+D\psi_{p,w}(0)$ identifies
+$\mathfrak h$ with the complete seven-dimensional small
+spectral space of $L$, and
+\begin{equation}\label{eq:graph-linear-intertwining}
+                         J_0Df_{p,w}(0)=-LJ_0.
+\end{equation}
+All exact kernel directions are retained.
+The construction is jointly $K$-equivariant in $w$ and $S$.
+\end{theorem}
+
+\subsection{A smooth extension of the first-jet equation}
+
+Choose smooth scalar cutoffs $\theta,\chi$ taking values in
+$[0,1]$, equal to one on $[0,1]$ and zero on $[4,\infty)$.
+For a fixed small $a>0$, put
+\[
+ \widehat S=\chi(|S|^2/a^2)S,\qquad
+ \vartheta(v)(x)=\theta\bigl((|v(x)|^2+|D_0v(x)|^2)/a^2\bigr).
+\]
+The extended nonlinearity is
+\begin{equation}\label{eq:jet-extension}
+ \widetilde N_w(S,v)(x)=\vartheta(v)(x)
+                                  N_w(\widehat S+v)(x).
+\end{equation}
+Its right side is evaluated using the pointwise formula
+\eqref{eq:Nw-definition}, with $D_0\widehat S=0$.
+Choose $a$ so that the support of the cutoff lies strictly
+inside that formula's pointwise domain, and extend by zero
+outside. This uses a smooth cutoff in finite-dimensional
+first-jet variables. It requires no smooth bump function
+of the $C^1$ norm.
+
+The bounded jet map $v\mapsto(v,D_0v)$ and the pointwise
+chain rule make $\widetilde N_w:\mathfrak h\times QX_p\to Y_p$
+globally smooth and bounded, with uniform fixed-order
+derivative bounds. On the cutoff support the drift term
+has size $O(ra)$ and the quadratic term has size $O(a^2+r^2a^2)$.
+A cutoff derivative contributes at most $C/a$.
+For $r\le a$ this proves
+\begin{equation}\label{eq:extended-small-lipschitz}
+ \|D\widetilde N_w\|\le\ell=C(a+r),\qquad
+ \sup_S\|D_S^j\widetilde N_w(S,0)\|_Y\le C_jr^2.
+\end{equation}
+The second bound follows because every occurrence of a
+parallel variable in \eqref{eq:Nw-definition} retains two
+connection factors or the zeroth-order coefficient.
+Also $\widetilde N_w(0,0)=0$.
+Set
+$\mathcal A(S,v)=\Pi\widetilde N_w(S,v)$ and
+$\mathcal B(S,v)=Q\widetilde N_w(S,v)$, absorbing the
+uniform projection norms into $\ell$. The extended system is
+\begin{equation}\label{eq:extended-system}
+ \dot S=\mathcal A(S,v),\qquad
+ \dot v=-L_0v+\mathcal B(S,v).
+\end{equation}
+It agrees with actual HYM when $|S|<a$ and $\|v\|_X<a$.
+The integrable smoothing kernel and global Lipschitz bounds
+give unique global forward mild solutions on each fibre.
+All cutoffs use invariant norms, so the extension is
+jointly equivariant under parallel unitary conjugation.
+
+\subsection{Backward histories and finite differentiability}
+
+Let $k(t)=M(1+t^{-1/2})e^{-\sigma t}$ and
+$K_\beta=\int_0^\infty k(t)e^{\beta t}\,\dd t$ for
+$0\le\beta<\sigma$. For continuous histories on $(-\infty,0]$
+use the norm
+\[
+ \|(S,v)\|_\beta=
+       \sup_{t\le0}e^{\beta t}(|S(t)|+\|v(t)\|_X).
+\]
+Put $\eta=\sigma/(2(m+2))$. Reduce $a$ and then $r_0$
+so that
+\begin{equation}\label{eq:history-contractions}
+ \ell(\beta^{-1}+K_\beta)<\tfrac12
+ \quad\bigl(\eta\le\beta\le(m+1)\eta\bigr),
+ \qquad \ell K_0<\tfrac12.
+\end{equation}
+For any endpoint $S_0$, solve
+\begin{equation}\label{eq:backward-fixed-point}
+ \begin{aligned}
+ S(t)&=S_0-\int_t^0\mathcal A(S(s),v(s))\,\dd s,\\
+ v(t)&=\int_{-\infty}^t e^{-(t-s)L_0}
+                               \mathcal B(S(s),v(s))\,\dd s.
+ \end{aligned}
+\end{equation}
+The two Lipschitz bounds are $\ell/\beta$ and
+$\ell K_\beta$. Boundedness of the nonlinearities shows
+that the map sends each indicated history space into itself:
+the finite output grows at most linearly backwards, and
+the normal output is bounded. Continuity of the latter
+in $X_p$ follows by splitting off a short terminal interval
+and using integrability of $k$. Thus there is a unique
+fixed history, identical in all these weighted spaces.
+Its normal part satisfies
+\[
+ \sup_{t\le0}\|v(t)\|_X
+ \le K_0\{Cr^2+\ell\sup_{t\le0}\|v(t)\|_X\}\le Cr^2.
+\]
+Define $\psi(S_0)=v(0)$. The zero history gives $\psi(0)=0$.
+
+We record the differentiability argument to account for
+products of growing histories. The first variation solves
+the linearized fixed-point equation with initial term
+$(\delta S_0,0)$. Its integral operator has norm below
+$1/2$ in each weight. Differences of fixed histories are
+$O(|\delta S_0|e^{-\eta t})$, so the quadratic Taylor
+remainder is $O(|\delta S_0|^2e^{-2\eta t})$.
+Inverting in the $2\eta$ space proves actual
+differentiability. At order $j$, the inhomogeneous terms
+have the form
+\[
+ D^q(\mathcal A,\mathcal B)(S,v)
+                 [Z_{i_1},\ldots,Z_{i_q}],
+ \qquad q\ge2,\quad i_1+\cdots+i_q=j,
+\]
+with each $i_k<j$. Their weights add to $j\eta$.
+The same inverse works there, and Taylor's formula with
+the next derivative in the spare weight $(j+1)\eta$
+proves differentiability and continuity. All these weights
+are below $\sigma$. Evaluation at zero proves $C^m$
+regularity of $\psi$ with uniform derivative bounds.
+
+For the sharper $r^2$ bound, bounded mixed derivatives,
+the normal bound, and \eqref{eq:extended-small-lipschitz}
+give $D_S^j(\mathcal A,\mathcal B)=O(r^2)$ along every
+fixed history. In the first normal variation, the finite
+coefficient is therefore $O(r^2)$ and the normal coefficient
+is small; absorption makes that variation $O(r^2)$.
+At higher orders, a term with only finite variations has
+an $O(r^2)$ coefficient, while every other term contains
+an $O(r^2)$ normal variation. Induction in the weighted
+equations proves \eqref{eq:graph-derivative-bounds}.
+Uniqueness also proves joint equivariance.
+
+\subsection{Invariance, domains and linearization}
+
+Shift a fixed history by a finite time, attaching the forward
+mild solution when necessary. Its negative tail still has
+bounded normal component and at most linear finite growth.
+The shifted normal integral has no term at minus infinity.
+It therefore solves \eqref{eq:backward-fixed-point} with
+its new endpoint. Uniqueness gives $v(t)=\psi(S(t))$.
+Thus the graph is invariant and its field is
+\begin{equation}\label{eq:finite-field}
+                       f(S)=\mathcal A(S,\psi(S)).
+\end{equation}
+The chain rule and the preceding estimates give
+$\|f\|_{C^m}\le C_mr^2$. This bounded field has a
+complete finite flow in both time directions.
+
+On the graph the mild equation and differentiation in
+$X_p$ imply the generator-domain identity
+\begin{equation}\label{eq:graph-domain-identity}
+             L_0\psi(S)=\mathcal B(S,\psi(S))-D\psi(S)f(S).
+\end{equation}
+Indeed divide the mild formula at time $t$ minus its
+initial value by $t$ and let $t\downarrow0$ in $Y_p$.
+Strong continuity makes the integral quotient converge
+to $\mathcal B$ and the left derivative equal $D\psi f$.
+This is the definition of the generator domain.
+Differentiating the right side and using closedness of
+$L_0$ gives the claimed domain bounds through order $m-1$.
+
+On a fixed smooth fibre, ordinary elliptic regularity now
+gives $\psi,D\psi\in W^{2,q}$ for every finite $q$,
+then $C^{1,\alpha}$. Equation~\eqref{eq:graph-domain-identity}
+gives $C^{2,\alpha}$ regularity. In an inner finite ball,
+a short graph trajectory stays where the cutoffs are
+inactive, hence is a classical solution of the original
+first-jet equation. Interior fixed-fibre parabolic
+regularity makes it spatially smooth. These higher
+regularity statements have no asserted uniform constants.
+They justify the actual reconstruction
+\eqref{eq:graph-reconstruction}.
+
+At the HE origin $DN_w(0)=-(L-L_0)$.
+Differentiating invariance gives
+\eqref{eq:graph-linear-intertwining}.
+The seven-dimensional image of $J_0$ is invariant under
+the self-adjoint $L$ and lies in its operator domain.
+Its restriction is self-adjoint for the induced mass;
+the bound on $Df(0)$ puts all its eigenvalues in $[0,Cr^2]$.
+The complementary gap in Theorem~\ref{thm:complete-bundle-spectrum}
+then identifies this image with the whole small spectral
+space. Since $\Pi J_0=I$, its coordinates are exactly
+those of the inverse restricted projection.
+
+If $S$ is in the constant actual parallel kernel, then
+$DS=0$ and $h_0e^S$ is HE. Its constant history gives
+$\psi(S)=f(S)=0$ in the inner ball. Conversely a finite
+equilibrium reconstructs an HE metric. Integrating the
+squared-distance identity in the proof of
+\cite[Lemma 6.4.5]{Kobayashi} along the fibrewise geodesic
+between two stationary HE metrics forces their logarithmic
+difference to be $D$-parallel. Theorem~\ref{thm:complete-bundle-spectrum}
+identifies that difference with a constant element of
+$\mathfrak h$. Thus the local equilibrium set is exactly
+the actual parallel kernel ball. This completes the proof
+of Theorem~\ref{thm:invariant-graph}.
+
+\subsection{The finite metric, energy and full Hessian}
+
+Put $Z(S)=S+\psi(S)$ and $Z_Sa=a+D\psi(S)a$.
+The pullback of the invariant $L^2$ metric on positive
+Hermitian metrics is
+\begin{equation}\label{eq:finite-flow-metric}
+ g_{{\rm fin},S}(a,b)=\int_{X_p}\tr
+             \{J_{Z(S)}(Z_Sa)J_{Z(S)}(Z_Sb)\}\,\dd V_{g_p}.
+\end{equation}
+Although the factors need not be $h_0$-Hermitian, they
+are Hermitian for the current metric, so this is positive.
+On the small ball it is uniformly equivalent to the
+$L^2$ trace pairing of $Z_Sa,Z_Sb$, hence to $M$ since
+$\Pi Z_Sa=a$.
+Define
+\begin{equation}\label{eq:finite-donaldson-energy}
+ \mathcal E_{\rm fin}(S)=
+ 2\int_0^1\!\int_{X_p}
+       \tr\{\mathrm i\Lambda F_{h_0e^{tZ(S)}}Z(S)\}
+                                      \,\dd V_{g_p}\,\dd t.
+\end{equation}
+This is twice Donaldson's functional relative to $h_0$.
+Its first variation, with $\dd V=\omega^3/3!$, is
+\cite[Section 6.3, equations (6.3.25)--(6.3.27)]{Kobayashi}
+\[
+ \dd\mathcal D_h(\dot h)=\int_{X_p}
+                      \tr(\mathrm i\Lambda F_h\,h^{-1}\dot h)\,\dd V.
+\]
+On the inner region where the graph carries the actual HYM
+equation, graph invariance and its coefficient $-2$ give
+\begin{equation}\label{eq:exact-finite-gradient}
+                f=-\operatorname{grad}_{g_{\rm fin}}\mathcal E_{\rm fin}.
+\end{equation}
+This metric describes variations of metrics on one fixed
+holomorphic bundle. The harmonic metric on varying bundle
+moduli will be constructed separately.
+
+\begin{corollary}\label{cor:relative-finite-hessian}
+At an HE parameter $w=\chi_p(z)$, the exact finite mass
+and Hessian satisfy
+\begin{equation}\label{eq:finite-mass-hessian}
+ \begin{split}
+ g_{{\rm fin},0}(S,T)
+   &=M(S,T)+\langle D\psi(0)S,D\psi(0)T\rangle_2,\\
+ |g_{{\rm fin},0}-M|&\le C|z|^4M,\\
+ (1-C|z|)E_{p,z}&\le\operatorname{Hess}_0\mathcal E_{\rm fin}
+                                             \le(1+C|z|)E_{p,z}.
+ \end{split}
+\end{equation}
+In particular the Hessian has the exact kernel of $E_{p,z}$,
+and its bilinear error is bounded by
+$C|z|\sqrt{E_{p,z}(S)E_{p,z}(T)}$.
+\end{corollary}
+
+\begin{proof}
+At the critical origin the exact forms are
+$N(S,T)=\langle J_0S,J_0T\rangle_2$ and
+$H(S,T)=\langle LJ_0S,J_0T\rangle_2$.
+Orthogonality gives the mass formula and its $O(r^4)$ bound.
+The lower bound in \eqref{eq:whole-bundle-form} gives
+$H\ge(1-Cr)E_{p,w}$.
+Their kernels agree because $J_0$ is the inverse of
+$\Pi$ on the full small spectral space and the actual
+kernel consists of the constant stabilizer directions.
+On the quotient by that common kernel, let $\bar N,\bar M$
+be the quotient masses (the infima over representatives).
+They are relatively $1+O(r^4)$ equivalent.
+The positive generalized eigenvalues of $(H,N)$ are exactly
+the positive small eigenvalues of $L$. Therefore
+\eqref{eq:seven-eigenvalues} gives
+\[
+ \frac{\det\bar H}{\det\bar E_{p,w}}
+  =\frac{\prod_{\lambda_j>0}\lambda_j}
+         {\prod_{\mu_j>0}\mu_j}
+                           \frac{\det\bar N}{\det\bar M}
+  =1+O(r).
+\]
+Every eigenvalue of $\bar E_{p,w}^{-1/2}\bar H
+\bar E_{p,w}^{-1/2}$ is at least $1-Cr$, and their
+product is $1+O(r)$. Since the dimension is at most seven,
+each is at most $1+Cr$. If the quotient has dimension
+zero the assertion is immediate. This proves the full
+relative form comparison without a lower bound for a
+positive weak rate.
+Finally equivariance of $\chi_p$ gives
+$\delta_wS=d\chi_p(z)\delta_zS$, with derivative
+$I+O(|z|)$ in the uniformly positive arrow norm.
+Hence $E_{p,w}=(1+O(|z|))E_{p,z}$ as forms, including
+kernels. Polarization on the quotient proves the
+bilinear estimate.
+\end{proof}
+
+The exact linear generator is $-g_{{\rm fin},0}^{-1}H$.
+The relative Hessian statement does not replace the
+nonlinear field \eqref{eq:finite-field} by its quadratic
+approximation on arbitrarily long time intervals.

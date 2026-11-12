@@ -1,0 +1,500 @@
+\section{Harmonic extensions and Dolbeault compactness}
+\label{sec:harmonic-extensions}
+
+The algebraic generators $e_+,e_-$ fixed in the Koszul calculation
+of Section~\ref{sec:geometry} determine classes in
+$H^1(X_p,L_p^{\pm2})$ over the entire period ball. Write
+$\eta_p^\pm$ for their harmonic representatives for $g_p$ and
+$h_p^{\pm2}$. Their masses enter the finite bundle energy.
+We first identify these coefficients by elliptic problems on
+the central geometry, and then prove that no additional
+Dolbeault modes concentrate at the nodes.
+
+\begin{proposition}\label{prop:harmonic-masses}
+There are closed representatives $\beta_p^\pm$ of $e_\pm$,
+supported on a fixed exterior, and sections $f_p^\pm$ such that
+\begin{equation}\label{eq:harmonic-section-projection}
+ \eta_p^\pm=\beta_p^\pm-\dbar f_p^\pm,
+ \qquad \dbar^*\dbar f_p^\pm=\dbar^*\beta_p^\pm.
+\end{equation}
+The sections have uniform global $L^2$ and $L^\infty$ bounds
+and all fixed-exterior derivative bounds. For
+$\varepsilon_i\le r<r_0$, where $\varepsilon_i\asymp|\tau_i|^{1/3}$,
+\begin{equation}\label{eq:harmonic-cap-mass}
+ \int_{\{\varrho_{i,p}<r\}}|\eta_p^\pm|^2\,\dd V_p\le Cr^4.
+\end{equation}
+The metrics $h_p$, the sections $f_p^\pm$ and the forms
+$\eta_p^\pm$ converge in every fixed-exterior derivative
+through the full domain $\mathcal B^\circ$ to unique central
+limits. In particular
+\begin{equation}\label{eq:extension-coefficients}
+ c_\pm(p):=\|\eta_p^\pm\|_2^2
+        \longrightarrow c_{\pm,0}:=\|\eta_0^\pm\|_2^2>0.
+\end{equation}
+The full harmonic degree-one endomorphism space is
+\begin{equation}\label{eq:harmonic-arrow-form}
+ z=(A,B)\longmapsto\eta_p(z)=
+   \begin{pmatrix}0&\eta_p^+ A\\ \eta_p^- B&0\end{pmatrix},
+\end{equation}
+with Hermitian mass
+\begin{equation}\label{eq:extension-mass}
+ M_p^{\rm ext}(z,z')=c_+(p)\tr(A^*A')+c_-(p)\tr(B^*B').
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Put $\mathcal F^\pm=\mathcal L^{\pm2}$ on $\cX$.
+The cohomology calculation and base change give
+$\pi_*\mathcal F^\pm=0$ and $R^1\pi_*\mathcal F^\pm\simeq\OO_{\mathcal B}$.
+Leray therefore identifies $H^1(\cX,\mathcal F^\pm)$ with
+the sections of the latter line bundle. The fixed frame gives
+an actual extension
+\begin{equation}\label{eq:total-extension}
+ 0\longrightarrow\mathcal F^\pm\xrightarrow{j}
+ \mathcal U^\pm\xrightarrow{q}\OO_{\cX}\longrightarrow0.
+\end{equation}
+Its middle term is locally free because the free quotient
+locally lifts and splits. The extension restricts to the
+chosen class on every fibre, including $X_0$;
+see \cite[Tags 01F2 and 0B3A]{Stacks} for these conventions.
+
+Each total node neighbourhood can be chosen Stein, as a
+closed hypersurface in a Stein coordinate product. Cartan's
+Theorem B \cite[exposé 18, p.~18-7; exposé 19, Section 5]{Cartan}
+gives a holomorphic lift $s_i$ of $1$ there.
+Choose a global smooth lift $s_{\rm gl}$ on the smooth total
+space and disjoint cutoffs $\chi_i$ supported in those
+neighbourhoods and equal to one on smaller fixed ones.
+Then
+\[
+ s=s_{\rm gl}+\sum_i\chi_i(s_i-s_{\rm gl}),\qquad
+                      \beta=j^{-1}\dbar s
+\]
+is a smooth splitting and its extension form. The form is
+closed and vanishes on the smaller node neighbourhoods.
+Its vertical restrictions are the required representatives
+$\beta_p$. The fixed exterior is a smooth proper family,
+so these representatives have uniform bounds in every
+spatial derivative there. This uses the usual smooth
+splitting interpretation of extension classes
+\cite[Chapter V, Section 14]{Demailly}; no singular
+Dolbeault resolution is required.
+
+The geometric comparison used in
+\eqref{eq:diameter-ambient} gives radial cutoffs and volume
+bounds
+\begin{equation}\label{eq:radial-cutoffs}
+ |\dd\chi_{r,p}|\le C/r,\qquad
+ \Vol\{\varrho_{i,p}<2r\}\le Cr^6,
+                         \qquad\varepsilon_i\le r<r_0.
+\end{equation}
+These follow from bounded-core and conic-end estimates on
+the unit Stenzel metric and homothety. The same estimates
+hold centrally. Since $u_p$ in
+Proposition~\ref{prop:line-he} is uniformly bounded,
+subsequences converge on exteriors to bounded solutions of
+the central line equation. The normalization has mean zero
+in the limit: for a fixed $r$ the exterior integrals
+converge, while the omitted integrals are $O(r^6)$.
+If two bounded normalized limits differ by $w$, then $w$
+is harmonic. A cutoff $\zeta_r$ vanishing at the tips and
+equal to one outside radius $2r$ gives
+\[
+ \int\zeta_r^2|\dd w|^2\le
+         4\int|\dd\zeta_r|^2|w|^2\le Cr^4.
+\]
+Letting $r\downarrow0$ shows that $w$ is constant, and its
+mean is zero. Thus the central HE line metric $h_0$ is
+unique and $h_p$ converges without subsequences on exteriors.
+
+On either $L_p^{\pm2}$, the operator
+$P_p=\dbar^*\dbar$ has a uniform positive section gap by
+Proposition~\ref{prop:split-gap}. Solve
+$P_pf_p=\dbar^*\beta_p$. The forcing is uniformly bounded
+and supported on the fixed exterior. The gap gives a uniform
+$L^2$ bound; interior elliptic estimates give all exterior
+derivative bounds. The form in
+\eqref{eq:harmonic-section-projection} is closed and coclosed,
+and hence is the harmonic representative. Orthogonal
+projection bounds its norm by $\|\beta_p\|_2$.
+Inside each smaller node neighbourhood the forcing is zero,
+and the section Bochner identity gives $D_0^*D_0f_p=0$.
+Thus
+\[
+ \Delta|f_p|^2=-2|D_0f_p|^2\le0.
+\]
+The maximum principle on the smooth cap bounds $|f_p|$
+by its uniformly bounded outer boundary values. This
+proves its global $L^\infty$ bound. Testing the covariant
+harmonic equation with $\chi_{r,p}^2f_p$ gives
+\[
+ \int\chi_{r,p}^2|D_0f_p|^2
+       \le4\int|\dd\chi_{r,p}|^2|f_p|^2\le Cr^4.
+\]
+Since $\eta_p=-\dbar f_p$ there, this proves
+\eqref{eq:harmonic-cap-mass}.
+
+An exterior subsequential limit $f_0$ is bounded and solves
+\[
+ \dbar_0^*\dbar_0f_0=\dbar_0^*\beta_0
+                                      \quad\text{on }X_0^{\rm reg}.
+\]
+Two such solutions differ by a bounded covariantly harmonic
+section. The same global cutoff estimate forces their
+difference to be parallel. The exterior class $\pm2D$
+used in Proposition~\ref{prop:split-gap} excludes a nonzero
+parallel section. This proves uniqueness and full exterior
+convergence of $f_p$ and $\eta_p$. Fatou's lemma gives the
+central version of \eqref{eq:harmonic-cap-mass}. To compare
+norms, split at a fixed radius $r$: exterior integrals
+converge and both discarded contributions are $O(r^4)$.
+Taking $p\to0$ and then $r\downarrow0$ proves norm convergence.
+
+If $\eta_0$ vanished, $s_0-jf_0$ would be a holomorphic
+lift of $1$ on $X_0^{\rm reg}$ in
+\eqref{eq:total-extension}. Near a node $s_0$ is holomorphic
+and $\beta_0=0$, so $f_0$ is holomorphic there off the node.
+Normal Hartogs extension, in a local holomorphic frame,
+extends it across the node
+\cite[Chapter II, Corollary 7.8]{Demailly}. The lift then
+splits the extension on all of $X_0$, contradicting the
+nonzero class $e_{\pm,0}$. Thus both limiting masses are
+positive. Finally $H^1(\OO)=0$ and
+$h^1(L^{\pm2})=1$. The parallel splitting of the endomorphism
+bundle therefore gives all harmonic classes in
+\eqref{eq:harmonic-arrow-form}. Opposite matrix blocks are
+pointwise orthogonal and the trace pairing factors within
+each block, proving \eqref{eq:extension-mass}.
+\end{proof}
+
+The numbers $c_{\pm,0}$ are specified by the two bounded
+central section problems with their algebraically normalized
+classes. They are geometric elliptic data, rather than
+intersection numbers. Changing a generator rescales its
+mass and inversely changes its arrow coordinate. No equality
+between the two masses is imposed.
+
+\subsection{A cap estimate for the twisted Dolbeault operator}
+
+For $F_p=L_p^{\pm2}$ or $\OO$, set
+\[
+ Q_{p,q}(v)=\|\dbar v\|_2^2+\|\dbar^*v\|_2^2,
+                      \qquad v\in A^{0,q}(X_p,F_p).
+\]
+The following estimate controls arbitrary almost-harmonic
+forms, beyond the representatives just constructed.
+
+\begin{lemma}\label{lem:dolbeault-cap}
+For fixed sufficiently small $s>0$ and all sufficiently
+small $p$ depending on $s$, uniformly in $0\le q\le3$,
+\begin{equation}\label{eq:dolbeault-cap}
+ \|v\|^2_{\{\varrho_i<s\}}
+ \le Cs^2Q_{p,q}(v)+C\|v\|^2_{\{s<\varrho_i<2s\}}.
+\end{equation}
+The constant is independent of $s,p$ and the node-scale
+ratios. The same statement holds for split endomorphism
+coefficients.
+\end{lemma}
+
+\begin{proof}
+In the unitary frame associated with a holomorphic line
+frame on a total node neighbourhood, the connection form
+is $a_p=\tfrac12(\partial-\dbar)\log h_p$ (multiplied by
+$\pm2$ for $F_p$). We first claim
+\begin{equation}\label{eq:critical-line-smallness}
+ \lim_{s\downarrow0}\limsup_{p\to0}
+       \sup_{\varrho_i<s}\varrho_i|a_p|=0.
+\end{equation}
+The reference metric contributes zero, by the ambient lower
+bound \eqref{eq:diameter-ambient}. If the claim failed for
+the bounded potential $u_p$, there would be points with
+$r_j=\varrho_i(x_j)\to0$ and $r_j|\dd u_{p_j}(x_j)|\ge c>0$.
+Pass to a subsequence with $\varepsilon_i/r_j\to\theta\ge0$.
+The metrics rescaled by $r_j^{-2}$ converge on compact sets
+to a complete Stenzel metric if $\theta>0$, and on compact
+annuli to the punctured cone if $\theta=0$.
+This follows from \eqref{eq:ricci-flat-input}, first for
+fixed auxiliary radius and then with that radius decreasing,
+and the explicit scaling of the initial cores. The rescaled
+bounded scalar forcing tends to zero. Interior $W^{2,t}$
+estimates for $t>6$ give a bounded harmonic limit in $C^1$
+on compact sets with nonzero derivative at the base point.
+
+A bounded harmonic function on the complete Stenzel metric
+is constant: it belongs, by the AC derivative estimates,
+to the harmonic space of growth below three in
+\cite[Lemma 6.1]{W_Hodge}, whose nonconstant basis elements
+have positive growth and independent leading terms.
+On the punctured cone, expand in link scalar eigenfunctions.
+A coefficient has the form
+\[
+ b(r)=c_+r^{-2+\sqrt{4+\lambda}}
+                         +c_-r^{-2-\sqrt{4+\lambda}}.
+\]
+Boundedness at zero and infinity leaves only the constant
+for $\lambda=0$. Both alternatives contradict the nonzero
+derivative. This proves \eqref{eq:critical-line-smallness}.
+
+Use the spin structure defined by the parallel canonical
+form on the Calabi--Yau threefold. Its complex spinors are
+$\Lambda^{0,*}$ and its Dirac operator is
+$\mathcal D=\sqrt2(\dbar+\dbar^*)$.
+On the Ricci-flat cone the radial unitary identification gives
+\begin{equation}\label{eq:cone-spin-dirac}
+ \mathcal D=J\left(\partial_r+\frac{5}{2r}
+                                    +\frac{A_\Sigma}{r}\right),
+\end{equation}
+where $J$ is unitary and $A_\Sigma$ is the self-adjoint link
+spin-Dirac operator, with the appropriate chiral sign copies;
+see \cite[Section 6, (42)]{JSZ} and
+\cite[Sections 2.4 and 3]{LM}.
+The five-dimensional Einstein link has scalar curvature
+$20$. Friedrich's inequality gives
+\[
+ |\lambda(A_\Sigma)|\ge
+             \sqrt{\frac5{4(5-1)}20}=\frac52;
+\]
+we use the primary-author formulation in \cite{FK}.
+For a compactly supported spinor put $t=\log r$ and
+$w=r^3\psi$. Then
+\[
+ \|\psi\|_2^2=\int\|w\|^2\,\dd t,\qquad
+ \|r\mathcal D\psi\|_2^2
+ =\int\|(\partial_t+A_\Sigma-\tfrac12)w\|^2\,\dd t.
+\]
+The cross term integrates to zero. The distance of $1/2$
+from the link spectrum is at least two, so
+\begin{equation}\label{eq:spin-cone-hardy}
+ \|\psi\|_2\le\tfrac12\|r\mathcal D\psi\|_2.
+\end{equation}
+This is a weighted Dirac estimate, obtained before squaring
+the Dolbeault operator.
+
+On the unit Stenzel cap, unit-scale interior estimates on
+dyadic annuli give
+\[
+ \|\rho\nabla\psi\|_2
+                  \le C(\|\rho\mathcal D\psi\|_2+\|\psi\|_2).
+\]
+Its differentiated AC expansion and
+\eqref{eq:spin-cone-hardy} absorb the operator difference
+on a sufficiently distant end. A cutoff to that end yields
+\[
+ \|\psi\|_2\le C\|\rho\mathcal D\psi\|_2
+                                     +C\|\psi\|_{L^2(K)}
+\]
+for a fixed compact core $K$. The complete Stenzel Dirac
+operator has no $L^2$ kernel: Lichnerowicz's formula
+$\mathcal D^2=\nabla^*\nabla$, tested with large-radius
+cutoffs, makes an $L^2$ harmonic spinor parallel, and its
+infinite-volume constant norm must vanish
+\cite[(2.14)]{GL}. If the compact term could not be removed,
+unit-norm spinors with $\rho\mathcal D\psi\to0$ would
+have a local harmonic $L^2$ limit. It is zero, contradicting
+the displayed estimate. We obtain
+\begin{equation}\label{eq:stenzel-spin-estimate}
+ \|\psi\|_2+\|\rho\nabla\psi\|_2
+                       \le C\|\rho\mathcal D\psi\|_2
+\end{equation}
+for compactly supported spinors on the entire cap.
+
+Choose the auxiliary radius in
+\eqref{eq:ricci-flat-input} comparable to, and larger than,
+$2s$. On $\varrho<2s$ the initial metric is exactly
+Stenzel, and the scaled $C^1$ difference from $g_p$ is at
+most $\delta(s)\to0$ for sufficiently small $p$ depending
+on $s$. Identify spinors by the positive orthonormal-frame
+map. The principal-symbol difference is $O(\delta)$ and
+the connection difference is $O(\delta/\varrho)$, so
+\[
+ \|\varrho(\mathcal D_{g_p}-\mathcal D_{\sigma_p})\psi\|_2
+ \le C\delta(s)(\|\varrho\nabla\psi\|_2+\|\psi\|_2).
+\]
+The line twist adds Clifford multiplication by $a_p$,
+whose weighted norm tends to zero by
+\eqref{eq:critical-line-smallness}. Homothety of
+\eqref{eq:stenzel-spin-estimate} absorbs both errors,
+with constants independent of the individual cap scale.
+The parallel canonical form supplies the Dolbeault
+identification for each metric; it adds no further twist.
+Thus $\|\psi\|_2\le C\|\varrho\mathcal D_{F_p}\psi\|_2$
+for spinors supported in the actual cap.
+Apply this to $\chi_s v$, with $\chi_s=1$ inside radius
+$s$ and zero outside $2s$. The commutator is Clifford
+multiplication by $\dd\chi_s$, and
+$\varrho|\dd\chi_s|\le C$ on its shell.
+For a pure $(0,q)$-form,
+$\|\mathcal D_{F_p}v\|_2^2=2Q_{p,q}(v)$.
+Squaring proves \eqref{eq:dolbeault-cap}. The trivial line
+has no connection perturbation; the orthogonal split
+endomorphism decomposition proves its assertion.
+\end{proof}
+
+\subsection{The central harmonic space and the complementary gap}
+
+The cap estimate has the following compactness consequence.
+If $v_j$ is bounded in $L^2$ and $Q_{p_j,q}(v_j)\to0$,
+fixed-exterior Dirac estimates give local $H^1$ bounds.
+A subsequence converges strongly in local $L^2$ to a smooth
+formal harmonic form on $X_0^{\rm reg}$. Fatou's lemma
+makes the limit $L^2$. For fixed $s$, pass to the limit
+in the shell term of \eqref{eq:dolbeault-cap}; then let
+$s\downarrow0$. The shell norm of the central $L^2$ limit
+tends to zero, so no mass is lost at any node. Polarization
+preserves finite Gram matrices. For eigenforms with
+eigenvalue tending to zero, the second-order equation also
+gives smooth exterior convergence.
+
+To use this compactness, we identify the central formal
+harmonic space. The needed local primitive estimate is
+sensitive to the Ricci-flat density. Near a node put
+$s=|z|$ for the induced Euclidean radius on $Q(z)=0$ and
+$r\asymp s^{2/3}$ for the cone radius. For a line-valued
+$(0,1)$-form the bounded line metric and central conical
+asymptotics give
+\begin{equation}\label{eq:central-densities}
+ g_0\asymp s^{-2/3}g_E,
+ \qquad \dd V_{g_0}\asymp s^{-2}\dd V_E,
+ \qquad |\alpha|_{g_0,h_0}^2\dd V_{g_0}
+                \asymp s^{-4/3}|\alpha|_E^2\dd V_E.
+\end{equation}
+We claim that for fixed nested node neighbourhoods
+$U\Subset U'$ and a weakly closed $L^2(g_0,h_0)$ input,
+there is a primitive with
+\begin{equation}\label{eq:weighted-local-primitive}
+ \dbar f=\alpha\quad\text{on }U^{\rm reg},\qquad
+ \|r^{-1}f\|_{L^2(g_0,h_0;U)}
+                     \le C\|\alpha\|_{L^2(g_0,h_0;U')}.
+\end{equation}
+
+Here is the precise weighted application of the local
+Koppelman formula. In \cite[Theorem 1.3]{LR} take
+$n=3,d=2,\nu=1,p=2,q=1$. The input in
+\eqref{eq:central-densities} is Euclidean $L^2$.
+At this exponent the punctured maximal domain agrees
+with the whole-variety weak domain, as specified in the
+source's footnote 1. Its homotopy identity gives
+$\alpha=\dbar K\alpha$, with no degree-one projection
+term. The coefficient kernels in
+\cite[(3.1)--(3.2), Lemma 3.1 and (6.4)--(6.7)]{LR},
+with the singular density already included, are bounded by
+\[
+ C\frac{|z|^\gamma}{|\zeta|^\gamma|\zeta-z|^5},
+                              \qquad\gamma\in\{0,1\},
+\]
+against $\dd V_E$. The desired scalar output density is
+$s^{-10/3}|f|^2\dd V_E$. Conjugating input by
+$|\zeta|^{-2/3}$ and output by $|z|^{-5/3}$ reduces the
+estimate to $L^2(\dd V_E)$ boundedness of
+\[
+ T_\gamma(z,\zeta)
+   =|z|^{\gamma-5/3}|\zeta|^{2/3-\gamma}|\zeta-z|^{-5}.
+\]
+Use the Schur function $b(x)=|x|^{-2}$.
+The integral estimate \cite[Lemma 2.5]{LR} gives
+\[
+ \int_{U'}|\zeta|^{-a}|\zeta-z|^{-5}\,\dd V_E(\zeta)
+                  \le C|z|^{1-a},\qquad1<a<6.
+\]
+Taking $a=4/3+\gamma$ in one variable and
+$a=11/3-\gamma$ in the other proves
+\[
+ \int T_\gamma(z,\zeta)b(\zeta)\,\dd V_E(\zeta)\le Cb(z),
+ \qquad
+ \int T_\gamma(z,\zeta)b(z)\,\dd V_E(z)\le Cb(\zeta).
+\]
+All four exponents $4/3,7/3,11/3,8/3$ lie strictly
+between one and six. The Schur test and the homotopy
+identity prove \eqref{eq:weighted-local-primitive}.
+
+Let now $\alpha$ be a smooth formal harmonic $L^2$
+$(0,1)$-form on $X_0^{\rm reg}$ with values in
+$F_0=L_0^2$ or $L_0^{-2}$. Choose a cover with one
+small chart for each node and ordinary holomorphic
+charts elsewhere. Use \eqref{eq:weighted-local-primitive}
+on the node charts and the local Dolbeault lemma on the
+others. The differences of the local primitives are
+holomorphic on overlaps. They glue the trivial extensions
+on these charts to a locally free extension of $\OO_{X_0}$
+by $F_0$, hence define a class
+\begin{equation}\label{eq:central-cohomology-injection}
+ \Xi(\alpha)\in H^1(X_0,F_0).
+\end{equation}
+Each node lies in just its designated chart, so the
+overlap functions are defined away from the nodes and
+satisfy the cocycle identity there. A change of local
+primitive on a node chart extends holomorphically by
+normal Hartogs; changes of primitives or cover therefore
+give the same extension class. Coherent GAGA identifies
+the analytic cohomology with the algebraically computed
+one-dimensional group.
+
+The map \eqref{eq:central-cohomology-injection} is injective.
+Indeed, if the extension splits, subtract its local
+holomorphic splittings from the primitives. They glue to
+$f$ with $\dbar f=\alpha$ globally on the regular locus.
+The subtracted holomorphic functions are bounded on smaller
+node charts, and $r^{-1}$ is locally square integrable
+in conic dimension six. Thus $f/r\in L^2$ near each node
+by \eqref{eq:weighted-local-primitive}. For the global
+cutoff $\zeta_r$ used above,
+\[
+ \dbar(\zeta_r f)=\zeta_r\alpha+(\dbar\zeta_r)f
+                           \longrightarrow\alpha\quad\text{in }L^2.
+\]
+The second term tends to zero by absolute continuity of
+the integrals of $|f/r|^2$ on shrinking shells.
+Formal coclosedness, tested against the compactly supported
+$\zeta_r f$, now gives $\|\alpha\|_2^2=0$.
+By Proposition~\ref{prop:harmonic-masses}, the central
+space contains the nonzero form $\eta_0^\pm$.
+It consequently has dimension exactly one. This argument
+uses formal harmonic forms on the regular locus and does
+not presume an identification of central Laplacian domains.
+
+\begin{proposition}\label{prop:full-dolbeault-gap}
+The split endomorphism Dolbeault Laplacian has a uniform
+positive lower bound on the orthogonal complement of its
+harmonic kernel, in every degree $0\le q\le3$. Its complex
+harmonic dimensions in those degrees are $8,8,8,8$.
+\end{proposition}
+
+\begin{proof}
+If positive degree-one eigenvalues for $L_p^{\pm2}$ tended
+to zero, normalized eigenforms orthogonal to
+$\eta_p^\pm$ would, together with
+$\eta_p^\pm/\|\eta_p^\pm\|_2$, converge to two orthonormal
+central formal harmonic forms. The preceding compactness
+preserves both norms and their pairing. This contradicts
+the one-dimensional central space. The degree-zero gap is
+Proposition~\ref{prop:split-gap}.
+
+On each compact smooth fibre the Hodge--Serre operator is
+a conjugate-linear isometry from $F$-valued $(p,q)$-forms
+to $F^*$-valued $(3-p,3-q)$-forms and satisfies
+\[
+ \Delta''_{F^*}(\#v)=\#\Delta''_Fv;
+\]
+see \cite[Chapter VI, Section 3.1 and proof of Theorem 7.3]{Demailly}.
+For $p=0$ the parallel canonical form identifies its target
+with $(0,3-q)$-forms valued in $F^*$. The dual metric of
+$h_p^2$ is $h_p^{-2}$. Thus the degree-one gap for the
+dual line gives degree two, and degree zero gives degree
+three, including multiplicities. The harmonic dimensions
+for each nontrivial line are $0,1,1,0$.
+
+For the trivial line, the scalar and degree-one gaps
+follow from the Hodge input and $\Delta_d=2\Delta''$;
+$H^1(X_p;\CC)=0$. Hodge--Serre duality gives the remaining
+degrees. The harmonic dimensions are $1,0,0,1$.
+Finally
+\[
+ \End E^{\rm sp}_p
+ =(\OO\otimes\End\CC^2)^{\oplus2}
+ \oplus(L_p^2\otimes\End\CC^2)
+ \oplus(L_p^{-2}\otimes\End\CC^2)
+\]
+is an orthogonal parallel decomposition. Summing the
+dimensions gives $8,8,8,8$ and taking the minimum of the
+component gap constants proves the result.
+\end{proof}

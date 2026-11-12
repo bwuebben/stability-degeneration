@@ -1,0 +1,329 @@
+\section{The compact family and its period coordinates}\label{sec:geometry}
+
+\subsection{The central transition}
+
+Write $B_0=\PP^1_f\times\PP^1_g$, $L=\OO_{B_0}(1,-1)$, and
+use the quotient convention in \eqref{eq:ambient-intro}. Let
+$\xi_1,\xi_2$ be the two tautological divisor classes and put
+$k_i=g+\xi_i$. Each $k_i$ is globally generated, since the direct
+image of its line bundle is $\OO(0,1)\oplus\OO(1,0)$.
+If $[s_0:s_1],[t_0:t_1]$ are coordinates on $B_0$, the resulting
+map to $A=\PP^3\times\PP^3$ has local formula
+\begin{equation}\label{eq:central-map}
+ (x;y)=(v_1s;u_1t),\qquad
+ (x';y')=(v_2s;u_2t),
+\end{equation}
+where $(u_i,v_i)$ are the quotient coordinates. This formula respects
+the changes of trivialization of $L$, and pulls back $\OO_A(1,0)$
+and $\OO_A(0,1)$ to $k_1$ and $k_2$.
+
+Its image is the complete intersection
+\begin{equation}\label{eq:central-fourfold}
+ V_0=\{x_0x'_1-x_1x'_0=0,\quad
+         y_0y'_1-y_1y'_0=0\}\subset A.
+\end{equation}
+Indeed the two determinant equations specify the common directions
+$s,t$ whenever the corresponding pairs are nonzero. One direction is
+free exactly when both its pairs vanish; both cannot be free at the
+same point of $A$. The remaining scalars then reconstruct
+\eqref{eq:central-map}. This proves set-theoretic surjectivity and
+irreducibility of the image. The two equations form a regular sequence
+and are generically smooth, so their complete intersection is reduced
+and has the asserted scheme structure.
+
+The singular locus consists of the two disjoint lines
+\begin{equation}\label{eq:singular-lines}
+ \ell_x=\{x=x'=0,\ [y]=[y']\},\qquad
+ \ell_y=\{y=y'=0,\ [x]=[x']\}.
+\end{equation}
+Near $\ell_x$, use nonzero $y,y'$ coordinates and eliminate the
+second equation. The first is a $2\times2$ determinant in the four
+$x$ coordinates, with a free coordinate along the line. The same
+argument applies to $\ell_y$. Thus the transverse singularities are
+ordinary threefold nodes. The complete intersection is Cohen--Macaulay
+and regular in codimension one, hence normal.
+
+The exceptional loci of $Z\to V_0$ are the two sections
+$S_f,S_g\simeq B_0$ on which both quotients are respectively onto
+$\OO$ and onto $L$. Each contracts one ruling to its corresponding
+line. Their codimension in $Z$ is two, so the map is small.
+Adjunction and the projective-bundle formula give
+\begin{equation}\label{eq:central-canonical}
+ \omega_{V_0}=\OO_{V_0}(-2,-2),\qquad
+ -K_Z=4g+2\xi_1+2\xi_2=2k_1+2k_2.
+\end{equation}
+The contraction is therefore crepant. Normality gives
+$q_{Z*}\OO_Z=\OO_{V_0}$, and projection formula identifies its
+anticanonical section ring with that of the ample line bundle
+$\OO_{V_0}(2,2)$. In particular $V_0=\bar Z$ is the anticanonical
+model in the central construction.
+
+Choose a general anticanonical $Y\subset Z$, also nondegenerate for
+the toric polytope, and let $X_0$ be its image. The defining section
+of $\OO_{V_0}(2,2)$ lifts to $A$: the twisted two-equation Koszul
+resolution is
+\[
+ 0\longrightarrow\OO_A\longrightarrow\OO_A(1,1)^{\oplus2}
+      \longrightarrow I_{V_0}(2,2)\longrightarrow0,
+\]
+and its higher cohomology vanishes. Hence $X_0$ is also described
+by the two equations in \eqref{eq:central-fourfold} and one equation
+of bidegree $(2,2)$. Its section meets each line in
+\eqref{eq:singular-lines} in four simple points.
+
+The same multiplicities and the exceptional periods can be computed
+on $Z$. The normal bundles and anticanonical restrictions of the two
+sections are
+\begin{equation}\label{eq:section-normals}
+ N_{S_f/Z}=(L^{-1})^{\oplus2},\quad N_{S_g/Z}=L^{\oplus2},\qquad
+ (-K_Z)|_{S_f}=\OO(0,4),\quad
+ (-K_Z)|_{S_g}=\OO(4,0).
+\end{equation}
+The all-$\OO$ and all-$L$ summands of
+\[
+ \pi_*\OO_Z(-K_Z)=\OO(0,4)\otimes
+       \operatorname{Sym}^2(\OO\oplus L)\otimes
+       \operatorname{Sym}^2(\OO\oplus L)
+\]
+have independent coefficients. The restrictions are consequently the
+complete quartic systems. At a simple zero the normal derivative of
+the equation removes the trivial summand in the normal bundle of the
+contracted ruling. Each resulting curve has normal bundle
+$\OO(-1)\oplus\OO(-1)$ in $Y$.
+
+The global toric calculation in \cite[Appendix~A]{wuebben-chambers}
+gives $h^{1,1}(Y)=4$, $h^{2,1}(Y)=60$ and the spanning divisor
+classes $(f,g,\xi_1,\xi_2)$. Simple connectivity follows from the
+toric lattice-quotient calculation in \cite[Section~8]{wuebben-hodge}.
+We use these established global data. In these coordinates the two
+curve types have degrees
+\begin{equation}\label{eq:curve-types}
+ \Gamma_f=(1,0,0,0),\qquad \Gamma_g=(0,1,-1,-1).
+\end{equation}
+The contraction described above has no other exceptional locus. The
+polarization retained in this paper is
+\begin{equation}\label{eq:polarization}
+ \cL_0=\OO_{V_0}(2,2)|_{X_0},\qquad
+ H=c_1(q^*\cL_0)=(4g+2\xi_1+2\xi_2)|_Y.
+\end{equation}
+In particular it is not replaced by a multiple when an embedding is
+chosen below.
+
+\subsection{Local periods through a node}
+
+\begin{lemma}\label{lem:local-period}
+Let $Q(z)=z_1^2+\cdots+z_4^2$ and let $Q(z)=\tau(s)$ be a
+holomorphic family of ordinary double points. For a nowhere-zero
+relative dualizing form $\Omega$, the oriented local vanishing
+period is a single-valued holomorphic function
+$P(s)=\tau(s)u(s)$, with $u$ holomorphic and $u(0)\ne0$.
+\end{lemma}
+\begin{proof}
+Write
+\[
+ \Omega=a(z,s)\operatorname{Res}
+       \frac{\dd z_1\wedge\cdots\wedge\dd z_4}{Q(z)-\tau(s)},
+ \qquad a(0,0)\ne0,
+\]
+choosing a holomorphic ambient representative for $a$. For positive
+real $\tau$, the real vanishing sphere has radius $\sqrt\tau$.
+Scaling $z=\sqrt\tau\,y$ multiplies the residue form by $\tau$.
+With the radial residue orientation its integral is $\pi^2\tau$:
+the residue is $(2\sqrt\tau)^{-1}$ times the induced sphere volume,
+and the sphere volume is $2\pi^2\tau^{3/2}$.
+
+Expand $a$ in its convergent Taylor series in $z$. Odd homogeneous
+terms integrate to zero under the antipodal map of $S^3$, which
+preserves orientation. A term of degree $2k$ contributes $\tau^{k+1}$
+times a holomorphic function of the remaining parameters. Uniform
+convergence on a smaller coordinate and parameter domain therefore
+gives $P=\tau u$, with $u(0)=\pm\pi^2a(0,0)$. The two choices
+of square root give the same integral by the same antipodal symmetry.
+Analytic continuation is consequently single-valued, and the formula
+extends holomorphically across $\tau=0$.
+\end{proof}
+
+\subsection{The six-dimensional polarized smoothing}
+
+\begin{proposition}\label{prop:period-family}
+There is a proper flat family $\pi:\mathcal X\to B$ over a ball
+$B\subset R$ as in \eqref{eq:period-base-intro}, projective over
+$B$, whose central fibre is $X_0$. It has a relatively ample line
+bundle restricting to the exact $\cL_0$ and a nowhere-zero relative
+holomorphic three-form. Its total space is smooth. The local equations,
+oriented periods and bounded units satisfy
+\eqref{eq:node-unit-intro}. Its complete discriminant is
+$\bigcup_i\{p_i=0\}$; every smooth fibre is simply connected and
+has $b_2=2$.
+\end{proposition}
+\begin{proof}
+The central variety is Gorenstein Calabi--Yau, with rational local
+complete-intersection singularities. Rationality of the nodes and
+the Calabi--Yau resolution give
+$H^1(\OO_{X_0})=H^2(\OO_{X_0})=0$. Its singularities are Du~Bois
+and the projective resolution satisfies the
+$\partial\bar\partial$ lemma. Friedman's unobstructedness theorem
+\cite[Theorem~1.6]{friedman-unobstructed} therefore gives a smooth
+abstract deformation germ.
+
+Choose an integer $N$ such that $\cL_0^N$ is very ample and
+$H^1(\cL_0^N)=0$. Over a small Artin extension,
+$H^2(\OO_{X_0})=0$ lifts the embedding line bundle and
+$H^1(\cL_0^N)=0$ lifts its sections. The lifted morphism remains
+a closed immersion over the nilpotent thickening. Thus embedded
+deformations map formally smoothly to abstract deformations. The
+restricted Euler sequence expresses the same fact as
+$H^1(T_{\PP^M}|_{X_0})=0$. A neighbourhood $S$ of the central
+point in the Hilbert germ is smooth and its tangent map onto the
+abstract deformation tangent is surjective. Shrink it to retain
+integral fibres.
+
+The use of $\cL_0^N$ for this embedding does not change the prescribed
+polarization. After an étale neighbourhood, the universal family has
+a section through a smooth central point \cite[Tag~055S]{stacks}.
+The relative Picard scheme and its Poincaré bundle normalized along
+this section are available by
+\cite[Theorems~2.5(2), 4.8; Exercises~3.11, 4.3 and their solutions]
+{kleiman-picard}. Since $H^2(\OO_{X_0})=0$, the Picard morphism is
+smooth at $[\cL_0]$ \cite[Proposition~5.19]{kleiman-picard}.
+A further étale neighbourhood has a section through that point.
+Pulling back the normalized Poincaré bundle extends $\cL_0$ itself,
+and it is relatively ample after shrinking. Both base changes preserve
+the tangent image.
+
+The parametric holomorphic Morse lemma gives node functions
+$\tau_i:S\to\CC$. The local-to-global tangent calculation of
+Rollenske--Thomas \cite[Section~3, (3.2)]{rollenske-thomas} identifies
+the image of their joint differential, up to nonzero choices of local
+generators, with the kernel of the exceptional curve-class map. By
+\eqref{eq:curve-types} this kernel has dimension six and contains a
+vector with every coordinate nonzero. Each $\dd\tau_i(0)$ is therefore
+nonzero. The total space is smooth at the nodes and elsewhere near
+the central fibre. Properness permits a shrink making it smooth
+throughout.
+
+The flat family is Gorenstein. Its relative dualizing line bundle
+restricts to $\omega_{X_0}\simeq\OO_{X_0}$. Since
+$H^1(\omega_{X_0})=0$, cohomology and base change lifts a nonzero
+central generator to a relative section. Its zero set has proper
+image missing the origin. A further shrink gives a nowhere-zero
+relative form $\Omega$.
+
+We next determine the exact, rather than first-order, period relations.
+Delete disjoint node balls to obtain a common exterior $U$. Fixed
+collars and the proper submersion theorem with boundary identify its
+nearby exteriors, including parameters with some singular caps. The
+Thom and Mayer--Vietoris sequences give
+\begin{equation}\label{eq:attachment-geometry}
+ H^2(Y;\ZZ)\xrightarrow{r}\ZZ^8
+       \xrightarrow{\partial}H^3(X_s;\ZZ),\qquad
+ r(D)_i=D\cdot C_i,\quad
+ \partial e_i=\operatorname{PD}_L(\delta_i).
+\end{equation}
+Here $\operatorname{PD}_L$ uses the oriented Thom class of the
+vanishing sphere. To identify the maps, the exceptional curves have
+real codimension four, so restriction gives $H^2(Y)\simeq H^2(U)$.
+A resolution cap retracts to $S^2$, and restriction to its link records
+the curve degree. A smoothing cap retracts to $S^3$ and has no
+degree-two cohomology. Its boundary generator maps to the Thom dual
+of that zero section. These observations give exactness and the
+displayed maps.
+
+The restriction vectors of $f,g$ are the two block indicators
+$v_f,v_g$. Integral Poincaré duality therefore gives
+\begin{equation}\label{eq:integral-period-relations}
+ \sum_{i\in I_f}\delta_i=0,\qquad
+ \sum_{i\in I_g}\delta_i=0
+       \quad\hbox{in }H_3(X_s;\ZZ).
+\end{equation}
+The four divisor classes span rational $H^2(Y)$, so these span all
+rational relations. No assertion about saturation of the vanishing
+image is needed.
+
+Orient the local spheres compatibly with
+\eqref{eq:attachment-geometry}. Lemma~\ref{lem:local-period}
+gives holomorphic periods $P_i=\tau_i u_i$. On the smooth locus,
+\eqref{eq:integral-period-relations} gives
+$\sum_{I_f}P_i=\sum_{I_g}P_i=0$. The smooth locus is dense:
+the smooth base integrates a full-support smoothing tangent, or,
+equivalently, the finite union of the nontrivial hypersurfaces
+$\{\tau_i=0\}$ has empty interior. Holomorphic extension gives
+these identities on all of $S$.
+
+Consequently $P=(P_i)$ maps $S$ to $R$, and
+\[
+ \dd P(0)=\operatorname{diag}(u_i(0))\dd\tau(0)
+\]
+has rank six. The holomorphic submersion theorem gives a section
+$\sigma:B\to S$, with $\sigma(0)=0$ and $P\sigma=\mathrm{id}$.
+Pull back the compact family, polarization and relative form along
+$\sigma$. Lemma~\ref{lem:local-period} now gives
+$p_i=\tau_i(p)u_i(p)$. After shrinking the ball, all units are
+bounded above and away from zero.
+
+Properness excludes new singularities outside the chosen node charts.
+Inside chart $i$, the fibre is singular exactly when $\tau_i=0$,
+equivalently $p_i=0$. On that hyperplane
+$\dd\tau_i=u_i^{-1}\dd p_i\ne0$, since the coordinate functional
+$p_i$ is nonzero on $R$. The pulled-back total space is therefore
+smooth as well. The discriminant need not be a normal-crossings divisor
+at intersections of its hyperplanes.
+
+Finally the links $S^2\times S^3$ and both kinds of fillings are
+simply connected. Van Kampen identifies the fundamental group of a
+smooth fibre with that of $Y$, which is trivial. The exceptional
+curve map has rank two, so the surgery sequence gives
+$b_2(X_p)=b_2(Y)-2=2$. This proves all assertions.
+\end{proof}
+
+\subsection{Intersection data and permitted scales}
+
+The Chow relations and normalization are
+\[
+ f^2=g^2=0,\qquad \xi_i^2=(f-g)\xi_i,\qquad
+ \int_Zfg\xi_1\xi_2=1.
+\]
+Integrating $D_iD_j(-K_Z)^2$ gives
+\begin{equation}\label{eq:intersection-matrix}
+ B_{ij}:=\int_YD_iD_jH=
+ \begin{pmatrix}
+ 0&8&4&4\\8&0&12&12\\4&12&-8&0\\4&12&0&-8
+ \end{pmatrix},\qquad (D_i)=(f,g,\xi_1,\xi_2),
+ \qquad H^3=320.
+\end{equation}
+The kernel of restriction is spanned by
+$k_1=g+\xi_1$, $k_2=g+\xi_2$, and $H=2k_1+2k_2$.
+Relative to these surviving classes and the quotient lifts $f,g$,
+the intersection blocks are
+\begin{equation}\label{eq:intersection-blocks}
+ B_{KK}=\begin{pmatrix}16&24\\24&16\end{pmatrix},\quad
+ B_{DK}=\begin{pmatrix}12&12\\12&12\end{pmatrix},\quad
+ B_{DD}=\begin{pmatrix}0&8\\8&0\end{pmatrix}.
+\end{equation}
+The primitive Hodge pairing on the orthogonal quotient is consequently
+\begin{equation}\label{eq:mass-computation}
+ -B_{DD}+B_{DK}B_{KK}^{-1}B_{KD}
+       =\frac45\begin{pmatrix}9&-1\\-1&9\end{pmatrix}.
+\end{equation}
+The analytic identification of this pairing with the limiting quotient
+mass uses harmonic representatives and removal of all surviving
+classes. The intersection calculation itself introduces no chosen
+actual small eigenform.
+
+The two-parameter slice $(a,a,a,-3a;b,b,b,-3b)$ lies in $R$.
+Every pair of sufficiently small nonzero $a,b$ gives a smooth fibre,
+with no comparison condition on their magnitudes. Boundedness of the
+units gives
+\begin{equation}\label{eq:log-unit-control}
+ \bigl|\log|\tau_i(p)|-\log|p_i|\bigr|\le C.
+\end{equation}
+For $a=e^{-F(h)}$, $b=e^{-G(h)}$, where $F,G\to\infty$, this yields
+$w_f\sim8\pi/F$ and $w_g\sim8\pi/G$. It also explains why finite
+vanishing orders in one holomorphic arc behave differently: if
+$\tau_i(s)=c_i s^{\nu_i}+O(s^{\nu_i+1})$, then
+\[
+ \kappa_i(s)\sim\frac{2\pi}{\nu_i|\log|s||}.
+\]
+All such capacities have one logarithmic order. The exact divisibility
+$\tau_i=p_i/u_i$ is what permits the more separated paths without
+uncontrolled higher-order additive terms in their smallest coordinates.

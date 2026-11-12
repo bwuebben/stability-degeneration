@@ -1,0 +1,283 @@
+\section{A projected Hermitian--Einstein equation}
+\label{sec:projected-correction}
+
+Assume throughout this section that \(W\) is reduced. The factors
+\(L,M\) may still coincide. Let \(\Pi_a\) be the spectral projection
+onto the complete \(k\)-dimensional small space \(E_a\) from
+Proposition~\ref{prop:weak-spectrum}, and put \(Q_a=I-\Pi_a\).
+We decrease \(a_0\) so that the small eigenvalues are at most \(c/4\)
+and the complementary spectrum is at least \(c>0\).
+For an \(H_a\)-Hermitian trace-free section \(v\), define
+\begin{equation}\label{eq:centered-curvature}
+ \mathcal M_a(v)=e^{v/2}
+       \bigl(i\Lambda F_{H_ae^v}-\kappa I\bigr)e^{-v/2}.
+\end{equation}
+The conjugation is the fibre isometry from \(H_ae^v\) to \(H_a\);
+thus \(\mathcal M_a(v)\) is \(H_a\)-Hermitian and trace-free.
+It is not a holomorphic change of the bundle.
+
+\subsection{Scaled norms and the complementary inverse}
+
+Fix \(0<\alpha<1\) and a sufficiently small \(\eta>0\).
+On \(B(x,4\eta\rho_a(x))\), the weight \(\rho_a\) is comparable
+to \(\rho_a(x)\). Rescale this ball by \(\rho_a(x)^{-1}\).
+The rescaled base metrics are uniformly elliptic with bounded
+coefficients in every fixed smooth norm. There are also unitary
+frames with uniformly bounded scaled connection coefficients.
+On \(r\le C\sqrt a\), use the smooth normalized holomorphic
+frame, the dilation \(z=\sqrt a\,y\), and unitary normalization
+by \(H_a^{-1/2}\). The matrix and its inverse have uniformly
+bounded derivatives on each fixed enlarged \(y\)-ball.
+On \(r\ge\sqrt a\), use \eqref{eq:graded-unitary-map} and
+fixed unitary line frames. Their connection difference has
+derivatives \(O(a r^{-3-j})\) of order \(j\), by the explicit
+formulas in the proof of Proposition~\ref{prop:residual}.
+Rescaling by \(r\) gives the claimed bounds. The fixed exterior
+is uniformly smooth. These descriptions overlap; none uses
+the singular splitting at a point of \(\Sigma\).
+
+Let \(X_a\) be the supremum of the rescaled \(C^{2,\alpha}\)
+norms in these frames, including the global supremum norm.
+Let \(Y_a\) be the supremum of the rescaled \(C^{0,\alpha}\)
+norms of \(\rho_a(x)^2f\) on the same balls. Uniformly equivalent
+intrinsic norms are
+\begin{align}
+ \|v\|_{X_a}\asymp{}&
+ \|v\|_\infty+\sup_X\bigl(\rho_a|D_av|+
+                            \rho_a^2|D_a^2v|\bigr)
+ +\sup_x\rho_a(x)^{2+\alpha}
+       [D_a^2v]_{\alpha;B(x,\eta\rho_a(x))},
+                                                \label{eq:scaled-x}\\
+ \|f\|_{Y_a}\asymp{}&
+ \sup_X\rho_a^2|f|
+ +\sup_x\rho_a(x)^{2+\alpha}
+       [f]_{\alpha;B(x,\eta\rho_a(x))}.
+                                                \label{eq:scaled-y}
+\end{align}
+The Hölder differences can be taken after local parallel transport.
+For each fixed \(a>0\), these are ordinary Hölder spaces with
+equivalent norms. We do not differentiate a choice of charts
+when differentiating a section with respect to \(a\).
+Proposition~\ref{prop:residual} and four-dimensional integration give
+\begin{equation}\label{eq:source-norms}
+ \|\Phi_a\|_{Y_a}+\|\Phi_a\|_{4/3}\le Ca,\qquad
+ \|\rho_a^{-2}\|_1+\|\rho_a^{-2}\|_{4/3}\le C.
+\end{equation}
+In particular \(Y_a\) controls \(L^1\) and \(L^{4/3}\) uniformly.
+
+\begin{lemma}\label{lem:weighted-inverse}
+The low projection and complementary inverse satisfy
+\begin{align}
+ \|\Pi_af\|_{X_a}&\le C\|f\|_1,\qquad
+ \|\Pi_a\|_{X_a\to X_a}+\|\Pi_a\|_{Y_a\to Y_a}\le C,
+                                                    \label{eq:low-projection}\\
+ \|G_af\|_{X_a}&\le C\ell(a)\|f\|_{Y_a},\qquad
+ G_a=(\mathcal L_a|_{Q_a})^{-1}Q_a.
+                                                    \label{eq:log-inverse}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+For the rough connection operator, scalar heat domination gives
+\begin{equation}\label{eq:rough-heat-domination}
+ |e^{-t\mathcal L_a}f|(x)
+ \le e^{-t\Delta_0/2}|f|(x).
+\end{equation}
+One may obtain this by applying the maximum principle to a
+regularized norm; there is no curvature potential in
+\(\frac12D_a^*D_a\). The semigroup and kernel forms are also
+given in \cite[Theorem~2.13]{Guneysu12} and
+\cite[Theorem~8.8(b), Remark~8.9]{Guneysu11}, respectively.
+Complexification followed by restriction gives the real-bundle
+statement. On our fixed closed four-manifold the scalar kernel
+obeys
+\[
+ h_t(x,y)\le Ct^{-2}\exp\{-d(x,y)^2/(Ct)\},
+ \qquad 0<t\le1,
+\]
+by the compact specialization of \cite[Corollary~3.1]{LiYau86}.
+The factor \(1/2\) in \eqref{eq:rough-heat-domination} changes
+only constants.
+
+If \(e\) is an \(L^2\)-normalized low eigensection, evaluation
+at heat time one gives \(\|e\|_\infty\le C\).
+Uniform local estimates for its scaled elliptic equation
+give \(\|e\|_{X_a}\le C\). Expansion in an orthonormal
+basis of the fixed-dimensional space \(E_a\) proves
+\eqref{eq:low-projection}, using \eqref{eq:source-norms}
+and the boundedness of \(\rho_a\).
+
+We record the kernel bound needed for the weighted inverse.
+For \(0<t\le1\), the kernel of \(e^{-t\mathcal L_a}Q_a\)
+is the full kernel minus its \(k\) low terms, and hence has
+norm at most
+\[
+ Ct^{-2}\exp\{-d(x,y)^2/(Ct)\}+C.
+\]
+For \(t\ge1\), place a fixed positive-time smoothing factor at
+both ends of the complementary semigroup. Heat domination
+bounds their \(L^2\)-to-fibre norms, while the middle factor
+is bounded by \(Ce^{-ct}\) by the gap. Integration in time
+therefore yields the fibre operator-norm bound
+\begin{equation}\label{eq:green-kernel}
+ |G_a(x,y)|\le C(1+d(x,y)^{-2}),\qquad x\ne y.
+\end{equation}
+This is a bound in the current metrics, independent of any
+singular frame.
+
+The four-dimensional convolution estimate
+\begin{equation}\label{eq:log-convolution}
+ \sup_x\int_X\frac{1+d(x,y)^{-2}}{\rho_a(y)^2}\,\dd V_y
+ \le C\ell(a)
+\end{equation}
+now gives the supremum bound for \(G_af\).
+Here is a direct verification near a defect \(p\).
+If \(d(x,p)=O(\sqrt a)\), the contribution within distance
+\(O(\sqrt a)\) of \(p\) is bounded by rescaling, and the
+remaining radial integral is bounded by
+\(\int_{\sqrt a}^R r/(a+r^2)\,\dd r\).
+If \(R_x=d(x,p)\) is larger, the radius-\(R_x/2\)
+neighborhood of \(x\) has \(\rho_a^2\gtrsim a+R_x^2\)
+and bounded contribution. The radius-\(R_x/2\) ball about
+\(p\) contributes at most
+\[
+ CR_x^{-2}\int_0^{R_x/2}\frac{r^3}{a+r^2}\,\dd r\le C.
+\]
+The intervening comparable annulus away from \(x\) also
+contributes a constant. On \(r>2R_x\), \(d(x,y)\gtrsim r\)
+and the same logarithmic integral applies. The fixed
+exterior is uniformly integrable. Summing over the finitely
+many points proves \eqref{eq:log-convolution}.
+Finally, the uniform scaled Schauder estimate for
+\(\mathcal L_aG_af=Q_af\), together with
+\eqref{eq:low-projection}, upgrades the supremum estimate to
+\eqref{eq:log-inverse}.
+\end{proof}
+
+\subsection{Solving the projected equation}
+
+\begin{theorem}\label{thm:projected-correction}
+There are fixed \(K,a_0>0\) such that for \(0<a\le a_0\)
+there is a unique \(v_a\in Q_aX_a\) in the ball
+\(\|v_a\|_{X_a}\le Ka\ell(a)\) satisfying
+\begin{equation}\label{eq:projected-equation}
+ Q_a\mathcal M_a(v_a)=0.
+\end{equation}
+The metric \(\widehat H_a=H_ae^{v_a}\) is smooth and has
+the prescribed determinant. Moreover
+\begin{align}
+ \|v_a\|_{X_a}&\le Ca\ell(a),&
+ \|D_av_a\|_2&\le Ca,&
+ \|\Phi_{\widehat H_a}\|_\infty&\le Ca,
+                                                   \label{eq:corrected-bounds}\\
+ \widehat Z_a&\sim av_0,&
+ \widehat{\mathcal E}_a&=2\pi^2\sigma a^2+o(a^2).
+                                                   \label{eq:corrected-energy}
+\end{align}
+Uniqueness is asserted only in the indicated ball and slice.
+\end{theorem}
+
+\begin{proof}
+The exact finite metric-change formula is
+\[
+ F_{H_ae^v}=F_{H_a}
+   +\db_{\End V}\bigl(e^{-v}D'_a(e^v)\bigr).
+\]
+Differentiating \eqref{eq:centered-curvature} at zero gives
+\[
+ i\Lambda\db D'_av+\tfrac12[v,\Phi_a]
+ =\tfrac12\bigl((D'_a)^*D'_a+(D''_a)^*D''_a\bigr)v
+ =\mathcal L_av.
+\]
+This is the Kähler identity on endomorphism-valued zero-forms:
+the centering commutator cancels half the difference between
+the two Dolbeault Laplacians. See
+\cite[(3.2.39)--(3.2.41), (6.3.16)--(6.3.17)]{Kobayashi87}
+for the commutators and curvature variation.
+In particular the real linearization is valid even though
+\(\Phi_a\) is not central.
+
+Write
+\begin{equation}\label{eq:nonlinear-remainder}
+ \mathcal M_a(v)=\Phi_a+\mathcal L_av+N_a(v).
+\end{equation}
+On a fixed sufficiently small \(X_a\) ball, the finite
+change formula and the uniform scaled coefficients imply
+\begin{equation}\label{eq:quadratic-remainder}
+ \|N_a(v)-N_a(w)\|_{Y_a}
+ \le C(\|v\|_{X_a}+\|w\|_{X_a})\|v-w\|_{X_a}.
+\end{equation}
+Indeed, in a unit rescaled chart the centered curvature is
+a smooth matrix expression of order two with uniformly
+bounded coefficients. After subtracting its value and
+first derivative, every term contains at least two factors
+from \(v\) and its derivatives, and at most two total spatial
+derivatives. The \(C^{0,\alpha}\) product estimate proves
+\eqref{eq:quadratic-remainder}; multiplication by \(\rho_a^2\)
+converts physical curvature to that expression. Terms
+involving \(vD_a^2v\) are included in this estimate.
+
+On \(Q_aX_a\), equation~\eqref{eq:projected-equation} becomes
+\[
+ v=-G_a\bigl(\Phi_a+N_a(v)\bigr).
+\]
+By \eqref{eq:source-norms}, \eqref{eq:log-inverse} and
+\eqref{eq:quadratic-remainder}, its right side has norm at most
+\(C\ell(a)(a+\|v\|_{X_a}^2)\). Its Lipschitz constant
+on the radius-\(Ka\ell(a)\) ball is at most \(CKa\ell(a)^2\).
+Choose \(K\) larger than twice the linear bound and then
+decrease \(a_0\). The contraction theorem gives the claimed
+solution and local uniqueness. For fixed \(a\), the right
+side of the unprojected equation is a linear combination
+of smooth low eigensections. Its principal coefficients
+are a small perturbation of those of \(\mathcal L_a\).
+Quasilinear elliptic regularity makes \(v_a\) smooth.
+Hermitian symmetry gives positivity of \(H_ae^{v_a}\),
+and \(\tr v_a=0\) fixes its determinant.
+
+The remaining centered curvature is
+\[
+ \mathcal M_a(v_a)=\Pi_a\Phi_a+\Pi_aN_a(v_a).
+\]
+The \(L^1\)-to-\(X_a\) projection estimate gives its supremum
+norm at most \(C(a+a^2\ell(a)^2)\le Ca\). Centering preserves
+the fibre norm, so this proves the curvature estimate in
+\eqref{eq:corrected-bounds}.
+
+For the stronger gradient bound, pair the equation with
+\(v_a\). The \(L^{4/3}\) bound in \eqref{eq:source-norms},
+the same bound for the quadratic remainder, the uniform
+Sobolev inequality \eqref{eq:uniform-sobolev} and the
+complementary gap give
+\[
+ \mathfrak q_a(v_a,v_a)
+ \le\|\Phi_a+N_a(v_a)\|_{4/3}\|v_a\|_4
+ \le Ca\,\mathfrak q_a(v_a,v_a)^{1/2}.
+\]
+Here \(\|N_a(v_a)\|_{4/3}\le Ca^2\ell(a)^2\), and on
+\(Q_a\) the \(L^2\) term in the Sobolev estimate is controlled
+by \(\mathfrak q_a\). Thus \(\|D_av_a\|_2\le Ca\).
+
+The relative metric has supremum logarithm \(O(a\ell(a))\);
+hence \(\widehat Z_a/Z_a=1+O(a\ell(a))\). For the energy,
+the finite connection-change formula gives pointwise
+\[
+ |(D'_{\widehat H_a}-D'_{H_a})\iota|
+ \le C\sqrt{u_a}\,|D_av_a|.
+\]
+Since \(u_a\le a\), its \(L^2\) norm is \(O(a^{3/2})\).
+Also \(\|D'_{H_a\otimes h_L^{-1}}\iota\|_2=O(a)\).
+Comparing the squared norms and the two fibre metrics gives
+\[
+ |\widehat{\mathcal E}_a-\mathcal E_a|
+ \le Ca^{5/2}+Ca^3+Ca^3\ell(a)=o(a^2).
+\]
+The balanced identities \eqref{eq:balanced-static} now prove
+\eqref{eq:corrected-energy}.
+\end{proof}
+
+The correction uses the whole small spectral space, including all
+three directions when the line factors repeat. The remaining
+curvature is not yet identified with the derivative of the metric
+family. That identification requires estimates with respect to
+the parameter, which we prove next.

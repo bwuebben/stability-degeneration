@@ -1,0 +1,428 @@
+\section{The complete-intersection family and its bundles}
+\label{sec:geometry}
+
+We use the polarized conifold family of \cite[Section 2]{W_Hodge}.
+The construction below retains its period coordinates and its exact
+polarization. In particular, the bundle parameters will be independent
+of the parameters which smooth the nodes.
+
+\subsection{The compact family and the metric input}
+
+Put $\Sigma=\PP^1_f\times\PP^1_g$ and let
+\[
+ Z=\PP_\Sigma(\OO\oplus\OO(1,-1))
+       \times_\Sigma\PP_\Sigma(\OO\oplus\OO(1,-1)),
+ \qquad k_i=g+\xi_i,
+\]
+where the projective bundles parametrize one-dimensional quotients.
+A general anticanonical hypersurface $Y\subset Z$ has a small
+contraction $Y\to X_0$ with eight ordinary double points. Four
+exceptional curves have each of the two numerical types
+\[
+ (1,0,0,0),\qquad(0,1,-1,-1)
+\]
+in the divisor basis $(f,g,\xi_1,\xi_2)$. Write $I_f,I_g$ for the
+corresponding groups of nodes. The compact construction and its
+intersection data are given in \cite[Appendix A]{W_Toric}; the
+polarized smoothing is developed in \cite[Section 8]{W_HodgeRay}
+and \cite[Section 2]{W_Hodge}.
+
+Fix the resulting proper polarized family $\pi:\cX\to\mathcal B$,
+where $\mathcal B$ is a ball about zero in
+\begin{equation}\label{eq:period-base}
+ \left\{p\in\CC^8:\ \sum_{i\in I_f}p_i=0,
+                         \quad\sum_{i\in I_g}p_i=0\right\}.
+\end{equation}
+Its relative polarization is denoted by $\mathcal H$. The relative
+canonical bundle is trivial, and the local node equations are
+\begin{equation}\label{eq:node-functions}
+ z_1^2+z_2^2+z_3^2+z_4^2=\tau_i(p),\qquad
+ \tau_i(p)=p_i/u_i(p),
+\end{equation}
+where each $u_i$ is a nonvanishing holomorphic function. These
+identities are exact. The smooth locus is
+$\mathcal B^\circ=\{p\in\mathcal B:\prod_i p_i\ne0\}$.
+After shrinking the ball, all the units and their inverses are
+bounded. We permit every path $p\to0$ in $\mathcal B^\circ$;
+no ratio or phase condition is imposed on the $\tau_i$.
+
+Let $\omega_p$ be the actual Ricci-flat Kähler form in
+$c_1(\mathcal H_p)$ and let $g_p$ be its Riemannian metric.
+We recall explicitly the analytic input from
+\cite[Theorem 9.1 and Section 10]{W_Hodge}. There are conic radii
+$\varrho_p$, equal up to fixed constants to
+$(|z|^2+|\tau_i|)^{1/3}$ on the node charts and to one on a fixed
+exterior, and initial Kähler metrics $\widetilde g_p^R$ which are
+normalized Stenzel metrics on the inner charts. For fixed small
+$R>0$ and every fixed $k$, there are $\mu>\eta>0$ such that
+\begin{equation}\label{eq:ricci-flat-input}
+ \limsup_{\substack{p\to0\\p\in\mathcal B^\circ}}
+ \max_{j\le k}\sup_{X_p}\varrho_p^j
+ |\nabla^j(g_p-\widetilde g_p^R)|_{\widetilde g_p^R}
+       \le C_k R^{\mu-\eta}.
+\end{equation}
+The constants allow arbitrary independent node scales. On each
+fixed compact exterior, $g_p$ converges in every spatial derivative
+to the conically singular central Ricci-flat metric $g_0$.
+There is also a uniform positive scalar Poincaré constant.
+The latter follows either from the degree-one gap in the cited
+Hodge theorem, by applying $\dd$ to scalar eigenfunctions, or
+from the uniform diameter estimate proved below. These inputs
+concern spatial derivatives; no derivative in $p$ is used.
+The order in \eqref{eq:ricci-flat-input} is to fix $R$, take
+$p\to0$, and then decrease $R$.
+
+\subsection{A relative complete intersection}
+
+Let $\mathbf P=\PP^3\times\PP^3$. The globally generated classes
+$k_1,k_2$ define a morphism $q_Z:Z\to\mathbf P$.
+Writing $[s_0:s_1],[t_0:t_1]$ on $\Sigma$, its local expression is
+\[
+ (x;y)=(v_1s;u_1t),\qquad
+ (x';y')=(v_2s;u_2t).
+\]
+The quotient coordinates $(u_i,v_i)$ transform with the indicated
+line bundles. The image is the fourfold
+\begin{equation}\label{eq:ambient-central}
+ V_0=\{x_0x'_1-x_1x'_0=0,\quad
+                         y_0y'_1-y_1y'_0=0\}\subset\mathbf P.
+\end{equation}
+Indeed, each nonzero pair of $x$-vectors has a common direction
+$s$, and each nonzero pair of $y$-vectors a common direction $t$.
+A direction is free only if both corresponding vectors vanish;
+both cannot be free. The remaining scalars recover the two
+quotients. Thus the image is irreducible of dimension four.
+The two equations form a regular sequence and their intersection
+is generically smooth. A Cohen--Macaulay complete intersection
+has no embedded components, so this identifies the reduced scheme
+image as well.
+
+The singular locus consists of the disjoint lines
+\[
+ \ell_x=\{x=x'=0,\ [y]=[y']\},\qquad
+ \ell_y=\{y=y'=0,\ [x]=[x']\}.
+\]
+Near either line one determinant equation eliminates a smooth
+coordinate; the other is the ordinary threefold node transverse
+to the line. Hence $V_0$ is normal. The two exceptional surfaces
+of $q_Z$ have codimension two and are contracted along one ruling.
+Adjunction gives
+\[
+ K_{V_0}=\OO_{V_0}(-2,-2),\qquad
+ -K_Z=2k_1+2k_2=q_Z^*\OO_{V_0}(2,2).
+\]
+The proper birational map onto the normal image has
+$q_{Z*}\OO_Z=\OO_{V_0}$. Its anticanonical section ring is
+therefore the section ring of $\OO_{V_0}(2,2)$, so $V_0$ is
+exactly the anticanonical model in the compact construction.
+The chosen $X_0$ is cut out in $V_0$ by a section of this bundle.
+It lifts to a section $h_0$ on $\mathbf P$, because the Koszul
+sequence
+\[
+ 0\longrightarrow\OO_{\mathbf P}\longrightarrow
+ \OO_{\mathbf P}(1,1)^{\oplus2}\longrightarrow
+ I_{V_0}(2,2)\longrightarrow0
+\]
+has no higher cohomology in its first two terms.
+The restriction of $h_0$ to either singular line has degree four
+and four simple zeros. These are the original eight labelled nodes.
+
+\begin{proposition}\label{prop:relative-cicy}
+After shrinking $\mathcal B$, the given family admits a relative
+closed embedding into $\mathbf P\times\mathcal B$ as a complete
+intersection of bidegrees $(1,1),(1,1),(2,2)$. It identifies
+$\mathcal H$ with $\OO_{\mathbf P}(2,2)|_{\cX}$.
+The first two equations define a proper flat family
+$\cV\to\mathcal B$ of normal integral Gorenstein fourfolds,
+and $\cX\subset\cV$ is a relative anticanonical Cartier divisor.
+\end{proposition}
+
+\begin{proof}
+The three-equation Koszul resolution gives
+$H^1(X_0,\OO)=H^2(X_0,\OO)=0$. For
+$M_{1,0}=\OO_{X_0}(1,0)$, the noninitial terms of that resolution
+are
+\[
+ \OO(0,-1)^{\oplus2}\oplus\OO(-1,-2),\qquad
+ \OO(-1,-2)\oplus\OO(-2,-3)^{\oplus2},\qquad
+ \OO(-3,-4).
+\]
+They are acyclic on $\mathbf P$. Thus $h^0(M_{1,0})=4$ and
+its higher cohomology vanishes; the same is true of
+$M_{2,0}=\OO_{X_0}(0,1)$.
+
+The family $\cX$ is the analytic pullback of a projective family
+over a smooth algebraic Hilbert neighbourhood. The relative
+Picard space is smooth near either class because $H^2(\OO)=0$,
+and étale there because $H^1(\OO)=0$. After an étale
+neighbourhood, a section through a smooth central point and a
+normalized Poincaré bundle give the exact extensions
+$\mathcal M_1,\mathcal M_2$; see
+\cite[Theorems 2.5(2), 4.8 and Proposition 5.19]{Kleiman}.
+The analytic map from $\mathcal B$ lifts by local inversion of
+the étale map. Consequently neither the period coordinates nor
+the functions \eqref{eq:node-functions} change.
+
+Cohomology and base change extend the four generating sections
+of each $M_{i,0}$ to frames of $\pi_*\mathcal M_i$.
+Their evaluation maps remain surjective, by Nakayama's lemma
+and properness. They give a map $\iota:\cX\to\mathbf P\times\mathcal B$.
+The same Koszul calculation gives, with no higher cohomology,
+\begin{equation}\label{eq:positive-twist-dimensions}
+ h^0(\OO_{X_0}(1,1))=16-2=14,\qquad
+ h^0(\OO_{X_0}(2,2))=100-32-1+1=68.
+\end{equation}
+For $(1,1)$ only the terms $\OO(1,1)$ and $\OO^{\oplus2}$
+have ambient cohomology. For $(2,2)$ they are
+$\OO(2,2)$, $\OO(1,1)^{\oplus2}\oplus\OO$, and $\OO$.
+Their degree-zero complex is exact in negative total degree,
+which proves the assertions rather than only their Euler characteristics.
+The sixteen product sections span the first space in
+\eqref{eq:positive-twist-dimensions}. This spanning persists
+near zero, as does very ampleness of $\mathcal M_1\otimes\mathcal M_2$.
+The composite of $\iota$ with the Segre embedding is consequently
+a closed immersion, so $\iota$ is one as well.
+
+If $I$ is its relative ideal, the bundles of sections of
+$I(1,1)$ and $I(2,2)$ have ranks two and thirty-two. Lift the
+two central determinants as a frame of the former and $h_0$
+as a section of the latter. These three equations generate $I$:
+the ideal is flat over the base, its restriction to $X_0$ is
+the central ideal, and the cokernel of the three generators
+vanishes there. Nakayama and properness again remove its support.
+
+Work first on a neighbourhood $\mathcal T$ of the central triple
+in the affine coefficient space. The regular-sequence property,
+normal integrality of the fourfold, and the nonzerodivisor
+property of the last equation are open there. The universal
+Koszul resolutions give flatness. Pulling back by the
+holomorphic coefficient map $\mathcal B\to\mathcal T$ produces
+precisely $\cV$ and $\cX$, with the asserted dualizing bundles
+by adjunction. Finally $\mathcal M_1^2\mathcal M_2^2$ and
+$\mathcal H$ have the same central class. Their sections of the
+étale relative Picard space agree near zero. Their quotient is
+pulled back from the base and is trivial after normalization
+along the chosen section. This proves the exact polarization
+identity.
+\end{proof}
+
+\subsection{Cohomology and effective bundle deformations}
+
+Put $L=\OO_V(1,-1)$ on any fourfold fibre of $\cV$ and set
+\[
+ \begin{aligned}
+ E^{\rm sp}&=L\otimes\CC^m\ \oplus\ L^{-1}\otimes\CC^n,\\
+ W_{m,n}&=\Hom(\CC^n,\CC^m)\oplus\Hom(\CC^m,\CC^n),\\
+ G_{m,n}&=\GL_m(\CC)\times\GL_n(\CC).
+ \end{aligned}
+\]
+The superscript denotes the split bundle. The same symbols
+will denote its restriction to $X\subset V$.
+
+\begin{proposition}\label{prop:effective-bundles}
+The split family has an effective holomorphic miniversal
+bundle deformation over $\mathcal B\times(W_{m,n},0)$, with
+independent base and bundle parameters. Its local equivariant
+germ has action
+\begin{equation}\label{eq:two-arrow-action}
+ (g,h)\cdot(A,B)=(gAh^{-1},hBg^{-1}).
+\end{equation}
+On $V$, its Ext groups in degrees zero and one are
+$\mathfrak{gl}_m\oplus\mathfrak{gl}_n$ and $W_{m,n}$,
+and all higher Ext groups vanish. Restriction to $X$ induces
+an equivalence of formal local bundle-deformation groupoids.
+On $X$ the Ext groups in degrees two and three are respectively
+$W_{m,n}^*$ and $(\mathfrak{gl}_m\oplus\mathfrak{gl}_n)^*$,
+but all local obstruction equations vanish.
+\end{proposition}
+
+\begin{proof}
+The ambient Koszul resolution for $L^2$ is
+\begin{equation}\label{eq:line-koszul}
+ 0\longrightarrow\OO_{\mathbf P}(0,-4)
+ \longrightarrow\OO_{\mathbf P}(1,-3)^{\oplus2}
+ \longrightarrow\OO_{\mathbf P}(2,-2)
+ \longrightarrow\OO_V(2,-2)\longrightarrow0.
+\end{equation}
+Its only nonzero ambient cohomology is
+$H^3(\OO_{\mathbf P}(0,-4))=\CC$, in Koszul degree $-2$.
+Thus $H^1(V,L^2)=\CC$ and all other groups vanish.
+Interchanging the factors proves the same assertion for
+$L^{-2}$. The structure-sheaf resolution gives
+$H^0(V,\OO)=\CC$ and $H^{>0}(V,\OO)=0$.
+These calculations hold on the singular fibres as well.
+The universal Koszul complexes on $\mathbf P\times\mathcal T$
+have the same single nonzero cohomology terms, so the assertions
+commute with base change. Choosing generators of
+$H^3(\PP^3,\OO(-4))$ fixes algebraic frames $e_+,e_-$
+for the two relative $H^1$ line bundles.
+
+Since $E^{\rm sp}$ is locally free, its global Ext groups are
+the cohomology of
+\[
+ F=\End E^{\rm sp}
+ =\OO\otimes(\mathfrak{gl}_m\oplus\mathfrak{gl}_n)
+ \oplus L^2\otimes\Hom(\CC^n,\CC^m)
+ \oplus L^{-2}\otimes\Hom(\CC^m,\CC^n).
+\]
+This proves the ambient groups and the action
+\eqref{eq:two-arrow-action}. Serre duality on the proper
+Gorenstein fourfold, applied to the locally free self-dual
+$F$, gives $H^i(F\otimes K_V)=H^{4-i}(F)^*$.
+The sequence
+\begin{equation}\label{eq:anticanonical-restriction}
+ 0\longrightarrow F\otimes K_V\longrightarrow F
+           \longrightarrow F|_X\longrightarrow0
+\end{equation}
+therefore identifies Ext in degrees zero and one under
+restriction and gives the stated groups in degrees two and three.
+
+For effectivity, use the vector-bundle locus in the algebraic
+stack of flat coherent sheaves on the projective flat family
+$V_{\mathcal T}\to\mathcal T$. Its algebraicity, affine
+finitely presented diagonal and relative deformation theory
+are supplied by \cite[Tags 09DS, 0DLY, 0DLZ, 08VW and 08WA]{Stacks}.
+The relative obstruction to a lift over a small Artin extension
+with kernel $J$ is $\Ext^2_V(E^{\rm sp},E^{\rm sp})\otimes J=0$.
+This remains the obstruction group when $V$ itself varies.
+One can see it directly by lifting transition matrices on an
+affine cover: the defect on triple overlaps is an
+$\End E^{\rm sp}$-valued Čech two-cocycle. Its vanishing class
+permits a correction, differences of lifts form the Ext-one
+torsor, and infinitesimal automorphisms are Ext-zero.
+Locally lifted free modules remain free.
+
+There is an actual smooth framed atlas for this assertion.
+Choose $k$ so that $E^{\rm sp}(k,k)$ is generated and has no
+higher cohomology, and put $N=h^0(E^{\rm sp}(k,k))$.
+The open relative Quot space of locally free quotients
+$\OO_V(-k,-k)^N\to E$ inducing a frame of $H^0(E(k,k))$
+carries a universal bundle. It is a $\GL_N$ framing atlas for
+the bundle stack. If $K$ is the presentation kernel, the Ext
+sequence gives $\Ext^1(K,E^{\rm sp})=\Ext^2(E^{\rm sp},E^{\rm sp})=0$.
+The Quot obstruction theorem and finite-presentation lifting
+criterion therefore make the atlas smooth over $\mathcal T$;
+see \cite[Tags 09TU, 0CZU and 02H6]{Stacks}. Local freeness
+on the total family follows from the flat-module criterion
+\cite[Tag 00MH]{Stacks} and properness. Choose frames along
+the split section. The tangent sequence there is
+\[
+ 0\longrightarrow\Ext^0(E^{\rm sp},E^{\rm sp})
+ \longrightarrow\mathfrak{gl}_N
+ \longrightarrow T_{Q/\mathcal T}
+ \longrightarrow\Ext^1(E^{\rm sp},E^{\rm sp})
+ \longrightarrow0.
+\]
+A holomorphic transversal to the frame orbit through that
+section, in relative smooth coordinates, has exactly the
+$2mn$ parameters of $W_{m,n}$. Pullback of the universal
+bundle gives the required effective family before any
+formal convergence question arises.
+
+To check restriction at every Artin order, suppose an ambient
+lift has been chosen over an Artin algebra and a specified
+$X$-lift exists over a small extension. First lift the ambient
+bundle, using the vanishing Ext-two. The difference of its
+restriction from the specified lift lies in Ext-one on $X$;
+\eqref{eq:anticanonical-restriction} lifts this difference
+uniquely to Ext-one on $V$. Modifying by it gives the desired
+lift. For two such bundles the Hom restriction sequence has
+$H^0(\Hom(-X))=H^1(\Hom(-X))=0$ at the split point.
+The vanishings persist through Artin thickenings, by induction
+on a small extension. Thus restriction also identifies all
+Hom spaces and isomorphisms, including their prescribed
+reductions. This proves the equivalence of formal groupoids.
+
+In particular a minimal hull on $X$ has the form
+$\CC[[z_1,\ldots,z_{2mn}]]/J$ with $J$ in the square of the
+maximal ideal. The effective ambient family gives a map from
+this hull to a power-series ring in $2mn$ variables with
+invertible linear term. The induced endomorphism of the
+power-series ring is an automorphism, so $J=0$.
+The nonzero Ext-two group is therefore an obstruction space
+with zero obstruction map. The same lifting argument,
+finite presentation and semicontinuity make the restriction
+morphism of bundle stacks étale near these points.
+
+It remains to obtain the asserted equivariant germ rather
+than only a transversal. On a finite-type neighbourhood,
+the bundle stack is smooth over the smooth coefficient space
+$\mathcal T$, has affine diagonal, and has reductive stabilizer
+$G_{m,n}$ at the split point. That finite-type point is locally
+closed; restrict to an open in which it is closed, as in
+\cite[proof of Theorem 1.1]{AHR}. The relative étale slice
+\cite[Theorem 2.1 and Remark 2.3]{dCFI} gives a commuting
+étale roof to
+\[
+ [\,W_{m,n}\oplus T_0\mathcal T\,/G_{m,n}]
+                      \longrightarrow T_0\mathcal T.
+\]
+The action on the second summand is trivial. The arrows toward
+the normal quotients are strongly étale; the arrow toward
+the bundle stack can be affine and hence representable.
+All these are effective algebraic charts.
+
+The given split section defines $\mathcal T\times BG_{m,n}$
+in the bundle stack. Pull back the representable étale chart
+along it. The branch through the marked point is analytically
+invertible after shrinking $\mathcal T$. The connected group
+$G_{m,n}$ fixes this discrete étale branch, so it descends
+and lifts the entire split section. Trivialize its torsor
+locally. Strong étaleness preserves its full stabilizer;
+its $W_{m,n}$-coordinate is therefore fixed by $G_{m,n}$.
+But $W_{m,n}^{G_{m,n}}=0$, because $(tI_m,I_n)$ has weights
+$1,-1$ on the two summands. Thus the lifted section is exactly
+the zero section. Base change of the strongly étale arrow
+to $W_{m,n}\oplus T_0\mathcal T$ and local inversion give a
+$G_{m,n}$-equivariant inverse germ, by uniqueness of the
+branch. Pull back its actual bundle and then the fixed map
+$\mathcal B\to\mathcal T$. Restriction to $X$ preserves
+this germ by the étale equivalence just proved.
+\end{proof}
+
+Equivariance here is a statement about germs: for a fixed
+$g\in G_{m,n}$ the equality holds wherever its two local
+representatives are defined. It does not require a bounded
+parameter ball invariant under the whole complex group.
+We shall choose a common small ball invariant under the
+compact group $U(m)\times U(n)$.
+
+\subsection{The rank-four family and its characteristic classes}
+
+From now on $m=n=2$. Put $D=c_1(L|_X)$ and
+$H=c_1(\mathcal H|_X)$. If $a,b$ are the two ambient hyperplane
+classes, then $[X]=2(a+b)^3$ in $\mathbf P$ and
+$\int_{\mathbf P}a^3b^3=1$. Consequently
+\[
+ a^3=b^3=2,\qquad a^2b=ab^2=6,
+ \qquad D=a-b,\quad H=2a+2b,
+\]
+and
+\begin{equation}\label{eq:chern-numbers}
+ H^3=320,\qquad DH^2=0,\qquad D^2H=-16,
+ \qquad V:=\Vol(X_p,g_p)=\frac{160}{3}.
+\end{equation}
+The rank-four family $\cE_{p,z}$, $z=(A,B)\in
+W:=\End(\CC^2)\oplus\End(\CC^2)$, has
+\begin{equation}\label{eq:bundle-chern}
+ \det\cE_{p,z}=\OO,\qquad c_2(\cE_{p,z})=-2D^2,
+ \qquad c_3(\cE_{p,z})=0,\qquad c_2(\cE_{p,z})H=32.
+\end{equation}
+The Chern identities follow from $(1+D)^2(1-D)^2$ and
+constancy in the deformation family. For the determinant
+itself, $H^1(V,\OO)=0$ makes the relative Picard discrete
+near the trivial bundle. Its class stays trivial and its
+remaining base line bundle is trivialized locally.
+This supplies a determinant trivialization for the family.
+
+The lines $L,L^{-1}$ have zero slope and are distinct,
+since $D^2H\ne0$. Thus $E^{\rm sp}_p$ is slope polystable
+with these two stable types and multiplicity two each.
+Interchanging the ambient factors in the Koszul Euler
+characteristic shows that the two lines have equal Hilbert
+polynomials. The split bundle is also Gieseker polystable,
+on the central fibre as well as nearby fibres. The nonzero
+pairing in \eqref{eq:bundle-chern} excludes a flat connection.
+Every sufficiently small matrix parameter describes an
+actual integrable bundle; its stability and its
+Hermitian--Einstein metrics will be determined below.

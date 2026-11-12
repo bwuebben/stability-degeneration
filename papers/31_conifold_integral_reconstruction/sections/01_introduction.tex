@@ -1,0 +1,282 @@
+\section{Introduction}
+\label{sec:introduction}
+
+A conifold transition relates exceptional curves on a small
+resolution to vanishing three-spheres on a smoothing.
+The relations among those spheres need not determine their
+integral placement in middle homology. That placement enters
+the integral monodromy representation and the saturation
+of the vanishing-cycle lattice. We recover it from geometrically
+represented period observations on a compact family of
+Calabi--Yau threefolds.
+
+The family consists of complete intersections of bidegrees
+$(1,1)$, $(1,1)$ and $(2,2)$ in
+$\PP^3\times\PP^3$, with polarization $\OO(2,2)$.
+Its central fibre has eight ordinary double points, divided
+into two groups $I_f,I_g$ of four. The projective small
+resolution has second Betti number four; smooth fibres
+have second Betti number two and free middle homology
+of rank $134$. Orient the local vanishing spheres
+$\delta_i$ so that their only integral relations are
+\begin{equation}\label{eq:intro-relations}
+ \sum_{i\in I_f}\delta_i=0,\qquad
+ \sum_{i\in I_g}\delta_i=0.
+\end{equation}
+These two relations are supplied as geometric data.
+The unknown is the marked inclusion of their rank-six
+span in middle homology.
+
+\subsection{The principal result}
+
+Let
+\[
+ R=\{p\in\CC^8:\ \sum_{i\in I_f}p_i=
+                       \sum_{i\in I_g}p_i=0\}.
+\]
+The relative residue form is denoted by $\Psi$.
+An evaluation name for a parameter supplies rational
+complex approximations to any requested absolute error.
+This is the meaning of access to an arbitrary complex
+parameter below; computable parameters give ordinary
+algorithms.
+
+\begin{theorem}\label{thm:main-reconstruction}
+There is a terminating selection of algebraic central
+coefficients and six algebraic coefficient directions
+with the following properties.
+One can construct a rational-radius ball $B_{\rm ev}\subset R$
+and a holomorphic coefficient section defining a flat
+projective family $X_p$ with
+\[
+ \int_{\delta_i}\Psi_p=p_i,\qquad
+ B_{\rm ev}^{\circ}
+       =B_{\rm ev}\setminus\bigcup_i\{p_i=0\}.
+\]
+This is exactly its smooth-fibre locus.
+The coefficient section, local normal forms and residue
+units admit evaluation and bounded derivatives of every
+prescribed finite order on specified smaller domains.
+
+For every named $p\in B_{\rm ev}^{\circ}$, a terminating
+procedure constructs a geometric symplectic marking
+$\gamma_1,\ldots,\gamma_{134}$ and recovers
+\[
+ D:\ZZ^8\longrightarrow H_3(X_p;\ZZ),\qquad
+                        D e_i=\delta_i .
+\]
+It returns the marked columns, their integral image and
+saturation, the quotient group including torsion, and
+the individual monodromy matrices. The latter determine
+the homology action of every loop in $B_{\rm ev}^{\circ}$.
+The observations are the eight local periods and the
+$1072$ complex jumps of the marked periods around
+represented individual node meridians.
+Their absolute enclosures are constructed and refined
+until a strict integer-separation test succeeds.
+Neither the coordinates of the vanishing spheres nor
+the homology coordinates of transported endpoints are
+inputs to this forward calculation.
+\end{theorem}
+
+The proof occupies Sections~\ref{sec:algebraic-family}--%
+\ref{sec:integral-recovery}; its final assembly is
+Theorem~\ref{thm:integral-reconstruction}.
+There is no a priori bound on the integer entries and
+no comparison condition among the nonzero $p_i$.
+Termination is pointwise in the smooth parameter.
+The result does not give a practical running-time
+bound near the discriminant. In particular, we do not
+claim numerical values for the selected coefficients,
+the attachment matrix or its Smith invariants.
+
+The finite inverse step has a simple form. If
+$\delta_i=\sum_b(d_i)_b\gamma_b$ and
+$J_{ab}=\langle\gamma_a,\gamma_b\rangle$, a positive
+individual meridian gives
+\begin{equation}\label{eq:intro-period-jump}
+ \Delta_{ai}
+   =\int_{(F_i)_\#\gamma_a}\Psi_p-\int_{\gamma_a}\Psi_p
+   =p_i(Jd_i)_a .
+\end{equation}
+Thus one holomorphic form suffices for these rank-one
+variations; its full period functional need not be
+injective on integral homology. Unimodularity of $J$
+recovers $d_i$ from the integers $(Jd_i)_a$.
+The substantive construction is the forward access
+to \eqref{eq:intro-period-jump}, with valid absolute
+errors and without knowing those integers.
+
+\subsection{Geometric construction and error control}
+
+We first select an algebraic member of the toric
+eight-node construction by finite ideal and
+nonvanishing tests. Algebraic jets at the nodes give
+the rank-six derivative of its period map and a
+transverse coefficient slice. Quantitative implicit
+functions, Morse coordinates and an explicitly
+integrated residue expansion then give an inverse
+period section on a known neighbourhood.
+The analytic estimates include bounds on a larger
+complex domain, so that differentiation and
+integration retain controlled errors.
+
+An algebraic smooth reference fibre provides the
+integral marking. Semialgebraic triangulation
+constructs its chain complex and integral homology.
+Face-compatible smoothing gives actual finite
+piecewise smooth representatives, with first and
+second derivative bounds. Equation-based horizontal
+transport moves these representatives to the target
+and around each individual meridian. The first-jet
+equation controls the transported tangent vectors,
+and quadrature of the pulled-back residue form gives
+absolute enclosures for the period differences.
+The process never resolves an endpoint in the
+original homology basis before integration.
+
+The denominator $p_i$ may be arbitrarily small.
+Lemma~\ref{lem:integer-separation} bounds the unknown
+integer height from the observed numerator and
+denominator enclosures, then tests whether the ratio
+error is strictly below $1/2$. Refinement eventually
+succeeds at every smooth target.
+The same calculation gives a sufficient output
+precision depending on the local period and true
+integer height. The latter enters the explanatory
+bound, not the adaptive input.
+
+\subsection{The analytic results on the same fibres}
+
+The spectral restriction map and the recovered
+attachment map belong to one exact sequence.
+Writing $V_{\rm lost}$ for the two-dimensional
+quotient of divisor classes by the surviving
+classes, the curve restriction map is
+\[
+ \mathsf r:V_{\rm lost}\longrightarrow\RR^8,\qquad
+ \mathsf r(x_f,x_g)=x_fv_f+x_gv_g,\qquad
+                    \im\mathsf r=\ker(D\otimes\RR).
+\]
+For the actual Ricci-flat metric, the weak two-form
+energy is the capacity-weighted norm of this map.
+The marked image of $D$ contains additional integral
+information which that real quadratic form does not
+determine.
+
+The actual-metric results of \cite{W_Hodge,W_HYM}
+were established using central geometric and elliptic
+data. Their application to the algebraically selected
+member requires checking the hypotheses anew.
+Section~\ref{sec:analytic-family} does so, constructing
+the central analytic data at that member and taking
+a smaller full ball $B_{\rm an}\subset B_{\rm ev}$.
+This radius need not be computed. The observation
+procedure remains available on $B_{\rm ev}^{\circ}$,
+so its paths need not stay inside the analytic ball.
+
+Theorem~\ref{thm:integrated} states the resulting
+same-family conclusion. Besides the complete weak
+Hodge spectrum, these fibres carry locally free
+rank-four bundles with determinant $\OO$ and
+$c_2H=32$, a full two-arrow deformation germ,
+and actual HE metrics on its polystable locus.
+The metric flow varies a Hermitian metric on one
+fixed holomorphic bundle. Its finite-dimensional
+invariant manifold is parametrized by seven real
+Hermitian block-matrix coordinates, with a spatial
+correction orthogonal to those constant sections.
+The bundle spectral observer is simply the split
+$L^2$ projection onto these block-matrix coordinates.
+At an HE metric, the tangent space of the invariant
+manifold is the entire low eigenspace of the
+endomorphism Laplacian, and this projection is
+inverse to the tangent parametrization.
+
+In the same coordinates, the Hessian of twice the
+Donaldson functional restricted to the invariant
+manifold is relatively equivalent to the finite
+commutator energy, including its exact kernel and
+arbitrarily small positive rates. The commutator
+energy is the squared norm of the infinitesimal
+unitary action on the bundle extension parameters.
+When the holomorphic bundle varies, these action
+vectors are precisely the deformation directions
+generated by constant unitary gauge. Minimizing
+the deformation norm over these directions and
+the complementary spatial gauge directions gives
+the harmonic metric on bundle moduli.
+Thus the shared action identifies the finite
+energy and the quotient directions, while the
+metric on the fixed-bundle flow manifold remains
+distinct from the metric on varying bundles.
+
+The period construction is unchanged by these
+fixed-base bundle operations. This compatibility
+does not derive integral topology from the bundle
+spectrum or finite evolution: the represented
+middle cycles and their period observations remain
+separate data. The relation $\tau_i=p_i/U_i$,
+with bounded nonzero residue units $U_i$, connects
+the Hodge capacities to the sufficient inverse
+precision. Required absolute period tolerances can
+be exponentially small in inverse capacity.
+
+\subsection{Relation to previous work}
+
+The Picard--Lefschetz formula and its integral
+topological interpretation are classical
+\cite[Expos\'e~XIV]{Deligne}. Effective recovery of
+homological monodromy from continued periods is
+already an explicit part of Lairez, Pichon-Pharabod
+and Vanhove \cite[\S3.5.2, equation~(38), arXiv-v2
+text]{LPPV}. Their work develops effective homology
+and periods for projective hypersurfaces and includes
+topological results for complete intersections in
+projective space. A product-ambient complete
+intersection does not become such a complete
+intersection merely by the Segre embedding.
+We do not claim the rank-one inversion in
+\eqref{eq:intro-period-jump} as a new method.
+
+Sert\"oz \cite[\S\S1.3,1.6]{Sertoz} gives rigorous
+period continuation for hypersurfaces and distinguishes
+transported homology bases from tracking actual
+representatives. Our construction supplies represented
+cycles and controlled transport for the present
+period-coordinate family, including its generally
+transcendental coefficient section.
+Lairez--Sert\"oz \cite[Theorem~17]{LairezSertoz}
+instead give an arithmetic separation theorem for
+periods of algebraic quartic surfaces. Here the
+quantity to separate is an integer multiple of
+one nonzero local period with a measured denominator;
+the stopping argument is elementary once its
+geometric enclosures have been established.
+
+Vanishing-period coordinates and logarithmic
+variation in Calabi--Yau conifold transitions are
+studied by Lee, Lin and Wang
+\cite[\S3.3 and Proposition~3.16]{LLW}.
+We require, in addition, coefficient selection,
+a known inverse neighbourhood, a geometric integral
+marking and absolute observation errors.
+Map-valued semialgebraic triangulation is an
+established constructive input
+\cite[Theorem~5.43 and Algorithm~11.44]{BPR}.
+The smoothing of its chains used here retains
+common faces and explicit derivative control;
+we do not assume a differentiable triangulation
+with those bounds.
+
+The central compact transition and its divisor
+data come from \cite{W_Toric,W_HodgeRay}.
+The relative Ricci-flat Hodge theorem and the
+nonflat bundle, HYM and harmonic quotient results
+are those of \cite{W_Hodge,W_HYM}.
+The present contribution is the terminating geometric
+observation construction and its integral output
+on a family to which those analytic conclusions
+are proved to apply. The final section records
+the actual connecting maps and an example with
+independent base and bundle scales.

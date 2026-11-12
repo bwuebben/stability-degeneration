@@ -1,0 +1,302 @@
+\section{Independent-cap compactness and the complete model spectrum}
+\label{sec:model-compactness}
+
+The estimates in this section concern forms of degree one or two.
+The distinction matters at the middle degree: we do not assert the
+same weighted estimate for degree three or for arbitrary mixed-degree
+forms.
+
+\subsection{A weighted estimate on one completed cap}
+
+Let $Z$ be a completed cap diffeomorphic to $T^*S^3$, with fixed smooth
+complete metric equal to $\dd r^2+r^2h$ for $r\ge r_0$. Choose a
+positive smooth radius $\rho_Z$ equal to $r$ on the end and bounded
+above and below on the core. Put $\mathcal D_Z=\dd+\delta$.
+
+\begin{proposition}\label{prop:weighted-cap}
+For $p=1,2$, every compactly supported smooth $p$-form $v$ satisfies
+\begin{equation}\label{eq:weighted-cap}
+ \|v\|_{L^2(Z)}\le C_p\|\rho_Z\mathcal D_Zv\|_{L^2(Z)}.
+\end{equation}
+The constant depends only on the fixed cap.
+\end{proposition}
+\begin{proof}
+On the cone the radial unitary transformation gives
+\begin{equation}\label{eq:radial-gauss-bonnet}
+ U\mathcal D U^{-1}
+       =J\left(\partial_r+\frac{\mathsf A}{r}\right),
+ \qquad
+ \|u\|^2=\int\|\sigma(r)\|_{\mathcal H}^2\,\dd r,
+ \quad \sigma=Uu.
+\end{equation}
+Here $\mathcal H$ is the doubled space of all link forms, $J$ is
+unitary, and $\mathsf A$ is self-adjoint elliptic with compact
+resolvent. We use the normalization in
+\cite[Section~2.2, p.~1028]{anne-takahashi}. For a pure $p$-form,
+the radial and tangential entries belong to the closed subspace
+$\mathcal S_p=L^2\Omega^{p-1}(L)\oplus L^2\Omega^p(L)$.
+It need not be invariant under $\mathsf A$.
+
+Set $t=\log r$, $w(t)=r^{1/2}\sigma(r)$, and
+$\mathsf B=\mathsf A-\frac12$. Then
+\begin{equation}\label{eq:log-radial-norms}
+ \|u\|^2=\int\|w(t)\|^2\,\dd t,\qquad
+ \|r\mathcal Du\|^2
+       =\int\|(\partial_t+\mathsf B)w(t)\|^2\,\dd t.
+\end{equation}
+We claim that
+\begin{equation}\label{eq:pure-critical-kernel}
+ \mathcal S_p\cap\ker\mathsf B=\{0\}\qquad(p\ne3).
+\end{equation}
+A vector in this intersection would give a pure harmonic form
+$u=r^{p-3}\alpha+\dd r\wedge r^{p-4}\beta$, of pointwise order
+$r^{-3}$. Because it has a single degree, $\dd u$ and
+$\delta u$ have distinct degrees and vanish separately. Their
+equations are
+\[
+ \dd_L\alpha=0,\quad (p-3)\alpha=\dd_L\beta,\qquad
+ \delta_L\beta=0,\quad \delta_L\alpha+(p-3)\beta=0.
+\]
+It follows that $\Delta_L\beta=-(p-3)^2\beta$. Nonnegativity
+forces $\beta=0$ and then $\alpha=0$ for $p\ne3$. Kernel vectors
+are smooth by ellipticity, so this proves the claim on the full
+kernel.
+
+Since $\mathsf B$ has a spectral gap off its finite-dimensional
+kernel, \eqref{eq:pure-critical-kernel} implies
+\begin{equation}\label{eq:pure-tangential-coercivity}
+ \|b\|\le C_p\|\mathsf Bb\|,\qquad
+ b\in\mathcal S_p\cap\Dom\mathsf B.
+\end{equation}
+Indeed, if unit vectors in this subspace had $\mathsf Bb_j\to0$,
+their nonkernel components would tend to zero. Their kernel
+components have a convergent subsequence, giving a nonzero limit
+in both $\mathcal S_p$ and $\ker\mathsf B$. This also explains why
+possible mixed-degree vectors in the critical kernel cause no
+problem for the stated estimate.
+
+For compactly supported $w$, self-adjointness and integration by
+parts give
+\[
+ \int\|(\partial_t+\mathsf B)w\|^2\,\dd t
+       =\int\bigl(\|\partial_tw\|^2+\|\mathsf Bw\|^2\bigr)\,\dd t.
+\]
+Together with \eqref{eq:log-radial-norms} and
+\eqref{eq:pure-tangential-coercivity}, this proves the estimate on
+the open cone.
+
+Choose a cutoff equal to one far on the cone and zero on the core.
+Applying the cone estimate and the first-order Leibniz rule gives
+\begin{equation}\label{eq:cap-core-remainder}
+ \|v\|\le C\|\rho_Z\mathcal D_Zv\|+C\|v\|_{L^2(K_Z)}
+\end{equation}
+for a fixed compact set $K_Z$. The completed cap has no $L^2$
+harmonic forms in degrees one and two. Indeed its exact-cone-ended
+metric is a scattering metric, and
+\cite[Theorem~1A]{hausel-hunsicker-mazzeo} identifies its below-middle
+$L^2$ cohomology with $H_c^p(T^*S^3;\RR)$. The Thom isomorphism
+gives $H_c^p(T^*S^3)=H^{p-3}(S^3)=0$ for $p=1,2$.
+
+If \eqref{eq:weighted-cap} failed, unit compactly supported pure
+forms $v_j$ could satisfy $\|\rho_Z\mathcal D_Zv_j\|\to0$.
+Interior first-order elliptic estimates and Rellich compactness
+give a subsequence converging locally in $L^2$. Its limit is an
+$L^2$ harmonic pure form by Fatou and elliptic regularity, hence
+zero. The compact term in \eqref{eq:cap-core-remainder} tends to
+zero, contradicting the unit norm.
+\end{proof}
+
+\subsection{Scaling and preservation of norm}
+
+On the $i$-th scaled cap put
+$\rho_{i,\varepsilon}=\varepsilon_i\rho_{Z_i}$; it is the physical
+cone radius on the end. Degreewise $L^2$ isometric scaling turns
+\eqref{eq:weighted-cap} into
+\[
+ \|v\|_{L^2(\varepsilon_i^2g_i)}
+       \le C\|\rho_{i,\varepsilon}
+                    \mathcal D_\varepsilon v\|_{L^2(\varepsilon_i^2g_i)}.
+\]
+The first-order squared energy scales two powers faster than the mass,
+and the squared radius restores those powers.
+
+Choose a radial cutoff $\chi_s$ equal to one on the cap and for
+$r\le s$, and zero for $r\ge2s$, with
+$|\dd\chi_s|\le C/s$. If $\varepsilon_i$ is sufficiently small
+relative to $s$, its support is contained in the part identified with
+the completed cap, where
+$\rho_{i,\varepsilon}\le Cs$ and
+$\rho_{i,\varepsilon}|\dd\chi_s|\le C$ on the shell. Extending
+$\chi_su$ by zero and applying the estimate proves
+\begin{equation}\label{eq:cap-tail}
+ \|u\|^2_{\{i\text{-th cap and }r<s\}}
+       \le Cs^2q_\varepsilon(u)
+          +C\|u\|^2_{\{s<r<2s\},i},\qquad p=1,2.
+\end{equation}
+The same constant works for the finitely many fixed caps. Its proof
+involves each scale only on its own cap.
+
+\begin{proposition}\label{prop:no-loss-compactness}
+Suppose every $\varepsilon_i\to0$, the norms of pure degree-one or
+degree-two forms $u_\varepsilon$ are bounded, and
+$q_\varepsilon(u_\varepsilon)\to0$. A subsequence converges locally
+in $L^2$ to a smooth central $L^2$ closed and coclosed form $u_0$,
+and
+\begin{equation}\label{eq:no-loss}
+ \|u_\varepsilon\|^2-\|u_0\|^2\longrightarrow0.
+\end{equation}
+The central restrictions extended by zero over missing tips converge
+strongly in central $L^2$, and the cap-core norms tend to zero.
+For finitely many sequences one can preserve the full Gram matrix
+on a common subsequence. For eigenforms with eigenvalues tending
+to zero the convergence is smooth on central compact subsets.
+\end{proposition}
+\begin{proof}
+On fixed central compact sets the norm and first-order energy bounds
+give local $H^1$ bounds. Rellich compactness and a diagonal choice
+give local strong $L^2$ convergence. Vanishing energy gives
+$\dd u_0=\delta u_0=0$ distributionally. Elliptic regularity and
+Fatou give smoothness and finite $L^2$ norm.
+
+For fixed $s$, apply \eqref{eq:cap-tail} on every end and pass to
+the limit:
+\[
+ \limsup_{\varepsilon\to0}
+    \|u_\varepsilon\|^2_{\{\text{all caps and }r<s\}}
+       \le C\sum_i\|u_0\|^2_{\{s<r<2s\},i}.
+\]
+The right side tends to zero as $s\downarrow0$. This and the
+local convergence prove strong central convergence, vanishing cap
+mass and \eqref{eq:no-loss}. Simultaneous strong convergence and
+polarization preserve the Gram matrix of a finite family.
+For eigenforms, fixed-exterior elliptic estimates for the Laplacian
+upgrade the central convergence to smooth convergence.
+\end{proof}
+
+\subsection{The complete model theorem}
+
+We use also the fixed-central Hodge statement from
+\cite[Section~5]{wuebben-hodge}: the central $L^2$ closed and coclosed
+one-form space is zero, and the corresponding two-form space is the
+four-dimensional space of representatives $\eta_D$, $D\in V$.
+These representatives lie in the minimal graph domain. This is a
+fixed conic assertion; the compactness estimates above supply the
+independent-scale step.
+
+\begin{theorem}\label{thm:complete-model}
+For fixed $R,A$ there are $L_0,\gamma>0$ and $e(L_*)\to0$ such
+that, for every scale vector with $L_*\ge L_0$, the model has the
+following properties.
+
+Its harmonic two-form space is marked by all of $K$ and its mass
+converges uniformly to $G_R|_K$. There are exactly two positive
+two-form eigenvalues below $\gamma$, both coexact, and
+\begin{equation}\label{eq:complete-model-rates}
+ (1-e(L_*))\nu_j(\varepsilon)
+       \le\lambda^+_{2,j}(\varepsilon)
+       \le(1+e(L_*))\nu_j(\varepsilon),\qquad j=1,2.
+\end{equation}
+The first positive one-form and third positive two-form eigenvalues
+are bounded below by $\gamma$.
+
+On the full two-dimensional positive small space $S_\varepsilon$,
+$\cA_\varepsilon$ is an isomorphism onto $W_R$ and
+\begin{equation}\label{eq:model-cluster-mass}
+ \left|M_R(\cA_\varepsilon u,\cA_\varepsilon v)
+                           -\langle u,v\rangle\right|
+       \le e(L_*)\|u\|\|v\|,\qquad
+ \|u-U_\varepsilon\cA_\varepsilon u\|
+       \le e(L_*)\|u\|.
+\end{equation}
+There is no ratio restriction among the scales or positive model
+eigenvalues.
+\end{theorem}
+\begin{proof}
+If the one-form gap failed, normalized eigenforms with eigenvalues
+tending to zero would, by Proposition~\ref{prop:no-loss-compactness},
+give a central $L^2$ harmonic one-form of norm one. This contradicts
+the fixed-central vanishing. Failure of a uniform threshold would
+allow the sequence with $L_*\ge n$ and eigenvalue below $1/n$, so
+the contradiction proves a uniform gap over all scale ratios.
+
+The model has $b_2=2$. Proposition~\ref{prop:trial-quotient-mass}
+gives two positive coexact eigenvalues bounded by $C/L_*$. If its
+third positive two-form eigenvalue could tend to zero, the first
+three positive eigenvectors together with two orthonormal harmonic
+forms would have vanishing energy. Proposition~\ref{prop:no-loss-compactness}
+would preserve five orthonormal vectors in the four-dimensional
+central harmonic space, which is impossible. Hence there is a
+uniform third-positive-eigenvalue gap. The positive exact two-form
+spectrum equals the positive coexact one-form spectrum, with
+multiplicities, by the singular values of $\dd$. The one-form gap
+therefore makes both small positive two-form spaces coexact.
+
+For $k\in K$, the trial $T_\varepsilon k$ is closed by
+\eqref{eq:exact-model-energy} and represents the corresponding
+smoothing class. Its harmonic representative $h_\varepsilon(k)$
+has norm at most that of the trial:
+\[
+ \|h_\varepsilon(k)\|^2
+       \le\|T_\varepsilon k\|^2=G_R(k,k)+o(1).
+\]
+Compactness gives a no-loss subsequential central limit $\eta_D$.
+Pair with the fixed compactly supported duals
+$\Psi_{F,\rho}$, for all $F\in V$ and fixed $\rho$. The class of
+the smoothing representative gives
+\[
+ \int_{N_\varepsilon}h_\varepsilon(k)\wedge\Psi_{F,\rho}
+       =G_R(k,F).
+\]
+Passing to the limit identifies $G_R(D,F)=G_R(k,F)$ for every $F$,
+so $D=k$. Norm preservation proves convergence of the harmonic mass.
+Finite-dimensional polarization and a contradiction on unit vectors
+make it uniform on $K$.
+
+Next take normalized $u_\varepsilon\in S_\varepsilon$ along any
+sequence with $L_*\to\infty$. The trial upper bound gives energy
+at most $C/L_*$. A no-loss subsequence converges to $\eta_D$ of
+norm one. For every $k\in K$, the trial $T_\varepsilon k$ is closed,
+so $\langle u_\varepsilon,T_\varepsilon k\rangle=0$. Strong
+convergence gives $G_R(D,k)=0$, hence $D\in W_R$. Since the
+observation is a bounded fixed operator on the exterior,
+$\cA_\varepsilon u_\varepsilon\to D$. Therefore
+$M_R(\cA_\varepsilon u_\varepsilon)\to1$.
+
+Every potentially violating sequence has this subsequence, so the
+mass convergence is uniform on all unit vectors in $S_\varepsilon$.
+Polarization gives the first estimate in
+\eqref{eq:model-cluster-mass}; injectivity and dimension make the
+observation an isomorphism. The trial
+$U_\varepsilon\cA_\varepsilon u_\varepsilon$ has the same strong
+central limit and vanishing cap norm. Subtracting and using a
+second sequential contradiction gives the reconstruction estimate.
+
+For the span of the first $j$ positive eigenvectors, the weighted
+lower bound and mass capture give
+\[
+ \frac{E_\varepsilon(\cA_\varepsilon u)}
+          {M_R(\cA_\varepsilon u)}
+       \le
+       \frac{1+CL_*^{-1/2}}{1-e_0(L_*)}
+       \frac{q_\varepsilon(u)}{\|u\|^2}
+       \le(1+o(1))\lambda^+_{2,j}.
+\]
+Its image has dimension $j$, so generalized min--max gives the
+required relative lower bound. The trial upper bound proves the
+other side of \eqref{eq:complete-model-rates}. This establishes
+the theorem without division by the weakest eigenvalue.
+\end{proof}
+
+These model metrics need not be Kähler, and no complex type or
+primitivity conclusion has been used. Their constants may depend on
+$R,A$. The fixed-central quotient mass converges to $M$ as $R\downarrow0$
+by the central harmonic minimization in \cite[Section~5]{wuebben-hodge}.
+When the geometric smoothing scales satisfy
+$\varepsilon_i=|\tau_i|^{1/3}$ times fixed positive normalization
+factors, the relation
+\[
+ L_i=\frac13|\log|\tau_i||+O_{R,A}(1)
+\]
+converts each energy coefficient to
+$(1+o(1))\,2\pi/|\log|\tau_i||$ multiplicatively. This conversion
+alone is not a comparison with an actual Ricci-flat metric.

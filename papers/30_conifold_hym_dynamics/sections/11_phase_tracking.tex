@@ -1,0 +1,267 @@
+\section{The spatial phase and all-time metric comparison}
+\label{sec:phase-tracking}
+
+Fix one graph from Theorem~\ref{thm:invariant-graph}, and
+write $\phi_t$ for its complete finite flow. The phase
+of a general initial metric will be defined by removing
+this finite evolution from its parallel component.
+
+\begin{theorem}\label{thm:all-time-tracking}
+There are common $r_0,\delta,c,C>0$ and a $C^1$ map
+$\Gamma_{p,w}:B_{X_p}(\delta)\to\mathfrak h$, with
+uniformly bounded first derivative, having the following
+properties. For every smooth initial metric in this ball,
+let $u(t)$ be the actual flow and put
+\[
+ S(t)=\Pi u(t),\qquad
+ y(t)=Qu(t)-\psi(S(t)),\qquad D_*=\|y(0)\|_X.
+\]
+Then
+\begin{equation}\label{eq:phase-definition}
+ \begin{split}
+ \Gamma(u_0)&=\lim_{T\to\infty}\phi_{-T}(S(T)),\\
+ S_{\rm eff}(t)&=\phi_t(\Gamma(u_0)),\qquad
+ u_{\rm eff}(t)=S_{\rm eff}(t)+\psi(S_{\rm eff}(t))
+ \end{split}
+\end{equation}
+are defined for all $t\ge0$. The reconstructed metric
+$h_{\rm eff}=h_0e^{u_{\rm eff}}$ is an actual HYM solution
+on the same fixed holomorphic bundle, and
+\begin{equation}\label{eq:tracking-bounds}
+ \|y(t)\|_X+\|u(t)-u_{\rm eff}(t)\|_X\le CD_*e^{-ct}.
+\end{equation}
+The centered relative logarithm
+\begin{equation}\label{eq:centered-logarithm}
+ \zeta(t)=\log\{e^{-u_{\rm eff}(t)/2}e^{u(t)}e^{-u_{\rm eff}(t)/2}\}
+\end{equation}
+satisfies $\|\zeta(t)\|_X\le CD_*e^{-ct}$, and hence
+\begin{equation}\label{eq:metric-order-tracking}
+ e^{-CD_*e^{-ct}}h_{\rm eff}(t)
+       \le h(t)\le e^{CD_*e^{-ct}}h_{\rm eff}(t).
+\end{equation}
+All constants are independent of the base scales,
+stabilizer type, and ratios of positive weak rates.
+One can take $c=\sigma/2$, so the error is at most
+$Cr^2D_*$ after $T_r=4\sigma^{-1}\log(1/r)$.
+
+The phase equals $S_0$ on graph data $S_0+\psi(S_0)$.
+It is unique among complete finite trajectories that
+track $S(t)$ at an exponential rate greater than
+$L_f=\|Df\|_\infty\le Cr^2$. It is jointly $K$-equivariant
+and depends on the chosen graph and the full initial metric.
+\end{theorem}
+
+\subsection{Normal decay and the phase limit}
+
+In the coordinates $S,y$, the extended equation is exactly
+\begin{equation}\label{eq:normal-graph-equations}
+ \dot S=f(S)+h(S,y),\qquad \dot y=-L_0y+F(S,y),
+\end{equation}
+where
+\[
+ \begin{split}
+ h(S,y)&=\mathcal A(S,\psi(S)+y)-\mathcal A(S,\psi(S)),\\
+ F(S,y)&=\mathcal B(S,\psi(S)+y)-\mathcal B(S,\psi(S))
+                                                -D\psi(S)h(S,y).
+ \end{split}
+\]
+The final term follows from differentiating the graph
+coordinate and is essential. These maps vanish at $y=0$.
+Their uniform derivatives satisfy
+\begin{equation}\label{eq:normal-coupling-bounds}
+ \|D_yh\|+\|D_yF\|\le\varepsilon,
+ \qquad
+ \|D_Sh(S,y)\|+\|D_SF(S,y)\|\le C\|y\|_X,
+\end{equation}
+where $\varepsilon$ is made small by choosing the cutoff
+radius and then $r_0$. The second bound follows from
+bounded mixed derivatives and vanishing at $y=0$.
+For either sign of $t$, the finite variational equations give
+\begin{equation}\label{eq:finite-backflow-bounds}
+ \|D\phi_t\|\le e^{L_f|t|},\qquad
+ \|D^2\phi_t\|\le K_f|t|e^{2L_f|t|},
+ \qquad K_f=\|D^2f\|_\infty=O(r^2).
+\end{equation}
+
+Set $c=\sigma/2$. Choose the constants so that
+$\varepsilon\int_0^\infty k(t)e^{ct}\,\dd t<1/2$.
+The normal Duhamel formula then gives
+\[
+ \sup_{s\le T}e^{cs}\|y(s)\|_X
+ \le MD_*+\tfrac12\sup_{s\le T}e^{cs}\|y(s)\|_X.
+\]
+It follows that $\|y(t)\|_X\le2MD_*e^{-ct}$.
+This prevents normal exit for small initial $D_*$;
+the bounded finite field and the integrable perturbation
+$h$ prevent finite-time escape of $S$.
+
+For $P_T=\phi_{-T}(S(T))$, differentiation cancels the
+finite $f$ terms and gives
+\begin{equation}\label{eq:phase-velocity}
+        \frac{\dd P_T}{\dd T}
+             =D\phi_{-T}(S(T))h(S(T),y(T)).
+\end{equation}
+Its norm is at most $C\varepsilon D_*e^{-(c-L_f)T}$.
+Taking $L_f<c$ proves the phase limit and
+$|\Gamma-S(0)|\le C\varepsilon D_*$.
+For fixed $t$, apply the same differentiation to
+$\phi_{t-T}(S(T))$ for $T\ge t$. Integration to infinity
+gives
+\begin{equation}\label{eq:finite-coordinate-tracking}
+              |S(t)-S_{\rm eff}(t)|\le C\varepsilon D_*e^{-ct}.
+\end{equation}
+Together with the normal decay and $D\psi=O(r^2)$
+this proves \eqref{eq:tracking-bounds} for the extended
+system. If two finite trajectories track at rates larger
+than $L_f$, applying $\phi_{-t}$ to their difference
+forces their initial points to agree. Graph data have
+$y=0$, so their phase is their initial finite coordinate.
+This argument uses an upper expansion bound $L_f$;
+it never divides by a positive weak rate.
+
+\subsection{Differentiability of the phase}
+
+The integrable smoothing kernel gives differentiable
+dependence of mild solutions on each finite interval.
+Let $W=\delta S$ and $Z=\delta y$. Their equations are
+\[
+ \begin{split}
+ \dot W&=(Df+D_Sh)W+D_yh\,Z,\\
+ Z(t)&=e^{-tL_0}Z(0)+\int_0^te^{-(t-s)L_0}
+                     (D_SF\,W+D_yF\,Z)(s)\,\dd s.
+ \end{split}
+\]
+Put $\gamma=\sigma/16$ and reduce $r_0$ so that
+$L_f<\gamma/4$. With
+$U_T=\sup_{t\le T}e^{-\gamma t}|W(t)|$ and
+$V_T=\sup_{t\le T}e^{(c-\gamma)t}\|Z(t)\|_X$,
+normal convolution and \eqref{eq:normal-coupling-bounds}
+give
+\[
+ V_T\le C\|Z(0)\|_X+CD_*U_T,
+ \qquad U_T\le C|W(0)|+C\varepsilon V_T.
+\]
+In the second inequality the coefficient $D_Sh$ is
+integrable in time. For sufficiently small $D_*$,
+absorption gives
+\begin{equation}\label{eq:phase-variation-bounds}
+ \begin{split}
+ |W(t)|&\le Ce^{\gamma t}(|W(0)|+\varepsilon\|Z(0)\|_X),\\
+ \|Z(t)\|_X&\le Ce^{-(c-\gamma)t}
+                            (\|Z(0)\|_X+D_*|W(0)|).
+ \end{split}
+\end{equation}
+The derivative of the velocity \eqref{eq:phase-velocity} is
+\[
+ D^2\phi_{-T}(S(T))[W(T),h]
+      +D\phi_{-T}(S(T))(D_Sh\,W(T)+D_yh\,Z(T)).
+\]
+Its operator norm is bounded by a constant times
+\[
+ \varepsilon D_*(1+T)e^{-(c-2L_f-\gamma)T}
+              +(D_*+\varepsilon)e^{-(c-L_f-\gamma)T}.
+\]
+This is uniformly integrable on a smaller initial ball.
+The integral formula for $P_T$ therefore converges in
+$C^1$, with continuous derivative by dominated convergence.
+Composing with $S(0)=\Pi u_0$ and
+$y(0)=Qu_0-\psi(\Pi u_0)$ proves the asserted phase
+regularity. Equivariance follows from that of the
+equations and uniqueness of the phase.
+
+\subsection{Confinement in the actual equation}
+
+Theorem~\ref{thm:spatial-entry} lets us reduce $\delta$
+so that every smooth actual solution in the initial ball
+satisfies $|S(t)|<a/4$ and $\|Qu(t)\|_X<a/4$ for all
+positive time. Thus it remains where the extended and
+actual equations agree. Local mild uniqueness identifies
+the two solutions globally. Also
+$D_*\le\|Qu_0\|_X+Cr^2|\Pi u_0|\le C\delta$.
+Reduce $\delta$ again so that
+\eqref{eq:finite-coordinate-tracking} is less than $a/4$.
+Then $|S_{\rm eff}(t)|<a/2$, and the graph bound gives
+$\|\psi(S_{\rm eff}(t))\|_X<a/4$. The selected graph
+trajectory also stays in the actual region for all time.
+Theorem~\ref{thm:invariant-graph} reconstructs its spatially
+smooth actual HYM metric there.
+
+The norm $X_p$ is a Banach algebra norm, since $D_0$ is
+a derivation. Exponential and logarithm on a fixed small
+positive matrix ball have bounded derivatives. Hence
+\[
+ (u,\widetilde u)\longmapsto
+             \log(e^{-\widetilde u/2}e^ue^{-\widetilde u/2})
+\]
+is uniformly locally Lipschitz from $X_p\times X_p$ to
+$X_p$ and vanishes on the diagonal. This proves the
+bound for \eqref{eq:centered-logarithm}. Its matrix is
+positive Hermitian with determinant one, so its spectral
+bounds imply \eqref{eq:metric-order-tracking}. These
+metric inequalities transport invariantly back to the
+actual holomorphic bundle. The stated $C^1$ norm is the
+one in the fixed transport used throughout the construction.
+At $T_r$ we have $e^{-cT_r}=r^2$. This completes the
+proof of Theorem~\ref{thm:all-time-tracking}.
+
+\subsection{Finite preparation and all weak time scales}
+
+The limit defining the phase has a finite preparation rule.
+For any $T\ge0$, put $\Gamma_T=\phi_{-T}(\Pi u(T))$
+and let $u_{{\rm eff},T}$ be the graph trajectory starting
+at $\Gamma_T$. Integrating \eqref{eq:phase-velocity} gives
+\begin{equation}\label{eq:finite-phase-error}
+ |\Gamma_T-\Gamma|\le C\varepsilon D_*e^{-(c-L_f)T},
+ \qquad |\Gamma_T-S(0)|\le C\varepsilon D_*.
+\end{equation}
+All these initial points can be put in a common graph
+ball whose positive trajectories are actual and confined:
+for small $S_1$, $\|S_1+\psi(S_1)\|_X\le C|S_1|$,
+so Theorem~\ref{thm:spatial-entry} applies, and uniqueness
+preserves the graph. A smaller initial $\delta$ puts
+$\Gamma$ and every $\Gamma_T$ in that ball.
+
+The two-solution distance inequality
+\cite[Lemma 6.4.5]{Kobayashi}, applied to these two actual
+graph flows, implies
+\[
+ \sup_x d_x(h_{{\rm eff},T}(t),h_{\rm eff}(t))
+          \le\sup_x d_x(h_{{\rm eff},T}(0),h_{\rm eff}(0))
+          \le C|\Gamma_T-\Gamma|.
+\]
+Here $d_x$ is the invariant distance on positive Hermitian
+metrics in the fibre. On the common small ball it is
+equivalent to the pointwise difference in logarithmic
+coordinates. Apply the bounded projection $\Pi$ to
+obtain $|S_T(t)-S_{\rm eff}(t)|\le C|\Gamma_T-\Gamma|$.
+The graph derivative bound upgrades this finite-coordinate
+bound to
+\begin{equation}\label{eq:prepared-trajectory-error}
+ \sup_{t\ge0}\|u_{{\rm eff},T}(t)-u_{\rm eff}(t)\|_X
+                      \le C\varepsilon D_*e^{-(c-L_f)T}.
+\end{equation}
+The upgrade uses the finite graph; it does not assert
+$C^1$ contraction for arbitrary metric flows.
+Combining with the actual tracking estimate gives
+\[
+ \left\|\log\{e^{-u_{{\rm eff},T}(t)/2}e^{u(t)}
+                           e^{-u_{{\rm eff},T}(t)/2}\}\right\|_X
+       \le CD_*e^{-ct}+C\varepsilon D_*e^{-(c-L_f)T}.
+\]
+Since $L_f=O(r^2)$, taking $T=T_r$ makes the second
+term $O(r^2D_*)$ uniformly for every later comparison time.
+Moreover $T_r\lambda_j\to0$ for every positive weak rate.
+Thus the preparation is negligible compared with all
+inverse weak rates, including the times $h^{-2b}$ in
+Proposition~\ref{prop:two-cycle-spectrum}.
+
+The comparison is absolute tracking to the exact corrected
+field $f$. It does not supply a relative error divided by
+a vanishing trajectory or a nonlinear asymptotic exponent.
+The initial phase retains spatial information and is
+generally different from $\Pi u_0$. After shrinking the
+initial basin so that its evolved points remain in the
+phase domain, uniqueness also gives
+$\Gamma(u(t))=\phi_t\Gamma(u_0)$.
+Nonpolystable escape to a graded boundary is outside this
+metric basin around an HE representative.

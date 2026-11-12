@@ -1,0 +1,272 @@
+\section{Heat smoothing and entry from spatial initial metrics}
+\label{sec:spatial-entry}
+
+Fix a smooth base point $p$ and an actual HE representative
+$w$ from Proposition~\ref{prop:exact-balancing-coordinates}.
+Throughout the flow argument these parameters remain fixed.
+Write $r=|w|$, $D=D_{\mathcal A_p(w)}=D_0+a$ and
+$L=D^*D$, $L_0=D_0^*D_0$. All section variables are
+Hermitian and trace free for the fixed transported metric $h_0$.
+Let $\Pi$ be the split projection onto $\mathfrak h$ and
+$Q=I-\Pi$. On each smooth fibre put
+\begin{equation}\label{eq:flow-banach-spaces}
+ Y_p=C^0(\Herm_0E^{\rm sp}),\qquad
+ X_p=C^1(\Herm_0E^{\rm sp}),\qquad
+ \|u\|_X=\|u\|_\infty+\|D_0u\|_\infty.
+\end{equation}
+We use these fibrewise spaces with uniform operator bounds;
+no fixed Banach bundle through the singular fibre is required.
+
+\begin{theorem}\label{thm:spatial-entry}
+There are $M,\sigma,C,\delta,r_0>0$, independent of the
+base scales and of all positive weak-rate ratios, such that
+\begin{equation}\label{eq:split-heat-smoothing}
+ \begin{split}
+ \|e^{-tL_0}Q\|_{X_p\to X_p}&\le Me^{-\sigma t},\\
+ \|e^{-tL_0}Q\|_{Y_p\to X_p}
+                    &\le M(1+t^{-1/2})e^{-\sigma t}\quad(t>0).
+ \end{split}
+\end{equation}
+In the metric coordinate $h=h_0e^u$, the actual HYM equation is
+\begin{equation}\label{eq:exact-log-flow}
+                  \dot u+L_0u=N_w(u).
+\end{equation}
+Here $N_w:X_p\to Y_p$ depends only on the first spatial
+jet, and is smooth with uniform derivatives of every fixed
+finite order on a common small ball. For parallel $S$ and
+$v\in QX_p$ with $|S|,\|v\|_X\le\delta_1$, it satisfies
+\begin{equation}\label{eq:flow-nonlinearity-bounds}
+ \begin{split}
+ \|N_w(S)\|_\infty&\le Cr^2|S|,\\
+ \|N_w(S+v)-N_w(S)\|_\infty&\le C(r+\delta_1)\|v\|_X.
+ \end{split}
+\end{equation}
+Every fixed positive-order derivative of $N_w(S)$ in $S$
+is $O(r^2)$ on this ball.
+
+For every smooth $u_0$ with $\|u_0\|_X<\delta$ and
+$r<r_0$, the determinant-normalized actual flow exists
+for all $t\ge0$, stays in a common small $C^1$ ball, and obeys
+\begin{equation}\label{eq:normal-entry}
+ \begin{split}
+ \|u(t)\|_\infty&\le\|u_0\|_\infty,
+       \qquad |\Pi u(t)|\le\|u_0\|_\infty,\\
+ \|Qu(t)\|_X&\le Ce^{-\sigma t/2}\|Qu_0\|_X
+                         +Cr^2\|u_0\|_\infty.
+ \end{split}
+\end{equation}
+For $0<r<\min(r_0,1)$, the time
+$T_r=4\sigma^{-1}\log(1/r)$ gives $\|Qu(t)\|_X\le Cr^2\delta$
+for all $t\ge T_r$. Every positive weak eigenvalue satisfies
+$T_r\lambda_j\to0$ uniformly as $r\to0$.
+\end{theorem}
+
+\subsection{Uniform first derivatives of the split heat flow}
+
+Let $S_t=e^{-tL_0}$ and let $H_t$ denote scalar heat flow.
+Kato domination gives $|S_tf|\le H_t|f|$, so
+$\|S_tf\|_\infty\le\|f\|_\infty$.
+The scalar estimates from Section~\ref{sec:projected-he} and
+Bochner's formula with $\operatorname{Ric}(g_p)=0$ give
+\begin{equation}\label{eq:scalar-two-gradient-bounds}
+ \|\dd H_t\phi\|_\infty\le Ct^{-1/2}\|\phi\|_\infty,
+ \qquad
+ \|\dd H_t\phi\|_\infty\le C\|\dd\phi\|_\infty.
+\end{equation}
+Use the fixed finite cover and unitary line frames from
+the proof of Lemma~\ref{lem:graph-inverse}. Their connection
+coefficients are bounded and divergence free. The partition
+functions $\chi_j$ have uniformly bounded gradients and
+Laplacians; the derivatives of the core cutoffs are supported
+in fixed exterior annuli. If $f_j(t)$ is a scalar coefficient
+of $S_tf$ in one frame, extend $z_j=\chi_jf_j$ by zero
+to the whole fibre. The local formula
+\eqref{eq:local-rough-operator} gives
+\[
+ (\partial_t+\Delta)z_j=F_j,
+ \qquad \|F_j(t)\|_\infty
+       \le C\{\|D_0S_tf\|_\infty+\|f\|_\infty\}.
+\]
+Conversely,
+$\|D_0S_tf\|_\infty\le C\sum_j\|\dd z_j\|_\infty+C\|f\|_\infty$.
+No derivative of the full curvature enters these formulas.
+
+Scalar Duhamel and \eqref{eq:scalar-two-gradient-bounds}
+therefore give, for $G(t)=\|D_0S_tf\|_\infty$ and
+$F=\|f\|_\infty$,
+\[
+ G(t)\le C(t^{-1/2}+1)F+
+      C\int_0^t(t-s)^{-1/2}\{G(s)+F\}\,\dd s
+                       \quad(0<t\le1).
+\]
+For smooth $f$, set $Z_T=\sup_{0<t\le T}\sqrt t\,G(t)$.
+The identity
+$\int_0^t(t-s)^{-1/2}s^{-1/2}\,\dd s=\pi$
+implies $Z_T\le CF+C\sqrt T Z_T$. One common small
+$T$ absorbs the last term. The semigroup law extends the
+bound to fixed bounded time intervals. For $f\in C^1$,
+use the second scalar estimate on the initial term instead.
+Taking $\sup_{0<t\le T}G(t)$ and using
+$\int_0^t(t-s)^{-1/2}\,\dd s=2\sqrt t$ yields
+\[
+ \|S_tf\|_X\le C\|f\|_X\quad(0\le t\le1),\qquad
+ \|S_tf\|_X\le C(1+t^{-1/2})\|f\|_\infty\quad(0<t\le1).
+\]
+Density extends these estimates. On each fixed smooth fibre,
+the smooth heat solutions converge to their initial data in
+$C^1$; density and the first estimate prove strong continuity
+on $X_p$. The same argument works on $Y_p$.
+
+The averaging projection $\Pi$ is uniformly bounded on both
+spaces and commutes with $S_t$. The split $L^2$ gap, fixed
+volume, and the fixed-time $L^2$-to-$L^\infty$ bound used in
+Lemma~\ref{lem:graph-inverse} give
+$\|S_tQ\|_{Y_p\to Y_p}\le Ce^{-ct}$ for $t\ge1$.
+Composing with a fixed positive-time $Y_p$-to-$X_p$ map
+proves \eqref{eq:split-heat-smoothing}. This argument supplies
+the first-derivative smoothing needed below without a
+uniform higher-order elliptic estimate.
+
+\subsection{The contracted connection derivative}
+
+The connection expansion already gives $\|a\|_\infty\le Cr$.
+We also need its divergence:
+\begin{equation}\label{eq:connection-divergence}
+                         \|D_0^*a\|_\infty\le Cr^2.
+\end{equation}
+Indeed put $U=e^{s_p(w)/2}$ and
+$\gamma=Ub_p(w)U^{-1}-(\dbar_0U)U^{-1}$, so $a=\gamma-\gamma^*$.
+Section~\ref{sec:projected-he} gives
+\[
+ \|b_p(w)\|_\infty\le Cr,\quad
+ \|\dbar_0^*b_p(w)\|_\infty\le Cr^2,
+ \quad \|D_0U\|_\infty+\|P_pU\|_\infty\le Cr^2.
+\]
+The same first-derivative estimate holds for $U^{-1}$.
+The divergence product rule gives
+\[
+ \begin{split}
+ \dbar_0^*(UbU^{-1})
+ &=U(\dbar_0^*b)U^{-1}
+                  +O_\infty(|D_0U||b|+|b||D_0U^{-1}|),\\
+ \dbar_0^*((\dbar_0U)U^{-1})
+ &=(P_pU)U^{-1}+O_\infty(|D_0U||D_0U^{-1}|).
+ \end{split}
+\]
+Thus $\|\dbar_0^*\gamma\|_\infty\le Cr^2$.
+Real unitary divergence commutes with adjoints, proving
+\eqref{eq:connection-divergence}.
+For $A_j=\operatorname{ad}_{a(e_j)}$ in a real orthonormal
+frame, expansion of the connection Laplacian gives
+\begin{equation}\label{eq:rough-operator-perturbation}
+ (L-L_0)u=-2\sum_j A_jD_{0,e_j}u+[D_0^*a,u]-\sum_jA_j^2u.
+\end{equation}
+Its first-order coefficient is $O(r)$ and its zeroth-order
+coefficient is $O(r^2)$.
+
+\subsection{The exact equation in logarithmic coordinates}
+
+Define the pointwise invertible linear map
+\[
+ J_u(V)=\int_0^1e^{-\theta u}Ve^{\theta u}\,\dd\theta.
+\]
+It satisfies $e^{-u}(\dd\exp)_u(V)=J_u(V)$.
+Diagonalization of $u$ shows that its scalar multipliers
+are $(1-e^{-a})/a$, with value one at $a=0$.
+Its inverse and all fixed-order derivatives are bounded
+on a fixed small pointwise ball. Since the reference
+connection $D$ is HE, the exact Chern formula is
+\[
+ \mathrm i\Lambda F_{h_0e^u}
+ =\mathrm i\Lambda\dbar_D(J_u(D'_Du))
+ =J_u(\mathrm i\Lambda\dbar_DD'_Du)
+       +\mathrm i\Lambda(dJ)_u[\dbar_Du]\wedge D'_Du.
+\]
+The section Kähler identity gives
+$\mathrm i\Lambda\dbar_DD'_Du=Lu/2$.
+Consequently $h^{-1}\dot h=-2\mathrm i\Lambda F_h$ becomes
+\begin{equation}\label{eq:first-jet-nonlinearity}
+ \begin{split}
+ \dot u+Lu&=\mathcal Q(u,Du),\\
+ \mathcal Q(u,Du)&=-2J_u^{-1}\mathrm i\Lambda
+                       (dJ)_u[\dbar_Du]\wedge D'_Du.
+ \end{split}
+\end{equation}
+Here $dJ$ differentiates its finite matrix coefficient $u$.
+The nonlinear term is quadratic in the first spatial jet;
+all second derivatives have cancelled. Thus
+\begin{equation}\label{eq:Nw-definition}
+ N_w(u)=-(L-L_0)u+\mathcal Q(u,D_0u+[a,u])
+\end{equation}
+has the asserted uniform smoothness from $X_p$ to $Y_p$.
+This follows from bounded matrix derivatives and the
+continuous pointwise product $C^0\times C^0\to C^0$.
+The equation preserves Hermitian variables by its metric
+origin. It preserves trace zero because the determinant
+metric solves scalar heat and initially equals the fixed
+HE determinant.
+
+For parallel $S$, the first-order term in
+\eqref{eq:rough-operator-perturbation} vanishes, and
+$DS=[a,S]$. Hence $N_w(S)=O(r^2|S|)+O(r^2|S|^2)$,
+with the same factor $r^2$ in every fixed finite derivative.
+Taking the difference at $S+v$ proves
+\eqref{eq:flow-nonlinearity-bounds}.
+
+\subsection{Confinement and normal decay}
+
+On each fixed compact smooth fibre, global smooth HYM
+metric flow from a smooth positive metric follows from
+\cite[Theorem 6.8.25]{Kobayashi}. We use this only for existence;
+its higher constants need not be uniform. The squared
+pointwise distance from $h_0$ to $h_0e^u$ in the space
+of positive Hermitian metrics is $\tr u^2$.
+The two-solution distance inequality
+\cite[Lemma 6.4.5]{Kobayashi}, with time changed by $\tau=2t$
+to our convention, gives
+\begin{equation}\label{eq:metric-distance-heat}
+          (\partial_t+\Delta)\tfrac12\tr u^2\le0.
+\end{equation}
+The reference HE metric is stationary. The maximum principle
+therefore proves the first bound in \eqref{eq:normal-entry}.
+Block averaging and Jensen's inequality give the bound
+for $S(t)=\Pi u(t)$.
+
+Let $v=Qu$ and $\varepsilon=\|u_0\|_\infty$.
+As long as $\|v\|_X\le\delta_1$, Duhamel gives
+\begin{equation}\label{eq:normal-volterra}
+ \|v(t)\|_X\le Me^{-\sigma t}\|v(0)\|_X+
+  \int_0^t k(t-s)\{a_0\|v(s)\|_X+b_0\}\,\dd s,
+\end{equation}
+where $k(t)=M'(1+t^{-1/2})e^{-\sigma t}$,
+$a_0=C(r+\delta_1)$, and $b_0=Cr^2\varepsilon$.
+Choose $\delta_1,r_0$ so that
+$a_0\int_0^\infty k(t)e^{\sigma t/2}\,\dd t\le1/2$.
+Iteration of this nonnegative convolution inequality gives
+\[
+ \|v(t)\|_X\le2Me^{-\sigma t/2}\|v(0)\|_X
+                              +2b_0\int_0^\infty k(s)\,\dd s.
+\]
+Equivalently the right side is a supersolution: its
+exponential term is controlled by the weighted kernel
+integral and its constant term by the unweighted integral.
+Uniform boundedness of $\Pi,Q$ lets us choose one initial
+$\delta$ making this bound smaller than $\delta_1/2$.
+A first-exit argument then proves it for all time.
+Since $D_0S=0$, this also confines $u$ in the required
+$C^1$ ball and completes \eqref{eq:normal-entry}.
+
+At $T_r$ the exponential is at most $r^2$.
+Theorem~\ref{thm:complete-bundle-spectrum} gives
+$\lambda_j\le Cr^2$ for every positive weak rate, so
+$T_r\lambda_j\le Cr^2\log(1/r)\to0$.
+This proves Theorem~\ref{thm:spatial-entry}, including
+arbitrarily unequal weak rates. At $r=0$ there are no
+positive weak rates, and the normal part decays exponentially.
+
+The basin is an open ball in the $C^1$ topology intersected
+with smooth determinant-normalized metrics. It contains
+spatially varying initial metrics. The persistent $O(r^2)$
+normal term in \eqref{eq:normal-entry} does not by itself
+give tracking on a long time interval. We next absorb
+that term into an invariant finite-dimensional graph.

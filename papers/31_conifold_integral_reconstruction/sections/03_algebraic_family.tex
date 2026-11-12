@@ -1,0 +1,292 @@
+\section{An algebraic central fibre and a transverse coefficient slice}
+\label{sec:algebraic-family}
+
+We select algebraic coefficients within the compact eight-node
+construction, rather than assume that an unspecified general member
+has computable coefficients. We verify every central condition used
+by the subsequent period and analytic constructions.
+
+\subsection{The fixed contraction}
+
+Let $\Sigma=\PP^1_f\times\PP^1_g$, $L_0=\OO_\Sigma(1,-1)$,
+and use the quotient convention for
+\[
+ Z=\PP_\Sigma(\OO\oplus L_0)
+       \times_\Sigma\PP_\Sigma(\OO\oplus L_0).
+\]
+Write $\xi_1,\xi_2$ for the tautological classes and $k_i=g+\xi_i$.
+These classes are globally generated because their direct images are
+$\OO(0,1)\oplus\OO(1,0)$. For base coordinates $s,t$ and local
+quotient coordinates $(u_i,v_i)$, the map to $A$ is
+\begin{equation}\label{eq:fixed-contraction}
+ (x;y)=(v_1s;u_1t),\qquad (x';y')=(v_2s;u_2t).
+\end{equation}
+Its scheme image is the normal complete-intersection fourfold
+\begin{equation}\label{eq:fixed-fourfold}
+ V_0=\{f_1=x_0x'_1-x_1x'_0=0,\quad
+                 f_2=y_0y'_1-y_1y'_0=0\}.
+\end{equation}
+Indeed the determinant equations recover the common directions
+$s,t$ whenever their corresponding vector pairs are nonzero. A
+direction is free exactly when both corresponding pairs vanish;
+both cannot be free. This proves irreducibility and the image
+description. The equations are a generically smooth regular sequence,
+so their complete intersection is reduced, with this scheme image.
+
+The singular locus is the disjoint union
+\[
+ \ell_x=\{x=x'=0,\ [y]=[y']\},\qquad
+ \ell_y=\{y=y'=0,\ [x]=[x']\}.
+\]
+Near either line one equation eliminates a smooth variable and the
+other is a $2\times2$ determinant in four variables. Thus its
+transverse singularity is an ordinary threefold node. The complete
+intersection is Cohen--Macaulay and regular in codimension one,
+which proves normality.
+
+The map $q_Z:Z\to V_0$ contracts a ruling on each of the two
+sections where both quotients are onto $\OO$ or both onto $L_0$.
+These exceptional sections have codimension two. Adjunction gives
+\begin{equation}\label{eq:central-anticanonical}
+ -K_Z=4g+2\xi_1+2\xi_2=2k_1+2k_2
+             =q_Z^*\OO_{V_0}(2,2),\qquad
+ K_{V_0}=\OO_{V_0}(-2,-2).
+\end{equation}
+The contraction is small and crepant, and normality gives
+$q_{Z*}\OO_Z=\OO_{V_0}$. We use the exact polarization
+$H=\OO_{V_0}(2,2)|_{X_0}$, also writing $H$ for its first Chern class.
+
+\subsection{Finite admissibility conditions}
+
+Let $\mathcal H=H^0(A,\OO(2,2))\cong\CC^{100}$, and set
+$X_h=V_0\cap\{h=0\}$ and $Y_h=q_Z^{-1}X_h$.
+The map $\mathcal H\to H^0(Z,-K_Z)$ is surjective: the twisted
+Koszul resolution
+\[
+ 0\longrightarrow\OO_A\longrightarrow\OO_A(1,1)^{\oplus2}
+            \longrightarrow I_{V_0}(2,2)\longrightarrow0
+\]
+has no higher cohomology in its first two terms. Normality and
+projection formula then give the assertion. The target has dimension
+$100-2\cdot16+1=69$.
+
+The fixed toric fan has rays
+\begin{equation}\label{eq:toric-rays}
+ e_1,-e_1,e_2,-e_2,f_0,e_1+e_2-f_0,g_0,-e_1-e_2-g_0.
+\end{equation}
+Its sixteen maximal cones choose one ray from each consecutive
+pair and are unimodular. Integer linear algebra supplies the
+sixteen affine charts and anticanonical trivializations. The full
+torus support can be computed directly by substituting
+\begin{equation}\label{eq:torus-substitution}
+ (x_0,x_1,y_0,y_1)=(as,a,t,1),\qquad
+ (x'_0,x'_1,y'_0,y'_1)=(bs,b,t,1)
+\end{equation}
+in the standard $(2,2)$ monomials. It has 69 distinct monomials.
+This avoids a choice of sign for the polar-polytope convention.
+
+Define $\mathcal H^{\rm adm}$ by the following conditions.
+\begin{enumerate}
+\item In each toric chart, the polynomial $H_\alpha$ representing
+      $q_Z^*h$ has no common zero with its four partial derivatives.
+\item On each of $\ell_x,\ell_y$, the restricted binary quartic has
+      nonzero discriminant and nonzero values at the two fixed endpoints.
+\item All coefficients in the 69-monomial support are nonzero. For
+      every face $\Theta$, including the full polytope, the face
+      polynomial $H_\Theta$ has no common zero in $(\CC^*)^4$ with
+      $s\partial_sH_\Theta,t\partial_tH_\Theta,
+       a\partial_aH_\Theta,b\partial_bH_\Theta$.
+\end{enumerate}
+These are nonempty Zariski-open conditions over $\QQ$. The first
+is openness of smoothness in a projective divisor family; the
+second is a finite set of polynomial nonvanishing conditions.
+The third is the face-nondegeneracy condition for the fixed Newton
+polytope. The general nondegenerate anticanonical construction in
+\cite[Appendix~A]{W_Toric} satisfies smoothness and the quartic
+conditions. Surjectivity of the section map permits the additional
+nonzero coefficient conditions. Each open condition is dense in the
+irreducible space $\mathcal H$, so their finite intersection is nonempty.
+
+\begin{proposition}\label{prop:algebraic-choice}
+Membership in $\mathcal H^{\rm adm}$ is decidable for represented
+algebraic coefficients. Enumerating $\QQ(\sqrt{-1})^{100}$ and
+testing membership therefore terminates with a coefficient vector
+$h_*\in\mathcal H^{\rm adm}$.
+\end{proposition}
+
+\begin{proof}
+For the first condition, test whether each ideal generated by
+$H_\alpha$ and its derivatives contains one. For the third, clear
+Laurent monomials and adjoin $zstab-1$, with a new variable $z$;
+the ideal contains one exactly when the torus zero set is empty.
+Gr\"obner reduction over the represented number field and the
+Nullstellensatz decide these tests. Quartic discriminants, endpoint
+values, support coefficients and polytope faces require finite exact
+algebra as well. Every candidate is decided. The rational complex
+coefficient vectors are Zariski dense, so one lies in the open set.
+\end{proof}
+
+\subsection{Central invariants and attachment}
+
+For every admissible $h$, the divisor $Y_h$ is smooth. Away from
+the two singular lines $q_Z$ is an isomorphism, so $X_h$ has
+no singularities there. At a simple quartic zero, eliminate the
+coordinate along its line; the transverse determinant becomes
+exactly a threefold node. Thus $X_h$ has eight nodes, in two
+groups of four, and $Y_h\to X_h$ is a projective small crepant
+resolution. Its exceptional curves have normal bundle
+$\OO(-1)\oplus\OO(-1)$: on the all-$\OO$ section the normal
+bundle in $Z$ is $(L_0^{-1})^{\oplus2}$, and on the all-$L_0$
+section it is $L_0^{\oplus2}$; the simple quartic derivative
+removes the trivial direction normal to the ruling. In divisor
+coordinates $(f,g,\xi_1,\xi_2)$, their degree vectors are
+\begin{equation}\label{eq:exceptional-types}
+          \Gamma_f=(1,0,0,0),\qquad \Gamma_g=(0,1,-1,-1).
+\end{equation}
+
+We state the fixed global toric data used here. A nondegenerate
+anticanonical member in this smooth toric refinement is simply
+connected and has $(h^{1,1},h^{2,1})=(4,60)$; its four indicated
+divisor classes span rational $H^2$. The Hodge-number calculation
+is \cite[Appendix~A]{W_Toric}, and the lattice-quotient verification
+of simple connectivity is \cite[Section~8]{W_HodgeRay}.
+These assertions apply to every admissible member: nondegeneracy
+is included above, and the smooth proper family over the connected
+open set $\mathcal H^{\rm adm}$ also transports the topology from
+a general member. No additional Picard-rank genericity is assumed.
+
+For clarity, the relevant intersection calculation is
+\begin{equation}\label{eq:central-intersection}
+ \left(\int_{Y_h}D_iD_jH\right)_{i,j}
+ =\begin{pmatrix}
+ 0&8&4&4\\8&0&12&12\\4&12&-8&0\\4&12&0&-8
+ \end{pmatrix},\qquad (D_i)=(f,g,\xi_1,\xi_2).
+\end{equation}
+It follows by integrating $D_iD_j(-K_Z)^2$ using
+$f^2=g^2=0$, $\xi_i^2=(f-g)\xi_i$, and
+$\int_Zfg\xi_1\xi_2=1$. Its determinant is $-16384$ and
+$H^3=320$. Thus the four classes are independent, and
+\eqref{eq:exceptional-types} has rank two.
+
+Delete disjoint node balls to obtain the common exterior $U$.
+Thom and Mayer--Vietoris give, on a nearby smooth fibre,
+\begin{equation}\label{eq:integral-attachment}
+ H^2(Y_h;\ZZ)\xrightarrow{r}\ZZ^8
+      \xrightarrow{\partial}H^3(X;\ZZ),\qquad
+ r(D)_i=D\cdot C_i,\quad
+ \partial e_i=\operatorname{PD}_L(\delta_i).
+\end{equation}
+Indeed the exceptional curves have real codimension four, so
+$H^2(Y_h)\to H^2(U)$ is an isomorphism. A resolution cap retracts
+to $S^2$ and its link restriction records the curve degree; a
+smoothing cap retracts to $S^3$ and has no degree-two cohomology.
+The connecting image of its link generator is the oriented Thom
+dual of that sphere. These local descriptions identify the maps
+and give exactness, with the left duality convention used below.
+
+The restrictions of $f,g$ are the two block indicators
+$v_f,v_g\in\ZZ^8$. The rational image of $r$ is their span by
+\eqref{eq:exceptional-types} and the spanning divisor classes.
+Every integral vector in this rational span is constant with an
+integer value on each block; hence $\im r=\ZZ v_f\oplus\ZZ v_g$.
+It follows that the eight local classes have precisely these
+integral relations and rank-six span. This determines the kernel
+in their source, but does not assert that their image in $H_3(X;\ZZ)$
+is saturated.
+
+Orient the spheres accordingly and put
+\begin{equation}\label{eq:period-space}
+ R=\left\{p\in\CC^8:
+       \sum_{i\in I_f}p_i=\sum_{i\in I_g}p_i=0\right\}.
+\end{equation}
+The toric anticanonical sequence gives $K_{Y_h}=\OO$ and
+$H^1(\OO_{Y_h})=H^2(\OO_{Y_h})=0$. Rationality of the nodes
+descends these vanishings to $X_h$, and adjunction gives
+$\omega_{X_h}=\OO$.
+
+We use the following precise deformation consequence from
+\cite[Section~2]{W_Hodge} together with the relative embedding in
+\cite[Section~2]{W_HYM}. For this fixed small transition there is
+a proper polarized smoothing over a full ball in $R$, with smooth
+total space and a nowhere-zero relative three-form $\Omega$, whose
+oriented local periods are its coordinates. Its local equations are
+$\sum_{j=1}^4w_j^2=p_i/u_i(p)$, with holomorphic units $u_i$;
+its full discriminant is $\bigcup_i\{p_i=0\}$. The family embeds
+relatively in $A$ with the three fixed bidegrees and exact polarization
+$\OO(2,2)$. These results require the Calabi--Yau vanishings,
+projective small resolution, exceptional rank-two map, and full-support
+smoothing relation just verified. They follow from unobstructed
+polarized deformation, the local-to-global smoothing map, the attachment
+sequence, and extension of the two ambient line bundles. The conclusion
+is an existence theorem; we do not assume that its arbitrary holomorphic
+embedding data are evaluated.
+
+\subsection{Rank and algebraic first derivatives of the period map}
+
+Fix the selected $h_*$ and $c_*=(f_1,f_2,h_*)\in\mathcal C$.
+On a sufficiently small coefficient neighbourhood, the complete
+intersections are flat and Gorenstein. Fix the standard algebraic
+trivialization of
+\[
+ K_A\otimes\det(\OO(1,1)^{\oplus2}\oplus\OO(2,2))=\OO_A
+\]
+and the order of the equations. Adjunction gives a single relative
+residue generator $\Psi$, including at nodal fibres. Local Morse
+coordinates and the sphere integral give holomorphic periods
+\begin{equation}\label{eq:coefficient-period-units}
+ P_i(c)=\tau_i(c)u_i(c),\qquad u_i(c_*)\ne0.
+\end{equation}
+The attachment relations hold on the common exterior and its nearby
+fillings. They imply $P(c)\in R$ on smooth fibres, and then
+everywhere by holomorphic continuation.
+
+Apply the preceding existence theorem to this selected central
+member. Its relative embedding supplies a holomorphic coefficient
+map $j$ from a ball in $R$ with $j(0)=c_*$. The quotient of
+$j^*\Psi$ by $\Omega$ is a holomorphic unit on the total space.
+Properness, connected fibres and $H^0(\OO_{X_p})=\CC$ imply
+$\pi_*\OO=\OO$, so this quotient is a unit $a(p)$ on the base.
+Consequently
+\begin{equation}\label{eq:rank-period-map}
+             P(j(p))=a(p)p,\qquad DP_{c_*}\circ Dj_0=a(0)I_R.
+\end{equation}
+Thus $DP_{c_*}$ has rank six. Only existence of $j$ was used;
+no numerical inversion of that particular map is required.
+
+The node coordinates are algebraic quartic roots and can be isolated.
+At each node choose a nonzero two-equation Jacobian minor and
+eliminate its two variables. The first two jets of the remaining
+four-variable equation are algebraic. Its central Hessian is
+nonsingular; symmetric elimination and algebraic square roots put
+its quadratic part into $\sum w_j^2$. The critical value derivative
+$\dd\tau_i(c_*)$ is therefore algebraic. If $a_i\ne0$ is the
+algebraic central residue coefficient in these coordinates, scaling
+the three-sphere gives
+\begin{equation}\label{eq:period-first-derivative}
+       \dd P_i(c_*)=\epsilon_i\pi^2a_i\,\dd\tau_i(c_*),
+                   \qquad\epsilon_i\in\{1,-1\}.
+\end{equation}
+The unit's leading term uses only the linear Jacobian and residue
+value; higher Morse terms do not contribute because the period
+contains the factor $\tau_i$. The full bounded version of this
+calculation is proved in Section~\ref{sec:local-periods}.
+
+Test the finitely many signs in \eqref{eq:period-first-derivative}
+for which the two block row sums vanish, after dividing by $\pi^2$.
+These are algebraic equality tests. The attachment relations and
+rank six show that a compatible choice exists and that its two
+block rows span the entire left kernel. Other successful choices
+differ by a common sign on each block. This uses only the known
+source relations, not coordinates of any local sphere in the global
+middle lattice.
+
+Retain the first three rows in each block to identify $R$ with
+$\CC^6$. The resulting $6\times132$ derivative has a nonzero
+six-column minor. Removing its common power of $\pi^2$ makes
+selection of such a minor an exact algebraic operation. The six
+coordinate directions define an affine six-plane through $c_*$,
+with algebraic coefficients at algebraic parameter values. This is
+the slice required in Theorem~\ref{thm:evaluated-periods}. That
+theorem supplies an evaluated inverse on a known full period ball
+and a smooth algebraic reference fibre. No ratio restriction on
+its nonzero periods has been introduced.
