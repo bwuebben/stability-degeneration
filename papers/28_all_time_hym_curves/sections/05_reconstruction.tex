@@ -1,0 +1,291 @@
+\section{The global comparison metric}\label{sec:reconstruction}
+
+Return to the family of Section~\ref{sec:geometry}. All parameters
+are constant during a trajectory. Let $H(s)$ solve
+\eqref{eq:finite-flow} in a fixed product ball about $o$. Put
+\begin{equation}\label{eq:small-parameters}
+ \alpha_* =\max(|\alpha_+|,|\alpha_-|),\qquad
+ \rho=\epsilon_*,\qquad \ell=1+|\log\rho|,\qquad
+ \sigma=\alpha_*^2+\epsilon_*.
+\end{equation}
+We always take $\alpha_*\to0$ and $L_*\to\infty$, with no
+restriction on their ratios or the individual $L_e$. Constants in
+this section depend on the fixed component data and product ball.
+They can be chosen uniformly over unitary transports. The physical
+speed is $O(\sigma)$; its product with $L_*$ need not be bounded.
+
+For later estimates define
+\begin{align}
+ d_e&=d(H_i,U_{ij}H_jU_{ij}^*),&
+ F_{\mathrm{ed}}&=\sum_e\epsilon_e d_e,&
+ E_{\mathrm{ed}}&=\sum_e\epsilon_e d_e^2,\label{eq:edge-quantities}\\
+ m_i&=\|[T_i,H_i]\|,&
+ F_{\mathrm{co}}&=\sum_{i=+,-}\alpha_i^2\kappa_i
+                            \sqrt{2f_{T_i}(H_i)},&
+ V&=\|\dot H\|_{g_A}.\label{eq:component-quantities}
+\end{align}
+Write $F=F_{\mathrm{ed}}+F_{\mathrm{co}}$. Fixed factors $2\pi$
+are absorbed in constants. Smoothness on the bounded matrix range and
+\eqref{eq:cosh-potential} give
+\begin{equation}\label{eq:force-energy-relations}
+ \begin{gathered}
+ V\le CF,\qquad F_{\mathrm{ed}}\le C\epsilon_*,
+ \qquad |\dot B_{ij}|\le CV,\\
+ F_{\mathrm{ed}}^2\le C\epsilon_*E_{\mathrm{ed}},\qquad
+ \sum_i\alpha_i^2m_i^2+E_{\mathrm{ed}}\le C\Phi(H),
+ \qquad \sum_i\alpha_i^2m_i\le CF_{\mathrm{co}}.
+ \end{gathered}
+\end{equation}
+For example $[T,e^S]=\int_0^1e^{(1-t)S}[T,S]e^{tS}\,dt$
+bounds $m_i$ by $C\|[T_i,\log H_i]\|$. The finite number of
+edges gives the first inequality on the second line by
+Cauchy--Schwarz.
+
+\subsection{Component Green functions and node profiles}
+Let $g_{ie}$ be the mean-zero Green function on the fixed component
+$C_i$ with
+\begin{equation}\label{eq:green}
+ \Delta_i g_{ie}=-2\pi\delta_{p_{ie}}+2\pi/A_i,
+ \qquad g_{ie}(u)=\log|u|+\gamma_{ie}(u).
+\end{equation}
+In the harmonic unitary gauge put
+\begin{equation}\label{eq:component-correction}
+ \xi_i=-\sum_{e=ij}\epsilon_e B_{ij}g_{ie},
+ \qquad K_i=H_i e^{\xi_i},\qquad
+ \Delta_i\xi_i=-\frac{2\pi}{A_i}\sum_{e=ij}\epsilon_e B_{ij}
+\end{equation}
+off the punctures. The matrices $\xi_i$ are $H_i$-self-adjoint
+and trace-free. On the component cut off at radius $\rho/2$, the
+fixed Green functions give
+\begin{equation}\label{eq:green-bounds}
+ \begin{gathered}
+ \|\xi_i\|_\infty\le C\ell F_{\mathrm{ed}},\qquad
+ \int(|\xi_i|+|\nabla\xi_i|)\le CF_{\mathrm{ed}},\qquad
+ \int|\xi_i|^2\le CF_{\mathrm{ed}}^2,\\
+ \int|\nabla\xi_i|^2\le C\ell F_{\mathrm{ed}}^2,
+ \qquad \int|\xi_i||\Delta_i\xi_i|\le CF_{\mathrm{ed}}^2,
+ \qquad \int|\partial_s\xi_i|\le C\epsilon_*V.
+ \end{gathered}
+\end{equation}
+The logarithmic loss comes only from the integral of $|\nabla\log|u||^2$.
+
+At incidence $ie$ expand
+\begin{equation}\label{eq:regular-split}
+ \xi_i(u)=-\epsilon_e B_{ij}\log|u|+c_{ie}+q_{ie}(u),
+ \qquad q_{ie}(0)=0,\qquad P_{ie}=H_i e^{c_{ie}}.
+\end{equation}
+The constant $c_{ie}$ is the regular part of the complete Green sum,
+including all other punctures of the component. It satisfies
+$|c_{ie}|\le CF_{\mathrm{ed}}$, and on
+$\rho\le|u|\le2\rho$,
+\begin{equation}\label{eq:regular-bounds}
+ |\nabla^kq_{ie}|\le CF_{\mathrm{ed}}\rho^{1-k}
+ \quad(0\le k\le2).
+\end{equation}
+The corresponding time derivatives have $F_{\mathrm{ed}}$ replaced
+by $\epsilon_*V$.
+
+In the node frame at its $i$ end define
+\begin{equation}\label{eq:node-profile}
+ N_e(s,u)=\Geo(P_{ie},U_{ij}P_{je}U_{ij}^*;\theta_e),
+ \qquad \theta_e=-\epsilon_e\log|u|.
+\end{equation}
+Here $\Geo(P,Q;\theta)=P\exp(\theta\log(P^{-1}Q))$.
+The expression from the opposite end gives the same metric: the
+parameter becomes $1-\theta_e$ because $uv=\tau_e$ and
+$\epsilon_e L_e=1$. This identity requires the individual
+$\epsilon_e$, rather than the largest $\epsilon_*$. For each
+fixed time, $N_e^{-1}\partial N_e$ is a constant matrix times
+$\partial\log|u|$, so its Chern curvature vanishes on the annulus.
+Its endpoint velocities are at most $CV$.
+
+Let $\chi(|u|/\rho)$ be a smooth radial cutoff, zero near the inner
+circle of the collar $\rho<|u|<2\rho$ and one near the outer circle.
+The component metric in the same flat node frame is $G_{ie}^*K_iG_{ie}$.
+On the collar set
+\begin{equation}\label{eq:collar-metric}
+ \widehat K=H_i\exp\bigl((1-\chi)\log(H_i^{-1}N_e)
+             +\chi\log(H_i^{-1}G_{ie}^*K_iG_{ie})\bigr).
+\end{equation}
+Use $K_i$ on the component exterior and $N_e$ on the middle node.
+All logarithms in \eqref{eq:collar-metric} are $H_i$-self-adjoint
+and trace-free. These formulas therefore give a smooth positive metric
+on the actual bundle, with the same determinant as $h_0$. They are
+equivariant under the constant unitary node transitions. Since
+$\epsilon_*\ell\to0$, the component corrections are small and
+the comparison metrics have fixed two-sided bounds for all times.
+On every fixed compact component region,
+\begin{equation}\label{eq:compact-reconstruction}
+ d(\widehat K(H),H_i)\le C\epsilon_*.
+\end{equation}
+
+\subsection{The full component curvature calculation}
+For spatially constant $H_i$ in the harmonic gauge, put
+$B_i=H_i^{-1}T_iH_i$. The Chern connection satisfies
+\[
+ H_i^{-1}\partial_{D_i}H_i
+       =-i\alpha_i(B_i-T_i)\vartheta_i^{1,0},\qquad
+ F_{H_i}=\alpha_i^2[T_i,B_i]
+                  \vartheta_i^{1,0}\wedge\vartheta_i^{0,1}.
+\]
+With our metric convention,
+$2i\Lambda(\vartheta_i^{1,0}\wedge\vartheta_i^{0,1})
+=|\vartheta_i|^2=\kappa_i/A_i$. Thus
+\begin{equation}\label{eq:constant-curvature}
+ \mathcal C_i(H_i):=2i\Lambda_iF_{H_i}
+      =\frac{\alpha_i^2\kappa_i}{A_i}
+                  [T_i,H_i^{-1}T_iH_i].
+\end{equation}
+Equations \eqref{eq:finite-flow} and \eqref{eq:component-correction}
+give the exact leading cancellation
+\begin{equation}\label{eq:component-cancellation}
+ H_i^{-1}\dot H_i+\mathcal C_i(H_i)+\Delta_i\xi_i=0.
+\end{equation}
+
+We record how the complete Chern expression is controlled, since its
+ordered terms are needed on an unbounded time interval. The identity
+\[
+ K_i^{-1}\partial_{D_i}K_i
+  =e^{-\xi_i}(H_i^{-1}\partial_{D_i}H_i)e^{\xi_i}
+                         +e^{-\xi_i}\partial_{D_i}e^{\xi_i}
+\]
+and the exact formula
+\[
+ e^{-\xi}\partial e^\xi
+       =\int_0^1 e^{-t\xi}(\partial\xi)e^{t\xi}\,dt
+\]
+imply, after covariant differentiation,
+\begin{equation}\label{eq:chern-remainder}
+ \begin{split}
+ |2i\Lambda_iF_{K_i}-\mathcal C_i(H_i)-\Delta_i\xi_i|
+ \le C\bigl(&\alpha_*|\nabla\xi_i|+\alpha_*^2|\xi_i|
+              +|\nabla\xi_i|^2+|\xi_i||\Delta_i\xi_i|\bigr).
+ \end{split}
+\end{equation}
+Indeed the first two errors have respectively one connection
+coefficient and a derivative of $\xi_i$, or two connection
+coefficients and $\xi_i$. The coefficients of $\vartheta_i$ are
+constant in flat coordinates. The remaining errors come from the
+exponential integral and contain two derivatives of $\xi_i$ or its
+product with its Laplacian. Further factors of $\xi_i$ are absorbed
+by its small supremum norm. On rational components $\alpha_i=0$.
+The time identity bounds
+$|K_i^{-1}\partial_sK_i-H_i^{-1}\dot H_i|$ by
+$C(|\partial_s\xi_i|+V|\xi_i|)$.
+
+Combining these statements with \eqref{eq:green-bounds} gives the
+component residual bound
+\begin{equation}\label{eq:component-residual}
+ \begin{split}
+ \int|\cR(K_i)|\le C\bigl(&\epsilon_*V+VF_{\mathrm{ed}}
+                 +\ell F_{\mathrm{ed}}^2
+                 +\alpha_*F_{\mathrm{ed}}
+                 +\alpha_*^2F_{\mathrm{ed}}\bigr)\\
+       &\le C(\alpha_*+\epsilon_*\ell)(F+V).
+ \end{split}
+\end{equation}
+The branch identification preserves both the complex structure and
+the reference connection exactly. Transfer to the fibre changes only
+the metric contraction and area. Lemma~\ref{lem:geometric-estimates}
+adds at most
+\begin{equation}\label{eq:transfer-residual}
+ Cb^2\rho^{-N}(F+V)
+\end{equation}
+for one fixed finite $N$. To retain this force factor, note that the
+constant-metric curvature in \eqref{eq:constant-curvature} is
+bounded by $C\alpha_i^2m_i$; every other spatial term contains
+$\xi_i$ or its derivatives. The latter lose only fixed powers of
+$\rho^{-1}$. The middle-node time residual has integral at most
+$C\rho^2V$, since its spatial curvature vanishes and its area is
+$O(\rho^2)$. These estimates already have the desired integrable
+form on a small finite basin. The incidence collars require the
+additional argument in the next section.
+
+\subsection{Energy and dependence on the finite tuple}
+The comparison metric has an integrated energy bound even without
+the small-ball force estimate.
+
+\begin{lemma}\label{lem:reconstruction-energy}
+On every fixed finite ball, for sufficiently small joint parameters,
+\begin{equation}\label{eq:reconstruction-energy}
+ \int_{C_\tau}|D\widehat K(H)|^2\le C\Phi(H),\qquad
+ \int_0^\infty\!\int_{C_\tau}|D\widehat K(H(s))|^2
+                     \le C d_A(H(0),o)^2.
+\end{equation}
+Also the map $H\mapsto\widehat K(H)$ is uniformly Lipschitz from
+that ball to the integrated distance on $C_\tau$:
+\begin{equation}\label{eq:reconstruction-lipschitz}
+ \int_{C_\tau}d(\widehat K(H),\widehat K(H'))^2
+                                      \le C d_A(H,H')^2.
+\end{equation}
+Constants are uniform in the unitary transports and all scale ratios.
+\end{lemma}
+
+\begin{proof}
+The component derivative is covariant with respect to
+$D_i=d-i\alpha_i[T_i,\cdot]\vartheta_i$. From
+\eqref{eq:green-bounds} and bounded differentials of the exponential,
+\begin{equation}\label{eq:component-energy}
+ \int|D_iK_i|^2\le C\bigl(\alpha_i^2m_i^2
+                       +(\ell+\alpha_i^2)F_{\mathrm{ed}}^2\bigr).
+\end{equation}
+Real one-form energy on a Riemann surface is conformally invariant,
+so the exact holomorphic identification transfers this inequality
+to the fibre without a metric error. Its sum is bounded by $C\Phi$
+using \eqref{eq:force-energy-relations} and $\epsilon_*\ell\to0$.
+
+The two corrected endpoints at edge $e$ have distance at most
+$d_e+CF_{\mathrm{ed}}$. Constant geodesic speed in
+\eqref{eq:node-profile} gives middle-node energy at most
+\[
+ C\epsilon_e^2(L_e+2\log\rho)(d_e+F_{\mathrm{ed}})^2
+       \le C\epsilon_e(d_e+F_{\mathrm{ed}})^2.
+\]
+Its sum is again bounded by $C\Phi$.
+
+On a collar, let $\delta_{ie}$ be the difference of the two
+relative logarithms in \eqref{eq:collar-metric}. Differentiating
+$G_{ie}^*H_iG_{ie}$ first retains the factor $m_i$ in its first
+derivative. The action on $\xi_i$ contributes the other gauge
+term below. The regular Green part and the mixed endpoint/geodesic
+expansion give
+\begin{equation}\label{eq:collar-discrepancy}
+ \begin{split}
+ |\delta_{ie}|+\rho|\nabla\delta_{ie}|&\le C a_{ie},\\
+ a_{ie}&=|\alpha_i|\rho m_i+
+       |\alpha_i|\rho\ell F_{\mathrm{ed}}+
+       \rho F_{\mathrm{ed}}+\epsilon_e\ell F_{\mathrm{ed}}.
+ \end{split}
+\end{equation}
+For the last term, at zero endpoint corrections the node logarithm
+is exactly $\theta_e B_{ij}$; at $\theta_e=0$ it is $c_{ie}$.
+The remainder from their sum vanishes on both axes and is at most
+$C\theta_e F_{\mathrm{ed}}$, with the corresponding derivative
+bounds. Since $\theta_e\le C\epsilon_e\ell$ on the collar,
+this gives the displayed term. The derivative of the radial node
+logarithm is at most
+$C\rho^{-1}\epsilon_e(d_e+F_{\mathrm{ed}})$.
+Consequently the collar energy of the interpolated logarithms is
+at most
+\[
+ C\bigl(\epsilon_e^2(d_e+F_{\mathrm{ed}})^2+a_{ie}^2\bigr).
+\]
+Here the cutoff derivative contributes $\rho^{-1}$ and the
+Euclidean collar area contributes $O(\rho^2)$. Every term is
+bounded by $C\Phi$ after summing incidences: use
+\eqref{eq:force-energy-relations}, $\rho=\epsilon_*$ and bounded
+$\epsilon_*\ell$. This proves the instantaneous energy bound.
+Integrating \eqref{eq:finite-energy} proves the second bound of
+\eqref{eq:reconstruction-energy}.
+
+For \eqref{eq:reconstruction-lipschitz}, the endpoint/logarithm
+maps have bounded derivatives on the finite ball. Component Green
+functions have bounded $L^2$ norms and coefficients $\epsilon_e$.
+Their supremum on the truncated component is bounded after
+multiplication by $\epsilon_e$. On middle nodes
+$0\le\theta_e\le1$, so geodesic endpoint dependence is bounded;
+their total area is $O(\rho^2)$. The same smooth endpoint
+dependence and the bounded collar logarithms apply to
+\eqref{eq:collar-metric}. Integrating along a finite geodesic from
+$H$ to $H'$ and using Cauchy--Schwarz proves the stated estimate.
+\end{proof}

@@ -1,0 +1,97 @@
+\section{The finite metric evolution}\label{sec:finite-flow}
+
+Let $\cP_r$ be the positive Hermitian determinant-one
+matrices, with metric
+$g_P(V,W)=\tr(P^{-1}VP^{-1}W)$. Its distance and geodesic are
+\begin{equation}\label{eq:matrix-geometry}
+ \begin{split}
+ d(P,Q)^2&=\tr\!\left(\log(P^{-1/2}QP^{-1/2})^2\right),\\
+ \Geo(P,Q;\theta)&=P^{1/2}
+ \exp\!\left(\theta\log(P^{-1/2}QP^{-1/2})\right)P^{1/2}.
+ \end{split}
+\end{equation}
+This is a complete simply connected symmetric space of
+nonpositive curvature; see \cite[Sections~2.3--2.6]{bhatia}.
+Unitary congruences act isometrically and fix $I$.
+On $\cP_r^4$ use the product metric with weights $A_i$.
+With physical weights \eqref{eq:weights}, define
+\begin{equation}\label{eq:finite-potential}
+ \Phi_{\tau,U}(\mathbf H)
+ =\frac12\sum_{e=ij}w_e
+          d(H_i,U_{ij}H_jU_{ij}^*)^2.
+\end{equation}
+
+\begin{proposition}\label{prop:finite-flow}
+The negative gradient flow of \eqref{eq:finite-potential} is
+\begin{equation}\label{eq:finite-flow}
+ H_i^{-1}\dot H_i=\frac1{A_i}\sum_{e=ij}w_e B_{ij},
+ \qquad B_{ij}=\log(H_i^{-1}U_{ij}H_jU_{ij}^*).
+\end{equation}
+For initial tuples in a fixed bounded ball, it exists for all
+physical times $s\ge0$ and remains in a compact matrix range
+independent of $\tau,U$. Distances between two such solutions
+with the same parameters are nonincreasing. On that range the
+vector field and every fixed-order tuple derivative are
+$O(L_*^{-1})$, uniformly in all length ratios and $U$.
+\end{proposition}
+\begin{proof}
+The gradient of $\frac12d(P,Q)^2$ with respect to $P$
+is $-\Log_PQ=-P\log(P^{-1}Q)$. Summing the incident
+terms and dividing by $A_i$ gives \eqref{eq:finite-flow}.
+Each $B_{ij}$ is $H_i$-self-adjoint and trace free,
+so the velocity is tangent to $\cP_r$. The reverse
+identity is $B_{ji}=-U_{ij}^*B_{ij}U_{ij}$; no
+commutation of the endpoint metrics is used.
+
+Squared distance is jointly geodesically convex on
+this Hadamard manifold. Hence $\Phi$ is convex and
+vanishes at $\mathbf I=(I,I,I,I)$. If $D_A$ is the
+weighted product distance, gradient-flow convexity gives
+\begin{equation}\label{eq:finite-confinement}
+ \frac d{ds}\frac12D_A(\mathbf H,\mathbf I)^2
+ \le-\Phi(\mathbf H).
+\end{equation}
+Closed bounded subsets are compact, so the smooth
+vector field continues for all time. Applying the
+same convexity inequality at the two endpoints of
+the joining geodesic proves nonexpansion between
+two solutions. Finally \eqref{eq:finite-flow} is a
+finite sum of smooth matrix functions with coefficients
+$w_e\le2\pi/L_*$. All tuple derivatives are bounded
+on the confined range, uniformly in the compact
+unitary parameter space. In particular
+$|\dot B_{ij}|\le C/L_*$.
+\end{proof}
+
+The zero set of $\Phi$ consists of compatible metric
+tuples. On irreducible unitary representations this set
+is $\{\mathbf I\}$ by Schur's lemma and determinant
+one. On reducible representations it is generally
+positive-dimensional.
+
+\begin{lemma}\label{lem:finite-coercivity}
+Put $S_i=\log H_i$ and $R_f=\sum_iA_i\|S_i\|^2$.
+Then
+\[
+ \Phi(\mathbf H)\ge\tfrac12Q_{\tau,U}(S)
+ \ge\tfrac12\nu_0R_f,\qquad
+ R_f(s)\le e^{-\nu_0s}R_f(0).
+\]
+\end{lemma}
+\begin{proof}
+The exponential map at $I$ expands distances in this
+nonpositively curved symmetric space. Since unitary
+congruence commutes with the exponential,
+$d(H_i,UH_jU^*)\ge\|S_i-US_jU^*\|$.
+This proves the energy inequalities. Moreover
+$R_f=D_A(\mathbf H,\mathbf I)^2$, so
+\eqref{eq:finite-confinement} gives
+$R_f'\le-2\Phi\le-\nu_0R_f$.
+\end{proof}
+
+The finite equation has the same linearization
+$\dot X=-B_{\tau,U}X$ as the effective spectral
+operator. Its nonlinear variables need not commute.
+For Example~\ref{ex:noncommuting}, no fixed simultaneous
+diagonalization of the cycle transports reduces the
+equation to independent scalar vertex equations.

@@ -1,0 +1,298 @@
+\section{Reconstruction and the actual HYM flow}\label{sec:actual-flow}
+
+On the actual rank-four bundle we use physical time $s$ and the equation
+\begin{equation}\label{eq:hym-flow}
+ h^{-1}\partial_sh=-2i\Lambda_{\omega_t}F_h.
+\end{equation}
+The Einstein constant is zero. All base and bundle parameters are fixed
+in this equation. Relative to $h_0$, all metrics under consideration
+have determinant one. For two rank-$r$ metrics put
+\begin{equation}\label{eq:trace-distance}
+ \sigma_r(h,k)=\tr(h^{-1}k+k^{-1}h)-2r.
+\end{equation}
+This expression is intrinsic, nonnegative, and at least $d_r(h,k)^2$.
+On a fixed positive metric range it is uniformly equivalent to that
+squared distance. For an approximate metric $k$, write
+\[
+ \mathcal R(k)=k^{-1}\partial_sk+2i\Lambda_{\omega_t}F_k.
+\]
+
+\begin{theorem}\label{thm:actual-tracking}
+For each effective trajectory of \eqref{eq:finite-flow} with initial tuple
+in a fixed bounded set, and all sufficiently small $t$, there is a smooth
+determinant-one comparison metric $\widehat K(s)$ on $\cB_{t,\theta}$,
+defined for every $s\ge0$, with uniform positive bounds against $h_0$,
+such that
+\begin{equation}\label{eq:global-residual}
+ \sup_{s\ge0}\int_{X_t}|\mathcal R(\widehat K(s))|_{\op}\,dV_t
+        \le C\frac{(1+\log L)^2}{L^2}.
+\end{equation}
+Let $h(s)$ solve \eqref{eq:hym-flow} from any smooth determinant-one
+metric with $ch_0\le h(0)\le Ch_0$, for fixed positive bounds.
+Set $\eta=\int_{X_t}\sigma_4(h(0),\widehat K(0))\,dV_t$ and
+$e_L=(1+\log L)^2/L$. Then, for every $T\ge0$,
+\begin{equation}\label{eq:bounded-tracking}
+ \sup_{0\le s\le TL}\int_{X_t}d_4(h(s),\widehat K(s))^2\,dV_t
+          \le\eta+CTe_L.
+\end{equation}
+The constants are independent of $\theta$, $t$, $s$ and $T$ in their
+stated domains. The exact initial metric need not be a tensor metric.
+\end{theorem}
+
+\subsection{Equivariant reconstruction on the elliptic family}
+The reconstruction uses a component correction cancelling the leading
+velocity, flat geodesic interpolation on the necks, and an estimate
+for their mismatch on the collars. We then tensor with the fixed
+K3 metric and descend, keeping the full contracted Chern equation.
+Put $\epsilon=L^{-1}$ and choose mean-zero component Green functions
+\begin{equation}\label{eq:greens}
+ \Delta_jg_{je}=-2\pi\delta_{p_{je}}+\frac{2\pi}{A_j},\qquad
+ g_{je}=\log|u|+\gamma_{je}(u),
+\end{equation}
+where $\Delta_j$ is the nonnegative scalar Laplacian on $D_j$ and
+$u$ is its node coordinate. Uniqueness makes these functions equivariant
+under the isometry $\sigma$. The two actual incoming transports to
+component $j$ are $U_{j,j-1}=R$ and $U_{j,j+1}=R^*$.
+Define
+\begin{equation}\label{eq:component-correction}
+ B_{je}=\log(H_j^{-1}U_{jk}H_kU_{jk}^*),\qquad
+ \xi_j=-\sum_{e\ni j}B_{je}g_{je},\qquad K_j=H_j e^{\epsilon\xi_j}.
+\end{equation}
+The logarithms are $H_j$-self-adjoint and trace-free. On the punctured
+component, the effective equation gives the exact cancellation
+\begin{equation}\label{eq:component-cancellation}
+ \epsilon\Delta_j\xi_j=-H_j^{-1}\dot H_j.
+\end{equation}
+
+Cut at radius $\rho=L^{-1}$. At incidence $je$ write
+\[
+ \xi_j=-B_{je}\log|u|+c_{je}+q_{je}(u),\qquad q_{je}(0)=0.
+\]
+The corrected endpoint is $P_{je}=H_je^{\epsilon c_{je}}$.
+On the node $j,k$, in the $j$ incidence frame, use
+\begin{equation}\label{eq:node-geodesic}
+ N_e(u)=\Geo(P_{je},U_{jk}P_{ke}U_{jk}^*;-\epsilon\log|u|).
+\end{equation}
+Reversing the geodesic and using $uv=t$ gives the same metric in the
+other incidence frame. For each fixed time this node metric has zero
+Chern curvature: if $P,Q$ are fixed endpoints, it is
+$P\exp(-\epsilon\log|u|\log(P^{-1}Q))$, whose logarithmic derivative
+has zero $\bar\partial$ away from the puncture.
+
+Interpolate relative logarithms between $K_j$ and $N_e$ on
+$\rho<|u|<2\rho$. Choose paired cutoffs, component transfers and node
+charts under the involution. On fixed components the required smooth
+transfer maps can be obtained from invariant lifts of base vector fields.
+No holomorphic product trivialization is assumed. The operations
+in \eqref{eq:component-correction}--\eqref{eq:node-geodesic} commute
+with unitary transport, geodesic reversal and the actual lift
+\eqref{eq:projective-lift}. Thus the resulting curve metric $K_E(s)$
+is invariant in component \emph{and} node frames.
+
+We give the residual estimate for this full Chern construction.
+In a flat holomorphic frame, with
+$\omega_{E_t}=(i/2)a\,dz\wedge d\bar z$, the actual equation is
+\begin{equation}\label{eq:curve-chern-flow}
+ \partial_sH=4a^{-1}(H_{z\bar z}-H_{\bar z}H^{-1}H_z).
+\end{equation}
+In real coordinates it contains
+$i(H_xH^{-1}H_y-H_yH^{-1}H_x)$ as well as the two symmetric quadratic
+terms. This commutator is retained in all curvature estimates below.
+
+Effective-flow confinement and speed give, uniformly for all $s\ge0$,
+\begin{equation}\label{eq:green-bounds}
+ \begin{gathered}
+ |B_{je}|\le C,\qquad |\dot B_{je}|\le C\epsilon,\qquad
+ \|\xi\|_\infty\le C(1+|\log\rho|),\\
+ \int\bigl(|\xi|+\epsilon^{-1}|\dot\xi|+|\nabla\xi|\bigr)\le C,
+ \qquad \int|\nabla\xi|^2\le C(1+|\log\rho|).
+ \end{gathered}
+\end{equation}
+These integrals are over the truncated components with their fixed metrics.
+The identity
+\[
+ e^{-h}\partial e^h=\int_0^1e^{-uh}(\partial h)e^{uh}\,du
+\]
+and its differentiated form show that the component residual, after
+\eqref{eq:component-cancellation}, is bounded by the integrals of
+\[
+ C\epsilon^2\bigl(|\xi|+|\xi|\,|\Delta_j\xi|
+                                 +|\nabla\xi|^2\bigr).
+\]
+The second derivative is contracted before taking its norm: in complex
+dimension one the $\bar\partial\partial\xi$ term in each conjugation
+is a scalar multiple of $\Delta_j\xi$. Differentiating the conjugating
+factors gives the displayed quadratic-gradient terms. Since
+$\Delta_j\xi$ on the punctured component is bounded, the residual is
+$O(\epsilon^2(1+|\log\rho|))$ after integration.
+The time derivative of the correction has the same bound by
+\eqref{eq:green-bounds} and $H_j^{-1}\dot H_j=O(\epsilon)$.
+
+Here is the collar estimate which allows matching without losing this
+order. For small endpoint logarithms $C_j,C_k$, let $D(C_j,C_k;u)$
+be the relative logarithm at $H_j$ of
+$\Geo(H_je^{C_j},U_{jk}H_ke^{C_k}U_{jk}^*;u)$, minus
+$C_j+uB_{je}$. On the confined matrix range it is smooth, and
+\[
+ D(0,0;u)=0,\qquad D(C_j,C_k;0)=0.
+\]
+Bounded mixed derivatives imply
+$|D|\le C(|C_j|+|C_k|)|u|$ and
+$|\partial_uD|+|\partial_u^2D|\le C(|C_j|+|C_k|)$.
+Substitute $C_j=\epsilon c_{je}$, $C_k=\epsilon c_{ke}$ and
+$u=-\epsilon\log|z|$. Including the regular part $q_{je}$ gives
+the mismatch bound, through two spatial derivatives,
+\begin{equation}\label{eq:collar-mismatch}
+ C\bigl(\epsilon\rho^{1-k}
+             +\epsilon^2(1+|\log\rho|)\rho^{-k}\bigr),
+ \qquad k=0,1,2.
+\end{equation}
+In the second derivative the additional term of order
+$\epsilon^3\rho^{-2}$ is absorbed by the displayed bound.
+
+The curvature difference from the exactly flat node profile contains
+the second derivative of this mismatch, its first derivative times the
+node logarithmic derivative $O(\epsilon/\rho)$, and its zeroth
+derivative times the corresponding second-derivative and quadratic
+terms. Cutoff derivatives have the same orders in $\rho$.
+Since the collar area is $O(\rho^2)$, its integrated residual is
+\[
+ C\bigl(\epsilon\rho+
+                 \epsilon^2(1+|\log\rho|)^2\bigr).
+\]
+The middle-node time residual is $O(\epsilon\rho^2)$; its spatial
+Chern curvature is zero. Transfer to the actual smooth fibre adds
+$C|t|\rho^{-N}$ for a fixed finite $N$, by the smooth plumbing
+metric coefficients and the two derivatives in the contracted equation.
+Putting $\rho=L^{-1}$ proves
+\begin{equation}\label{eq:curve-residual}
+ \sup_{s\ge0}\int_{E_t}
+ |K_E^{-1}\dot K_E+2i\Lambda_{E_t}F_{K_E}|_{\op}\,dA
+       \le C\frac{(1+\log L)^2}{L^2}.
+\end{equation}
+Every time-dependent input was a confined tuple or its
+$O(L^{-1})$ velocity. Thus this is a residual bound on the whole
+physical half-line, including reducible parameters.
+
+\subsection{Exact tensor curvature and descent}
+On the cover set $\widetilde K=h_S\otimes K_E$. Product Chern
+connections give exact identities
+\begin{equation}\label{eq:product-curvature}
+ \begin{split}
+ D_{\widetilde K}&=D_S\otimes I+I\otimes D_{K_E},\\
+ F_{\widetilde K}&=F_{T^{1,0}S}\otimes I+I\otimes F_{K_E},\\
+ \mathcal R(\widetilde K)&=I_{T^{1,0}S}\otimes
+       (K_E^{-1}\dot K_E+2i\Lambda_{E_t}F_{K_E}).
+ \end{split}
+\end{equation}
+The last equality uses the zero mean curvature of $h_S$. Equivariance
+proved above makes $\widetilde K$ descend to $\widehat K$.
+Its determinant is one in the fixed trivialization.
+The operator norm of the tensor residual is unchanged, whereas
+integration divides by the degree two of the cover. Consequently
+\eqref{eq:curve-residual} implies \eqref{eq:global-residual}.
+
+For two tensor metrics there is also the exact distance identity
+\begin{equation}\label{eq:tensor-distance}
+ d_4(h_S\otimes H,h_S\otimes K)^2=2d_2(H,K)^2.
+\end{equation}
+Together with \eqref{eq:k3-volume}, division by the cover degree
+makes their global quotient squared distance equal to the curve
+integral. Neither tensor identity is assumed for an arbitrary exact
+solution $h(s)$.
+
+\subsection{Intrinsic comparison for arbitrary rank-four metrics}
+On each fixed compact smooth fibre, the classical HYM metric flow
+exists for all time; see \cite[Section 4.1, after (4.8)]{hkkp}.
+Order comparison \cite[Proposition 4.3]{hkkp}
+with $ch_0$ and $Ch_0$ preserves
+the bounds, and the scalar determinant equation preserves the
+normalization. These fixed-fibre statements impose no uniform
+Sobolev-constant hypothesis on the degenerating family.
+
+For an exact flow $h$ and a comparison metric $k$ in a common fixed
+positive range, the Chern trace calculation gives
+\begin{equation}\label{eq:forced-trace}
+ (\partial_s+\Delta_{\omega_t})\sigma_4(h,k)
+                \le C|\mathcal R(k)|_{\op}.
+\end{equation}
+For two exact velocities, the intrinsic trace calculation of
+\cite[Proposition 2.4]{wang}, with the coupling section set to zero,
+makes the left side a sum of nonpositive
+quadratic derivative terms in local holomorphic frames. Replacing the
+velocity of $k$ by its exact-flow velocity plus $k\mathcal R(k)$
+adds the traces of $h^{-1}k\mathcal R(k)$ and its inverse-metric
+counterpart. Their absolute values are bounded by the right side
+under the fixed relative bounds. The same calculation is summed over
+all complex coordinate directions. It is intrinsic and therefore
+applies across the nonflat tangent-bundle frames, without reducing
+the exact solution to a tensor ansatz.
+
+\begin{proof}[Proof of Theorem~\ref{thm:actual-tracking}]
+The equivariant construction and \eqref{eq:product-curvature} prove
+the comparison metric and its residual estimate. Integrate
+\eqref{eq:forced-trace} on the closed smooth fibre, so that the
+Laplacian integrates to zero. Its accumulated right side up to time
+$TL$ is at most $CT(1+\log L)^2/L$. Since $d_4^2\le\sigma_4$,
+this proves \eqref{eq:bounded-tracking}. No derivative bound on
+the exact initial metric enters this argument.
+\end{proof}
+
+\begin{theorem}\label{thm:all-time}
+Under the hypotheses of Theorem~\ref{thm:actual-tracking}, assume also
+$\mu_0(\theta)\ge\kappa>0$. For sufficiently small $t$,
+\begin{equation}\label{eq:all-time}
+ \sup_{s\ge0}\int_{X_t}d_4(h(s),\widehat K(s))^2\,dV_t
+       \le C\eta+C_\kappa e_L(1+|\log e_L|).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For the actual flow write $h=h_0H=h_0e^{\Psi}$. Pointwise $\tr \Psi=0$.
+The exact relative Chern equation is
+\[
+ H_s=-D_\theta^*D_\theta H
+       -4\sum_\alpha(D_\alpha H)^*H^{-1}(D_\alpha H).
+\]
+The contracted background-curvature commutator is zero. All quadratic
+terms are retained, including those from noncommuting derivatives.
+Put $F(s)=\int_{X_t}\tr(e^{\Psi}-I)\,dV_t$. On the fixed positive range,
+Taylor's formula and trace freeness give
+\[
+ \frac c2\|\Psi\|_{L^2}^2\le F\le\frac C2\|\Psi\|_{L^2}^2,
+ \qquad -F'\ge\frac{c^2}{C}\int_{X_t}|D_\theta \Psi|^2\,dV_t.
+\]
+For the derivative inequality first bound $H^{-1}\ge C^{-1}I$
+inside the positive quadratic term. The unweighted trace then satisfies
+$4\sum_\alpha\tr((D_\alpha H)^*D_\alpha H)=|D_\theta H|^2$.
+The divided differences of the exponential on the bounded spectrum
+are at least $c$, giving $|D_\theta H|\ge c|D_\theta \Psi|$.
+No commutator is discarded inside a matrix-weighted trace.
+
+There is no trace-free parallel kernel on the stated parameter class.
+Theorem~\ref{thm:five-spectrum} therefore gives
+\[
+ F(s)\le F(0)\exp\left(
+ -\frac{2c^2}{C^2}(1-\varepsilon(t))\frac{2\pi\mu_0(\theta)}{L}s
+ \right).
+\]
+Lemma~\ref{lem:finite-decay} gives a corresponding exponential tail
+for the effective trajectory. The reconstruction is uniformly Lipschitz
+in global $L^2$ on the confined tuple range: the Green coefficients
+have bounded $L^2$ norms multiplied by $L^{-1}$, and the node and
+collar maps have bounded tuple derivatives. It sends the identity tuple
+exactly to $h_0$. Equation~\eqref{eq:tensor-distance} therefore
+transfers effective-flow decay to the comparison metric.
+
+For $s\ge TL$, the exact and reconstructed squared distances to
+$h_0$ are at most $C e^{-c_\kappa T}$. For $s\le TL$, use
+\eqref{eq:bounded-tracking}. Taking $T$ proportional to
+$1+|\log e_L|$ and applying the squared triangle inequality proves
+\eqref{eq:all-time}.
+\end{proof}
+
+The all-time conclusion is uniform on a nonempty stable parameter class.
+At reducibility there are nonidentity parallel metrics, and as
+$\mu_0\to0$ the above tail constants degenerate. The bounded-time
+comparison remains uniform there; extending it to the weakest inverse
+rate requires a further argument.

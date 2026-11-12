@@ -1,0 +1,398 @@
+\section{Introduction}\label{sec:introduction}
+
+When a compact Riemann surface develops nodes, a metric
+on a bundle can equilibrate on the normalization components
+long before the components equilibrate with one another.
+The remaining variables are matrix metrics. Their coupling
+depends on the fibre identifications at the nodes, including
+cycle holonomy that cannot be removed by component frame
+changes. We prove a finite nonlinear reduction of the
+actual Hermitian--Yang--Mills metric flow in this setting.
+The comparison allows independent node lengths and
+noncommuting unitary gluing. It is accompanied by a complete
+relative spectral theorem, entry from spatial initial
+metrics, and geometric and inverse consequences.
+
+The principal family smooths four projective lines in
+general position. Its six nodes have independent exact
+holomorphic equations $u_ev_e=\tau_e$; its smooth fibres
+$C_\tau$ are plane quartics of genus three. We use the
+metric induced by the Fubini--Study form, normalized so
+that a line has area one. The construction in
+Section~\ref{sec:geometry} gives a proper projective
+family and, for every tuple $U=(U_e)\in\SU(r)^6$,
+a holomorphic bundle with flat unitary connection $D_U$,
+parallel metric $h_0$ and trivialized determinant.
+Here $r\ge2$ is fixed. The component connections are
+trivial, and fibre holonomy factors through the free
+group of rank three of the dual graph $K_4$.
+The bundles are polystable of degree zero and are
+stable exactly when this representation is irreducible.
+
+\subsection{The effective equation and the main theorem}
+Transport $U_{ij}$ takes the $j$ component frame to the
+$i$ frame. Set
+\[
+ L_e=\log(1/|\tau_e|),\qquad L_*=\min_eL_e,\qquad
+ w_e=2\pi/L_e .
+\]
+All parameters are fixed during each flow, and the
+degeneration limit is $L_*\to\infty$.
+Let $A_i$ denote the limiting component areas, equal
+to one for the chosen Fubini--Study metric. On the
+real space of trace-free Hermitian tuples
+$\cV=\bigoplus_{i=0}^3\Herm_0(r)$ define
+\[
+ M(X)=\sum_i A_i\tr(X_i^2),\qquad
+ Q_{\tau,U}(X)=\sum_{e=ij}w_e
+       \|X_i-U_{ij}X_jU_{ij}^*\|_{\HS}^2.
+\]
+Let $\nu_0\le\cdots\le\nu_{m-1}$ be the generalized
+eigenvalues of $(Q_{\tau,U},M)$, including zeros,
+where $m=4(r^2-1)$. The actual linearized operator is
+$\Delta_{\tau,U}=D_U^*D_U$ on trace-free
+$h_0$-Hermitian endomorphisms, with the unnormalized
+area norm. Its eigenvalues are denoted by $\lambda_k$.
+
+Write $\cP_r$ for the determinant-one positive
+Hermitian matrices, with symmetric-space metric
+$g_P(V,W)=\tr(P^{-1}VP^{-1}W)$ and distance $d$.
+The finite potential and its negative gradient
+equation, using the area-weighted product metric, are
+\begin{equation}\label{eq:intro-finite}
+ \begin{split}
+ \Phi_{\tau,U}(\mathbf H)
+   &=\frac12\sum_{e=ij}w_e
+                d(H_i,U_{ij}H_jU_{ij}^*)^2,\\
+ H_i^{-1}\dot H_i
+   &=\frac1{A_i}\sum_{e=ij}w_e
+                  \log(H_i^{-1}U_{ij}H_jU_{ij}^*).
+ \end{split}
+\end{equation}
+The exact metric flow uses physical time $s$ and
+the normalization $H^{-1}\partial_sH=-2i\Lambda F_H$.
+For two metrics set
+$\sigma(H,K)=\tr(H^{-1}K+K^{-1}H)-2r$.
+It is intrinsic under frame changes and bounds
+$d(H,K)^2$ from above.
+
+We also specify an initial class that does not
+require an already matched finite tuple. Put
+$\rho=L_*^{-1}$, fix $0<\beta<1$ and $R_0>0$,
+and write an initial metric as $h_0e^S$.
+Let $\Omega_i(2\rho)\subset C_i$ be the complement
+of the incidence discs of radius $2\rho$.
+Pull $S$ back to these component exteriors using
+the fixed geometric identifications and flat
+frames of Section~\ref{sec:geometry}. Require
+\begin{equation}\label{eq:intro-initial-class}
+ \|S\|_{C^0(C_\tau)}
+ +\inf_{\widetilde S_i|_{\Omega_i(2\rho)}=S_i}
+           \sum_i\|\widetilde S_i\|_{C^{6,\beta}(C_i)}
+ <R_0 ,
+\end{equation}
+where the extensions are trace-free Hermitian
+matrices on the fixed components.
+This is a nonempty open class on each smooth
+fibre. Its radius is independent of the degeneration;
+bounded smooth data on the middle necks may have
+arbitrarily large derivatives.
+
+A unitary frame identifies each endomorphism fibre
+with $\operatorname{Mat}_r(\CC)$ and so specifies
+the matrix-algebra marking used below.
+Projective transport means the class of a unitary
+edge map in $\operatorname{PSU}(r)=\SU(r)/Z(\SU(r))$.
+After choosing a base vertex, cycle transports
+are represented in its frame; changing that
+frame conjugates all cycle maps simultaneously.
+
+\begin{theorem}\label{thm:main}
+The compact quartic family and flat bundles above
+have the following properties.
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\item There are $\gamma>0$ and $\epsilon(\tau)\to0$
+as $L_*\to\infty$ such that
+\[
+ (1-\epsilon(\tau))\nu_k\le\lambda_k
+ \le(1+\epsilon(\tau))\nu_k\quad(0\le k<m),
+ \qquad \lambda_m\ge\gamma .
+\]
+The estimates are uniform in all node-length ratios
+and all $U$. The kernel is naturally identified with the space of
+tuples satisfying $X_i=\Ad(U_{ij})X_j$.
+
+\item For finite initial tuples in a fixed bounded
+ball, \eqref{eq:intro-finite} has a confined
+all-time solution. It determines a smooth
+determinant-one comparison metric $\widehat K(s)$
+on the entire $C_\tau$, converging to $H_i(s)$
+on fixed component compact subsets with error
+$O(L_*^{-1})$. If the exact initial metric has
+fixed positive bounds against $h_0$ and
+$\eta=\int_{C_\tau}\sigma(H^{\mathrm{in}},\widehat K(0))\,dA_\tau$,
+then, with $e_*=(1+\log L_*)^2/L_*$,
+\[
+ \sup_{0\le s\le TL_*}\int_{C_\tau}
+       d(H(s),\widehat K(s))^2\,dA_\tau
+       \le\eta+CTe_*\qquad(T\ge0).
+\]
+The constants are independent of $T$, the
+node-length ratios and the unitary transports.
+
+\item For the spatial initial class
+\eqref{eq:intro-initial-class}, the component
+flows select a bounded tuple $P$ and there is
+a uniform preparation time $s_*\to\infty$,
+$s_*/L_*\to0$, such that the comparison in
+part~{\rm(ii)} applies to $H(s_*+s)$ and the
+finite flow starting at $P$, with initial
+error $\eta_*\to0$ uniformly over that class.
+
+\item If $L_*\nu_0\ge\kappa>0$, then for the
+initial data and discrepancy in part~{\rm(ii)}
+\[
+ \sup_{s\ge0}\int_{C_\tau}d(H(s),\widehat K(s))^2\,dA_\tau
+ \le C\eta+C_\kappa e_*(1+|\log e_*|).
+\]
+The same conclusion holds after the preparation
+in part~{\rm(iii)}, with $\eta_*$ in place of $\eta$.
+
+\item On the common-node slice $\tau_e=t$, put
+$L=\log(1/|t|)$. The graph representation
+quotient $\SU(r)^{6,\mathrm{irr}}/\SU(r)^4$
+embeds as a Lagrangian locus in the irreducible
+flat-bundle moduli space of $C_t$.
+Its pullback Hodge squared norm is $2\pi/L$
+times the quotient of the bi-invariant product
+squared norm on $\SU(r)^6$, with relative
+error $O(L^{-1})$ uniform towards reducibility.
+Moreover, the first $m$ eigenvalues and the
+component averages of their $L^2$-orthonormal
+eigensections, in fixed unitary matrix-algebra
+frames, consistently determine the projective
+edge transports. Cycle transports are recovered
+up to root conjugation. Central lifts are not
+determined by these observations.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Propositions~\ref{prop:compact-family} and
+\ref{prop:bundle} construct the family, bundle
+and holonomy representation. Theorem~\ref{thm:spectrum}
+proves part~(i).
+Proposition~\ref{prop:finite-flow} and
+Theorem~\ref{thm:tracking} prove part~(ii);
+Theorems~\ref{thm:component-phase} and
+\ref{thm:entry} give the component limits and preparation
+in part~(iii).
+Theorem~\ref{thm:all-time} gives part~(iv).
+The moduli statement is Theorem~\ref{thm:moduli-metric},
+and the observed-operator construction of
+Lemma~\ref{lem:marked-operator} together with
+Theorem~\ref{thm:projective-inverse} gives the
+last assertion. All these constructions use
+the same quartic family, flat bundles and
+metric normalization.
+\end{proof}
+
+The relative estimate in part~(i) controls every
+positive small eigenvalue even when its ratio
+to the largest weight tends to zero. It does
+not imply nonlinear tracking on the inverse
+of that weakest eigenvalue. For example,
+Proposition~\ref{prop:three-scales} realizes
+orders $h,h^2,h^4$ on actual stable rank-two
+bundles. The uniform all-time hypothesis in
+part~(iv) fails in that example.
+Likewise, part~(v) concerns the indicated
+moduli locus and marked observations. It does
+not assert an ambient moduli completion or
+reconstruction from eigenvalues alone.
+
+\subsection{Component holonomy and integral monodromy}
+Two further constructions test different aspects
+of the reduction. In Section~\ref{sec:component-holonomy}
+a compact genus-three family has two elliptic
+and two rational normalization components.
+The component flat connections vary with
+parameters $\alpha_i$ independently of the
+common node parameter. The effective energy
+contains the component commutator terms of
+order $\alpha_i^2$ and the transported edge
+terms of order $L^{-1}$.
+Theorems~\ref{thm:coupled-spectrum},
+\ref{thm:coupled-tracking} and
+\ref{thm:coupled-entry} prove the complete
+relative spectrum, actual nonlinear comparison
+and spatial entry for arbitrary ratios
+of these scales. The nonlinear error on
+bounded intervals in $s/L$ tends to zero
+as $\max_i|\alpha_i|+L^{-1}\to0$.
+This family has a common node scale;
+it does not combine varying component
+holonomy with all six independent quartic
+parameters.
+
+The topology problem in Section~\ref{sec:inverse}
+starts with six labelled rational components,
+each with three unpaired branch points.
+Their pairing is unknown. We construct
+compact first-order smoothings for a finite
+class of simple trivalent pairings, with
+identical prescribed component metrics and
+local node metric germs. The first
+$6(r^2-1)$ eigenvalues and component averages
+of the eigensections determine the missing
+adjacency for all sufficiently small parameters.
+The known first-order smoothing and positive
+base-loop orientation then determine the
+integral symplectic conjugacy class of
+monodromy on first homology.
+
+For the triangular prism and $K_{3,3}$ the
+torsion groups of the cokernel of monodromy minus the identity are
+$\mathbb Z/5\mathbb Z\oplus\mathbb Z/15\mathbb Z$
+and $(\mathbb Z/3\mathbb Z)^2\oplus\mathbb Z/9\mathbb Z$.
+Both smooth fibres have genus four; the
+distinguished invariant belongs to the
+degeneration, not to their diffeomorphism
+types. The classical Picard--Lefschetz and
+graph-lattice identifications
+\cite{achinger-ogus,bacher-harpe-nagnibeda}
+are used after the analytic observations
+have supplied the missing incidence.
+These same compact families also carry
+the noncommuting HYM dynamics, by
+Proposition~\ref{prop:fixed-graph-extension}.
+
+\subsection{Relation to earlier work and the proof}
+Relative graph descriptions of small surface
+eigenvalues have a substantial history. Burger
+\cite[Theorem~1.1]{burger} proves relative scalar
+asymptotics on degenerating hyperbolic surfaces
+without a lower bound on the ratios of the short
+geodesic lengths. Thus neither a graph energy nor
+arbitrarily separated scalar scales is new by itself.
+Our surface metrics are induced from a smooth ambient
+metric, the coefficients act on bundle endomorphisms,
+and the holonomy kernel may change. Although the
+Dirichlet energy in two dimensions is conformally
+invariant, the function $L^2$ mass is not; the
+ambient-metric normalization requires its own
+comparison.
+
+For the spectral theorem, component averages
+give the finite variables and logarithmic
+interpolation gives trial sections with the
+prescribed edge energy. The reverse comparison
+bounds each boundary mismatch by the energy
+of the actual section before summing with the
+individual edge weights. This avoids division
+by the smallest weight. A uniform annular
+mass estimate rules out additional weak modes;
+min--max then compares the entire small
+cluster relatively, including changing
+zero eigenspaces.
+
+Daskalopoulos--Wentworth \cite{dw} study connection
+spectra and Yang--Mills flow near the boundary of
+Teichm\"uller space. The component-trivial connections
+considered here have a large limiting parallel
+space even when the global representation is
+irreducible. We estimate the slow coupling of that
+space and its nonlinear metric evolution.
+The fixed-base asymptotic theories of
+Haiden--Katzarkov--Kontsevich--Pandit \cite{hkkp}
+and Lam \cite{lam} provide a complementary
+reduction of HYM evolution. Their fixed-background
+estimates do not alone give uniform constants
+as the underlying curve pinches.
+
+The free-group construction of the moduli locus is
+the classical unitary Schottky construction
+\cite{florentino}. Daskalopoulos--Wentworth
+\cite{dw-local} analyze local degeneration of
+bundle moduli by weighted elliptic methods.
+Section~\ref{sec:moduli} explains the hypotheses
+of the relevant kernel-continuation statements
+and proves the present relative Hodge-norm
+comparison directly by minimizing the energy
+of affine primitives. The uniform estimate does
+not require a lower bound for a nonzero
+eigenvalue of the vertex-gauge operator.
+Conformal changes of the surface metric alone
+do not distinguish the one-form energy.
+
+For trivial bundles and a common neck scale,
+the actual noncommuting matrix-flow comparison
+was established in \cite{wuebben-hym}.
+We retain its full Chern-curvature equation and
+intrinsic trace comparison, and prove the
+weighted gluing estimates needed for independent
+node lengths and nontrivial unitary transport.
+The regular component correction at a node
+receives contributions from every incident
+edge, whereas the node profile has its own
+logarithmic slope. Keeping both weights in
+the collar estimate gives the uniform residual
+$O(L_*^{-2}(1+\log L_*)^2)$.
+The trace comparison integrates this residual
+without a degeneration-dependent Sobolev
+constant or exponential time factor.
+For the all-time estimate we combine this
+finite-window comparison with exponential
+decay of both the exact and finite solutions.
+The lower bound for $L_*\nu_0$ makes these
+tails uniform in the rescaled time.
+The finite gradient structure does not identify
+the actual HYM equation with ordinary
+harmonic-map heat flow; its additional
+commutator term is retained in
+\eqref{eq:real-hym}.
+
+Finally, the spatial entry argument uses a
+fixed-component entropy: the logarithm of
+the determinant of the arithmetic matrix mean.
+It selects the constant limit metric with an
+exponential estimate, after which a global
+preparation metric transfers the fixed-component
+flows to the smoothing. Convergence at a
+fixed positive rescaled time also requires
+convergence of these component limits and
+the normalized finite parameters.
+Uniform tracking alone does not impose it.
+
+For the family with varying component
+holonomy, a harmonic gauge on each punctured
+component separates its mean from a controlled
+remainder. The boundary error is bounded by
+the component energy, rather than by the
+size of its nearly parallel mean. Summing
+the disjoint component and neck energies
+then preserves arbitrary ratios of their
+scales. In the nonlinear comparison the
+curvature of a spatially constant component
+metric is canceled exactly by its finite
+component velocity. The additional matching
+error caused by component holonomy has order
+$\max_i|\alpha_i|/L$, which
+is small after integration on bounded
+intervals in $s/L$.
+
+The inverse argument first uses component
+averages to identify the actual low spectral
+subspace with the vertex space. Polar
+normalization makes that identification
+isometric. The lower energy estimate gives
+a positive operator difference, and relative
+eigenvalue comparison bounds its trace;
+together these control the observed operator.
+On a known simple graph its off-diagonal
+blocks recover the adjoint transports.
+When adjacency is unknown, the block norms
+distinguish edges from nonedges. The recovered
+graph and the prescribed smoothing orders
+then supply the integral cycle pairing
+in the classical monodromy formula.

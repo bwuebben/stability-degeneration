@@ -1,0 +1,245 @@
+\section{Introduction}\label{sec:introduction}
+
+A degeneration of the base can create slowly relaxing endomorphisms of a
+Hermitian--Einstein bundle even when its connection has nonzero curvature.
+The local parallel algebras, their identifications across the degenerating
+regions, and the symmetries of the compact family determine which of these
+endomorphisms survive globally. We study this mechanism on a compact
+Calabi--Yau threefold with a nontrivial rank-four bundle. Its effective metric
+variables form a five-dimensional constrained space, and the constraints
+retain gluing information that the scalar dual graph of the central fibre
+does not record.
+
+Our threefolds are free quotients of a product of a fixed K3 surface and
+an elliptic curve. Such Calabi--Yau threefolds are called of \emph{type K}.
+Here a Calabi--Yau threefold means a smooth projective threefold with
+trivial canonical bundle and $h^{1,0}=h^{2,0}=0$. The examples have infinite
+fundamental group and an index-two product cover. The K\"ahler metrics used
+in the analysis descend from a fixed Ricci-flat K3 metric and a smooth
+ambient metric on the degenerating elliptic family. They need not be
+Ricci-flat. The geometric construction, its actual bundle connection,
+and these metric choices are specified in Section~\ref{sec:geometry}.
+
+\subsection{The family and the main result}
+Let $S$ be a projective K3 surface with a free Enriques involution
+$\iota$. Resolve the two successive singular points of
+\[
+ y^2z=x(x-z)(x-t^2z)
+\]
+over $t=0$. This gives a projective elliptic family $\cE\to\Delta$
+with central fibre a cycle of four rational curves $D_j$, indexed
+modulo four. Elliptic inversion $\sigma$ acts by $j\mapsto-j$.
+Set $X_t=(S\times E_t)/\langle(\iota,\sigma)\rangle$.
+The central threefold has three components, with interval dual graph.
+Choose the K3 metric to have volume one. The actual elliptic
+component areas are $A_0,A_1,A_2,A_3=A_1>0$.
+
+For $\theta\in\RR$ let
+\[
+ R=e^{i\theta\sigma_z/4},\qquad J=i\sigma_x,
+ \qquad U_\theta=R^4,
+ \qquad
+ \sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+ \sigma_z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+The rank-two flat bundle $V_\theta$ on the elliptic cover has transport
+$R$ at each oriented node incidence, cycle holonomy $U_\theta$,
+and trivial vanishing-cycle holonomy. Its lift of $\sigma$ has square
+$-I$. Tensoring this lift with $i\,d\iota$ gives a genuine
+order-two action on $T^{1,0}S\otimes V_\theta$, which descends to
+a rank-four bundle $\cB_{t,\theta}$. Section~\ref{sec:geometry}
+constructs these transitions on an actual cover of the compact
+total space and verifies the descent. In particular, the family is
+not specified merely by a proposed local gluing diagram.
+
+Let $L=\log(1/|t|)$. On
+$\RR\oplus\RR^3\oplus\RR$ define the energy and mass
+\begin{equation}\label{eq:intro-forms}
+ \begin{split}
+ q_\theta(a,X,b)&=2\bigl(\|au-X\|^2+\|X-bv_\theta\|^2\bigr),\\
+ m_A(a,X,b)&=A_0a^2+2A_1\|X\|^2+A_2b^2,\\
+ u&=(1,0,0),\qquad v_\theta=(\cos\theta,\sin\theta,0).
+ \end{split}
+\end{equation}
+Write $\mu_0\le\cdots\le\mu_4$ for their generalized eigenvalues,
+including zero modes. Let $\cP_2$ be the space of positive Hermitian
+two-by-two matrices of determinant one, with affine invariant metric
+\eqref{eq:matrix-metric}, and let $d_2$ be its geodesic distance.
+The finite-dimensional configuration space is
+\[
+ \cF=\{(H_j)\in\cP_2^4:H_{-j}=JH_jJ^*\},
+ \qquad g_M=\sum_j A_jg_{H_j}.
+\]
+It is a five-dimensional geodesically convex submanifold. The two
+endpoint factors are one-dimensional, whereas the middle factor
+has dimension three and weight $2A_1$.
+
+The initial tuple for the effective evolution is selected from the
+spatial initial metric. On each fixed normalization component, run
+the HYM metric flow and take its parallel limiting metric. We call
+this limit the \emph{component phase}. It is a positive metric in
+the component's parallel endomorphism algebra, rather than an angular
+parameter. Theorem~\ref{thm:parallel-phase} proves its existence and
+quantitative dependence on the initial metric. In the degeneration,
+the component restrictions admit smooth extensions across shrinking
+node discs; the allowed extensions and their asymptotically vanishing
+phase ambiguity are specified in Section~\ref{sec:spatial-entry}.
+The norm used there controls the logarithm of the relative metric
+globally in $C^0$ and controls extensions of its component-exterior
+restrictions to the fixed spaces $S\times D_j$ in $C^{6,\beta}$.
+It permits spatial variation in both factors and arbitrary smooth
+changes of bounded amplitude inside the middle neck regions.
+
+\begin{theorem}\label{thm:main}
+For the compact family, bundle and prescribed K\"ahler metrics just
+described, the following statements hold on the same smooth fibres.
+\begin{enumerate}
+\item The bundle has a holomorphically trivial determinant and an
+explicit determinant-normalized Hermitian--Einstein metric $h_0$.
+On an embedded K3 slice its second Chern number is $48$. It is
+stable for $\theta\notin\pi\ZZ$ and strictly polystable for
+$\theta\in\pi\ZZ$.
+\item Let $\lambda_k(t,\theta)$ be the eigenvalues, indexed from
+zero, of the actual endomorphism connection Laplacian
+$D_\theta^*D_\theta$ on trace-free $h_0$-Hermitian endomorphisms.
+There are $\varepsilon(t)\to0$ and $\gamma>0$, independent of
+$\theta$, such that
+\begin{equation}\label{eq:main-spectrum}
+ (1-\varepsilon(t))\frac{2\pi}{L}\mu_k(\theta)
+ \le\lambda_k(t,\theta)\le
+ (1+\varepsilon(t))\frac{2\pi}{L}\mu_k(\theta)
+ \quad(0\le k\le4),\qquad \lambda_5\ge\gamma.
+\end{equation}
+The kernel is one-dimensional precisely at $\theta\in\pi\ZZ$.
+The comparison is relative for every positive weak mode, with no
+restriction on how quickly $\theta$ approaches that locus.
+\item The effective evolution is the negative gradient on $(\cF,g_M)$
+of
+\begin{equation}\label{eq:main-potential}
+ \frac\pi L\sum_{j\bmod4}d_2(H_{j+1},RH_jR^*)^2.
+\end{equation}
+For every fixed $R_0>0$ and $0<\beta<1$, the nonempty open class
+$\mathcal B_{R_0}(t,\theta)$ defined by the component-extension
+norm \eqref{eq:extension-norm} has a selected tuple of component
+phases in $\cF$. The class includes non-tensor rank-four metrics.
+There is a common time $s_*(t)\to\infty$, with $s_*/L\to0$,
+after which the actual equation
+\[
+ h^{-1}\partial_sh=-2i\Lambda_{\omega_t}F_h
+\]
+is approximated by the reconstructed effective evolution in global
+squared $L^2$ affine distance. The error tends to zero uniformly
+over this class and all $\theta$ on each interval
+$[s_*,s_*+TL]$ with fixed $T$. If $\mu_0(\theta)\ge\kappa>0$,
+the error tends to zero uniformly for every $s\ge s_*$.
+The reconstruction and error bounds are given in
+Theorems~\ref{thm:actual-tracking}, \ref{thm:all-time}
+and \ref{thm:spatial-entry}.
+\item Suppose the family, $L$ and the three areas are known, but
+$\theta$ and the transition matrices are unknown. From the five
+actual eigenvalues, the quantity
+\begin{equation}\label{eq:main-inverse}
+ \frac{A_0A_1^3A_2}{8}\left(\frac{L}{2\pi}\right)^5
+                    \prod_{k=0}^4\lambda_k(t,\theta)
+\end{equation}
+recovers $\sin^2\theta$ with relative error tending uniformly to
+zero when it is positive, and equals zero at reducibility. It
+therefore recovers the conjugacy class of $\Ad(U_\theta)$ in
+$\operatorname{SO}(3)$ uniformly. The quantitative noise bounds
+are those of Theorem~\ref{thm:transport-inverse}.
+\end{enumerate}
+Both geometric parameters are fixed along every flow trajectory.
+\end{theorem}
+
+\begin{proof}
+Propositions~\ref{prop:elliptic-family}--\ref{prop:he-stability}
+prove part 1 on the stated family. Theorem~\ref{thm:five-spectrum}
+gives part 2 after the exact K3 product decomposition and the
+equivariant capacity comparison. Proposition~\ref{prop:finite-flow}
+derives the field in part 3. Theorems~\ref{thm:actual-tracking}
+and \ref{thm:all-time} prove its reconstruction and comparison with
+arbitrary matching rank-four initial metrics. The fixed-bundle
+phase theorem and the preparation estimate of
+Theorem~\ref{thm:spatial-entry} supply such matching from the
+declared open class. Theorem~\ref{thm:transport-inverse} proves
+part 4. All steps use the same component areas, incidence transport
+and determinant normalization. The cancellation of the rank-two
+tangent factor with the degree-two quotient in
+\eqref{eq:norm-cancellation} and \eqref{eq:tensor-distance}
+ensures that the spectral and nonlinear coefficients agree.
+\end{proof}
+
+\subsection{Proof mechanisms and scope}
+The exact product connection separates endomorphisms parallel in the
+K3 direction from a complement with a fixed positive gap. The
+remaining curve modes are subject to the involution. In the central
+quotient, this makes the two endpoint parallel spaces lines in a
+three-dimensional matrix space. Their relative angle records the
+transport around the cycle upstairs, even though the downstairs
+dual graph is an interval. Component averaging and neck interpolation
+respect the involution. The lower spectral bound is controlled by
+the section's own energy, which preserves relative accuracy when
+the smallest effective eigenvalue tends arbitrarily rapidly to zero.
+
+For the nonlinear statement, a component Green correction cancels
+the leading effective velocity. Corrected endpoint geodesics and
+relative-logarithm cutoffs then give a global Chern residual of
+order $(1+\log L)^2/L^2$ in integral, uniformly for all physical
+times. Tensor curvature and descent produce a comparison metric on
+the actual rank-four bundle. An intrinsic trace inequality compares
+it to exact solutions with no tensor restriction. To obtain the
+open class, a separate preparation metric uses spatial component
+flows. Its node profile has nonzero transverse mean curvature;
+the proof controls that term using the small node volume. This
+distinguishes the preparation estimate from a formal extension of
+the one-dimensional equation.
+
+The all-time assertion requires the positive-rate class in the
+theorem. The weakest linear time scale near reducibility is instead
+$L/\vartheta^2$, where $\vartheta$ is the distance to $\pi\ZZ$.
+Section~\ref{sec:inverse-limits} proves that physical time and
+degeneration generally do not commute, that rescaled time restores
+commutation on a positive-rate class, and that approach to reducibility
+can destroy that commutation again. For spatial initial data, a
+limit at fixed positive rescaled time also requires convergence of
+the selected phases. The inverse in the theorem concerns projective
+bundle transport; it does not recover an integral cohomology ring,
+a central lift, or a Ricci-flat metric on the threefold.
+
+\subsection{Relation to previous work}
+The smooth Enriques Calabi--Yau quotient is classical; see
+Hashimoto--Kanazawa \cite{hashimoto-kanazawa} for its place among
+threefolds of type K. Rank-four bundles on this very quotient
+also predate the present construction. Thomas \cite[Section 2,
+Theorem 2.4]{thomas} constructs polystable rank-four bundles with
+trivial determinant; we use the corrected preprint for the associated
+statements. Andreas--Curio \cite[Section 4, Proposition 4.2]{andreas-curio}
+give a stability criterion for already non-split extensions on the
+Enriques elliptic threefold, under their numerical hypotheses.
+Neither the quotient geometry nor the existence of rank-four bundles
+on it is the contribution claimed here. Our construction provides
+a specified nonflat tangent-tensor bundle family for which the
+degeneration, complete weak spectrum, actual nonlinear evolution
+and projective inverse can be proved together.
+
+Graph descriptions of small eigenvalues have a substantial history,
+including Burger's relative spectral comparison for degenerating
+Riemann surfaces \cite{burger}. Yang--Mills flow under degeneration
+of the surface was studied by Daskalopoulos--Wentworth
+\cite{daskalopoulos-wentworth}. The ambient-induced metric used
+here has collapsing neck area; its zero-form mass must be computed
+for that metric even though curve Dirichlet energy is conformally
+invariant. Effective HYM dynamics and bundle gluing for this type
+of curve degeneration are developed in
+\cite{wuebben-effective,wuebben-gluing}. We give the required
+equivariant estimates here and prove their relation to the actual
+nonflat threefold operator and flow.
+
+The fixed-base existence and order comparison are the classical
+compact K\"ahler inputs recalled in \cite[Section 4.1]{hkkp};
+the trace comparison is used in the form of
+\cite[Proposition 2.4]{wang}. These inputs are valid in arbitrary
+complex dimension. They do not supply uniform derivative or heat
+kernel estimates for our degenerating family. The relative weak
+spectral comparison, the global residual, the spatial preparation
+and their parameter/time domains are proved below.

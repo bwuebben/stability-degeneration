@@ -1,0 +1,271 @@
+\section{Entry from spatial initial metrics}\label{sec:spatial-entry}
+
+The four fixed component problems on the cover have bases and bundles
+\begin{equation}\label{eq:component-bundles}
+ Y_j=S\times D_j,\qquad F_j=p_S^*T^{1,0}S\otimes\CC^2,
+ \qquad h_{j,0}=h_S\otimes I.
+\end{equation}
+They have zero Einstein constant and complex parallel algebra
+$I_{T^{1,0}S}\otimes\End(\CC^2)$. Their geometry is independent of
+$t$ and $\theta$; the latter enters the node identifications. Thus
+Theorem~\ref{thm:parallel-phase} selects, from each smooth
+determinant-one component metric, a phase $I_{T^{1,0}S}\otimes P_j$.
+Positivity and $(\det P_j)^2=1$ give $\det P_j=1$. For equivariant
+initial profiles, uniqueness of the component flow gives
+$P_{-j}=JP_jJ^*$. The selected tuple belongs to the finite-dimensional
+configuration space of Section~\ref{sec:finite-flow}.
+
+\subsection{The open class and its topology}
+Put $\rho=L^{-1}$ and let $\Omega_j(2\rho)\subset D_j$ be the
+complement of the two open node discs of radius $2\rho$. Use the
+equivariant smooth component transfers already fixed in the
+reconstruction. An actual initial metric on $\cB_{t,\theta}$ pulls
+back to $h_0e^{\Psi_{\mathrm{in}}}$, where $\Psi_{\mathrm{in}}$ is a smooth
+equivariant trace-free $h_0$-Hermitian endomorphism. Its restriction to
+the $j$th component exterior is a section $\Psi_j$ on
+$S\times\Omega_j(2\rho)$ with values in $\Herm_0(F_j)$.
+
+Fix $0<\beta<1$ and $R_0>0$. Using the fixed component connections and
+metrics in all component norms, define
+\begin{equation}\label{eq:extension-norm}
+ \begin{split}
+ \mathcal N_t(\Psi)={}&\|\Psi\|_{C^0(X_t)}+
+ \inf\left\{\sum_{j=0}^3\|\widetilde\Psi_j\|_{C^{6,\beta}(Y_j)}:
+       \widetilde\Psi_j|_{S\times\Omega_j(2\rho)}=\Psi_j,\right.\\[-2pt]
+ &\hspace{49mm}\left.(\widetilde\Psi_j)_{j=0}^3
+                    \text{ is an equivariant smooth extension}\right\},\\
+ \mathcal B_{R_0}(t,\theta)={}&
+       \{h_0e^{\Psi}:\mathcal N_t(\Psi)<R_0\}.
+ \end{split}
+\end{equation}
+Equivariance includes the base involution and the actual component
+bundle lift $(i\,d\iota)\otimes J$, not just conjugation of a matrix.
+
+\begin{lemma}\label{lem:open-class}
+For every fixed smooth fibre, $\mathcal B_{R_0}(t,\theta)$ is a
+nonempty open set in the $C^{6,\beta}$ topology on smooth
+determinant-one metrics. It contains a parameter-independent small
+ball of smooth equivariant component profiles, joined across the
+nodes, and contains metrics which are not tensor products.
+\end{lemma}
+\begin{proof}
+Each component exterior is a compact manifold with smooth boundary.
+Smooth collar extension operators for its bundle sections are bounded
+in the fixed $C^{6,\beta}$ norms. Averaging the operators over the
+finite involution preserves equivariance, Hermitian symmetry and zero
+trace. For a fixed fibre their operator bounds, together with the
+triangle inequality for the infimum in \eqref{eq:extension-norm},
+prove continuity of $\mathcal N_t$. The global $C^0$ term makes it
+a norm, and exponentiation is smooth. No uniform extension-operator
+bound as $\rho\to0$ is used. In particular the radius in
+\eqref{eq:extension-norm} is not a radius for an unrestricted global
+$C^0$ norm.
+
+Take a sufficiently small fixed ball of equivariant smooth component
+logarithms and join their metrics by fibrewise geodesics on the necks.
+The original profiles are admissible extensions; compactness of the
+positive matrix range bounds the interpolated logarithms. This yields
+members of the asserted class for all small $t$. Smooth modifications
+supported in the middle necks with sufficiently small $C^0$ amplitude
+are allowed, independently of their derivatives.
+
+For a non-tensor example, take a nonzero local section
+$A(x)\in\Herm_0(T^{1,0}S)$ and a real smooth function $\chi(z)$
+supported away from the nodes. Choose the support disjoint from its
+deck image, possible because $\iota$ is free, and average the
+transported logarithm $\chi(z)A(x)\otimes\sigma_z$ under the deck
+action. Its mixed trace-free component remains nonzero on the original
+support. Small multiples belong to the class. For positive $G,K$,
+\[
+ \log(G\otimes K)=(\log G)\otimes I+I\otimes(\log K),
+\]
+whose projection to
+$\Herm_0(T^{1,0}S)\otimes\Herm_0(\CC^2)$ is zero. Uniqueness of
+the Hermitian logarithm therefore excludes tensor factorization of
+the example. These initial metrics can depend on all six real spatial
+coordinates and need not commute with the tangent curvature.
+\end{proof}
+
+\subsection{Component evolution and the choice of phase}
+Choose an equivariant extension tuple in \eqref{eq:extension-norm}
+with total norm less than $2R_0$. Let $\Phi_j(s)$ be its relative
+metric under the exact HYM flow on $Y_j$. Theorem~\ref{thm:parallel-phase}
+and the fixed component gaps give constants depending only on $R_0$
+and the fixed geometry such that
+\begin{equation}\label{eq:component-phase-rate}
+ \sup_{Y_j}d_4(\Phi_j(s),I\otimes P_j)^2
+       \le C_{R_0}e^{-\gamma_{R_0}(s-1)},\qquad s\ge1.
+\end{equation}
+All these flows remain in a common compact positive range.
+For every finite integer $n$, there is a common constant $C_n$
+bounding their spatial covariant derivatives through order three and
+their time derivatives on $0\le s\le n$. Indeed, the bounded
+$C^{6,\beta}$ initial set is precompact in $C^{4,\beta/2}$ on the
+fixed compact $Y_j$. The relative equation has scalar elliptic
+principal part and a smooth quadratic-gradient nonlinearity on the
+fixed positive range. Local parabolic continuous dependence,
+smoothing and fixed-base global continuation give bounds on a
+neighbourhood of each initial datum in the compact closure. A finite
+cover gives $C_n$. Enlarge them to be nondecreasing and at least one.
+This argument uses component derivative control, rather than drawing
+derivative estimates from an arbitrary $C^0$ bound.
+
+Two allowed extensions of the same initial metric differ only on
+$S$ times discs of total area $O(\rho^2)$ and remain in a fixed
+positive range. Their initial trace-distance integral is therefore
+$O_{R_0}(\rho^2)$. The phase contraction
+\eqref{eq:phase-contraction} implies
+\begin{equation}\label{eq:phase-ambiguity}
+ d_2(P_j,P'_j)^2\le C_{R_0}\rho^2.
+\end{equation}
+The factor two in the rank-four tensor distance and the fixed component
+volume are included in the constant. Thus the phase is determined up
+to $O(\rho)$, without claiming an exactly canonical extension at
+finite $t$. Effective-flow nonexpansion preserves this bound at all times.
+
+\begin{theorem}\label{thm:spatial-entry}
+There is a preparation time $s_*(t)\to\infty$, with $s_*(t)/L\to0$,
+independent of $\theta$ and of the initial metric in
+$\mathcal B_{R_0}(t,\theta)$, with the following property.
+Let $P$ be a component phase tuple selected as above. Let $H_f(s)$
+solve the effective equation with $H_f(0)=P$, and let
+$\widehat K(H_f(s))$ be its reconstruction. The actual HYM solution
+from any metric in this open class satisfies
+\begin{equation}\label{eq:entry-eta}
+ \begin{gathered}
+ \eta_*:=\int_{X_t}\sigma_4(h(s_*),\widehat K(P))\,dV_t
+     \le C_{R_0}\left(\sqrt{\delta_L}
+          +e^{-\gamma_{R_0}(s_*-1)}+L^{-2}\right)\longrightarrow0,\\
+ \delta_L=\frac{1+\log L}{L}+|t|L^N,
+ \end{gathered}
+\end{equation}
+where $N$ is a fixed finite exponent. For each $T\ge0$,
+\begin{equation}\label{eq:spatial-bounded}
+ \sup_{s_*\le s\le s_*+TL}\int_{X_t}
+ d_4(h(s),\widehat K(H_f(s-s_*)))^2\,dV_t
+       \le \eta_*+C_{R_0}Te_L.
+\end{equation}
+If also $\mu_0(\theta)\ge\kappa>0$, then
+\begin{equation}\label{eq:spatial-alltime}
+ \sup_{s\ge s_*}\int_{X_t}d_4(h(s),\widehat K(H_f(s)))^2\,dV_t
+ \le C_{R_0}\eta_*+C_{R_0,\kappa}e_L(1+|\log e_L|)
+                 +C_{R_0}(s_*/L)^2.
+\end{equation}
+All estimates before the last one are uniform through
+$\theta\in\pi\ZZ$.
+\end{theorem}
+
+\begin{proof}
+On the component exteriors transfer $\Phi_j(s,x,z)$ to the actual
+smooth fibre. At incidence $je$ put
+$A_{je}(s,x)=\Phi_j(s,x,p_{je})$. In a common node frame join the
+two transported endpoints by the rank-four affine geodesic with
+parameter $-L^{-1}\log|u|$. At the oriented node $j,j+1$, the
+right endpoint is
+\[
+ (I\otimes R^*)A_{j+1,e}(I\otimes R),
+\]
+as follows from the actual incidence relation $w_{j+1}=Rz_j$.
+Interpolate to the component metrics on $\rho<|u|<2\rho$ by
+equivariant relative-logarithm cutoffs. All these constructions are
+intrinsic in the positive metrics on $T^{1,0}S\otimes\CC^2$ and
+respect the deck lift. They define a descended preparation metric
+$K_{\mathrm{pre}}(s)$ in a fixed positive range. At $s=0$ it agrees
+with the actual initial metric on the component exteriors.
+
+We estimate its full contracted Chern residual for $0\le s\le n$.
+On component regions the comparison solves the full rank-four
+equation for the fixed product metric, including tangent curvature
+and all spatially varying noncommuting terms. The only transfer
+error is from the elliptic geometry. Smooth plumbing coefficients,
+with the required two derivatives and the $C_n$ bounds, give integrated
+error $C_n|t|\rho^{-N}$ for a fixed finite $N$ independent of $n$.
+
+On a node interior, for each fixed $x\in S$ the geodesic has zero
+Chern curvature in the curve direction. Its $S$-direction curvature
+generally does not vanish. Covariant $S$ derivatives through order
+two of the geodesic are bounded by $C_n$ on the compact endpoint
+range. The tangent background has zero mean curvature, so the
+$S$-contracted residual is $O(C_n)$. The time residual has the same
+bound. Mixed $S$/curve curvature components can be nonzero but
+contract to zero with the exact block diagonal product K\"ahler
+form. Since the middle-node volume is $O(\rho^2)$, these terms
+contribute $C_n\rho^2$ in integral. Thus the argument does not
+assert vanishing of the full spatial curvature.
+
+On an incidence collar the component endpoint discrepancy and the
+geodesic discrepancy, with their first two curve derivatives, obey
+\begin{equation}\label{eq:preparation-collar}
+ C_n\bigl(\rho+L^{-1}|\log\rho|\bigr)\rho^{-k},
+                    \qquad k=0,1,2.
+\end{equation}
+For the component term this is Taylor expansion in the curve coordinate;
+for the geodesic term it is differentiation of the smooth endpoint
+map at parameter $O(L^{-1}|\log\rho|)$. The relevant mixed
+derivatives are included in $C_n$. Expanding the contracted Chern
+expression relative to the node profile, the second derivatives of
+the discrepancy and the cutoff terms integrate to
+$C_n(\rho+L^{-1}|\log\rho|)$. Products with the node derivative
+$O((L\rho)^{-1})$ satisfy the same bound, as do quadratic mismatch
+terms for small $\rho+L^{-1}|\log\rho|$. This calculation is valid
+for arbitrary rank-four matrices. The cutoff is independent of $S$,
+so $S$ derivatives and time derivatives still contribute only
+$C_n\rho^2$. Mixed contractions remain zero. Taking $\rho=L^{-1}$
+therefore proves
+\begin{equation}\label{eq:preparation-residual}
+ \sup_{0\le s\le n}\int_{X_t}
+       |\mathcal R(K_{\mathrm{pre}}(s))|_{\op}\,dV_t
+                  \le C_n\delta_L.
+\end{equation}
+
+At time zero the exact and preparation metrics differ only in regions
+of volume $O(\rho^2)$. Boundedness gives initial integrated trace
+distance at most $C_{R_0}\rho^2$, regardless of the initial neck
+derivatives. The forced trace comparison gives
+\begin{equation}\label{eq:preparation-comparison}
+ \sup_{0\le s\le n}\int_{X_t}
+ d_4(h(s),K_{\mathrm{pre}}(s))^2\,dV_t
+                \le C_{R_0}\rho^2+nC_n\delta_L.
+\end{equation}
+Choose
+\begin{equation}\label{eq:preparation-time}
+ s_*=\max\{n\in\mathbb N:nC_n\le\delta_L^{-1/2}\}.
+\end{equation}
+For small $t$ this set is nonempty and finite. Each fixed integer
+eventually belongs to it, so $s_*\to\infty$. Moreover
+$s_*C_{s_*}\delta_L\le\sqrt{\delta_L}$ and
+$s_*/L\le\sqrt{\delta_L}$, using $C_n\ge1$ and $\delta_L\ge L^{-1}$.
+This is an implicit common time; no logarithmic formula for it is claimed.
+
+On the component exteriors at $s_*$, use
+\eqref{eq:component-phase-rate}. The Green correction in
+$\widehat K(P)$ has global $L^2$ size $O(L^{-1})$.
+On the remaining node regions boundedness and volume $O(\rho^2)$
+suffice. Therefore
+\[
+ \int_{X_t}d_4(K_{\mathrm{pre}}(s_*),\widehat K(P))^2\,dV_t
+       \le C_{R_0}(e^{-\gamma_{R_0}(s_*-1)}+L^{-2}).
+\]
+Combine this with \eqref{eq:preparation-comparison} and the equivalence
+of trace distance and squared affine distance on the fixed positive
+range to obtain \eqref{eq:entry-eta}. Apply
+Theorem~\ref{thm:actual-tracking} starting at $s_*$ to obtain
+\eqref{eq:spatial-bounded}.
+
+The effective speed is $O(L^{-1})$ for every time, so
+$d_M(H_f(s-s_*),H_f(s))\le C_{R_0}s_*/L$ for $s\ge s_*$,
+where $d_M$ is the mass-weighted product distance. The reconstruction
+is uniformly Lipschitz into global $L^2$ on the confined tuple range.
+Thus changing to the physical-time-aligned comparison costs at most
+$C_{R_0}(s_*/L)^2$, with fixed squared-triangle constants. Under the
+positive-rate hypothesis, Theorem~\ref{thm:all-time} applied after
+entry proves \eqref{eq:spatial-alltime}.
+\end{proof}
+
+The extension ambiguity \eqref{eq:phase-ambiguity}, effective-flow nonexpansion
+and the reconstruction bound show that changing the allowed component
+extensions changes all subsequent comparisons by $O(L^{-1})$ in
+$L^2$ distance. The theorem gives entry from a fixed-radius open class
+with genuine spatial variation. It does not give trajectory tracking
+during the preparation interval, uniform derivative estimates over
+the whole neck, or an all-time bound as $\mu_0$ tends to zero.

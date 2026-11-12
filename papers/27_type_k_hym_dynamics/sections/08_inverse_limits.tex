@@ -1,0 +1,221 @@
+\section{Transport recovery and the order of limits}\label{sec:inverse-limits}
+
+\subsection{The observed invariant}
+In this inverse problem the compact family and its unitary
+one-parameter bundle class are known. The normalization
+$L=\log(1/|t|)$ and the three component areas $A_0,A_1,A_2$ are known.
+The parameter $\theta$, the transition matrices and their cycle
+product are not supplied. The observations are the five lowest
+eigenvalues of the actual operator $\mathcal L_{t,\theta}$, including
+its zero modes. The target is the conjugacy class of
+$\Ad(U_\theta)$ in $\operatorname{SO}(3)$.
+It is a global bundle-transport invariant. The integral Chern number
+computed in Section~\ref{sec:geometry} is not an output of this
+spectral inverse.
+
+\begin{theorem}\label{thm:transport-inverse}
+With the above observations define
+\begin{equation}\label{eq:transport-estimator}
+ \widehat s_t=\frac{A_0A_1^3A_2}{8}
+     \left(\frac{L}{2\pi}\right)^5\prod_{k=0}^4\lambda_k(t,\theta).
+\end{equation}
+For the error in Theorem~\ref{thm:five-spectrum},
+\begin{equation}\label{eq:inverse-relative}
+ (1-\varepsilon(t))^5\sin^2\theta
+ \le\widehat s_t\le(1+\varepsilon(t))^5\sin^2\theta.
+\end{equation}
+Thus $3-4\widehat s_t$ recovers $\tr\Ad(U_\theta)$ with error
+$O(\varepsilon(t)\sin^2\theta)$. If
+$\operatorname{clip}(x)=\max(0,\min(1,x))$, then
+\begin{equation}\label{eq:angle-estimator}
+ \widehat\alpha_t=2\arcsin\sqrt{\operatorname{clip}(\widehat s_t)}
+\end{equation}
+converges uniformly over the family to its principal projective
+conjugacy angle in $[0,\pi]$.
+On a class $\sin^2\theta\in[\kappa,1-\kappa]$, $0<\kappa<1/2$,
+the angle error is at most $C_{A,\kappa}(\varepsilon(t)+\delta)$
+if each observed rescaled eigenvalue $L\lambda_k/(2\pi)$ has
+additive error at most $\delta$, for small $\delta$ and $t$.
+\end{theorem}
+
+\begin{proof}
+In coordinates $(a,x,y,z,b)$ write $c_\theta=\cos\theta$ and
+$s_\theta=\sin\theta$. The energy and mass matrices are
+\begin{equation}\label{eq:five-matrices}
+ Q_\theta=\begin{pmatrix}
+ 2&-2&0&0&0\\
+ -2&4&0&0&-2c_\theta\\
+ 0&0&4&0&-2s_\theta\\
+ 0&0&0&4&0\\
+ 0&-2c_\theta&-2s_\theta&0&2
+ \end{pmatrix},\qquad
+ M_A=\operatorname{diag}(A_0,2A_1,2A_1,2A_1,A_2).
+\end{equation}
+The Schur complement of the middle $4I_3$ block is
+$\left(\begin{smallmatrix}1&-c_\theta\\-c_\theta&1\end{smallmatrix}\right)$.
+Consequently
+\begin{equation}\label{eq:determinant-product}
+ \det Q_\theta=64\sin^2\theta,\qquad
+ \prod_{k=0}^4\mu_k(\theta)
+       =\frac{8\sin^2\theta}{A_0A_1^3A_2}.
+\end{equation}
+Multiplying the five relative bounds in
+\eqref{eq:five-relative} proves \eqref{eq:inverse-relative}.
+At $\theta\in\pi\ZZ$ both products are exactly zero.
+
+Since $U_\theta=\operatorname{diag}(e^{i\theta},e^{-i\theta})$,
+its adjoint rotation has trace
+$1+2\cos(2\theta)=3-4\sin^2\theta$. The principal angle is
+$2\arcsin\sqrt{\sin^2\theta}$. Uniform continuity on $[0,1]$
+proves uniform recovery after clipping. On the stated interior class
+the derivative of this function is bounded, which proves Lipschitz
+dependence on the estimator.
+
+The rescaled eigenvalues lie in a fixed bounded interval by
+\eqref{eq:five-relative}. Their product is a polynomial with bounded
+derivative on a fixed bounded enlargement. Errors at most $\delta$
+in the five factors therefore change \eqref{eq:transport-estimator}
+by at most $C_A\delta$. Combine this with the preceding angle bound.
+\end{proof}
+
+No uniform Lipschitz angle bound is asserted at the endpoint angles.
+In particular, fixed absolute noise need not permit relative recovery
+of an arbitrarily small angle. The observations do not distinguish a
+signed $\SU(2)$ lift, central scalar twists, or reversal of the cycle
+orientation. Nor does this one-parameter statement imply spectral
+rigidity among arbitrary bundles outside the specified family.
+
+\begin{corollary}\label{cor:weakest-rate}
+Let $\vartheta$ be the small signed distance from $\theta$ to
+$\pi\ZZ$. Jointly as $t\to0$ and $\vartheta\to0$ with
+$\vartheta\ne0$,
+\begin{equation}\label{eq:weakest-rate}
+ \lambda_0(t,\theta)=
+ \frac{2\pi\vartheta^2}{L(A_0+2A_1+A_2)}(1+o(1)).
+\end{equation}
+At $\vartheta=0$ the eigenvalue is exactly zero.
+\end{corollary}
+\begin{proof}
+At $\theta=0$ the kernel is spanned by
+$w=(1,1,0,0,1)^{\mathsf T}$. Direct cofactors give
+$\operatorname{adj}(Q_0)=64ww^{\mathsf T}$.
+The coefficient of $-\mu$ in
+$\det(Q_0-\mu M_A)/\det M_A$, equal to the product of its four
+positive generalized eigenvalues, is therefore
+\[
+ \frac{\tr(\operatorname{adj}(Q_0)M_A)}{\det M_A}
+       =\frac{8(A_0+2A_1+A_2)}{A_0A_1^3A_2}.
+\]
+The simple small eigenvalue is analytic and even in $\theta$:
+reflection of the $y$ coordinate identifies the matrices at
+$\theta$ and $-\theta$. Divide \eqref{eq:determinant-product}
+by the analytic nonzero product of the other four eigenvalues to get
+\[
+ \mu_0(\theta)=\frac{\theta^2}{A_0+2A_1+A_2}+O(\theta^4).
+\]
+A sign change of the $b$ coordinate reduces the calculation at any
+other multiple of $\pi$ to this one. The relative, parameter-uniform
+bound in Theorem~\ref{thm:five-spectrum} proves the joint assertion.
+\end{proof}
+
+The symbolic determinant and cofactor identities in this proof are
+reproduced by the accompanying computation. They check the finite
+matrix normalization; they do not replace the proof relating its
+eigenvalues to the actual threefold operator.
+
+\subsection{A common space for the time limits}
+To compare metrics on different fibres, pull them to the cover and use
+the fixed component frames on compact subsets of $S\times D_j$
+away from the nodes. All limits below mean $L^2$ convergence on every
+such compact subset, relative to $h_S\otimes I$.
+An effective tuple $P$ denotes the corresponding relative metrics
+$I_{T^{1,0}S}\otimes P_j$. The reconstruction differs from its
+constant tuple by $O(L^{-1})$ on these subsets. Global $L^2$
+comparison implies this component convergence.
+Write $H_\theta(\tau;P)$ for the effective flow in rescaled time
+$\tau=s/L$, initialized at $P$. Its equation is independent of $t$.
+
+\begin{proposition}\label{prop:time-limits}
+For matching initial data
+$h_{t,\theta}(0)=\widehat K_{t,\theta}(P)$ the following hold.
+\begin{enumerate}
+\item For fixed $\theta\notin\pi\ZZ$ and an invariant tuple
+$P\ne I$, physical time and degeneration do not commute:
+\begin{equation}\label{eq:physical-noncommutation}
+ \lim_{s\to\infty}\lim_{t\to0}h_{t,\theta}(s)=P,
+ \qquad
+ \lim_{t\to0}\lim_{s\to\infty}h_{t,\theta}(s)=I.
+\end{equation}
+\item On a fixed rate class $\mu_0(\theta)\ge\kappa>0$, for
+fixed $\theta$ and $P$, the limit at each $\tau\ge0$ is
+$H_\theta(\tau;P)$. The limits $t\to0$ and $\tau\to\infty$
+commute and equal $I$. More generally, for bounded tuples and every
+sequence $t\to0$, $\tau(t)\to\infty$, with $\theta$ in this
+rate class, $h_{t,\theta}(L\tau(t))\to I$.
+\item If $\theta(t)\to0$ with $\theta(t)\notin\pi\ZZ$, take
+$P_j=\exp(a\sigma_x)$ for all $j$, with $a\ne0$. Then
+\begin{equation}\label{eq:weak-rate-noncommutation}
+ \lim_{\tau\to\infty}\lim_{t\to0}
+       h_{t,\theta(t)}(L\tau)=P,
+ \qquad
+ \lim_{t\to0}\lim_{\tau\to\infty}
+       h_{t,\theta(t)}(L\tau)=I.
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For a fixed physical time $s$, effective speed $O(L^{-1})$ makes the
+effective tuple tend to $P$. In \eqref{eq:bounded-tracking} take
+$\eta=0$ and $T=s/L$. Its constant is independent of $T$, so the
+error is at most $Cs(1+\log L)^2/L^2$, which tends to zero.
+This proves the first limit in \eqref{eq:physical-noncommutation}.
+On each fixed stable smooth fibre, the relative logarithm has no
+parallel trace-free kernel. The coercivity argument in the proof of
+Theorem~\ref{thm:all-time}, using the fixed-fibre positive gap,
+implies convergence to $h_0$. This proves the other limit.
+
+On the rate class in part 2, the all-time comparison has error tending
+to zero uniformly, and the effective trajectory tends to $I$
+exponentially in $\tau$ with uniform constants on bounded tuples.
+These facts prove both the fixed-$\tau$ limit and the uniform diagonal
+statement. They also prove the claimed interchange of the two limits.
+
+At $\theta=0$ the tuple in part 3 is stationary: $R=I$ and all
+its entries coincide. It is invariant under $J$ and is a global
+parallel metric at that parameter. On each bounded $\tau$ interval,
+smooth dependence of the confined effective vector fields on $\theta$
+gives $H_{\theta(t)}(\tau;P)\to P$ uniformly. The bounded-time
+actual-flow estimate is uniform in $\theta$, hence the actual
+metrics have the same limit. Each fixed nonzero $t$, on the other
+hand, has a stable parameter and converges to $I$ at infinite time.
+This proves \eqref{eq:weak-rate-noncommutation}.
+\end{proof}
+
+\begin{corollary}\label{cor:spatial-limits}
+For the entire bounded open class of Theorem~\ref{thm:spatial-entry},
+uniform diagonal relaxation to $I$ holds when
+$\mu_0(\theta_t)\ge\kappa>0$, $t\to0$ and $\tau(t)\to\infty$.
+No convergence assumption on the selected tuples $P_t$ is needed for
+this conclusion. If in addition $P_t\to P$ and $\theta_t\to\theta$
+within this rate class, then for each fixed $\tau>0$ the component
+limit is $H_\theta(\tau;P)$. Its infinite-$\tau$ limit is $I$,
+and the corresponding iterated limits commute.
+\end{corollary}
+\begin{proof}
+The selected tuples lie in a common bounded set, the all-time error
+in \eqref{eq:spatial-alltime} tends to zero, and $s_*/L\to0$.
+Uniform effective-flow decay gives the diagonal assertion. Under the added
+phase and parameter convergence assumptions, finite-dimensional continuous
+dependence identifies the limit at each positive $\tau$; entry has
+then occurred for all small $t$. The remaining assertion follows
+from effective-flow decay and fixed-fibre convergence.
+\end{proof}
+
+A general spatial initial metric at $\tau=0$ need not equal its
+selected phase. Nor need a nonconvergent family of selected phases
+have any fixed-$\tau$ degeneration limit. Finally, part 3 of
+Proposition~\ref{prop:time-limits} shows failure of uniform relaxation
+to $I$ near reducibility. It does not disprove tracking by a
+parameter-dependent effective trajectory, whose own relaxation time
+also diverges there.

@@ -1,0 +1,127 @@
+\section{The constrained finite-dimensional metric evolution}\label{sec:finite-flow}
+
+Let $\cP_r=\{H=H^*>0:\det H=1\}$. We use its affine invariant metric
+and distance
+\begin{equation}\label{eq:matrix-metric}
+ g_H(V,W)=\tr(H^{-1}VH^{-1}W),\qquad
+ d_r(H,K)^2=\tr\!\left(\log(H^{-1/2}KH^{-1/2})^2\right).
+\end{equation}
+Its geodesic is
+\[
+ \Geo(H,K;u)=H^{1/2}(H^{-1/2}KH^{-1/2})^uH^{1/2}.
+\]
+This is a complete simply connected space of nonpositive curvature;
+the distance, geodesic and exponential metric inequality are reviewed
+in \cite[Section 2.3]{bhatia}.
+Congruence by an invertible matrix preserves its metric whenever the
+congruence preserves the determinant-one locus. In particular unitary
+transport is an isometry. Logarithms such as $\log(H^{-1}K)$ are
+self-adjoint in the $H$ metric; they need not be Hermitian in the
+identity frame.
+
+The configuration space dictated by the bundle lift is
+\begin{equation}\label{eq:finite-space}
+ \cF=\{(H_0,H_1,H_2,H_3)\in\cP_2^4:
+                   H_{-j}=JH_jJ^*\}.
+\end{equation}
+It is the fixed set of an isometric involution of the product with metric
+$\sum_jA_jg_{H_j}$. It is therefore totally geodesic and geodesically
+convex. More explicitly it is
+$\cP_2^J\times\cP_2\times\cP_2^J$, with middle weight $2A_1$.
+Each endpoint factor consists of $\exp(ae_x)$, $a\in\RR$, so
+$\dim_\RR\cF=5$. The set is independent of $\theta$ in these frames;
+the energy contains the parameter.
+
+Put
+\begin{equation}\label{eq:finite-potential}
+ \Phi_{t,\theta}(H)=\frac\pi L\sum_{j\bmod4}
+                d_2(H_{j+1},RH_jR^*)^2.
+\end{equation}
+Every edge appears once. The relation $JR=R^{-1}J$ makes this function
+invariant under the involution defining \eqref{eq:finite-space}.
+
+\begin{proposition}\label{prop:finite-flow}
+The negative gradient flow of \eqref{eq:finite-potential} on $\cF$ is
+the restriction of the four-vertex system
+\begin{equation}\label{eq:finite-flow}
+ A_jH_j^{-1}\dot H_j=\frac{2\pi}{L}
+ \left\{\log(H_j^{-1}RH_{j-1}R^*)
+             +\log(H_j^{-1}R^*H_{j+1}R)\right\}.
+\end{equation}
+For initial tuples in a fixed bounded set, it has a solution for every
+physical time $s\ge0$, confined to a compact set independent of $t$ and
+$\theta$. Distances between two solutions with the same parameters are
+nonincreasing. The speed is $O(L^{-1})$, uniformly for all $s\ge0$;
+the same bound holds for the time derivative of any fixed smooth tuple
+function on the confined range.
+\end{proposition}
+
+\begin{proof}
+The negative gradient in the first variable of
+$\tfrac12d_2(H,K)^2$ is $H\log(H^{-1}K)$. Differentiating the two
+incident terms and dividing by $A_j$ gives \eqref{eq:finite-flow}.
+An invariant function has tangent gradient on the fixed set of an
+isometric involution, so \eqref{eq:finite-space} is preserved. The
+displayed logarithms are trace-free; the determinant condition is preserved.
+
+Squared distance is jointly geodesically convex in this nonpositively
+curved matrix space. Hence $\Phi$ is convex, and the identity tuple $I$
+is a minimizer. The first-variation inequality for a convex function
+gives
+\[
+ \frac{d}{ds}\frac12d_M(H(s),I)^2\le-\Phi(H(s))\le0,
+\]
+where $d_M^2=\sum_jA_jd_2^2$ is the product squared distance.
+Closed bounded sets are compact in this finite-dimensional space,
+proving confinement and continuation for all time. Applying the same
+convexity inequality to the two geodesics between two solutions gives
+nonexpansion. On the confined range every logarithm in
+\eqref{eq:finite-flow} is bounded uniformly in the unitary $R$.
+The equation then gives the speed and derivative bounds.
+\end{proof}
+
+The system is genuinely noncommuting. For example, choose $ab\ne0$ and
+\[
+ H_0=e^{a\sigma_x},\qquad H_1=e^{b\sigma_z},\qquad
+ H_2=I,\qquad H_3=Je^{b\sigma_z}J^*=e^{-b\sigma_z}.
+\]
+This lies in $\cF$. In the common frame of the first edge,
+$H_0$ and $R^*H_1R=H_1$ do not commute. Simultaneous frame conjugation
+cannot remove this commutator, so the construction is not restricted
+to independent scalar equations.
+
+\begin{lemma}\label{lem:finite-decay}
+Set $Z_j=\log H_j$,
+$R_f=\tfrac12\sum_jA_j\|Z_j\|_{\HS}^2$, and
+$\nu_0=(2\pi/L)\mu_0(\theta)$. Along \eqref{eq:finite-flow},
+\begin{equation}\label{eq:finite-decay}
+ \Phi(H)\ge\nu_0R_f,\qquad
+ R_f'\le-2\Phi(H)\le-2\nu_0R_f.
+\end{equation}
+The linearization at the identity is the negative of the effective
+operator with energy $(2\pi/L)q_\theta$ and mass $m_A$.
+\end{lemma}
+
+\begin{proof}
+The logarithm based at the identity does not increase distance, so
+\[
+ d_2(H_{j+1},RH_jR^*)^2
+       \ge\|Z_{j+1}-\Ad(R)Z_j\|^2.
+\]
+The logarithmic tuple satisfies \eqref{eq:linear-invariance}.
+Using \eqref{eq:five-forms} gives the first inequality.
+
+Radial contraction $H_j\mapsto e^{uZ_j}$ stays in $\cF$ and satisfies
+$\Phi(e^{uZ})\le u^2\Phi(H)$ for $0\le u\le1$. This is the
+distance contraction toward the common fixed point $I$. Differentiation
+from the left at $u=1$ gives a radial derivative at least $2\Phi(H)$.
+Pairing the negative gradient with the gradient of $R_f$ proves
+\eqref{eq:finite-decay}. Finally expansion of the logarithms in
+\eqref{eq:finite-flow} at $I$ gives the transported connection-graph
+operator, whose restriction was computed in Section~\ref{sec:spectrum}.
+\end{proof}
+
+The parameter $\nu_0$ includes the exact zero mode at reducibility.
+Thus \eqref{eq:finite-decay} gives a uniform exponential tail in $s/L$
+on classes $\mu_0(\theta)\ge\kappa>0$. It does not give such a tail
+when $\mu_0\to0$, although confinement and nonexpansion remain uniform.

@@ -1,0 +1,267 @@
+\section{Entry from spatially varying metrics}\label{sec:entry}
+
+We specify an open class of initial metrics without prescribing their
+finite initial tuple. The tuple is selected by auxiliary flows on
+the fixed closed normalization components at $\alpha=0$. Their
+use during a short preparation interval will be justified on the
+actual smoothing.
+
+\subsection{The selected constant metric on a fixed component}
+Let $Y$ be a fixed connected closed Riemann surface of area $A$.
+For matrix functions write $\langle f\rangle=A^{-1}\int_Y f\,dA$,
+and let $\lambda_1>0$ be the first positive scalar eigenvalue.
+Consider the trivial holomorphic bundle in a fixed global flat frame.
+
+\begin{lemma}\label{lem:component-phase}
+Let $h(s)$ be HYM flow from a smooth determinant-one metric with
+$cI\le h(0)\le C_0I$. There is a unique constant determinant-one
+matrix $P$ such that $h(s)\to P$ uniformly. With
+$M(s)=\langle h(s)\rangle$, $J(s)=\log\det M(s)$ and
+$W(s)=\langle\|h(s)-M(s)\|^2\rangle$, one has
+\begin{equation}\label{eq:phase-estimates}
+ \begin{gathered}
+ M'(s)\preceq0,\qquad P=\lim_{s\to\infty}M(s),\qquad
+ cI\le P\le C_0I,\\
+ \frac{W}{2C_0^2}\le J\le\frac{W}{2c^2},\qquad
+ J(s)\le J(0)e^{-\gamma s},\qquad
+ \tr(M(s)-P)\le C_0J(s),\qquad
+ \gamma=\frac{2c^2}{C_0^2}\lambda_1.
+ \end{gathered}
+\end{equation}
+For $s\ge1$,
+\begin{equation}\label{eq:phase-uniform}
+ \sup_Y d(h(s),P)^2\le
+ C_Y(2J(0)+J(0)^2)e^{-\gamma(s-1)}.
+\end{equation}
+If $P,P'$ are selected by two initial metrics in this bounded range,
+then
+\begin{equation}\label{eq:phase-contraction}
+ A D_{\tr}(P,P')\le
+          \int_Y D_{\tr}(h(0),h'(0))\,dA.
+\end{equation}
+Constants in these conclusions do not use derivatives of the
+initial metrics.
+\end{lemma}
+
+\begin{proof}
+Equation \eqref{eq:local-hym} is $h_s=-\Delta h-Q(h)$ with
+$Q=4a^{-1}h_z^*h^{-1}h_z\succeq0$. Averaging gives
+$M'=-\langle Q\rangle\preceq0$. The bounded decreasing
+Hermitian family $M(s)$ has a limit $P$ with eigenvalues in
+$[c,C_0]$; the determinant of this limit has not yet been
+determined.
+
+For $f(B)=\log\det B$ and a Hermitian matrix $Z$,
+\[
+ -D^2f_B[Z,Z]=\tr(B^{-1}ZB^{-1}Z),\qquad
+ C_0^{-2}\|Z\|^2\le -D^2f_B[Z,Z]\le c^{-2}\|Z\|^2
+\]
+on the same matrix interval. Taylor's integral formula along the
+segment from $M$ to $h(x)$, averaged over $Y$, has zero linear
+term. Since $\log\det h(x)=0$, it gives the two bounds between
+$J$ and $W$ in \eqref{eq:phase-estimates}.
+
+Using $M^{-1}\ge C_0^{-1}I$, then $h^{-1}\ge C_0^{-1}I$,
+gives
+\[
+ -J'=\tr(M^{-1}\langle Q\rangle)
+       \ge C_0^{-1}\langle\tr Q\rangle
+       \ge C_0^{-2}\langle|dh|^2\rangle.
+\]
+Here $4a^{-1}\tr(h_z^*h_z)=|dh|^2$. This identity takes the
+trace before any nonconstant matrix weight is introduced; no
+weighted commutator has been dropped. Applying the scalar
+Poincar\'e inequality to the real matrix entries of $h-M$
+gives $\langle|dh|^2\rangle\ge\lambda_1 W\ge2c^2\lambda_1J$.
+This proves the exponential bound for $J$.
+
+It follows that $\det P=1$. Since $M-P\succeq0$,
+integration of the logarithmic determinant along the segment
+from $P$ to $M$ gives
+$J\ge C_0^{-1}\tr(M-P)$. The cross term vanishes when averaging
+$\|h-P\|^2$, so
+\[
+ \langle\|h-P\|^2\rangle
+    =W+\|M-P\|^2\le C_0^2(2J+J^2).
+\]
+This proves exponential $L^2$ convergence.
+
+The constant $P$ is an exact stationary solution. By
+Lemma~\ref{lem:forced-trace}, $D_{\tr}(h,P)$ is a scalar heat
+subsolution. The time-one scalar heat kernel on this fixed
+compact surface is bounded. Thus its supremum at $s\ge1$ is at
+most a fixed multiple of its integral at $s-1$. Equivalence of
+trace and squared matrix distances on the bounded range proves
+\eqref{eq:phase-uniform}. Applying the integrated unforced trace
+comparison to two flows and passing to their uniform limits
+proves \eqref{eq:phase-contraction}.
+\end{proof}
+
+The selected matrix depends on the full initial metric. For
+simultaneously diagonal data
+$h(0)=\operatorname{diag}(e^{f_1},\ldots,e^{f_r})$ with
+$\sum_a f_a=0$, the scalar heat equation gives
+$P=\operatorname{diag}(e^{\langle f_1\rangle},\ldots,
+e^{\langle f_r\rangle})$. In general neither the initial
+arithmetic mean nor the exponential of its mean logarithm is
+asserted to equal $P$.
+
+\subsection{An open class on the smooth fibres}
+Fix $0<\beta<1$. Let $\Omega_i(2\rho)$ be the closed component
+with the branch disks of radius $2\rho$ removed, identified with
+its region in the smooth fibre. For a smooth trace-free
+$h_0$-Hermitian logarithm $S$, express its restriction $S_i$
+in the harmonic component gauge and set
+\begin{equation}\label{eq:extension-norm}
+ \cN(S)=\|S\|_{C^0(C_\tau)}
+  +\sum_i\inf_{\widetilde S_i|_{\Omega_i(2\rho)}=S_i}
+                    \|\widetilde S_i\|_{C^{6,\beta}(C_i)}.
+\end{equation}
+Each infimum is over smooth Hermitian trace-free extensions
+to the closed component $C_i$.
+Define $\mathcal B_{R_0}=\{e^S:\cN(S)<R_0\}$. For each
+fixed fibre this is an open nonempty class in the smooth
+$C^{6,\beta}$ topology. Indeed restriction to the punctured
+components has a bounded linear extension across their smooth
+boundary circles, so each infimum seminorm is continuous.
+No uniform estimate for this extension operator as
+$\rho\to0$ is needed or claimed.
+
+The class includes small smooth component profiles. It also
+permits arbitrary smooth modifications inside the removed disks
+and middle nodes, provided the global $C^0$ bound and strict
+norm margin are preserved. In particular their spatial
+derivatives there need not be uniformly bounded. Choose $R_0$
+small enough that phases obtained from extensions with total
+norm below $2R_0$ lie in the finite ball of
+Theorem~\ref{thm:all-time}. This is possible because their
+order bounds imply
+$d_A(P,o)\le2\sqrt{r\sum_i A_i}\,R_0$.
+
+\begin{theorem}\label{thm:spatial-entry}
+For the fixed data of Theorem~\ref{thm:all-time} and sufficiently
+small $R_0>0$, every initial metric in $\mathcal B_{R_0}$ has
+a selected tuple $P$ and a common preparation time
+$s_*\to\infty$ such that $\sigma s_*\to0$ and
+\begin{equation}\label{eq:entry-trace}
+ \eta_*:=\int_{C_\tau}
+             D_{\tr}(h(s_*),\widehat K(P))\,dA_\tau\longrightarrow0.
+\end{equation}
+The time and convergence bounds are uniform over this class and
+all permitted scale ratios. If $H_f(s)$ is the finite solution
+with $H_f(0)=P$, then
+\begin{equation}\label{eq:spatial-all-time}
+ \sup_{s\ge s_*}\int_{C_\tau}
+      d(h(s),\widehat K(H_f(s)))^2\,dA_\tau
+ \le C\{\eta_*+a_*+(\sigma s_*)^2\}\longrightarrow0.
+\end{equation}
+Different admissible extensions in \eqref{eq:extension-norm}
+give tuples at distance $O(\rho)$ and reconstructions at
+integrated squared distance $O(\rho^2)$ at every later time.
+\end{theorem}
+
+\begin{proof}
+Choose extensions $\widetilde S_i$ with total $C^{6,\beta}$
+norm below $2R_0$. Let $\Psi_i(s)$ be HYM flow for the trivial
+connection on the fixed closed component, from
+$\exp(\widetilde S_i)$, and let $P_i$ be its phase from
+Lemma~\ref{lem:component-phase}. These auxiliary flows have
+$\alpha_i=0$. Their difference from the actual component
+equation will be estimated explicitly.
+
+For each integer $n\ge1$, fixed-component parabolic theory
+gives a constant $C_n\ge1$ controlling two spatial derivatives
+and one time derivative of all these flows on $[0,n]$.
+One can choose $C_n$ nondecreasing. To justify uniformity over
+the profiles, the bounded initial $C^{6,\beta}$ class is
+precompact in $C^{4,\beta/2}$; continuous dependence for the
+fixed strictly parabolic equation, the order bounds and
+fixed-component continuation give a finite bound on each
+finite time interval. No assertion that $C_n$ stays bounded
+as $n\to\infty$ is used.
+
+Construct a preparation metric $K_{\mathrm{pre}}(s)$ with
+$\Psi_i(s)$ on $\Omega_i(2\rho)$. Use node geodesics between
+their values at the branch points, with parameter
+$-\epsilon_e\log|u_e|$, and interpolate relative logarithms
+on the incidence collars, including the actual unitary
+changes of frame. As before this is a global smooth
+determinant-normalized metric with fixed order bounds.
+On the component exterior, subtracting the trivial-connection
+equation from the actual $D_i$ equation leaves integrated
+error at most $C_n\alpha_*$. Metric transfer contributes
+$C_n b^2\rho^{-N}$. The node curvature is zero and its time
+residual has integral at most $C_n\rho^2$.
+
+On an incidence collar the component value differs from its
+value at the branch point by $O(C_n\rho)$, including the
+change of frame. The node logarithm differs from that point
+value by $O(C_n\epsilon_e|\log\rho|)$. The discrepancy
+derivatives of order $k\le2$ are therefore bounded by
+$C_n(\rho+\epsilon_*|\log\rho|)\rho^{-k}$. The full
+curvature-difference estimate used in Section~\ref{sec:angular}
+gives the integrated bound
+$C_n(\rho+\epsilon_*|\log\rho|)$, with the quadratic terms
+included. Consequently
+\begin{equation}\label{eq:preparation-residual}
+ \sup_{0\le s\le n}\int_{C_\tau}|\cR(K_{\mathrm{pre}}(s))|
+       \le C_n\delta_*,
+ \qquad
+ \delta_*=\alpha_*+\epsilon_*\ell+b^2\rho^{-N}\to0.
+\end{equation}
+At time zero $K_{\mathrm{pre}}$ and $h(0)$ agree on every
+$\Omega_i(2\rho)$ and have bounded difference elsewhere.
+The latter region has area $O(\rho^2)$. Integrated forced
+trace comparison gives error at most
+$C\rho^2+C_nn\delta_*$ through time $n$.
+
+For sufficiently small parameters choose
+\begin{equation}\label{eq:preparation-time}
+ s_*=\max\{n\in\mathbb N:nC_n\le\delta_*^{-1/2}\}.
+\end{equation}
+Then $s_*\to\infty$ and $\sigma s_*\to0$, since
+$\sigma\le C\delta_*$. Uniform convergence of the auxiliary
+flows to $P_i$, the component Green $L^2$ bounds, and the
+area $O(\rho^2)$ of the remaining regions show
+\begin{equation}\label{eq:quantitative-entry}
+ \eta_*\le C\bigl(\sqrt{\delta_*}
+                +e^{-\gamma_0(s_*-1)}+\epsilon_*^2\bigr)
+                   \longrightarrow0
+\end{equation}
+for a fixed $\gamma_0>0$ depending on the component
+geometries and initial order bounds. On this range trace
+distance and squared affine distance are equivalent, so the
+triangle comparison used here costs only a fixed constant.
+
+Restart Theorem~\ref{thm:all-time} at $s_*$ from the finite
+tuple $P$. This first compares $h(s)$ with
+$\widehat K(H_f(s-s_*))$. Convex gradient flow on the
+Hadamard product is nonexpanding: first variation of the
+squared distance between two solutions and convexity make
+its derivative nonpositive. Autonomy therefore gives
+\[
+ d_A(H_f(s-s_*),H_f(s))
+       \le d_A(P,H_f(s_*))\le C\sigma s_*
+       \qquad(s\ge s_*).
+\]
+Lemma~\ref{lem:reconstruction-energy} transfers this
+difference to global integrated squared distance, proving
+\eqref{eq:spatial-all-time}.
+
+Two choices of extensions agree on $\Omega_i(2\rho)$.
+Their initial component trace difference is bounded and
+supported on disks of total area $O(\rho^2)$.
+Equation \eqref{eq:phase-contraction} yields
+$d_A(P,P')=O(\rho)$. Nonexpansion of finite flow and
+\eqref{eq:reconstruction-lipschitz} preserve the asserted
+ambiguity for all later times.
+\end{proof}
+
+The preparation time is negligible compared with every finite
+scale: $\sigma s_*\to0$, while all finite speeds are bounded
+by a constant times $\sigma$. No approximation is asserted
+during the discarded initial layer. The tuple $P$ depends on
+the spatial initial data; convergence to a single
+parameter-independent finite trajectory would require
+convergence of the selected phases and of the rescaled
+parameters, in addition to the estimates proved here.

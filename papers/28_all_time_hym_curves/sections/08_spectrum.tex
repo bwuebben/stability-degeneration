@@ -1,0 +1,391 @@
+\section{The complete small spectrum and a three-scale family}\label{sec:spectrum}
+
+The linearization of HYM at the parallel metric is the heat
+equation for the induced connection Laplacian on trace-free
+Hermitian endomorphisms. Write $\mathfrak p_r=\Herm_0(r)$,
+$d=r^2-1$, $m=4d$, and
+\[
+ \mathcal L_{\tau,\alpha,U}=D^*D,\qquad
+ \mathcal E_\tau(s)=\int_{C_\tau}|Ds|^2\,dA_\tau .
+\]
+In this section the unitary transports may vary between fibres.
+For $X\in\mathfrak p_r^4$ set
+\begin{equation}\label{eq:effective-forms}
+ \begin{split}
+ M(X)&=\sum_i A_i\|X_i\|^2,\\
+ g_\alpha(X)&=\sum_{i=+,-}\alpha_i^2\kappa_i\|[T_i,X_i]\|^2,\\
+ Q(X)&=g_\alpha(X)+
+       \sum_{e=ij}w_e\|X_i-\Ad(U_{ij})X_j\|^2,\qquad
+ w_e=2\pi/L_e .
+ \end{split}
+\end{equation}
+These are respectively the mass form and the Hessian of
+\eqref{eq:potential} at $o$. They are defined by the component
+geometry, harmonic forms and node transports before solving a
+global analytic problem.
+
+\begin{theorem}\label{thm:relative-spectrum}
+Let $\nu_0\le\cdots\le\nu_{m-1}$ be the generalized eigenvalues
+of $(Q,M)$, including zeros, and let
+$\lambda_0\le\lambda_1\le\cdots$ be those of
+$\mathcal L_{\tau,\alpha,U}$. There are $\gamma>0$ and
+$e(\alpha_*,b)\to0$ as $\alpha_*,b\to0$ such that
+\begin{equation}\label{eq:relative-spectrum}
+ (1-e)\nu_k\le\lambda_k\le(1+e)\nu_k\quad(0\le k<m),
+ \qquad \lambda_m\ge\gamma.
+\end{equation}
+Exactly $m$ eigenvalues, counting zeros, tend to zero. The kernels
+of the finite and actual operators correspond exactly through
+\eqref{eq:common-kernel}. The estimates are uniform in all
+$\alpha_i^2L_e$, all $L_e/L_f$, and all unitary transports,
+including reducible ones.
+
+Component averaging identifies the $m$-dimensional spectral
+subspace associated with the eigenvalues tending to zero
+asymptotically isometrically with $(\mathfrak p_r^4,M)$.
+Let $\Pi$ be the orthogonal projection onto this small-eigenvalue
+subspace, and let $P_a$ be the orthogonal projection onto the
+image of the trial map $J_a$ constructed below. Then
+\begin{equation}\label{eq:projection-comparison}
+ \|\Pi-P_a\|_{L^2\to L^2}
+                \le C\sqrt{\alpha_*^2+w_*},\qquad
+ w_*=\max_e w_e.
+\end{equation}
+On the complementary space the inverse, heat and resolvent
+bounds are respectively $\gamma^{-1}$, $e^{-\gamma s}$
+and $(\gamma+\operatorname{Re}z)^{-1}$ for
+$\operatorname{Re}z\ge0$.
+\end{theorem}
+
+The scalar graph approximation on degenerating surfaces has a
+substantial history, including relative estimates with arbitrary
+short-edge ratios \cite{burger}. Here the point requiring proof
+is the combined component-and-node estimate, including the
+commutator kernel and every weaker positive scale.
+
+\subsection{Trial sections}
+Choose a small fixed radius $a$ in the branch disks, independent
+of all degenerating parameters. On an elliptic component begin
+with the constant matrix $X_i$ in the harmonic gauge. On
+$a<|u|<2a$ interpolate it with its parallel extension having
+node value $X_i$. The primitive of the harmonic one-form obeys
+$|F_{ie}|\le Ca$ and $|dF_{ie}|\le C$. The exact bound
+\[
+ \|\Ad(e^{i\alpha_iT_iF_{ie}})X_i-X_i\|
+           \le|\alpha_iF_{ie}|\|[T_i,X_i]\|
+\]
+retains the component energy factor in every cutoff term.
+The component energy is at most $(1+Ca^2)g_\alpha(X)$.
+On rational components use constants. Conformal invariance
+transfers these energies to the fibre exactly.
+
+On the remaining node annulus, whose conformal length is
+$\ell_e=L_e+2\log a$, interpolate the two parallel-frame
+values affinely in logarithmic radius. Its energy is exactly
+$(2\pi/\ell_e)\|X_i-\Ad(U_e)X_j\|^2$. Denote the resulting
+continuous $H^1$ trial section by $J_aX$. Then
+\begin{equation}\label{eq:trial-estimates}
+ \begin{split}
+ \mathcal E_\tau(J_aX)&\le(1+Ca^2)g_\alpha(X)
+       +\sum_e\frac{2\pi}{\ell_e}
+                      \|X_i-\Ad(U_e)X_j\|^2,\\
+ 1\le L_e/\ell_e&\le1+C_a/L_*,\\
+ \bigl|\|J_aX\|_{L^2}^2-M(X)\bigr|
+       &\le(Ca^2+o_a(b))M(X).
+ \end{split}
+\end{equation}
+The mass estimate uses the $O(a^2)$ disk and annular areas,
+unitarity and bounded interpolation, and smooth metric
+convergence on fixed component exteriors. It is uniform in
+the transports and length ratios. Min--max gives the relative
+upper bound in \eqref{eq:relative-spectrum}, first choosing
+$a$ small and then the parameters small. For one fixed $a$
+it also gives $\lambda_{m-1}\le C(\alpha_*^2+w_*)$.
+
+\subsection{Component means with an energy-controlled frame error}
+On the punctured elliptic domain $\Omega_i(a)$, let
+$\vartheta_{i,a}$ be the absolute harmonic representative of
+the restriction class of $\vartheta_i$, with zero normal
+component at the boundary. Write
+$\vartheta_i=\vartheta_{i,a}+df_{i,a}$ and
+$\kappa_{i,a}=\|\vartheta_{i,a}\|_{L^2}^2$.
+Then $\kappa_{i,a}\to\kappa_i>0$. For completeness, the
+restriction of $\vartheta_i$ is a competitor for the energy
+minimization, giving a uniform upper bound. A weakly
+convergent harmonic subsequence on compact subsets has finite
+$L^2$ energy across every puncture. Its holomorphic
+representation has no negative Laurent terms with finite
+$L^2$ norm, so it extends across the puncture. Its periods,
+including zero puncture periods, are those of
+$\vartheta_i$. Uniqueness of the harmonic representative
+on the closed component and lower semicontinuity prove
+the asserted norm convergence.
+
+Gauge by $e^{i\alpha_iT_if_{i,a}}$ and diagonalize $T_i$.
+Each matrix entry then has connection
+$d-i\beta\vartheta_{i,a}$ with
+$\beta=\alpha_i(t_b-t_c)$. Decompose an entry as $v=z+w$,
+where $w$ has mean zero. Coclosedness and the zero normal
+condition give
+$\langle dw,\vartheta_{i,a}z\rangle=0$.
+The fixed-domain Poincar\'e inequality and a small-$\beta$
+perturbation give
+$\|w\|\le C_a\|(d-i\beta\vartheta_{i,a})w\|$.
+The remaining cross term is bounded by
+$C_a\beta^2|z|\|w\|$. Completing the square therefore yields
+\begin{equation}\label{eq:component-lower-entry}
+ \|(d-i\beta\vartheta_{i,a})v\|^2
+ \ge\frac12\|(d-i\beta\vartheta_{i,a})w\|^2
+            +(\beta^2\kappa_{i,a}-C_a\beta^4)|z|^2.
+\end{equation}
+Summing matrix entries defines a real linear average
+$s\mapsto X_i(s)$ and gives
+\begin{equation}\label{eq:component-lower}
+ \begin{split}
+ \mathcal E_i(s)&\ge
+   (1-C_a\alpha_*^2)\alpha_i^2\kappa_{i,a}
+                                  \|[T_i,X_i]\|^2,\\
+ \|w_i\|_{H^1}^2+\alpha_i^2\|[T_i,X_i]\|^2
+                                      &\le C_a\mathcal E_i(s).
+ \end{split}
+\end{equation}
+No division by $\alpha_i$ or an eigenvalue difference is used.
+On rational components take the ordinary mean. These estimates
+concern actual component energy by conformal invariance.
+
+Let $c_{ie}$ be the boundary-circle mean in the parallel node
+frame. The change from the averaging gauge to this frame
+acting on $X_i$ is at most
+$C_a|\alpha_i|\|[T_i,X_i]\|$. The remaining error is bounded
+by the $H^1$ trace norm of $w_i$. Thus
+\begin{equation}\label{eq:boundary-means}
+ \|c_{ie}-X_i(s)\|\le C_a\mathcal E_i(s)^{1/2}.
+\end{equation}
+Replacing this by an error proportional to
+$|\alpha_i|\|X_i\|$ would lose relative control near a
+changing commutant.
+
+\subsection{The combined lower form}
+Partition the energy into the disjoint truncated components
+and their complementary node annuli:
+$\mathcal E_\tau=\mathcal E_{\mathrm{comp}}
+                  +\mathcal E_{\mathrm{neck}}$.
+Angular averaging and the one-dimensional Dirichlet principle
+give
+\[
+ \sum_e\frac{2\pi}{\ell_e}
+       \|c_{ie}-\Ad(U_e)c_{je}\|^2
+                   \le\mathcal E_{\mathrm{neck}}.
+\]
+Apply the triangle inequality in the direct sum of edge
+spaces weighted by $\sqrt{w_e}$. Using
+$w_e\le2\pi/\ell_e$ and \eqref{eq:boundary-means} gives
+\begin{equation}\label{eq:weighted-neck-lower}
+ \left(\sum_e w_e\|X_i-\Ad(U_e)X_j\|^2\right)^{1/2}
+ \le\mathcal E_{\mathrm{neck}}^{1/2}
+           +C_a\sqrt{w_*}\,\mathcal E_{\mathrm{comp}}^{1/2}.
+\end{equation}
+With $\delta=C_a\sqrt{w_*}$ use
+$(x+\delta y)^2\le(1+\delta)x^2+(\delta+\delta^2)y^2$.
+Meanwhile \eqref{eq:component-lower} and
+$\kappa_{i,a}\to\kappa_i$ give
+$g_\alpha(X)\le(1+\theta(a)+C_a\alpha_*^2)
+                   \mathcal E_{\mathrm{comp}}$, where
+$\theta(a)\to0$. Adding the two estimates yields
+\begin{equation}\label{eq:combined-form-lower}
+ Q(X(s))\le
+   \{1+\theta(a)+C_a\alpha_*^2+O_a(\sqrt{w_*})\}
+                                    \mathcal E_\tau(s).
+\end{equation}
+The component and annular energies have not been counted
+twice. This estimate is relative to their actual sum and
+contains no smallest scale in a denominator.
+
+\subsection{Mass and completeness}
+We give the mass estimate needed both for the lower eigenvalue
+bound and for completeness of the mode list. Let $s$ be a unit
+eigensection with eigenvalue $\lambda\le1$. Equation
+\eqref{eq:component-lower} bounds its mean-zero component
+parts in $H^1$ by $C_a\sqrt\lambda$. On fixed collars,
+interior elliptic estimates improve the boundary error to
+the same order in supremum norm. In the equation for the
+mean-zero part, the Laplacian of the gauged constant is
+$\alpha_i^2|\vartheta_{i,a}|^2\operatorname{ad}(T_i)^2X_i$.
+Its norm is bounded by $C_a|\alpha_i|\sqrt{\mathcal E_i}$
+using \eqref{eq:component-lower}. The other inhomogeneous
+term is $\lambda s$. Enlarge the fixed collar across the
+circle before applying the interior estimate. In the
+actual conformal metric the connection Laplacian is
+multiplied by a bounded smooth scalar there, without a new
+first-order term. The leading boundary values have size
+at most $C\|X_i\|$ with $C$ independent of $a$, because
+the changes of frame are unitary.
+
+On each node annulus split the section into its entrywise
+harmonic Dirichlet extension $h$ and a zero-boundary remainder
+$v$. The maximum principle and annular area $O(a^2)$ bound
+the mass of $h$ by $Ca^2+C_a\sqrt\lambda$. Orthogonality
+of Dirichlet energies gives
+$\mathcal E(v)\le\mathcal E(s)$. The zero-boundary Poincar\'e
+estimate
+\begin{equation}\label{eq:annulus-poincare}
+ \|v\|_{L^2(dA_\tau)}^2\le Ca^2\mathcal E(v)
+\end{equation}
+is uniform in the annular modulus. To verify it, the
+metric is bounded by a fixed multiple of
+$|du|^2+|dv_{\mathrm{branch}}|^2$, with
+$v_{\mathrm{branch}}=\tau_e/u$. For the first branch,
+the zero outer boundary value and radial Cauchy--Schwarz
+give
+$|v(r,\theta)|^2\le\log(a/r)\int_r^a
+|\partial_tv(t,\theta)|^2t\,dt$.
+Integration against $r\,dr\,d\theta$ is bounded by
+$Ca^2$ times the radial energy. The other branch gives
+the same estimate for its area term, using the zero
+boundary value at its outer circle. This proves
+\eqref{eq:annulus-poincare}.
+
+The component mean decomposition, metric convergence on
+fixed exteriors, and these annular bounds now imply that
+on any span of at most $m+1$ orthonormal eigensections
+with eigenvalues at most $\Lambda\le1$,
+\begin{equation}\label{eq:weak-mass}
+ |M(X(s))-\|s\|_{L^2}^2|
+ \le\{Ca^2+C_a\sqrt\Lambda+o_a(b)\}\|s\|_{L^2}^2.
+\end{equation}
+Passing from individual eigensections to this span costs
+only its fixed dimension. The leading omitted-area
+constant is independent of $a$.
+
+If $\lambda_m$ tended to zero along a joint degeneration,
+first choose $a$ small and then take the parameters far
+along that sequence. Equation \eqref{eq:weak-mass} would
+make averaging injective on an $(m+1)$-dimensional space
+into $\mathfrak p_r^4$, a contradiction. This proves
+the uniform complementary gap. The trial upper bound
+already puts $m$ eigenvalues below it.
+
+For the first $k+1$ eigensections use
+$\Lambda=C(\alpha_*^2+w_*)$ in \eqref{eq:weak-mass}.
+Their averages form a $(k+1)$-dimensional space.
+Finite min--max gives a section in this span with
+$Q(X(s))\ge\nu_kM(X(s))$. Combining this with
+\eqref{eq:combined-form-lower} proves the relative lower
+bound. For any requested error first choose $a$, then
+choose $\alpha_*,b$ independently small. These quantifiers
+give the function $e(\alpha_*,b)\to0$ in the theorem,
+uniformly in all remaining ratios and transports.
+
+The zero set of $Q$ is exactly
+\eqref{eq:common-kernel}, since every node weight is
+positive. Section~\ref{sec:geometry} identifies these
+tuples with all global parallel endomorphisms, which are
+precisely the kernel of $D^*D$. Thus zeros agree exactly
+through all kernel changes.
+
+Choose $a=a(\alpha_*,b)$ tending sufficiently slowly to
+zero that the preceding errors vanish and
+$|\log a|/L_*\to0$. The averaging and trial mass
+estimates are then asymptotic isometries. On the
+complement of the small-eigenvalue subspace, the gap gives
+\[
+ \|(1-\Pi)J_aX\|^2\le
+       \gamma^{-1}\mathcal E_\tau(J_aX)
+       \le C(\alpha_*^2+w_*)M(X).
+\]
+The spaces have equal dimension and the trial mass
+has a uniform lower bound. Equality of their maximal
+principal angle with the norm of the difference of
+orthogonal projections proves
+\eqref{eq:projection-comparison}. The spectral theorem
+gives the stated inverse, heat and resolvent estimates
+on the complement. On the positive small-eigenvalue subspace the
+smallest rate and inverse norm instead have the
+relative comparison with the smallest positive
+$\nu_k$; they need not stay bounded away from zero
+and infinity. This completes the proof of
+Theorem~\ref{thm:relative-spectrum}.
+
+\subsection{A three-scale family}
+Order the vertices as $E_+,R_p,E_-,R_q$, numbered $0,1,2,3$.
+Use identity transports on $0$--$1$--$2$--$3$ and
+$U=(I+i\sigma_x)/\sqrt2$ on $3$--$0$. Set $T_+=\sigma_z$,
+$\alpha_-=0$, and, for $h>0$, take
+\begin{equation}\label{eq:h-family}
+ w_{01}=w_{12}=w_{23}=h,\quad w_{30}=h^2,\quad
+ \alpha_+=h^2/\sqrt{\kappa_+},\quad
+ \tau_e=\exp(-2\pi/w_e).
+\end{equation}
+These are genuine parameters of the compact family.
+Section~\ref{sec:geometry} proves stability for all
+sufficiently small $h>0$.
+
+In the Hilbert--Schmidt orthonormal Pauli basis
+$(\sigma_x,\sigma_y,\sigma_z)/\sqrt2$ at each vertex,
+$M=I$ and the matrix of $Q$ is
+\begin{equation}\label{eq:h-matrix}
+ Q_h=h(L_{P_4}\otimes I_3)+h^2D_{30}^TD_{30}
+          +h^4\operatorname{diag}(4,4,0,0,\ldots,0),
+\end{equation}
+where
+\[
+ L_{P_4}=\begin{pmatrix}
+ 1&-1&0&0\\-1&2&-1&0\\0&-1&2&-1\\0&0&-1&1
+ \end{pmatrix},\qquad
+ D_{30}X=X_3-RX_0,\qquad
+ R=\begin{pmatrix}1&0&0\\0&0&1\\0&-1&0\end{pmatrix}.
+\]
+The positive path eigenvalues are $2-\sqrt2,2,2+\sqrt2$.
+Thus nine finite eigenvalues are these three coefficients
+times $h$, each with multiplicity three, up to $O(h^2)$.
+The isometric constant-tuple inclusion
+$Z\mapsto(Z,Z,Z,Z)/2$ compresses the cycle term to
+$\operatorname{diag}(0,\tfrac12,\tfrac12)$ and the
+component term to $\operatorname{diag}(1,1,0)$.
+Schur complementation across the order-$h$ complement
+therefore gives two eigenvalues
+$\tfrac12h^2+O(h^3)$.
+
+For the last eigenvalue one must use its invariant sector,
+rather than this absolute remainder. The $\sigma_x$
+sector is invariant, its graph operator has exact
+constant kernel, and its positive gap is at least
+$(2-\sqrt2)h$. The order-$h^4$ perturbation has
+expectation $h^4$ on its unit constant vector.
+The complementary inverse bound gives the last
+eigenvalue $h^4+O(h^7)$. As a check on the displayed
+finite matrix, its determinant is
+\begin{equation}\label{eq:h-determinant}
+ \det Q_h=16h^{17}(1+3h)(1+2h^2+6h^3).
+\end{equation}
+All entries and the compressions used in this calculation
+are printed above.
+
+\begin{corollary}\label{cor:three-scales}
+On the stable compact family \eqref{eq:h-family}, nine
+actual eigenvalues have leading coefficients
+$2-\sqrt2,2,2+\sqrt2$, each three times, at order $h$;
+two are asymptotic to $\tfrac12h^2$; one is
+asymptotic to $h^4$. The next eigenvalue has a uniform
+positive lower bound. On the fixed small basin of
+Theorem~\ref{thm:all-time}, actual nonlinear HYM
+trajectories are approximated by
+\eqref{eq:finite-flow} through time $h^{-4}$ and all
+later times, with absolute integrated squared-distance
+error at most
+$\eta+O(h(1+|\log h|)^2)$. The spatial initial class
+of Theorem~\ref{thm:spatial-entry} has the corresponding
+all-time conclusion after preparation.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem~\ref{thm:relative-spectrum} to the finite
+eigenvalue estimates. Apply Theorems~\ref{thm:all-time}
+and \ref{thm:spatial-entry} separately to the same
+fixed matrices and transports. Here
+$\epsilon_*=h/(2\pi)$, $\alpha_*=h^2/\sqrt{\kappa_+}$,
+and $b=e^{-2\pi/h}$, so
+$a_*=O(h(1+|\log h|)^2)$. The nonlinear conclusion
+follows from the residual and energy proof, not from
+the eigenvalue asymptotics.
+\end{proof}

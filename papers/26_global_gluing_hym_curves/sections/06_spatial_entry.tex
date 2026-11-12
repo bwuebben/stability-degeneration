@@ -1,0 +1,298 @@
+\section{Spatial initial metrics and the initial layer}\label{sec:entry}
+
+The initial-error hypothesis of Theorem~\ref{thm:tracking}
+can be obtained from spatially varying metrics on the
+normalization components. We first select the constant
+metric determined by the actual flow on each fixed
+component. We then construct an initial layer on the
+smooth fibre whose duration is negligible compared
+with $L_*$.
+
+\subsection{Constant limits on a fixed component}
+Let $Y$ be a fixed connected compact Riemann surface
+of area $A$, with its trivial holomorphic rank-$r$
+bundle and fixed flat frame. Write
+$\langle f\rangle=A^{-1}\int_Y f\,dA$, entrywise
+for a matrix. Let $\lambda_1>0$ be the first
+positive scalar eigenvalue.
+When a component flow converges to a constant
+metric $P$, we call $P$ the asymptotic phase
+of its initial metric.
+
+\begin{theorem}\label{thm:component-phase}
+For a smooth determinant-one initial metric with
+$cI\le H^{\mathrm{in}}\le CI$, $0<c\le1\le C$,
+the actual HYM flow converges to a unique constant
+matrix $P=P(H^{\mathrm{in}})\in\cP_r$.
+Set
+\[
+ M(s)=\langle H(s)\rangle,\quad J(s)=\log\det M(s),
+ \quad V(s)=\langle\|H(s)-M(s)\|_{\HS}^2\rangle,
+ \quad \gamma=2c^2C^{-2}\lambda_1 .
+\]
+Then $M$ decreases in Loewner order to $P$, and
+\begin{equation}\label{eq:phase-entropy}
+ \frac{V}{2C^2}\le J\le\frac{V}{2c^2},\quad
+ J(s)\le J(0)e^{-\gamma s},\quad
+ 0\preceq M(s)-P,\quad \tr(M(s)-P)\le CJ(s).
+\end{equation}
+In particular
+\begin{equation}\label{eq:phase-l2}
+ \langle\|H(s)-P\|_{\HS}^2\rangle
+ \le C^2(2J(0)+J(0)^2)e^{-\gamma s}.
+\end{equation}
+For $s\ge1$ the same exponential order bounds
+$\sup_Y d(H(s),P)^2$, with a constant depending
+only on $Y,c,C,r$. For two such initial metrics,
+\begin{equation}\label{eq:phase-contraction}
+ A\,\sigma(P(H^{\mathrm{in}}),P(K^{\mathrm{in}}))
+ \le\int_Y\sigma(H^{\mathrm{in}},K^{\mathrm{in}})\,dA .
+\end{equation}
+\end{theorem}
+\begin{proof}
+Equation~\eqref{eq:local-hym} is
+$H_s=-\Delta H-\mathcal A(H)$, with
+$\mathcal A(H)=4a^{-1}H_z^*H^{-1}H_z\succeq0$.
+Its spatial mean therefore satisfies
+$M'=-\langle\mathcal A(H)\rangle\preceq0$.
+Since $cI\le M\le CI$, it has a positive matrix
+limit $P$. At this point its determinant has
+not been prescribed.
+
+For a Hermitian direction $Z$ and a matrix
+$cI\le B\le CI$,
+\[
+ -D^2(\log\det)_B[Z,Z]
+ =\tr(B^{-1}ZB^{-1}Z),\qquad
+ C^{-2}\|Z\|^2\le\tr(B^{-1}ZB^{-1}Z)
+                  \le c^{-2}\|Z\|^2.
+\]
+Diagonalizing $B$ proves the inequalities
+entrywise. Apply Taylor's integral remainder
+along the segment from $M$ to $H(x)$, then
+average. The linear term vanishes and
+$\log\det H(x)=0$, giving the two bounds
+for $J$ in \eqref{eq:phase-entropy}.
+
+Using positivity twice gives
+\[
+ -J'=\tr(M^{-1}\langle\mathcal A(H)\rangle)
+ \ge C^{-1}\langle\tr\mathcal A(H)\rangle
+ \ge C^{-2}\langle|dH|^2\rangle.
+\]
+In the last step one first bounds $H^{-1}$
+below and then uses the unweighted identity
+$4a^{-1}\tr(H_z^*H_z)=|dH|^2$. The scalar
+Poincar\'e inequality in each matrix coordinate
+gives $\langle|dH|^2\rangle\ge\lambda_1V$.
+Thus $J'\le-\gamma J$. In particular
+$J\to0$, so continuity of determinant gives
+$\det P=1$.
+
+The segment from $P$ to $M$ is bounded above
+by $CI$. Since $M-P\succeq0$,
+\[
+ J=\int_0^1\tr\!\left[
+ (P+t(M-P))^{-1}(M-P)\right]dt
+ \ge C^{-1}\tr(M-P).
+\]
+The mean-zero cross term in the squared norm
+vanishes, and therefore
+\[
+ \langle\|H-P\|^2\rangle
+ =V+\|M-P\|^2\le2C^2J+C^2J^2.
+\]
+This proves \eqref{eq:phase-l2}.
+
+The constant $P$ is itself an exact solution.
+The scalar trace comparison shows that
+$\sigma(H(s),P)$ is a nonnegative heat
+subsolution. On the fixed component the
+time-one heat kernel is bounded, whence
+\[
+ \sup_Y\sigma(H(s),P)
+ \le C_Y\int_Y\sigma(H(s-1),P)\,dA
+ \quad(s\ge1).
+\]
+On the fixed matrix range $\sigma$ is
+comparable to squared matrix difference,
+so \eqref{eq:phase-l2} proves uniform
+convergence with the asserted rate.
+Finally apply trace contraction to two
+exact flows and pass to their uniform
+constant limits. This gives
+\eqref{eq:phase-contraction}.
+\end{proof}
+
+The phase depends on the entire spatial initial
+metric. For diagonal initial data
+$\operatorname{diag}(e^{f_1},\ldots,e^{f_r})$,
+$\sum f_j=0$, it is
+$\operatorname{diag}(e^{\langle f_1\rangle},
+\ldots,e^{\langle f_r\rangle})$, by scalar
+heat flow. No formula
+$P=\exp\langle\log H^{\mathrm{in}}\rangle$
+is asserted for general noncommuting data.
+The contraction estimate makes the phase map
+Lipschitz in $L^2$ on every fixed bounded
+metric range.
+
+\subsection{An open class on the smooth fibres}
+Put $\rho=L_*^{-1}$ and let
+$\Omega_i(2\rho)\subset C_i$ be the complement
+of the incidence discs of radius $2\rho$.
+Use the fixed exterior transfers and flat frames
+of Section~\ref{sec:geometry}.
+For a smooth trace-free $h_0$-Hermitian
+endomorphism $S$ on $C_\tau$, fix $0<\beta<1$
+and define
+\begin{equation}\label{eq:extension-norm}
+ \mathcal N_\tau(S)=\|S\|_{C^0(C_\tau)}
+ +\inf_{\widetilde S_i|_{\Omega_i(2\rho)}=S_i}
+             \sum_i\|\widetilde S_i\|_{C^{6,\beta}(C_i)} .
+\end{equation}
+The extensions are trace-free Hermitian matrices
+in the component frames. Fix $R_0>0$ and take
+$\mathcal N_\tau(S)<R_0$, with initial metric
+$H^{\mathrm{in}}=h_0e^S$.
+For each fixed smooth fibre this class is open
+in the $C^{6,\beta}$ topology on smooth metrics:
+fixed-domain extension operators bound
+$\mathcal N_\tau(S_1-S_2)$ by a finite multiple
+of the global $C^{6,\beta}$ norm.
+Their operator norms need not be uniform as
+$\rho\to0$. The radius in
+\eqref{eq:extension-norm} is fixed independently
+of the degeneration. Small fixed component
+profiles joined smoothly on the nodes give
+nonempty examples. Bounded smooth changes
+inside the middle necks may have arbitrary
+derivatives.
+
+Choose extensions with total norm less than
+$2R_0$. Apply Theorem~\ref{thm:component-phase}
+to $e^{\widetilde S_i}$ and denote its flow by
+$G_i(s,z)$ and selected phase by $P_i$.
+All component flows have uniform positive
+bounds and uniform exponential phase convergence.
+Different admissible extensions agree outside
+discs of area $O(\rho^2)$, so
+\eqref{eq:phase-contraction} gives
+$d(P_i,\widetilde P_i)=O(\rho)$.
+Finite-flow nonexpansion preserves this
+ambiguity at all later times.
+
+\begin{theorem}\label{thm:entry}
+For the class \eqref{eq:extension-norm} there
+is a preparation time $s_*(\tau)\to\infty$,
+uniform in all length ratios and unitary
+parameters, such that $s_*/L_*\to0$.
+Let $\widehat K_P(v)$ be the reconstruction
+of Theorem~\ref{thm:tracking} for the finite
+flow starting at the selected tuple $P$.
+Then
+\[
+ \eta_*=\int\sigma(H(s_*),\widehat K_P(0))\to0
+\]
+uniformly over the stated initial class.
+Consequently \eqref{eq:tracking} holds with
+$H(s_*+v)$, $\widehat K_P(v)$ and initial
+error $\eta_*$, for $0\le v\le TL_*$.
+Under \eqref{eq:rate-condition} the all-time
+estimate of Theorem~\ref{thm:all-time} holds
+after the same preparation.
+\end{theorem}
+\begin{proof}
+Fixed-base parabolic estimates for the component
+flows with bounded $C^{6,\beta}$ initial profiles
+give nondecreasing finite constants $C_n\ge1$
+controlling the required space and time derivatives
+on $0\le s\le n$. They depend on $R_0$ and the
+fixed components, not on $\tau,U$.
+Transfer $G_i(s,z)$ to the component exteriors.
+On each node join its two point values
+$G_i(s,p_{ie})$ and $U_{ij}G_j(s,p_{je})U_{ij}^*$
+by the geodesic with parameter
+$-\varepsilon_e\log|u_e|$. The node curvature
+is zero, as in \eqref{eq:node-profile}.
+On the $i$ collar use the spatially constant
+reference $G_i(s,p_{ie})$ for both relative
+logarithms. On $\rho\le|u_e|\le2\rho$, the difference
+between the component and node logarithms, with
+its first two derivatives, is at most
+\[
+ C_n(\rho+\varepsilon_e|\log\rho|)\rho^{-k},
+ \qquad k=0,1,2 .
+\]
+The $O(\rho)$ term is the spatial variation
+of $G_i$ from its nodal value, and the
+other term is the small node parameter.
+Use the same logarithmic cutoffs and
+curvature-difference estimate as in
+\eqref{eq:mixed-collar}. The integrated
+collar residual is at most
+$C_n(\rho+\varepsilon_*|\log\rho|)$.
+The middle-node time residual is
+$O(C_n\rho^2)$ and the geometric transfer
+error is $O(C_nb\rho^{-N})$.
+Thus the resulting global preparation
+metric $K_{\mathrm{pre}}$ obeys
+\[
+ \sup_{0\le s\le n}\int|\mathcal R(K_{\mathrm{pre}})|
+ \le C_n\delta_*,
+ \qquad
+ \delta_*=\frac{1+\log L_*}{L_*}+e^{-L_*}L_*^N\to0 .
+\]
+The initial metric and $K_{\mathrm{pre}}(0)$
+agree outside regions of area $O(\rho^2)$
+and have common positive bounds. By
+\eqref{eq:trace-comparison} their integrated squared
+distance, and their integrated trace
+discrepancy, are bounded by
+$C\rho^2+nC_n\delta_*$ up to time $n$.
+
+For all sufficiently small parameters choose
+\[
+ s_*=\max\{n\in\mathbb N:nC_n\le\delta_*^{-1/2}\}.
+\]
+It tends to infinity because each $C_n$ is
+finite, and it is finite because $C_n\ge1$.
+Also $s_*\le\delta_*^{-1/2}$, which implies
+$s_*/L_*\to0$. At that time the component
+flows are exponentially close to $P_i$.
+The reconstruction with initial tuple $P$
+differs from the constant component metrics
+by the Green corrections; their squared
+integrals are $O(L_*^{-2})$. The remaining
+node regions have area $O(\rho^2)$.
+On the common matrix range, $\sigma$ is
+comparable to squared distance and obeys
+a triangle bound up to a fixed constant.
+We obtain
+\[
+ \eta_*\le C_{R_0}\left(
+ \sqrt{\delta_*}+e^{-\gamma_{R_0}(s_*-1)}
+ +L_*^{-2}\right)\to0 .
+\]
+Restart Theorem~\ref{thm:tracking} at
+$s_*$, and Theorem~\ref{thm:all-time} when
+its additional rate hypothesis holds.
+\end{proof}
+
+For physical times after preparation one may align
+the finite trajectory with time zero. Its speed
+is $O(L_*^{-1})$, and the uniform $L^2$ Lipschitz
+reconstruction gives, for $v\ge0$,
+\[
+ \int d(H(s_*+v),\widehat K_P(s_*+v))^2
+ \le 2\int d(H(s_*+v),\widehat K_P(v))^2
+       +C(s_*/L_*)^2 .
+\]
+Thus the time shift costs a fixed factor in the
+preceding squared-error estimate and a vanishing
+additional term. Uniform tracking does not
+by itself assert convergence of a family of
+selected phases. To pass to a fixed positive
+rescaled-time limit, one must also assume
+convergence of those phases and of the
+normalized finite parameters.

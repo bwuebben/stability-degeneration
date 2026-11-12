@@ -1,0 +1,37 @@
+{
+  "status": "PASS; exact finite algebra, not a PDE proof",
+  "mass": "I_12 (four unit-area components, orthonormal Pauli basis)",
+  "edge_weights": {
+    "01": "h",
+    "02": "h",
+    "03": "h",
+    "12": "h**2",
+    "13": "h**4",
+    "23": "h**3"
+  },
+  "transport_12": "Matrix([\n[1,  0, 0],\n[0,  0, 1],\n[0, -1, 0]])",
+  "transport_13": "Matrix([\n[0, 0, -1],\n[0, 1,  0],\n[1, 0,  0]])",
+  "determinant": "4*h**17*(54*h**12 + 78*h**11 + 177*h**10 + 178*h**9 + 225*h**8 + 194*h**7 + 145*h**6 + 118*h**5 + 55*h**4 + 36*h**3 + 14*h**2 + 4*h + 2)",
+  "rescaled_characteristic_limits": {
+    "P(h*z,h)/h^12": "z**3*(z - 4)**3*(z - 1)**6",
+    "P(h^2*z,h)/h^15": "-16*z*(2*z - 1)**2",
+    "P(h^4*z,h)/h^17": "-8*(2*z - 1)"
+  },
+  "determinant_leading_coefficient_at_h17": "8",
+  "middle_kernel_compression": "Matrix([\n[0,   0,   0],\n[0, 1/2,   0],\n[0,   0, 1/2]])",
+  "weakest_kernel_compression": "1/2",
+  "predicted_positive_eigenvalue_orders": {
+    "h": {
+      "coefficient_1": 6,
+      "coefficient_4": 3
+    },
+    "h^2": {
+      "coefficient_1/2": 2
+    },
+    "h^4": {
+      "coefficient_1/2": 1
+    }
+  },
+  "geometric_path": "tau_e=exp(-2*pi/h^p_e); real path in the actual complex polydisc, not claimed holomorphic at h=0",
+  "scope": "Finite algebra only. The actual spectral comparison is Theorem thm:spectrum; no nonlinear weakest-time inference."
+}

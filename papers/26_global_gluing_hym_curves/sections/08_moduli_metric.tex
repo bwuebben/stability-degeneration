@@ -1,0 +1,296 @@
+\section{The Hodge metric on the gluing locus}\label{sec:moduli}
+
+Return to the component-trivial bundles of
+Section~\ref{sec:geometry}, and restrict the
+quartic family to the one-parameter slice
+$\tau_e=t$ for every edge. Thus
+$L=\log(1/|t|)$ is common to all six necks.
+We compare the actual harmonic-one-form
+$L^2$ metric on a locus of flat-bundle moduli
+with a finite quotient metric. The mass
+weights in \eqref{eq:finite-forms} do not
+enter this one-form comparison.
+
+\subsection{The graph quotient and its embedding}
+Write $\Gamma=K_4$, $d=r^2-1$ and
+$g_\Gamma=b_1(\Gamma)=3$.
+The irreducible graph representation space is
+\[
+ \mathcal M_\Gamma^{\mathrm{irr}}
+   =\SU(r)^{E,\mathrm{irr}}/\SU(r)^V,
+ \qquad U_{ij}\longmapsto g_iU_{ij}g_j^{-1}.
+\]
+After dividing the vertex gauge group by
+its ineffective diagonal center, this is
+a free proper action. The quotient is a
+smooth real manifold of dimension
+$(|E|-|V|)d=(g_\Gamma-1)d=2d$.
+Choose an orientation for each edge.
+A tangent representative is
+$a_e=\dot U_eU_e^{-1}\in\mathfrak{su}(r)$.
+Put
+\begin{equation}\label{eq:graph-moduli-metric}
+ (\delta_Ux)_{ij}=x_i-\Ad(U_{ij})x_j,\qquad
+ G_{\Gamma,U}([a])
+ =\min_{x\in\mathfrak{su}(r)^V}
+                  \sum_e\|a_e+(\delta_Ux)_e\|^2 .
+\end{equation}
+Here $\langle X,Y\rangle=-\tr(XY)$.
+This is the quotient metric of the
+bi-invariant product metric on the edges.
+The notation denotes its squared norm on
+a tangent class.
+
+Let $\mathcal M_t^{\mathrm{irr}}$ be the
+moduli space of irreducible flat $\SU(r)$
+connections on $C_t$. Its tangent space at
+$D$ is $H^1(C_t;\operatorname{ad}D)$.
+Irreducibility gives $H^0=0$ and duality
+gives $H^2=0$, so the local quotient is
+smooth. We use the Hodge metric: a class
+has the squared $L^2$ norm of its unique
+$D$-harmonic one-form representative,
+equivalently the minimum of $\int|b|^2$
+over its closed representatives modulo
+exact forms. These deformation and
+pairing conventions are those of
+\cite[Section~1]{goldman}.
+Via \cite{narasimhan-seshadri} this is
+a metric on stable rank-$r$ degree-zero
+bundles with trivial determinant.
+
+Proposition~\ref{prop:bundle} gives a map
+$\Phi_t:\mathcal M_\Gamma^{\mathrm{irr}}
+\to\mathcal M_t^{\mathrm{irr}}$ by inflation
+along $\pi_1(C_t)\twoheadrightarrow\pi_1(\Gamma)$.
+It is an embedding. Surjectivity of this
+group map shows that conjugate inflated
+representations were already conjugate.
+Evaluation on fixed lifts of the free
+graph generators gives a continuous left
+inverse on the image, smooth in local
+representation slices. The differential
+is injective: an inflated cocycle that
+is a coboundary on the surface has the
+same coboundary expression on these lifts.
+This proves both immersion and the
+topology of the embedding.
+Denote the pullback Hodge metric by $G_t$.
+The construction is a unitary Schottky
+locus; the free-group construction itself
+is classical \cite[Section~3, Proposition~1]{florentino}.
+
+\begin{theorem}\label{thm:moduli-metric}
+There is a constant $C$, depending only
+on the fixed family, rank and exterior
+collars, such that for large $L$,
+\begin{equation}\label{eq:moduli-metric}
+ \left(1-\frac CL\right)\frac{2\pi}{L}
+       G_{\Gamma,U}([a])
+ \le G_{t,U}([a])
+ \le
+ \left(1+\frac CL\right)\frac{2\pi}{L}
+       G_{\Gamma,U}([a]).
+\end{equation}
+This holds for every irreducible $U$
+and tangent class, uniformly as $U$
+approaches reducibility.
+At a reducible $U$ the same energy
+inequalities hold on
+$C^1(\Gamma;\operatorname{ad}U)/
+\operatorname{im}\delta_U$; no smooth
+moduli interpretation there is asserted.
+
+For a connected relatively compact open
+subset $\Omega\subset\mathcal M_\Gamma^{\mathrm{irr}}$,
+let $d_{t,\Omega}$ and $d_{\Gamma,\Omega}$
+be the intrinsic path distances using
+paths in $\Omega$. Then
+\begin{equation}\label{eq:moduli-distance}
+ \sqrt{1-C/L}\,d_{\Gamma,\Omega}
+ \le\sqrt{\frac{L}{2\pi}}\,d_{t,\Omega}
+ \le\sqrt{1+C/L}\,d_{\Gamma,\Omega}.
+\end{equation}
+The image of $\Phi_t$ is Lagrangian in
+the surface moduli space with its
+cohomological symplectic form.
+\end{theorem}
+
+\subsection{Affine primitives and the energy infimum}
+\begin{proof}
+Fix a small collar radius $a$, independent
+of $t$. The thick components and the
+annuli of logarithmic length
+$\ell_a=L+2\log a$ partition $C_t$.
+Each has a flat unitary frame.
+
+An inflated graph tangent class restricts
+to zero cohomology on every thick piece
+and every annulus: the represented family
+has identically trivial holonomy on the
+fundamental group of each such patch.
+Thus any closed representative $b$ has
+single-valued local primitives. In
+the fixed flat frames write $b_i=df_i$.
+On the left overlap choose the node
+primitive to satisfy $f_e=f_i$.
+On the right overlap it has the affine
+jump
+\begin{equation}\label{eq:affine-primitives}
+ f_e=\Ad(U_{ij})f_j+a_e .
+\end{equation}
+The constants represent the graph
+cochain class $[a]$. To check the sign,
+if varying local parallel frames obey
+$P_j(s)=P_i(s)U_{ij}(s)$, their
+infinitesimal changes satisfy
+$dk_i=-b_i$ and
+$k_i=\Ad(U_{ij})k_j-a_{ij}$.
+Taking $f_i=-k_i$ gives
+\eqref{eq:affine-primitives}.
+Changes of primitive constants change
+the cochain by an element of
+$\operatorname{im}\delta_U$.
+Conversely these affine jumps construct
+every graph cochain class.
+
+Choose a minimizer $x$ in
+\eqref{eq:graph-moduli-metric}.
+Use constant component potentials
+$-x_i$, and interpolate in log radius
+on edge $ij$ from $-x_i$ to
+$a_e-\Ad(U_{ij})x_j$.
+The difference of the endpoints is
+$a_e+(\delta_Ux)_e$.
+Component derivatives vanish and
+one-form energy is conformally invariant
+in two dimensions. The resulting
+energy is exactly
+\[
+ \frac{2\pi}{\ell_a}
+        \sum_e\|a_e+(\delta_Ux)_e\|^2 .
+\]
+Piecewise affine primitives lie in
+$H^1$ and give weakly closed $L^2$
+one-forms. Smoothing the profiles
+near their ends preserves the affine
+jumps and approximates the same energy.
+Equivalently one may use the weak
+Hodge projection. The variational
+characterization of $G_t$ gives the
+upper estimate in
+\eqref{eq:moduli-metric}.
+
+The potentials $x_i$ themselves can be
+large near a stabilizer change. Their
+size does not enter this bound:
+their component derivatives are zero
+and the annular derivatives depend
+only on the minimizing residual.
+
+For the lower estimate take any smooth
+closed representative $b$ of the class.
+Let $x_i$ be the thick-component mean
+of $f_i$, and $c_{ie}$ its boundary
+circle mean. Fixed-domain Poincaré
+and trace estimates give
+\[
+ \|c_{ie}-x_i\|
+       \le C_a\|b\|_{L^2(\text{component }i)}.
+\]
+The constants are uniform in $t,U$:
+the fixed thick metrics converge
+smoothly and the frames are unitary.
+Circle averaging and Cauchy--Schwarz
+along the log cylinder give
+\[
+ E_e(b)\ge\frac{2\pi}{\ell_a}
+       \|a_e+\Ad(U_{ij})c_{je}-c_{ie}\|^2 .
+\]
+Writing $E_{\mathrm n}$ and
+$E_{\mathrm c}$ for the disjoint
+neck and component energies, we obtain
+\[
+ \begin{split}
+ G_{\Gamma,U}([a])^{1/2}
+ &\le\left(\sum_e\|a_e-(\delta_Ux)_e\|^2\right)^{1/2}\\
+ &\le\sqrt{\ell_a/(2\pi)}\,E_{\mathrm n}^{1/2}
+                                  +C_aE_{\mathrm c}^{1/2}\\
+ &\le\sqrt{\ell_a/(2\pi)+C_a^2}
+                            \left(\int_{C_t}|b|^2\right)^{1/2}.
+ \end{split}
+\]
+The last line uses $E_{\mathrm n}+E_{\mathrm c}
+=\int|b|^2$. Taking the infimum over
+representatives gives
+\[
+ G_{t,U}([a])
+ \ge\left(\frac{\ell_a}{2\pi}+C_a^2\right)^{-1}
+                                        G_{\Gamma,U}([a]),
+\]
+which is the required lower estimate.
+One fixed collar radius suffices.
+There is no division by an eigenvalue
+of $\delta_U^*\delta_U$, and no
+zero-form mass estimate is needed.
+Fixed-fibre compact Hodge theory
+identifies the infimum with the actual
+harmonic norm. The same proof at a
+reducible parameter is an inequality
+on cohomology, independent of whether
+the moduli quotient is smooth.
+
+Taking square roots of the pointwise
+quadratic inequalities and integrating
+along a path proves the corresponding
+length bounds. Taking infima over the
+same paths in $\Omega$ proves
+\eqref{eq:moduli-distance}.
+
+Finally each graph class has a smooth
+representative supported in the node
+annuli with only a radial component.
+Two such representatives wedge to
+zero on each annulus; different
+annuli are disjoint. The form
+$\int-\tr(b_1\wedge b_2)$ therefore
+vanishes on the image of $\Phi_t$.
+All normalization components are
+rational, so $g(C_t)=g_\Gamma=3$.
+The image dimension $2d$ is half
+the surface-moduli dimension $4d$,
+proving the Lagrangian assertion.
+\end{proof}
+
+The Lagrangian interpretation concerns
+classical Schottky geometry. The
+quantitative assertion here is the
+relative comparison of the actual
+unweighted Hodge norm with the edge
+quotient norm and its coefficient
+$2\pi/L$.
+Daskalopoulos--Wentworth
+\cite[Proposition~3.23 and Corollary~3.24]{dw-local}
+prove weighted operator continuity and
+kernel continuation in a degeneration,
+and obtain local moduli geometry.
+Their operator analysis allows
+arbitrary rank and retains boundary
+zero modes. It does not state
+\eqref{eq:moduli-metric}; the argument
+above compares unweighted energy
+infima directly. In particular it
+does not invoke the limiting
+zero-cokernel hypothesis used for
+their kernel continuation.
+
+The leading metric has no area weights
+because it minimizes one-form energy.
+The areas remain essential to the
+zero-form spectrum and finite HYM
+evolution. Equation~\eqref{eq:moduli-distance}
+uses paths inside the indicated
+locus; it makes no assertion about
+shortcuts through the ambient
+moduli space or distances across
+reducible strata.

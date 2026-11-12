@@ -1,0 +1,159 @@
+\section{Phase selection on a fixed Hermitian--Einstein bundle}
+\label{sec:parallel-phase}
+
+The component metrics required for spatial initial data are selected by
+an intrinsic fixed-background argument. Let $(Y,\omega)$ be a connected
+compact K\"ahler manifold of volume $V$. Let $(E,h_0)$ be a
+Hermitian--Einstein bundle of rank $r$, with Chern connection $D$ and
+$i\Lambda F_D=\lambda I$. Write $h=h_0H$ and use the normalized equation
+\begin{equation}\label{eq:fixed-flow}
+ H^{-1}H_s=-2(i\Lambda F_h-\lambda I),\qquad \det H=1.
+\end{equation}
+The base and connection are fixed throughout this section. The positive
+gap used here is not asserted to be uniform on a degenerating family.
+
+Let $\mathcal A$ be the algebra of $D$-parallel complex endomorphisms,
+and let $\Pi$ be the $L^2$ orthogonal projection onto $\mathcal A$.
+Denote by $\lambda_\perp>0$ the first positive eigenvalue of $D^*D$
+on self-adjoint endomorphisms, with its parallel kernel omitted.
+
+\begin{theorem}\label{thm:parallel-phase}
+Suppose $H(0)$ is smooth, $\det H(0)=1$ and $cI\le H(0)\le CI$,
+where $0<c\le C<\infty$. There is a unique positive parallel
+endomorphism $P=P(H(0))$, with $\det P=1$, to which $H(s)$ converges
+in $L^2$ and uniformly. Put
+\begin{equation}\label{eq:phase-functionals}
+ M=\Pi H,\qquad \mathcal J=\log\det M,\qquad
+ W=V^{-1}\int_Y|H-M|^2\,dV,\qquad
+ \gamma=\frac{2c^2\lambda_\perp}{C^2}.
+\end{equation}
+Then $M$ decreases in matrix order to $P$, and
+\begin{equation}\label{eq:phase-estimates}
+ \frac{W}{2C^2}\le \mathcal J\le\frac{W}{2c^2},\qquad
+ \mathcal J(s)\le \mathcal J(0)e^{-\gamma s},\qquad
+ \tr(M(s)-P)\le C\mathcal J(s).
+\end{equation}
+In particular,
+\begin{equation}\label{eq:phase-l2}
+ V^{-1}\int_Y|H(s)-P|^2\,dV
+       \le C^2(2\mathcal J(0)+\mathcal J(0)^2)e^{-\gamma s}.
+\end{equation}
+For $s\ge1$ the squared affine distance satisfies
+\begin{equation}\label{eq:phase-uniform}
+ \sup_Y d_r(H(s),P)^2
+       \le K_Y(2\mathcal J(0)+\mathcal J(0)^2)e^{-\gamma(s-1)}.
+\end{equation}
+Here $K_Y$ also depends on $c,C,r$ and the fixed background. For two
+initial metrics in a common positive range, the selected phases obey
+\begin{equation}\label{eq:phase-contraction}
+ V\sigma_r(P(H(0)),P(K(0)))
+       \le\int_Y\sigma_r(H(0),K(0))\,dV.
+\end{equation}
+Consequently phase selection is Lipschitz on such a range. If
+$\mathcal A=\CC I$, the selected phase is $I$.
+\end{theorem}
+
+\begin{proof}
+Decompose the unitary holonomy representation at a base point into
+inequivalent irreducible representations and their multiplicity spaces.
+Parallel transport of the invariant summands gives a global orthogonal
+parallel decomposition
+\begin{equation}\label{eq:holonomy-splitting}
+ E=\bigoplus_a F_a\otimes\CC^{m_a},\qquad
+ D=\bigoplus_a D_a\otimes I,
+ \qquad \mathcal A=\bigoplus_a I_{F_a}\otimes\End(\CC^{m_a}).
+\end{equation}
+The transported subspaces are independent of the chosen path because
+they are holonomy invariant. This does not require individual parallel
+vectors on $F_a$. The splitting is also holomorphic since the
+$(0,1)$ part of $D$ is the holomorphic structure.
+
+If $r_a=\operatorname{rank}F_a$ and $B_{aa}$ is a diagonal block of
+an endomorphism section, direct testing against every parallel
+endomorphism gives
+\begin{equation}\label{eq:parallel-projection}
+ \Pi B=\bigoplus_a I_{F_a}\otimes
+       \frac1{r_aV}\int_Y\tr_{F_a}B_{aa}\,dV.
+\end{equation}
+The partial trace is globally defined using the fixed metric on $F_a$.
+Diagonal restriction, partial trace and integration preserve positivity.
+Thus $\Pi$ is positive, unital and adjoint preserving. It preserves the
+normalized integrated trace, and, for any parallel endomorphism $B$,
+\begin{equation}\label{eq:projection-trace}
+ \tr(B\Pi Q)=V^{-1}\int_Y\tr(BQ)\,dV.
+\end{equation}
+Order comparison for \eqref{eq:fixed-flow} preserves $cI\le H\le CI$;
+its scalar determinant equation preserves $\det H=1$. Hence
+$cI\le M\le CI$.
+
+We need the full relative metric equation. In unitary normal base
+coordinates with $\omega=(i/2)\sum dz_\alpha\wedge d\bar z_\alpha$
+at the point, expansion of $\bar\partial_D(H^{-1}\partial_DH)$ gives
+\begin{equation}\label{eq:relative-fixed-equation}
+ H_s=-D^*DH-Q(H),\qquad
+ Q(H)=4\sum_\alpha(D_\alpha H)^*H^{-1}(D_\alpha H)\succeq0.
+\end{equation}
+The second-order term has scalar principal part
+$4\sum\partial_\alpha\partial_{\bar\alpha}H$. Its difference from
+$-D^*DH$ on endomorphism-valued zero-forms is the contracted curvature
+commutator, which vanishes because $i\Lambda F_D=\lambda I$.
+Differentiating $H^{-1}$ gives precisely the displayed quadratic term.
+In particular, it cannot be dropped for matrix-valued $H$.
+Since $\Pi D^*DH=0$, positivity of the projection proves
+\begin{equation}\label{eq:monotone-mean}
+ M'=-\Pi Q(H)\preceq0.
+\end{equation}
+It follows that $M$ has a parallel positive limit $P$ between $cI$ and $CI$.
+
+Taylor's integral remainder for $\log\det$ on the segment from $M$
+to $H$ has Hessian between $-c^{-2}$ and $-C^{-2}$ in Frobenius norm.
+The integrated linear term vanishes, since
+\[
+ V^{-1}\int_Y\tr(M^{-1}(H-M))\,dV=0
+\]
+by \eqref{eq:projection-trace}. Integrating $\log\det H=0$ gives
+the two bounds for $\mathcal J$ in \eqref{eq:phase-estimates}.
+Next, the same trace identity and positivity give
+\begin{align*}
+ -\mathcal J'&=V^{-1}\int_Y\tr(M^{-1}Q(H))\,dV\\
+     &\ge C^{-2}V^{-1}\int_Y|DH|^2\,dV
+      \ge C^{-2}\lambda_\perp W\ge\gamma \mathcal J.
+\end{align*}
+For the first inequality, remove both positive matrix weights using
+their lower bounds. Only then use
+$4\sum_\alpha\tr((D_\alpha H)^*D_\alpha H)=|DH|^2$.
+The gap applies because $H-M$ is orthogonal to the whole parallel
+algebra and $D(H-M)=DH$. This proves exponential decay of $\mathcal J$.
+
+By continuity, $\log\det P=0$. Integrating the derivative of
+$\log\det$ on the positive segment from $P$ to $M$ gives
+$\tr(M-P)\le C\mathcal J$. Orthogonality to parallel sections gives the exact
+decomposition
+\[
+ V^{-1}\int_Y|H-P|^2\,dV=W+|M-P|^2
+       \le 2C^2\mathcal J+C^2\mathcal J^2.
+\]
+Here $M-P\succeq0$, so its norm is at most its trace. This proves
+\eqref{eq:phase-l2}.
+
+The metric $h_0P$ has the same Chern connection as $h_0$ and is
+stationary. The unforced trace comparison from
+\eqref{eq:forced-trace}, followed by the time-one scalar heat kernel
+on the fixed compact base, bounds the supremum of
+$\sigma_r(H(s),P)$ by a fixed multiple of its integral at $s-1$.
+Equivalence of trace distance and squared norm on the fixed range
+proves \eqref{eq:phase-uniform}. This uses no derivative bound on
+arbitrary bounded initial metrics and no degenerating heat kernel.
+
+Finally, integrate the trace comparison for two exact flows. Uniform
+convergence to their parallel limits proves \eqref{eq:phase-contraction}.
+It also gives uniqueness, and the equivalence of the distances gives
+the stated Lipschitz dependence. A positive scalar endomorphism with
+determinant one is the identity.
+\end{proof}
+
+On a bundle with repeated irreducible factors the phase belongs to the
+actual algebra \eqref{eq:holonomy-splitting}; it is not a constant matrix
+in a chosen local frame on the whole bundle. In the next section the
+fixed component bundles supply this algebra and its positive gap.
+The global degeneration estimate will be established separately.

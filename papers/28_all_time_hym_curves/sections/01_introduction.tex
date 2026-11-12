@@ -1,0 +1,209 @@
+\section{Introduction}\label{sec:introduction}
+
+Hermitian--Yang--Mills flow on a degenerating curve can have several
+relaxation scales. Long annuli weaken the interaction between normalization
+components, while a component connection approaching a reducible connection
+introduces further small endomorphism modes. An approximation on a fixed
+multiple of the shortest annular length need not reach the time at which
+the weakest mode relaxes. The problem is to compare actual trajectories
+with a finite matrix evolution on the entire positive time axis, allowing
+these two sources of small eigenvalues to vary independently.
+
+We consider a compact genus-three plumbing family with two elliptic and
+two rational normalization components. Four independent node parameters
+control the annular lengths. Two independent real parameters control flat
+unitary connections on the elliptic components. Fixed unitary identifications
+at the nodes give a flat bundle on the entire family; its component and
+cycle holonomies can be noncommuting. The finite configuration space is a
+product of spaces of positive Hermitian matrices of determinant one. Its
+potential is the sum of component commutator potentials and squared
+distances across the nodes, with their geometrically determined weights.
+
+The all-time comparison uses two different estimates for the error of the
+reconstructed metric. The component and radial errors have an integrable
+bound in terms of the finite forces. The first-order change from component
+frames to parallel node frames has only the first angular Fourier modes.
+A Neumann problem on each incidence collar writes this error as a
+divergence whose space-time energy is small. The actual HYM energy identity
+then controls its contribution to the trace comparison. This argument does
+not divide by the smallest positive eigenvalue.
+
+Throughout the all-time theorem, the component matrices and node
+identifications are fixed. Only their nonnegative weights vary, and the
+initial finite metrics lie in a specified small ball. Zero component
+weights and nonzero common kernels are permitted. The approximation is an
+absolute integrated squared-distance estimate; it does not compare errors
+relative to a trajectory that is tending to zero.
+
+\subsection{The main theorem}
+Let $C_\tau$ be the smooth fibre of the four-node family constructed
+in Section~\ref{sec:geometry}. Its normalization components have
+area one. On the elliptic components the reference connections are
+$d-i\alpha_iT_i\vartheta_i$, where $T_i$ are fixed trace-free
+Hermitian matrices and $\vartheta_i$ fixed nonzero real harmonic
+one-forms. The rational component connections are trivial.
+The parameters $\alpha_i$ are real and independent of the four
+complex node parameters $\tau_e\ne0$. Write $h_0$ for the
+global parallel bundle metric and set
+\[
+ L_e=\log(1/|\tau_e|),\quad L_*=\min_eL_e,\quad
+ \epsilon_e=L_e^{-1},\quad
+ \alpha_*=\max_i|\alpha_i|,\quad
+ \kappa_i=\int_{E_i}|\vartheta_i|^2.
+\]
+The joint limit is $\alpha_*\to0$ and $L_*\to\infty$.
+All parameters are held constant during each flow.
+
+Let $\cP_r$ be the positive determinant-one Hermitian matrices,
+with metric $\langle V,W\rangle_H=\tr(H^{-1}VH^{-1}W)$
+and distance $d$. Equip $\cP_r^4$ with the product metric
+$g_A$ weighted by the component areas $A_i=1$.
+The finite evolution is the negative gradient flow of
+\begin{equation}\label{eq:intro-potential}
+ \Phi(H)=
+ \sum_{i=+,-}\alpha_i^2\kappa_i
+   \{\tr(T_iH_i^{-1}T_iH_i)-\tr(T_i^2)\}
+ +\pi\sum_{e=ij}\epsilon_e d(H_i,U_{ij}H_jU_{ij}^*)^2.
+\end{equation}
+Its matrix equation is printed in \eqref{eq:finite-flow}.
+The determinant-one actual HYM equation is
+$h^{-1}\partial_sh=-2i\Lambda F_h$ in physical time $s$.
+For two metrics define
+$D_{\tr}(h,k)=\tr(h^{-1}k+k^{-1}h-2I)$.
+
+\begin{theorem}\label{thm:intro}
+Fix the rank, component metrics, matrices $T_i$, harmonic forms
+$\vartheta_i$ and unitary node identifications $U_e$. There
+is $R_*>0$ and an explicit smooth reconstruction
+$H\mapsto\widehat K_{\tau,\alpha}(H)$ such that the following
+holds for sufficiently small joint parameters.
+Let $H(s)$ be the finite gradient flow from distance at most
+$R_*$ from $(I,I,I,I)$. Let $h(s)$ be actual HYM flow on
+the same smooth fibre, from any smooth metric with the parallel
+determinant and fixed bounds $ch_0\le h(0)\le C_0h_0$.
+Then
+\begin{equation}\label{eq:intro-main}
+ \sup_{s\ge0}\int_{C_\tau}
+     d(h(s),\widehat K_{\tau,\alpha}(H(s)))^2\,dA_\tau
+ \le\eta+C\left(\alpha_*+
+                   \frac{(1+\log L_*)^2}{L_*}\right),
+\end{equation}
+where
+$\eta=\int_{C_\tau}D_{\tr}(h(0),\widehat K_{\tau,\alpha}(H(0)))\,dA_\tau$.
+Constants are independent of all $\alpha_i^2L_e$,
+all $L_e/L_f$, and time. Component weights may vanish and
+the common space of parallel trace-free endomorphisms may
+be nonzero. On each fixed compact normalization region the
+reconstruction differs from $H_i(s)$ by $O(L_*^{-1})$.
+\end{theorem}
+
+The proof is Theorem~\ref{thm:all-time}. The exponentially
+small geometric-transfer term in \eqref{eq:all-time-error}
+is absorbed in the error displayed here. Uniform approximation
+requires $\eta\to0$ over the chosen initial family.
+Theorem~\ref{thm:spatial-entry} removes the need to prescribe
+the finite initial tuple. It gives a nonempty open class of
+spatially varying smooth metrics, defined by the component
+extension norm \eqref{eq:extension-norm}, which enters the
+comparison at a common time $s_*\to\infty$ satisfying
+$(\alpha_*^2+L_*^{-1})s_*\to0$. The selected tuple depends
+on the initial component profiles. Smooth middle-neck data
+need only obey the fixed pointwise bound; their derivatives
+need not be bounded uniformly.
+
+Theorem~\ref{thm:relative-spectrum} identifies every small
+eigenvalue of the actual endomorphism connection Laplacian.
+Its finite energy is the sum of
+$\alpha_i^2\kappa_i\|[T_i,X_i]\|^2$ and
+$(2\pi/L_e)\|X_i-\Ad(U_e)X_j\|^2$, with mass
+$\sum_i A_i\|X_i\|^2$. The comparison is relative for
+every positive weak eigenvalue, identifies the exact kernel,
+and leaves a uniform complementary gap. In contrast to the
+all-time nonlinear constants, this spectral result is uniform
+also when the transports vary through reducible tuples.
+
+The same family contains a stable rank-two example with
+three node weights $h$, a fourth node weight $h^2$, and
+component weight $\alpha_+^2\kappa_+=h^4$. Its twelve
+small eigenvalues comprise nine order-$h$ modes, two
+asymptotic to $\tfrac12h^2$, and one asymptotic to $h^4$.
+Corollary~\ref{cor:three-scales} proves both these spectral
+claims and actual nonlinear approximation through $h^{-4}$
+and all later times. The latter conclusion uses the all-time
+residual argument, independently of the spectral asymptotics.
+
+\subsection{The analytic mechanism}
+The reconstruction uses scalar component Green functions,
+exactly flat geodesic node profiles and relative-logarithm
+interpolation on collars of radius $\rho=L_*^{-1}$.
+The frame change on an elliptic incidence is
+$e^{i\alpha_iT_iF_{ie}}$ with $F_{ie}$ a real linear
+harmonic function in the branch coordinate. Estimating its
+cutoff error in absolute $L^1$ can produce an integral
+of size $1/|\alpha_i|$; the explicit calculation
+\eqref{eq:first-order-divergence} explains this difficulty.
+
+Instead, the term linear in $\alpha_i$ in the full Chern
+expression has only angular Fourier indices $1,-1$ after
+the conformal area factor is removed. Its entrywise zero
+mean allows a collar Neumann solve with zero normal trace
+at both boundaries. Extension by zero gives a global
+divergence without a boundary measure. Thus the residual is
+$D^*J+B$, with $J$ small in space-time $L^2$ and $B$ small
+in space-time $L^1$. The trace comparison pairs $J$ with
+derivatives of the actual and reconstructed metrics; both
+have uniformly bounded total energy.
+
+For the remainder $B$, a fixed-matrix weighted normal
+equation estimate controls the separate finite forces by
+the gradient on a small ball. Ohta's bounded-image
+rectifiability theorem for self-contracted curves
+\cite{ohta} then gives their uniform total integral.
+The fixed-constraint restriction enters at this step.
+The matrix counterexample in Section~\ref{sec:finite}
+shows why a uniform lower bound for the full unweighted
+matrix alone does not suffice.
+
+\subsection{Relation to earlier work}
+Burger's theorem gives relative scalar graph asymptotics
+on hyperbolic surfaces with unrestricted ratios among
+the short geodesic lengths \cite{burger}. Ji--Wentworth
+prove spectral convergence for conic degenerations
+\cite{ji-wentworth,ji-wentworth-correction}; their
+correction replaces a false isoperimetric lemma, which
+is not used here. Daskalopoulos--Wentworth establish
+connection-valued spectral convergence and uniform
+Yang--Mills estimates away from accidental reducibility
+\cite[Theorem~4.13, Corollary~4.14 and
+Proposition~5.8]{dw}. Our normalization components carry
+reducible holonomy, so their uniform-gap argument does
+not supply the additional slow dynamics considered here.
+
+Haiden--Katzarkov--Kontsevich--Pandit develop
+finite-dimensional asymptotic descriptions of HYM flow
+on a fixed base \cite{hkkp}. Their Proposition~4.5
+also compares exact and approximate metrics under an
+integrable pointwise bound on the forcing. The
+divergence estimate here uses spatially integrated
+energy to treat a first-order collar term not controlled
+uniformly under degeneration by that pointwise criterion.
+Lam's fixed-base asymptotic
+theorem for semistable bundles assumes a locally free
+graded bundle, with additional rationality hypotheses
+in its detailed reduction \cite{lam}. Applying these
+results fibre by fibre does not give constants uniform
+under pinching.
+
+Previous work on nodal curves gives actual
+noncommuting HYM approximation on bounded slow-time
+intervals \cite{wuebben-effective} and treats
+nontrivial gluing, spatial entry and all-time
+comparison under a positive normalized rate
+\cite{wuebben-gluing}. The present result removes
+that rate requirement for fixed constraints on a
+small basin and couples independent node and
+component-holonomy scales in one compact family.
+The new all-time step is the global divergence
+decomposition of the full Chern residual; the
+finite graph operator or the scalar multiscale
+principle alone is not that step.

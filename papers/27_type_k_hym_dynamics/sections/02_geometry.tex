@@ -1,0 +1,331 @@
+\section{The compact family and its rank-four bundle}\label{sec:geometry}
+
+We first construct the degeneration and its bundle on the entire compact
+family. The smoothing parameter and the unitary gluing parameter will vary
+independently. Both are fixed during each metric-flow trajectory.
+
+\subsection{An elliptic family with four central components}
+Let $\Delta$ be a disc about zero of radius less than one. In
+$\PP^2\times\Delta$ consider the family
+\begin{equation}\label{eq:cubic}
+ \mathcal W=\{y^2z=x(x-z)(x-t^2z)\}.
+\end{equation}
+Its section $[0:1:0]$ supplies the origin on every smooth elliptic fibre.
+The involution is $\sigma(x,y,z,t)=(x,-y,z,t)$.
+
+\begin{proposition}\label{prop:elliptic-family}
+Two successive blowups at singular points over $t=0$ give a proper
+projective flat family $\cE\to\Delta$ with smooth total surface. Its
+noncentral fibres are smooth elliptic curves. Its central fibre is a cycle
+$D_0\cup D_1\cup D_2\cup D_3$ of smooth rational curves, with local
+equation $uv=t$ at each of its four nodes. The involution lifts to $\cE$,
+acts by $D_j\mapsto D_{-j}$, and fixes no node. Indices are taken modulo four.
+\end{proposition}
+
+\begin{proof}
+For $t\ne0$ the roots $0,1,t^2$ are distinct, so the fibre is a smooth
+plane cubic. In the chart $y=1$, the derivative with respect to $z$ of the
+defining equation is one at $x=z=0$, proving smoothness at the section.
+In the chart $z=1$, write
+$f=y^2-x(x-1)(x-t^2)$. The identities
+$f_y=2y$ and $f_t=2tx(x-1)$ show that the only singular point of the total
+surface over the chosen disc is $(x,y,t)=(0,0,0)$. At $t=0$ this also
+follows directly from $f=f_x=f_y=0$.
+
+Choose the square root of $1-x$ equal to one at zero and set
+\begin{equation}\label{eq:a3-coordinates}
+ Y=\frac{y}{\sqrt{1-x}},\qquad
+ u=2(x-t^2/2+iY),\qquad v=2(x-t^2/2-iY).
+\end{equation}
+The Jacobian in $(x,y)$ at the origin is invertible, and the equation
+becomes exactly $uv=t^4$. The involution exchanges $u$ and $v$.
+
+Perform the blowups first on the algebraic surface over $\mathbb A^1$
+and then restrict to $\Delta$. In the $t$-chart of the first blowup,
+$u=tu_1$, $v=tv_1$, and the strict transform is $u_1v_1=t^2$.
+Its only singular point is its origin. In the $u$-chart, write
+$v=uv_1$, $t=ut_1$. The equation is $v_1=u^2t_1^4$, a smooth chart
+with coordinates $(u,t_1)$ and base function $t=ut_1$. The $v$-chart
+is symmetric. Blow up the remaining origin. Its $t$-chart has
+$u_1=ta$, $v_1=tb$ and $ab=1$. Its $u_1$-chart has
+$v_1=u_1b$, $t=u_1a$ and $b=a^2$, with base function $t=u_1a$;
+the other chart is symmetric. All charts are smooth and the zero divisor
+of $t$ is reduced with ordinary crossings.
+
+The four crossing charts can be written uniformly as
+\begin{equation}\label{eq:resolution-charts}
+ u=x_i^{i+1}y_i^i,\qquad
+ v=x_i^{3-i}y_i^{4-i},\qquad t=x_iy_i,
+ \qquad 0\le i\le3,
+\end{equation}
+with adjacent transition
+$x_{i+1}=y_i^{-1}$, $y_{i+1}=x_iy_i^2$ wherever $y_i\ne0$.
+They exhibit the chain of three exceptional rational curves. The original
+central cubic is irreducible and nodal, with rational normalization. Its
+proper transform joins the two ends of the chain at its two distinct
+branches. This gives the asserted four-cycle. It is the usual resolution
+pattern of the $A_3$ singularity; the charts additionally verify the
+multiplicities of this particular base function.
+
+Both singular-point centres are invariant under $\sigma$, so the universal
+property of the blowup lifts the involution at each step. In
+\eqref{eq:resolution-charts} it sends $(x_i,y_i)$ to $(y_i,x_i)$ in
+chart $3-i$. Label the proper transform by $D_0$ and the exceptional
+chain successively by $D_1,D_2,D_3$. The resulting component action is
+$j\mapsto-j$. It fixes $D_0,D_2$ as sets, interchanging their incident
+nodes, and exchanges $D_1,D_3$. Thus all four nodes are paired.
+
+Blowups and the original plane-cubic morphism are projective and proper.
+The resolved total space is smooth, and its nonconstant base coordinate
+is a non-zero-divisor. It is therefore flat over the nonsingular curve
+base. The blowups do not change any noncentral fibre. Shrinking the disc
+if necessary gives the claimed family.
+\end{proof}
+
+Choose a smooth K\"ahler form on $\cE$, using a relative projective
+embedding and a positive base form, and average it under $\sigma$.
+Write the resulting invariant form as $\omega_{\cE}$ and put
+\begin{equation}\label{eq:component-areas}
+ A_j=\int_{D_j}\omega_{\cE}>0,\qquad A_3=A_1.
+\end{equation}
+No equality between $A_0,A_1,A_2$ is imposed. These actual areas will
+enter the spectral mass and the finite-dimensional metric evolution.
+
+\subsection{A holomorphic gluing family and its lift}
+Choose disjoint node neighbourhoods $N_j$ at $D_j\cap D_{j+1}$ and
+component neighbourhoods $O_j$ extending slightly into their incidence
+collars. They can be chosen so that
+$\sigma(O_j)=O_{-j}$ and $\sigma(N_j)=N_{-j-1}$. Each node set meets
+its two component sets on separate connected collars, and there are no
+triple overlaps. For example, choose two radii $0<a<b$ and restrict to
+$|t|<a^2$: the two collars of a node are disjoint because $uv=t$.
+Properness ensures that this cover of a neighbourhood of the compact
+central fibre contains every fibre over a sufficiently small disc.
+
+For $q\in\CC^*$ define
+\begin{equation}\label{eq:r-j}
+ R(q)=\begin{pmatrix}q&0\\0&q^{-1}\end{pmatrix},\qquad
+ J=\begin{pmatrix}0&i\\i&0\end{pmatrix}=i\sigma_x.
+\end{equation}
+Here $\sigma_x$ is the first Pauli matrix. On $O_j\times\CC^*$ and
+$N_j\times\CC^*$ take trivial rank-two bundles, with fibre coordinates
+$w_j$ and $z_j$, respectively. Use transitions
+\begin{equation}\label{eq:incidence-transitions}
+ w_j=z_j,\qquad w_{j+1}=R(q)z_j
+\end{equation}
+on the two incidences.
+
+\begin{proposition}\label{prop:flat-family}
+The transitions \eqref{eq:incidence-transitions} define a holomorphic
+rank-two bundle $V$ with trivialized determinant on $\cE\times\CC^*$.
+For fixed $q$ it carries a flat holomorphic connection. On $|q|=1$ the
+identity metrics glue to a parallel unitary metric. The maps
+\begin{equation}\label{eq:projective-lift}
+ w_{-j}=Jw_j,\qquad z_{-j-1}=R(q)^{-1}Jz_j
+\end{equation}
+give a lift of $\sigma$ whose square is $-I$. They preserve the connection,
+and on the unit circle preserve its metric.
+\end{proposition}
+
+\begin{proof}
+The transitions are holomorphic and invertible on the actual overlaps,
+have determinant one, and have no triple-overlap condition to satisfy.
+For each fixed $q$, they are constant in the $\cE$ coordinates, so the
+connections $d$ in the patch frames agree. Flatness in the $q$ direction
+is not asserted. Unitarity gives the metric statement.
+
+The identities $JR=R^{-1}J$ and $J^2=-I$ verify the lift. The source
+left incidence maps to the target right incidence, where
+$Rz_{-j-1}=Jz_j=Jw_j=w_{-j}$. On the other incidence,
+$Jw_{j+1}=JRz_j=R^{-1}Jz_j$, as required. Both component and node
+lifts square to $-I$, since $(R^{-1}J)^2=-I$. The compatibility is
+holomorphic in $q$ and preserves the flat connection for fixed $q$.
+\end{proof}
+
+For the unitary family write
+\begin{equation}\label{eq:unitary-parameter}
+ q=e^{i\theta/4},\qquad
+ R=e^{i\theta\sigma_z/4},\qquad
+ U_\theta=R^4=\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix},
+ \quad \sigma_z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\end{equation}
+A positively oriented path around the component cycle passes from the
+$j$ frame to the $j+1$ frame by $R$ at every step. Its actual flat
+holonomy is therefore $U_\theta$. The vanishing loop has trivial
+holonomy, because the whole node patch carries the connection $d$.
+These loops generate the elliptic fibre's fundamental group. Thus the
+transition product has been identified with connection holonomy, with
+an orientation and path specified.
+
+\subsection{The free quotient and its metric}
+Fix a projective K3 surface $S$ with a free Enriques involution $\iota$.
+Such projective examples exist, and the involution acts as $-1$ on the
+holomorphic two-form; see \cite[Example 2.10]{hashimoto-kanazawa}.
+The smooth quotient construction below is the classical Enriques
+Calabi--Yau example \cite[Example 3.5]{hashimoto-kanazawa}.
+Choose an invariant K\"ahler class by averaging an ample class.
+By \cite[Theorem 2]{yau}, its unique Ricci-flat representative is
+$\iota$-invariant. Rescale it to obtain a form $\omega_S$ with
+\begin{equation}\label{eq:k3-volume}
+ \int_S\frac{\omega_S^2}{2}=1.
+\end{equation}
+The Chern connection on $T^{1,0}S$ has holonomy $\SU(2)$ by
+\cite[Propositions 1 and 4]{beauville}. Its complex
+parallel endomorphisms are consequently scalar by Schur's lemma. This
+statement concerns complex-linear tangent endomorphisms, not the larger
+real tangent commutant.
+Fix the holomorphic two-form on $S$ to have pointwise norm one for this
+metric. Such a scaling is possible because its norm is constant for a
+Ricci-flat K\"ahler metric. Its dual therefore gives a unit-norm
+trivialization of $\det T^{1,0}S$.
+
+\begin{proposition}\label{prop:threefold-family}
+The quotient
+\begin{equation}\label{eq:threefold-family}
+ \cX=(S\times\cE)/\langle\tau\rangle,
+ \qquad \tau=(\iota,\sigma),
+\end{equation}
+is a proper projective flat family with smooth total space. Its central
+fibre is a reduced simple normal-crossing threefold with three smooth
+components and interval dual graph. For $t\ne0$, its smooth connected
+fibre $X_t$ has trivial canonical bundle, $h^{1,0}=h^{2,0}=0$, and an
+index-two subgroup $\ZZ^2$ in its fundamental group. The form
+$\omega_S+\omega_{\cE}|_{E_t}$ descends to a K\"ahler form $\omega_t$ on
+$X_t$, where $E_t$ is the elliptic fibre.
+\end{proposition}
+
+\begin{proof}
+The involution is free on the entire total space because $\iota$ is free.
+The quotient map is finite \emph{\'{e}tale}; hence the quotient is smooth
+and the local crossing equation is unchanged. The fixed component sets
+give $(S\times D_0)/\langle\tau\rangle$ and
+$(S\times D_2)/\langle\tau\rangle$. The exchanged pair
+$S\times D_1,S\times D_3$ has image isomorphic to $S\times\PP^1$.
+The two pairs of nodes give two smooth double loci isomorphic to $S$.
+No node is fixed and no branch of a node is identified with the other
+branch. These observations prove the asserted simple normal crossings
+and interval incidence.
+
+For projectivity choose a relatively ample line bundle $L$ on
+$S\times\cE$, using an ample line on $S$ and a relative embedding of
+$\cE$. The line $L\otimes\tau^*L$ has the order-two linearization which
+exchanges its factors. It descends under the free action; its descent
+is relatively ample because ampleness can be tested after finite
+surjective pullback. Properness follows from the finite quotient of the
+proper family. Flatness follows from the non-zero-divisor $t$ on the
+smooth total space.
+
+On each smooth fibre both the K3 two-form and the elliptic one-form
+change sign under their respective involutions. Their product descends
+to a nowhere vanishing three-form. K\"unneth and invariants under the
+finite \emph{\'{e}tale} cover give $h^{1,0}=h^{2,0}=0$.
+The cover $S\times E_t$ has fundamental group $\ZZ^2$, which injects
+with index two into the quotient fundamental group. The product K\"ahler
+form is invariant and hence descends.
+\end{proof}
+
+The elliptic metric is the restriction of a smooth total-space metric.
+It is generally not flat, so the descended threefold metric is generally
+not Ricci-flat. All subsequent analytic statements use this particular
+metric, including its actual component areas \eqref{eq:component-areas}.
+
+\subsection{Rank-four descent, determinant and second Chern class}
+On $S\times\cE\times\CC^*$ form
+\begin{equation}\label{eq:cover-bundle}
+ \widetilde{\cB}=p_S^*T^{1,0}S\otimes p_{\cE}^*V.
+\end{equation}
+The tangent map $i\,d\iota$ has square $-I$. Tensor it with the lift
+\eqref{eq:projective-lift} of $\sigma$.
+
+\begin{proposition}\label{prop:bundle-descent}
+The tensor lift defines an order-two equivariant structure on
+$\widetilde{\cB}$ and gives a holomorphic rank-four bundle $\cB$ on
+$\cX\times\CC^*$. Its determinant has an actual holomorphic
+trivialization. For every $t\ne0$ and every $q$, a specified embedded
+K3 slice $S_e\subset X_t$ satisfies
+\begin{equation}\label{eq:chern-pairing}
+ \int_{S_e}c_2(\cB_{t,q}|_{S_e})=48.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The two factors of the lift square to $-I$, so their tensor product
+squares to $I$. Incidence compatibility follows from
+Proposition~\ref{prop:flat-family}. Thus the tensor bundle has genuine
+descent under the free involution, holomorphically in $q$.
+
+Trivialize $\det T^{1,0}S$ by the dual of its holomorphic two-form.
+Anti-symplecticity gives $\det(d\iota)=-1$ in these trivializations,
+and hence $\det(i\,d\iota)=1$. The matrices $J$ and $R^{-1}J$ have
+determinant one. Since both tensor factors have rank two,
+\[
+ \det(A\otimes B)=(\det A)^2(\det B)^2=1.
+\]
+The determinant trivialization is invariant under the descent datum
+and therefore descends; this is stronger than a torsion determinant line.
+
+Choose $e\in E_t$ which is not a two-torsion point. The image of
+$S\times\{e\}$ is an embedded K3 slice: no two of its points are
+$\tau$-related because $-e\ne e$, and the proper map is locally an
+embedding under the \emph{\'{e}tale} quotient. Restriction of the bundle
+to that slice is $T^{1,0}S\oplus T^{1,0}S$. The identities
+$c_1(T^{1,0}S)=0$ and $\int_Sc_2(T^{1,0}S)=24$ give
+\eqref{eq:chern-pairing}. No division of an integral class by the cover
+degree is used.
+\end{proof}
+
+\subsection{The Hermitian--Einstein connection and stability}
+Let $h_S$ be the tangent metric induced by $\omega_S$. On the unitary
+locus equip \eqref{eq:cover-bundle} with $h_S\otimes I$.
+The lift is unitary, so this metric and its Chern connection descend.
+Write their descents as $h_0$ and $D_\theta$.
+
+\begin{proposition}\label{prop:he-stability}
+For the metric $\omega_t$ of Proposition~\ref{prop:threefold-family},
+the reference metric $h_0$ is determinant-normalized Hermitian--Einstein
+with zero Einstein constant. The bundle $\cB_{t,\theta}$ is slope stable
+for $\theta\notin\pi\ZZ$ and strictly polystable for $\theta\in\pi\ZZ$.
+Its complex parallel endomorphism algebra is
+\begin{equation}\label{eq:parallel-algebra}
+ \End_{\rm par}(\cB_{t,\theta})
+ \simeq\Comm(U_\theta)\cap\Comm(J).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The chosen determinant trivialization has unit norm for $h_S$, and the
+flat multiplicity determinant has unit norm for $I$. Hence their tensor
+determinant, and its invariant descent, have unit norm for $h_0$.
+The product connection has curvature $F_{T^{1,0}S}\otimes I$, since
+the elliptic factor is flat. Product contraction gives
+\[
+ i\Lambda_{\omega_S+\omega_{\cE}}F_{\widetilde{\cB}}
+ =(i\Lambda_{\omega_S}F_{T^{1,0}S})\otimes I=0.
+\]
+This uses Ricci flatness of the K3 metric and imposes no flatness condition
+on the elliptic metric. It descends to the stated connection on $X_t$.
+
+The K3 holonomy makes every parallel complex endomorphism on the cover
+equal to $I_{T^{1,0}S}\otimes M$ for $M\in\Comm(U_\theta)$.
+Compatibility with the lift at the $D_0$ component is exactly
+$MJ=JM$. This proves \eqref{eq:parallel-algebra}; the other component
+and node conditions follow by transport and the verified lift.
+
+For $\theta\notin\pi\ZZ$, $U_\theta$ has distinct eigenvalues.
+Commutation with it makes $M$ diagonal, and commutation with $J$ makes
+its diagonal entries equal. The parallel algebra is scalar. The
+Hermitian--Einstein polystable decomposition
+\cite[Theorem 5.8.3]{kobayashi} therefore has only one
+stable summand, because any further summand would give a nonscalar
+parallel projection. Thus the bundle is stable. At $\theta\in\pi\ZZ$
+the matrix $U_\theta$ is central and $\Comm(J)\simeq\CC\oplus\CC$.
+Its eigenprojections split the bundle into two rank-two
+Hermitian--Einstein summands, proving strict polystability. Their slopes
+are equal and the total slope is zero for the actual $\omega_t$.
+\end{proof}
+
+The holomorphic family is defined for $q\in\CC^*$, whereas the displayed
+Hermitian--Einstein connections and stability analysis concern $|q|=1$.
+The approach to strict polystability is a genuine change of holomorphic
+bundle gluing, independent of $t$. No nonunitary or unstable locus is
+asserted by this construction.

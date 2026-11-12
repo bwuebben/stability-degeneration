@@ -1,0 +1,28 @@
+{
+  "scope": "Exact local matrix/Fourier and scalar Neumann checks only; no global or asymptotic PDE certification.",
+  "matrix_checks": [
+    {
+      "mode": -1,
+      "polar_identity": true,
+      "coefficient_independent_of_angle": true,
+      "noncommuting_background": true
+    },
+    {
+      "mode": 1,
+      "polar_identity": true,
+      "coefficient_independent_of_angle": true,
+      "noncommuting_background": true
+    }
+  ],
+  "neumann_example": {
+    "cutoff_in_scaled_radius": "6*x**5 - 45*x**4 + 130*x**3 - 180*x**2 + 120*x - 31",
+    "radial_solution_f": "6*x**6 - 45*x**5 + 130*x**4 - 180*x**3 + 120*x**2 - 97*x/3 - 4/(3*x)",
+    "source_equals_minus_laplacian_of_cutoff_first_mode": true,
+    "inner_normal_derivative_zero": true,
+    "outer_normal_derivative_zero": true,
+    "source_integral_zero_by_first_angular_mode": true,
+    "dirichlet_energy_divided_by_pi_rho_squared": "3527/462",
+    "source_L2_squared_divided_by_pi": "495/7"
+  },
+  "result": "PASS"
+}

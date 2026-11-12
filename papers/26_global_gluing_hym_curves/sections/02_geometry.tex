@@ -1,0 +1,248 @@
+\section{Compact smoothings and unitary gluing}\label{sec:geometry}
+
+We construct a compact family in which the six node parameters and the
+unitary gluing data can be varied independently. The metric is induced
+from a fixed smooth ambient K\"ahler metric. In particular its behaviour
+near a node differs from that of a hyperbolic collar.
+
+\subsection{Six independent smoothing coordinates}
+In $\PP^2$ put
+\[
+ l_0=x,\qquad l_1=y,\qquad l_2=z,\qquad l_3=x+y+z,
+ \qquad F_0=\prod_{i=0}^3l_i.
+\]
+The four lines have six distinct nodes $p_{ij}$ and no triple
+intersection. For an unordered pair $e=\{i,j\}$ choose a nonzero
+constant $\gamma_e$ and set
+\[
+ f_e=\gamma_e\left(\prod_{k\notin e}l_k\right)^2.
+\]
+Choose local frames of $\mathcal O_{\PP^2}(4)$ near the six nodes
+and normalize $f_e(p_e)=1$. At every other node $p_f$, the section
+$f_e$ vanishes to order at least two. For $a=(a_e)$ near zero in
+$\CC^6$, consider
+\begin{equation}\label{eq:quartic-family}
+ \cC=\left\{([x:y:z],a):
+ F_0+\sum_e a_e f_e=0\right\}\subset\PP^2\times B.
+\end{equation}
+
+\begin{proposition}\label{prop:compact-family}
+After restricting $B$, the family \eqref{eq:quartic-family} is
+proper, projective and flat, with smooth total space. There are
+holomorphic base coordinates $\tau=(\tau_e)$ centred at zero and
+disjoint node neighbourhoods in which the family is exactly
+\begin{equation}\label{eq:node}
+ u_ev_e=\tau_e.
+\end{equation}
+Every fibre with all $\tau_e\ne0$ is a smooth connected plane
+quartic of genus three.
+\end{proposition}
+\begin{proof}
+At a central node the spatial Hessian of the local defining
+function is nondegenerate. Its derivative in the corresponding
+$a_e$ direction is one. Elsewhere on the central fibre its spatial
+gradient is nonzero. The total hypersurface is therefore smooth
+near the entire central fibre; properness allows one restriction
+of the base for which it remains smooth.
+
+Write the defining function near $p_e$ as $f(z,a)$ in two affine
+coordinates. The implicit function theorem gives a unique nearby
+critical point $z_e(a)$. Its critical value $c_e(a)=f(z_e(a),a)$
+satisfies
+\[
+ \frac{\partial c_e}{\partial a_f}(0)=f_f(p_e)=\delta_{ef}.
+\]
+The derivative of $z_e$ contributes nothing because the spatial
+gradient vanishes. The holomorphic Morse lemma with parameters
+then gives $f=c_e(a)+u_ev_e$. One may obtain these coordinates by
+translating the critical point, writing the remaining function
+using its integral Hessian, and taking a local holomorphic
+congruence square root of that nondegenerate symmetric matrix.
+This construction depends holomorphically on $a$ and leaves the
+base fixed. The inverse function theorem now makes
+$\tau_e=-c_e(a)$ simultaneous base coordinates. Restrict to a
+polydisc in these coordinates.
+
+The node charts have no singular point in a fibre with all
+$\tau_e\ne0$. On the compact region outside them the spatial
+gradient remains nonzero. Properness and projectivity follow
+from \eqref{eq:quartic-family}. For flatness, its relative
+Cartier sequence
+\[
+ 0\longrightarrow\mathcal O_{\PP^2\times B}(-4)
+ \longrightarrow\mathcal O_{\PP^2\times B}
+ \longrightarrow\mathcal O_{\cC}\longrightarrow0
+\]
+remains exact after restriction to every base fibre: none of
+the defining quartics is the zero polynomial. The local
+flatness criterion applies. Finally a smooth plane quartic
+is connected and has genus three.
+\end{proof}
+
+Give $\PP^2$ its Fubini--Study form normalized so that a line has
+area one, and use the restriction to $\cC$ of its sum with a
+positive Euclidean base form. The fibre metric is the induced
+Fubini--Study metric. Write $dA_\tau$ for its area form and
+$C_i$ for the four central lines. Their limiting areas are
+$A_i=1$. We retain $A_i$ in formulas to exhibit the mass
+normalization; the arguments also apply to a different fixed
+smooth ambient K\"ahler metric.
+
+\begin{lemma}\label{lem:ambient}
+For sufficiently small fixed node charts, the fibre metric in
+\eqref{eq:node} is uniformly comparable to the metric induced
+from $\CC^2$. The region $|u_e|,|v_e|<a$ has area at most $Ca^2$,
+independently of its annular modulus and of the other small
+parameters. On each fixed compact component exterior the
+complex structures and metrics converge smoothly.
+
+If $\rho>0$, $b=\max_e|\tau_e|\ll\rho^2$, and the components are
+truncated at radius $\rho$, the coefficient errors in a fixed
+finite number of derivatives are bounded by $Cb\rho^{-N}$ for
+some fixed $N$.
+\end{lemma}
+\begin{proof}
+On a fibre the other base coordinates are constant, and
+$v_e=\tau_e/u_e$. The induced Euclidean area is
+\[
+ \left(1+\frac{|\tau_e|^2}{|u_e|^4}\right)dx\,dy,
+ \qquad |\tau_e|/a<|u_e|<a .
+\]
+Its integral is at most $2\pi a^2$. Smooth positivity of the
+ambient metric on the fixed total-space charts gives the
+uniform comparison. Away from the node centres the projection
+is a submersion; choose smooth component trivializations that
+preserve the branch coordinates on collars. Their coefficients
+converge smoothly. On a truncated collar, differentiating
+$v_e=\tau_e/u_e$ a fixed number of times costs only a fixed
+power of $\rho^{-1}$. Smooth dependence on the remaining
+parameters contributes $O(b)$ on fixed exteriors. Combining
+these estimates proves the last assertion.
+\end{proof}
+
+\subsection{The bundle and its actual holonomy}
+Fix an integer $r\ge2$. The edge set is that of $K_4$, and
+$U_{ij}\in\SU(r)$ denotes transport from the $j$ frame to the
+$i$ frame; set $U_{ji}=U_{ij}^{-1}$. This convention fixes the
+signs of all later incidence matrices.
+
+\begin{proposition}\label{prop:bundle}
+Every tuple $U=(U_e)\in\SU(r)^6$ defines a holomorphic bundle
+$E_U$ on a neighbourhood of the entire central fibre in $\cC$,
+with a flat unitary connection $D_U$, parallel metric $h_0$,
+and a parallel trivialization of its determinant. Its component
+restrictions are trivial flat bundles. On a smooth fibre the
+holonomy factors through a surjection
+\[
+ \pi_1(C_\tau)\longrightarrow\pi_1(K_4),
+\]
+and graph-cycle holonomies are the ordered products of the
+specified edge maps.
+\end{proposition}
+\begin{proof}
+Choose fixed $0<a<b$ within the disjoint node charts and
+restrict $\max|\tau_e|<a^2$. Let the node open sets be
+$|u_e|,|v_e|<b$. Choose pairwise disjoint open component
+exteriors $V_i$ whose incidence overlaps are the collars
+$a<|u_e|<b$ or $a<|v_e|<b$. Such sets follow from the smooth
+exterior trivializations used above. These trivializations
+need not be holomorphic: each open subset of the complex
+total space has its trivial holomorphic rank-$r$ bundle.
+The two branch collars at a node are disjoint because
+$|u_ev_e|<a^2$. Thus there are no triple overlaps. Every
+incidence overlap is connected, being an annulus times
+the restricted base polydisc.
+
+The sets cover the central fibre and, after a further
+restriction of the base, every entire fibre. Indeed a
+sequence of omitted points over parameters tending to zero
+would, by properness, have an omitted limit on the central
+fibre. Put constant special unitary transition matrices on
+the incidence overlaps, choosing their two values at an
+edge so that the induced component transport is $U_{ij}$.
+There is no nontrivial triple cocycle condition. The local
+connections $d$ and identity metrics agree under these
+transitions. They give the asserted bundle, connection,
+metric and determinant trivialization.
+
+On a smooth fibre the component pieces and node annuli are
+connected, as are their incidence overlaps. A graph walk
+is realized by paths within the component pieces and
+crossing paths in the annuli. Each closed graph walk
+therefore has a lift to a fibre loop. The van Kampen
+presentation obtained from this cover, after killing all
+patch loops, is the free fundamental group of the
+incidence graph, which is the barycentric subdivision of
+$K_4$. Patch loops have trivial transport in the specified
+flat frames. Their quotient consequently gives the stated
+surjection and the ordered transport formula. In particular
+each vanishing-cycle loop has trivial holonomy.
+\end{proof}
+
+By the unitary correspondence \cite{narasimhan-seshadri},
+$E_U|_{C_\tau}$ is polystable of degree zero, and it is stable
+exactly when the holonomy is irreducible. These are variations
+of holomorphic bundle structure and stabilizer, with fixed
+degree. No variation of the ordinary slope on a smooth
+curve is involved.
+
+\begin{example}\label{ex:noncommuting}
+Take $r=2$, identity transports on $01,02,03,23$, and
+\[
+ U_{12}=\frac{I+i\sigma_x}{\sqrt2},\qquad
+ U_{13}=\frac{I+i\sigma_y}{\sqrt2},
+\]
+where $\sigma_x,\sigma_y,\sigma_z$ are the Pauli matrices.
+The two cycle holonomies have no common complex invariant
+line, so every smooth-fibre bundle is stable. They cannot
+be removed by component frame changes. In the orthonormal
+basis $\sigma_a/\sqrt2$ of $\Herm_0(2)$ their adjoint maps
+are
+\begin{equation}\label{eq:rotations}
+ R_x=\begin{pmatrix}1&0&0\\0&0&1\\0&-1&0\end{pmatrix},
+ \qquad
+ R_y=\begin{pmatrix}0&0&-1\\0&1&0\\1&0&0\end{pmatrix}.
+\end{equation}
+Replacing the two holonomies by
+$\exp(i\alpha\sigma_x/2)$ and
+$\exp(i\beta\sigma_y/2)$ gives irreducible representations
+for small nonzero $\alpha,\beta$, reducible ones on either
+axis, and trivial holonomy at the origin.
+\end{example}
+
+The gluing also has a holomorphic complex-parameter
+realization: use holomorphic $\operatorname{SL}(r,\CC)$
+incidence matrices on complex parameter neighbourhoods.
+The analytic statements below concern the unitary real
+locus. They do not assert flatness in additional complex
+parameter directions.
+
+\subsection{Scales and the finite quadratic form}
+For a smooth fibre set
+\begin{equation}\label{eq:weights}
+ L_e=\log(1/|\tau_e|),\quad L_*=\min_eL_e,\quad
+ w_e=\frac{2\pi}{L_e},\quad w_*=\frac{2\pi}{L_*}.
+\end{equation}
+The limit is $L_*\to\infty$, with no restriction on
+$L_e/L_f$ or on the dependence of $U$ on $\tau$.
+The parameters remain fixed during every flow.
+On
+$\cV=\bigoplus_{i=0}^3\Herm_0(r)$ put
+\begin{equation}\label{eq:finite-forms}
+ M(X)=\sum_i A_i\tr(X_i^2),\qquad
+ Q_{\tau,U}(X)=\sum_{e=ij}w_e
+       \|X_i-U_{ij}X_jU_{ij}^*\|_{\HS}^2.
+\end{equation}
+Each unoriented edge is counted once. Let
+$B_{\tau,U}$ be the self-adjoint operator for the inner
+product $M$ whose quadratic form is $Q_{\tau,U}$, and
+let $\nu_0\le\cdots\le\nu_{m-1}$ be its eigenvalues,
+where $m=4(r^2-1)$. Zeros are included.
+
+The kernel consists exactly of compatible tuples.
+Transport along a spanning tree determines such a tuple
+from its value at one vertex; the remaining edges require
+that value to commute with every cycle holonomy. Thus
+$\ker B_{\tau,U}$ is the trace-free Hermitian commutant
+of the representation. Its dimension may change with
+$U$, while the dimension $m$ of the finite space is fixed.

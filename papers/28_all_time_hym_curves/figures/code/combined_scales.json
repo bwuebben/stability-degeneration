@@ -1,0 +1,82 @@
+{
+  "scope": "Exact finite identities and polynomial limits only; the R30 PDE proof is separate.",
+  "graph": "Path 0-1-2-3 with identity transports and closing edge 3-0 with Ad((I+i sigma_x)/sqrt(2)).",
+  "weights": [
+    "h",
+    "h",
+    "h",
+    "h^2"
+  ],
+  "component_coefficient_alpha_squared_kappa": "h^4 at vertex 0, T=sigma_z",
+  "mass": "Identity in Hilbert-Schmidt orthonormal Pauli coordinates; all four areas one.",
+  "rank_without_component": 11,
+  "rank_with_component": 12,
+  "cycle_compression": [
+    [
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1/2",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1/2"
+    ]
+  ],
+  "component_compression": [
+    [
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "determinant": "16*h**17*(3*h + 1)*(6*h**3 + 2*h**2 + 1)",
+  "characteristic_x_sector": "12*h**8 - 16*h**7*z + 4*h**7 + 4*h**6*z**2 - 24*h**6*z + 20*h**5*z**2 - 4*h**4*z**3 - 12*h**4*z + 10*h**3*z**2 - 4*h**3*z - 2*h**2*z**3 + 10*h**2*z**2 - 6*h*z**3 + z**4",
+  "characteristic_yz_sector": "(2*h**5 - 12*h**4*z + 10*h**3*z**2 - 4*h**3*z - 2*h**2*z**3 + 10*h**2*z**2 - 6*h*z**3 + z**4)*(12*h**8 - 16*h**7*z + 4*h**7 + 4*h**6*z**2 - 24*h**6*z + 20*h**5*z**2 + 2*h**5 - 4*h**4*z**3 - 12*h**4*z + 10*h**3*z**2 - 4*h**3*z - 2*h**2*z**3 + 10*h**2*z**2 - 6*h*z**3 + z**4)",
+  "high_scale_polynomial": "z**3*(z - 2)**3*(z**2 - 4*z + 2)**3",
+  "middle_scale_polynomial": "-16*z*(2*z - 1)**2",
+  "weak_scale_polynomial": "-16*(z - 1)",
+  "leading_modes": [
+    {
+      "order": "h",
+      "coefficient": "2-sqrt(2)",
+      "multiplicity": 3
+    },
+    {
+      "order": "h",
+      "coefficient": "2",
+      "multiplicity": 3
+    },
+    {
+      "order": "h",
+      "coefficient": "2+sqrt(2)",
+      "multiplicity": 3
+    },
+    {
+      "order": "h^2",
+      "coefficient": "1/2",
+      "multiplicity": 2
+    },
+    {
+      "order": "h^4",
+      "coefficient": "1",
+      "multiplicity": 1
+    }
+  ],
+  "result": "PASS"
+}

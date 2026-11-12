@@ -1,0 +1,404 @@
+\section{Reconstruction and the actual HYM flow}\label{sec:actual-flow}
+
+The base and bundle parameters are fixed throughout
+this section. All exact initial metrics are smooth,
+have the parallel determinant, and obey fixed positive
+bounds against $h_0$. In local unitary flat frames,
+these conditions mean $\det H=1$ and $cI\le H\le CI$.
+We use physical time $s$ and the normalization
+\begin{equation}\label{eq:hym}
+ H^{-1}\partial_sH=-2i\Lambda_{\omega_\tau}F_H.
+\end{equation}
+For $\omega_\tau=(i/2)a\,dz\wedge d\bar z$ this reads
+\begin{equation}\label{eq:local-hym}
+ \partial_sH=4a^{-1}
+     (H_{z\bar z}-H_{\bar z}H^{-1}H_z).
+\end{equation}
+The scalar nonnegative Laplacian is
+$\Delta_\tau=-4a^{-1}\partial_z\partial_{\bar z}$.
+The real-coordinate expression is
+\begin{equation}\label{eq:real-hym}
+ \begin{split}
+ a\partial_sH={}&H_{xx}+H_{yy}-H_xH^{-1}H_x-H_yH^{-1}H_y\\
+ &+i(H_xH^{-1}H_y-H_yH^{-1}H_x).
+ \end{split}
+\end{equation}
+The last term need not vanish. We retain it in every
+curvature calculation.
+
+For two metrics put
+\[
+ \sigma(H,K)=\tr(H^{-1}K+K^{-1}H)-2r.
+\]
+This is intrinsic under the bundle transition maps.
+If $e^{b_j}$ are the eigenvalues of $H^{-1}K$, then
+$d(H,K)^2=\sum_jb_j^2\le
+\sum_j(e^{b_j}+e^{-b_j}-2)=\sigma(H,K)$.
+For a smooth comparison metric define
+\begin{equation}\label{eq:residual}
+ \mathcal R(K)=K^{-1}\partial_sK+2i\Lambda F_K,
+\end{equation}
+measured in the operator norm induced by $K$.
+
+\begin{lemma}\label{lem:trace-comparison}
+The exact solution of \eqref{eq:hym} exists for all
+$s\ge0$ and preserves its determinant and bounds
+$ch_0\le H\le Ch_0$. For any smooth comparison
+$K(s)$ with common positive bounds, one has
+\begin{equation}\label{eq:trace-comparison}
+ \int\sigma(H(s),K(s))
+ \le\int\sigma(H(0),K(0))
+       +C_0\int_0^s\!\int|\mathcal R(K(v))|_{\op}\,dA_\tau\,dv .
+\end{equation}
+Here and below unlabelled spatial integrals use $dA_\tau$.
+The constant depends only on rank and the positive
+bounds, not on a spectral gap or Sobolev constant.
+\end{lemma}
+\begin{proof}
+Smooth all-time existence on a fixed compact base is
+the classical metric heat-flow result
+\cite{donaldson}; our normalization and order
+preservation are also given in
+\cite[Section~4.1 and Proposition~4.3]{hkkp}.
+Apply order preservation to the stationary metrics
+$ch_0,Ch_0$. The logarithm of the determinant satisfies
+the scalar heat equation, so its constant initial
+value is preserved.
+
+For completeness the local Donaldson trace calculation
+has the forced form, with $q=H^{-1}K$,
+\[
+ (\partial_s+\Delta_\tau)\sigma(H,K)
+ \le\tr((q-q^{-1})\mathcal R(K)).
+\]
+For two exact velocities choose a holomorphic frame
+normal for $H$ at the point. The curvature and
+Laplacian terms in the forward trace cancel, leaving
+$-4a^{-1}\tr(K_{\bar z}K^{-1}K_z)\le0$.
+Interchange the metrics for the inverse trace.
+The additional velocity $K\mathcal R(K)$ contributes
+$\tr(q\mathcal R)$ and $-\tr(\mathcal Rq^{-1})$,
+respectively. Both $q$ and $\mathcal R$ are
+$K$-self-adjoint, and the common bounds control
+$\tr q+\tr q^{-1}$. This proves the scalar inequality
+with right-hand side at most $C_0|\mathcal R|_{\op}$.
+Integration on the whole closed fibre removes the
+Laplacian and gives \eqref{eq:trace-comparison}.
+The calculation is unchanged by constant unitary
+transition maps.
+\end{proof}
+
+Write $\varepsilon_e=L_e^{-1}$,
+$\varepsilon_*=L_*^{-1}$, and
+\begin{equation}\label{eq:error-scale}
+ e_*=\frac{(1+\log L_*)^2}{L_*}.
+\end{equation}
+The initial tuples for \eqref{eq:finite-flow} lie in
+a fixed bounded ball.
+
+\begin{theorem}\label{thm:tracking}
+For all sufficiently large $L_*$ there is a smooth
+determinant-one comparison metric $\widehat K(s)$,
+defined for all $s\ge0$ from the finite trajectory
+\eqref{eq:finite-flow}, with uniform positive bounds
+and
+\begin{equation}\label{eq:residual-bound}
+ \sup_{s\ge0}\int|\mathcal R(\widehat K(s))|_{\op}
+ \le C L_*^{-2}(1+\log L_*)^2.
+\end{equation}
+On every fixed compact subset of component $i$,
+$d(\widehat K(s),H_i(s))\le C_K/L_*$ uniformly in
+$s$. If an exact flow has initial discrepancy
+$\eta=\int\sigma(H^{\mathrm{in}},\widehat K(0))$,
+then, for every $T\ge0$,
+\begin{equation}\label{eq:tracking}
+ \sup_{0\le s\le TL_*}\int
+ d(H(s),\widehat K(s))^2\le\eta+CTe_*.
+\end{equation}
+The constants are independent of $T$, all positive
+length ratios and all unitary parameters. Uniform
+convergence over a class of initial metrics requires
+uniform $\eta\to0$.
+\end{theorem}
+
+\subsection{Component potentials}
+Let $g_{ie}$ be the mean-zero scalar Green function
+on the fixed closed component $C_i$, normalized by
+\[
+ \Delta_i g_{ie}=-2\pi\delta_{p_{ie}}+\frac{2\pi}{A_i},
+ \qquad g_{ie}=\log|u_e|+\gamma_{ie}(u_e)
+\]
+near the incidence. The regular part $\gamma_{ie}$
+is smooth. Define
+\begin{equation}\label{eq:component-correction}
+ h_i=-\sum_{e=ij}\varepsilon_e B_{ij}g_{ie},
+ \qquad K_i=H_i\exp(h_i).
+\end{equation}
+The logarithm $h_i$ is trace free and $H_i$-self-adjoint.
+Away from the punctures,
+\begin{equation}\label{eq:cancellation}
+ \Delta_i h_i=-H_i^{-1}\dot H_i.
+\end{equation}
+Cut the components at radius $\rho=\varepsilon_*$.
+Since $\max|\tau_e|=e^{-L_*}\ll\rho^2$, the two
+branches of each node are disjoint there.
+Fixed Green-function estimates and
+Proposition~\ref{prop:finite-flow} give
+\begin{equation}\label{eq:green-bounds}
+ \begin{aligned}
+ \|h_i\|_\infty&\le C\varepsilon_*(1+|\log\rho|),
+ &\int|h_i|&\le C\varepsilon_*,
+ &\int|h_i|^2&\le C\varepsilon_*^2,\\
+ \int|\nabla h_i|^2&\le C\varepsilon_*^2(1+|\log\rho|),
+ &\int|\dot h_i|&\le C\varepsilon_*^2,
+ &\int|h_i||\Delta_i h_i|&\le C\varepsilon_*^2 .
+ \end{aligned}
+\end{equation}
+In particular the integral bounds use integrability
+of $\log|u|$ and its square, not their suprema on
+the truncated domain. The time derivative estimate
+uses $|\dot B_{ij}|\le C\varepsilon_*$ and
+$\varepsilon_e\le\varepsilon_*$.
+
+The exact exponential identity
+\[
+ e^{-h}\partial e^h
+ =\int_0^1e^{-th}(\partial h)e^{th}\,dt
+\]
+and its time analogue show, after
+\eqref{eq:cancellation}, that
+\[
+ |\mathcal R(K_i)|
+ \le C\big(
+ |\dot h_i|+\varepsilon_*|h_i|
+ +|\nabla h_i|^2+|h_i||\Delta_i h_i|\big).
+\]
+Indeed the linear spatial term is $\Delta_i h_i$;
+all terms produced by differentiating the conjugations
+contain either two first derivatives or $h_i$ times
+a second derivative. The time conjugation of
+$H_i^{-1}\dot H_i$ contributes
+$O(\varepsilon_*|h_i|)$. These identities include
+the commutators in \eqref{eq:real-hym}. Integrating
+\eqref{eq:green-bounds} bounds the residual by
+$C\varepsilon_*^2(1+|\log\rho|)$ on the fixed
+component. Transfer to the actual exterior costs
+$Cb\rho^{-N}$, where $b=e^{-L_*}$, by
+Lemma~\ref{lem:ambient}. A fixed $N$ suffices for
+the finite derivative order involved.
+
+\subsection{Node profiles and mixed weights}
+Near an incidence write
+\[
+ h_i=-\varepsilon_eB_{ij}\log|u_e|+c_{ie}+q_{ie}(u_e),
+ \qquad q_{ie}(0)=0.
+\]
+The regular terms include contributions from every
+incident edge. Uniformly on the collar,
+$|c_{ie}|\le C\varepsilon_*$ and
+$|D^kq_{ie}|\le C\varepsilon_*\rho^{1-k}$
+for $k\le2$. Their time derivatives gain
+a factor $\varepsilon_*$.
+Set $P_{ie}=H_i\exp(c_{ie})$. In the $i$ frame
+the node metric is
+\begin{equation}\label{eq:node-profile}
+ N_e(s,u_e)=
+ \Geo(P_{ie},U_{ij}P_{je}U_{ij}^*;
+                  -\varepsilon_e\log|u_e|).
+\end{equation}
+The reverse branch has parameter
+$1+\varepsilon_e\log|u_e|$, because $u_ev_e=\tau_e$.
+Geodesic reversal and equivariance under unitary
+congruence therefore give exactly the same metric
+in the other frame. The individual $\varepsilon_e$
+is essential for this compatibility.
+
+At fixed time a geodesic in
+\eqref{eq:node-profile} is $P\exp(\theta B)$
+with a fixed matrix $B$ and harmonic scalar
+$\theta$. Its Chern curvature is zero on the
+annulus. Its time derivative is $O(\varepsilon_*)$
+on the bounded endpoint range; the middle region
+has area $O(\rho^2)$, so its integrated time
+residual is $O(\varepsilon_*\rho^2)$.
+
+On $\rho\le|u_e|\le2\rho$ use relative logarithms
+$\ell_i(K)=\log(H_i^{-1}K)$.
+For fixed endpoint metrics $H_i,H_j$, and
+small self-adjoint endpoint logarithms $C_i,C_j$,
+define the difference
+\[
+ \mathcal D(C_i,C_j;\theta)
+ =\ell_i\!\left(\Geo(H_i e^{C_i},
+              U_{ij}H_j e^{C_j}U_{ij}^*;\theta)\right)
+                 -C_i-\theta B_{ij}.
+\]
+Self-adjointness here is with respect to
+$H_i$ and $H_j$, respectively.
+With no endpoint correction the node logarithm
+is exactly $\theta B_{ij}$, so
+$\mathcal D(0,0;\theta)=0$. At $\theta=0$
+the geodesic equals $H_i e^{C_i}$, so
+$\mathcal D(C_i,C_j;0)=0$.
+The geodesic and logarithm are smooth on the
+confined endpoint range. Integrating their
+bounded mixed derivatives first along
+$q(C_i,C_j)$, $0\le q\le1$, and then from
+$0$ to $\theta$ gives
+\[
+ |\mathcal D(C_i,C_j;\theta)|
+       \le C(|C_i|+|C_j|)|\theta|.
+\]
+Its first two $\theta$ derivatives are bounded
+by $C(|C_i|+|C_j|)$, since they also vanish
+when both corrections are zero.
+
+Apply this with $C_i=c_{ie}$, $C_j=c_{je}$
+and $\theta=-\varepsilon_e\log|u_e|$.
+The endpoint corrections are $O(\varepsilon_*)$,
+whereas the spatial derivatives of $\theta$
+have size $O(\varepsilon_e\rho^{-k})$
+for $k=1,2$. Thus the correction to the node
+logarithm is bounded, through two spatial
+derivatives, by
+$C\varepsilon_*\varepsilon_e
+(1+|\log\rho|)\rho^{-k}$.
+The component logarithm differs from
+$c_{ie}+\theta B_{ij}$ by the regular term
+$q_{ie}$, whose corresponding bound is
+$C\varepsilon_*\rho^{1-k}$.
+Combining the two estimates gives
+\begin{equation}\label{eq:mixed-collar}
+ |D^k(\ell_i(K_i)-\ell_i(N_e))|
+ \le C\left(
+ \varepsilon_*\rho^{1-k}
+ +\varepsilon_*\varepsilon_e(1+|\log\rho|)\rho^{-k}
+ \right),\qquad k=0,1,2.
+\end{equation}
+The endpoint correction uses all incident weights,
+whereas the node slope uses $\varepsilon_e$.
+No inverse of $\varepsilon_e$ enters.
+
+Join these logarithms with a fixed rescaled radial
+cutoff and exponentiate relative to $H_i$. This
+preserves positivity and determinant one. If $n$
+is the node logarithm and $\delta$ is its cutoff
+difference from the component logarithm, the full
+curvature difference is bounded by
+\[
+ C\big(
+ |D^2\delta|+|Dn||D\delta|
+ +|\delta|(|D^2n|+|Dn|^2)+|D\delta|^2
+ \big).
+\]
+Here $|Dn|\le C\varepsilon_e/\rho$ and
+$|D^2n|\le C\varepsilon_e/\rho^2$.
+Multiply by the collar area $O(\rho^2)$ and
+substitute \eqref{eq:mixed-collar}. The integrated
+curvature error is at most
+\[
+ C\big(\varepsilon_*\rho+
+       \varepsilon_*\varepsilon_e(1+|\log\rho|)^2\big).
+\]
+Time terms contribute $O(\varepsilon_*\rho^2)$.
+Terms of higher order are absorbed since
+$\varepsilon_*|\log\rho|\to0$. The same geometric
+transfer estimate contributes $Cb\rho^{-N}$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:tracking}]
+Use \eqref{eq:component-correction},
+\eqref{eq:node-profile} and the logarithmic cutoffs
+to define one global $\widehat K(s)$ for the
+entire finite trajectory. Their agreement under
+the actual transition matrices proves that this
+is a metric on $E_U$, not just a collection of
+matrices. The confined endpoint range and the
+small component logarithms give uniform positive
+bounds. On each fixed component compact subset
+$h_i=O(\varepsilon_*)$.
+
+Sum the component, middle-node and collar estimates
+with $\rho=\varepsilon_*$. The exponentially small
+$e^{-L_*}L_*^N$ is absorbed by
+$L_*^{-2}(1+\log L_*)^2$. All constants are
+uniform for $s\ge0$, because the finite trajectory
+stays in one compact range. This proves
+\eqref{eq:residual-bound}.
+Lemma~\ref{lem:trace-comparison} on the whole
+closed fibre then gives \eqref{eq:tracking}
+after integration to $TL_*$ and the inequality
+$d^2\le\sigma$.
+\end{proof}
+
+\subsection{A uniform all-time conclusion}
+\begin{theorem}\label{thm:all-time}
+Under the hypotheses of Theorem~\ref{thm:tracking},
+suppose in addition that
+\begin{equation}\label{eq:rate-condition}
+ L_*\nu_0\ge\kappa>0.
+\end{equation}
+Then, for sufficiently large $L_*$,
+\[
+ \sup_{s\ge0}\int d(H(s),\widehat K(s))^2
+ \le C\eta+C_\kappa e_*(1+|\log e_*|).
+\]
+This is absolute tracking in the indicated norm.
+\end{theorem}
+\begin{proof}
+For the exact solution set
+$\mathcal F(H)=\int(\tr(h_0^{-1}H)-r)$.
+Since $S=\log(h_0^{-1}H)$ is trace free and the
+metrics have fixed positive bounds,
+$\mathcal F$ is uniformly comparable to
+$\int|S|^2=\int d(H,h_0)^2$. Taking the trace
+of \eqref{eq:local-hym} and integrating gives
+\[
+ -\mathcal F'
+ =4\int\tr(H_{\bar z}H^{-1}H_z)\,dx\,dy
+ \ge c_1\int|D_UH|^2\,dA_\tau .
+\]
+Here $H_{\bar z}=H_z^*$. Replace $H^{-1}$ by
+its uniform lower bound before using
+$4\tr(H_z^*H_z)=\tr(H_x^2+H_y^2)$.
+This does not discard a weighted commutator.
+The derivative of the matrix logarithm is bounded
+on the common matrix range, and hence
+$|D_US|\le C|D_UH|$. Theorem~\ref{thm:spectrum}
+and \eqref{eq:rate-condition} imply
+$\lambda_0\ge\kappa/(2L_*)$ and therefore
+\[
+ -\mathcal F'\ge c_2\lambda_0\mathcal F,\qquad
+ \int d(H(L_*\sigma),h_0)^2
+       \le C e^{-c_3\kappa\sigma}.
+\]
+
+Lemma~\ref{lem:finite-coercivity} supplies the
+corresponding exponential tail for the finite
+trajectory. The reconstruction vanishes at
+$\mathbf H=\mathbf I$ and is uniformly Lipschitz
+from the confined tuple range to global $L^2$:
+on components this follows from the Green
+construction and on nodes from smoothness of
+bounded geodesics. Its squared distance from
+$h_0$ has the same type of exponential tail.
+For $0\le s\le TL_*$ use \eqref{eq:tracking};
+for $s\ge TL_*$ use the two tails and the
+triangle inequality. Choosing
+$T=C_\kappa(1+|\log e_*|)$ proves the estimate.
+\end{proof}
+
+The condition \eqref{eq:rate-condition} permits
+some arbitrarily weak edges. In rank two keep
+$01,02,03,12,13$ comparable to $w_*$, with the
+two noncommuting transports of
+Example~\ref{ex:noncommuting}, and let $23$
+have any smaller positive weight. The first
+five edges already have zero trace-free
+kernel and a positive normalized gap; the
+last nonnegative term cannot decrease it.
+In contrast, Proposition~\ref{prop:three-scales}
+does not satisfy \eqref{eq:rate-condition}.
+On its weakest time $h^{-4}$ the accumulated
+bound in \eqref{eq:tracking} is not small.
+Uniform nonlinear tracking on that time
+requires an additional argument.

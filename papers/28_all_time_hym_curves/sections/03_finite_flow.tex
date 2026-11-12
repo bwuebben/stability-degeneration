@@ -1,0 +1,282 @@
+\section{The finite evolution and its total force}\label{sec:finite}
+
+Let $\cP_r$ be the space of positive Hermitian $r\times r$ matrices
+of determinant one. Its affine-invariant metric is
+\[
+ \langle V,W\rangle_H=\tr(H^{-1}VH^{-1}W),
+ \qquad
+ d(H,K)=\|\log(H^{-1/2}KH^{-1/2})\|_{\HS}.
+\]
+It is a finite-dimensional Hadamard manifold. On $\cP_r^4$ use the
+product metric $g_A=\sum_i A_i g_i$ and write $o=(I,I,I,I)$.
+The masses are $A_i=1$ in our family; retaining them in the formulas
+indicates the origin of each coefficient. All matrix norms below are
+Hilbert--Schmidt norms unless stated otherwise.
+
+For a Hermitian matrix $T$ set
+\begin{equation}\label{eq:component-potential}
+ f_T(H)=\tr(TH^{-1}TH)-\tr(T^2).
+\end{equation}
+On the family of Section~\ref{sec:geometry} define
+\begin{equation}\label{eq:potential}
+ \Phi(H)=\sum_{i=+,-}\alpha_i^2\kappa_i f_{T_i}(H_i)
+       +\pi\sum_{e=ij}\epsilon_e d(H_i,U_{ij}H_jU_{ij}^*)^2.
+\end{equation}
+The negative gradient equation is
+\begin{equation}\label{eq:finite-flow}
+ H_i^{-1}\dot H_i
+ =-\frac{\alpha_i^2\kappa_i}{A_i}
+       [T_i,H_i^{-1}T_iH_i]
+  +\frac{2\pi}{A_i}\sum_{e=ij}\epsilon_e B_{ij},
+ \qquad B_{ij}=\log(H_i^{-1}U_{ij}H_jU_{ij}^*).
+\end{equation}
+The component term is omitted at rational vertices. The logarithm in
+$B_{ij}$ is the principal matrix logarithm; it is $H_i$-self-adjoint
+and trace-free. The edge summation uses the orientation from the vertex
+under consideration. To check the component term, vary $H$ by $HX$,
+with $X$ $H$-self-adjoint and trace-free. Differentiating
+\eqref{eq:component-potential} gives
+\[
+ df_T(H)[HX]=\tr\bigl([T,H^{-1}TH]X\bigr).
+\]
+The gradient of half the squared distance to $K$ is
+$-H\log(H^{-1}K)$, giving the edge term. The later reconstruction
+derives the same coefficients from the Chern equation on the compact
+fibre.
+
+The following finite estimate is useful because it has no dependence
+on a smallest positive weighted eigenvalue. We prove it on an arbitrary
+fixed graph, allowing several component matrices at a vertex.
+
+\begin{theorem}\label{thm:finite-force}
+Fix a finite graph with $N$ vertices, rank $r\ge2$, positive masses
+$A_i$, unitary edge matrices $U_e$, and a finite list of Hermitian
+matrices $T_a$ at vertices $i(a)$. For arbitrary constant nonnegative
+weights $w_e,\beta_a$ put
+\begin{align}
+ \Phi_{w,\beta}(H)&=\frac12\sum_e w_e
+       d(H_i,U_eH_jU_e^*)^2+\sum_a\beta_a f_{T_a}(H_{i(a)}),
+       \label{eq:general-potential}\\
+ \cF_{w,\beta}(H)&=\sum_e w_e d(H_i,U_eH_jU_e^*)
+           +\sum_a\beta_a\sqrt{2f_{T_a}(H_{i(a)})}.
+       \label{eq:force}
+\end{align}
+There are $R_*>0$ and $c,C>0$, depending only on the fixed data,
+such that, on $d_A(H,o)\le R_*$,
+\begin{equation}\label{eq:force-gradient}
+ c\cF_{w,\beta}(H)\le
+ \|\grad\Phi_{w,\beta}(H)\|_{g_A}
+ \le C\cF_{w,\beta}(H).
+\end{equation}
+The negative gradient trajectory starting at distance $R\le R_*$
+exists for all $s\ge0$, stays in that ball, and satisfies
+\begin{equation}\label{eq:force-integral}
+ \int_0^\infty\bigl(\cF_{w,\beta}(H(s))
+                   +\|\dot H(s)\|_{g_A}\bigr)\,ds\le CR,
+ \qquad
+ \int_0^\infty\Phi_{w,\beta}(H(s))\,ds\le\frac12R^2.
+\end{equation}
+It converges to a minimizer. These constants are independent of all
+weights, their ratios and the subset of weights that vanish.
+\end{theorem}
+
+\subsection{A weighted linear estimate}
+The elementary ingredient is a formula for a weighted least-squares
+left inverse. Its constant retains the geometry of the fixed rows.
+
+\begin{lemma}\label{lem:weighted-matrix}
+For every fixed real matrix $D$ there is $C_D<\infty$ such that
+\begin{equation}\label{eq:weighted-matrix}
+ \|WDx\|\le C_D\|D^TWDx\|
+\end{equation}
+for every nonnegative diagonal matrix $W$ and every $x$.
+\end{lemma}
+
+\begin{proof}
+First suppose $D$ is an $m\times n$ matrix of full column rank and
+$W$ is positive. Let $D_S=R_SD$ be its restriction to $n$ rows, and
+let $\mathfrak B$ consist of the subsets for which $\det D_S\ne0$.
+Set $G=D^TWD$. Cauchy--Binet gives
+\[
+ \det G=\sum_{|S|=n}\det(D_S)^2\prod_{j\in S}w_j.
+\]
+In particular the numbers
+\[
+ p_S=\frac{\det(D_S)^2\prod_{j\in S}w_j}{\det G}
+ \quad(S\in\mathfrak B)
+\]
+are nonnegative and sum to one. Replacing column $k$ of $D$ by $y$
+replaces column $k$ of $D^TWD$ by $D^TWy$. Cauchy--Binet for this
+replacement, followed by Cramer's rule, gives
+\begin{equation}\label{eq:weighted-left-inverse}
+ G^{-1}D^TW=\sum_{S\in\mathfrak B}p_S D_S^{-1}R_S.
+\end{equation}
+Terms with singular $D_S$ already vanish before Cramer's rule is
+applied. Each $R_S$ has norm one, so the norm of
+\eqref{eq:weighted-left-inverse} is at most
+$\max_{S\in\mathfrak B}\|D_S^{-1}\|$. Transposing and applying
+the result to $Gx$ proves \eqref{eq:weighted-matrix}.
+
+For a matrix of rank $p>0$, choose an isometry $Q:\RR^p\to\RR^n$
+onto $(\ker D)^\perp$. Apply the preceding argument to $D'=DQ$.
+The identities $D=D'Q^T$ and $D^T=Q(D')^T$ preserve the norm on
+the right of \eqref{eq:weighted-matrix}. Finally replace $W$ by
+$W+\delta I$ and let $\delta\downarrow0$. This limit uses the
+inequality, not an inverse of a singular normal matrix. The case $D=0$
+is immediate.
+\end{proof}
+
+If $D$ is divided into $J$ fixed blocks $D_k$ and $W$ has constant
+weight $\lambda_k\ge0$ on each block, the lemma gives
+\begin{equation}\label{eq:linear-force}
+ F^0(x):=\sum_k\lambda_k\|D_kx\|
+ \le\sqrt J\,C_D\|D^TWDx\|.
+\end{equation}
+The choice of $(\ker D)^\perp$ is made once for the full fixed
+matrix. It does not change with the support of $W$.
+
+\subsection{Exact zero sets and nonlinear absorption}
+Use real coordinates $x_i=\sqrt{A_i}\log H_i$. Then
+$|x|=d_A(H,o)$ and the pullback metric is Euclidean at zero. The
+linear edge maps and component maps are
+\[
+ D_ex=\frac{x_i}{\sqrt{A_i}}-
+       \Ad(U_e)\frac{x_j}{\sqrt{A_j}},
+ \qquad
+ C_ax=i[T_a,x_{i(a)}/\sqrt{A_{i(a)}}].
+\]
+Both maps take values in real spaces of Hermitian matrices. Associate
+to an edge the function $f_e=\frac12d(H_i,U_eH_jU_e^*)^2$, and
+to a component matrix the function $f_a=f_{T_a}(H_{i(a)})$.
+The exact zero set of $f_e$ is $\ker D_e$, and its Hessian at zero
+is $D_e^TD_e$.
+
+For the component assertion, diagonalize $S=\log H$ with eigenvalues
+$s_b$. In this basis $T$ is Hermitian and direct multiplication gives
+\begin{equation}\label{eq:cosh-potential}
+ f_T(e^S)=2\sum_{b<c}|T_{bc}|^2
+            \bigl(\cosh(s_b-s_c)-1\bigr)
+ \ge\frac12\|[T,S]\|^2.
+\end{equation}
+Its exact zero set is $[T,S]=0$, and its quadratic term is
+$\frac12\|[T,S]\|^2$. Thus the component Hessian is $C_a^TC_a$.
+Stack all these maps into $D$. Denote any one block by $D_k$ and
+its associated function by $f_k$. Every $f_k$ is nonnegative,
+vanishes precisely on $\ker D_k$, and has Hessian $D_k^TD_k$ at
+zero. In particular its gradient vanishes on the whole kernel.
+
+On the auxiliary ball $|x|\le1$ the third derivatives of this finite
+collection of functions are bounded. Put
+$r_k(x)=\nabla f_k(x)-D_k^TD_kx$. On $|x|\le R\le1$,
+$\|Dr_k(x)\|\le C_0R$. If $P_k$ is orthogonal projection onto
+$\ker D_k$, then $r_k(P_kx)=0$ and the segment from $P_kx$ to
+$x$ stays in the ball. Therefore
+\begin{equation}\label{eq:block-remainder}
+ \|r_k(x)\|\le C_0R\dist(x,\ker D_k)
+                \le C_1R\|D_kx\|.
+\end{equation}
+The last constant uses only the positive singular values of each
+nonzero fixed block. Zero blocks can be omitted. Combining
+\eqref{eq:block-remainder} with \eqref{eq:linear-force}, and writing
+$K=\sqrt J C_D$, gives
+\[
+ F^0(x)\le K\|\nabla\Phi_{w,\beta}(x)\|
+                    +KC_1R F^0(x).
+\]
+Choose $R_*$ so that $KC_1R_*\le\frac12$. Absorption gives
+$F^0\le2K\|\nabla\Phi_{w,\beta}\|$ uniformly in the weights.
+
+For edges, the distance-decreasing logarithm at the identity and the
+bounded differential of the exponential on this ball imply
+$\|D_ex\|\le\sqrt{2f_e(x)}\le C\|D_ex\|$.
+For components, the lower bound is \eqref{eq:cosh-potential}; Taylor
+expansion along the segment from $P_ax$ to $x$, on which the initial
+function and gradient vanish, gives the upper bound. Hence
+$F^0\le\cF_{w,\beta}\le CF^0$. Smooth equivalence of the
+coordinate metric with the Euclidean metric proves the left side of
+\eqref{eq:force-gradient}. The block bounds
+$\|\nabla f_k\|\le C\|D_kx\|$ prove the right side.
+
+\subsection{Convexity and finite length}
+To verify geodesic convexity of $f_T$, write
+$H(t)=H_0^{1/2}e^{tK}H_0^{1/2}$ and diagonalize the Hermitian matrix
+$K$ with eigenvalues $k_b$. For $B=H_0^{-1/2}TH_0^{1/2}$,
+\[
+ \tr(TH(t)^{-1}TH(t))
+       =\sum_{b,c}|B_{cb}|^2 e^{t(k_b-k_c)}.
+\]
+Each summand is convex. Squared distance between two moving geodesics
+is convex on a Hadamard manifold, and unitary conjugation is an
+isometry. Thus \eqref{eq:general-potential} is geodesically convex,
+nonnegative and minimized at $o$. Its negative gradient flow obeys
+\begin{equation}\label{eq:finite-energy}
+ \frac12\frac{d}{ds}d_A(H(s),o)^2\le-\Phi_{w,\beta}(H(s)).
+\end{equation}
+It stays in the compact ball of radius $R$ and exists for all time.
+Integration gives the second estimate of \eqref{eq:force-integral}.
+
+For $T>s$, convexity and decreasing potential similarly give
+\[
+ \frac12\frac{d}{ds}d_A(H(s),H(T))^2
+       \le\Phi_{w,\beta}(H(T))-\Phi_{w,\beta}(H(s))\le0.
+\]
+The curve is therefore self-contracted: its distance to any later
+point decreases as its earlier time increases. We apply Ohta's
+bounded-image length estimate on a finite-dimensional Hadamard
+manifold \cite[Theorem~3.3 and (3.8)]{ohta}. Here the dimension is
+$N(r^2-1)\ge3$, the image has diameter at most $2R$, and its
+radius-one neighborhood lies in $B(o,R_*+1)$, whose volume is fixed.
+The length estimate consequently gives
+$\int_0^\infty\|\dot H\|_{g_A}\,ds\le CR$.
+Together with \eqref{eq:force-gradient}, this proves the first
+estimate of \eqref{eq:force-integral}.
+
+Finite length implies convergence to a point $H_\infty$ in the ball.
+If its gradient were nonzero, continuity would give a positive lower
+bound for the speed for all sufficiently large times, a contradiction.
+Convexity makes $H_\infty$ a global minimizer, so all terms with
+positive weights vanish there. In logarithm coordinates the minimizer
+set is exactly $\bigcap_{\lambda_k>0}\ker D_k$. The limit need
+not be $o$, and the theorem gives neither a uniform rate nor an
+explicit formula for this selected limit. This completes the proof
+of Theorem~\ref{thm:finite-force}.
+
+\subsection{Dependence on the fixed constraints}
+The fixed-matrix hypothesis cannot be replaced by uniform injectivity
+of the full matrix. For $\delta>0$ take
+\[
+ D_\delta=\begin{pmatrix}1&0\\0&1\\1&\delta\end{pmatrix},
+ \quad W_\delta=\operatorname{diag}(1,\delta^4,1),
+ \quad x_\delta=\begin{pmatrix}-\delta/2\\1\end{pmatrix}.
+\]
+Although $D_\delta^TD_\delta\ge I$,
+\[
+ W_\delta D_\delta x_\delta
+ =(-\delta/2,\delta^4,\delta/2)^T,
+ \qquad D_\delta^TW_\delta D_\delta x_\delta
+ =(0,\delta^2/2+\delta^4)^T.
+\]
+Their norm ratio is asymptotic to $\sqrt2/\delta$.
+A row basis that can dominate the weighted normal matrix becomes
+singular. This is an obstruction to a uniform force estimate, not
+an obstruction theorem for actual HYM approximation.
+
+There is a second distinction needed in the analytic proof. A
+component force is weighted by $\alpha^2$, whereas a change of
+component frame can have a first-order factor $\alpha$. With one
+vertex, mass one, $T=\sigma_z$, $\kappa=1$ and
+$H=\exp(q\sigma_x)$, direct calculation gives
+\[
+ f_T(H)=4\sinh^2q,\qquad
+ g(\partial_qH,\partial_qH)=2,\qquad
+ \dot q=-2\alpha^2\sinh(2q).
+\]
+For $q(0)=q_0>0$ and $\alpha>0$ it follows that
+\begin{equation}\label{eq:first-order-divergence}
+ \int_0^\infty\alpha q(s)\,ds
+   =\frac1{2\alpha}\int_0^{q_0}\frac{q}{\sinh(2q)}\,dq.
+\end{equation}
+The right-hand integral is finite and strictly positive. Thus a
+first-order frame error cannot be integrated uniformly by
+Theorem~\ref{thm:finite-force} alone. The angular divergence
+construction below addresses precisely this term.

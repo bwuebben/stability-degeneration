@@ -1,0 +1,192 @@
+\section{HYM comparison with a divergence residual}\label{sec:comparison}
+
+This section applies to any closed Riemann surface $C$ with a fixed
+K\"ahler metric and any flat unitary bundle $(E,D,h_0)$ with parallel
+determinant metric. A Hermitian metric is represented by a positive
+$h_0$-self-adjoint endomorphism. The connection $D$, its formal adjoint
+$D^*$, and the norms of endomorphism-valued forms always use this fixed
+reference metric. Local parallel unitary frames have constant unitary
+transition maps.
+
+\subsection{The Chern equation and its trace inequality}
+With area form $dA=a(z)\,dx\,dy=(i/2)a(z)\,dz\wedge d\bar z$, put
+$\Delta=-4a^{-1}\partial_z\partial_{\bar z}$, the nonnegative
+scalar Laplacian. The equation
+\begin{equation}\label{eq:hym}
+ h^{-1}h_s=-2i\Lambda F_h
+\end{equation}
+in a local parallel holomorphic frame is
+\begin{equation}\label{eq:local-hym}
+ h_s=4a^{-1}(h_{z\bar z}-h_{\bar z}h^{-1}h_z),
+ \qquad
+ 2i\Lambda F_h=-4a^{-1}\partial_{\bar z}(h^{-1}h_z).
+\end{equation}
+In real coordinates it reads
+\begin{equation}\label{eq:real-hym}
+ \begin{split}
+ ah_s={}&h_{xx}+h_{yy}-h_xh^{-1}h_x-h_yh^{-1}h_y\\
+        &+i(h_xh^{-1}h_y-h_yh^{-1}h_x).
+ \end{split}
+\end{equation}
+The last, Hermitian commutator term is retained throughout the proof.
+For $h(x,y)=e^{xV+yW}$ at the origin, with noncommuting Hermitian
+$V,W$, the first four terms cancel and this term is $i[V,W]$.
+Thus \eqref{eq:hym} is not ordinary harmonic-map heat flow into
+$\cP_r$.
+
+For smooth positive initial data, the classical compact-base HYM
+existence theorem gives a smooth solution for every finite time
+\cite{donaldson}; a precise arbitrary-initial-metric statement
+and continuation proof are in \cite[Theorem~6.8.25]{kobayashi}.
+The book uses time $t=2s$ in our normalization; the statement
+in \cite[\S4.1, following (4.8)]{hkkp} uses the normalization
+above. The scalar equation for $\log\det h$
+preserves the parallel determinant. The maximum principle applied to
+$v^*hv$ for a constant local vector $v$ gives the upper order bound:
+the quadratic term in \eqref{eq:local-hym} is nonpositive after this
+pairing. For $h^{-1}$ the inverse derivative formula gives
+\[
+ (h^{-1})_s=4a^{-1}\bigl((h^{-1})_{z\bar z}
+              -(h^{-1})_z h(h^{-1})_{\bar z}\bigr),
+\]
+which gives its upper bound as well. Hence
+\begin{equation}\label{eq:order-bounds}
+ ch_0\le h(0)\le C_0h_0
+ \quad\Longrightarrow\quad
+ ch_0\le h(s)\le C_0h_0\quad(s\ge0).
+\end{equation}
+These order comparisons are global and independent of spatial
+derivatives of the initial metric. Existence is asserted separately
+on each fixed compact smooth fibre; no uniform high-derivative
+continuation theorem on degenerating fibres is needed.
+
+Define the trace distance and the residual of a comparison metric by
+\begin{equation}\label{eq:trace-residual}
+ D_{\tr}(h,K)=\tr(h^{-1}K+K^{-1}h-2I),
+ \qquad
+ \cR(K)=K^{-1}K_s+2i\Lambda F_K.
+\end{equation}
+If the eigenvalues of $h^{-1}K$ are $e^{b_j}$, then
+\begin{equation}\label{eq:distance-trace}
+ d(h,K)^2=\sum_j b_j^2
+       \le\sum_j(e^{b_j}+e^{-b_j}-2)=D_{\tr}(h,K).
+\end{equation}
+On a fixed bounded positive range the reverse inequality holds with
+a fixed constant.
+
+\begin{lemma}\label{lem:forced-trace}
+For an exact solution $h$ and any smooth comparison metric $K$,
+\begin{equation}\label{eq:forced-trace}
+ (\partial_s+\Delta)D_{\tr}(h,K)
+ \le\operatorname{Re}\tr\bigl((h^{-1}K-K^{-1}h)\cR(K)\bigr).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+First take two exact flows. At a specified point and time choose a
+time-independent holomorphic frame normal for $h$, so $h=I$ and
+$\partial h=0$ at that point. Substitution of the Chern equation
+into the time derivative and scalar Laplacian of $\tr(h^{-1}K)$
+cancels the curvature terms. The remaining expression is
+$-4a^{-1}\tr(K_{\bar z}K^{-1}K_z)\le0$. Interchanging the two
+metrics proves the inequality for the inverse trace. For a forced
+comparison, its extra velocity is $K\cR(K)$. Its contributions to
+these two traces are respectively
+$\tr(h^{-1}K\cR(K))$ and $-\tr(\cR(K)K^{-1}h)$.
+This proves \eqref{eq:forced-trace}. The real part is redundant for
+the actual residual because $K\cR(K)$ is Hermitian; retaining it
+allows complex pieces in a decomposition of that residual. The
+calculation is invariant under changes of holomorphic frame and so
+defines a global scalar inequality.
+\end{proof}
+
+\subsection{A comparison estimate using energy}
+For an interval $[0,S]$ write
+\[
+ E_h(S)=\int_0^S\!\int_C|Dh|^2\,dA\,ds,
+ \qquad E_K(S)=\int_0^S\!\int_C|DK|^2\,dA\,ds.
+\]
+The following lemma uses an actual global decomposition of the
+residual. It does not assert that any small local error admits one.
+
+\begin{lemma}\label{lem:weak-comparison}
+Suppose $h,K$ have determinant equal to that of $h_0$ and satisfy
+$cI\le h,K\le C_0I$. Suppose, in distributions on the closed
+surface,
+\begin{equation}\label{eq:divergence-residual}
+ \cR(K)=D^*J+B,
+\end{equation}
+where $J$ is a complex endomorphism-valued one-form and $B$ an
+endomorphism-valued function. Put
+\[
+ J_2(S)^2=\int_0^S\!\int_C|J|^2,\qquad
+ B_1(S)=\int_0^S\!\int_C|B|,\qquad
+ \eta=\int_C D_{\tr}(h(0),K(0)).
+\]
+For every $S>0$ for which these quantities are finite,
+\begin{equation}\label{eq:weak-comparison}
+ \sup_{0\le s\le S}\int_Cd(h(s),K(s))^2
+ \le\eta+C B_1(S)
+       +C\bigl(E_h(S)^{1/2}+E_K(S)^{1/2}\bigr)J_2(S).
+\end{equation}
+Moreover
+\begin{equation}\label{eq:actual-energy}
+ E_h(\infty)\le C\int_C\tr(h(0)-I)\,dA
+                         \le C'\operatorname{Area}(C).
+\end{equation}
+The constants depend only on $c,C_0,r$. It is enough in
+\eqref{eq:divergence-residual} that $J$ be piecewise $H^1$ with
+zero normal traces at its internal boundaries, extended by zero
+elsewhere. No spectral gap enters these estimates.
+\end{lemma}
+
+\begin{proof}
+Put $Z=h^{-1}K-K^{-1}h$. On the bounded matrix range $|Z|\le C$.
+The reference connection obeys the inverse and product rules, so
+\begin{equation}\label{eq:dz}
+ DZ=-h^{-1}(Dh)h^{-1}K+h^{-1}DK
+           +K^{-1}(DK)K^{-1}h-K^{-1}Dh.
+\end{equation}
+In particular $|DZ|\le C(|Dh|+|DK|)$. Compatibility with trace
+multiplication gives the bilinear integration-by-parts formula
+\begin{equation}\label{eq:weak-pairing}
+ \int_C\operatorname{Re}\tr(ZD^*J)
+   =\int_C\operatorname{Re}\tr((DZ)\mathbin{\cdot}J).
+\end{equation}
+The dot contracts real cotangent indices; it does not reverse the
+order of the matrices or insert an adjoint. Equivalently one can
+apply the Hermitian formal-adjoint identity with test field $Z^*$.
+For the stated piecewise fields, integration over each piece gives
+the same formula because the normal traces vanish. Tangential jumps
+do not contribute to divergence. More generally this is the defining
+weak pairing whenever \eqref{eq:divergence-residual} holds with the
+declared integrability.
+
+Integrate \eqref{eq:forced-trace} on the closed surface and in
+time. The scalar Laplacian integrates to zero. Use
+\eqref{eq:weak-pairing}, \eqref{eq:dz} and Cauchy--Schwarz in
+space-time for the two derivative terms. The $B$ term is at most
+$CB_1(S)$. This first proves the bound for the trace distance;
+\eqref{eq:distance-trace} yields \eqref{eq:weak-comparison}.
+
+For the energy estimate, the exact equation \eqref{eq:local-hym}
+gives
+\begin{equation}\label{eq:trace-dissipation}
+ -\frac{d}{ds}\int_C\tr(h-I)\,dA
+       =4\int_C\tr(h_z^*h^{-1}h_z)\,dx\,dy.
+\end{equation}
+The derivative term integrates to zero; the displayed ordered
+quadratic term is nonnegative. Only now replace $h^{-1}$ by its
+scalar lower bound. The result controls a fixed multiple of
+$\int_C|Dh|^2\,dA$. Determinant one implies $\tr(h-I)\ge0$
+by the arithmetic--geometric mean inequality. Integrating to $S$
+and then letting $S\to\infty$ proves \eqref{eq:actual-energy}.
+It requires neither convergence to a particular parallel metric
+nor a bound on the initial spatial derivative.
+\end{proof}
+
+In particular, on a bounded-area family, all-time approximation
+follows if the initial trace error tends to zero, $E_K(\infty)$
+stays bounded, and $J_2(\infty),B_1(\infty)$ tend to zero.
+The remainder of the proof constructs exactly these quantities on
+the compact family of Section~\ref{sec:geometry}.
