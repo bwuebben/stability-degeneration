@@ -12,7 +12,9 @@ set
  \qquad n_i=Jd_i,\qquad t_i=\int_{\delta_i}\Psi_p=p_i.
 \end{equation}
 The two block relations are known; the columns of $D$ are the
-unknowns. No primitivity assertion is made for their image.
+unknowns. Their image is primitive by
+Proposition~\ref{prop:primitive-vanishing-lattice}; the recovery
+procedure below does not require that fact as an input.
 
 In the positive Picard--Lefschetz convention in complex dimension three,
 \cite[Expos\'e~XIV, Theorem~3.2.11]{Deligne}, or directly in homology
@@ -103,9 +105,59 @@ $L^{\rm sat}=(L\otimes\QQ)\cap\Lambda$, then
  \Lambda/L\cong\ZZ^{128}\oplus\bigoplus_{j=1}^6\ZZ/s_j\ZZ,
  \qquad [L^{\rm sat}:L]=\prod_{j=1}^6s_j.
 \end{equation}
-The Smith invariants are outputs of recovery; none is assumed to equal
-one. The full recovered columns retain the marked embedding beyond
-these abstract group invariants.
+Proposition~\ref{prop:primitive-vanishing-lattice} gives
+$s_1=\cdots=s_6=1$ and $L^{\rm sat}=L$ before any period is
+computed. Smith reduction independently recovers these known
+invariants from the observed columns. The columns also determine
+the position of $L$ in the specified geometric marking.
+
+\begin{corollary}\label{cor:vanishing-normal-form}
+Label $I_f=\{1,2,3,4\}$ and $I_g=\{5,6,7,8\}$.
+There is an integral symplectic basis
+$\alpha_1,\ldots,\alpha_{67},\beta_1,\ldots,\beta_{67}$ of $\Lambda$
+such that
+\[
+ \begin{aligned}
+ \delta_i&=\alpha_i\quad(1\le i\le3),&
+ \delta_4&=-\alpha_1-\alpha_2-\alpha_3,\\
+ \delta_{4+i}&=\alpha_{3+i}\quad(1\le i\le3),&
+ \delta_8&=-\alpha_4-\alpha_5-\alpha_6.
+ \end{aligned}
+\]
+Thus the inclusion and the individual Picard--Lefschetz
+transformations are determined up to a simultaneous integral
+symplectic change of basis.
+\end{corollary}
+
+\begin{proof}
+The known kernel makes
+$\delta_1,\delta_2,\delta_3,\delta_5,\delta_6,\delta_7$
+a basis of $L$. Their disjoint representatives make $L$ isotropic,
+and the proposition makes it primitive. Any prescribed basis
+$e_1,\ldots,e_6$ of such a sublattice extends to a symplectic
+basis. Indeed primitivity allows the coordinate functional
+$e_j\mapsto\delta_{1j}$ to extend integrally to $\Lambda$.
+Unimodularity represents it by a vector $f_1$ with
+$\langle e_j,f_1\rangle=\delta_{1j}$. The remaining $e_j$ lie
+in the integral symplectic complement of the plane spanned by
+$e_1,f_1$, and span a primitive isotropic sublattice there.
+Induction extends the prescribed basis. The two block relations
+give the displayed formulas, and \eqref{eq:PL-recovery} gives
+the monodromy assertion.
+\end{proof}
+
+If $D_0$ denotes this normal-form matrix, then $D=S^{-1}D_0$
+for some integral symplectic $S$. Topology determines $D_0$;
+the period observations determine $D$ relative to the independently
+constructed marking, or equivalently the class of $S$ modulo
+the stabilizer of $D_0$.
+
+The local spheres are globally flat by
+Section~\ref{sec:transport}, and the marking at $p$ is transported
+from $p_*$. Their coordinate matrix is therefore constant under
+that transport: $D(p)=D(p_*)$. Recovery at $p_*$ suffices to
+determine this matrix throughout $B_{\rm ev}^{\circ}$.
+This does not make the full middle-homology local system trivial.
 
 Set $N_i=T_i-I$. The spheres have disjoint representatives, so
 $d_i^TJd_j=0$ and therefore $N_iN_j=0$ for all $i,j$. For every
@@ -171,9 +223,11 @@ Thus a sufficient number of binary output digits is
  b\ge \frac{2\pi}{\kappa_i\log2}
        +\log_2A+\log_2(H+1)+O(1).
 \end{equation}
-The required absolute tolerance is exponentially small in inverse
-capacity; the sufficient number of digits grows linearly in inverse
-capacity. Bounds for transport and quadrature may deteriorate further.
+For direct recovery at the target fibre, this sufficient absolute
+tolerance is exponentially small in inverse capacity; the sufficient
+number of digits grows linearly in inverse capacity. Recovering the
+constant matrix at $p_*$ avoids this target-dependent requirement.
+Bounds for transport and quadrature may deteriorate further.
 Equation~\eqref{eq:capacity-digits} is neither a running-time bound
 nor a bound on the internal precision of those constructions.
 
@@ -246,9 +300,10 @@ marked homomorphism
 \[
  D:\ZZ^8\longrightarrow H_3(X_p;\ZZ),\qquad e_i\longmapsto\delta_i.
 \]
-It returns the integral image, its saturation and saturation index,
-the quotient group including its torsion, and the individual
-monodromy matrices. These determine the entire homology
+It returns the primitive integral image and the individual
+monodromy matrices, and independently recovers the topologically
+determined saturation index one and quotient $\ZZ^{128}$.
+The monodromy matrices determine the entire homology
 representation by \eqref{eq:all-monodromy}.
 
 The forward observations are eight local periods and $1072$
@@ -288,7 +343,7 @@ statements have been proved above.
 \end{proof}
 
 The theorem establishes a construction and termination result.
-No numerical coefficient vector, marking, period matrix, attachment
-matrix or Smith invariant has been calculated here. The equations
+No numerical coefficient vector, marking, period matrix or attachment
+matrix in the constructed marking has been calculated here. The equations
 determine the geometry, while the specified procedure obtains the
 previously unsupplied marked local inclusion from scalar observations.

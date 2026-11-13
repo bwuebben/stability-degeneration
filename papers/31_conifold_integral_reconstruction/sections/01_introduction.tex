@@ -3,12 +3,13 @@
 
 A conifold transition relates exceptional curves on a small
 resolution to vanishing three-spheres on a smoothing.
-The relations among those spheres need not determine their
-integral placement in middle homology. That placement enters
-the integral monodromy representation and the saturation
-of the vanishing-cycle lattice. We recover it from geometrically
-represented period observations on a compact family of
-Calabi--Yau threefolds.
+For the compact family studied here, integral topology determines
+their primitive lattice and its symplectic normal form.
+Their coordinates in an independently constructed geometric
+marking remain to be identified. We recover those coordinates
+and the corresponding monodromy matrices from geometrically
+represented period observations on a family of Calabi--Yau
+threefolds.
 
 The family consists of complete intersections of bidegrees
 $(1,1)$, $(1,1)$ and $(2,2)$ in
@@ -25,7 +26,11 @@ $\delta_i$ so that their only integral relations are
 \end{equation}
 These two relations are supplied as geometric data.
 The unknown is the marked inclusion of their rank-six
-span in middle homology.
+span in middle homology. Its saturation and torsion-free
+quotient are determined independently in
+Proposition~\ref{prop:primitive-vanishing-lattice};
+Corollary~\ref{cor:vanishing-normal-form} gives its symplectic
+normal form.
 
 \subsection{The principal result}
 
@@ -65,9 +70,9 @@ $\gamma_1,\ldots,\gamma_{134}$ and recovers
  D:\ZZ^8\longrightarrow H_3(X_p;\ZZ),\qquad
                         D e_i=\delta_i .
 \]
-It returns the marked columns, their integral image and
-saturation, the quotient group including torsion, and
-the individual monodromy matrices. The latter determine
+It returns the marked columns, their primitive integral image,
+and the individual monodromy matrices, and recovers the
+topologically determined quotient $\ZZ^{128}$. These matrices determine
 the homology action of every loop in $B_{\rm ev}^{\circ}$.
 The observations are the eight local periods and the
 $1072$ complex jumps of the marked periods around
@@ -87,8 +92,14 @@ no comparison condition among the nonzero $p_i$.
 Termination is pointwise in the smooth parameter.
 The result does not give a practical running-time
 bound near the discriminant. In particular, we do not
-claim numerical values for the selected coefficients,
-the attachment matrix or its Smith invariants.
+claim numerical values for the selected coefficients or
+the attachment matrix in the constructed marking. Its six
+nonzero Smith invariants are all one by topology.
+The local spheres are globally flat and the marking is
+transported from a reference fibre. Thus the matrix is constant
+under this transport, and recovery at the reference fibre suffices.
+Direct observations at other fibres remain available with the
+pointwise error bounds proved below.
 
 The finite inverse step has a simple form. If
 $\delta_i=\sum_b(d_i)_b\gamma_b$ and
@@ -219,8 +230,10 @@ middle cycles and their period observations remain
 separate data. The relation $\tau_i=p_i/U_i$,
 with bounded nonzero residue units $U_i$, connects
 the Hodge capacities to the sufficient inverse
-precision. Required absolute period tolerances can
-be exponentially small in inverse capacity.
+precision. Sufficient absolute period tolerances for direct
+recovery at a target fibre can be exponentially small in inverse
+capacity; this cost can be avoided for the integer matrix by
+recovering it once at the reference fibre.
 
 \subsection{Relation to previous work}
 

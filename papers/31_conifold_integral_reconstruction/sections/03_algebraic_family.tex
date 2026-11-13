@@ -190,9 +190,67 @@ $v_f,v_g\in\ZZ^8$. The rational image of $r$ is their span by
 Every integral vector in this rational span is constant with an
 integer value on each block; hence $\im r=\ZZ v_f\oplus\ZZ v_g$.
 It follows that the eight local classes have precisely these
-integral relations and rank-six span. This determines the kernel
-in their source, but does not assert that their image in $H_3(X;\ZZ)$
-is saturated.
+integral relations and rank-six span. The following integral argument
+also determines the saturation of their image.
+
+\begin{proposition}\label{prop:primitive-vanishing-lattice}
+For every admissible $h$, one has $H_2(Y_h;\ZZ)\cong\ZZ^4$
+and $H^3(Y_h;\ZZ)$ is torsion-free. The vanishing lattice
+$L=\langle\delta_1,\ldots,\delta_8\rangle\subset H_3(X;\ZZ)$
+is primitive, and
+\[
+                    H_3(X;\ZZ)/L\cong\ZZ^{128}.
+\]
+\end{proposition}
+
+\begin{proof}
+The very ample bundle $\OO(2,2)$ embeds $V_0$ so that $X_h$
+is a hyperplane section. Its complement is affine, and
+\[
+ q_Z:Z\setminus Y_h\longrightarrow V_0\setminus X_h
+\]
+is proper, being the base change of the projective contraction.
+Its fibres are points off the two singular lines and projective
+lines over their complements of the four quartic zeros.
+If $\phi(k)$ is the complex dimension of the locus of fibres of
+dimension $k$, then $\phi(0)=4$ and $\phi(1)=1$, with no other
+nonempty fibre loci. The homotopy-dimension theorem of
+Goresky--MacPherson \cite[Part~II, \S1.1*, p.~152]{GoreskyMacPherson},
+applied to the proper map into the affine hyperplane complement,
+gives a CW complex of real dimension at most
+$\max_k(2k+\phi(k))=4$ homotopy equivalent to $Z\setminus Y_h$.
+Integral duality on the compact real eight-manifold $Z$ gives
+\[
+ H_k(Z,Y_h;\ZZ)\cong H^{8-k}(Z\setminus Y_h;\ZZ)=0
+                         \qquad(k\le3).
+\]
+The pair sequence therefore identifies $H_2(Y_h;\ZZ)$ with
+$H_2(Z;\ZZ)=\ZZ^4$, the latter by the projective-bundle formula.
+Universal coefficients now imply that $H^3(Y_h;\ZZ)$ is torsion-free.
+
+Write $N_i\cong S^2\times S^3$ for the node links, $B_i\simeq S^3$
+for the smoothing caps, and $B'_i\simeq S^2$ for the resolution caps.
+On the smoothing side, Mayer--Vietoris continues
+\eqref{eq:integral-attachment} as
+\[
+ \ZZ^8\xrightarrow{\partial}H^3(X;\ZZ)
+ \longrightarrow H^3(U;\ZZ)\oplus\bigoplus_iH^3(B_i;\ZZ)
+ \longrightarrow\bigoplus_iH^3(N_i;\ZZ).
+\]
+Each cap-to-link restriction in degree three is an isomorphism.
+The kernel of the last arrow consequently projects isomorphically
+onto $H^3(U;\ZZ)$, so $\operatorname{coker}\partial\cong H^3(U;\ZZ)$.
+On the resolution side, the degree-two restrictions
+$H^2(B'_i;\ZZ)\to H^2(N_i;\ZZ)$ are isomorphisms. Hence the
+corresponding sequence gives
+\[
+ 0\longrightarrow H^3(Y_h;\ZZ)\longrightarrow H^3(U;\ZZ)
+                    \longrightarrow\bigoplus_iH^3(N_i;\ZZ)=\ZZ^8.
+\]
+Thus $H^3(U;\ZZ)$ is an extension of torsion-free groups and is
+torsion-free. Poincar\'e duality identifies it with
+$H_3(X;\ZZ)/L$, whose rank is $134-6=128$.
+\end{proof}
 
 Orient the spheres accordingly and put
 \begin{equation}\label{eq:period-space}
