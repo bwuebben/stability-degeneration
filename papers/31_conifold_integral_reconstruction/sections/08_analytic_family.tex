@@ -1,331 +1,28 @@
-\section{Analytic results on the selected family}
+\section{Applicability of the analytic results}
 \label{sec:analytic-family}
 
-The coefficient selection in Section~\ref{sec:algebraic-family}
-fixes one central threefold and one evaluated period section. We
-now verify that the metric, bundle and flow results of
-\cite{W_Hodge,W_HYM} apply to these fibres. Equality of
-complete-intersection degrees alone would not justify this step.
-The analytic objects are constructed anew at the selected central
-member; they need not be evaluated by the period procedure.
+The reconstruction theorem applies on the known period ball
+$B_{\rm ev}$. To relate its output to the analytic results of
+\cite{W_Hodge,W_HYM}, we verify their hypotheses for the
+selected central member and its evaluated smoothing family.
+Appendix~\ref{app:analytic-inputs} states those results in full,
+including the central metrics, harmonic masses, bundle
+parameters and spatial norms used below.
 
-\subsection{Domains and the Ricci-flat input}
-
-Fix any finite graph regularity order $m\ge4$. There is a full
-positive-radius ball $B_{\rm an}\subset B_{\rm ev}$ on which the
-analytic conclusions stated below hold, together with positive
-bundle-parameter and metric-basin radii. These radii may depend
-on the fixed central member and on $m$. No uniformity as that
-central member varies is asserted. Statements for an arbitrary
-fixed spatial derivative order retain their own order-dependent
-constants and neighbourhoods.
-
-For $p\in B_{\rm an}^{\circ}$ let $g_p$ be the Ricci-flat
-K\"ahler metric in $c_1(H)$, where $H=\OO(2,2)|_{X_p}$.
-Its volume is $V_H=H^3/6=160/3$. The metric input in
-\cite[Sections~7--10]{W_Hodge} consists of a fixed central
-conically singular metric $g_0$, conic radius functions
-$\varrho_p$, and initial K\"ahler metrics $\widetilde g_p^R$
-which equal normalized Stenzel metrics on inner node regions.
-For every fixed spatial derivative order $k$, positive
-$\mu>\eta$ and constants $C_k$ give
-\begin{equation}\label{eq:actual-metric-input}
- \limsup_{\substack{p\to0\\p\in B_{\rm an}^{\circ}}}
- \max_{j\le k}\sup_{X_p}\varrho_p^j
- |\nabla^j(g_p-\widetilde g_p^R)|_{\widetilde g_p^R}
-                         \le C_k R^{\mu-\eta}.
-\end{equation}
-The order is to fix small $R$, let $p\to0$, and then decrease
-$R$. On every fixed compact exterior $g_p\to g_0$ in all
-fixed spatial derivatives. The radius on a node chart is
-comparable to $(|z|^2+|\tau_i|)^{1/3}$ and is comparable to
-one on the exterior. The estimates impose no ratio condition
-on the nonzero node parameters. They concern spatial derivatives,
-not differentiability with respect to $p$.
-
-\subsection{The complete Hodge comparison}
-
-Let $V=H^2(Y_{h_*};\RR)$ and let $G$ be its central harmonic
-mass. The subspace $K_H$ of classes surviving on the smoothing
-has dimension two; in the fixed divisor coordinates it is
-spanned by $k_1=g+\xi_1$ and $k_2=g+\xi_2$.
-Represent $V/K_H$ by $W_H=K_H^{\perp_G}$, using the
-$G$-orthogonal lifts of $f,g$ as coordinates.
-On a fixed compact exterior $C_*$ let $\Pi_*$ be the central
-$L^2$ projection onto distributionally closed two-forms, with
-unrestricted tangential trace. The bounded exterior observer is
-\begin{equation}\label{eq:hodge-observer}
- \mathcal A_Hu=\operatorname{pr}_{W_H}^G
-                          [\Pi_*(u|_{C_*})].
-\end{equation}
-Exterior identifications are fixed before the degeneration.
-This definition applies to form-domain inputs and does not
-integrate an arbitrary unclosed $L^2$ form over cycles.
-
-Put
-\begin{equation}\label{eq:hodge-model}
- \kappa_i=\frac{2\pi}{|\log|\tau_i||},\qquad
- w_\alpha=\sum_{i\in I_\alpha}\kappa_i,\qquad
- E_H=\begin{pmatrix}w_f&0\\0&w_g\end{pmatrix},\qquad
- M_H=\frac45\begin{pmatrix}9&-1\\-1&9\end{pmatrix}.
-\end{equation}
-Here $E_H$ comes from the capacity-weighted link restriction
-and $M_H$ from harmonic mass after removing the full surviving
-space. Neither is defined from the small eigenvalues.
-
-\begin{theorem}[Hodge input]\label{thm:hodge-input}
-On a sufficiently small $B_{\rm an}$ there are $\gamma>0$
-and $e(p)\to0$ such that the harmonic two-form space has
-dimension two, with mass converging to $G|_{K_H}$, and precisely
-two positive two-form eigenvalues lie below $\gamma$.
-Their values are relatively $1\pm e(p)$ equivalent to the
-generalized eigenvalues of $(E_H,M_H)$. The first positive
-one-form eigenvalue and third positive two-form eigenvalue are
-at least $\gamma$.
-
-The positive weak two-form space $S_{H,p}$ consists of coexact
-primitive real $(1,1)$ forms, and
-$\mathcal A_H:S_{H,p}\to W_H$ is an isomorphism. With
-$J_H=(\mathcal A_H|_{S_{H,p}})^{-1}$, its observed forms satisfy
-\begin{equation}\label{eq:hodge-relative-forms}
- \begin{split}
- (1-e)M_H&\le \langle J_H\cdot,J_H\cdot\rangle_{g_p}
-                                      \le(1+e)M_H,\\
- (1-e)E_H&\le \langle\dd J_H\cdot,\dd J_H\cdot\rangle_{g_p}
-                                      \le(1+e)E_H.
- \end{split}
-\end{equation}
-These conclusions are uniform over arbitrary node-scale ratios.
-The finite positive eigenvalues
-\begin{equation}\label{eq:hodge-roots}
- \mu_\pm=
- \frac{9(w_f+w_g)\pm
-              \sqrt{81(w_f-w_g)^2+4w_fw_g}}{128}
-\end{equation}
-satisfy $\mu_-/\mu_+\le4/5$. Each actual weak eigenline is
-therefore identified through $\mathcal A_H$ with its finite
-generalized eigenline with error tending to zero uniformly in
-$w_f/w_g$.
-\end{theorem}
-
-This is the statement of \cite[Theorem~1.1 and Section~12]{W_Hodge}
-in the present notation. The operator is the real Hodge Laplacian
-on its closed-manifold elliptic domain. On the coexact two-form
-sector its quadratic form is $\|\dd u\|_2^2$ with $H^1$ form
-domain; the harmonic and exact sectors are accounted for separately.
-
-\subsection{Nonflat bundles and their weak section spectrum}
-
-On the same relative family put $L_p=\OO(1,-1)|_{X_p}$.
-There is a locally free holomorphic rank-four family
-$\mathcal E_p(w)$, $w=(w_A,w_B)\in
-\mathcal W=\operatorname{Mat}_2(\CC)^{\oplus2}$ near zero,
-with split member
-\[
- \mathcal E_p(0)=L_p\otimes\CC^2\oplus L_p^{-1}\otimes\CC^2.
-\]
-It extends over the discriminant as an algebraic bundle
-construction. The metric assertions here are on smooth fibres.
-Writing $D_L=c_1(L_p)$, its characteristic data are
-\begin{equation}\label{eq:nonflat-characteristic-data}
- D_LH^2=0,\qquad D_L^2H=-16,\qquad
- \det\mathcal E=\OO,\quad c_2(\mathcal E)=-2D_L^2,\quad
- c_2(\mathcal E)H=32,\quad c_3(\mathcal E)=0.
-\end{equation}
-In particular this is a nonflat bundle family.
-
-The local deformation germ is the full two-arrow space:
-$\operatorname{Ext}^0=\mathfrak{gl}_2\oplus\mathfrak{gl}_2$,
-$\operatorname{Ext}^1=\mathcal W$,
-$\operatorname{Ext}^2=\mathcal W^*$ and
-$\operatorname{Ext}^3=(\mathfrak{gl}_2\oplus\mathfrak{gl}_2)^*$.
-Its obstruction equations vanish by the ambient construction,
-despite the nonzero $\operatorname{Ext}^2$ on the threefold.
-All small members are Gieseker semistable. Slope polystability
-is equivalent to a closed affine orbit of
-$\operatorname{GL}_2(\CC)\times\operatorname{GL}_2(\CC)$.
-The small germ contains no slope-stable rank-four objects.
-
-Fix the two algebraic Koszul extension frames. Their harmonic
-representatives have squared masses $c_+(p),c_-(p)>0$,
-uniformly bounded above and below and converging to positive
-central limits. These are elliptic data for $g_p$ and its HE
-line backgrounds; intersection numbers do not compute them.
-Let $K_B=U(2)\times U(2)$ act by
-$(k_+,k_-)(A,B)=(k_+Ak_-^{-1},k_-Bk_+^{-1})$.
-On
-\[
- \mathfrak h=\{(S_+,S_-):S_\pm=S_\pm^*,\
-                              \tr S_++\tr S_-=0\}
-\]
-define
-\begin{equation}\label{eq:bundle-model}
- \begin{split}
- M_B(S,T)&=V_H\tr(ST),\\
- E_B(p,z)(S)&=2c_+\|S_+A-AS_-\|_{\rm HS}^2
-                    +2c_-\|S_-B-BS_+\|_{\rm HS}^2,\\
- \mu_{2,p}(z)&=V_H^{-1}
- (c_+AA^*-c_-B^*B,\ c_-BB^*-c_+A^*A),\qquad z=(A,B).
- \end{split}
-\end{equation}
-
-\begin{theorem}[Bundle input]\label{thm:bundle-input}
-There is a real $K_B$-equivariant normalization
-$\chi_p(z)=z+O(|z|^2)$, $d\chi_p=I+O(|z|)$, for which
-the transported corrected Chern connection at $w=\chi_p(z)$
-has mean curvature exactly $\mu_{2,p}(z)$.
-Thus $\mu_{2,p}(z)=0$ gives an HE representative.
-These representatives cover the sufficiently small polystable
-objects; this coverage uses a separate complex-orbit correction.
-The map $\chi_p$ is not asserted holomorphic or complex-orbit
-preserving.
-
-At an HE member the trace-free Hermitian section operator
-$\mathcal L_{p,w}=D_{p,w}^*D_{p,w}
-                 =2\bar\partial_{p,w}^*\bar\partial_{p,w}$
-has exactly seven low modes, zeros included. If $\nu_j$
-are the generalized eigenvalues of $(E_B,M_B)$, in increasing
-order with zeros, then
-\[
- (1-C|z|)\nu_j\le\lambda_j(\mathcal L_{p,w})
-       \le(1+C|z|)\nu_j\quad(1\le j\le7),\qquad
- \lambda_8(\mathcal L_{p,w})\ge c>0.
-\]
-The kernel is the constant Hermitian stabilizer in the specified
-unitary transport. The full Hermitian endomorphism statement adds
-the identity, with a uniformly gapped nonconstant scalar sector.
-The operator domain is $H^2$ and its form domain is $H^1$ on
-each fixed smooth compact fibre.
-\end{theorem}
-
-These assertions, including the deformation and stability
-statements preceding the theorem, are proved in
-\cite[Sections~2--7]{W_HYM}. The four factor types, in order,
-are two distinct nonzero cycles, one repeated nonzero cycle,
-one nonzero cycle and the two zero vertex factors, and the
-split object. Their trace-free stabilizer dimensions are
-$1,3,2,7$, and their positive weak counts are $6,4,5,0$.
-Nonzero simple cycles give stable rank-two factors with
-$c_2H=16$; zero factors are $L_p$ and $L_p^{-1}$.
-All these types are included, with arbitrary ratios of positive
-weak rates and independent base and bundle limits.
-
-\subsection{Actual flow and harmonic moduli inputs}
-
-Fix an HE member with $w=\chi_p(z)$, and let $h_0$ be its
-HE metric. Use the specified unitary transport, the split
-connection $D_0$, and split $L^2$ projection $\Pi$ onto
-$\mathfrak h$; put $Q=I-\Pi$. For a trace-free Hermitian
-logarithm define
-\[
- \|u\|_X=\|u\|_\infty+\|D_0u\|_\infty.
-\]
-This is a spatial norm on metrics of one fixed holomorphic bundle.
-
-\begin{theorem}[Flow input]\label{thm:flow-input}
-For the fixed finite $m\ge4$, a common nonempty ball
-$\|u_0\|_X<\delta$ of smooth determinant-normalized metrics
-$h(0)=h_0e^{u_0}$ has the following properties.
-There are a chosen $C^m$ graph
-$Z(S)=S+\psi(S)$, a complete finite field $f$, and a
-$C^1$ phase $\Gamma$ depending on the full spatial datum.
-Writing $r=|w|$, one has
-$\psi(0)=0$, $\Pi\psi=0$,
-$\|D^j\psi\|_X\le C_mr^2$ for $j\le m$ and
-$\|f\|_{C^m}\le C_mr^2$.
-The graph is invariant for its cutoff extension and agrees
-with the actual HYM equation on an inner region.
-
-For every datum in the stated ball,
-$S_{\rm eff}(t)=\phi_t(\Gamma(u_0))$ remains in that actual
-region for all $t\ge0$, and
-$h_{\rm eff}(t)=h_0e^{Z(S_{\rm eff}(t))}$ is itself an actual
-solution of $h^{-1}\dot h=-2\mathrm i\Lambda F_h$.
-With $D_*=\|Qu_0-\psi(\Pi u_0)\|_X$,
-\begin{equation}\label{eq:actual-flow-tracking}
- \begin{split}
- \|u(t)-Z(S_{\rm eff}(t))\|_X&\le CD_*e^{-ct},\\
- \left\|\log\!\left(e^{-Z(S_{\rm eff}(t))/2}
-                  e^{u(t)}e^{-Z(S_{\rm eff}(t))/2}\right)\right\|_X
-                                      &\le CD_*e^{-ct}.
- \end{split}
-\end{equation}
-The corresponding metric-order bounds are
-$e^{-CD_*e^{-ct}}h_{\rm eff}\le h\le e^{CD_*e^{-ct}}h_{\rm eff}$.
-The phase satisfies $\Gamma(Z(S))=S$ and, on a smaller
-forward-confined basin, $\Gamma(u(t))=\phi_t\Gamma(u_0)$.
-
-For finite preparation set $\Gamma_T=\phi_{-T}(\Pi u(T))$.
-For a fixed small coupling bound $\epsilon$ and
-$L_f=\|Df\|_\infty=O(r^2)<c$,
-\begin{equation}\label{eq:finite-preparation}
- |\Gamma_T-\Gamma|+
- \sup_{t\ge0}\|Z(\phi_t\Gamma_T)-Z(\phi_t\Gamma)\|_X
-                    \le C\epsilon D_*e^{-(c-L_f)T}.
-\end{equation}
-One can take $c=\sigma_0/2$, with a uniform complementary
-semigroup exponent $\sigma_0>0$. For $r>0$, preparation time
-$T_r=4\sigma_0^{-1}\log(1/r)$ gives error $O(r^2D_*)$
-and $T_r\lambda_j\to0$ for every positive weak rate.
-At $r=0$ the finite trajectory is constant.
-\end{theorem}
-
-This is \cite[Sections~9--11]{W_HYM}. The parameters $p,w$
-are fixed during every flow. The result is absolute tracking
-to the exact finite field, including all later times; it is
-not a relative nonlinear decay expansion.
-
-For varying holomorphic bundle parameters, put
-\[
- U=\operatorname{diag}(u_1,u_2),\qquad
- z_p(u)=(c_+^{-1/2}U,c_-^{-1/2}U),\qquad
- \mathsf W=(\ZZ/2)^2\rtimes S_2.
-\]
-The group acts by signs and permutation.
-If $\mathcal A_p(w)$ denotes the corrected
-unitary connection, define the actual class map
-\[
- \mathfrak F_p([u])=[\mathcal A_p(\chi_p(z_p(u)))].
-\]
-\begin{theorem}[Harmonic moduli input]\label{thm:moduli-input}
-For a common sufficiently small $R_0>0$,
-$\mathfrak F_p:\overline B_R/\mathsf W\to\mathcal M_p(R)$
-is a homeomorphism onto its actual class image for $R\le R_0$,
-with smooth parametrizations of its genuine orbit-type strata.
-On each stratum,
-\[
- (1-C|u|)4|\dd u|^2\le\mathfrak F_p^*g_{\rm harm}
-                              \le(1+C|u|)4|\dd u|^2.
-\]
-Let $d_{p,R}$ use continuous paths confined to $\mathcal M_p(R)$,
-piecewise smooth in its finitely many strata, allowing improper
-endpoint lengths. Then
-\begin{equation}\label{eq:confined-metric-input}
- \sqrt{1-CR}\,d_{\rm flat}([u],[v])
- \le d_{p,R}(\mathfrak F_p[u],\mathfrak F_p[v])
- \le\sqrt{1+CR}\,d_{\rm flat}([u],[v]),
- \quad d_{\rm flat}=2\min_{\gamma\in\mathsf W}|u-\gamma v|.
-\end{equation}
-The open-radius locus completes to the closed-radius locus.
-Its fixed local intrinsic metric has unique tangent cone
-$(\CC^2,4|\dd u|^2)/\mathsf W$ at the split object.
-The rescaled distance error is $O(\rho)$ on bounded balls,
-uniformly in $p$, also for the fixed-locus distance $d_{p,R_0}$.
-\end{theorem}
-
-The actual-class and full-stabilizer assertions are essential
-inputs here, not consequences of a formal quotient metric.
-They and the stated distance theorem are proved in
-\cite[Sections~12--13]{W_HYM}. Distances in a larger ambient
-moduli space are outside this conclusion.
-
-\subsection{Verification on the selected coefficients}
+Fix a finite graph regularity order $m\ge4$. We shall obtain
+a full positive-radius ball $B_{\rm an}\subset B_{\rm ev}$,
+together with positive bundle-parameter and metric-basin radii.
+These radii may depend on the selected central coefficients
+and on $m$, and need not be computable. For
+$p\in B_{\rm an}^{\circ}$, write $g_p$ for the Ricci-flat
+K\"ahler metric in $c_1(\OO(2,2)|_{X_p})$.
 
 \begin{proposition}\label{prop:analytic-reapplication}
 The family of Theorem~\ref{thm:evaluated-periods} admits
-$B_{\rm an}$ and the objects just stated, satisfying
+$B_{\rm an}$ and the analytic objects specified in
+Appendix~\ref{app:analytic-inputs}, satisfying
 \eqref{eq:actual-metric-input} and
-Theorems~\ref{thm:hodge-input}--\ref{thm:moduli-input}.
+Recollections~\ref{thm:hodge-input}--\ref{thm:moduli-input}.
 The observation procedure of
 Theorem~\ref{thm:integral-reconstruction} remains defined on
 all of $B_{\rm ev}^{\circ}$ and in particular applies to
@@ -374,9 +71,9 @@ The Hodge trials, capacity lower bounds and mass compactness
 use this comparison and the same exterior restriction map.
 The primitive K\"ahler mass identity and
 \eqref{eq:central-intersection}, with the full surviving
-space removed, give exactly $M_H$ above. The complete
+space removed, give exactly $M_H$ in \eqref{eq:hodge-model}. The complete
 degree-one and degree-two argument in \cite[Sections~10--12]{W_Hodge}
-therefore gives Theorem~\ref{thm:hodge-input} on these fibres.
+therefore gives Recollection~\ref{thm:hodge-input} on these fibres.
 No uniform estimate over varying $h$ follows from this reasoning.
 
 The bundle construction requires an additional ambient
@@ -423,7 +120,7 @@ on a common product of base and matrix balls. The subsequent
 real equivariant normalization, separate orbit balancing,
 semistability and polystable coverage use precisely these
 uniform estimates and positive masses. This proves that all
-the hypotheses of Theorem~\ref{thm:bundle-input} hold here.
+the hypotheses of Recollection~\ref{thm:bundle-input} hold here.
 
 For flow, the required spatial heat bounds, connection
 expansion and contracted divergence bounds come from this
@@ -436,7 +133,7 @@ rate. The full $H^1$ gauge comparison, arbitrary-unitary
 rigidity and actual harmonic class identification in
 \cite[Sections~12--13]{W_HYM} apply to the same connections.
 The finite balanced quotient and its confined paths then
-give Theorem~\ref{thm:moduli-input}. Intersecting these
+give Recollection~\ref{thm:moduli-input}. Intersecting these
 finitely many smallness conditions leaves full positive
 base and bundle balls.
 

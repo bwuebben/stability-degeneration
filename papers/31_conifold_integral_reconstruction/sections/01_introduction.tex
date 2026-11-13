@@ -3,13 +3,18 @@
 
 A conifold transition relates exceptional curves on a small
 resolution to vanishing three-spheres on a smoothing.
-For the compact family studied here, integral topology determines
-their primitive lattice and its symplectic normal form.
-Their coordinates in an independently constructed geometric
-marking remain to be identified. We recover those coordinates
-and the corresponding monodromy matrices from geometrically
-represented period observations on a family of Calabi--Yau
-threefolds.
+The relations among those spheres give only the kernel of the
+homomorphism sending each sphere to its class in middle homology.
+The integral placement of the classes themselves enters the
+integral monodromy representation and the saturation of the
+vanishing-cycle lattice. For the compact family studied here,
+integral topology shows that the lattice is primitive and
+determines this placement up to an integral symplectic change
+of basis. The coordinates of the spheres in an independently
+constructed geometric marking remain to be identified.
+We recover those coordinates and the corresponding monodromy
+matrices from geometrically represented period observations
+on a family of Calabi--Yau threefolds.
 
 The family consists of complete intersections of bidegrees
 $(1,1)$, $(1,1)$ and $(2,2)$ in
@@ -143,8 +148,6 @@ and around each individual meridian. The first-jet
 equation controls the transported tangent vectors,
 and quadrature of the pulled-back residue form gives
 absolute enclosures for the period differences.
-The process never resolves an endpoint in the
-original homology basis before integration.
 
 The denominator $p_i$ may be arbitrarily small.
 Lemma~\ref{lem:integer-separation} bounds the unknown
@@ -157,7 +160,7 @@ precision depending on the local period and true
 integer height. The latter enters the explanatory
 bound, not the adaptive input.
 
-\subsection{The analytic results on the same fibres}
+\subsection{Applications on the same fibres}
 
 The spectral restriction map and the recovered
 attachment map belong to one exact sequence.
@@ -175,65 +178,39 @@ The marked image of $D$ contains additional integral
 information which that real quadratic form does not
 determine.
 
-The actual-metric results of \cite{W_Hodge,W_HYM}
-were established using central geometric and elliptic
-data. Their application to the algebraically selected
-member requires checking the hypotheses anew.
-Section~\ref{sec:analytic-family} does so, constructing
-the central analytic data at that member and taking
-a smaller full ball $B_{\rm an}\subset B_{\rm ev}$.
-This radius need not be computed. The observation
-procedure remains available on $B_{\rm ev}^{\circ}$,
-so its paths need not stay inside the analytic ball.
+The analytic results of \cite{W_Hodge,W_HYM} apply after
+their central geometric and elliptic hypotheses have been
+verified for the selected coefficients. Section~\ref{sec:analytic-family}
+performs this verification on a smaller full ball
+$B_{\rm an}\subset B_{\rm ev}$, whose radius need not be
+computable. Appendix~\ref{app:analytic-inputs} records the
+complete statements used in these applications.
 
-Theorem~\ref{thm:integrated} states the resulting
-same-family conclusion. Besides the complete weak
-Hodge spectrum, these fibres carry locally free
-rank-four bundles with determinant $\OO$ and
-$c_2H=32$, a full two-arrow deformation germ,
-and actual HE metrics on its polystable locus.
-The metric flow varies a Hermitian metric on one
-fixed holomorphic bundle. Its finite-dimensional
-invariant manifold is parametrized by seven real
-Hermitian block-matrix coordinates, with a spatial
-correction orthogonal to those constant sections.
-The bundle spectral observer is simply the split
-$L^2$ projection onto these block-matrix coordinates.
-At an HE metric, the tangent space of the invariant
-manifold is the entire low eigenspace of the
-endomorphism Laplacian, and this projection is
-inverse to the tangent parametrization.
+Theorem~\ref{thm:integrated} identifies the recovered map
+with the map in the attachment sequence and relates the
+analytic constructions on these same fibres. The nonflat
+rank-four bundles have determinant $\OO$, $c_2H=32$, and
+small deformations described by two $2\times2$ matrices,
+one in each direction between the two multiplicity spaces.
+On the polystable locus they admit Hermitian--Einstein metrics.
+The invariant manifold of metric flow on a fixed bundle is
+tangent there to the complete seven-dimensional low spectral
+subspace, including the kernel. Its finite Hessian is relatively
+equivalent to the squared norm of the infinitesimal unitary
+action on the matrix parameters. Minimizing the deformation
+norm over this action and the complementary spatial gauge
+directions gives the harmonic metric on the varying-bundle
+moduli space. The proof identifies these maps and quadratic
+forms using the estimates of \cite{W_HYM}.
 
-In the same coordinates, the Hessian of twice the
-Donaldson functional restricted to the invariant
-manifold is relatively equivalent to the finite
-commutator energy, including its exact kernel and
-arbitrarily small positive rates. The commutator
-energy is the squared norm of the infinitesimal
-unitary action on the bundle extension parameters.
-When the holomorphic bundle varies, these action
-vectors are precisely the deformation directions
-generated by constant unitary gauge. Minimizing
-the deformation norm over these directions and
-the complementary spatial gauge directions gives
-the harmonic metric on bundle moduli.
-Thus the shared action identifies the finite
-energy and the quotient directions, while the
-metric on the fixed-bundle flow manifold remains
-distinct from the metric on varying bundles.
-
-The period construction is unchanged by these
-fixed-base bundle operations. This compatibility
-does not derive integral topology from the bundle
-spectrum or finite evolution: the represented
-middle cycles and their period observations remain
-separate data. The relation $\tau_i=p_i/U_i$,
-with bounded nonzero residue units $U_i$, connects
-the Hodge capacities to the sufficient inverse
-precision. Sufficient absolute period tolerances for direct
-recovery at a target fibre can be exponentially small in inverse
-capacity; this cost can be avoided for the integer matrix by
-recovering it once at the reference fibre.
+The integral observations use represented middle cycles and
+remain independent of the bundle metric. Their paths lie in
+$B_{\rm ev}^{\circ}$ and may leave $B_{\rm an}$.
+The bounded residue units in $\tau_i=p_i/U_i$ relate the
+Hodge capacities to the sufficient absolute precision for
+direct recovery at a target fibre. Recovering the constant
+integer matrix at the reference fibre avoids this
+target-dependent precision requirement.
 
 \subsection{Relation to previous work}
 

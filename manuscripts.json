@@ -1081,36 +1081,37 @@
     "paper": "conifold_integral_reconstruction",
     "title": "Integral vanishing cycles from periods on conifold smoothings",
     "date": "2026-11-12",
-    "revision_date": "2026-11-12",
+    "revision_date": "2026-11-13",
     "website_slug": "conifold-integral-reconstruction",
     "pages": 37,
-    "pdf_sha256": "16cc5fb7d2a9253d39478c478b83c8bc527c04cd5d2d120ab2cbfedb111db11c",
-    "source_sha256": "5116a436377d61bc95911c39d937051c97564be79e5d36800c41269ba6a6f25d",
+    "pdf_sha256": "8f2fcadd280211f75d7f41a3680ff19b5abbf2c616be3f5f9908f5a60c0bbe60",
+    "source_sha256": "2a4ff9063a075adbc53232a81c4110a65d2b58a9fb894c31fcdac556433dfe1e",
     "download_filename": "conifold-integral-reconstruction.pdf",
     "source_files_sha256": {
-      "main.tex": "5116a436377d61bc95911c39d937051c97564be79e5d36800c41269ba6a6f25d",
-      "preamble.tex": "a63f532c9c90a06859edcc019dba9de3291c96c29b7801a62b71dd5a32b568fa",
-      "abstract.tex": "df655f909e980af4e22ce19442e82a818000426bd47c54590d62bbb9bbc4c399",
+      "abstract.tex": "77063731714b928380371a5a03edf97fcb2b2ae7a74fc459fc77b1cf475b0b01",
+      "conifold-integral-reconstruction.pdf": "8f2fcadd280211f75d7f41a3680ff19b5abbf2c616be3f5f9908f5a60c0bbe60",
+      "main.tex": "2a4ff9063a075adbc53232a81c4110a65d2b58a9fb894c31fcdac556433dfe1e",
+      "preamble.tex": "a88e735dff46a3416bcda31137a3befcaf0224aed3a8e3ce4af99a17610bbf9f",
       "references.tex": "77982877bb9aa9608cefe7dcd78d9ccffc6c761601da04b179478ef8c812521c",
-      "conifold-integral-reconstruction.pdf": "16cc5fb7d2a9253d39478c478b83c8bc527c04cd5d2d120ab2cbfedb111db11c",
-      "sections/01_introduction.tex": "ee517b38e139db0c423d3c31ef211863924e5be01844f506a23b6e4d1517b65f",
+      "sections/01_introduction.tex": "4f56f1d4c9d5f9aa17fc005c81e1d51a625100b6468263e159078f422e78389d",
       "sections/02_integral_topology.tex": "8338594bee929323e391643f52ac9387e04d25d93f2103000cad799df99419b0",
       "sections/03_algebraic_family.tex": "8143c714118c69c9765724d35179a4a81cab8655b025c51b718cf1c31f8007f6",
       "sections/04_local_periods.tex": "88fd3e5f3951a8c6ec1b6539d75483fdf0e6c77e62518512d9820ec882c1c68d",
-      "sections/05_integral_marking.tex": "e6e4ee7f4078909e73b61224704562a3cd2c33b9006e1f704e1a0bd30bd0c4b8",
+      "sections/05_integral_marking.tex": "12957e6b90373ad4af8f886ed5d19a0be12f33e7a53624ee88b6364424387e1c",
       "sections/06_transport_observations.tex": "0941e4c1914805704333478e8bdd3cdb718e6fa9507a636d675ef5cb54be3915",
       "sections/07_integral_recovery.tex": "4c33f54c38dd60b3d51aef3435256ab5fd9a6de930e32958d3c7a1d6aacec942",
-      "sections/08_analytic_family.tex": "c6621add6260e84b4e27f35280f91fcd5689bb1c28d3e61301ff808e01b769eb",
-      "sections/09_integrated_theorem.tex": "46d715cde9fb66676711da0050f45ca316a2889125f590fcef6d63532e136aaf",
+      "sections/08_analytic_family.tex": "3b5af8e77d2587edf782c80452eeb3e6aac841d87f92e0c79cf8355f323d23b8",
+      "sections/09_integrated_theorem.tex": "53e54e56dbb5b8813a38569435eaa0a6bfb27f46b7987bc57fdc67ee0ce67ab8",
+      "sections/A_analytic_inputs.tex": "b08a8a0d8aec4587d8adb2668cf1c5e94f20fdfc8a4a094ab1e35d919a64b593",
       "requirements.txt": "97af3a56c5195aa677e17d0da42623644fcbfd2eab4a07269bb4fe2ab4dfa13b",
-      "README.md": "b2a3fa294bde38f5e12f7b718e757e4beb260207dd92b20fa3b11dd79f6e4611"
+      "README.md": "2a89981dce01150019885a361c9e2fc379feba827006394a21b200ae2c179d16"
     },
     "archive": {
-      "doi": "10.5281/zenodo.24182113",
+      "doi": "10.5281/zenodo.24185494",
       "conceptdoi": "10.5281/zenodo.24175967",
-      "record_url": "https://zenodo.org/records/24182113",
-      "id": 24182113,
-      "created": "2026-11-13T00:48:17.662697+00:00"
+      "record_url": "https://zenodo.org/records/24185494",
+      "id": 24185494,
+      "created": "2026-11-13T05:29:34.431339+00:00"
     },
     "number": 31,
     "directory": "31_conifold_integral_reconstruction",
@@ -1121,6 +1122,13 @@
         "record_url": "https://zenodo.org/records/24175968",
         "created": "2026-11-12T21:13:06.790537+00:00",
         "id": 24175968
+      },
+      {
+        "doi": "10.5281/zenodo.24182113",
+        "conceptdoi": "10.5281/zenodo.24175967",
+        "record_url": "https://zenodo.org/records/24182113",
+        "id": 24182113,
+        "created": "2026-11-13T00:48:17.662697+00:00"
       }
     ]
   },

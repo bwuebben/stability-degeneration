@@ -1,27 +1,73 @@
-\section{The attachment map, weak spectra and HYM dynamics}
+\section{Applications to Hodge spectra and HYM dynamics}
 \label{sec:integrated-theorem}
 
-We now identify the maps relating integral reconstruction to the
-analytic results on the selected family. The lattice inclusion is
-recovered from middle-dimensional periods. Its kernel is already
-present in the degree-two restriction problem, but that kernel does
-not determine its image in marked middle homology. For the bundle,
-the same infinitesimal unitary action determines the weak section
-energy and the vertical directions in the harmonic quotient metric.
-The invariant flow graph supplies a further identification with the
-Hessian at an HE metric. Each assertion concerns its specified
-space; none requires identifying these spaces with one another.
+We apply the reconstruction theorem to the analytic family of
+Proposition~\ref{prop:analytic-reapplication}. The integral map
+recovered from periods is the vanishing-cycle map in the exact
+sequence underlying the Hodge comparison. We then identify the
+spectral, dynamical and quotient constructions of \cite{W_HYM}
+in common coordinates: the invariant graph gives the finite Hessian,
+and the infinitesimal unitary action gives both the weak section
+energy and the vertical directions in the harmonic quotient.
 
-Write $V_{\rm lost}=H^2(Y_{h_*};\RR)/K_H$, and use the
-$G$-orthogonal representatives from Section~\ref{sec:analytic-family}.
+Let $V=H^2(Y_{h_*};\RR)$ and let $G$ be its central harmonic
+mass. The subspace $K_H$ of classes surviving on the smoothing
+has dimension two; in the fixed divisor coordinates it is
+spanned by $k_1=g+\xi_1$ and $k_2=g+\xi_2$.
+Represent $V/K_H$ by $W_H=K_H^{\perp_G}$, using the
+$G$-orthogonal lifts of $f,g$ as coordinates.
+Write $V_{\rm lost}=V/K_H$.
 The curve restriction map descends to
 \begin{equation}\label{eq:lost-restriction}
  \mathsf r:V_{\rm lost}\longrightarrow\RR^8,\qquad
  \mathsf r(x_f,x_g)=x_fv_f+x_gv_g.
 \end{equation}
 Here $v_f,v_g$ have the orientations fixed in
-\eqref{eq:integral-attachment}. On the real tangent space of
-$\mathcal W$ put
+\eqref{eq:integral-attachment}.
+
+Put
+\begin{equation}\label{eq:hodge-model}
+ \kappa_i=\frac{2\pi}{|\log|\tau_i||},\qquad
+ w_\alpha=\sum_{i\in I_\alpha}\kappa_i,\qquad
+ E_H=\begin{pmatrix}w_f&0\\0&w_g\end{pmatrix},\qquad
+ M_H=\frac45\begin{pmatrix}9&-1\\-1&9\end{pmatrix}.
+\end{equation}
+Here $E_H$ comes from the capacity-weighted link restriction
+and $M_H$ from harmonic mass after removing the full surviving
+space. Neither is defined from the small eigenvalues.
+
+For the bundle application, set
+$\mathcal W=\operatorname{Mat}_2(\CC)^{\oplus2}$ and
+$V_H=H^3/6=160/3$.
+Fix the two algebraic Koszul extension frames. Their harmonic
+representatives have squared masses $c_+(p),c_-(p)>0$,
+uniformly bounded above and below and converging to positive
+central limits. These are elliptic data for $g_p$ and its HE
+line backgrounds; intersection numbers do not compute them.
+Let $K_B=U(2)\times U(2)$ act by
+$(k_+,k_-)(A,B)=(k_+Ak_-^{-1},k_-Bk_+^{-1})$.
+On
+\[
+ \mathfrak h=\{(S_+,S_-):S_\pm=S_\pm^*,\
+                              \tr S_++\tr S_-=0\}
+\]
+define
+\begin{equation}\label{eq:bundle-model}
+ \begin{split}
+ M_B(S,T)&=V_H\tr(ST),\\
+ E_B(p,z)(S)&=2c_+\|S_+A-AS_-\|_{\rm HS}^2
+                    +2c_-\|S_-B-BS_+\|_{\rm HS}^2,\\
+ \mu_{2,p}(z)&=V_H^{-1}
+ (c_+AA^*-c_-B^*B,\ c_-BB^*-c_+A^*A),\qquad z=(A,B).
+ \end{split}
+\end{equation}
+
+The real equivariant normalization $w=\chi_p(z)$ and
+section operator $\mathcal L_{p,w}$ are specified in
+Recollection~\ref{thm:bundle-input}. The invariant graph
+$Z(S)=S+\psi(S)$ and split projection $\Pi$ are those of
+Recollection~\ref{thm:flow-input}.
+On the real tangent space of $\mathcal W$ put
 \begin{equation}\label{eq:arrow-mass}
  G_{0,p}(q,q)=2c_+(p)\|q_A\|_{\rm HS}^2+
                               2c_-(p)\|q_B\|_{\rm HS}^2.
@@ -34,7 +80,7 @@ The fundamental vector of the compact action is
 The total scalar action is ineffective, so $\mathrm i\mathfrak h$
 contains all the effective compact action directions.
 
-\begin{theorem}[Reconstruction and analysis on the same family]
+\begin{theorem}[Applications on the selected family]
 \label{thm:integrated}
 Fix the selected coefficient $h_*$, the evaluated family
 of Theorem~\ref{thm:evaluated-periods}, and a finite $m\ge4$.
@@ -52,15 +98,15 @@ vanishing-cycle map in the attachment sequence, and
 \end{equation}
 With mass $M_H$ in \eqref{eq:hodge-model}, this energy controls
 the complete positive weak two-form spectrum and its observed
-forms as in Theorem~\ref{thm:hodge-input}, for the actual
+forms as in Recollection~\ref{thm:hodge-input}, for the actual
 Ricci-flat metric on this $X_p$.
 
 \item On the same $X_p$, the rank-four bundles in
-Theorem~\ref{thm:bundle-input} have $c_2H=32$ and the stated
+Recollection~\ref{thm:bundle-input} have $c_2H=32$ and the stated
 semistable and polystable types. For every sufficiently small
 $z\in\mu_{2,p}^{-1}(0)$ put $w=\chi_p(z)$ and fix its actual
 HE metric $h_0$. The invariant graph of
-Theorem~\ref{thm:flow-input} defines
+Recollection~\ref{thm:flow-input} defines
 \[
  I(S)=h_0e^{Z(S)},\qquad Z(S)=S+\psi(S).
 \]
@@ -89,9 +135,9 @@ In particular its kernel is exactly $\ker E_B$, and
  |(H_{\rm fin}-E_B)(S,T)|
        \le C|z|\sqrt{E_B(S)E_B(T)}.
 \]
-The complete low spectrum in Theorem~\ref{thm:bundle-input}
+The complete low spectrum in Recollection~\ref{thm:bundle-input}
 and the all-time actual-flow comparison in
-Theorem~\ref{thm:flow-input} consequently use these same
+Recollection~\ref{thm:flow-input} consequently use these same
 finite metric coordinates.
 
 \item The weak bundle energy is the norm of the action map:
@@ -109,16 +155,8 @@ Thus $\ker\rho_z$ describes the constant infinitesimal
 stabilizer, whereas $\im\rho_z$ describes the vertical
 deformation tangents. The genuine class map, confined
 distances, completion and tangent cone are those of
-Theorem~\ref{thm:moduli-input}.
+Recollection~\ref{thm:moduli-input}.
 
-\item The integral observation and recovery procedure applies
-to each of these fibres and is unchanged by unitary bundle
-gauge transformations or by HYM metric evolution with $p,w$
-fixed. Its coordinate transformations are
-\eqref{eq:target-covariance} and the signed source changes
-in Section~\ref{sec:integral-recovery}. This assertion uses
-the independently represented cycles and period enclosures;
-they are not supplied by the finite HYM trajectory.
 \end{enumerate}
 
 The comparisons are uniform over arbitrary node-capacity
@@ -163,7 +201,7 @@ The sum of its squared restrictions weighted by these
 capacities is precisely $E_H$. Minimizing the central mass
 over all representatives modulo $K_H$ gives $M_H$.
 The actual-metric comparison then follows from
-Theorem~\ref{thm:hodge-input}, including its complete
+Recollection~\ref{thm:hodge-input}, including its complete
 kernel and complementary gap.
 
 In particular, the two lost degree-two directions and the
@@ -281,7 +319,7 @@ norm at most $C|z|$; Cauchy--Schwarz proves the stated
 bilinear estimate.
 
 The phase relation is consistent with this identification.
-After the basin shrink in Theorem~\ref{thm:flow-input},
+After the basin shrink in Recollection~\ref{thm:flow-input},
 both the solution shifted by $t$ and its tracking graph
 trajectory remain in the phase domain. The exponential
 tracking phase is unique: two finite trajectories tracking
@@ -337,7 +375,7 @@ together with the K\"ahler identities, make its $(0,1)$
 part Dolbeault harmonic. Its real connection norm is twice
 the Dolbeault harmonic norm. This is exactly the convention
 used in \eqref{eq:arrow-mass} and
-Theorem~\ref{thm:moduli-input}.
+Recollection~\ref{thm:moduli-input}.
 The actual class and stabilizer assertions in that theorem
 then give the genuine quotient interpretation.
 This proves \eqref{eq:integrated-quotient} through every
@@ -349,28 +387,17 @@ metric acts on deformation tangents modulo $\im\rho_z$.
 Their relationship is the common action map and its
 stabilizer, rather than equality of the two metrics.
 
-\subsection{Compatibility of the integral observations}
+\subsection{Independence of the integral observations from the bundle metric}
 
-At a fixed $p$, the equations of $X_p$, the residue form
-$\Psi_p$, the marked cycles and their transports are
-unaffected by changing the metric or gauge of a bundle
-on $X_p$. The exact observations
-$\Delta_{ai}=p_i(Jd_i)_a$ are therefore unchanged.
-The strict separation lemma recovers their unique
-integer values from any sufficiently refined valid
-enclosures. Running the procedure before or after
-bundle metric evolution or gauge change gives the
-same marked $D$.
-
-A change of middle-homology marking acts differently:
-if $\gamma'=\gamma S$, then
-$J'=S^TJS$, $\Delta_i'=S^T\Delta_i$ and
-$d_i'=S^{-1}d_i$. Error bounds transform by the actual
-norm of $S^T$, or are recomputed from the new chains.
-Signed node changes transform the source relations
-as well as the columns. These are the covariance
-statements already proved in
-Section~\ref{sec:integral-recovery}.
+For fixed $p,w$, unitary bundle gauge transformations and
+HYM metric evolution leave the equations of $X_p$, the
+residue form, the marked cycles and their transports unchanged.
+The observations $\Delta_{ai}=p_i(Jd_i)_a$ and the recovered
+map $D$ are therefore independent of those bundle operations.
+They use the represented cycles and period enclosures of
+Theorem~\ref{thm:accessible-observations}. Changes of homology
+marking and signed node labels instead obey the covariance
+and error transformations of Section~\ref{sec:integral-recovery}.
 
 The same node labels enter $\mathsf r$, the periods
 $p_i$, and the smoothing functions $\tau_i=p_i/U_i$.
@@ -381,8 +408,6 @@ relative spectral error $e(p)$. Proposition
 \ref{prop:analytic-reapplication} ensures that both
 constructions concern these same target fibres even
 when observation paths leave $B_{\rm an}$.
-This proves the remaining assertion of
-Theorem~\ref{thm:integrated}.
 
 \subsection{Independent base and bundle scales}
 
@@ -440,10 +465,10 @@ This follows by separating diagonal Hermitian entries
 and the real and imaginary parts of each off-diagonal
 entry in \eqref{eq:bundle-model}; the weighted arrow
 masses cancel. Substitution gives the asserted
-hierarchy, and Theorem~\ref{thm:bundle-input} gives
+hierarchy, and Recollection~\ref{thm:bundle-input} gives
 the relative $O(s)$ actual comparison.
-The domains of Theorems~\ref{thm:flow-input} and
-\ref{thm:integrated} impose no relation between
+The domains of Recollection~\ref{thm:flow-input} and
+Theorem~\ref{thm:integrated} impose no relation between
 $h$ and $s$, proving the remaining assertions.
 \end{proof}
 
