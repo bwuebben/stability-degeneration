@@ -1,0 +1,13 @@
+BPST curvature mass: 8*pi**2
+BPST second moment: 16*pi**2*scale**2
+N= 2 volume= 128*pi**8*x**2 Chern-Weil and diameter PASS
+N= 3 volume= 2048*pi**12*x**3/3 Chern-Weil and diameter PASS
+N= 4 volume= 8192*pi**16*x**4/3 Chern-Weil and diameter PASS
+N= 7 volume= 16777216*pi**28*x**7/315 Chern-Weil and diameter PASS
+rank 2 one-instanton density 1/2
+rank 3 one-instanton density 3/8
+rank 4 one-instanton density 5/16
+rank 5 one-instanton density 35/128
+double-plane v=(2,H,0), N=2, c2=3, kappa=5/2 PASS
+double-plane v=(2,H,-1), N=4, c2=4, kappa=7/2 PASS
+ALL CHECKS PASS

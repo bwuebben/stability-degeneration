@@ -1,0 +1,169 @@
+\section{Examples and extensions}\label{sec:examples}
+
+\subsection{Two moduli spaces on a double plane}
+Let $\phi:X\to\PP^2$ be a double cover branched over a smooth sextic, with
+$\operatorname{Pic}(X)=\ZZ H$ and $H=\phi^*\OO_{\PP^2}(1)$.
+Then $H^2=2$ and $\Vol(X)=1$ in our normalization. Put
+\[
+ F_0=\phi^*T_{\PP^2}(-1).
+\]
+The Euler sequence gives $\rk F_0=2$, $c_1(F_0)=H$, $c_2(F_0)=2$ and
+$v(F_0)=(2,H,1)$, of square $-2$.
+
+We verify the stability needed in the examples. A destabilizing saturated
+rank-one subsheaf would extend to a nonzero map $\OO_X(aH)\to F_0$
+with $a\ge1$. Since $\phi_*\OO_X=\OO\oplus\OO(-3)$,
+\[
+ H^0(X,F_0(-aH))=
+ H^0(\PP^2,T_{\PP^2}(-1-a))\oplus
+ H^0(\PP^2,T_{\PP^2}(-4-a))=0
+\]
+by the Euler sequence. Thus $F_0$ is stable.
+It is spherical: simplicity and Serre duality give
+$\operatorname{ext}^1(F_0,F_0)=v(F_0)^2+2=0$.
+It is also the unique stable sheaf of its Mukai vector. A second,
+nonisomorphic stable sheaf of that vector would have no homomorphisms in
+either direction, whereas Riemann--Roch would give Euler characteristic
+two, a contradiction.
+
+\begin{example}\label{ex:four}
+Take $v=(2,H,0)$. Then $N=2$, $c_2=3$ and $\kappa=5/2$.
+Every semistable sheaf is slope stable, since equality of the rank-one
+slope with $H^2/2$ would require an integer multiple of $H$ with
+intersection $H^2/2$.
+If a sheaf has defect length $\ell$, its stable double dual has square
+$2-4\ell\ge-2$, so $\ell\le1$.
+The non-locally-free locus is the projective bundle of one-dimensional
+quotients of $F_0$ over $X$, of dimension three. Kernels of these quotients
+exist, and their moduli space is smooth of dimension four. Its bundle
+locus is therefore nonempty. The Uhlenbeck morphism contracts each
+$\PP^1$ fibre and adds precisely one copy of $X$ to $\M$.
+
+The completion has volume $128\pi^8$. Its boundary is totally geodesic
+with metric $4\pi^2g_X$, and at every boundary point the tangent cone is
+$\RR^4\times(\RR^4/\{\pm1\})$, of density $1/2$.
+This Gieseker moduli space is generally not fine: the algebraic Mukai
+pairings have common divisor two. The conclusions above do not require
+a universal sheaf on the coarse space.
+\end{example}
+
+\begin{example}\label{ex:eight}
+Take $v=(2,H,-1)$. Then $N=4$, $c_2=4$ and $\kappa=7/2$.
+Stable kernels of quotients $F_0\to T$ of length two give nonempty
+Gieseker moduli. The stable residual bundles have either vector $(2,H,0)$ and one bubble,
+or vector $(2,H,1)$ and two bubbles. The latter residual bundle is $F_0$.
+The length-one non-locally-free locus in the Gieseker space has dimension
+$4+2+1=7$, including its $\PP^1$ Quot fibre. The length-two locus has
+dimension six. Both are smaller than eight, so the bundle locus is
+nonempty. The Uhlenbeck boundary consists of
+\[
+ \M_H(2,H,0)\times X
+ \quad\text{and}\quad \{F_0\}\times\Sym^2X.
+\]
+The completion has volume $(16\pi^4)^4/24$.
+The open one-bubble stratum has volume $(16\pi^4)^3/2$.
+At $(F_0,x+y)$ with $x\ne y$, the tangent cone is
+$\RR^8\times(\RR^4/\{\pm1\})^2$ and its density is $1/4$.
+At $(F_0,2x)$, its affine cone with Reeb action is
+$\frM_0(2,2)$, of complex dimension eight and density $11/108$.
+There is no further $\CC^2$ factor: the centre-of-mass coordinates already
+belong to $\frM_0(2,2)$.
+
+Here $\chi(E)=r+s=1$, so the moduli space is fine. Its nontrivial
+Uhlenbeck contraction and Corollary~\ref{cor:nonextension} give the fine
+example relevant to the extension assertion discussed in
+Section~\ref{sec:canonical}.
+\end{example}
+
+\subsection{A volume bound without a rational K\"ahler direction}
+The potential argument used an integral polarization ray. Its exact volume
+formula nevertheless gives an upper bound for all hyperk\"ahler metrics
+on the differentiable K3 surface.
+
+\begin{proposition}\label{prop:all-metrics}
+Let $r\ge2$, $\gcd(r,k)=1$, and $N=rk-r^2+1\ge2$.
+For any hyperk\"ahler metric $g$ on a K3 surface, the moduli space of
+irreducible $SU(r)$ anti-self-dual connections of charge $k$ satisfies
+\begin{equation}\label{eq:all-metrics}
+ \Vol(\M_k(g))\le\frac{(16\pi^4\Vol(X,g))^N}{N!}.
+\end{equation}
+The volume of the empty moduli space is zero. If the positive three-plane
+of $g$ contains a rational K\"ahler direction whose induced complex
+surface has Picard number one, equality holds whenever the moduli space
+is nonempty.
+\end{proposition}
+\begin{proof}
+For a rational K\"ahler direction and Picard number one, the Mukai vector
+$(r,0,r-k)$ is primitive. The polarization is Gieseker generic: a
+same-reduced-Hilbert-polynomial factor would have rank divisible by $r$
+because $\gcd(r,k)=1$. The Kobayashi--Hitchin correspondence identifies
+the irreducible ASD locus with the slope-stable locally free locus.
+When nonempty, Theorem~\ref{thm:canonical} and rescaling give equality.
+
+Such positive three-planes are dense among positive three-planes in the
+K3 period domain: choose a rational positive vector close to one vector
+of the plane and choose the orthogonal positive two-plane generically to
+avoid every other integral hyperplane. The K3 period description gives
+nearby hyperk\"ahler metrics of the same limiting volume.
+For any irreducible ASD connection, the hyperk\"ahler Weitzenb\"ock formula
+identifies its obstruction space with the tensor product of its parallel
+trace-free endomorphisms and the three-dimensional space of parallel
+self-dual forms. Irreducibility makes this space zero.
+The parameter-dependent implicit-function theorem therefore embeds each
+compact subset of $\M_k(g)$ into the moduli spaces for nearby metrics,
+with smooth convergence of their $L^2$ tensors. Its volume is bounded by
+the total volumes of those nearby spaces, each at most the right side of
+\eqref{eq:all-metrics}. Exhaustion proves the inequality.
+\end{proof}
+
+This is a lower-semicontinuity argument for total moduli volume, not a
+completion theorem for an irrational positive three-plane. It does not
+assert that nonempty equality cases are dense. For instance, if
+$r\le k<2r$, then $\chi(E)=2r-k>0$; a slope-stable bundle of slope zero
+has neither sections nor dual sections, contradicting Riemann--Roch.
+The corresponding irreducible ASD moduli spaces are empty.
+
+\subsection{A conditional expansion on a resolution}
+The following elementary calculation records precisely what is needed
+for an exceptional-area expansion. Suppose $r=2$, $D$ is an exceptional
+divisor, and
+\[
+ q(\Lambda,D)=0,\qquad q(D)=-2(N-1),\qquad D\cdot R=-2
+\]
+for a contracted rational curve $R$.
+Assume also that $A_t=\Lambda-t[D]$ is K\"ahler for small $t>0$.
+The area of $R$ is $a=2t$. Put $Q=q(\Lambda)/2=16\pi^4V$.
+Fujiki's formula gives
+\begin{equation}\label{eq:resolution-volume}
+ \Vol(\Lambda)-\Vol(A_t)
+ =\frac{Q^{N-1}}{4(N-2)!}\,a^2+O(a^4).
+\end{equation}
+Indeed $q(A_t)/2=Q-(N-1)t^2$ and
+$\Vol(A_t)=(Q-(N-1)t^2)^N/N!$.
+When \eqref{eq:s1-volume} applies, its coefficient is
+$\Vol(S_1)/4$. The displayed Beauville--Bogomolov identities and the
+K\"ahler-ray hypothesis are assumptions here. The fibre intersection
+$D\cdot R=-2$ alone does not prove either the square of $D$ or the
+K\"ahler property of $A_t$.
+
+\subsection{Further questions}
+The continuous potential of Theorem~\ref{thm:continuous-potential} applies
+to polarized surfaces beyond K3. To obtain a global class and a Quillen
+metric there, one must separately control normalization, boundary
+codimension, determinant-line descent and the flat character.
+For a stratum inclusion, smoothness of a sheaf moduli space alone does
+not show that every elementary modification is a limit of bundles;
+this density condition must be established in the chosen component.
+
+For K3 surfaces, several further metric questions remain.
+At collisions of bubble points, does the tangent metric equal the flat
+ADHM quotient metric without the extra uniqueness assertion
+\textup{(Q)}? Do deeper strata with stable or reducible residual bundles
+have a totally geodesic metric structure? What rates accompany the
+Gromov--Hausdorff convergence near nonorbifold singularities?
+The explicit potential is continuous, but the present argument gives
+neither its optimal modulus of continuity nor a curvature-gluing expansion.
+Extending the exact volume and completion statements to all irrational
+K\"ahler directions, and treating nonprimitive vectors without a smooth
+symplectic resolution, requires further arguments rather than a change
+of notation in the theorems above.

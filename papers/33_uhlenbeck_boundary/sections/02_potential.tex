@@ -1,0 +1,185 @@
+\section{A local potential from a curve and the curvature density}\label{sec:potential}
+
+Let $X$ be a smooth projective surface, $H$ an ample line bundle and
+$\omega=c_1(H,h_H)$ a K\"ahler form. We use the complex orientation and the
+conventions
+\begin{equation}\label{eq:conventions}
+ \ddc=\frac{i}{\pi}\partial\bar\partial,\qquad
+ c_1(H,h_H)=\frac{i}{2\pi}F_{h_H},\qquad
+ \Vol(X)=\frac12\int_X\omega^2.
+\end{equation}
+For a unitary connection $A$ on a rank-$r$ bundle $E$, write
+$F_A^0=F_A-r^{-1}\tr(F_A)\,\mathrm{id}$.
+The determinant connection is fixed. Tangent vectors to the smooth moduli
+space of irreducible Hermitian--Yang--Mills connections are represented by
+trace-free skew-Hermitian one-forms in Coulomb gauge, and
+\begin{equation}\label{eq:l2metric}
+ \gL(a,b)=-\int_X\tr(a\wedge *b),\qquad
+ \Om(a,b)=\gL(Ja,b).
+\end{equation}
+Here $(Ja)^{0,1}=ia^{0,1}$. On an obstructed moduli space all differential
+identities below are statements on its smooth stable locus, or after
+pullback to a smooth holomorphic family of stable bundles.
+The trace is the trace in the defining representation. For a Hermitian--Yang--Mills connection,
+\begin{equation}\label{eq:charge}
+ \int_X|F_A^0|^2\,dV_X=8\pi^2\kappa,\qquad
+ \kappa=c_2(E)-\frac{r-1}{2r}c_1(E)^2.
+\end{equation}
+The trace-free curvature is primitive of type $(1,1)$ and hence
+anti-self-dual. One point bubble of charge one has curvature mass $8\pi^2$.
+These conventions fix the constants both in the potential and in the
+metric induced on a boundary stratum.
+
+\subsection{The fibre integral}
+Let $p:S\times X\to S$ and $q:S\times X\to X$ be the projections, where
+$S$ is a complex manifold. Suppose that $\mathbb E$ is a holomorphic family
+of stable bundles with a smooth Hermitian metric that is Hermitian--Einstein
+on each fibre. Denote its classifying map by $f:S\to\M$ and set
+\[
+ \Theta=\ch_2(\End\mathbb E,h).
+\]
+All fibre integrals below use the complex orientation.
+
+\begin{lemma}\label{lem:fibre-integral}
+The pullback of the $L^2$ K\"ahler form is
+\begin{equation}\label{eq:fibre-integral}
+ f^*\Om=-\frac{2\pi^2}{r}\,p_*(\Theta\wedge q^*\omega).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $F_0$ be the trace-free curvature of the Chern connection on the family.
+The identity
+$\tr_{\End}(\operatorname{ad}a\operatorname{ad}b)=2r\tr(a_0b_0)$ gives
+\[
+ \Theta=-\frac{r}{4\pi^2}\tr(F_0\wedge F_0).
+\]
+For $v\in T_sS$ put $a_v=(\iota_vF_0)|_{X_s}$.
+The mixed curvature of a fibrewise Hermitian--Einstein family represents
+the harmonic Kodaira--Spencer class; this follows by differentiating the
+Hermitian--Einstein equation and using the Bianchi and K\"ahler identities
+\cite[Proposition~1]{ST92}. Thus $a_v$ is the Coulomb representative of
+$df(v)$ and $a_{Iv}=Ja_v$.
+For real vectors $v,w$, contraction gives
+\[
+ \iota_w\iota_v\tr(F_0\wedge F_0)
+ =2\tr\big(F_0(v,w)F_0\big)
+  -2\tr\big(\iota_vF_0\wedge\iota_wF_0\big).
+\]
+The first term vanishes after restriction to $X_s$ and multiplication by
+$\omega$, because $F_0|_{X_s}\wedge\omega=0$. Consequently
+\[
+ p_*(\Theta\wedge q^*\omega)(v,w)
+ =\frac{r}{2\pi^2}\int_X\tr(a_v\wedge a_w)\wedge\omega.
+\]
+Pointwise, $\tr(a\wedge Ja)\wedge\omega=-|a|^2dV_X$.
+Polarization identifies the integral on the right with $-\Om(df(v),df(w))$,
+which proves \eqref{eq:fibre-integral}.
+\end{proof}
+
+The fibre-integral description is classical; compare
+\cite[Proposition~4.3]{BS16}. The calculation above records its coefficient
+for the real metric \eqref{eq:l2metric}.
+
+\subsection{Transgression to an auxiliary curve}
+Choose a smooth curve $C\in|H^k|$ and a section $s_C$ defining it. Put
+\begin{equation}\label{eq:green}
+ g_C=\frac1k\log|s_C|_{h_H^k}.
+\end{equation}
+The logarithm is of the norm, not its square. Poincar\'e--Lelong gives
+\begin{equation}\label{eq:pl}
+ \ddc g_C=\frac1k[C]-\omega.
+\end{equation}
+In particular, $g_C\in L^1(X)$ and $\ddc(-g_C)=\omega$ on $X\setminus C$.
+
+\begin{lemma}\label{lem:transgression}
+If $\Theta$ is a smooth closed $(2,2)$-form on $S\times X$, then
+\begin{equation}\label{eq:transgression}
+ p_*(\Theta\wedge q^*\ddc g_C)
+ =\ddc\left(\int_Xg_C\Theta|_{X_s}\right).
+\end{equation}
+The integral on the right is a smooth function of $s$.
+\end{lemma}
+\begin{proof}
+Since $\Theta$ has pure type and is closed, $d^c\Theta=0$.
+Multiplication of a distribution by a smooth form therefore gives
+$\ddc(q^*g_C\Theta)=q^*\ddc g_C\wedge\Theta$.
+Fibre integration commutes with $\partial$ and $\bar\partial$.
+The asserted smoothness follows by differentiating the smooth coefficients
+of $\Theta$ under the integral; on compact subsets of $S$, their derivatives
+are bounded and the fixed function $g_C$ is integrable.
+\end{proof}
+
+On a Hermitian--Yang--Mills fibre,
+\[
+ \Theta|_{X_s}=-\frac{r}{4\pi^2}|F_{A_s}^0|^2dV_X.
+\]
+Substitution of \eqref{eq:pl} in \eqref{eq:fibre-integral} consequently yields
+\begin{equation}\label{eq:curve-transgression}
+ f^*\Om=-\frac{2\pi^2}{rk}(p_C)_*(\Theta|_{S\times C})
+       +\ddc\left(-\frac12\int_Xg_C|F_{A_s}^0|^2dV_X\right).
+\end{equation}
+This is the step that replaces a potential on the surface by a determinant
+on a curve and a scalar integral on the surface.
+
+\subsection{The determinant term}
+Let $G$ be a Hermitian holomorphic bundle of rank $\rho$ on $C$, and suppose
+\begin{equation}\label{eq:acyclic}
+ H^j(C,\End E_s|_C\otimes G)=0\quad(j=0,1)
+\end{equation}
+for $s\in S$. Fix a metric on $C$. Let $\Delta_s=\bar\partial^*\bar\partial$
+on sections of $\End E_s|_C\otimes G$ with the induced metric.
+It is positive and invertible. Its zeta determinant is
+$\det_\zeta\Delta_s=\exp(-\zeta'_{\Delta_s}(0))$.
+
+\begin{lemma}\label{lem:quillen-curve}
+Under \eqref{eq:acyclic},
+\begin{equation}\label{eq:quillen-curve}
+ (p_C)_*(\Theta|_{S\times C})
+   =\frac1{2\rho}\ddc\log\det_\zeta\Delta_s.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Apply the curvature formula of Bismut--Gillet--Soul\'e to
+$\xi=\End\mathbb E|_{S\times C}\otimes q^*G$
+\cite[Theorem~1.6, Remark~1.10 and equation~(1.154)]{BGS88}.
+In the acyclic case the squared Quillen norm of the canonical determinant
+section is $\det_\zeta\Delta_s$, with
+\[
+ \frac{i}{2\pi}\partial\bar\partial\log\det_\zeta\Delta_s
+ =\left[(p_C)_*\big(\ch(\xi)\operatorname{Td}(C)\big)\right]^{1,1}.
+\]
+The Chern form $\ch_1(\End\mathbb E,h)$ vanishes identically.
+All forms involving $G$ and $\operatorname{Td}(C)$ are pulled back from
+$C$. Thus the only term contributing a $(1,1)$-form on $S$ is
+$\rho(p_C)_*\Theta$. The convention \eqref{eq:conventions} gives the factor
+$2$ in \eqref{eq:quillen-curve}.
+\end{proof}
+
+\begin{proposition}\label{prop:potential}
+On the locus \eqref{eq:acyclic}, the function
+\begin{equation}\label{eq:potential}
+ u(A_s)=-\frac{\pi^2}{rk\rho}\log\det_\zeta\Delta_s
+        -\frac12\int_Xg_C|F_{A_s}^0|^2dV_X
+\end{equation}
+is smooth, gauge invariant, and satisfies $\ddc u=f^*\Om$.
+\end{proposition}
+\begin{proof}
+Combine \eqref{eq:curve-transgression} and \eqref{eq:quillen-curve}.
+Both the determinant and the curvature integral are invariant under unitary
+gauge transformations. Tensoring a universal family by a line bundle from
+$S$ leaves its endomorphism bundle unchanged. Thus the same function is
+defined on the corresponding locus of gauge classes.
+\end{proof}
+
+The metric on $E_s|_C$ varies with $s$. In particular, positivity of a
+Quillen line for a fixed curve metric does not separately imply
+plurisubharmonicity of the first term of \eqref{eq:potential}.
+Positivity is asserted for their sum, whose complex Hessian is \eqref{eq:l2metric}.
+
+For a K\"ahler form with $[\omega]=t\,c_1(H)$, $t>0$, choose
+$c_1(H,h_H)=\omega/t$ and replace \eqref{eq:green} by
+$g_C=(t/k)\log|s_C|$.
+The determinant coefficient in \eqref{eq:potential} becomes
+$-t\pi^2/(rk\rho)$; the curvature coefficient remains $-1/2$.
+Thus the formulas apply on any positive ray of a polarization with the
+expected scaling. We use $t=1$ in the statements below.

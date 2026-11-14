@@ -1,0 +1,215 @@
+\section{Tangent cones and instanton densities}\label{sec:cones}
+
+The local model \eqref{eq:adhm-germ} is an analytic statement. Identifying
+its natural grading with the grading of a metric tangent cone requires
+an additional argument. We give that argument before discussing metrics
+on the resulting cone.
+
+\subsection{The affine cone and its Reeb action}
+For an affine cone, the Reeb action is the circle action associated to
+its positive grading. We normalize it so that a holomorphic volume form
+in complex dimension $d$ has weight $d$.
+On \eqref{eq:adhm-germ}, the standard action multiplies all linear
+coordinates, including $B_1,B_2,i,j$, by the same scalar. The holomorphic
+symplectic form has weight two, so this action has the stated normalization.
+
+\begin{theorem}\label{thm:cones}
+Every point of $\Mn$ has a unique metric tangent cone. Its affine complex
+variety is the conical symplectic germ associated to that point.
+If $p=(F,\sum_jn_jx_j)$ has stable residual bundle $F$, then this affine
+variety, with its normalized Reeb action, is
+\begin{equation}\label{eq:cone-algebraic}
+ \mathcal C_p=\CC^{\operatorname{ext}^1(F,F)}
+                    \times\prod_j\frM_0(r,n_j)
+\end{equation}
+with the standard action just described.
+\end{theorem}
+\begin{proof}
+The projective symplectic resolution in
+Proposition~\ref{prop:algebraic-model} satisfies the hypotheses of
+\cite[Theorems~1.1 and 6.1]{NO26}. That result identifies the canonical
+conical symplectic germ with the affine variety of the metric tangent
+cone. Its polarized smoothing permits the uniqueness theorem of
+\cite[Theorem~1.3]{DS17} to be applied. Neither assertion requires the
+singularity to be isolated.
+
+It remains to identify the Reeb action at a stable-residual point.
+Endow \eqref{eq:cone-algebraic} with the zero-level flat hyperk\"ahler
+quotient metric. Its squared radius is a continuous proper homogeneous
+function on the affine quotient, by the Kempf--Ness identification.
+Relative to an algebraic homogeneous radius its logarithmic ratio is
+bounded, since a link is compact. It is a K\"ahler potential on the free
+locus and extends plurisubharmonically across the singular set.
+
+Here the free locus is the whole regular locus. One way to check the
+necessary simple-root condition is to use the extended ADHM quiver of
+dimension vector $(1,n)$. Simple representations exist for $r\ge2$:
+take $B_1$ diagonal with distinct eigenvalues, $B_2=0$, let the first two
+columns of $i$ be a vector $a$ with all entries nonzero, and let the first
+two rows of $j$ be $b,-b$, where all entries of $b$ are nonzero.
+Then $ij=0$. No proper coordinate subspace contains $\operatorname{im}i$,
+and no nonzero coordinate subspace lies in $\ker j$.
+Thus the representation is simple. The simple-root criterion
+\cite[Theorem~1.2]{CB01} and the smooth-locus theorem
+\cite[Theorem~1.15]{BSc23} identify regular points with simple
+representations, equivalently free points modulo the diagonal scalar.
+The assertion for the product follows factor by factor.
+
+On this regular locus the quotient metric is hyperk\"ahler and satisfies
+the Ricci-flat Monge--Amp\`ere equation. Its potential and volume weight
+therefore satisfy the definition of a weak Ricci-flat cone metric in
+\cite[Definitions~A.6--A.8]{LWX21}. Corollary~A.4 of that paper makes the
+standard cone K-polystable. By \cite[Theorem~3.5]{LX18}, its Reeb valuation
+minimizes normalized volume. The minimizer is unique up to scaling \cite[Theorem~2.4]{NO26};
+normalizing the volume-form weight removes that scalar. The stable
+degeneration theorem, in the form recalled in \cite[Section~2]{NO26},
+identifies the first associated graded cone with
+\eqref{eq:cone-algebraic}. It is already K-polystable, so the unique
+K-polystable degeneration of \cite[Theorem~1.2]{LWX21} makes no further
+change. This is the grading of the metric tangent cone.
+\end{proof}
+
+\begin{remark}\label{rem:cone-uniqueness}
+Theorem~\ref{thm:cones} identifies the affine cone and its Reeb action.
+To identify its metric with the flat ADHM quotient metric in full
+generality, we would also need the following uniqueness assertion:
+\begin{quote}
+\textup{(Q)} A Ricci-flat K\"ahler cone metric with locally bounded
+potential on a K-polystable cone is unique, for a fixed Reeb action,
+up to an automorphism commuting with that action.
+\end{quote}
+Under \textup{(Q)}, the two cone metrics in question are isometric.
+We retain this implication as conditional, in view of the general
+uniqueness issue described in \cite[Remark~6.14]{NO26}; compare
+\cite[Proposition~4.8]{DS17} and \cite[Theorem~A.12]{LWX21}.
+No such additional assertion is needed in
+Theorem~\ref{thm:orbifold}, where the tangent metric is explicitly flat
+upstairs. It is also unnecessary for the volume densities below.
+\end{remark}
+
+\subsection{Densities from the Hilbert character}
+For a graded affine variety $C$, write
+$H_C(q)=\sum_{m\ge0}\dim\CC[C]_m q^m$ for its Hilbert character.
+The normalized metric density at $p$ is
+\[
+ \vartheta(p)=\lim_{\rho\downarrow0}
+ \frac{\Vol(B_\rho(p))}{\omega_{4N}\rho^{4N}}.
+\]
+The limit exists by volume comparison.
+
+\begin{theorem}\label{thm:density}
+At an ideal point $p=(F,\sum_jn_jx_j)$ with stable residual bundle $F$,
+\begin{equation}\label{eq:density}
+ \vartheta(p)=\prod_j\theta(r,n_j),\qquad
+ \theta(r,n)=\lim_{t\downarrow0}t^{2rn}
+                    H_{\frM_0(r,n)}(e^{-t}).
+\end{equation}
+The factor $\theta(r,n)$ is the $n$-instanton coefficient of the
+$U(r)$ Nekrasov partition function at
+$\varepsilon_1=\varepsilon_2=1$ and $a_1=\cdots=a_r=0$, with
+specialization performed after summing and cancelling the rational
+localization expression. In particular,
+\begin{equation}\label{eq:one-instanton}
+ \theta(r,1)=4^{-(r-1)}\binom{2r-2}{r-1}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Noncollapsed volume convergence identifies $\vartheta(p)$ with the vertex
+density of the tangent cone. The leading Hilbert-character coefficient of
+a normalized Ricci-flat cone is its volume ratio
+\cite[Appendix~C]{HeinSun17}. By Theorem~\ref{thm:cones}, the character is
+that of \eqref{eq:cone-algebraic}. Characters multiply under products;
+the Euclidean factor contributes one. This proves \eqref{eq:density}
+without requiring a product decomposition of the tangent metric.
+
+The Gieseker resolution
+$\frM(r,n)\to\frM_0(r,n)$ has a rational-singularities target. Its
+equivariant Euler characteristic of the structure sheaf is therefore the
+character of the affine coordinate ring. The leading term of equivariant
+Riemann--Roch is the equivariant integral of one, computed in
+\cite[Proposition~4.1 and (4.6)]{NY05}. This is the instanton coefficient
+in the statement. Standard linear scaling of the ADHM data agrees on the
+quotient with the torus specialization
+$\varepsilon_1=\varepsilon_2=1$, $a=0$: the two lifts differ by a central
+$\operatorname{GL}(n)$ action. Individual fixed-point terms may have poles
+there; their sum, interpreted as this positively graded equivariant
+multiplicity, has the asserted finite value.
+
+For $n=1$ the quotient is $\CC^2$ times the minimal nilpotent orbit closure
+in $\mathfrak{sl}_r$. The coordinate ring of the minimal orbit closure in degree $2k$ has dimension
+\[
+ \dim V_{k\vartheta}=\frac{2k+r-1}{r-1}
+                         \binom{k+r-2}{r-2}^2,
+\]
+where $\vartheta$ here denotes the highest root.
+The leading coefficient of this polynomial in $k$ is
+$2/((r-1)((r-2)!)^2)$ and its degree is $2r-3$.
+Since $\sum_{k\ge0}k^m e^{-2kt}\sim m!/(2t)^{m+1}$, the leading
+character coefficient is
+\[
+ \frac{2(2r-3)!}{(r-1)((r-2)!)^2\,2^{2r-2}}
+ =4^{-(r-1)}\binom{2r-2}{r-1},
+\]
+as required.
+\end{proof}
+
+For reproducibility, the rational expression used for the higher values
+is as follows. Let $\mathbf Y=(Y_1,\ldots,Y_r)$ range over tuples of Young
+diagrams with total size $n$. For a box $s=(i,j)$, put
+$A_Y(s)=Y_i-j$ and $L_Y(s)=Y'_j-i$, allowing negative values when $s$ is
+outside the diagram. Define
+\begin{align*}
+ E_{\alpha\beta}(\mathbf Y)
+ ={}&\prod_{s\in Y_\alpha}
+ [a_\beta-a_\alpha-\varepsilon_1L_{Y_\beta}(s)
+                     +\varepsilon_2(A_{Y_\alpha}(s)+1)]\\
+ &\quad\cdot\prod_{s\in Y_\beta}
+ [a_\beta-a_\alpha+\varepsilon_1(L_{Y_\alpha}(s)+1)
+                     -\varepsilon_2A_{Y_\beta}(s)].
+\end{align*}
+Then
+\begin{equation}\label{eq:localization}
+ Z_n(\varepsilon_1,\varepsilon_2;a)
+       =\sum_{|\mathbf Y|=n}\prod_{\alpha,\beta=1}^r
+                                  E_{\alpha\beta}(\mathbf Y)^{-1}
+\end{equation}
+is the tangent-weight formula of \cite[Theorem~2.11]{NY05}.
+For example, with $r=2$ and $a_1=a$, $a_2=-a$, writing
+$e=\varepsilon_1+\varepsilon_2$ gives
+\[
+ Z_2=
+ \frac{8e^2+\varepsilon_1\varepsilon_2-8a^2}
+ {\varepsilon_1^2\varepsilon_2^2(e^2-4a^2)
+ ((2\varepsilon_1+\varepsilon_2)^2-4a^2)
+ ((\varepsilon_1+2\varepsilon_2)^2-4a^2)}.
+\]
+Substitution gives $\theta(2,2)=33/324=11/108$.
+The same finite sums give Table~\ref{tab:densities}.
+The accompanying exact-arithmetic calculation evaluates a generic
+one-parameter approach before taking its limit, so it never assigns a
+value to an individual singular summand.
+
+\begin{table}[ht]
+\centering
+\caption{Normalized densities of the affine instanton cones.}\label{tab:densities}
+\begin{tabular}{c@{\qquad}ccccc}
+\toprule
+$(r,n)$ & $(2,1)$ & $(2,2)$ & $(2,3)$ & $(3,1)$ & $(3,2)$\\
+\midrule
+$\theta(r,n)$ & $1/2$ & $11/108$ & $61/5184$ & $3/8$ & $61/1296$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The rank-one value $\theta(1,n)=1/n!$, obtained from
+$\Sym^n\CC^2$, is a normalization check outside the rank assumption of the
+main theorem. The inequalities
+\[
+ \frac{11}{108}<\frac14,\qquad
+ \frac{61}{5184}<\frac{11}{216},\qquad
+ \frac{61}{1296}<\left(\frac38\right)^2
+\]
+are consistent with lower semicontinuity of metric density when points
+collide. Neither the product formula nor this table describes reducible
+residual bundles: their full Ext quivers replace
+\eqref{eq:cone-algebraic}.

@@ -1,0 +1,141 @@
+\section{Introduction}
+
+The $L^2$ metric on a moduli space of instantons records the size of
+infinitesimal changes of a connection. Its behaviour under bubbling is
+less direct: the curvature energy retains an atom at each bubble point,
+whereas the tangent vectors are defined on smooth connections.
+On a projective K3 surface this metric is hyperk\"ahler, but the sheaf
+compactification and the Uhlenbeck compactification contract different
+geometric data. The question is which compact space carries its limiting
+metric, and how that metric restricts to the boundary.
+
+We construct a local K\"ahler potential that is continuous at ideal
+connections. It combines a zeta determinant on a curve avoiding the bubble
+points with a logarithmically weighted curvature integral. Energy
+quantization supplies an explicit correction for the defect cycle.
+On K3 surfaces, this potential identifies the $L^2$ metric with the
+canonical singular Ricci-flat metric in its determinant class. Completion,
+volume and orbifold regularity then follow from the corresponding
+algebraic and analytic theorems.
+
+\subsection{The potential at an ideal connection}
+Let $(X,\omega)$ be a smooth projective K\"ahler surface with
+$[\omega]=c_1(H)$. We fix rank $r\ge2$, determinant and Chern classes.
+For an ideal Hermitian--Yang--Mills connection $(F,Z)$, choose a smooth
+curve $C\in|H^k|$ disjoint from $\Supp Z$, and a vector bundle $G$ on $C$
+for which $\End F|_C\otimes G$ is acyclic. Such choices always exist.
+If $g_C=k^{-1}\log|s_C|$ and $\rho=\rk G$, our potential is
+\begin{equation}\label{eq:intro-potential}
+ -\frac{\pi^2}{rk\rho}\log\det_\zeta\Delta_{\End F|_C\otimes G}
+ -\frac12\int_X g_C|F_{A_F}^0|^2dV_X
+ -4\pi^2\sum_x\operatorname{mult}_x(Z)g_C(x).
+\end{equation}
+Here $\ddc=(i/\pi)\partial\bar\partial$, the trace defining the metric
+is the fundamental trace, and $\ddc g_C=k^{-1}[C]-\omega$.
+The precise construction and coefficient calculation occupy
+Sections~\ref{sec:potential}--\ref{sec:continuity}.
+
+\begin{theorem}[Continuous potential]\label{thm:intro-potential}
+The choices $C,G$ can be fixed in a neighbourhood of every ideal
+connection. Formula~\eqref{eq:intro-potential} is continuous on that
+neighbourhood in the Uhlenbeck topology, and its complex Hessian on the
+smooth stable bundle locus is the $L^2$ K\"ahler form. On an obstructed
+moduli space the same identity holds after pullback to each smooth
+holomorphic family of stable bundles.
+\end{theorem}
+
+The curve serves two purposes. Its determinant gives the tangential
+curvature term through the Quillen formula, and its logarithmic potential
+transgresses that term to the surface. Since the curve avoids the bubbles,
+the singular test function is integrated only where the curvature
+converges smoothly. Away from the curve, weak convergence of measures is
+sufficient. This separation is the reason a continuous potential can be
+obtained without estimates for instanton gluing parameters.
+
+\subsection{The K3 consequences}
+Let now $X$ be a projective K3 surface with Ricci-flat K\"ahler form
+$\omega\in c_1(H)$. Let $v=(r,c,s)$ be primitive, $r\ge2$, $v^2>0$,
+and let $H$ be $v$-generic. Assume that the moduli space $\M$ of slope-stable
+locally free sheaves is nonempty. Set $2N=v^2+2$ and
+$V=\Vol(X,g_X)$. Let $\Mn$ be the normalization of the Uhlenbeck
+compactification; it is canonically homeomorphic to that compactification.
+
+\begin{theorem}[Canonical metric and boundary]\label{thm:intro-main}
+The $L^2$ K\"ahler form extends to the canonical Ricci-flat current in
+an ample determinant class on $\Mn$, with continuous local potentials.
+Its metric completion is the Uhlenbeck compactification and
+\[
+ \Vol(\M,\gL)=\frac{(16\pi^4V)^N}{N!}.
+\]
+For rank two, along every stratum with stable residual bundle and $\ell$
+distinct simple bubble points, the completed metric is a smooth
+hyperk\"ahler orbifold metric. The stratum is totally geodesic, with
+intrinsic metric the product of the lower-charge $L^2$ metric and
+$\Sym^\ell(X,4\pi^2g_X)$ restricted to distinct points.
+\end{theorem}
+
+The current identification is proved in
+Theorems~\ref{thm:global-current} and~\ref{thm:canonical}; the completion
+and boundary statements are Theorems~\ref{thm:completion}
+and~\ref{thm:orbifold}. They also give finite curvature energy and an
+explicit lower bound for the diameter. A power of the Quillen metric
+extends continuously to an ample line on $\Mn$. In contrast, the $L^2$
+metric cannot extend as a continuous positive-definite metric to the
+Gieseker moduli space when the Uhlenbeck morphism contracts a curve.
+
+At a boundary point with stable residual bundle, we further identify the
+affine tangent cone and its Reeb grading with a product of affine ADHM
+instanton spaces. This determines its volume density by the corresponding
+Nekrasov coefficient (Theorems~\ref{thm:cones} and~\ref{thm:density}).
+Outside the rank-two distinct-point locus, identification of the entire
+tangent metric with the flat quotient metric is stated conditionally in
+Remark~\ref{rem:cone-uniqueness}.
+
+\subsection{Relation to earlier work}
+Feehan \cite[Theorem~1.1]{Fee95} proves finiteness of the $L^2$ volume
+and diameter for irreducible ASD moduli spaces on closed, connected,
+oriented, simply connected four-manifolds with a generic Riemannian
+metric, assuming either $b^+=0$ with $G=\mathrm{SU}(2)$ or
+$\mathrm{SO}(3)$, or $G=\mathrm{SO}(3)$ with $w_2(P)\ne0$.
+Under the same hypotheses, \cite[Theorem~1.2]{Fee95} states that the
+metric completion is homeomorphic to the Uhlenbeck compactification;
+the proof of that statement is deferred there to a separate work.
+These hypotheses and ours have different scopes. On a K3 surface the
+$\mathrm{SO}(3)$ case with $w_2(P)\ne0$ is relevant, but the prescribed
+Ricci-flat metric need not satisfy Feehan's generic-metric hypothesis.
+Here the genericity assumption concerns the polarization for Gieseker
+stability. For primitive positive-square Mukai vectors with nonempty
+stable bundle locus, our argument applies in every rank $r\ge2$ to the
+Ricci-flat representative itself. The continuous boundary potential
+identifies its $L^2$ metric with the canonical singular Ricci-flat metric;
+this gives the completion theorem in this setting, the exact volume,
+and the rank-two orbifold boundary geometry stated above.
+
+Groisser's survey \cite{Gro97} discusses the completion problem, and his analysis
+of totally geodesic boundaries \cite{Gro98} establishes the scaled base
+metric in charge-one settings and discusses higher-charge strata.
+Our boundary formula retains the same factor
+$4\pi^2$ on the base surface, now directly from the curvature-energy atom.
+
+Fibre-integral expressions for the generalized Weil--Petersson form and
+its determinant-line interpretation are established in
+\cite{ST92,BS16}. Continuous potentials near locally free polystable
+bundles are obtained in \cite{BSc20}.
+The new local ingredient here is the explicit potential at nonempty
+bubbling cycles, including its atomic term and its continuity proof.
+The algebraic--analytic compactification comparison is supplied by
+\cite{BTT17,GSTW21}; we explain the fixed-polarization-class version used
+for the Ricci-flat representative.
+Once this potential is globalized in the determinant class, uniqueness
+in \cite{EGZ09} identifies the metric. The completion theorem of
+\cite{Song14} and the orbifold regularity theorem of \cite{GPP25}
+then apply. The tangent-cone consequences use
+\cite{NO26,DS17,LWX21}; these inputs are cited separately from the local
+potential argument.
+
+The normalization of the metric matters throughout. We use
+$\|a\|_{L^2}^2=-\int_X\tr(a\wedge *a)$, so a bubble has curvature
+energy $8\pi^2$. The rank-normalized Donaldson class is
+$-\frac1{2r}p_*\ch_2(\End\mathbb E)$ paired with the surface class.
+These conventions determine both $4\pi^2$ in the boundary metric and
+$16\pi^4$ in the volume formula.

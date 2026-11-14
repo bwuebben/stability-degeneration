@@ -1,0 +1,202 @@
+\section{The compactification and its K\"ahler class}\label{sec:compactification}
+
+From this section onwards, $X$ is a projective K3 surface and $\omega$ is the
+Ricci-flat representative of $c_1(H)$. Write
+\[
+ v=(r,c,s)=\ch(E)\sqrt{\operatorname{td}X},\qquad
+ (v,v)=c^2-2rs=2N-2.
+\]
+We impose the following hypotheses throughout Sections~\ref{sec:compactification}--\ref{sec:cones}:
+$v$ is primitive, $r\ge2$, $v^2>0$, $H$ is $v$-generic for Gieseker
+stability, and the locus $\M=\M_H(v)$ of locally free $\mu_H$-stable
+sheaves is nonempty. In particular $N\ge2$.
+The determinant is fixed; on a K3 surface its isomorphism class is already
+fixed by $c$. The smooth projective Gieseker moduli space
+$\MG=M_H(v)$ has complex dimension $2N$ and is of K3$^{[N]}$ type
+\cite[Theorem~0.1]{Yos01}; see also \cite[Appendix, Theorem~8.1]{YosDeform01}. The open set $\M$ is dense.
+Let $\gamma:\MG\to\MU$ be the Gieseker--Uhlenbeck morphism.
+
+\subsection{Normality and the local models}
+We use the normalization of the image, denoted by $\Mn$, and the induced
+morphism $\pi:\MG\to\Mn$. The following description also identifies its
+points with ideal connections, without an ambiguity from normalization.
+
+\begin{proposition}\label{prop:algebraic-model}
+The morphism $\pi$ is a projective symplectic resolution of a normal
+projective symplectic variety. Its fibres are connected, and
+$\Mn\to\MU$ is a homeomorphism. The complement of $\M$ in $\Mn$ has
+complex codimension at least two.
+At a point $(F,\sum_jn_jx_j)$ with $F$ stable and the $x_j$ distinct, its
+analytic germ is
+\begin{equation}\label{eq:adhm-germ}
+ \CC^{\operatorname{ext}^1(F,F)}\times\prod_j\frM_0(r,n_j),
+ \qquad \operatorname{ext}^1(F,F)=2N-2r\sum_jn_j.
+\end{equation}
+Here $\frM_0(r,n)$ is the affine ADHM quotient
+\begin{equation}\label{eq:adhm-definition}
+ \{(B_1,B_2,i,j):[B_1,B_2]+ij=0\}\mathbin{/\!/}\operatorname{GL}(n),
+\end{equation}
+where $B_\alpha\in\End\CC^n$, $i:\CC^r\to\CC^n$, and
+$j:\CC^n\to\CC^r$. It includes its two-dimensional centre-of-mass factor.
+\end{proposition}
+\begin{proof}
+Put $\beta_0=(c\cdot H)/(rH^2)$. We use Tajakka's convention
+$\sigma=(\operatorname{Coh}^{\beta_0}(X)[-1],-Z_{\alpha,\beta_0})$
+with $\alpha>0$ \cite[Section~2.3]{Taj23}.
+Here $\operatorname{Coh}^{\beta_0}(X)$ is the usual tilt of coherent
+sheaves at slope $\beta_0$, and $Z$ is the central charge defined using
+the Chern character. The polystable object attached to an ideal connection is
+\begin{equation}\label{eq:wall-object}
+ F\oplus\bigoplus_j\OO_{x_j}[-1]^{\oplus n_j},
+\end{equation}
+of Mukai vector $v$. This convention avoids a change of sign of $v$.
+On a K3 surface the unshifted charge is the usual Mukai central charge
+with parameter $\alpha'$ satisfying
+$(\alpha')^2=\alpha^2+2/H^2$, followed by a positive rescaling of its
+imaginary part by $\alpha/\alpha'$. The heart is unchanged. Thus $\sigma$
+lies in the distinguished component of the stability manifold.
+
+Let $U_H(v)$ denote Li's full reduced slope-semistable compactification,
+so that $\MU$ is the reduced image of $\gamma$ in $U_H(v)$.
+Tajakka's classification and comparison theorem
+\cite[Proposition~2.2 and Theorem~7.1]{Taj23} give a bijective morphism
+$U_H(v)\to M_\sigma(v)$, commuting with the same-$H$ Gieseker morphisms.
+Its points record the slope-graded double dual and defect cycle;
+compare the Li--Gieseker--Uhlenbeck wall in
+\cite[Proposition~8.2]{BM14}. No auxiliary polarization is needed.
+The nonempty stable bundle locus gives stable objects, so this is not a
+totally semistable stability condition.
+The target is normal and irreducible by
+\cite[Theorems~5.1 and 5.5]{AS23}.
+The comparison morphism is projective and quasi-finite, hence finite.
+Its bijectivity and the irreducibility of the target imply that $U_H(v)$
+is irreducible. The closed image $\MU$ contains the nonempty open stable
+bundle locus, so $\MU=U_H(v)$ as reduced spaces. The comparison is the
+identity on this common dense bundle locus. Its composition
+with the normalization of the reduced source is finite birational to a
+normal variety and is therefore an isomorphism. This also identifies
+that normalization with the Stein factor of $\gamma$, by their common
+function field and the proper birational map from $\MG$.
+Consequently $\pi$ has connected fibres and $\Mn\to\MU$ is bijective.
+The latter is a homeomorphism by compactness.
+
+A proper birational morphism onto a normal variety is an isomorphism
+outside a subset of complex codimension at least two in the target.
+Transfer the Mukai two-form from $\MG$ to this open subset of
+$\Mn_{\rm reg}$. Hartogs extension of its coefficients gives a holomorphic
+two-form on all of $\Mn_{\rm reg}$. Its top wedge cannot vanish only in
+codimension at least two, so it is nondegenerate. Its pullback agrees with
+the Mukai form on a dense open subset of $\pi^{-1}(\Mn_{\rm reg})$ and
+hence everywhere there. The Mukai form on $\MG$ is consequently its
+nondegenerate extension to the resolution. This proves that $\pi$ is a
+symplectic resolution. Equality of the two nondegenerate forms also makes
+$d\pi$ invertible over $\Mn_{\rm reg}$, so $\pi$ is an isomorphism there.
+In particular $\Mn$ is symplectic, canonical and has trivial canonical
+class, and $\pi$ is crepant.
+
+For completeness, the codimension assertion can be read directly in the
+local quiver description \cite[Proposition~3.1 and Corollary~4.1]{AS23}.
+Let $\mathbf m$ be the local dimension vector and let
+$p(\mathbf a)=1-\frac12(\mathbf a,\mathbf a)$ for the doubled-quiver
+Euler form. Since simple objects occur densely, $\mathbf m\in\Sigma_0$.
+For every proper representation type
+$\mathbf m=\sum_t k_t\boldsymbol\beta_t$, the simple-root criterion gives
+\[
+ p(\mathbf m)>\sum_t k_t p(\boldsymbol\beta_t).
+\]
+The stratum of this type has dimension $2\sum_t p(\boldsymbol\beta_t)$
+\cite[Theorems~1.2--1.3]{CB01}; its codimension is therefore at least two.
+A stable phase-one object of the positive rank under consideration is a slope-stable locally free sheaf. Indeed a point defect supplies
+a point factor in \eqref{eq:wall-object}. Thus the nonsimple locus is exactly
+the complement at issue.
+
+Finally suppose $F$ is stable. Its vertex has dimension one and
+$\operatorname{ext}^1(F,F)/2$ loop pairs. The vertex at $x_j$ has dimension
+$n_j$, two loops, and $r$ arrows in each direction connecting it to the
+$F$-vertex. There are no arrows between distinct point vertices.
+The scalar moment-map equation at the $F$-vertex follows by taking the
+traces of the remaining equations; the diagonal scalar acts trivially.
+Eliminating these redundant scalars leaves exactly \eqref{eq:adhm-definition}
+for each $j$ and the free loop coordinates at $F$. Riemann--Roch gives
+$\operatorname{ext}^1(F,F)=(v+\ell(0,0,1))^2+2=2N-2r\ell$,
+where $\ell=\sum_jn_j$. This proves \eqref{eq:adhm-germ}.
+\end{proof}
+
+\subsection{The ample determinant class}
+On the bundle locus the universal endomorphism bundle defines its usual
+Chern character. To extend this class over $\MG$, use the derived
+endomorphism class of the universal sheaf. Explicitly, if a
+quasi-universal sheaf $\mathbb E$ has similitude $m$, set
+\[
+ \delta_v=m^{-2}\ch_2(R\mathcal Hom(\mathbb E,\mathbb E))
+ =m^{-2}\big(2rm\ch_2(\mathbb E)-c_1(\mathbb E)^2\big).
+\]
+This is the discriminant class, independent of twisting by a line from the
+base, and equals $\ch_2(\End\mathbb E)$ for an actual universal bundle
+on $\M$. On the boundary, ordinary sheaf endomorphisms are not a
+substitute for this derived class.
+For $\alpha\in H^2(X,\RR)$ define
+\begin{equation}\label{eq:mu}
+ \mu_v(\alpha)=-\frac1{2r}p_*(\delta_v\,q^*\alpha).
+\end{equation}
+The familiar coefficient $-1/4$ is the rank-two instance of
+\eqref{eq:mu}. Put
+\begin{equation}\label{eq:lambda}
+ \Lambda=4\pi^2\mu_v([\omega])\in H^2(\MG,\RR).
+\end{equation}
+The determinant construction of the Uhlenbeck morphism gives an ample
+rational class on $\Mn$ whose positive real multiple $\Lambda'$ satisfies
+$\pi^*\Lambda'=\Lambda$. More explicitly, for a sufficiently high curve
+$D\in|H^k|$, the determinant class $\lambda_D$ satisfies
+\begin{equation}\label{eq:determinant-class}
+ c_1(\lambda_D)=-\frac{k}{2}p_*
+ (\delta_v\,q^*c_1(H)),\qquad
+ \Lambda=\frac{4\pi^2}{rk}c_1(\lambda_D).
+\end{equation}
+A positive power of $\lambda_D$ descends to an ample line bundle on
+$\Mn$ \cite[Section~8.2]{HL10}. These formulas are interpreted rationally
+when the moduli space is not fine.
+
+\begin{theorem}\label{thm:global-current}
+There is a unique closed positive current $T$ on $\Mn$ with continuous
+local potentials whose restriction to $\M$ is $\Om$. Its class is
+$\Lambda'$. It can be written $T=\theta+\ddc\varphi$, where $\theta$ is a
+smooth representative of $\Lambda'$ and $\varphi$ is continuous on $\Mn$.
+\end{theorem}
+\begin{proof}
+Pull the functions of Theorem~\ref{thm:continuous-potential} to $\Mn$.
+They are continuous and plurisubharmonic on its dense open set $\M$.
+The removable-singularity theorem for locally bounded plurisubharmonic
+functions on normal spaces extends this property to $\Mn$
+\cite[S\"atze~3--4]{GR56}.
+On overlaps, a difference is continuous and pluriharmonic on $\M$.
+Applying the same extension theorem to it and its negative shows that it
+is pluriharmonic everywhere. The complex Hessians therefore glue to $T$.
+This argument also proves uniqueness among continuous-potential extensions.
+
+Let $\widetilde T=\pi^*T$. Its class and $\Lambda$ agree on $\M$ by
+Lemma~\ref{lem:fibre-integral}. The kernel of restriction
+$H^2(\MG,\RR)\to H^2(\M,\RR)$ is generated by the classes of the
+irreducible divisors in $\MG\setminus\M$. This follows from the
+cohomology sequence with supports and the Thom class at each generic
+smooth point of a divisor; subsets of complex codimension at least two
+contribute nothing in degree two. All these divisors are exceptional by
+Proposition~\ref{prop:algebraic-model}. Hence
+$[\widetilde T]-\Lambda=\sum_i a_i[D_i]$.
+
+The restriction of a local potential for $\widetilde T$ to any fibre of
+$\pi$ is constant. Its class has degree zero on every contracted curve;
+the same holds for $\Lambda$. The exceptional real divisor
+$\sum_i a_iD_i$ is thus numerically trivial over $\Mn$. Apply the negativity
+lemma to this divisor and its negative \cite[Lemma~3.39]{KM98}; both are
+relatively nef, so all $a_i$ vanish.
+
+The $\partial\bar\partial$-lemma on the compact K\"ahler manifold $\MG$
+now gives $\widetilde T=\pi^*\theta+\ddc\widetilde\varphi$.
+The potential is continuous, since locally it differs from the explicit
+continuous potential by a smooth function and a pluriharmonic function.
+It is constant on each compact connected fibre: locally along such a fibre
+its complex Hessian is zero, and a pluriharmonic function on a connected
+compact complex space is constant. Properness gives a continuous descended
+function $\varphi$. This proves the global assertion.
+\end{proof}

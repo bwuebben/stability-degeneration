@@ -1173,5 +1173,46 @@
     },
     "number": 32,
     "directory": "32_singular_hym_point_defects"
+  },
+  {
+    "paper": "uhlenbeck_boundary",
+    "title": "The L² metric at the Uhlenbeck boundary",
+    "date": "2026-11-13",
+    "revision_date": "2026-11-13",
+    "website_slug": "l2-metric-uhlenbeck-boundary",
+    "pages": 22,
+    "download_filename": "l2-metric-uhlenbeck-boundary.pdf",
+    "pdf_sha256": "c0ba2d12a20196721531c34dfa6a8ace268edb919444527914e32133804a8870",
+    "source_sha256": "16d03e2a6dcdd74e0d84bec76df6300e511ac44e04bb75f229a3a94bab9b99e3",
+    "source_files_sha256": {
+      "abstract.tex": "63154d470d518107ea42cb9156ec9d6c503ed9937804af52dc36bfa2f8a59a2a",
+      "main.tex": "16d03e2a6dcdd74e0d84bec76df6300e511ac44e04bb75f229a3a94bab9b99e3",
+      "preamble.tex": "2de10fefd5dc7f9e6389b1020252d668cf63dfde2ab7290dca2618906d3f52f7",
+      "references.tex": "e014d205bfab265b17f403fa5e40754a784e216a06426e1a405efbfb8b0e3b1a",
+      "sections/01_introduction.tex": "740961aad79ced56ddbd47ab6f59b8b2c7184ad85e88211471346064484db2fd",
+      "sections/02_potential.tex": "192a0d90015a74d18acbf0feb9c88ec3acb1ca8cf9fb3ec7226346daf4584e01",
+      "sections/03_continuity.tex": "c0c80ce2d3ebe3e003ba2655a131d1921f420dd18aa7f85cdad1a887c5c9834d",
+      "sections/04_compactification.tex": "1161afc14c7bd7b8c271c5d3be7624a66c6a37d12af74e690fcb86957249b7be",
+      "sections/05_canonical_metric.tex": "9954358fb96fe12d6cb9de97defcd9b344b2c052af8006860d6d102a81eb3b41",
+      "sections/06_boundary_geometry.tex": "5f3fc28de6b262522be3c6994c83258d28a8a743b948685f182b85469156e4aa",
+      "sections/07_tangent_cones.tex": "284b7163008e215e5ab0b9184df461b672bd6f75ef9df88bf7f79214bcdfb90d",
+      "sections/08_examples_extensions.tex": "54be421eccd6a3168f84725ded7e825e2a294549c129e6b5e6ed4f980c33ca76",
+      "l2-metric-uhlenbeck-boundary.pdf": "c0ba2d12a20196721531c34dfa6a8ace268edb919444527914e32133804a8870",
+      "requirements.txt": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc",
+      "figures/code/compute01_constants.py": "af19563360086f5d2e7c41f1efe7105ab853f6aa641f09e22a6aff33871ebb87",
+      "figures/code/compute02_instanton_densities.py": "a55d051447d0904f51a43d04ce65acc4ab1a2d00c9ef648424bafc106988abe7",
+      "figures/output/constants.txt": "26c8e2cd7656709c1cf36d201b10de638773a73a49cfa762c004cea0bb52910c",
+      "figures/output/instanton_densities.txt": "c210505227d6c075bb196f2608ff55558a1a453beec9712eb1fd8c83e09328e0",
+      "README.md": "572bea49a6c1607fe2ac78c1c0c53398caeabed6768027bdc8ef8f91980b4d50"
+    },
+    "archive": {
+      "id": 24211932,
+      "doi": "10.5281/zenodo.24211932",
+      "conceptdoi": "10.5281/zenodo.24211931",
+      "record_url": "https://zenodo.org/records/24211932",
+      "created": "2026-11-14T03:39:30.315836+00:00"
+    },
+    "number": 33,
+    "directory": "33_uhlenbeck_boundary"
   }
 ]

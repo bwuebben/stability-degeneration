@@ -1,0 +1,160 @@
+\section{Continuity at ideal connections}\label{sec:continuity}
+
+An ideal connection is a pair $(A_F,Z)$, where $F$ is a polystable locally
+free sheaf with its Hermitian--Yang--Mills connection and
+$Z=\sum_jn_jx_j$ is an effective zero-cycle. The determinant is fixed and
+$c_2(F)+\deg Z=c_2(E)$.
+We write $\MU$ for the Uhlenbeck compactification of the chosen moduli
+component. Its algebraic structure is the reduced closure of that component
+in Li's projective slope-semistable compactification, as used in
+\cite[Section~7]{Taj23}. Only pairs in this closure are included.
+
+\subsection{Algebraic and analytic convergence}
+The comparison theorem needed here concerns the K\"ahler form used to solve
+the Hermitian--Yang--Mills equation, not only its cohomology class.
+We record the precise consequence.
+
+\begin{lemma}\label{rec:comparison}
+Let $[\omega]=c_1(H)$, with any smooth K\"ahler representative.
+The algebraic and gauge-theoretic Uhlenbeck compactifications on a surface
+are homeomorphic. If $(F_i,Z_i)\to(F,Z)$, then, after unitary gauge changes,
+$A_{F_i}\to A_F$ smoothly on compact subsets away from $\Supp Z$, and
+\begin{equation}\label{eq:energy-convergence}
+ |F_{A_{F_i}}^0|^2dV_X+8\pi^2 Z_i
+ \rightharpoonup |F_{A_F}^0|^2dV_X+8\pi^2 Z
+\end{equation}
+as measures. Here a zero-cycle denotes its atomic measure, with its
+algebraic multiplicities.
+\end{lemma}
+
+\begin{proof}
+In rank two, continuity for flat families for arbitrary Gauduchon metrics
+is stated in \cite[Theorem~2.2]{BTT17}. For the arbitrary-rank surface
+homeomorphism and convergence assertion we adapt
+\cite[Theorem~4.11 and Corollary~4.15]{GSTW21} to the chosen representative.
+We describe the metric-dependent steps of this adaptation.
+
+Replace $H$ by a very ample power $L=H^a$, which does not change slope
+stability. The $\partial\bar\partial$-lemma supplies a metric on $L$
+with curvature $a\omega$. The bounded family of semistable sheaves admits
+a common regularity twist by $L$. For every fixed sufficiently high twist,
+choose a full $L^2$-orthonormal basis of sections. The Bochner inequality
+for an HYM bundle twisted by $L^m$ gives
+$\Delta|s|^2\le C_m|s|^2$ and therefore
+$\|s\|_\infty\le C'_m\|s\|_2$. These estimates use the curvature
+$a\omega$, not a Fubini--Study identity.
+After Uhlenbeck convergence, every basis section has a subsequence
+converging smoothly away from the bubbling set. The supremum estimate and
+the negligible volume of small neighbourhoods of that set imply
+\[
+ \langle s_{\infty,\alpha},s_{\infty,\beta}\rangle_{L^2}
+                    =\delta_{\alpha\beta}.
+\]
+Thus the whole basis survives, preserving the Hilbert-polynomial
+inequality needed to identify the image sheaf. The stabilization and
+full-rank arguments in \cite[Lemmas~4.3--4.4]{GSTW21} identify the Quot
+limit; Proposition~4.5 there identifies its slope-graded double dual.
+All slope comparisons involve the class $c_1(H)$ alone.
+
+The individual multiplicities are compared by Chern--Weil transgression
+on local slices in \cite[Propositions~4.7 and 4.9]{GSTW21}. These steps
+use smooth K\"ahler geometry and local convergence, with no requirement
+that the metric be induced by the projective embedding. Writing $E_0$ for the algebraic torsion-free limit, they identify
+\[
+ F=(\operatorname{gr}^{\mu}E_0)^{**},\qquad
+ Z=\operatorname{cyc}\big(F/\operatorname{gr}^{\mu}E_0\big).
+\]
+The corrected definition in \cite[Erratum]{SW15} assigns the generic
+associated-graded multiplicity, which on a surface is precisely the
+length of this zero-dimensional quotient; it is also the convention in
+\cite[Section~2.5.3]{GSTW21}.
+Finally, the compactness and diagonal argument of
+\cite[Proposition~4.13 and Theorem~4.11]{GSTW21} extends the comparison to
+sequences of ideal connections and descends it through the quotient.
+Corollary~4.15 gives the homeomorphism on surfaces. Uhlenbeck convergence
+then gives the smooth convergence and measure identity in the statement.
+\end{proof}
+
+\subsection{Auxiliary data near a boundary point}
+Fix $p=(F,Z)\in\MU$. A sufficiently high, general member $C\in|H^k|$
+is smooth, avoids $\Supp Z$, and restricts each stable summand of $F$
+to a stable bundle \cite{MR84}. Thus $F|_C$ is polystable, and
+$\End F|_C$ is semistable of degree zero. Faltings' criterion \cite[Theorem~1.2]{Falt93}, in the form
+\cite[Theorem~1.1]{BH08}, supplies a vector bundle $G$ on $C$ such that
+\begin{equation}\label{eq:acyclic-limit}
+ H^*(C,\End F|_C\otimes G)=0.
+\end{equation}
+Choose any smooth Hermitian metric on $G$ and a fixed metric on $C$.
+These choices depend on $p$; there is no requirement that one curve or one
+twist work on the whole compactification.
+
+Choose a neighbourhood $N$ of $C$ with compact closure disjoint from
+$\Supp Z$. Shrinking around $p$ in $\MU$, every nearby ideal cycle avoids
+$\overline N$, and the restricted Dolbeault operator remains invertible.
+Indeed, smooth convergence near $\overline N$ follows from
+Lemma~\ref{rec:comparison}. If atoms occurred in $\overline N$ along a converging sequence, a
+subsequence of their positions would converge there. Every such atom has
+mass at least $8\pi^2$, forcing an atom of that mass in the limiting
+measure, which is smooth on a neighbourhood of $\overline N$. This
+contradiction excludes the atoms.
+Invertibility is open in the smooth operator topology on the compact curve.
+We may consequently use the same $C,G,N$ throughout an open neighbourhood
+$U$ of $p$.
+
+\begin{theorem}\label{thm:continuous-potential}
+On $U$, define
+\begin{align}\label{eq:ideal-potential}
+ u(F',Z')={}&-\frac{\pi^2}{rk\rho}\log\det_\zeta\Delta_{\End F'|_C\otimes G}
+       -\frac12\int_Xg_C|F_{A_{F'}}^0|^2dV_X\notag\\
+ &\hspace{25mm}-4\pi^2\sum_jn'_jg_C(x'_j),
+ \qquad Z'=\sum_jn'_jx'_j.
+\end{align}
+This function is continuous. Its restriction to every smooth holomorphic
+family of stable bundles in $U$ is the potential of
+Proposition~\ref{prop:potential}.
+\end{theorem}
+\begin{proof}
+Let $(F_i,Z_i)\to(F',Z')$ in $U$. Choose a smooth cutoff $\chi$ supported in
+$N$ and equal to one near $C$. On $\Supp\chi$, the curvatures converge
+smoothly modulo gauge. Since $g_C\in L^1(X)$,
+\begin{equation}\label{eq:near-curve}
+ \int_X\chi g_C|F_{A_{F_i}}^0|^2dV_X
+ \longrightarrow\int_X\chi g_C|F_{A_{F'}}^0|^2dV_X.
+\end{equation}
+The function $(1-\chi)g_C$ is continuous on all of $X$.
+Applying \eqref{eq:energy-convergence} to this function gives
+\begin{align*}
+ &\int_X(1-\chi)g_C|F_{A_{F_i}}^0|^2dV_X
+       +8\pi^2\sum_x\operatorname{mult}_x(Z_i)g_C(x)\\
+ &\qquad\longrightarrow
+ \int_X(1-\chi)g_C|F_{A_{F'}}^0|^2dV_X
+       +8\pi^2\sum_x\operatorname{mult}_x(Z')g_C(x).
+\end{align*}
+Here $\chi$ vanishes at every atom under consideration.
+Together with \eqref{eq:near-curve}, this proves continuity of the last two
+terms in \eqref{eq:ideal-potential}.
+
+On the fixed curve, the operators converge smoothly and remain invertible.
+Their zeta determinants therefore converge
+\cite[Theorem~1.6 and Remark~1.10]{BGS88}.
+The determinant is gauge invariant, so the gauge changes used to obtain
+smooth convergence do not change its value.
+This proves continuity of $u$. On the locus of bundles the cycle is empty,
+and the assertion about its complex Hessian is
+Proposition~\ref{prop:potential}.
+\end{proof}
+
+The two parts of the proof address different features of bubbling.
+The logarithmic singularity of $g_C$ is harmless where curvature converges
+smoothly. Away from the curve the test function is continuous, so weak
+convergence of the curvature measures retains exactly the atomic term in
+\eqref{eq:ideal-potential}. No rate of convergence and no gluing expansion
+are used.
+
+The theorem gives a continuous function on the compactification. Positivity
+of its complex Hessian on the normalization, and its global cohomology
+class, require the arguments in Sections~\ref{sec:compactification}
+and~\ref{sec:canonical}. At locally free polystable points it supplies a
+surface version of the continuous-potential extension of
+\cite[Theorem~11]{BSc20}; the additional term above treats nonempty bubbling
+cycles.

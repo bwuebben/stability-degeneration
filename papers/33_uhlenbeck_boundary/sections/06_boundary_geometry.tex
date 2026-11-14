@@ -1,0 +1,235 @@
+\section{Completion and the geometry of boundary strata}\label{sec:geometry}
+
+\subsection{Completion and finite curvature energy}
+
+\begin{theorem}\label{thm:completion}
+The metric completion of $(\M,\gL)$ is canonically homeomorphic to $\MU$.
+It is the compact length space defined by the canonical metric on $\Mn$.
+It is a noncollapsed $\operatorname{RCD}(0,4N)$ space, with its Riemannian
+volume measure. If $\eta$ is a K\"ahler class on $\MG$, the Ricci-flat
+metrics in $\Lambda+\varepsilon\eta$ converge to this completion in the
+Gromov--Hausdorff topology as $\varepsilon\downarrow0$, and converge
+smoothly on compact subsets over $\Mn_{\rm reg}$.
+\end{theorem}
+\begin{proof}
+The class $\Lambda'$ is a positive multiple of an ample rational class and
+$\pi$ is a crepant resolution. Song's theorem
+\cite[Theorem~1.1 and Corollary~1.1]{Song14} identifies the completion of
+the regular metric with $\Mn$, proves compactness and geodesic convexity
+of its regular set, and bounds the Hausdorff dimension of the singular
+set by $4N-4$. The additional closed analytic set
+$\Mn_{\rm reg}\setminus\M$ has real codimension at least four.
+Removing it does not change intrinsic distances: a piecewise smooth curve
+in the regular locus can be perturbed, with arbitrarily small length
+change, to avoid an analytic subset of real codimension at least two.
+It follows that completing $\M$ gives the same space.
+Proposition~\ref{prop:algebraic-model} identifies its topology with $\MU$.
+
+The convergence assertion is
+\cite[Theorem~1.6]{CT15}, applied to the nef and big class $\Lambda$;
+see also \cite[Theorems~1.1--1.2]{RZ11}.
+The approximating metrics are Ricci-flat and their volumes tend to the
+positive number in \eqref{eq:volume}. Their compact Gromov--Hausdorff limit
+is therefore noncollapsed. Stability of the synthetic Ricci lower bound
+and volume convergence give the stated RCD structure
+\cite{DPG18}. Here noncollapsed means that the reference measure is the
+$4N$-dimensional Hausdorff measure, with its usual Euclidean normalization.
+\end{proof}
+
+\begin{corollary}\label{cor:bounds}
+Writing $V=\Vol(X,g_X)$ and $D=\operatorname{diam}(\MU)$, one has
+\begin{equation}\label{eq:diameter}
+ D\ge (16\pi^2V)^{1/4}
+       \left(\frac{(2N)!}{N!}\right)^{1/(4N)}
+   \ge \left(\frac{64\pi^2NV}{e}\right)^{1/4}.
+\end{equation}
+The curvature is square integrable on $\M$. More precisely, define
+$|R|_{\rm op}^2=\frac14\sum_{i,j,k,l}R_{ijkl}^2$ in a real orthonormal
+frame. Then
+\begin{equation}\label{eq:curvature-bound}
+ \int_{\M}|R|_{\rm op}^2dV_{\gL}
+ \le \frac{48\pi^2(N+3)}{(N-1)!}(16\pi^4V)^{N-1}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Bishop--Gromov comparison gives
+$\Vol(\MU)\le\omega_{4N}D^{4N}$, where
+$\omega_{4N}=\pi^{2N}/(2N)!$. Substitution of \eqref{eq:volume} gives
+the first bound. Integrating $\log x$ over $[N,2N]$ yields
+$(2N)!/N!\ge(4N/e)^N$, giving the second.
+
+For a compact Ricci-flat K\"ahler manifold of complex dimension $2N$, the
+Chern--Weil identity in this norm is
+\[
+ \int |R|_{\rm op}^2dV
+ =\frac{8\pi^2}{(2N-2)!}\int c_2\,\Omega^{2N-2}
+\]
+\cite[formula following (8)]{HS01}.
+Apply it to the approximating metrics in Theorem~\ref{thm:completion}
+and use smooth convergence on compact subsets and exhaustion. The
+right side tends to its value at $\Lambda$.
+For K3$^{[N]}$ type,
+\[
+ \int c_2\alpha^{2N-2}
+ =6(N+3)(2N-3)!!\,q(\alpha)^{N-1}.
+\]
+This coefficient follows as well by comparing the degree $N-1$ terms in
+Riemann--Roch and
+$\chi(L)=\binom{q(c_1(L))/2+N+1}{N}$.
+Using $q(\Lambda)=32\pi^4V$ gives \eqref{eq:curvature-bound}.
+\end{proof}
+
+\subsection{Restriction of the current to a stratum}
+Put $v_\ell=v+\ell(0,0,1)$ and let $\M_H(v_\ell)$ denote the stable
+locally free locus, when nonempty. On the symmetric product, let
+$\omega_X^{(\ell)}$ be the current whose pullback to $X^\ell$ is
+$\sum_{a=1}^\ell\operatorname{pr}_a^*\omega$.
+
+\begin{theorem}\label{thm:stratum}
+There is a holomorphic map
+\[
+ j_\ell:\M_H(v_\ell)\times\Sym^\ell X\longrightarrow\Mn,
+ \qquad (F,Z)\longmapsto(F,Z),
+\]
+which is injective on points. Its pullback current is
+\begin{equation}\label{eq:stratum-current}
+ j_\ell^*T=\Omega_{L^2,v_\ell}+4\pi^2\omega_X^{(\ell)}.
+\end{equation}
+This identity includes cycles with repeated points.
+\end{theorem}
+\begin{proof}
+Work over a local universal family of stable bundles $F$.
+The relative Quot scheme of length-$\ell$ quotients of $F$ maps to $\MG$
+by taking kernels and to $\Sym^\ell X$ by their cycles. The kernels are
+slope stable. They belong to the unique irreducible Gieseker moduli space
+$\MG$, hence to the closure of $\M$. Fibres over a cycle are products of
+punctual Quot schemes and are connected by
+\cite[Theorem~1]{EL99}. Composition with $\pi$ is constant on each such
+fibre. The base $\M_H(v_\ell)\times\Sym^\ell X$ is normal; proper descent
+therefore gives the required holomorphic map. These local constructions
+agree, including when the universal families differ by a line from the
+base. The description of points gives injectivity.
+
+Fix $(F,Z)$ and choose $C,G$ as in Section~\ref{sec:continuity}.
+In \eqref{eq:ideal-potential}, the first two terms depend only on $F$ and
+have Hessian $\Omega_{L^2,v_\ell}$. On a neighbourhood disjoint from $C$ the
+last term has Hessian
+\[
+ \ddc\left(-4\pi^2\sum_an_ag_C(x_a)\right)
+       =4\pi^2\sum_an_a\omega(x_a).
+\]
+This proves \eqref{eq:stratum-current} on the ordered product; the
+symmetric expression descends, also across its diagonals. All potentials
+are continuous, so their pullbacks and Hessians are defined there.
+\end{proof}
+
+The current identity alone does not identify an induced Riemannian metric
+on a singular stratum. The next theorem supplies that extra regularity in
+rank two with distinct bubble points.
+
+\subsection{Rank two and distinct points}
+Let $r=2$, and let $S_\ell$ be the image of the locus with stable $F$ and
+$\ell$ distinct points, each of multiplicity one.
+
+\begin{theorem}\label{thm:orbifold}
+Near $S_\ell$, the completed metric is a smooth hyperk\"ahler orbifold
+metric. The stratum is totally geodesic, and its intrinsic metric is
+\begin{equation}\label{eq:stratum-metric}
+ \gL{}_{,v_\ell}+4\pi^2g_X^{(\ell)}.
+\end{equation}
+At $p\in S_\ell$ the metric tangent cone and normalized volume density are
+\begin{equation}\label{eq:orbifold-cone}
+ \RR^{4N-4\ell}\times(\RR^4/\{\pm1\})^\ell,
+ \qquad \vartheta(p)=2^{-\ell}.
+\end{equation}
+In equivariant normal coordinates on the covering chart, the metric
+coefficients differ from their values at the centre by $O(\rho^2)$.
+\end{theorem}
+\begin{proof}
+The ADHM space of one rank-two instanton is
+$\frM_0(2,1)=\CC^2\times(\CC^2/\{\pm1\})$.
+Equation~\eqref{eq:adhm-germ} gives the local quotient
+\[
+ \CC^{2N-2\ell}\times(\CC^2/\{\pm1\})^\ell.
+\]
+The orbifold regularity theorem of Guenancia--Pan--P\u aun
+\cite[Corollary~B]{GPP25} says that the canonical Ricci-flat metric is
+smooth on the whole quotient-singularity locus. Its pullback to the
+covering chart is thus a smooth Ricci-flat metric. The parallel symplectic
+form and complex structures extend over the fixed loci, so the metric is
+hyperk\"ahler there as well.
+
+The stratum lifts to the common fixed-point locus of the isometric group
+$(\ZZ/2)^\ell$. A fixed-point locus of isometries is totally geodesic.
+Its metric is \eqref{eq:stratum-metric}, since its K\"ahler form is the
+restriction computed in Theorem~\ref{thm:stratum}.
+The invariant tangent-space decomposition gives \eqref{eq:orbifold-cone};
+the finite quotient divides Euclidean volume by $2^\ell$.
+Finally the first derivatives of a smooth metric vanish in normal
+coordinates. The exponential map is equivariant, giving the stated
+quadratic coefficient estimate.
+\end{proof}
+
+In particular, if the lower moduli space in $S_1$ satisfies the hypotheses
+of Theorem~\ref{thm:canonical}, then
+\begin{equation}\label{eq:s1-volume}
+ \Vol(S_1)=\frac{(16\pi^4V)^{N-1}}{(N-2)!}.
+\end{equation}
+Indeed its complex dimension is $2N-4$, and the product in
+\eqref{eq:stratum-metric} has volume
+\[\Vol(\M_H(v_1))\Vol(X,4\pi^2g_X).\]
+The same calculation applies if the lower space consists of a single
+spherical bundle, with volume one.
+Equation~\eqref{eq:s1-volume} concerns $S_1$. It equals the
+$(4N-4)$-dimensional measure of the entire singular locus only if its
+complement there has measure zero in that dimension. Reducible residual
+bundles require a separate analysis; odd first Chern class alone does not
+supply that conclusion.
+
+\subsection{A Lipschitz estimate for curvature measures}
+The following estimate does not require a complex structure on the base.
+
+\begin{proposition}\label{prop:lipschitz}
+Let $X$ be a compact oriented Riemannian four-manifold and let $\M$ be a
+smooth moduli space of irreducible projectively anti-self-dual connections
+with fixed determinant and energy $8\pi^2\kappa$. For every Lipschitz
+function $f$ on $X$, the function
+\[
+ \Phi_f(A)=\frac12\int_X f|F_A^0|^2dV_X
+\]
+is $2\pi\sqrt\kappa\,\operatorname{Lip}(f)$-Lipschitz in the $L^2$ metric.
+In the K3 setting it extends to the completion by
+\begin{equation}\label{eq:phi-ideal}
+ \Phi_f(F,Z)=\frac12\int_Xf|F_{A_F}^0|^2dV_X
+                   +4\pi^2\sum_jn_jf(x_j).
+\end{equation}
+In particular, two one-bubble points with the same background obey
+\begin{equation}\label{eq:bubble-distance}
+ d_{\MU}((F,x),(F,y))\ge\frac{2\pi}{\sqrt\kappa}d_X(x,y).
+\end{equation}
+\end{proposition}
+\begin{proof}
+For smooth $f$ and a harmonic tangent vector $a$, the Yang--Mills equation
+and integration by parts give
+\[
+ d\Phi_f(a)=-\int_X\langle\iota_{\nabla f}F_A^0,a\rangle dV_X.
+\]
+An anti-self-dual two-form satisfies
+$|\iota_wF_A^0|^2=\tfrac12|w|^2|F_A^0|^2$.
+Cauchy--Schwarz therefore bounds the absolute value by
+$2\pi\sqrt\kappa\|df\|_\infty\|a\|_{L^2}$.
+The same integration by parts holds for a Lipschitz $f$ using its weak
+first derivatives, or follows by local smooth approximation. Integration
+along paths proves the asserted Lipschitz constant.
+The completion theorem and weak convergence of the energy measures give
+\eqref{eq:phi-ideal}. For equal backgrounds its difference is
+$4\pi^2(f(x)-f(y))$. Taking the supremum over all $1$-Lipschitz functions
+proves \eqref{eq:bubble-distance}.
+\end{proof}
+
+For the rank-two stratum with a fixed stable background,
+Theorem~\ref{thm:orbifold} also gives the upper bound
+$d_{\MU}((F,x),(F,y))\le2\pi d_X(x,y)$ by paths inside the stratum.
+For sufficiently close points in a convex orbifold neighbourhood this
+upper bound is an equality. Global total geodesicity does not by itself
+make every long intrinsic geodesic globally minimizing.
