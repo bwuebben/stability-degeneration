@@ -4,6 +4,13 @@ We construct the charts required by Section \ref{sec:comparison}.
 The construction first treats a stabiliser acting freely on the
 punctured zero fibre. It applies both along
 $\Sigma\setminus\Delta$ and along the edge of $C_2$.
+There are two parts to the argument. A slice retains the quotient
+metric and all three complex structures, in addition to the moment
+equations. A change of its normal coordinates then makes these
+tensors agree with the flat tensors along the fixed locus. This
+agreement supplies the vanishing factors needed when differentiating
+the quotient metric. The algebraic identification of a quotient
+alone would not supply these estimates.
 
 \subsection{A finite-dimensional slice with its metric}
 Let $\cX$ be a flat hyperk\"ahler affine space and let $\cG$ act
@@ -118,7 +125,9 @@ $\mu(x)$ evaluated on a double bracket. This proves (2).
 For the metric, minimise first over $\mathfrak qx$ and then over
 $\mathfrak hx$. The result is
 $\min_{\xi\in\mathfrak h}\widehat g(v-\xi y,v-\xi y)$.
-The corresponding horizontal lift is $d^\perp\iota(Pv)$, so
+If $P$ denotes the $\widehat g$-orthogonal projection off
+$\mathfrak hy$, the corresponding horizontal lift is
+$d^\perp\iota(Pv)$, so
 the same calculation identifies the complex structures. Along
 the fixed locus, the stratum is locally the smooth hyperk\"ahler
 quotient of $\cX^H$ by the centraliser of $H$ modulo its ineffective
@@ -173,6 +182,63 @@ blocks. Equation \eqref{eq:slice-moment} ensures that the pulled-back
 complex structures preserve the horizontal tangent space on $Y_0$.
 \end{proof}
 
+\subsection{Differentiating the quotient tensors}
+We spell out the estimate that turns the preceding normalisation
+into an adapted chart. Write $Y_0^\times=Y_0\setminus\EE_0$.
+Freeness implies that this is a smooth submanifold, and the normal
+space in $\EE$ is spanned by $I_a\xi z$ for $\xi\in\mathfrak h$.
+It lies in $\EE_1$. If $II$ denotes its second fundamental form
+for the flat metric and $\Pi_0$ the flat projection onto
+$\mathfrak hz$, homogeneity and compactness of the unit link give
+\begin{equation}\label{eq:singular-derivatives}
+ |II|\le C/\rho,\qquad |\partial\Pi_0|\le C/\rho,
+ \qquad \rho=|z|.
+\end{equation}
+Both $II$ and $\partial\Pi_0$ vanish in fixed directions;
+their values lie in $\EE_1$. These are the only singular
+coefficients in the calculation. Here $\partial$ is the flat
+ambient derivative, and all estimates are on a fixed small ball,
+or a closed angular subset of a free conic region.
+
+\begin{lemma}\label{lem:basic-derivative}
+Let $\overline T$ be a covariant two-tensor or an endomorphism
+on $Y_0^\times/H$. Suppose its basic lift is the restriction of
+an ambient tensor $T$; for an endomorphism require that $T$
+maps $TY_0^\times$ into itself. Let $N(T)$ be the supremum,
+over unit normal vectors $\nu$, of
+$|T(\nu,\cdot)|+|T(\cdot,\nu)|$ in the first case, and of
+$|T\nu|$ in the second. Then
+\begin{equation}\label{eq:basic-derivative}
+ |\nabla^{\bar g_{\fl}}\overline T|
+ \le C\bigl(|\partial T|+|II|N(T)\bigr).
+\end{equation}
+The constant depends only on the dimension. A basic lift is zero
+on orbit directions and, for an endomorphism, takes values in the
+flat horizontal space.
+\end{lemma}
+\begin{proof}
+For horizontal lifts $v,w$ of vector fields on the quotient,
+the horizontal part of $\nabla^{Y_0}_vw$ is the lift of the
+quotient covariant derivative. Vertical components disappear on
+evaluating the basic tensor. For a covariant tensor, the Gauss
+formula gives
+\[
+ (\nabla^{Y_0}_vT)(w_1,w_2)
+ =(\partial_vT)(w_1,w_2)
+   +T(II(v,w_1),w_2)+T(w_1,II(v,w_2)).
+\]
+For an endomorphism, project the corresponding formula to
+$TY_0^\times$. The additional term is the tangential projection
+of $TII(v,w)$; the term $II(v,Tw)$ has zero tangential
+projection. Restricting to horizontal vectors and taking norms
+proves the estimate.
+\end{proof}
+
+In particular, a bounded ambient derivative is sufficient on the
+quotient when the tensor's normal components are $O(\rho)$.
+The curvature of the zero fibre in \eqref{eq:singular-derivatives}
+then contributes a bounded term.
+
 \begin{lemma}\label{lem:quotient-estimate}
 Suppose invariant Lipschitz tensors $(\widehat g,\widehat I_a)$
 on $Y_0$ arise as above, agree with the flat tensors in normal
@@ -185,53 +251,126 @@ quotient difference, after subtracting the difference on the
 smooth factor, is $O(t\rho)$ with derivative $O(t)$.
 \end{lemma}
 \begin{proof}
-Let $\Pi_0$ be the flat projection to $\mathfrak hz$,
-$P_0=1-\Pi_0$, and write $\widehat g=g_{\fl}+\tau$.
-On a conic neighbourhood of the zero fibre,
-$|\partial\Pi_0|\le C/\rho$. Its image and derivatives are
-normal to $\EE_0$, and it kills fixed directions. Normalisation
-gives
-\[
+\emph{Normal components.}
+Put $P_0=1-\Pi_0$, $\tau=\widehat g-g_{\fl}$ and
+$\tau_a=\widehat I_a-I_a$. Invariance makes the fixed and
+normal representations orthogonal along $\EE_0$ and makes the
+complex structures preserve both. Normalisation and the Lipschitz
+bound therefore give, for $v_1\in\EE_1$,
+\begin{equation}\label{eq:normal-errors}
+ \begin{split}
  |\tau(v_1,\cdot)|\le C\rho|v_1|,\quad
- |(\widehat I_a-I_a)v_1|\le C\rho|v_1|,\quad
- |((\widehat I_a-I_a)v)_1|\le C\rho|v|.
-\]
-The metric-orthogonal orbit projection satisfies
-\[
+ |\tau_av_1|\le C\rho|v_1|,\quad
+ |(\tau_av)_1|\le C\rho|v|.
+ \end{split}
+\end{equation}
+The fixed--fixed components need not vanish: their restrictions
+are the metric and complex structures of the smooth stratum.
+
+\emph{Orbit projections.}
+Let $\Pi$ be the $\widehat g$-orthogonal projection onto
+$\mathfrak hz$ and $P=1-\Pi$. With
+$\tau^\sharp=g_{\fl}^{-1}\tau$, set
+$A=1+\Pi_0\tau^\sharp\Pi_0$ on the ambient space. This
+is invertible near the fixed locus. The equation
+$\Pi_0(1+\tau^\sharp)(v-\Pi v)=0$ implies
+\begin{equation}\label{eq:projection-error}
  \Pi-\Pi_0=
- \big(\Pi_0(1+\tau^\sharp)|_{\mathfrak hz}\big)^{-1}
- \Pi_0\tau^\sharp P_0.
+ A^{-1}\Pi_0\tau^\sharp P_0.
+\end{equation}
+Its size is $O(\rho)$ by \eqref{eq:normal-errors}. To
+differentiate it, consider the factors in turn. The term
+$(\partial\Pi_0)\tau^\sharp P_0$ is bounded because
+$\partial\Pi_0$ kills $\EE_0$ and the normal component of
+$\tau^\sharp P_0$ is $O(\rho)$. The term
+$\Pi_0(\partial\tau^\sharp)P_0$ is bounded by the Lipschitz
+assumption. The term $\Pi_0\tau^\sharp\partial P_0$ is
+bounded by $C\rho\cdot C/\rho$. Finally differentiating
+$A^{-1}$ contributes at worst $C/\rho$, again multiplied
+by $\Pi_0\tau^\sharp P_0=O(\rho)$. We obtain
+\begin{equation}\label{eq:projection-bounds}
+ |P-P_0|\le C\rho,\qquad |\partial(P-P_0)|\le C.
+\end{equation}
+
+\emph{The quotient metric.}
+The basic lift of its difference from the flat quotient metric is
+the restriction to $TY_0^\times$ of
+\[
+ T=g_{\fl}(P\cdot,P\cdot)-g_{\fl}(P_0\cdot,P_0\cdot)
+       +\tau(P\cdot,P\cdot).
 \]
-It follows that $|\Pi-\Pi_0|\le C\rho$ and
-$|\partial(\Pi-\Pi_0)|\le C$. Every derivative of $\Pi_0$
-is multiplied by a normal block of size $O(\rho)$.
+Since $P-P_0$ takes values in $\EE_1$, $Pv$ and $v$ have
+the same fixed component $v_0$. At $(u,z)$ the tensor
+$\tau$ is $\tau_u+O(\rho)$, and $\tau_u$ has only a
+fixed--fixed block. Hence
+\[
+ T(v,w)=(g_B-g_{\fl})(u)(v_0,w_0)+O(\rho)|v||w|.
+\]
+This identifies the product term that must be subtracted. To
+bound $\partial T$, expand $P=P_0+(P-P_0)$ in the first
+two terms. Derivatives of $P-P_0$ are bounded; every derivative
+of $P_0$ is multiplied by an $O(\rho)$ factor. In the last
+term, $\partial\tau$ is bounded, while the potentially
+singular part of $\partial P$ has normal image and is absorbed
+by \eqref{eq:normal-errors}. Thus $|\partial T|\le C$.
+For a unit normal $\nu$ to $Y_0^\times$, $P_0\nu=\nu$
+and $P\nu\in\EE_1$, so $|T(\nu,\cdot)|\le C\rho$.
+Lemma \ref{lem:basic-derivative} now gives the bounded
+covariant derivative on the quotient.
 
-The basic lift of the quotient metric is
-$\widehat g(P\cdot,P\cdot)$, where $P=1-\Pi$.
-Subtracting the flat lift leaves its fixed-factor restriction
-plus $O(\rho)$; differentiating gives a bounded tensor by the
-projection estimates. Passing from ambient derivatives to
-derivatives on $Y_0$ introduces its second fundamental form,
-of size $O(1/\rho)$. Its values are normal, so it too multiplies
-an $O(\rho)$ block. Riemannian submersion then bounds the
-covariant derivative on the quotient. For complex structures
-use the lift $P_0\widehat I_aP$ and the same estimates.
+\emph{The complex structures.}
+Their basic lifts, in the flat horizontal identification of the
+quotient tangent space, are $P_0\widehat I_aP$ and
+$P_0I_aP_0$. Their difference is the restriction of
+\[
+ J_a=P_0\tau_aP+P_0I_a(P-P_0).
+\]
+Here $(\partial P_0)\tau_aP$ is bounded by the last estimate
+in \eqref{eq:normal-errors}; $P_0(\partial\tau_a)P$ is
+bounded by Lipschitz regularity; and $P_0\tau_a\partial P$
+is bounded because the singular part of $\partial P$ takes
+values in $\EE_1$. The remaining terms are controlled by
+\eqref{eq:projection-bounds}. For unit normal $\nu$,
+$|J_a\nu|\le C\rho$. The basic-derivative lemma applies
+again. The value of $J_a$ is the fixed-factor difference
+$(I_{a,B}-I_a)(u)$, extended by zero on $\EE_1$, up to
+$O(\rho)$. This proves the absolute estimates for the metric
+and all three complex structures.
 
+\emph{Dependence on the data.}
 For the relative assertion interpolate the two metrics by
 $g_s=g_*+s\tau_*$. If $P_s$ is its horizontal projection,
 stationarity of the minimum over orbit directions gives
 \[
  \frac{d}{ds}g_s(P_sv,P_sw)=\tau_*(P_sv,P_sw).
 \]
-The normal blocks of $\tau_*$ vanish on the fixed locus and
-are $O(t\rho)$; the preceding derivative estimates now all
-carry a factor $t$. For the complex structures use
+Indeed $\partial_sP_sv$ is an orbit vector and is
+$g_s$-orthogonal to $P_sw$, so the derivatives of the two
+projections contribute zero to this formula. Integration in $s$
+expresses the difference of the quotient metrics as the integral
+of the displayed tensor. Its fixed-factor restriction is
+$\tau_*|_{\EE_0}$, and its normal blocks are $O(t\rho)$.
+Every differentiated term just estimated is therefore $O(t)$,
+including the second-fundamental-form contribution.
+
+For the complex structures use
 \[
  \frac{d}{ds}\Pi_s=\Pi_sg_s^{-1}\tau_*P_s
 \]
-and split their lift difference into the change of complex
-structure and the change of projection. Each has the same
-factor $t$ and normal vanishing. This proves both estimates.
+and integrate to obtain
+$|P_{s=1}-P_{s=0}|\le Ct\rho$ and
+$|\partial(P_{s=1}-P_{s=0})|\le Ct$. The difference of
+the complex-structure lifts is
+\[
+ P_0(\widehat I_a-\widehat I_{a,*})P_{s=1}
+       +P_0\widehat I_{a,*}(P_{s=1}-P_{s=0}).
+\]
+The first term has normal vanishing $O(t\rho)$ by the
+common normalisation of the complex structures, and the second
+has that bound by the projection formula. Their derivatives are
+$O(t)$ by the same cancellations. After subtracting the
+fixed-factor restriction, the difference is $O(t\rho)$.
+This proves the relative assertion.
 \end{proof}
 
 Together, the two lemmas construct adapted charts for each complex

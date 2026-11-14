@@ -6,6 +6,16 @@ estimates which permit the cone theorem to be transferred to the
 moduli space. All statements about domains in an open set concern
 forms compactly supported in that set.
 
+The distinction can be seen from the formulas for the operators.
+The weak exterior derivative is independent of the metric, and
+uniformly equivalent metrics give equivalent $L^2$ norms on forms
+and their exterior derivatives. The codifferential involves the
+Hodge star and therefore derivatives of the metric. Our comparisons
+will control those derivatives and require the relevant metric error
+to vanish in the directions where derivatives of a form may grow.
+The weighted estimate below specifies the amount of vanishing that
+is needed.
+
 \subsection{Weighted interior regularity}
 Put $\rho(x)=\operatorname{dist}(x,X_{\sing})$. We require the
 following elementary form of bounded geometry: there are charts on
@@ -156,6 +166,39 @@ the Levi form is $O(\epsilon)$ and preserves positivity. For
 metric estimates alone a cutoff extension of the metric suffices.
 
 \subsection{Comparison at two strata}
+At the deepest stratum there are two geometrically different small
+quantities. The cone radius $r$ measures distance to the vertex
+stratum $B\times\{0\}$. The distance $\rho$ measures proximity
+to the full singular set, including the edge of the cone. Away
+from that edge the two are comparable. Near an edge point at radius
+$r_y>0$, however, $\rho$ tends to zero while $r$ remains comparable
+to $r_y$. An error bounded by $Cr$ need not be bounded by
+$C\rho$ there.
+
+This is precisely where the product estimate is used. The full
+gradient is controlled only after multiplication by $\rho$;
+the derivative tangent to the smooth edge factor is controlled
+without that vanishing weight. A perturbation pulled back from
+the smooth factor may consequently have size $O(r_y)$, provided
+the remainder is $O(\rho)$. In the Hodge-star commutator, the
+smooth-factor perturbation commutes with contraction in normal
+directions and therefore multiplies only tangential derivatives.
+The two estimates are arranged as follows:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Region or direction & Permitted coefficient & Controlled derivative\\
+\midrule
+Away from the edge, $\rho\asymp r$ & $O(r)=O(\rho)$ & $\rho\nabla u$\\
+Along the smooth edge factor & $O(r_y)$ & $r_y\nabla_{B_y}u$\\
+Remainder near the edge & $O(\rho)$ & $\rho\nabla u$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The following definition expresses this directional distinction
+in coordinates that remain uniform as the edge approaches the
+vertex stratum.
+
 Let $X_0=B\times C(Z)$ have an edge away from its vertex stratum.
 Assume bounded geometry at scale $\rho$ and Weil invariance on
 $X_0$. At each edge point $y$, put $r_y=r(y)$. We require

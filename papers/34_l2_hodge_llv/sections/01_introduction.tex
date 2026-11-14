@@ -21,6 +21,17 @@ arguments: a general algebraic criterion appears in Section
 \ref{sec:algebra}, followed by the analysis which verifies it for
 the moduli spaces.
 
+The singular geometry explains the form of the argument. A direct
+sum of two distinct stable bundles has a circle stabiliser; its
+transverse model is a quotient with a smooth link. When the two
+summands coincide, the stabiliser enlarges and the link itself
+becomes singular. An analysis of isolated cone points therefore
+has to be supplemented twice: first to accommodate a singular
+link, and then to compare the actual metric with this model in
+charts compatible with both strata. The estimates developed here
+make these two passages without assuming a spectral gap for the
+critical link modes.
+
 \subsection{The moduli spaces}
 Let $S$ be a projective K3 surface with $\operatorname{Pic}(S)=\ZZ A$,
 where $A$ is ample. Fix a primitive Mukai vector
@@ -140,6 +151,15 @@ and $d_a^c$ on the regular locus does not identify their closed
 extensions. It is the invariance of $V$ that permits the K\"ahler
 identities to be used on harmonic forms.
 
+The second assertion is the bridge between those two statements.
+It ensures that wedge product by the K\"ahler forms represents
+the action of their ordinary cohomology classes on $\IH(M)$,
+rather than merely an action on an abstractly isomorphic vector
+space. Compatibility with integration also fixes the pairing used
+later in the monodromy argument. We prove these identifications
+using the same local de Rham complex, so that the analytic and
+algebraic operators are compared canonically.
+
 Two features of the proof are useful beyond this family. First, the
 K\"ahler cone theorem is extended from smooth links to singular
 links with discrete Hodge spectrum and the $L^2$ Stokes property.
@@ -158,6 +178,18 @@ directions must vanish at the nearer stratum, whereas tangential
 errors may be of the larger order. Tangential regularity on a
 product model controls the latter. These estimates are verified
 using finite-dimensional slices of the gauge-theoretic quotient.
+
+The order of the analytic argument follows the depth of the
+singularities. The smooth-link cone theorem and the quotient
+charts first treat $\Sigma\setminus\Delta$ and the nonvertex
+part of the deeper cone. Those charts give compact resolvent on
+its singular link. The cone theorem can then be applied a second
+time, now to that link. Finally a chart adapted to both strata
+transfers the resulting domain statement to $M$ at $\Delta$.
+The delicate construction is this last chart: its normal error
+must vanish at the nearby rank-one stratum, not only at the
+vertex. Sections \ref{sec:comparison}--\ref{sec:diagonal}
+isolate the required estimates and construct the chart.
 
 \subsection{From one metric to all classes}
 Theorem \ref{thm:analytic} provides Lefschetz triples only on the
@@ -185,13 +217,50 @@ BPS and $\chi$-independence results of
 calculation of graded dimensions alone does not identify an LLV
 representation.
 
-The analytic background is the $L^2$ theory of Cheeger and
-Cheeger--Goresky--MacPherson \cite{cheeger80,cgm82}, its Hilbert
-complex formulation \cite{brl92,brl93}, and the edge theories of
-\cite{hm05,almp12,almp18}. Our metric is not assumed to have an
-iterated edge normal form. The quotient stratification is consistent
-with \cite{ds97,mayrand22}; the charts used here additionally
-control the metric and all three complex structures. No
-identification of the harmonic type decomposition with Saito's
-Hodge structure is used in the LLV theorem or in the conditional
-representation argument.
+\subsection{Analytic precedents and the structure of the proof}
+The local identification with intersection cohomology follows the
+$L^2$ method of Cheeger and Cheeger--Goresky--MacPherson
+\cite{cheeger80,cgm82}. Its essential input here is the cone
+cohomology formula, which depends on the quasi-isometry class of
+the metric. The domain of the Hodge--de Rham operator requires
+finer information. Cheeger's K\"ahler cone theorem
+\cite{cheeger83} treats smooth links by analysing the homogeneous
+closed and coclosed forms at small indicial exponents.
+Br\"uning--Lesch \cite{brl92,brl93} develop the corresponding
+Hilbert-complex and ideal-boundary-condition framework, including
+K\"ahler--Hodge theory for conformal complex cones. We retain
+this separation between the cohomological calculation and the
+domain question. The extension to singular links is arranged so
+that the cone argument can be used successively at the two depths.
+
+The edge theories of \cite{hm05,almp12,almp18} provide a general
+analytic setting for stratified spaces with incomplete edge
+metrics. Our starting input is instead a comparison of the
+natural gauge-theoretic metric with a quotient model. It gives
+neither the first derivatives needed for the domain argument nor
+an iterated edge normal form. We obtain the required estimates
+from the slice construction and then use weighted interior
+regularity and tangential product estimates. The resulting charts
+control the metric and the three complex structures together.
+
+There is a related distinction on the geometric side. The
+orbit-type decomposition of singular hyperk\"ahler quotients is
+studied in \cite{ds97,mayrand22}. Mayrand's local normal form
+identifies their complex-symplectic structure with that of a
+linear quotient; it does not in general preserve the K\"ahler
+forms. Our normalising charts need not be holomorphic. Their
+purpose is the quantitative comparison that permits passage
+between closed operator domains.
+
+Section \ref{sec:algebra} states and proves the algebraic
+criterion before any of this analysis. Its only analytic input in
+the application is Theorem \ref{thm:analytic}, whose proof is
+completed in Section \ref{sec:hodge}. Thus a reader interested
+primarily in the algebra can read Sections \ref{sec:algebra}
+and \ref{sec:hodge}--\ref{sec:representations} together;
+Sections \ref{sec:geometry}--\ref{sec:diagonal} establish the
+geometric and analytic premises in full. Throughout, harmonic
+type decomposition and Saito's Hodge structure on intersection
+cohomology remain distinct. No identification between them is
+used in either the LLV theorem or the conditional representation
+argument.

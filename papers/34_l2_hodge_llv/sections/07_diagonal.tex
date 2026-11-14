@@ -7,6 +7,35 @@ rank-one locus and a second chart away from it, then join them
 through the free part. The normalisation near rank one is what
 ensures the stronger normal estimate in \eqref{eq:edge-split}.
 
+The aim is a chart from the flat quotient with a smooth factor
+which is adapted to both strata in the sense of Definition
+\ref{def:two-level}. The construction proceeds as follows.
+\begin{enumerate}
+\item A singular-value slice separates the dominant rank-one
+direction and replaces the local $\SO(3)$ action by its residual
+normaliser $N(T)$.
+\item On that slice we solve the moment equations transverse to
+the circle $T$ and project off the corresponding quaternionic
+orbit directions. This leaves a family of circle moment equations
+over the rank-one locus.
+\item We normalise this family in its normal fibres. The relative
+quotient estimate of Lemma \ref{lem:quotient-estimate} then gives
+the $O(\rho)$ remainder required at the edge, even as the whole
+chart approaches the vertex.
+\item On an angular region separated from rank one, the action is
+free. The construction of Section \ref{sec:slices} gives the outer
+chart there.
+\item We join the two maps on their free overlap, correcting the
+interpolation to keep the moment equations satisfied.
+\end{enumerate}
+The second step is a construction on a slice: the complement of
+$\mathfrak t$ in $\mathfrak{so}(3)$ is not a Lie subalgebra,
+so this step is not a quotient by a subgroup. Its purpose is to
+produce the same kind of metric and moment-map data used in the
+preceding section, now with a varying smooth base. Once that has
+been verified, the earlier estimates apply with their parameters
+controlled by scaling.
+
 \subsection{Scaling the slice}
 Use Proposition \ref{prop:slice} at $p\in\Delta$ and perform
 only the fibrewise linear normalisation of Lemma
@@ -34,6 +63,10 @@ Their quotient is $X_0=(\EE_0,g_B)\times C_2$.
 
 At a normal radius $\bar r>0$, use coordinates
 $(u-u_0,n)/\bar r$ and divide the moment map by $\bar r^2$.
+This fixes the size of the rank-one neighbourhood in which the
+implicit function theorem will be used. The small parameter is
+then $\bar r$ itself; constants in the scaled estimates must be
+independent of the point at that radius.
 Smoothness, normal agreement, and the cubic remainder imply
 \begin{equation}\label{eq:scaled-close}
  \|\mathcal D-\mathcal D_*\|_{C^i}\le C_i\bar r
@@ -100,7 +133,27 @@ identity for $T$, and their circle quotient is the original
 $\SO(3)$ quotient. Along $\mathfrak B$ their moment map has
 the quadratic term given by their fibre structure.
 \end{lemma}
+
+The correspondence with Section \ref{sec:slices} is recorded
+below. The fixed locus is now the base of a bundle, and the
+normal space varies with $l$.
+\begin{center}
+\begin{tabular}{lp{.40\textwidth}l}
+\toprule
+Object here & Geometric role & Earlier counterpart\\
+\midrule
+$T$, $N(T)$ & Circle and residual symmetry & $H$\\
+$\mathfrak B$ & Smooth base representing rank one & $\EE_0$\\
+$F_l$, $\mathfrak F$ & Normal fibre and its family & $\EE_1$, $\EE$\\
+$\mu_T$ & Flat circle moment map & $\mu_0$\\
+$j$, $c^\flat$ & Slice inclusion and correction & $\iota$, $c$\\
+$(g^\flat,I_a^\flat,\mu^\flat)$ & Reduced metric and moment map & Slice data\\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \begin{proof}
+\emph{Solving the transverse equations.}
 The derivative in $c^\flat$ of the flat $\mathfrak p$ equations
 is the map with components $g(I_al,c_j^\flat)$, $j=2,3$.
 It is invertible with inverse of size $C/|l|$. Equation
@@ -111,6 +164,7 @@ Every nearby zero in the singular-value slice has this form,
 by the same uniqueness. For the product data the correction is
 identically zero.
 
+\emph{Transporting the quaternionic structure.}
 Let $Q_z=\mathfrak pz+\sum_a\widehat I_a\mathfrak pz$
 and let $p_z$ project off it. We check that $p_zdj$ is
 invertible. In the flat model its possible kernel consists of
@@ -137,6 +191,7 @@ data. Define
 They differ from the corresponding model data by
 $O(\bar r)$ in scaled $C^i$ norm.
 
+\emph{The remaining moment map and the quotient.}
 At a zero $z$, the four quaternionic orbit subspaces are
 orthogonal. Since the $\mathfrak p$ moment equations vanish
 identically on the image of $j$, the component of $djv$ in
@@ -151,6 +206,7 @@ $\mathfrak t$ identifies the quotient metric, and the same
 horizontal lift identifies the complex structures. No reduction
 by a subgroup with Lie algebra $\mathfrak p$ is asserted.
 
+\emph{The quadratic normal term.}
 It remains to verify the Hessian along $f=0$. There
 $\mu^\flat=d\mu^\flat=0$. Let $Q_b$ be its quadratic term.
 It is $O(\bar r)$-close to $\mu_T$ after scaling. Every
@@ -173,6 +229,14 @@ quadratic-term assertion.
 \end{proof}
 
 \subsection{The chart near rank one}
+The reduced data can now be normalised by the same construction
+as the original slice. Two facts from the preceding lemma are
+essential: the derivative moment identity holds on the entire
+reduced zero set, and the quadratic term along its base is the
+moment map of the reduced fibre structure. The latter permits the
+linear fibre isometry; the former ensures that the resulting
+complex structures descend to the quotient.
+
 Over a ball of radius $c|l_0|$ in $\mathfrak B$, identify
 $F_{l_0}$ with $F_l$ by the polar part of orthogonal projection
 $(\HH l_0)^\perp\to(\HH l)^\perp$, tensored with $e^\perp$.
@@ -231,6 +295,13 @@ the normal and tangential decomposition needed in
 Definition \ref{def:two-level}.
 
 \subsection{Joining the charts}
+It remains to extend the inner chart over the rest of a
+neighbourhood of the vertex. On the overlap, the distance to rank
+one is a fixed positive proportion of the radius. The action is
+therefore uniformly free after rescaling, and the stronger edge
+estimate reduces to the ordinary $O(r)$ estimate. This is the
+region in which we can interpolate the two constructions.
+
 Choose $c_3>0$ smaller than a quarter of the radius of validity
 of the inner construction. On the cone $\rho_T>c_3s_1/2$
 the action is free near the flat zero set. The construction of
@@ -279,7 +350,9 @@ Consequently the map
 \]
 is well defined and carries $Y_0$ into $Y$.
 
-We verify that it is a quotient chart. In the outer region and
+\emph{Injectivity and openness.}
+We verify that the constructed map is a quotient chart, rather
+than merely a parametrisation into the zero set. In the outer region and
 overlap its unscaled estimates are
 \[
  |\Xi-\id|\le Cr^2,\qquad |d\Xi-1|\le Cr,
@@ -298,6 +371,7 @@ open away from the vertex stratum, by the local diffeomorphism
 property on the free part and the explicit inner product charts
 near rank one.
 
+\emph{Surjectivity near the vertex.}
 It is also locally onto. On a small set
 $|u|<t_1$, $0<r<t_2$, the estimate $|\Xi-\id|\le Cr^2$
 and preservation of $u$ make the map proper over

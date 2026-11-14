@@ -1,5 +1,15 @@
 \section{Harmonic representatives and intersection cohomology}\label{sec:hodge}
 
+The domain analysis has produced operators preserving the space of
+square integrable harmonic forms on the regular locus. To use those
+operators in the algebraic criterion, we need to identify the
+cohomology they represent and the action of ordinary classes on it.
+We will also identify the integration pairing; in Section
+\ref{sec:monodromy} this pairing, together with the Hodge star,
+will control the part of monodromy commuting with the LLV algebra.
+These compatibilities are established through the local de Rham
+complex, so that they refer to the same canonical identification.
+
 \subsection{The local de Rham complex}
 Let $\mathcal L^j$ be the sheaf of forms $u$ on $M_{\reg}$ for
 which $u$ and its weak differential are square integrable on the
@@ -8,6 +18,13 @@ Lipschitz partitions of unity make these sheaves fine. Since $M$
 is compact, their global complex is $\Dom d_{\max}$.
 Quasi-isometric regular-locus diffeomorphisms identify these
 complexes of sheaves.
+
+The local calculation has a simple topological interpretation.
+A punctured cone remembers the cohomology of its link in every
+degree. Extending square integrable forms across the vertex
+retains precisely the degrees below the middle threshold. That
+truncation, with its natural attaching map, is the local condition
+defining middle-perversity intersection cohomology.
 
 We recall explicitly the two local calculations needed. For an
 interval factor $t$, write $u=\alpha+dt\wedge\beta$ and choose
@@ -34,18 +51,43 @@ $Z_{\reg}$; regularisation identifies the smooth and weak
 de Rham complexes used in the two formulations. In particular,
 the equality degree belongs to the vanishing range.
 
-At a point of the vertex stratum of a product cone, the local
-cohomology sheaf of $\mathcal L^\bullet$ is therefore
-$H^j_{(2)}(Z)$ up to $(f-1)/2$ and zero above it. These
-identifications are locally constant along the stratum. On
-deleting that stratum the local complex is an interval product
-with $Z$, so its derived direct image has stalk
-$H^j_{(2)}(Z)$ in every degree. The attaching map is the identity
-in the lower range, because all the identifications are induced
-by the same pullback. One may compute these stalks either from
-locally $L^2$ sections or from globally $L^2$ sections on smaller
-truncated neighbourhoods: the restriction maps between the two
-systems interleave, hence have the same direct limit.
+\begin{lemma}\label{lem:local-intersection}
+Let $P=\RR^N\times C(Z)$, with $Z$ as in
+\eqref{eq:cone-cohomology}, and let
+$\iota:P\setminus(\RR^N\times\{0\})\hookrightarrow P$.
+At a point of the vertex stratum, the stalk of the $j$th
+cohomology sheaf of $\mathcal L^\bullet$ is $H^j_{(2)}(Z)$
+for $j\le(f-1)/2$ and is zero above this degree. These
+cohomology sheaves are locally constant along the stratum.
+The stalk of $\mathcal H^j(R\iota_*\iota^*\mathcal L^\bullet)$
+is $H^j_{(2)}(Z)$ in every degree, and the attaching map from
+$\mathcal H^j(\mathcal L^\bullet)$ is the identity under these
+identifications for $j\le(f-1)/2$.
+\end{lemma}
+\begin{proof}
+Choose shrinking neighbourhoods $Q_\epsilon\times C_\epsilon(Z)$,
+where $Q_\epsilon$ is a cube in the smooth factor. Restriction
+from the globally $L^2$ complex on such a neighbourhood to the
+locally $L^2$ complex, and then to the globally $L^2$ complex
+on a smaller neighbourhood, interleaves their direct systems.
+They therefore compute the same stalks. The interval homotopy
+removes $Q_\epsilon$, and \eqref{eq:cone-cohomology} computes
+the remaining cone cohomology. Below the threshold the
+identifications all come from pullback of closed forms on $Z$;
+they are compatible with restriction and constant in the smooth
+coordinate. This also proves local constancy.
+
+After deleting the vertex stratum, the neighbourhood is
+$Q_\epsilon\times(0,\epsilon)\times Z$. On compact radial
+subintervals its metric is uniformly equivalent to the product
+metric. The locally $L^2$ complex is consequently the product
+complex there, and the interval homotopy gives $H^j_{(2)}(Z)$
+in every degree. Fineness computes the derived direct image by
+this complex. In the lower degrees the map from the unpunctured
+neighbourhood is induced by the same link pullback, so it is the
+identity. Thus the stalk calculation also identifies the
+attaching morphism.
+\end{proof}
 
 \begin{theorem}\label{thm:T1}
 There is a canonical isomorphism
@@ -63,6 +105,7 @@ $\mathcal A^\bullet\otimes\mathcal L^\bullet\to
 under $\Phi$.
 \end{theorem}
 \begin{proof}
+\emph{Identifying the intersection complex.}
 On the regular locus, $\mathcal L^\bullet$ resolves $\RR$.
 Along $\Sigma\setminus\Delta$ use the imported chart with
 link $Z_1$, and along $\Delta$ the chart with link $Z_2$.
@@ -70,7 +113,7 @@ Proposition \ref{prop:models} supplies finite-dimensional
 cohomology of the latter. The real codimensions are $8k-4$
 and $12k$, so the middle perversities are $4k-3$ and $6k-1$.
 These are exactly $(f-1)/2$ for the respective links.
-The preceding local calculation verifies the constructibility,
+Lemma \ref{lem:local-intersection} verifies the constructibility,
 stalk vanishing, and attachment axioms of the intersection
 complex \cite[\S3.3, Theorem~3.5]{gm83}. With the convention
 that its restriction to the regular locus is in degree zero,
@@ -80,6 +123,7 @@ that its restriction to the regular locus is in degree zero,
 The identification restricts to the identity on the constant
 sheaf there and is canonical. Fineness gives $\Phi$.
 
+\emph{Closed range and harmonic representatives.}
 Finite-dimensional intersection cohomology implies closed
 ranges in this Hilbert complex. Here is the functional-analytic
 point. For a closed differential $d$ whose algebraic range has
@@ -94,6 +138,11 @@ Hilbert complex theory then give the orthogonal decomposition
 $L^2=\cH\oplus\operatorname{ran}d\oplus\operatorname{ran}\delta$
 and uniqueness of harmonic representatives.
 
+\emph{The action of ordinary cohomology.}
+An abstract isomorphism of vector spaces would not yet identify
+wedge product by a K\"ahler form with its Lefschetz operator on
+$\IH$. For that purpose we use a resolution of the constant
+sheaf whose sections can multiply the $L^2$ complex.
 For $\mathcal A^\bullet$, normality makes sufficiently small
 regular loci connected, so the degree-zero kernel is $\RR$.
 In a product-cone chart, simultaneous radial contraction $m_t$
@@ -109,12 +158,30 @@ resolution. Wedge product with a bounded form and bounded weak
 derivative preserves $\mathcal L^\bullet$ and satisfies the
 Leibniz rule by local regularisation on the regular locus.
 The resulting pairing extends scalar multiplication by $\RR$.
-Replacing $\RR$ by this fine resolution computes the canonical
-hypercohomology module action \cite[II.7]{bredon97}; this proves
+Over a field, tensoring the quasi-isomorphism
+$\RR_M\to\mathcal A^\bullet$ with
+$\mathcal L^\bullet$ preserves quasi-isomorphisms. The composite
+\[
+ \RR_M\otimes\mathcal L^\bullet
+ \longrightarrow\mathcal A^\bullet\otimes\mathcal L^\bullet
+ \longrightarrow\mathcal L^\bullet
+\]
+is the identity scalar action. The terms of these resolutions are
+fine, so their hypercohomology products are computed on global
+sections. Wedge product therefore gives precisely the canonical
+$H^\bullet(M;\RR)$ module action \cite[II.7]{bredon97}.
+Naturality under $\mathcal L^\bullet\simeq\IC_M$ proves
 the asserted compatibility.
 \end{proof}
 
 \subsection{The pairing}
+The module identification concerns multiplication by bounded
+representatives. Two arbitrary $L^2$ forms need not have an
+$L^2$ wedge product, but their product in complementary degrees
+is integrable. Integration thus gives the duality pairing by a
+different argument. We verify its normalisation on the regular
+locus before invoking the uniqueness of intersection duality.
+
 Put $m=\dim_{\RR}M=16k+4$ and let $\mathbb D_M$ denote the
 dualising complex. We use the unsigned intersection pairing
 $Q:\IH^j\times\IH^{m-j}\to\RR$. Poincar\'e duality for

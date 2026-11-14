@@ -1,6 +1,17 @@
 \section{Domains on K\"ahler cones}\label{sec:cones}
 
 \subsection{The domain condition}
+On a compact smooth K\"ahler manifold, integration by parts passes
+the K\"ahler identities from smooth forms to harmonic forms. On the
+regular locus of a singular space, the same formulas hold locally,
+but the regular locus is incomplete. A form and its weak derivative
+may be square integrable without the form being approximable in
+graph norm by forms supported away from the singularities. The
+choice of closed domain is therefore part of the Hodge theory.
+We begin by distinguishing the two domain questions that will enter
+the proof: Stokes for the exterior derivative, and invariance under
+the complex structure for the joint domain of $d$ and $\delta$.
+
 A singular Riemannian space will mean a locally compact metric space
 $X$ with dense smooth regular locus, whose Riemannian length metric
 is the restriction of its distance. Forms are complex valued and
@@ -19,14 +30,24 @@ $\delta_{\max}=d_{\max}^*$, and Hilbert complex theory
 \]
 self-adjoint, with
 $\|Du\|^2=\|du\|^2+\|\delta u\|^2$.
-The domain $V(X)$ is called the Gaffney domain. It need not be the
-minimal domain of $D$. Bounded Lipschitz functions preserve all the
-domains just defined.
+The domain $V(X)$ is called the Gaffney domain. Its norm measures
+the form together with its exterior derivative and codifferential.
+Even when the Stokes property holds for $d$, this joint domain need
+not be the minimal domain of $D$: approximation for $d$ alone does
+not give simultaneous approximation for $d$ and $\delta$.
+Bounded Lipschitz functions preserve all the domains just defined.
 
 Suppose $g$ is K\"ahler on the regular locus. Write $L$ for wedge
 product by its K\"ahler form, $\Lambda=L^*$, $W$ for the Weil
 operator, and $d^c=W^{-1}dW$, $\delta^c=W^{-1}\delta W$,
-$D^c=W^{-1}DW$. The identities on smooth forms are
+$D^c=W^{-1}DW$. More explicitly, if $\pi^{p,q}$ denotes the
+orthogonal projection to type $(p,q)$, then
+\[
+ W=\sum_{p,q}i^{p-q}\pi^{p,q}.
+\]
+Thus $W$ is a bounded pointwise isometry. Boundedness on $L^2$
+does not imply that it preserves $V$: that assertion also involves
+the weak derivatives of $Wu$. The identities on smooth forms are
 \begin{equation}\label{eq:kahler-id}
  [L,\delta]=d^c,\quad [\Lambda,d]=-\delta^c,\quad
  [L,d]=[\Lambda,\delta]=0,\quad D^2=(D^c)^2,
@@ -38,6 +59,22 @@ The Gaffney domain is \emph{Weil invariant} on $\Omega\subset X$
 if $Wu\in V(X)$ for every $u\in V(X)$ compactly supported in
 $\Omega$.
 \end{definition}
+
+This condition supplies the missing link with Dolbeault theory.
+The operators $d^c$ and $\delta^c$, together with $d$ and
+$\delta$, recover $\partial$, $\bar\partial$ and their formal
+adjoints by linear combinations. Weil invariance consequently
+allows the real and complex differential identities to be used on
+the same forms, with all their terms in $L^2$.
+
+The difficulty is confined to the additional forms in the Gaffney
+domain. On smooth forms compactly supported in the regular locus,
+\eqref{eq:kahler-id} and integration by parts give
+$\|D^cu\|=\|Du\|$. Since $DW=WD^c$, $W$ preserves the
+minimal domain of $D$ by graph closure. To prove invariance of $V$
+we must also control forms with allowable asymptotic behaviour at
+the singular set. On a cone these are described by the radial
+equations below.
 
 The condition is local by Lipschitz partitions of unity. It is
 equivalent to $d^cu,\delta^cu\in L^2$ for those forms. Since $V$
@@ -155,8 +192,22 @@ Every resulting exponent satisfies $|s+1/2|\ge|j-m/2|$.
 \subsection{The critical modes}
 Suppose now the cone is K\"ahler for a dilation-invariant complex
 structure and that its Gaffney domain is Weil invariant away from
-the vertex. The exponents which can obstruct a cutoff at zero lie
-in $-1/2<s\le1/2$.
+the vertex. There are two different integrability thresholds.
+For a nonzero homogeneous coefficient $r^s(a;b)$,
+\[
+ \|u\|_{r<\epsilon}^2=C\int_0^\epsilon r^{2s}\,dr,
+ \qquad
+ \|u/r\|_{r<\epsilon}^2=C\int_0^\epsilon r^{2s-2}\,dr.
+\]
+The first is finite for $s>-1/2$, the second for $s>1/2$.
+A radial cutoff has derivative of size $1/r$ on its transition
+annulus, so the second integral is the one that controls the
+usual cutoff argument. The interval $-1/2<s\le1/2$ consists
+of square integrable modes for which that argument gives no
+control. A closed and coclosed mode in this interval can still
+belong to $V$: its radial and tangential derivatives cancel.
+The next lemma treats these modes directly, including the
+logarithmic threshold $s=1/2$.
 
 \begin{lemma}\label{prop:slow}
 Every homogeneous closed and coclosed form with exponent in
@@ -202,6 +253,31 @@ For smooth links this is the cone result of
 the preceding lemma and the same scalar radial estimates.
 We include those estimates because no spectral gap at the critical
 exponents is assumed.
+
+To see explicitly why the paired equations matter, fix a coexact
+link eigenform $\alpha$ of degree $j-1$, normalised to have norm
+one, and put $\beta=\lambda^{-1/2}d_Z\alpha$. In the
+degree-$j$ block
+\[
+ u=(b(r)\beta;a(r)\alpha),\qquad \gamma=j-f/2,
+\]
+the two possibly nonzero differential coefficients are
+\begin{equation}\label{eq:coupled-energy}
+ \begin{split}
+ \|du\|^2+\|\delta u\|^2
+ =\int_0^R\left|b'+\frac{\gamma b-\sqrt\lambda a}{r}\right|^2dr
+ +\int_0^R\left|-a'+\frac{(\gamma-1)a+\sqrt\lambda b}{r}\right|^2dr.
+ \end{split}
+\end{equation}
+For an indicial solution, $a=r^s$ and
+$b=\sqrt\lambda(s+\gamma)^{-1}r^s$, both expressions
+vanish. If $-1/2<s\le1/2$, the individual terms proportional
+to $a/r$ and $b/r$ fail to be square integrable. Thus the energy
+of a complete block can be finite even though the energies of its
+two slots separately are infinite. Multiplying by a fixed cutoff
+equal to one near zero produces a form in $V$; only derivatives
+of that cutoff contribute to its energy. This is the reason for
+the choice of spectral truncations in the proof.
 
 Decompose a pure-degree form into tangential-coexact/radial-exact
 terms, tangential-exact/radial-coexact terms, and harmonic-link
