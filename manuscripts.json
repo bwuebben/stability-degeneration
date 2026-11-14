@@ -1223,11 +1223,11 @@
     "website_slug": "l2-hodge-llv",
     "pages": 38,
     "download_filename": "l2-hodge-llv.pdf",
-    "pdf_sha256": "13979837a9127be515683359ba27d15db8ff003a3e6fa0ec1eb9305f6760bb2d",
-    "source_sha256": "c3be5ff858a46d732927a84a97fb2a62dcbfc9fddfd7547861989fc1ab5ebcca",
+    "pdf_sha256": "3d59af24d312461c83f0d7b87826aa1d482ddb8e8443b7498a6f8d62235cfbbb",
+    "source_sha256": "f26262336142f64aed201d47910553f523f55ca85f392433743b3caf1ee50fd6",
     "source_files_sha256": {
-      "main.tex": "c3be5ff858a46d732927a84a97fb2a62dcbfc9fddfd7547861989fc1ab5ebcca",
-      "l2-hodge-llv.pdf": "13979837a9127be515683359ba27d15db8ff003a3e6fa0ec1eb9305f6760bb2d",
+      "main.tex": "f26262336142f64aed201d47910553f523f55ca85f392433743b3caf1ee50fd6",
+      "l2-hodge-llv.pdf": "3d59af24d312461c83f0d7b87826aa1d482ddb8e8443b7498a6f8d62235cfbbb",
       "sections/00_abstract.tex": "6aea124b33acd953c8f057d2503036ccac4dfb1864438b714a6d10e0abbec0f0",
       "sections/01_introduction.tex": "1dc0c79dce7a63d0a8f512c496fdd224b51af85086103674bfdfd5834030b8d3",
       "sections/02_algebra.tex": "666a8e085046d5e56b7c1dca1bf53a8cd61c344b945b243323ebd491ede75f05",
@@ -1245,14 +1245,14 @@
       "code/output/characters.txt": "c416a7b626786bb4826d4443fc986d9be79e777c5fe22eae4a149a0930ae58de",
       "code/output/restricted-character.txt": "18e5942010f0884aa1ef3acce143b070173ba8f45094ca6822cc0724650e5928",
       "code/t4_restricted_character.py": "7885eb4f1c688b50d9a9987fbc3e6cad96176df928c4bb85ab79625a3d512683",
-      "README.md": "255a94aa75517c51b516d8c6a7bfcb8781f9b9065ed68c4fbc06b39e412e7c78"
+      "README.md": "3f1c73195ed2c01438de2193e5d71b0bd58224576bc32cff15ed1f6f6bfa1706"
     },
     "archive": {
-      "id": 24229948,
-      "doi": "10.5281/zenodo.24229948",
+      "id": 24230354,
+      "doi": "10.5281/zenodo.24230354",
       "conceptdoi": "10.5281/zenodo.24227116",
-      "record_url": "https://zenodo.org/records/24229948",
-      "created": "2026-11-14T20:35:26.684860+00:00"
+      "record_url": "https://zenodo.org/records/24230354",
+      "created": "2026-11-14T20:46:50.353534+00:00"
     },
     "number": 34,
     "directory": "34_l2_hodge_llv"
