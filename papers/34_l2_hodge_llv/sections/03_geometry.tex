@@ -1,0 +1,121 @@
+\section{The metric and its local models}\label{sec:geometry}
+
+We record the geometric input before analysing differential forms.
+The Hermitian--Einstein connections below are taken with respect to
+the Ricci-flat K\"ahler metric in $A$ on $S$. The determinant is
+fixed, and gauge transformations are divided by the scalar action.
+
+\begin{recollection}[\cite{wue15,wue20}]\label{thm:imported}
+Under \eqref{eq:family}, the following statements hold.
+\begin{enumerate}
+\item Every semistable sheaf of vector $2v_0$ is locally free.
+Each point of $M$ has a unique slope-polystable representative:
+a stable bundle, a sum $E_1\oplus E_2$ of nonisomorphic stable
+bundles of vector $v_0$, or $F\oplus F$. These are respectively
+the strata $M_{\reg}$, $\Sigma\setminus\Delta$ and $\Delta$.
+\item The gauge-theoretic hyperk\"ahler quotient is homeomorphic
+to $M$. Its regular-locus metric, with a fixed normalisation, is
+the $L^2$ metric $g$ on harmonic representatives. Its first
+K\"ahler form represents a positive multiple of an ample
+determinant class, and $\omega_2+i\omega_3$ is a nonzero multiple
+of the holomorphic symplectic form.
+\item At a polystable bundle $E$, put
+$\EE=H^1(S,\End E)$ and let $H$ be its unitary automorphism
+group modulo scalars. For the flat hyperk\"ahler quotient
+$\EE\hkr_0H$, with metric $g_0$ and radius $r$, there is a
+biholomorphism of germs $\Psi_E$ onto $(M,[E])$ such that
+\begin{equation}\label{eq:imported-metric}
+ (1-C_Er^2)g_0\le\Psi_E^*g\le(1+C_Er^2)g_0.
+\end{equation}
+No estimate for derivatives is included in this assertion.
+\item The metric completion of $(M_{\reg},g)$ is $M$.
+\end{enumerate}
+\end{recollection}
+
+The bundle statement is \cite[Proposition~2.1]{wue20}; the
+quotient, metric and chart statements are
+\cite[Theorem~1.1]{wue15} and
+\cite[Theorem~1.1, Lemma~5.2 and \S5.3]{wue20}; completion is
+\cite[Proposition~4.2]{wue20}. The holomorphic quotient model is
+provided by \cite{as18,bz19}. The hyperk\"ahler structure is the
+gauge-theoretic one of \cite{hklr87,itoh88}, using
+\cite{donaldson85,uy86}. These are imported results. In particular,
+the analytic conclusions of this paper retain their dependence on
+the companion metric theorems, which are preprints.
+
+\subsection{The two transverse cones}
+At $E=E_1\oplus E_2$ with $E_1\not\cong E_2$, stability and Serre
+duality give $\Hom(E_1,E_2)=\Ext^2(E_1,E_2)=0$. Riemann--Roch
+then gives $\dim_{\CC}\Ext^1(E_1,E_2)=2k$. The effective
+stabiliser is a circle, and its slice decomposes as
+\[
+ \EE=\EE^H\oplus\EE_1,
+ \qquad \EE^H\cong\CC^{4k+4},\qquad
+ \EE_1\cong T^*\CC^{2k}.
+\]
+The circle has weights $1,-1$ on the two summands. Its punctured
+zero fibre is connected and the action on it is free. Thus
+\begin{equation}\label{eq:C1}
+ C_1=C(Z_1)=T^*\CC^{2k}\hkr_0\U(1)
+\end{equation}
+has smooth compact link of real dimension $8k-5$. The map
+$(z,\zeta)\mapsto z\otimes\zeta$ identifies its complex analytic
+space with the closure of the minimal nilpotent orbit of
+$\mathfrak{sl}_{2k}$.
+
+At $E=F\otimes\CC^2$, the effective group is $PU(2)=\SO(3)$.
+The real harmonic deformation space of $F$ is $\HH^{k+1}$, and
+the decomposition of Hermitian $2\times2$ matrices into scalar
+and traceless parts gives
+\begin{equation}\label{eq:C2}
+ \EE=\HH^{k+1}\oplus(\RR^3\otimes\HH^{k+1}),\qquad
+ C_2=C(Z_2)=(\RR^3\otimes\HH^{k+1})\hkr_0\SO(3).
+\end{equation}
+The group acts on the first factor of the tensor product. Regard
+$n\in\RR^3\otimes\HH^{k+1}$ as a map from $\RR^3$ to
+$\HH^{k+1}$. Its stabiliser is trivial in rank at least two,
+a circle in rank one, and $\SO(3)$ at zero. Rank-one tensors
+belong to the zero fibre. Their quotient is
+$(\HH^{k+1}\setminus\{0\})/\{\pm1\}$, the only singular
+stratum of $C_2\setminus\{0\}$.
+
+At $n=e\otimes l$ the slice to the quaternionic orbit directions is
+\begin{equation}\label{eq:rank-one-slice}
+ (e\otimes\HH^{k+1})\oplus
+ \big(e^\perp\otimes(\HH l)^\perp\big).
+\end{equation}
+The stabilising circle fixes the first summand and acts on the
+second as on $T^*\CC^{2k}$. The transverse cone is therefore $C_1$.
+The link $Z_2$ has real dimension $12k-1$ and singular locus
+$\mathbb{RP}^{4k+3}$, of codimension $8k-4$.
+
+\subsection{Topology and the two distances}
+The quotient charts give a stratified pseudomanifold with filtration
+$M\supset\Sigma\supset\Delta$. Here the real codimensions are
+$8k-4$ and $12k$, both even. To see the local product description
+on $Z_2$, choose a rank-one direction $e\otimes l_0$. Near it the
+largest singular value has a unique eigenline. Moving this line to
+$\RR e$ writes a tensor as $e\otimes l+f$, where the zero moment
+map equations impose $f\in e^\perp\otimes(\HH l)^\perp$ and
+the circle moment map equation on $f$. A quaternionic trivialisation
+of $(\HH l)^\perp$ gives local coordinates $(l,[f])$, with
+\[
+ r^2=|l|^2+|f|^2.
+\]
+On $r=1$, the coordinates $(l/|l|,[f]/|l|)$ identify a neighbourhood
+with a ball in the rank-one stratum times a truncated $C_1$.
+This also proves the claimed link description. The biholomorphic
+charts $\Psi_E$ preserve the filtration because they preserve the
+singular locus and then its singular locus.
+
+Two distances will enter the analysis near $\Delta$:
+\[
+ r=\operatorname{dist}(\,\cdot\,,\hbox{vertex stratum}),
+ \qquad \rho=\operatorname{dist}(\,\cdot\,,\hbox{entire singular set}).
+\]
+They are comparable away from the rank-one directions but need not
+be comparable near them. Estimate \eqref{eq:imported-metric}
+controls $L^2$ de Rham cohomology, whose domains are invariant under
+quasi-isometry. To control $d+\delta$ we will construct different
+charts, generally nonholomorphic, with first-order agreement in
+the appropriate directions.

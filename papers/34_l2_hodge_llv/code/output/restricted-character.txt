@@ -1,0 +1,14 @@
+building characters ...
+  chi built, 97 dominant weights, dim 138065600  (0.0s)
+  full peeling done (0.2s)
+PASS  full Cartan: chi decomposes as the module (29)
+PASS  restriction preserves dimension
+  restricted peeling done (0.2s)
+PASS  PREDICTION: restricted peeling returns the printed decomposition
+PASS  PREDICTION: remainder zero, no ambiguous leading weight
+PASS  C1: V(1,1,1)+230V(1) and 21V(1,1)+1750V(0) agree on the 2-torus
+PASS  C1: ... but differ on the corank-one torus
+PASS  C2: B_2, V(1,1)+5V(0) and 3V(1,0) agree on the torus mu_2=0
+PASS  C3: a highest weight of length 12 is reported as ambiguous
+ALL PASS
+time 0.2s

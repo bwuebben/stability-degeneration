@@ -1,0 +1,97 @@
+\section{Monodromy and the spin representation}\label{sec:monodromy}
+
+The degree-zero part of the LLV algebra contains the rational
+subalgebra
+\[
+ \mathfrak s\cong\mathfrak{so}(H^2(M;\QQ),q_M).
+\]
+Its representation on $\IH^\bullet(M;\QQ)$ integrates to the
+simply connected spin group. Let $G$ be its image as a connected
+rational algebraic group. The bracket formulas of Section
+\ref{sec:algebra} give an isogeny
+\[
+ G\longrightarrow\SO(H^2(M;\QQ),q_M),\qquad \sigma\longmapsto\bar\sigma,
+\]
+such that
+\begin{equation}\label{eq:spin-conjugacy}
+ \sigma L_x\sigma^{-1}=L_{\bar\sigma x},\qquad
+ \sigma\Lambda_x\sigma^{-1}=\Lambda_{\bar\sigma x},\qquad
+ \sigma h=h\sigma.
+\end{equation}
+For a nondegenerate complex subspace $W\subset H^2(M;\CC)$,
+write $G_W$ for the connected subgroup of $G_{\CC}$ integrating
+$\mathfrak{so}(W)$, acting trivially on $W^\perp$ in $H^2$.
+
+\begin{proposition}\label{prop:spin}
+Suppose a group $\Gamma$ acts on $\IH^\bullet(M;\QQ)$ by graded
+automorphisms preserving the intersection pairing and a lattice.
+Suppose also that it acts on $H^2(M;\QQ)$ by isometries preserving
+a lattice, and that these actions satisfy
+$\gamma L_x\gamma^{-1}=L_{\gamma x}$. A subgroup of finite
+index of $\Gamma$ acts on $\IH$ through $G(\QQ)$, compatibly
+with its action on $H^2$. If the complex Zariski closure of its
+action on $H^2$ contains $\SO(W)$, the closure of its action on
+$\IH$ contains $G_W$.
+\end{proposition}
+\begin{proof}
+First $G$ preserves the unsigned intersection pairing $Q$.
+The module action and Proposition \ref{prop:pairing} give
+$L_x^\dagger=L_x$ for the $Q$-adjoint, whereas $h^\dagger=-h$.
+Taking adjoints of $[L_x,\Lambda_x]=h$ shows that
+$\Lambda_x^\dagger$ is another degree-$-2$ lowering operator,
+so $\Lambda_x^\dagger=\Lambda_x$. Hence all brackets
+$[L_x,\Lambda_y]$ are $Q$-skew, and so is $\mathfrak s$.
+
+Let $G_{\ZZ}$ be the stabiliser in $G(\QQ)$ of the chosen
+lattice in $\IH$. It is arithmetic; its image under the
+isogeny is commensurable with the integral orthogonal group
+\cite[(5.4.5), (9.4.5)]{morris15}. After passing to a subgroup
+$\Gamma_1$ of finite index, every action on $H^2$ has a lift
+in $G_{\ZZ}$. Consider the group of pairs
+\[
+ \widetilde\Gamma_1=\{(\gamma,\sigma):\gamma\in\Gamma_1,
+ \ \sigma\in G_{\ZZ},\ \bar\sigma=\gamma|_{H^2}\}.
+\]
+The operator $c(\gamma,\sigma)=\gamma\sigma^{-1}$ preserves
+the lattice and $Q$ and commutes with all $L_x$. It commutes
+with $h$ and therefore with the uniquely determined
+$\Lambda_x$. It centralises the whole LLV algebra and $G$.
+In particular $c$ is a homomorphism on the group of pairs.
+
+Transport these operators to harmonic forms. By the star
+formula after \eqref{eq:positive-pairing}, every $c$ commutes
+with $*$. It preserves the positive inner product
+$Q(\alpha,*\beta)$. The intersection of a compact orthogonal
+group with a lattice stabiliser is finite. Thus the image of
+$c$ is finite, and the image in $\Gamma_1$ of $\ker c$ has
+finite index. Its action on $\IH$ is exactly the required
+action through $G(\QQ)$.
+
+For the last assertion take the Zariski closure of that
+finite-index subgroup in $G_{\CC}$. Its projection contains
+$\SO(W)$ because finite index preserves the identity component
+of an algebraic closure. The isogeny has finite kernel; its
+inverse image over $\SO(W)$ has connected component $G_W$.
+A closed subgroup projecting onto $\SO(W)$ has the same Lie
+algebra over this subgroup and contains $G_W$.
+\end{proof}
+
+Apply this proposition to locally trivial monodromy. Parallel
+transport preserves the integral structures and the module action.
+It also preserves the intersection pairing: on the regular parts
+the complex orientations vary continuously in a locally trivial
+family, so the oriented fundamental classes are a flat section.
+Naturality of intersection duality then preserves $Q$. Thus
+\begin{equation}\label{eq:monodromy-spin}
+ \Mon'\subset G(\QQ),\qquad [\Mon:\Mon']<\infty,
+ \qquad \overline{\Mon}^{\,\mathrm{Zar}}\supset G_{\CC}.
+\end{equation}
+The last inclusion uses the density on $H^2$ established in
+Section \ref{sec:algebra}.
+
+The proof is the harmonic-inner-product argument of
+\cite[Theorem~3.5]{verbitsky13}; for moduli of $K3^{[n]}$ type
+compare \cite[Lemma~4.13]{markman08}. It applies unchanged to
+compact smooth hyperk\"ahler manifolds with their ordinary
+cohomology and Poincar\'e pairing. This smooth version will be
+used together with Proposition \ref{prop:spin} below.

@@ -1,0 +1,355 @@
+\section{The first representation calculations}\label{sec:representations}
+
+Write $\VV_\lambda$ for the irreducible complex representation
+of $\mathfrak{so}(25)$ with highest weight $\lambda$ in the
+orthogonal coordinates of $B_{12}$. Cohomology will sometimes
+be centred by subtracting the complex dimension from its degree.
+In this convention $h$ is the grading operator.
+
+\subsection{The ten-dimensional comparison}
+For $v_0^2=2$ and a $2v_0$-generic polarisation, the singular
+moduli space has the O'Grady symplectic resolution
+$\widetilde M$. This case is outside \eqref{eq:family} and
+requires none of our domain analysis.
+
+\begin{proposition}\label{prop:og10}
+In the ten-dimensional case,
+\[
+ \IH^\bullet(M;\CC)=
+ \VV_{(5)}\oplus\VV_{(3)}\oplus\VV_{(2,1)}\oplus\VV_{(1)}.
+\]
+\end{proposition}
+\begin{proof}
+The decomposition theorem calculated in \cite{dcrs21} gives
+\[
+ H^\bullet(\widetilde M)=\IH^\bullet(M)
+ \oplus H^\bullet(\Sym^2M_0)[-2]
+ \oplus H^\bullet(M_0)[-6],
+\]
+compatibly with the $H^\bullet(M)$ action. Each summand has
+grading symmetric about the middle and is preserved by the
+raising operators. It is therefore preserved by their lowering
+operators \cite[Lemma~3.4]{fsy22}.
+
+The diagonal restriction $H^2(M)\to H^2(M_0)$ is a
+similitude. It is equivariant for locally trivial monodromy,
+so its pullback of the Beauville--Bogomolov form is a scalar
+multiple of $q_M$ by density. This multiple is nonzero on an
+ample class. Since both spaces have dimension $23$, restriction
+is an isomorphism. Thus the last summand is the LLV module
+$\VV_{(2)}$ of $K3^{[2]}$, and the preceding summand is
+$\Sym^2\VV_{(2)}$, with the indicated degree shifts.
+
+By \cite{gklr22}, the $\mathfrak{so}(26)$ module of
+$\widetilde M$ is $\VV_{(5)}\oplus\VV_{(2,2)}$.
+Restriction to $\mathfrak{so}(25)$, the stabiliser of the
+exceptional class, is
+\[
+ \VV_{(5)}\oplus\VV_{(4)}\oplus\VV_{(3)}\oplus2\VV_{(2)}
+ \oplus\VV_{(1)}\oplus\VV_{(0)}\oplus\VV_{(2,2)}\oplus\VV_{(2,1)}.
+\]
+Subtract
+$\Sym^2\VV_{(2)}=\VV_{(4)}\oplus\VV_{(2,2)}\oplus
+\VV_{(2)}\oplus\VV_{(0)}$ and the last $\VV_{(2)}$.
+Complete reducibility gives the stated decomposition.
+\end{proof}
+
+\subsection{A character in dimension eighteen}
+Return to a Picard-rank-one quartic $S$, $v_0=(5,A,0)$,
+and $M=M_A(2v_0)$. Then $M_0$ is of type $K3^{[3]}$.
+Centre all gradings. Transport the LLV modules of Hilbert
+schemes to $\mathfrak{so}(25)$ by complex similitudes of
+their second cohomologies; their characters are independent
+of these choices.
+
+\begin{lemma}\label{lem:character}
+The virtual character
+$\operatorname{ch}H^\bullet(K3^{[9]})-
+\operatorname{ch}\bigwedge^2H^\bullet(K3^{[3]})$
+is the character of the module $\mathcal R$ whose nonzero
+multiplicities are listed in Table \ref{tab:representation}.
+Its dimension is $138065600$.
+\end{lemma}
+
+\begin{table}[ht]
+\centering
+\caption{The irreducible summands of $\mathcal R$. Omitted
+coordinates of each highest weight are zero.}
+\label{tab:representation}
+\begin{tabular}{crcrcr}
+\toprule
+$\lambda$&multiplicity&$\lambda$&multiplicity&$\lambda$&multiplicity\\
+\midrule
+$(9)$&1&$(4,2)$&1&$(2,2)$&1\\
+$(7,1)$&1&$(4,1,1)$&1&$(2,1,1)$&1\\
+$(7)$&1&$(4,1)$&2&$(2,1)$&3\\
+$(6,1)$&1&$(4)$&2&$(2)$&3\\
+$(6)$&1&$(3,2)$&2&$(1,1,1)$&1\\
+$(5,2)$&1&$(3,1)$&4&$(1,1)$&2\\
+$(5,1)$&1&$(3)$&4&$(1)$&4\\
+$(5)$&3&$(2,2,1)$&1&&\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}
+Let $z_1,\ldots,z_{12}$ be the standard torus coordinates
+for type $B_{12}$. The Hilbert-scheme character formula
+of \cite[Theorem~1.2(1)]{gklr22} is
+\begin{equation}\label{eq:Hilbert-character}
+ \begin{split}
+ 1+q\sum_{i=1}^{12}(z_i+z_i^{-1})
+ +\sum_{n\ge2}\operatorname{ch}H^\bullet(K3^{[n]})q^n
+ =\prod_{m\ge1}\prod_{i=1}^{12}
+ \frac{1}{(1-q^mz_i)(1-q^mz_i^{-1})}.
+ \end{split}
+\end{equation}
+The convention here centres degrees. The identity is in the
+formal power series ring over the $B_{12}$ representation ring;
+its coefficient of $q$ is written separately because $K3^{[1]}$
+does not have the same LLV algebra as $K3^{[n]}$ for $n\ge2$.
+Expand through $q^9$, and use
+\[
+ \operatorname{ch}\bigwedge^2 V(z)
+ =\tfrac12\big((\operatorname{ch}V(z))^2-
+                    \operatorname{ch}V(z^2)\big).
+\]
+Successive subtraction of highest-weight characters gives the
+multiplicities in the table. These are finite weight computations:
+the positive roots are $e_i\pm e_j$ for $i<j$ and $e_i$,
+and Freudenthal's recurrence determines each character from
+its highest weight. The accompanying code performs this
+calculation with exact integers. At $z=1$, the result is
+\[
+ 143184000-\binom{3200}{2}=138065600,
+\]
+also the sum of the Weyl dimensions in the table. Replacing
+the exterior square by the symmetric square gives negative
+irreducible multiplicities. Repeating the calculation with
+$K3^{[5]}$ and $K3^{[2]}$ gives Proposition \ref{prop:og10}.
+\end{proof}
+
+The character calculation is independent of whether it describes
+$\IH(M)$. To state the geometric inputs separately, let
+$\mathrm{BPS}_v$ be the BPS cohomology of one-dimensional
+semistable sheaves of vector $v$ on a K3 surface, with the
+normalisations of \cite{dhsm22}. We use the following named
+hypotheses when indicated:
+\begin{enumerate}
+\item[(H1)] On a positive primitive ray $\ZZ_{>0}w$, the BPS
+Lie algebra is freely generated by the intersection cohomologies
+of the moduli spaces on that ray.
+\item[(H2)] The graded BPS cohomology is independent of the
+Euler characteristic when the first Chern class is fixed.
+\end{enumerate}
+These are the BPS and $\chi$-independence statements of the
+preprints \cite{dhsm22,dhksv26,gwz26}. Under them, the degree
+$2w$ part of the free Lie algebra and deformation equivalence
+\cite[Theorem~1.7]{pr23} give a graded-vector-space isomorphism
+\begin{equation}\label{eq:graded-comparison}
+ H^\bullet(K3^{[9]})\cong\IH^\bullet(M)
+                \oplus\bigwedge^2H^\bullet(K3^{[3]}).
+\end{equation}
+Indeed the primitive-vector moduli space on the ray has type
+$K3^{[3]}$; changing the Euler characteristic of the doubled
+vector to an odd integer makes it primitive and gives type
+$K3^{[9]}$. The primitive cohomology is even, so its Lie bracket
+contribution is the ordinary exterior square.
+
+Consequently (H1)--(H2) imply vanishing of odd intersection
+cohomology and the following Betti numbers through the middle:
+\begin{equation}\label{eq:Betti}
+\begin{array}{c|rrrrr}
+ j&0&1&2&3&4\\\hline
+ \dim\IH^{2j}&1&23&300&2876&22427\\[2pt]
+ j&5&6&7&8&9\\\hline
+ \dim\IH^{2j}&150053&887710&4727859&22432662&81617778
+\end{array}
+\end{equation}
+The other numbers follow from
+$\dim\IH^{36-2j}=\dim\IH^{2j}$. This is still a statement
+about graded dimensions, not the LLV decomposition.
+
+\subsection{Recovering a representation from a restricted character}
+Choose coordinates $e_1,\ldots,e_{12}$ on a Cartan subalgebra
+of $\mathfrak{so}(25)$, with $e_1(h)=2$ and $e_i(h)=0$
+for $i>1$. Let $\mathfrak t'=\ker e_{12}$.
+
+\begin{lemma}\label{lem:restriction}
+Suppose two finite-dimensional $\mathfrak{so}(25)$ modules
+$V,V'$ have equal characters on $\mathfrak t'$. If every
+highest weight $\nu$ of $V'$ has $\nu_{11}=0$, then
+$V\cong V'$.
+\end{lemma}
+\begin{proof}
+Use lexicographic order. Every weight $\alpha$ of
+$\VV_\lambda$ satisfies $\alpha\le\alpha^+\le\lambda$,
+where $\alpha^+$ is obtained by sorting its absolute
+coordinates. The second inequality follows from the positive
+root order. The largest restricted highest weights of $V$
+and $V'$ therefore have identical first eleven coordinates.
+If they are $\lambda$ and $\nu$, the assumption gives
+$\lambda_{11}=\nu_{11}=0$, and dominance forces
+$\lambda_{12}=\nu_{12}=0$; hence $\lambda=\nu$.
+
+No other weight can contribute to this largest restricted
+weight. For if $\alpha$ has those first eleven coordinates,
+then $\alpha\le\alpha^+\le\lambda'\le\nu$ for its
+constituent highest weight $\lambda'$. The first eleven
+coordinates of $\alpha^+$ must agree with $\nu$. Its
+eleventh and twelfth coordinates are zero, so
+$\alpha^+=\lambda'=\nu$ and $\alpha_{12}=0$.
+The multiplicity of the restricted weight is therefore exactly
+the multiplicity of $\VV_\nu$. Subtract this common summand
+and continue by induction.
+\end{proof}
+
+The hypothesis is necessary: the sums of
+$(25-2i)\bigwedge^i\CC^{25}$ over even and odd $i$, for
+$0\le i\le12$, have the same restricted character. Nor do
+the degree and Hodge gradings alone distinguish representations:
+$\VV_{(1,1,1)}\oplus230\VV_{(1)}$ and
+$21\VV_{(1,1)}\oplus1750\VV_{(0)}$ agree on that
+two-dimensional torus. These examples also test the scope
+of the character argument.
+
+\subsection{The Hodge-theoretic hypothesis}
+Let $(S',\beta)$ be a Picard-rank-one K3 surface of degree four,
+fix $\chi_0\ne0$, and put
+\[
+ w=(0,\beta,\chi_0),\quad v'=(0,2\beta,2\chi_0+1),\qquad
+ M'=M_\beta(2w),\quad N'=M_\beta(w),\quad X'=M_\beta(v').
+\]
+The last two spaces have types $K3^{[3]}$ and $K3^{[9]}$,
+and $M'$ is locally trivially deformation equivalent to $M$
+\cite[Theorem~1.7]{pr23}. The additional hypothesis is:
+\begin{enumerate}
+\item[(H3)] For every such $(S',\beta)$ there is an isomorphism
+of graded rational Hodge structures, with usual degrees,
+\begin{equation}\label{eq:H3}
+ H^\bullet(X')\cong\IH^\bullet(M')\oplus
+                 \bigwedge^2H^\bullet(N')[-6](-3).
+\end{equation}
+Here $[-6]$ raises degrees by six, and $(-3)$ is the Tate twist.
+\end{enumerate}
+We do not prove (H3). Its proposed source is the mixed-Hodge-module
+form of the BPS theorem
+\cite[Theorems~9.2 and~10.1, Corollary~3.6,
+Propositions~6.10 and~B.14]{dhsm22} and the independence theorem
+\cite[Theorem~5.1]{dhksv26}. The first splits the BPS object
+of $2w$ into the intersection object and the antisymmetric
+direct-sum contribution from $N'\times N'$. The second
+identifies the perverse direct images under the support maps
+for different Euler characteristics as mixed Hodge modules.
+Saito's decomposition theorem \cite[(4.5.4)]{saito90} then
+gives \eqref{eq:H3}; weights impose the displayed twist.
+This deduction uses the mixed-Hodge-module assertion of the
+second theorem, whose maps are constructed by Hecke operators.
+Equality of Hodge numbers, as supplied by \cite{gwz26}, is
+insufficient for what follows.
+
+\begin{theorem}\label{thm:conditional}
+Assume (H3). For the eighteen-dimensional moduli space in
+\eqref{eq:family}, $\IH^\bullet(M;\CC)\cong\mathcal R$
+as a module over its LLV algebra.
+\end{theorem}
+\begin{proof}
+Choose a smooth algebraic family of degree-four polarised K3
+surfaces with arithmetic monodromy on $\beta^\perp$
+\cite[Corollary~6.4.7]{huybrechts16}. Form the three relative
+moduli spaces with vectors $2w,w,v'$. Restrict to the open
+set where the polarisation is \emph{general with respect to}
+these vectors in the sense of \cite[Definition~2.8]{pr23};
+the required openness is \cite[Proposition~2.14]{pr23}.
+This is the specific condition used here, and is not an
+identification with every wall-based genericity convention.
+The open set contains the Picard-rank-one fibres.
+
+Shrink further to a smooth connected dense open base $T^\circ$
+where the singular family is topologically locally trivial
+with its Whitney strata \cite[Corollaire~(5.1)]{verdier76}
+and the two primitive families are smooth. Intersection
+cohomology then forms a local system with its integral
+structure, pairing and ordinary-cohomology action. In each
+degree it underlies a polarizable pure variation after a
+further shrinking. To justify that its fibre structure is the
+usual intersection Hodge structure, apply Saito's projective
+direct-image theorem and generic variation theorem
+\cite[Th\'eor\`emes~5.3.1 and~5.4.3]{saito88} to the
+intersection Hodge module of the total space. Base change
+\cite[(4.4.3)]{saito90} identifies its restriction to a fibre;
+local triviality identifies the underlying perverse sheaf
+with the intersection complex. Its restriction to the regular
+locus is the constant variation, which determines the
+intersection extension and its Hodge structure, with the
+degree shifts and possible Tate normalisation.
+
+Choose a Hodge-generic point of this base whose surface has
+Picard rank one. Such points exist outside a countable union
+of proper analytic subsets. Let $\Gamma=\pi_1(T^\circ)$.
+Removing proper complex subvarieties from a smooth base
+surjects on its original fundamental group, so the image of
+$\Gamma$ on $\beta^\perp$ remains arithmetic and Zariski
+dense in $\SO(\beta^\perp_{\CC})$.
+
+The Mukai isometries for $N'$ and $X'$ identify their second
+cohomologies with $w^\perp$ and $(v')^\perp$
+\cite[Theorem~1.7]{markman08}. These identifications are
+locally constant \cite{ogrady97,markman08,opr24}. Their common
+subspace $\beta^\perp$ has dimension $21$, and monodromy is
+trivial on its two-dimensional complements, consisting of
+vectors $(r,a\beta,s)$. The diagonal restriction
+$H^2(M')\to H^2(N')$ is a similitude by the argument in
+Proposition \ref{prop:og10}. This assertion may be checked
+using the full locally trivial monodromy of $M'$; that group
+also transports its intrinsic diagonal stratum and acts
+isometrically on $H^2(N')$. Restriction is a morphism of local
+systems in our chosen family. It identifies a corresponding
+nondegenerate $21$-dimensional subspace $W\subset H^2(M')$
+with $\beta^\perp_{\CC}$ and identifies their $\Gamma$ actions.
+
+Transport Proposition \ref{prop:spin} from $M$ to $M'$;
+apply its smooth version to $N'$ and $X'$. A finite-index
+subgroup of $\Gamma$ acts on their cohomologies through
+the corresponding spin images. All three actions project
+to the same action on $\beta^\perp$. Their fibre product
+over $\SO(\beta^\perp_{\CC})$ is a finite cover of that
+group; its identity component is the diagonal image of
+$\operatorname{Spin}(\beta^\perp_{\CC})$. Density of
+the projection implies that this diagonal image is the
+connected monodromy group on
+\[
+ \mathcal V=\IH^\bullet(M')\oplus
+           \bigwedge^2H^\bullet(N')\oplus H^\bullet(X').
+\]
+
+Degree by degree these are polarizable pure variations; their
+direct sum is a graded-polarizable variation with several
+weights. Andr\'e's monodromy theorem
+\cite[Lemma~4, Theorem~1]{andre92} puts its connected monodromy
+group in the derived group of the generic Mumford--Tate group.
+It therefore fixes every rational tensor of type $(p,p)$:
+after a Tate twist such a tensor is Hodge, and the derived
+group acts trivially on Tate structures. The components of
+the isomorphism \eqref{eq:H3}, extended by zero to operators
+on the indicated direct sum, are such tensors. Hence (H3)
+is equivariant for this diagonal spin group at the chosen
+generic point. No isomorphism of variations is assumed.
+
+Include $h$ with a Cartan subalgebra of $\mathfrak{so}(W)$.
+The resulting subalgebra is $\mathfrak t'=\ker e_{12}$.
+Extend the identifications on $W$ to complex similitudes of
+the full second cohomologies; the complementary quadratic
+spaces have dimension two, so such extensions exist.
+After centring the gradings, \eqref{eq:H3} now says that
+the restricted character of $\IH(M')$ is that of
+$H(K3^{[9]})-\bigwedge^2H(K3^{[3]})$, hence that of
+$\mathcal R$. Every highest weight in Table
+\ref{tab:representation} has at most three nonzero entries.
+Lemma \ref{lem:restriction} identifies the full modules.
+Parallel transport from $M'$ to $M$ completes the proof.
+\end{proof}
+
+This last argument uses (H3) at a Hodge-generic fibre only.
+It does not identify Saito's Hodge decomposition with the
+type decomposition of harmonic forms for the metric on $M$.

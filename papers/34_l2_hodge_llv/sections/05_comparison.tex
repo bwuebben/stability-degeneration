@@ -1,0 +1,259 @@
+\section{Transferring the Gaffney domain}\label{sec:comparison}
+
+The domain of $d$ depends only on the quasi-isometry class of a
+metric; that of $\delta$ does not. We now give the additional
+estimates which permit the cone theorem to be transferred to the
+moduli space. All statements about domains in an open set concern
+forms compactly supported in that set.
+
+\subsection{Weighted interior regularity}
+Put $\rho(x)=\operatorname{dist}(x,X_{\sing})$. We require the
+following elementary form of bounded geometry: there are charts on
+balls of radius comparable to $\rho(x)$ in which the rescaled
+metric $\rho(x)^{-2}g$ is uniformly elliptic with uniformly bounded
+first derivatives, and the measure is locally doubling, with uniform
+constants. More precisely, charts from the Euclidean unit ball
+contain $\mathbb B(x,\kappa\rho(x))$ in their half-ball image and
+have image in $\mathbb B(x,\rho(x)/2)$, for fixed $\kappa>0$.
+The bounds are understood on each region under discussion.
+Products of a compact smooth manifold with a smooth-link cone have
+this property.
+
+\begin{lemma}\label{lem:weighted}
+Under these bounds, forms in $V$ with support in a fixed compact
+set satisfy
+\begin{equation}\label{eq:weighted}
+ \|\rho\nabla u\|\le C(\|\rho Du\|+\|u\|).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Interior elliptic regularity first gives $u\in W^{1,2}_{\rm loc}$
+on the regular locus. In a rescaled chart the principal coefficients
+of $d+\delta$ are uniformly elliptic and Lipschitz, and its
+zeroth-order coefficients are bounded. Freezing the principal
+coefficients on sufficiently small balls and using the Fourier
+estimate gives a uniform interior G\aa rding inequality. Rescaling
+back gives
+\[
+ \rho(x)^2\int_{\mathbb B(x,\kappa\rho(x))}|\nabla u|^2
+ \le C\int_{\mathrm{chart}}(\rho(x)^2|Du|^2+|u|^2).
+\]
+Since $\rho$ is Lipschitz, its values are comparable on such a
+chart. A maximal disjoint family of smaller balls has enlarged
+balls of bounded overlap by doubling. Summation proves
+\eqref{eq:weighted}.
+\end{proof}
+
+\begin{definition}\label{def:adapted}
+A chart from a model $(X_0,g_0,I_0)$ to $(X,g,I)$ is
+\emph{adapted} if it is a homeomorphism, a diffeomorphism on regular
+loci, and its pullback $(g',I')$ satisfies
+\begin{equation}\label{eq:adapted}
+ cg_0\le g'\le c^{-1}g_0,\quad
+ |g'-g_0|+|I'-I_0|\le C\rho,\quad
+ |\nabla^0g'|+|\nabla^0I'|\le C.
+\end{equation}
+The model is K\"ahler on its regular part; all norms use $g_0$.
+An adapted metric chart requires only the metric bounds.
+\end{definition}
+
+\begin{theorem}\label{thm:comparison}
+Suppose the model has the bounded geometry above. An adapted
+metric chart identifies its Gaffney domain with that of $g'$, with
+equivalent graph norms on a fixed compact support. If the chart is
+adapted also for the complex structures, Weil invariance transfers
+from the model to $g'$.
+\end{theorem}
+\begin{proof}
+The same rescaled charts give bounded geometry for $g'$, and the
+two connections differ by a bounded tensor. Hence
+\eqref{eq:weighted} holds for both metrics with $\nabla^0$.
+Let $S=*_{0}^{-1}*'$ on the graded exterior bundle. Then
+\[
+ \delta'=S^{-1}\delta_0S,\qquad |S-1|\le C\rho,
+ \qquad |\nabla^0S|\le C.
+\]
+For a local orthonormal frame $e_i$, differentiation gives
+\begin{equation}\label{eq:star-commutator}
+ \delta_0(Su)-S\delta_0u
+ =-\sum_i\iota_{e_i}(\nabla^0_{e_i}S)u
+   -\sum_i[\iota_{e_i},S]\nabla^0_{e_i}u.
+\end{equation}
+The right side is bounded by $C(|u|+\rho|\nabla^0u|)$.
+The last sum is a first-order term and is essential. Estimate
+\eqref{eq:weighted} controls it from either graph norm, proving
+both domain inclusions and their norm estimates.
+
+For the complex structures put $Q=W_0^{-1}W'$. The Weil operator
+on degree $j$ is the $j$th exterior power of the complex structure
+on covectors. Thus $|Q-1|\le C\rho$ and $|\nabla^0Q|\le C$.
+The Leibniz formulas for $d(Qu)$ and $\delta_0(Qu)$ contain the
+same bounded terms and commutators of size $O(\rho)$ multiplying
+$\nabla^0u$. They show $Q V(g_0)\subset V(g_0)$. Weil invariance
+of the model then gives $W'u=W_0Qu\in V(g_0)=V(g')$.
+\end{proof}
+
+The vanishing in \eqref{eq:adapted} cannot be omitted. On the flat
+cone of angle $4\pi$, use $z=w^2$ and $g_0=|dz|^2$.
+A cutoff of $dw$ is closed and coclosed near zero and belongs to
+$V(g_0)$. For $g_b=|dz|^2+\operatorname{Re}(b\,dz^2)$,
+$0<|b|<1$, the metric difference is parallel, but
+$\delta_{g_b}dw$ has homogeneity $-3/2$ in $z$ and is not $L^2$.
+Thus even a parallel metric perturbation can change the domain.
+
+\subsection{Product estimates}
+\begin{lemma}\label{thm:product}
+Let $B$ be a closed Riemannian manifold and let $Y$ satisfy the
+Stokes property. Then $B\times Y$ satisfies that property and
+\begin{equation}\label{eq:tangent}
+ \|\nabla_Bu\|\le C(\|Du\|+\|u\|).
+\end{equation}
+If both factors are K\"ahler on their regular loci and $Y$ has
+Weil invariance locally, so does the product. If $Y=C(Z)$ with
+admissible link, the graph-norm unit ball on a fixed compact
+support is precompact in $L^2(B\times C(Z))$.
+\end{lemma}
+\begin{proof}
+Let $\mathcal F_\lambda$ be the finite-dimensional eigenspaces of
+the Hodge Laplacian on $B$. They are preserved by $D_B$ and the
+degree sign $s_B$. On the product,
+$D=D_B\otimes1+s_B\otimes D_Y$. Testing weak derivatives against
+an eigenform on $B$ shows that each projection $u_\lambda$ lies
+in $\mathcal F_\lambda\otimes V(Y)$, and
+\begin{equation}\label{eq:product-energy}
+ \|Du_\lambda\|^2=\lambda\|u_\lambda\|^2
+       +\|(1\otimes D_Y)u_\lambda\|^2.
+\end{equation}
+The cross terms cancel because $D_Bs_B=-s_BD_B$ and $D_Y$ is
+self-adjoint. For Stokes, take arbitrary $v\in\Dom d_{\max}$
+and $w\in\Dom\delta_{\max}$, rather than assuming either lies
+in $V$. Project both onto a finite sum of the spaces
+$\mathcal F_\lambda$. The projections commute with $d_B$
+and $\delta_B$. Their coefficient equations place the
+coefficients of $v$ in $\Dom d_{Y,\max}$ and those of $w$
+in $\Dom\delta_{Y,\max}$. Stokes on $Y$ and integration by
+parts on $B$ give the adjoint identity for the projections.
+The projections of $v,dv,w,\delta w$ converge in $L^2$,
+so the identity holds on the full maximal domains.
+Summing \eqref{eq:product-energy} and applying the elliptic
+estimate on $B$ proves \eqref{eq:tangent}.
+
+If $B$ is K\"ahler, $W_B$ preserves each $\mathcal F_\lambda$.
+Use \eqref{eq:WI-estimate} for $Y$ on a fixed compact support in
+\eqref{eq:product-energy}. The resulting estimates for
+$(W_B\otimes W_Y)u_\lambda$ sum, proving Weil invariance.
+For compactness, the terms of large $\lambda$ have uniformly
+small norm by \eqref{eq:product-energy}; finitely many remaining
+terms are compact by Lemma \ref{lem:compact-cone}.
+\end{proof}
+
+These statements apply locally when the smooth factor is not
+compact. For the K\"ahler assertion one can extend a small
+coordinate ball to a compact K\"ahler manifold: write its
+potential as $|z|^2+O(|z|^3)$, cut off the cubic remainder at
+radius $\epsilon$, and place it in a flat torus. The change in
+the Levi form is $O(\epsilon)$ and preserves positivity. For
+metric estimates alone a cutoff extension of the metric suffices.
+
+\subsection{Comparison at two strata}
+Let $X_0=B\times C(Z)$ have an edge away from its vertex stratum.
+Assume bounded geometry at scale $\rho$ and Weil invariance on
+$X_0$. At each edge point $y$, put $r_y=r(y)$. We require
+\emph{uniform edge charts} with product model
+$P_y=B_y\times C(Z')$, where $Z'$ is a fixed smooth closed
+odd-dimensional link. Their images contain
+$\mathbb B(y,\kappa r_y)$ and lie in
+$\mathbb B(y,r_y/2)$. Their domains are closed under radial
+contraction of the cone factor. After rescaling by $r_y^{-1}$,
+the smooth factors have uniform first-order geometry and the
+charts satisfy \eqref{eq:adapted} with uniform constants. For
+the complex structures the smooth factors need only carry
+uniformly controlled almost complex structures. In these charts
+$\rho$ is comparable to the cone radius near $y$.
+
+\begin{definition}\label{def:two-level}
+A chart at the vertex stratum is \emph{adapted to both strata}
+if it is a homeomorphism and regular-locus diffeomorphism, and
+its pullback tensors satisfy
+\begin{equation}\label{eq:two-level}
+ cg_0\le g'\le c^{-1}g_0,\quad
+ |g'-g_0|+|I'-I_0|\le Cr,\quad
+ |\nabla^0g'|+|\nabla^0I'|\le C,
+\end{equation}
+and, in every specified edge chart lying in its domain,
+\begin{equation}\label{eq:edge-split}
+ g'-g_0=t_y+e_y,\qquad I'-I_0=t'_y+e'_y.
+\end{equation}
+Here $t_y,t'_y$ are tensors pulled back from $B_y$,
+$|t_y|+|t'_y|\le Cr_y$, $|\nabla t_y|+|\nabla t'_y|\le C$,
+$|t_y|<1/2$, and $|e_y|+|e'_y|\le C\rho$.
+\end{definition}
+
+\begin{theorem}\label{thm:two-level}
+Under these assumptions the chart identifies the Gaffney domains
+and transfers Weil invariance on a smaller neighbourhood of the
+vertex stratum.
+\end{theorem}
+\begin{proof}
+Shrink to the points $x$ with $r(x)<r_*/2$ and
+$\mathbb B(x,2r(x))$ contained in the chart domain, where $r_*$
+is the edge-chart radius bound. This still contains a neighbourhood
+of each point of the vertex stratum. Bounded geometry and
+\eqref{eq:weighted} hold for $g_0$ and $g'$ by
+\eqref{eq:two-level}.
+
+For a form $w$ supported in a ball of radius $c r_y$ in an edge
+chart, Theorem \ref{thm:comparison} and
+\eqref{eq:tangent}, rescaled, give
+\begin{equation}\label{eq:edge-tangent}
+ r_y\|\nabla_{B_y}w\|\le
+ C(r_y\|D_0w\|+\|w\|).
+\end{equation}
+The same bound holds with $D'$: compare $g'$ with the product
+metric $(g_{B_y}+t_y)\oplus g_{C(Z')}$.
+Their difference is $O(\rho/r_y)$ with derivative $O(1/r_y)$.
+This follows from \eqref{eq:two-level}, the derivative bounds
+on $t_y$, and the bounds in the model edge chart; it does not
+require an additional derivative assumption on $e_y$.
+
+Again let $S=*_{0}^{-1}*'$. Its derivative is bounded and
+$|S-1|\le Cr$. Where $\rho\ge c r$, the first-order sum in
+\eqref{eq:star-commutator} is controlled by
+$C\rho|\nabla^0u|$. In an edge chart, smooth dependence of the
+Hodge star on its metric and \eqref{eq:edge-split} give
+\begin{equation}\label{eq:base-star}
+ S=S_{B_y}\otimes1+O(\rho),\qquad |S_{B_y}-1|\le Cr_y.
+\end{equation}
+To check the remainder, compare the pair of metrics with
+$(g_{P_y},g_{P_y}+t_y)$. The error is bounded by
+$|e_y|+|g_0-g_{P_y}||t_y|\le C\rho$; the second product is
+$O((\rho/r_y)r_y)$. Contraction in a normal direction commutes
+with $S_{B_y}\otimes1$. The first-order sum is consequently
+bounded pointwise by
+\begin{equation}\label{eq:edge-error}
+ C\big(r_y|\nabla_{B_y}u|+\rho|\nabla^0u|+|u|\big).
+\end{equation}
+Changing connections costs $O(1/r_y)$, multiplied by $O(r_y)$,
+which explains the last term.
+
+Cover $\{\rho<cr\}$ by edge balls of radii comparable to $r_y$
+with bounded overlap, using doubling. Their cutoffs have derivative
+$O(1/r_y)$. Apply \eqref{eq:edge-tangent} to the cutoffs of $u$
+and sum their squared estimates; cutoff errors are bounded by
+$C\|u\|^2$. Equation \eqref{eq:weighted} controls the normal
+term in \eqref{eq:edge-error}. Thus the right side of
+\eqref{eq:star-commutator} is $L^2$, bounded by the graph norm
+of either $D_0$ or $D'$. This proves both domain inclusions.
+The choice of smaller neighbourhood ensures that the charts used
+in this cover lie inside the original chart domain: a nearest
+singular point to $x$ with $\rho(x)<cr(x)$ is an edge point $y$
+with $r_y\asymp r(x)$.
+
+Finally $Q=W_0^{-1}W'$ has the same properties as $S$ and the
+same decomposition \eqref{eq:base-star}. In a product chart the
+Weil operator is a tensor product, and its dependence on $I$ is
+polynomial. Applying the preceding estimates to its commutators
+with wedge product and contraction gives $QV(g_0)\subset V(g_0)$.
+The last step of Theorem \ref{thm:comparison} transfers Weil
+invariance.
+\end{proof}

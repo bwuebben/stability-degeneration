@@ -1,0 +1,348 @@
+\section{A chart at the diagonal}\label{sec:diagonal}
+
+The construction of Section \ref{sec:slices} cannot be applied
+directly at $\Delta$: the $\SO(3)$ representation has rank-one
+zeros with circle stabiliser. We construct a chart near that
+rank-one locus and a second chart away from it, then join them
+through the free part. The normalisation near rank one is what
+ensures the stronger normal estimate in \eqref{eq:edge-split}.
+
+\subsection{Scaling the slice}
+Use Proposition \ref{prop:slice} at $p\in\Delta$ and perform
+only the fibrewise linear normalisation of Lemma
+\ref{lem:normalise}, which requires no freeness. In
+\[
+ \EE=\EE_0\oplus(\RR^3\otimes\HH^{k+1}),\qquad y=(u,n),
+ \qquad r=|n|,
+\]
+the resulting data $\mathcal D=(\widehat g,\widehat I_a,
+\widehat\mu)$ have flat normal blocks along $\EE_0$, satisfy
+\eqref{eq:slice-moment} on their zero set, and obey
+\[
+ \widehat\mu=\mu_0+O(r^3),\qquad
+ \widehat\mu|_{\EE^T}=0
+\]
+for every maximal circle $T\subset\SO(3)$. The latter follows
+from $\mathfrak{so}(3)^T=\mathfrak t$ in Proposition
+\ref{prop:slice}. Compare with the product data
+\[
+ \mathcal D_*=(g_B\oplus g_{\fl},
+ I_{a,B}\oplus I_a,\mu_0),
+\]
+where $(g_B,I_{a,B})$ is the restriction to $\EE_0$.
+Their quotient is $X_0=(\EE_0,g_B)\times C_2$.
+
+At a normal radius $\bar r>0$, use coordinates
+$(u-u_0,n)/\bar r$ and divide the moment map by $\bar r^2$.
+Smoothness, normal agreement, and the cubic remainder imply
+\begin{equation}\label{eq:scaled-close}
+ \|\mathcal D-\mathcal D_*\|_{C^i}\le C_i\bar r
+\end{equation}
+on fixed-size scaled sets, for every fixed $i$. This includes
+the moment map and its derivatives: every term in its remainder
+has at least three normal factors.
+
+\subsection{Separating the circle stabiliser}
+Fix a unit vector $e\in\RR^3$, its stabiliser $T$, and
+$N(T)\cong O(2)$. Write
+$\mathfrak{so}(3)=\RR e\oplus e^\perp=\mathfrak t\oplus\mathfrak p$.
+For $n:\RR^3\to\HH^{k+1}$ let $s_1\ge s_2\ge s_3$
+be its singular values and put $\rho_T=(s_2^2+s_3^2)^{1/2}$.
+This is the Euclidean distance to rank at most one.
+For a fixed $c_0<1$, the region $\rho_T<c_0s_1$ is
+\begin{equation}\label{eq:svd-slice}
+ \SO(3)\times_{N(T)}
+ \{(u,l,n''):l\ne0,\ n''\in e^\perp\otimes l^{\perp_{\RR}},
+                         \ |n''|<c_0|l|\}.
+\end{equation}
+Indeed the largest eigenline of the Gram matrix is unique there.
+Move it to $\RR e$; the remaining ambiguity is precisely $N(T)$.
+In these coordinates $n=e\otimes l+n''$, $s_1=|l|$ and
+$\rho_T=|n''|$.
+
+Decompose the last normal space as
+\[
+ e^\perp\otimes l^{\perp_{\RR}}
+ =F_l\oplus(e^\perp\otimes\operatorname{Im}(\HH)l),
+ \qquad F_l=e^\perp\otimes(\HH l)^\perp.
+\]
+The group $T$ acts on $F_l$ as on $T^*\CC^{2k}$. Let
+$\mathfrak B=\EE_0\times(\HH^{k+1}\setminus\{0\})$ and let
+$\mathfrak F$ be the bundle of these $F_l$ with $|f|<c_0|l|$.
+If $f=e_2\otimes f_2+e_3\otimes f_3$, the flat equations
+along $\mathfrak p$ impose orthogonality to $I_al$, and the
+remaining equations are
+\[
+ \mu_T(f)_a=g_{\fl}(I_af_2,f_3)=0.
+\]
+Consequently, with $Y_0=\EE_0\times\mu_0^{-1}(0)$,
+\begin{equation}\label{eq:zero-slice}
+ (Y_0\cap\{\rho_T<c_0s_1\})/\SO(3)
+ =\{(b,f)\in\mathfrak F:\mu_T(f)=0\}/N(T).
+\end{equation}
+On this part of $X_0$, the distance to the singular set equals
+$\rho_T$. The Euclidean distance is a lower bound for the
+quotient length, while the path
+$(u,e\otimes l+tf)$ lies in $Y_0$ and attains that bound.
+
+\begin{lemma}\label{lem:reduced-data}
+For $c_0<1/\sqrt2$ and $r$ sufficiently small, the equations
+along $\mathfrak p$ determine a smooth equivariant correction
+$c^\flat(b,f)\in e^\perp\otimes\operatorname{Im}(\HH)l$.
+The map
+$j(b,f)=(u,e\otimes l+f+c^\flat(b,f))$ carries the zero set
+of $\mu^\flat=(\widehat\mu\circ j)^{\mathfrak t}$ to $Y$
+in the slice \eqref{eq:svd-slice}. Projection off the
+quaternionic span of $\mathfrak p j(b,f)$ induces smooth
+quaternionic Hermitian tensors $(g^\flat,I_a^\flat)$ on
+$\mathfrak F$. On $\{\mu^\flat=0\}$ they satisfy the moment
+identity for $T$, and their circle quotient is the original
+$\SO(3)$ quotient. Along $\mathfrak B$ their moment map has
+the quadratic term given by their fibre structure.
+\end{lemma}
+\begin{proof}
+The derivative in $c^\flat$ of the flat $\mathfrak p$ equations
+is the map with components $g(I_al,c_j^\flat)$, $j=2,3$.
+It is invertible with inverse of size $C/|l|$. Equation
+\eqref{eq:scaled-close} and the implicit function theorem give
+$c^\flat$, with scaled $C^i$ norm $O(\bar r)$.
+It vanishes at $f=0$ since $\widehat\mu$ does on $\EE^T$.
+Every nearby zero in the singular-value slice has this form,
+by the same uniqueness. For the product data the correction is
+identically zero.
+
+Let $Q_z=\mathfrak pz+\sum_a\widehat I_a\mathfrak pz$
+and let $p_z$ project off it. We check that $p_zdj$ is
+invertible. In the flat model its possible kernel consists of
+tangent vectors of the form
+\[
+ \dot l=\alpha_2f_3-\alpha_3f_2,\qquad
+ \dot f_2=\alpha_3l,\qquad \dot f_3=-\alpha_2l
+ \quad(\alpha_2,\alpha_3\in\HH).
+\]
+Differentiating $f_j\perp\HH l$ gives
+\[
+ (|\alpha_2|^2+|\alpha_3|^2)|l|^2
+ \le2|f|^2(|\alpha_2|^2+|\alpha_3|^2).
+\]
+Thus the kernel is zero for the stated $c_0$. Dimensions agree:
+$Q_z$ has real dimension eight. Homogeneity and compactness
+give a uniform inverse at scale $|l|$, and
+\eqref{eq:scaled-close} preserves invertibility for the actual
+data. Define
+\[
+ g^\flat(v,w)=\widehat g(p_zdjv,p_zdjw),\qquad
+ I_a^\flat=(p_zdj)^{-1}\widehat I_a p_zdj.
+\]
+They differ from the corresponding model data by
+$O(\bar r)$ in scaled $C^i$ norm.
+
+At a zero $z$, the four quaternionic orbit subspaces are
+orthogonal. Since the $\mathfrak p$ moment equations vanish
+identically on the image of $j$, the component of $djv$ in
+$Q_z$ lies in $\mathfrak pz$. It is orthogonal to
+$\widehat I_a\mathfrak tz$. Equivariance therefore gives
+\[
+ \langle d\mu_a^\flat(v),\xi\rangle
+ =g^\flat(I_a^\flat\xi(b,f),v)\quad(\xi\in\mathfrak t).
+\]
+Minimising the metric first over $\mathfrak p$ and then over
+$\mathfrak t$ identifies the quotient metric, and the same
+horizontal lift identifies the complex structures. No reduction
+by a subgroup with Lie algebra $\mathfrak p$ is asserted.
+
+It remains to verify the Hessian along $f=0$. There
+$\mu^\flat=d\mu^\flat=0$. Let $Q_b$ be its quadratic term.
+It is $O(\bar r)$-close to $\mu_T$ after scaling. Every
+regular nonzero zero $f$ of $Q_b$ continues to a curve
+$(b,tf(t))$ of zeros of $\mu^\flat$ with $f(0)=f$, by
+dividing the equation by $t^2$ and applying the implicit function
+theorem. Differentiating the preceding moment identity along
+this curve gives
+\[
+ \partial^2\mu_a^\flat(b)(f,f')
+ =g_b^\flat(I_a^\flat\xi f,f').
+\]
+Choose a finite spanning collection of regular zeros of the flat
+circle moment map. Such a collection exists: in $T^*\CC^{2k}$
+the vectors $(\alpha z_i,\beta z_j^*)$ with $i\ne j$ and
+$|\alpha|=|\beta|=1$ are zeros and span the real vector space.
+They persist and still span for $Q_b$. The displayed identity,
+linear in $f$, therefore holds for every $f$, proving the
+quadratic-term assertion.
+\end{proof}
+
+\subsection{The chart near rank one}
+Over a ball of radius $c|l_0|$ in $\mathfrak B$, identify
+$F_{l_0}$ with $F_l$ by the polar part of orthogonal projection
+$(\HH l_0)^\perp\to(\HH l)^\perp$, tensored with $e^\perp$.
+Denote this quaternionic trivialisation by $\vartheta$.
+It commutes with $T$ and has uniform scaled derivatives.
+The fibrewise construction of Lemma \ref{lem:normalise}, now
+with parameter $b=(u,l)$, gives a map $\Xi^\flat$ which
+fixes $\mathfrak B$, takes $\mu_T^{-1}(0)$ to
+$(\mu^\flat)^{-1}(0)$, and normalises the fibre metric and
+all three complex structures there. Its deviation from the
+identity has scaled $C^{1,1}$ norm $O(\bar r)$.
+
+Here is why that estimate is uniform even at $f=0$. After the
+linear fibre isometry, the residual map is
+$\mu_T+R^\flat$, with
+\[
+ |\partial^iR^\flat|\le C_i\bar r|f|^{3-i}
+\]
+in scaled coordinates. The right inverse of $d\mu_T(f)$ has
+size $C/|f|$. The same contraction equation as in Lemma
+\ref{lem:normalise} gives a correction with derivatives
+$C_i\bar r|f|^{2-i}$. Its second derivative is uniformly
+bounded; away from $f=0$ all orders are controlled. Every
+operation is canonical for the invariant data, hence equivariant
+under $N(T)$.
+
+For the model data this map is the identity. Both its reduced
+tensors and the pulled-back actual reduced tensors have the same
+normal blocks along $\mathfrak B$. Their difference is
+$O(\bar r)$ in scaled Lipschitz norm. The relative part of
+Lemma \ref{lem:quotient-estimate} gives
+\begin{equation}\label{eq:inner-estimate}
+ (\Theta^{\rm in})^*g-g_0=t_b+O(\rho_T),\qquad
+ |t_b|\le C\bar r,\quad|\nabla t_b|\le C,
+ \quad|\nabla^0((\Theta^{\rm in})^*g-g_0)|\le C,
+\end{equation}
+and the same assertions for each complex structure. Here
+$\Theta^{\rm in}$ is induced by $j\Xi^\flat$, and $t_b$ is
+pulled back from the smooth rank-one stratum. To check the
+scaling, the relative lemma gives an error
+$C\bar r\widehat\rho$ at unit scale. Since
+$\widehat\rho=\rho_T/\bar r$, it becomes $C\rho_T$.
+A covariant derivative costs $\bar r^{-1}$, cancelling
+the factor $\bar r$.
+
+Applying the absolute part of the same lemma to the model
+reduced tensors gives uniform edge charts
+$B_b\times C_1\to X_0$. The smooth factors may be extended
+to compact factors with uniform scaled geometry by cutoffs.
+The complex structure is extended as an almost complex structure,
+which is all the edge comparison uses. For example, write it
+locally as $A I(b_0)A^{-1}$ with $A$ close to the identity and
+replace $A$ by $1+\chi(A-1)$. The tensors $t_b$ are extended
+with the same cutoff. Thus \eqref{eq:inner-estimate} is exactly
+the normal and tangential decomposition needed in
+Definition \ref{def:two-level}.
+
+\subsection{Joining the charts}
+Choose $c_3>0$ smaller than a quarter of the radius of validity
+of the inner construction. On the cone $\rho_T>c_3s_1/2$
+the action is free near the flat zero set. The construction of
+Lemma \ref{lem:normalise} gives a map $\Xi_2$ with
+$\mu_0\Xi_2=\widehat\mu$ and scaled $C^i$ distance
+$O(\bar r)$ from the identity. Its inverse $\Xi^{\rm out}$
+carries $Y_0$ to $Y$ in this region.
+
+Extend the inner map to ambient slice coordinates by
+\[
+ (b,f,c')\longmapsto
+ (u,e\otimes l+f'+c^\flat(b,f')+c'),
+ \qquad (b,f')=\Xi^\flat(b,f),
+\]
+and then equivariantly using \eqref{eq:svd-slice}. It is
+smooth on the regular zero fibre, fixes the rank-one locus, and
+has scaled $C^i$ distance $O(\bar r)$ from the identity on the
+free overlap. No smoothness of this ambient extension is needed
+at points with $f=0$ and $c'\ne0$.
+On $c_3s_1\le\rho_T\le2c_3s_1$, set
+$\Gamma=\Xi_2\Xi^{\rm in}$. This map preserves $Y_0$.
+
+Choose a cutoff $\varphi$ of $\rho_T/s_1$ equal to one at
+the inner end and zero at the outer end. The naive interpolation
+$x+\varphi(\Gamma x-x)$ need not preserve the zero set.
+Correct it to
+\[
+ G(x)=x+\varphi(\Gamma x-x)+b(x)
+\]
+by requiring
+\begin{equation}\label{eq:glue-moment}
+ \mu_0(G(x))=(1-\varphi)\mu_0(x)+\varphi\mu_0(\Gamma x).
+\end{equation}
+Take $b(x)$ in the image of the right inverse of $d\mu_0(x)$.
+Before correction the error in \eqref{eq:glue-moment} is
+$(\varphi^2-\varphi)\mu_0(\Gamma x-x)$, because $\mu_0$
+is quadratic. It is $O(\bar r^2)$ in scaled $C^i$ norm.
+The right inverse is uniformly bounded at unit scale on this
+free overlap. Contraction therefore gives a unique correction
+with that bound. It vanishes where $\varphi$ is zero or one.
+Consequently the map
+\[
+ \Xi=\Xi^{\rm in}\quad(\rho_T\le c_3s_1),\qquad
+ \Xi=\Xi^{\rm out}G\quad(c_3s_1\le\rho_T\le2c_3s_1),\qquad
+ \Xi=\Xi^{\rm out}\quad(\rho_T\ge2c_3s_1)
+\]
+is well defined and carries $Y_0$ into $Y$.
+
+We verify that it is a quotient chart. In the outer region and
+overlap its unscaled estimates are
+\[
+ |\Xi-\id|\le Cr^2,\qquad |d\Xi-1|\le Cr,
+ \qquad |d^2\Xi|\le C.
+\]
+On each rescaled free annulus it is a local diffeomorphism close
+to the identity. Uniform local injectivity and its small
+displacement imply injectivity on that region. In the inner
+region injectivity follows from the unique singular-value slice
+and the fibrewise coordinate changes. The smaller inner region
+$\rho_T/s_1<c_3/2$ and the region $\rho_T/s_1>c_3$ have
+images separated by $c_3/2-O(r)$ in this ratio; the remaining
+overlap is already covered by the free-annulus argument. The
+equivariant map thus induces an injective quotient map. It is
+open away from the vertex stratum, by the local diffeomorphism
+property on the free part and the explicit inner product charts
+near rank one.
+
+It is also locally onto. On a small set
+$|u|<t_1$, $0<r<t_2$, the estimate $|\Xi-\id|\le Cr^2$
+and preservation of $u$ make the map proper over
+$|u|<t_1$, $0<r<t_2/2$. Its image there is open and closed.
+The target is locally a normal analytic space; a small connected
+neighbourhood with its proper analytic diagonal removed is
+connected. It meets the image, so is contained in it. At $r=0$
+both the map and its inverse extend continuously by the same
+quadratic displacement estimate. Stabilisers are preserved:
+rank-one points are fixed, and the nonzero circle-normal
+coordinate stays nonzero. This proves the homeomorphism and
+regular-locus diffeomorphism assertions.
+
+\begin{theorem}\label{thm:diagonal-chart}
+At every point of $\Delta$, $M$ admits a chart adapted to both
+strata, for all three complex structures, with model
+$(\EE_0,g_B)\times C_2$.
+\end{theorem}
+\begin{proof}
+Compose the quotient map just constructed with the initial fibre
+normalisation and the gauge slice map. In the outer region
+Lemma \ref{lem:quotient-estimate} gives $O(r)$ error and
+bounded first derivative. In the inner region
+\eqref{eq:inner-estimate} gives these bounds and
+\eqref{eq:edge-split}. An edge chart may also meet the outer
+region; there $\rho\ge c_3s_1\asymp r$, so the same smooth
+tensor $t_b$ leaves an error $O(r)=O(\rho)$. Thus the
+decomposition holds throughout each edge chart. Shrinking $r$
+makes the metrics uniformly equivalent and $|t_b|<1/2$.
+The compact extension of the smooth vertex factor is available
+for each K\"ahler structure. All conditions of Definition
+\ref{def:two-level} follow.
+\end{proof}
+
+\begin{corollary}\label{thm:T2}
+The Gaffney domain of $(M_{\reg},g)$ is Weil invariant for
+each $I_a$. Its harmonic forms carry the pointwise
+$\mathfrak{so}(4,1)$ action.
+\end{corollary}
+\begin{proof}
+Proposition \ref{prop:models} gives Weil invariance away from
+$\Delta$ and on the models $B\times C_2$. Theorem
+\ref{thm:two-level} transfers it through Theorem
+\ref{thm:diagonal-chart}. Locality covers $M$. The Stokes
+property was proved in Proposition \ref{prop:models}; apply
+Proposition \ref{prop:global} to the three structures and use
+\eqref{eq:verbitsky}.
+\end{proof}

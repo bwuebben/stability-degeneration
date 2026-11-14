@@ -1,0 +1,222 @@
+\section{The algebra determined by one three-plane}\label{sec:algebra}
+
+We first isolate the algebraic implication of the analytic theorem.
+Let $X$ be a projective primitive symplectic variety of complex
+dimension $2n$, with $b_2(X)\ge5$ and an injection
+$H^2(X;\QQ)\to\IH^2(X;\QQ)$. Set
+\[
+ H=H^2(X;\CC),\qquad V_X=\IH^\bullet(X;\CC),\qquad q=q_X.
+\]
+The letter $H$ in this section denotes cohomology; in the quotient
+constructions below it will denote a compact stabiliser. We retain
+the grading operator $h|_{\IH^j}=j-2n$ and the notation $L_x$,
+$\Lambda_x$ from the introduction.
+
+\begin{theorem}\label{thm:criterion}
+Suppose that three real Lefschetz classes $x_1,x_2,x_3$ satisfy
+$q(x_a,x_b)=c\delta_{ab}$ with $c>0$. Put
+$L_a=L_{x_a}$, $\Lambda_a=\Lambda_{x_a}$ and
+$K_{ab}=[L_a,\Lambda_b]$ for $a\ne b$. Assume
+\begin{equation}\label{eq:V}
+ [\Lambda_a,\Lambda_b]=0,\qquad K_{ab}=-K_{ba},\qquad
+ [K_{ab},L_c]=2(\delta_{bc}L_a-\delta_{ac}L_b).
+\end{equation}
+Then the LLV algebra of $X$ is
+$\mathfrak{so}((H,q)\oplus U)$, with graded pieces
+\[
+ \mathfrak g_2=L(H),\qquad
+ \mathfrak g_0\cong\mathfrak{so}(H,q)\oplus\CC h,
+ \qquad \mathfrak g_{-2}\cong H.
+\]
+The isomorphism is defined over $\QQ$. Its real form is
+$\mathfrak{so}(4,b_2(X)-2)$.
+\end{theorem}
+
+\subsection{The geometric inputs to the criterion}
+We use three established facts. Locally trivial deformations give
+parallel transport on ordinary and intersection cohomology, compatible
+with their module structure. Indeed these families are locally
+real-analytic fibre bundles \cite[Proposition~5.1]{av21}, and
+intersection cohomology and its ordinary-cohomology action are
+topological invariants \cite{gm83}. Consequently their monodromy
+group satisfies
+\begin{equation}\label{eq:mon}
+ \gamma L_x\gamma^{-1}=L_{\gamma x}.
+\end{equation}
+The image on $H^2$ has finite index in the integral orthogonal group
+\cite[Theorem~1.1]{bl22}; for the moduli spaces under consideration
+see also \cite{opr24}. Borel density implies that its complex Zariski
+closure contains $\SO(H,q)$.
+
+Next, the Lefschetz locus is
+\begin{equation}\label{eq:lefschetz-locus}
+ H_{\mathrm{Lef}}=\{x\in H:q(x)\ne0\}.
+\end{equation}
+For rational classes this is \cite[Proposition~2.11]{tighe22}.
+To pass to complex classes, the non-Lefschetz locus is closed,
+conical and monodromy invariant, since it is defined by determinants
+of the maps $L_x^j$. It is therefore $\SO(H,q)$-invariant. The
+nonisotropic vectors form one orbit up to scaling, and this orbit
+contains an ample class. The nonzero isotropic vectors form one
+orbit. This orbit contains a rational point by Meyer's theorem,
+because the rational form is indefinite and has rank at least five.
+The rational statement proves \eqref{eq:lefschetz-locus}.
+
+Finally $\mathfrak g$ is semisimple. This is the polarised Lefschetz
+module criterion of \cite[Proposition~1.6]{ll97}: Saito's pure Hodge
+structures on $\IH$, the Hodge-compatible action of $H^2$, and the
+Hodge--Riemann relations for an ample class supply its hypotheses
+\cite{saito88,saito90,dcm05}. The intersection pairing is taken with
+the degree signs of \cite[\S1.9]{ll97}, so that the raising
+operators are skew. These facts concern intersection cohomology
+algebraically and make no assertion about types of harmonic forms.
+
+\subsection{Extending the relations}
+For a Lefschetz class the equations defining $\Lambda_x$ have a
+unique solution. Solving this finite linear system shows that
+$x\mapsto\Lambda_x$ is a regular rational map on
+$H_{\mathrm{Lef}}$ \cite[\S1.1]{ll97}. Uniqueness also gives
+$\Lambda_{tx}=t^{-1}\Lambda_x$ and the conjugacy analogue of
+\eqref{eq:mon}.
+
+\begin{lemma}\label{lem:density}
+Let $N\le3$ and let $\mathcal D\subset H^N$ be a dense invariant
+Zariski open set. A relatively closed monodromy-invariant subset
+of $\mathcal D$ which contains
+$\mathcal D\cap\mathcal P_{\CC}^N$, where
+$\mathcal P=\langle x_1,x_2,x_3\rangle$, is all of $\mathcal D$.
+\end{lemma}
+\begin{proof}
+The stabiliser of a closed algebraic subset is Zariski closed, so the
+subset is invariant under $\SO(H,q)$. Tuples with independent
+entries and nondegenerate span are dense. Each such span is contained
+in a nondegenerate three-plane. Witt's extension theorem carries
+$\mathcal P_{\CC}$ to this plane by an orthogonal transformation.
+A reflection in its orthogonal complement corrects the determinant
+if necessary; that complement has positive dimension. Invariance
+therefore places every such tuple in the closed subset, proving the
+claim by density.
+\end{proof}
+
+For $x=\sum_at_ax_a\in\mathcal P_{\CC}$ the first two relations in
+\eqref{eq:V} imply
+\[
+ [\sum_at_aL_a,\sum_at_a\Lambda_a]=(\sum_at_a^2)h.
+\]
+Uniqueness of the lowering operator gives
+\begin{equation}\label{eq:plane}
+ q(x)\Lambda_x=c\sum_at_a\Lambda_a.
+\end{equation}
+Thus lowering operators commute on this plane. Their commutator
+vanishes everywhere on $H_{\mathrm{Lef}}^2$ by Lemma
+\ref{lem:density}.
+
+Define initially $A_x=q(x)\Lambda_x$ for $q(x)\ne0$. Equation
+\eqref{eq:plane} gives additivity on pairs in $\mathcal P_{\CC}$
+for which $x,y,x+y$ are nonisotropic. Lemma \ref{lem:density}
+extends it to every such pair. Together with homogeneity this
+extends $A$ to a linear map on $H$. For clarity, one may differentiate
+$A(x+y)=A(x)+A(y)$ at generic pairs: $dA_{x+y}=dA_x=dA_y$,
+so $dA$ is constant on its irreducible domain; homogeneity removes
+the constant term.
+
+Use the convention
+$(x\wedge y)z=q(y,z)x-q(x,z)y$ for $\mathfrak{so}(H,q)$.
+The last relation of \eqref{eq:V}, together with
+$[h,L_z]=2L_z$, now gives on the three-plane
+\[
+ [[L_x,A_y],L_z]=2L_{q(x,y)z+(x\wedge y)z}.
+\]
+Both sides are regular for $q(y)\ne0$ before the linear extension
+of $A$. Lemma \ref{lem:density} with three entries, followed by
+linearity, therefore proves
+\begin{equation}\label{eq:structure}
+ [A_x,A_y]=0,\qquad
+ [[L_x,A_y],L_z]=2L_{q(x,y)z+(x\wedge y)z}
+ \quad(x,y,z\in H).
+\end{equation}
+
+\subsection{Recovering the orthogonal algebra}
+\begin{proof}[Proof of Theorem \ref{thm:criterion}]
+The map $L:H\to\End(V_X)$ is injective, since $L_x1$ is the image
+of $x$ in $\IH^2$. Let $\mathfrak k$ be generated by the brackets
+$[L_x,A_y]$. Equation \eqref{eq:structure} defines a Lie
+homomorphism $\pi:\mathfrak k\to\mathfrak{gl}(H)$ by
+\[
+ [T,L_z]=L_{\pi(T)z},\qquad
+ \pi([L_x,A_y])=2q(x,y)\id+2x\wedge y.
+\]
+For $T\in\mathfrak k$, conjugation by $e^{sT}$ preserves $h$ and
+takes $L_z$ to $L_{e^{s\pi(T)}z}$. It takes the corresponding
+lowering operator to the corresponding lowering operator. Hence
+\begin{equation}\label{eq:lowering-action}
+ [T,\Lambda_z]=\frac{A_{\pi(T)z}}{q(z)}
+ -\frac{2q(z,\pi(T)z)}{q(z)^2}A_z.
+\end{equation}
+It follows that $L(H)\oplus\mathfrak k\oplus A(H)$ is closed
+under brackets and equals $\mathfrak g$. Its three summands have
+degrees $2,0,-2$. Conjugation by the Weyl element of any Lefschetz
+$\mathfrak{sl}_2$ exchanges the two extreme pieces, so $A$ is also
+injective.
+
+The image of $\pi$ is
+$\mathfrak{so}(H,q)\oplus\CC\id$, and $\pi(h)=2\id$.
+If $\pi(T)=0$, then $T$ commutes with all raising operators and,
+by \eqref{eq:lowering-action}, all lowering operators. It is
+central in the semisimple algebra $\mathfrak g$, and is zero.
+Thus $\pi$ is an isomorphism. If $\pi(T)=a\id+B$ with
+$B\in\mathfrak{so}(H,q)$, the remaining brackets are
+\[
+ [T,L_z]=L_{az+Bz},\qquad [T,A_z]=A_{-az+Bz},\qquad
+ [L_x,A_y]=\pi^{-1}(2q(x,y)\id+2x\wedge y).
+\]
+
+Choose isotropic generators $u_+,u_-$ of $U$ with
+$\widetilde q(u_+,u_-)=1$. All the brackets agree under
+\begin{equation}\label{eq:orthogonal-map}
+ L_x\longmapsto u_+\wedge x,\quad
+ A_y\longmapsto-2u_-\wedge y,\quad
+ \pi^{-1}(B)\longmapsto B,\quad
+ h\longmapsto2u_+\wedge u_-.
+\end{equation}
+For example
+$[u_+\wedge x,u_-\wedge y]=-x\wedge y-q(x,y)u_+\wedge u_-$.
+The indicated elements exhaust the orthogonal algebra and have the
+same graded dimensions. This proves the complex isomorphism.
+
+The maps $L$, $A$ and $\pi$ are rational: their values on rational
+nonisotropic classes are rational, and those classes are Zariski
+dense. Formula \eqref{eq:orthogonal-map} is therefore defined over
+$\QQ$. The real signature of $q\oplus U$ is $(4,b_2-2)$.
+\end{proof}
+
+\subsection{Application to the moduli space}
+For the moment use Theorem \ref{thm:analytic}, proved below.
+The bounded K\"ahler forms represent classes in $H^2(M;\RR)$.
+Proposition \ref{prop:qF} proves
+$q_M([\omega_a],[\omega_b])=c\delta_{ab}$ with $c>0$.
+Under the harmonic representative isomorphism, $L_{[\omega_a]}$
+is pointwise wedge product and its lowering operator is the
+pointwise adjoint. Indeed these operators preserve harmonic forms
+and constitute an $\mathfrak{sl}_2$-triple. Finite-dimensional
+$\mathfrak{sl}_2$ theory gives hard Lefschetz, and uniqueness then
+identifies the lowering operator. The pointwise hyperk\"ahler
+relations are \eqref{eq:V}. Also
+$H^2(M;\QQ)\cong\IH^2(M;\QQ)$ by
+\cite[Proposition~2.17]{tighe22}. Theorem \ref{thm:criterion}
+proves the algebra statement in Theorem \ref{thm:main}; its
+dimension is $\binom{25}{2}=300$.
+
+To identify the unit submodule, the negative part of $\mathfrak g$
+annihilates $1$, the semisimple part of $\mathfrak g_0$ acts
+trivially on it, and $h1=-2n$. Complete reducibility shows that a
+module generated by this lowest-weight vector is the irreducible
+$\VV_{(n)}$. The raising operators generate the same module, and
+the usual description \cite[Proposition~2.14]{ll97} is
+\begin{equation}\label{eq:verbitsky-component}
+ \VV_{(n)}\cong
+ \Sym^\bullet H^2/\langle x^{n+1}:q_M(x)=0\rangle.
+\end{equation}
+There can be only one such summand because $\IH^0(M)=\CC$.
+The ideal has no element of degree at most $n$, giving the
+injections and dimension bounds in Theorem \ref{thm:main}.

@@ -1,0 +1,227 @@
+\section{Harmonic representatives and intersection cohomology}\label{sec:hodge}
+
+\subsection{The local de Rham complex}
+Let $\mathcal L^j$ be the sheaf of forms $u$ on $M_{\reg}$ for
+which $u$ and its weak differential are square integrable on the
+regular part of every compact subset of the open set in question.
+Lipschitz partitions of unity make these sheaves fine. Since $M$
+is compact, their global complex is $\Dom d_{\max}$.
+Quasi-isometric regular-locus diffeomorphisms identify these
+complexes of sheaves.
+
+We recall explicitly the two local calculations needed. For an
+interval factor $t$, write $u=\alpha+dt\wedge\beta$ and choose
+$\phi\in C_c^\infty$ with integral one. The maps
+\[
+ Au=\int\phi(t_0)\alpha(t_0)\,dt_0,\qquad
+ Ku(t)=\int\phi(t_0)\int_{t_0}^t\beta(s)\,ds\,dt_0
+\]
+satisfy $dK+Kd=1-\mathrm{pr}^*A$ and $dA=Ad$.
+They are bounded on compact subintervals, and globally on bounded
+intervals. Testing against smooth forms proves the identities
+for weak derivatives. Iteration removes a cube factor.
+For a truncated cone with odd-dimensional link $Z$ and
+finite-dimensional $L^2$ cohomology, the cone formula is
+\begin{equation}\label{eq:cone-cohomology}
+ H^j_{(2)}(C_R(Z))=
+ \begin{cases}H^j_{(2)}(Z),&j<(f+1)/2,\\
+ 0,&j\ge(f+1)/2,
+ \end{cases}\qquad f=\dim_{\RR}Z.
+\end{equation}
+In the first line the map is pullback. This is Cheeger's formula
+in the generality of \cite[Proposition~2.4]{bhs92}, applied to
+$Z_{\reg}$; regularisation identifies the smooth and weak
+de Rham complexes used in the two formulations. In particular,
+the equality degree belongs to the vanishing range.
+
+At a point of the vertex stratum of a product cone, the local
+cohomology sheaf of $\mathcal L^\bullet$ is therefore
+$H^j_{(2)}(Z)$ up to $(f-1)/2$ and zero above it. These
+identifications are locally constant along the stratum. On
+deleting that stratum the local complex is an interval product
+with $Z$, so its derived direct image has stalk
+$H^j_{(2)}(Z)$ in every degree. The attaching map is the identity
+in the lower range, because all the identifications are induced
+by the same pullback. One may compute these stalks either from
+locally $L^2$ sections or from globally $L^2$ sections on smaller
+truncated neighbourhoods: the restriction maps between the two
+systems interleave, hence have the same direct limit.
+
+\begin{theorem}\label{thm:T1}
+There is a canonical isomorphism
+\[
+ \Phi:\IH^\bullet(M;\RR)\longrightarrow
+ H^\bullet_{(2)}(M_{\reg},g).
+\]
+The maximal exterior derivative has closed range, and every
+cohomology class has a unique harmonic representative. If
+$\mathcal A^\bullet$ is the sheaf of locally bounded forms
+with locally bounded weak differential, then it resolves
+$\RR_M$, and the product
+$\mathcal A^\bullet\otimes\mathcal L^\bullet\to
+\mathcal L^\bullet$ realises the ordinary-cohomology action
+under $\Phi$.
+\end{theorem}
+\begin{proof}
+On the regular locus, $\mathcal L^\bullet$ resolves $\RR$.
+Along $\Sigma\setminus\Delta$ use the imported chart with
+link $Z_1$, and along $\Delta$ the chart with link $Z_2$.
+Proposition \ref{prop:models} supplies finite-dimensional
+cohomology of the latter. The real codimensions are $8k-4$
+and $12k$, so the middle perversities are $4k-3$ and $6k-1$.
+These are exactly $(f-1)/2$ for the respective links.
+The preceding local calculation verifies the constructibility,
+stalk vanishing, and attachment axioms of the intersection
+complex \cite[\S3.3, Theorem~3.5]{gm83}. With the convention
+that its restriction to the regular locus is in degree zero,
+\[
+ \mathcal L^\bullet\simeq\IC_M.
+\]
+The identification restricts to the identity on the constant
+sheaf there and is canonical. Fineness gives $\Phi$.
+
+Finite-dimensional intersection cohomology implies closed
+ranges in this Hilbert complex. Here is the functional-analytic
+point. For a closed differential $d$ whose algebraic range has
+finite codimension in the closed space $\ker d_{\rm next}$,
+choose a finite-dimensional algebraic complement $F$ in that
+kernel. The bounded map
+$\Dom d\oplus F\to\ker d_{\rm next}$, $(u,f)\mapsto du+f$,
+from the graph-norm Banach space is surjective. The open mapping
+theorem makes the projection to $F$ continuous; its kernel is
+$\operatorname{ran}d$, which is therefore closed. Stokes and
+Hilbert complex theory then give the orthogonal decomposition
+$L^2=\cH\oplus\operatorname{ran}d\oplus\operatorname{ran}\delta$
+and uniqueness of harmonic representatives.
+
+For $\mathcal A^\bullet$, normality makes sufficiently small
+regular loci connected, so the degree-zero kernel is $\RR$.
+In a product-cone chart, simultaneous radial contraction $m_t$
+in all factors gives, for a bounded closed $j$-form with $j>0$,
+\[
+ K\alpha=\int_0^1m_t^*(\iota_{r\partial_r}\alpha)\,\frac{dt}{t},
+ \qquad |K\alpha|\le\frac rj\|\alpha\|_\infty.
+\]
+The distributional homotopy identity gives $dK\alpha=\alpha$;
+$m_t^*\alpha\to0$ since $j>0$. Quasi-isometry transfers this
+to the actual chart. Thus $\mathcal A^\bullet$ is a fine
+resolution. Wedge product with a bounded form and bounded weak
+derivative preserves $\mathcal L^\bullet$ and satisfies the
+Leibniz rule by local regularisation on the regular locus.
+The resulting pairing extends scalar multiplication by $\RR$.
+Replacing $\RR$ by this fine resolution computes the canonical
+hypercohomology module action \cite[II.7]{bredon97}; this proves
+the asserted compatibility.
+\end{proof}
+
+\subsection{The pairing}
+Put $m=\dim_{\RR}M=16k+4$ and let $\mathbb D_M$ denote the
+dualising complex. We use the unsigned intersection pairing
+$Q:\IH^j\times\IH^{m-j}\to\RR$. Poincar\'e duality for
+$L^2$ cohomology by integration is classical for Witt spaces
+with iterated conical metrics \cite{cheeger83b,almp18}.
+For the present metric the identification with the intersection
+pairing can be proved directly from Stokes and the uniqueness
+of the self-duality of the intersection complex.
+
+\begin{proposition}\label{prop:pairing}
+If closed $\alpha,\beta\in\Dom d_{\max}$ represent
+$\Phi(a),\Phi(b)$ in complementary degrees, then
+\begin{equation}\label{eq:pairing}
+ Q(a,b)=\int_{M_{\reg}}\alpha\wedge\beta.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The product is integrable by Cauchy--Schwarz. Stokes gives, for
+$u,v\in\Dom d_{\max}$ with $\deg u=p$ and
+$\deg u+\deg v=m-1$,
+\[
+ \int du\wedge v+(-1)^p\int u\wedge dv=0.
+\]
+Indeed approximate $u$ in its graph norm by smooth forms
+compactly supported in the regular locus and use the weak
+derivative of $v$. Thus integration depends only on classes.
+
+For completeness this functional determines the correct
+sheaf-theoretic pairing, not just an abstract nondegenerate
+form. Over $\RR$, the tensor product
+$\mathcal F=\mathcal L^\bullet\otimes\mathcal L^\bullet$
+represents $\IC_M\otimes^L\IC_M$ and has fine terms.
+Compact Verdier duality gives
+\[
+ \Hom_{D(M)}(\mathcal F,\mathbb D_M[-m])
+ \cong\Hom_{\RR}(H^m\Gamma(M,\mathcal F),\RR).
+\]
+Integration of the wedge product defines the right-hand
+functional. To verify that it kills coboundaries, use a finite
+partition of unity to express a section as sums of tensors
+of global sections and apply the displayed Stokes identity.
+On an open regular subset, the induced functional on compact
+supports is ordinary integration; hence its morphism restricts
+to the orientation pairing. Self-duality of $\IC_M$ identifies
+the space of such pairings with $\Hom(\IC_M,\IC_M)$.
+An endomorphism of the intersection complex is determined by
+its restriction to the dense regular locus
+\cite[\S\S3.5 and 5.3]{gm83}. The morphism is therefore the
+intersection pairing. Evaluating on $\alpha\otimes\beta$
+proves \eqref{eq:pairing}.
+\end{proof}
+
+In top degree, integration is consequently an isomorphism
+$H^m_{(2)}\to\RR$. It also follows directly from Stokes,
+$\dim\IH^m=1$ and the positive integral of the top K\"ahler
+power. For real harmonic forms the Hodge star preserves
+$\cH$, and
+\begin{equation}\label{eq:positive-pairing}
+ \langle\alpha,\beta\rangle_{L^2}=Q(\alpha,*\beta).
+\end{equation}
+Moreover $*$ belongs on $\cH$ to the associative algebra
+generated by $L_1,\Lambda_1$ and $W_1$. To see this, the
+Lefschetz decomposition separates the summands
+$L_1^r\cH^j_{\rm prim}$. Their projections belong to the
+algebra generated by the $\mathfrak{sl}_2$ action, either by
+its Casimir and $h$ or by the double-centraliser theorem.
+Weil's star formula sends $L_1^r\eta$ to a scalar multiple of
+$L_1^{2n-j-r}W_1\eta$ on each such summand
+\cite[Proposition~1.2.31]{huybrechts05}. Finally $W_1$ or its
+inverse is $\exp(\pi K_{23}/2)$ by the pointwise relations.
+Thus an endomorphism commuting with the LLV algebra commutes
+with $*$ on $\cH$.
+
+\subsection{The positive three-plane}
+The forms $\omega_a$ are parallel and bounded. They define
+classes $x_a\in H^2(M;\RR)$ through the resolution
+$\mathcal A^\bullet$. The restriction to $M_{\reg}$ is
+injective on $H^2$: terminal factoriality gives
+$H^2(M)\cong\IH^2(M)$, and codimension at least three gives
+$\IH^2(M)\cong H^2(M_{\reg})$
+\cite[Lemma~2.10, Proposition~2.17]{tighe22}.
+Recollection \ref{thm:imported} therefore identifies $x_1$
+as a positive multiple of an ample class and $x_2+ix_3$ as
+a nonzero multiple of the symplectic class.
+
+\begin{proposition}\label{prop:qF}
+There is $c>0$ such that $q_M(x_a,x_b)=c\delta_{ab}$.
+\end{proposition}
+\begin{proof}
+The module statement and top-degree integration show that
+evaluation of a product of bounded closed representatives on
+$[M]$ is a fixed positive multiple of their wedge integral.
+On a quaternionic tangent space, unit quaternions act by
+volume-preserving isometries rotating the three K\"ahler
+forms. Thus
+\[
+ \int(t_1\omega_1+t_2\omega_2+t_3\omega_3)^{2n}
+ =C(t_1^2+t_2^2+t_3^2)^n,\qquad C>0.
+\]
+The Fujiki relation \cite[Proposition~5.15]{bl22} makes this
+a positive multiple of $q_M(\sum t_ax_a)^n$. This quadratic
+form is nonzero away from zero on the three-plane and positive
+at the ample ray. It is therefore the positive $n$th root
+of the displayed polynomial, giving the claim by polarisation.
+\end{proof}
+
+Theorem \ref{thm:T1}, Proposition \ref{prop:pairing} and
+Corollary \ref{thm:T2} prove all of Theorem
+\ref{thm:analytic}. Section \ref{sec:algebra} now proves
+Theorem \ref{thm:main} without any remaining analytic premise.

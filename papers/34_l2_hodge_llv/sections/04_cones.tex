@@ -1,0 +1,310 @@
+\section{Domains on K\"ahler cones}\label{sec:cones}
+
+\subsection{The domain condition}
+A singular Riemannian space will mean a locally compact metric space
+$X$ with dense smooth regular locus, whose Riemannian length metric
+is the restriction of its distance. Forms are complex valued and
+are defined on $X_{\reg}$. Their support is taken in $X$, so compact
+support may meet the singular set. The maximal operators $d$ and
+$\delta$ are defined by distributional differentiation on
+$X_{\reg}$; the minimal operator $d_{\min}$ is the graph closure
+of $d$ on smooth forms compactly supported in $X_{\reg}$.
+
+We say that the \emph{$L^2$ Stokes property} holds when
+$d_{\min}=d_{\max}$. Then
+$\delta_{\max}=d_{\max}^*$, and Hilbert complex theory
+\cite{brl92} makes
+\[
+ D=d+\delta,\qquad V(X)=\Dom d_{\max}\cap\Dom\delta_{\max}
+\]
+self-adjoint, with
+$\|Du\|^2=\|du\|^2+\|\delta u\|^2$.
+The domain $V(X)$ is called the Gaffney domain. It need not be the
+minimal domain of $D$. Bounded Lipschitz functions preserve all the
+domains just defined.
+
+Suppose $g$ is K\"ahler on the regular locus. Write $L$ for wedge
+product by its K\"ahler form, $\Lambda=L^*$, $W$ for the Weil
+operator, and $d^c=W^{-1}dW$, $\delta^c=W^{-1}\delta W$,
+$D^c=W^{-1}DW$. The identities on smooth forms are
+\begin{equation}\label{eq:kahler-id}
+ [L,\delta]=d^c,\quad [\Lambda,d]=-\delta^c,\quad
+ [L,d]=[\Lambda,\delta]=0,\quad D^2=(D^c)^2,
+\end{equation}
+and each of $d,\delta$ anticommutes with each of $d^c,\delta^c$.
+
+\begin{definition}\label{def:WI}
+The Gaffney domain is \emph{Weil invariant} on $\Omega\subset X$
+if $Wu\in V(X)$ for every $u\in V(X)$ compactly supported in
+$\Omega$.
+\end{definition}
+
+The condition is local by Lipschitz partitions of unity. It is
+equivalent to $d^cu,\delta^cu\in L^2$ for those forms. Since $V$
+and $W$ preserve degree, it can be checked on pure-degree forms,
+where the two terms of $D^cu$ have different degrees. Assuming
+also the Stokes property, on a fixed compact support the closed
+graph theorem gives
+\begin{equation}\label{eq:WI-estimate}
+ \|D^cu\|\le C(\|Du\|+\|u\|).
+\end{equation}
+Indeed the distributional operator $D^c$ is closed from the
+corresponding graph-norm space to $L^2$.
+
+\begin{proposition}\label{prop:global}
+If $X$ is compact and satisfies the Stokes property and Weil
+invariance, then $d^c\eta=\delta^c\eta=0$ for every
+$\eta\in\ker d\cap\ker\delta$. The operators $W,L,\Lambda$
+preserve this harmonic space.
+\end{proposition}
+\begin{proof}
+Weil invariance makes $d^c\eta$ and $\delta^c\eta$ square
+integrable. They are closed and coclosed by the anticommutation
+identities, hence belong to $V$. Applying Weil invariance again
+and integrating by parts gives
+\[
+ \|d^c\eta\|^2+\|\delta^c\eta\|^2
+ =\langle\eta,(D^c)^2\eta\rangle
+ =\langle\eta,D^2\eta\rangle=0.
+\]
+All terms in these integrations lie in the required maximal domains;
+the Stokes property supplies the adjoint relation. Equation
+\eqref{eq:kahler-id} now proves the assertions for $L$ and
+$\Lambda$, and the definition proves the assertion for $W$.
+\end{proof}
+
+On a hyperk\"ahler regular locus the pointwise operators satisfy
+\begin{gather}\label{eq:verbitsky}
+ [L_a,L_b]=[\Lambda_a,\Lambda_b]=0,\quad [L_a,\Lambda_a]=h,
+ \quad K_{ab}=-K_{ba},\notag\\
+ [K_{ab},L_c]=2(\delta_{bc}L_a-\delta_{ac}L_b),\qquad
+ [K_{ab},\Lambda_c]=2(\delta_{bc}\Lambda_a-\delta_{ac}\Lambda_b).
+\end{gather}
+These are Verbitsky's $\mathfrak{so}(4,1)$ relations
+\cite{verbitsky90,ll97}. Consequently, Stokes and Weil invariance
+for all three structures give this action on harmonic forms.
+
+\subsection{Separation of variables}
+Let $Z$ be compact of odd real dimension $f$, and consider the
+complete cone at infinity with vertex added,
+$C(Z)$, with metric $dr^2+r^2g_Z$. Set $m=f+1$.
+We require the Stokes property on $Z$ and on $C(Z)$, and compact
+resolvent of $D_Z$ on $V(Z)$. Such a link will be called
+\emph{admissible}. A smooth closed odd-dimensional link is
+admissible. More generally, the Stokes property on the cone follows
+from the first two requirements and oddness of $f$ by Cheeger's
+cone theorem; see \cite[\S2]{gl02} for the precise Stokes criterion.
+
+Compact resolvent gives an orthonormal eigenbasis on $Z$, consisting
+of harmonic forms and pairs
+\[
+ \delta_Z\alpha=0,\quad \Delta_Z\alpha=\lambda\alpha,
+ \quad \beta=\lambda^{-1/2}d_Z\alpha,
+ \quad \delta_Z\beta=\sqrt\lambda\,\alpha\quad(\lambda>0).
+\]
+The nonzero spectrum is discrete with finite multiplicities.
+For degree $j$, write a cone form in unitary radial coordinates as
+\[
+ u=r^{j-f/2}\varphi(r)+dr\wedge r^{j-1-f/2}\psi(r)
+ \equiv(\varphi;\psi).
+\]
+Its square norm is $\int(\|\varphi\|_Z^2+\|\psi\|_Z^2)\,dr$.
+Direct differentiation gives
+\begin{align}
+ d(\varphi;\psi)&=\big(r^{-1}d_Z\varphi;
+ (\partial_r+(j-f/2)/r)\varphi-r^{-1}d_Z\psi\big),\label{eq:d-cone}\\
+ \delta(\varphi;\psi)&=\big(r^{-1}\delta_Z\varphi+
+ (-\partial_r+(j-1-f/2)/r)\psi;-r^{-1}\delta_Z\psi\big).
+ \label{eq:delta-cone}
+\end{align}
+A homogeneous form has coefficient pair $r^s(a;b)$; it is $L^2$
+at zero precisely when $s>-1/2$. The operators $d,\delta$ lower
+$s$ by one, whereas $W,L,\Lambda$ and the Hodge star preserve it.
+
+\begin{lemma}\label{lem:indicial}
+The homogeneous closed and coclosed forms of degree $j$ with
+$L^2$ link coefficients are sums of the following modes:
+\begin{enumerate}
+\item $r^{s_\pm}(b_\pm\beta;\alpha)$, where
+$\deg\alpha=j-1$,
+\[
+ s_\pm=-\tfrac12\pm\sqrt{\lambda+(j-m/2)^2},\qquad
+ b_\pm=\frac{\sqrt\lambda}{s_\pm+j-f/2};
+\]
+\item $(r^{f/2-j}\eta;0)$ for $\eta\in\cH^j(Z)$;
+\item $(0;r^{j-1-f/2}\eta)$ for $\eta\in\cH^{j-1}(Z)$.
+\end{enumerate}
+In degree $j\ne m/2$ there is no exponent in
+$(-1/2-|j-m/2|,-1/2+|j-m/2|)$.
+\end{lemma}
+\begin{proof}
+Equations \eqref{eq:d-cone}--\eqref{eq:delta-cone} require the
+tangential component to be closed and the radial component to be
+coclosed on $Z$. Their Hodge decompositions therefore leave only
+the displayed pairs and the harmonic modes. On a pair, with
+$\gamma=j-f/2$, the coefficient equations are
+\[
+ b'+\gamma b/r-\sqrt\lambda a/r=0,\qquad
+ \sqrt\lambda b/r-a'+(\gamma-1)a/r=0.
+\]
+The indicial equation is $(s+\gamma)(s-\gamma+1)=\lambda$.
+The harmonic modes solve the two remaining scalar equations.
+Every resulting exponent satisfies $|s+1/2|\ge|j-m/2|$.
+\end{proof}
+
+\subsection{The critical modes}
+Suppose now the cone is K\"ahler for a dilation-invariant complex
+structure and that its Gaffney domain is Weil invariant away from
+the vertex. The exponents which can obstruct a cutoff at zero lie
+in $-1/2<s\le1/2$.
+
+\begin{lemma}\label{prop:slow}
+Every homogeneous closed and coclosed form with exponent in
+$(-1/2,1/2]$ and $L^2$ link coefficients is annihilated by both
+$d^c$ and $\delta^c$.
+\end{lemma}
+\begin{proof}
+Multiply the form $u$ by a cutoff on an annulus. Weil invariance
+there shows that $d^cu$ and $\delta^cu$ have $L^2$ link
+coefficients; their exponent is $s-1$.
+By Lemma \ref{lem:indicial}, either $u$ has degree $m/2$, or
+$s=1/2$ and it is a harmonic-link mode of degree $m/2-1$ or
+$m/2+1$.
+
+In the middle degree, $d^cu=-\delta Lu$ and
+$\delta^cu=d\Lambda u$ are closed and coclosed. They have
+degrees $m/2+1$ and $m/2-1$ and exponent in $(-3/2,-1/2]$,
+inside the excluded intervals of Lemma \ref{lem:indicial}.
+They vanish.
+
+For degree $m/2-1$, the same argument in degree $m/2-2$ first
+gives $\delta^cu=0$. Set $\zeta=d^cu$. It is closed and
+coclosed and has degree $m/2$ and exponent $-1/2$. Also
+$d^c\zeta=\delta^c\zeta=0$, the latter by
+$(D^c)^2u=D^2u=0$. Hence
+$W\zeta=r^{-1/2}(\eta_1;\eta_2)$ with harmonic $\eta_i$ on $Z$.
+Writing $Wu=r^{1/2}(a;b)$, the equations
+$d(Wu)=W\zeta$ and \eqref{eq:d-cone} give
+$\eta_1=d_Za$, $\eta_2=-d_Zb$. A harmonic form in the range
+of $d_{Z,\max}$ is zero by Stokes on $Z$. Thus $\zeta=0$.
+Hodge star reduces degree $m/2+1$ to this case.
+\end{proof}
+
+\begin{theorem}[The cone theorem]\label{thm:vertex}
+Let $C(Z)$ be a K\"ahler cone with admissible link. Weil invariance
+on the complement of the vertex implies Weil invariance at the
+vertex as well.
+\end{theorem}
+
+For smooth links this is the cone result of
+\cite[Theorem~2.1]{cheeger83}; see also
+\cite[Theorems~3.7 and~5.9]{brl93}. The singular-link case uses
+the preceding lemma and the same scalar radial estimates.
+We include those estimates because no spectral gap at the critical
+exponents is assumed.
+
+Decompose a pure-degree form into tangential-coexact/radial-exact
+terms, tangential-exact/radial-coexact terms, and harmonic-link
+terms. Testing weak equations against a link eigenform times a
+radial test function is legitimate by Stokes on the cone. It gives
+the same equations as \eqref{eq:d-cone}--\eqref{eq:delta-cone}.
+Truncations retain both slots of every coupled exact--coexact
+block: either slot alone can have a nonintegrable derivative
+which cancels only in the pair. The projections onto these
+complete blocks preserve $V$ and are orthogonal both for the
+$L^2$ norm and the sum of the $d$ and $\delta$ energies.
+
+For the first type, the equations contain the separate terms
+$\sqrt\lambda a/r$ and $\sqrt\lambda b/r$, so
+\begin{equation}\label{eq:coexact-hardy}
+ \|u_{\mathrm{ce}}/r\|\le\lambda_{\min}^{-1/2}\|Du\|.
+\end{equation}
+For the second type the radial matrix is, up to a unitary sign,
+\[
+ \partial_r+r^{-1}
+ \begin{pmatrix}\gamma&-\sqrt\lambda\\-\sqrt\lambda&1-\gamma\end{pmatrix},
+ \qquad \gamma=j-f/2.
+\]
+Its eigenvalues are
+$\theta=1/2\pm\sqrt{\lambda+(j-m/2)^2}$.
+Harmonic-link terms give $\theta=\gamma$ or $1-\gamma$.
+Thus each coefficient satisfies
+\begin{equation}\label{eq:scalar}
+ a'+\theta a/r=F.
+\end{equation}
+The squares of the $L^2$ norms of the right sides sum to the
+corresponding part of $\|Du\|^2$.
+
+\begin{lemma}\label{lem:hardy}
+Let $a,F\in L^2(0,R)$ satisfy \eqref{eq:scalar}, with $a=0$
+near $R$. Then:
+\begin{enumerate}
+\item for $\theta\ge1/2$ or $\theta<-1/2$,
+$\|a/r\|\le|\theta+1/2|^{-1}\|F\|$;
+\item for $-1/2<\theta<1/2$,
+$a=c\chi r^{-\theta}+a_0$, where $\chi=1$ near zero is a fixed
+cutoff and $|c|+\|a_0/r\|\le C_\theta(\|F\|+\|a\|)$;
+\item for $\theta=-1/2$, $a=br^{1/2}$ and
+$\|b'r^{1/2}\|=\|F\|$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+On $[\epsilon,R]$, integration by parts gives
+\[
+ \|a'+\theta a/r\|^2
+ =\|a'-a/(2r)\|^2+(\theta+1/2)^2\|a/r\|^2
+ +(\theta+1/2)[|a|^2/r]_\epsilon^R.
+\]
+For $\theta\ge1/2$, integrability forces
+$a(r)=r^{-\theta}\int_0^rt^\theta F(t)\,dt$, and the boundary
+term tends to zero. For $\theta<-1/2$ it is nonnegative.
+For the intermediate range the same integral formula includes
+the homogeneous term $cr^{-\theta}$; subtracting $c\chi
+r^{-\theta}$ leaves a vanishing boundary term and gives (2).
+The constant $c$ is controlled on any fixed interior interval.
+The endpoint identity in (3) follows by differentiation.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:vertex}]
+Estimate \eqref{eq:WI-estimate} on a fixed annulus, dilation,
+and a dyadic partition of unity give
+\begin{equation}\label{eq:annulus}
+ \|D^cw\|\le C(\|Dw\|+\|w/r\|)
+\end{equation}
+for forms supported away from the vertex. In a fixed degree there
+are only finitely many $\theta\in[-1/2,1/2)$, and the other
+values have $|\theta+1/2|$ uniformly bounded away from zero.
+Equations \eqref{eq:coexact-hardy} and Lemma \ref{lem:hardy}
+therefore decompose a compactly supported $u\in V$ as
+\[
+ u=w+\sum_{-1/2<\theta<1/2}c_\theta\chi u_\theta
+       +\sum_{\theta=-1/2}b_\theta u_\theta,
+\]
+where $u_\theta$ is a closed and coclosed mode of exponent
+$-\theta$, $w\in V$, and
+$\|Dw\|+\|w/r\|\le C(\|Du\|+\|u\|)$.
+All sums are finite. Cut off $w$ at $r=\epsilon$ with derivative
+bounded by $C/r$. Estimate \eqref{eq:annulus} is uniform in
+$\epsilon$, so distributional convergence gives $D^cw\in L^2$.
+Lemma \ref{prop:slow} kills $D^cu_\theta$ in the finite sums.
+Their remaining derivative terms are square integrable by the
+cutoff estimate or by
+$\|b_\theta'r^{1/2}\|<\infty$. Thus $D^cu\in L^2$.
+Pure degree separates its two components, proving $Wu\in V$.
+\end{proof}
+
+\begin{lemma}\label{lem:compact-cone}
+The set of forms supported in $\{r<R\}$ with
+$\|u\|+\|Du\|\le1$ is precompact in $L^2(C(Z))$.
+\end{lemma}
+\begin{proof}
+Modes with link eigenvalue $\lambda>\lambda_0\ge4$ have total
+$L^2$ norm at most $CR/\sqrt{\lambda_0}$, by
+\eqref{eq:coexact-hardy} and Lemma \ref{lem:hardy}(1).
+There are finitely many remaining modes. Their coefficients have
+bounded $W^{1,2}$ norm on each $[\epsilon,R]$ and uniformly small
+mass near zero by Lemma \ref{lem:hardy}. At its endpoint,
+$|b(r)|\le\|b'\sqrt r\|\sqrt{\log(R/r)}$ since $b$ vanishes
+near $R$. Rellich compactness on the interior intervals, followed
+by the uniform tail bounds, proves the assertion.
+\end{proof}

@@ -1,0 +1,303 @@
+\section{Quotient charts and the singular link}\label{sec:slices}
+
+We construct the charts required by Section \ref{sec:comparison}.
+The construction first treats a stabiliser acting freely on the
+punctured zero fibre. It applies both along
+$\Sigma\setminus\Delta$ and along the edge of $C_2$.
+
+\subsection{A finite-dimensional slice with its metric}
+Let $\cX$ be a flat hyperk\"ahler affine space and let $\cG$ act
+preserving the structure, with moment map $\mu$. We allow either
+a finite-dimensional space and compact group, or the space of
+unitary connections on our K3 surface. In the latter case choose
+Sobolev order $s\ge3$ for connections and $s+1$ for gauge
+transformations, with the $L^2$ metric, and take
+$\mu(A)=(F_A^0)^+$. Fix $x_*\in\mu^{-1}(0)$, its compact
+stabiliser $H$, and an $H$-invariant complement $\mathfrak q$ of
+$\mathfrak h$ in the gauge Lie algebra. The four spaces
+$\mathfrak qx_*,I_1\mathfrak qx_*,I_2\mathfrak qx_*,I_3\mathfrak qx_*$
+are mutually orthogonal: the off-diagonal pairings are components
+of the moment map evaluated on brackets, and vanish. Their
+orthogonal complement is a quaternionic representation $\EE$.
+Write $\EE=\EE_0\oplus\EE_1$, where $\EE_0=\EE^H$.
+
+\begin{proposition}\label{prop:slice}
+There is a real-analytic equivariant map
+\[
+ \iota(y)=x_*+y+c(y),\qquad
+ c(y)\in\sum_a I_a\mathfrak qx_*,\quad c(y)=O(|y|^2),
+\]
+with $\mu^{\mathfrak q}\iota=0$. Put
+$\widehat\mu=\mu^{\mathfrak h}\iota$ and $Y=\widehat\mu^{-1}(0)$.
+Then $Y/H$ is a neighbourhood of $[x_*]$ in the quotient,
+preserving stabilisers. There are smooth equivariant quaternionic
+Hermitian tensors $(\widehat g,\widehat I_a)$ on $\EE$, equal to
+the flat tensors at zero, with these properties:
+\begin{enumerate}
+\item on $Y$, for every $v\in T_y\EE$ and $\xi\in\mathfrak h$,
+\begin{equation}\label{eq:slice-moment}
+ \langle d\widehat\mu_a(v),\xi\rangle
+ =\widehat g(\widehat I_a\xi y,v);
+\end{equation}
+\item along $\EE_0$, $\widehat\mu=d\widehat\mu=0$, and its
+quadratic term in $\EE_1$ is the flat moment map for the fibre
+structure $(\widehat g_u,\widehat I_a(u))|_{\EE_1}$;
+\item the tensors restricted to $\EE_0$ are hyperk\"ahler, and
+their quotient tensors on the free part of $Y/H$ are the original
+quotient metric and complex structures.
+\end{enumerate}
+If $H'\subset H$ and $\mathfrak h^{H'}\subset\mathfrak h'$, then
+$\widehat\mu$ vanishes on $\EE^{H'}$.
+\end{proposition}
+\begin{proof}
+The derivative of $\mu^{\mathfrak q}$ in
+$\sum I_a\mathfrak qx_*$ is invertible. In finite dimensions the
+implicit function theorem and the ordinary slice theorem give
+$c$ and the local quotient. For connections, write $d=d_{x_*}$.
+The K3 identities and $(F_{x_*}^0)^+=0$ give, with positive
+normalisation constants,
+\begin{equation}\label{eq:K3-elliptic}
+ (d^+)^*(\phi_a)=c_+\sum_a I_ad\phi_a,
+ \qquad d^+(d^+)^*=c'_+(d^*d)\otimes1.
+\end{equation}
+For the off-diagonal components one uses
+$d^+d\phi=[F_{x_*}^+,\phi]=0$ in the trace-free complex.
+Thus $\EE=\ker d^*\cap\ker d^+$ is finite dimensional,
+the cokernel is $\mathfrak h\otimes\RR^3$, and $d^*d$ is
+invertible on $\mathfrak q$. Writing $c=(d^+)^*\phi$, the equation
+is
+\[
+ \Pi_{\mathfrak q}\{d^+(d^+)^*\phi+
+ ((y+(d^+)^*\phi)\wedge(y+(d^+)^*\phi))^+\}=0.
+\]
+It is analytic from order $s+1$ to order $s-1$, with invertible
+derivative in $\phi$. The implicit function theorem and elliptic
+regularity give the claimed finite-dimensional analytic map, with
+values in every Sobolev order after shrinking its domain. The
+Coulomb slice theorem \cite[Proposition~4.2.9]{dk90} identifies the
+quotient and its stabilisers.
+
+At $x=\iota(y)$ let $p_y$ project orthogonally off the
+quaternionic span of $\mathfrak qx$. This span is invariant under
+the $I_a$ even when its four summands are not orthogonal. In gauge
+theory its projection is analytic: the map
+\[
+ Q_y(\phi_0,\phi_a)=d_x\phi_0+\sum_aI_ad_x\phi_a
+\]
+on $\mathfrak q\otimes\HH$ is uniformly bounded below near
+$y=0$, and
+$p_y=1-Q_y(Q_y^*Q_y)^{-1}Q_y^*$. The inverse follows from the
+coercive form and elliptic regularity. Its complement has dimension
+$\dim\EE$. Therefore $d^\perp\iota=p_y d\iota$ is invertible
+onto that complement, and we define
+\[
+ \widehat g(v,w)=g_{\cX}(d^\perp\iota v,d^\perp\iota w),
+ \qquad \widehat I_a=(d^\perp\iota)^{-1}I_a d^\perp\iota.
+\]
+
+On $Y$ the four orbit-direction summands are orthogonal. Since
+$\mu^{\mathfrak q}\iota=0$, the difference
+$d\iota v-d^\perp\iota v$ is in $\mathfrak qx$ there. It is
+orthogonal to $I_a\mathfrak hx$. Equivariance and the ambient
+moment identity give \eqref{eq:slice-moment}.
+On $\cX^{H'}$ the components of $\mu$ along $\mathfrak h'$
+are constant and zero. Equivariance puts their remaining values
+in the dual of $\mathfrak h^{H'}$; the stated condition on $H'$
+therefore forces all components to vanish. This proves the last
+assertion and gives $\widehat\mu=0$ on $\EE_0$.
+
+At $u\in\EE_0$ the linear term in the $\mathfrak h$ component
+vanishes, because $\xi\iota(u)=0$ for $\xi\in\mathfrak h$.
+Its quadratic term is the ambient flat moment map on
+$d\iota_u\EE_1$. Replacing $d\iota_u n$ by $d^\perp\iota_u n$
+does not change it. The mixed term vanishes by
+$[\mathfrak h,\mathfrak q]\subset\mathfrak q$ and orthogonality
+to $I_a\mathfrak qx$; the pure orbit term is a component of
+$\mu(x)$ evaluated on a double bracket. This proves (2).
+
+For the metric, minimise first over $\mathfrak qx$ and then over
+$\mathfrak hx$. The result is
+$\min_{\xi\in\mathfrak h}\widehat g(v-\xi y,v-\xi y)$.
+The corresponding horizontal lift is $d^\perp\iota(Pv)$, so
+the same calculation identifies the complex structures. Along
+the fixed locus, the stratum is locally the smooth hyperk\"ahler
+quotient of $\cX^H$ by the centraliser of $H$ modulo its ineffective
+part. This proves (3).
+\end{proof}
+
+\subsection{Normalising the fibres}
+We next work abstractly with the tensors and map in Proposition
+\ref{prop:slice}. Suppose $H$ is free on the connected punctured
+zero fibre of the flat moment map $\mu_0$ of $\EE_1$.
+The fixed coordinates are $u\in\EE_0$, the normal coordinates
+$z\in\EE_1$, and $\rho=|z|$.
+
+\begin{lemma}\label{lem:normalise}
+There is an equivariant $C^{1,1}$ coordinate change $\Xi$, smooth
+off $\EE_0$ and equal to the identity there, carrying
+$Y_0=\EE_0\times\mu_0^{-1}(0)$ onto $Y$. The pulled-back
+tensors are Lipschitz, agree exactly with the flat tensors in all
+normal blocks on $\EE_0$, and induce the quotient structure of
+$Y/H$.
+\end{lemma}
+\begin{proof}
+First identify the varying quaternionic Hermitian structures on
+the normal fibres with a fixed one. The intertwiner
+$B_u=\tfrac14(1-\sum_aI_a\widehat I_a(u))$ is invertible near
+zero and commutes with $H$. Pulling the metric through $B_u$
+gives a positive operator $G_u$ commuting with the $I_a$ and $H$.
+Thus $A_u=G_u^{1/2}B_u$ is an equivariant quaternionic isometry
+from the varying fibre to the flat fibre. In coordinates
+$(u,A_u^{-1}z)$ the map becomes
+\[
+ \mu_1(u,z)=\mu_0(z)+R(u,z),\qquad R=O(|z|^3).
+\]
+Near the punctured flat zero fibre, $d\mu_0(z)$ has an equivariant
+right inverse $S_z$ of homogeneity $-1$. Solve
+\[
+ b=S_z\{R(u,z)-\mu_0(b)\}.
+\]
+Contraction gives $b=O(|z|^2)$ and
+$\mu_0(z+b)=\mu_1(u,z)$. After radial rescaling, differentiation
+of this equation gives $|\partial^i b|\le C_i|z|^{2-i}$.
+An angular invariant cutoff extends the correction off a conic
+neighbourhood of the zero fibre. The estimate
+$|\mu_0(z)|\ge c|z|^2\operatorname{dist}(z/|z|,\mu_0^{-1}(0))$
+near that fibre shows that every sufficiently small zero of
+$\mu_1$ lies where the cutoff is one. Hence the inverse of
+$(u,z)\mapsto(u,z+b)$, followed by the fibre isometry, gives
+$\Xi$. The second derivative bound gives $C^{1,1}$ across
+$\EE_0$. The differential there is
+$\id\oplus A_u^{-1}$, proving exact agreement of the normal
+blocks. Equation \eqref{eq:slice-moment} ensures that the pulled-back
+complex structures preserve the horizontal tangent space on $Y_0$.
+\end{proof}
+
+\begin{lemma}\label{lem:quotient-estimate}
+Suppose invariant Lipschitz tensors $(\widehat g,\widehat I_a)$
+on $Y_0$ arise as above, agree with the flat tensors in normal
+blocks along $\EE_0$, and preserve the horizontal tangent spaces.
+Their quotients differ by $O(\rho)$ from the product of their
+restrictions to $\EE_0$ with the flat cone quotient, with bounded
+covariant first derivative. If two such sets of tensors differ
+by $O(t)$ in Lipschitz norm and share the normal blocks, then their
+quotient difference, after subtracting the difference on the
+smooth factor, is $O(t\rho)$ with derivative $O(t)$.
+\end{lemma}
+\begin{proof}
+Let $\Pi_0$ be the flat projection to $\mathfrak hz$,
+$P_0=1-\Pi_0$, and write $\widehat g=g_{\fl}+\tau$.
+On a conic neighbourhood of the zero fibre,
+$|\partial\Pi_0|\le C/\rho$. Its image and derivatives are
+normal to $\EE_0$, and it kills fixed directions. Normalisation
+gives
+\[
+ |\tau(v_1,\cdot)|\le C\rho|v_1|,\quad
+ |(\widehat I_a-I_a)v_1|\le C\rho|v_1|,\quad
+ |((\widehat I_a-I_a)v)_1|\le C\rho|v|.
+\]
+The metric-orthogonal orbit projection satisfies
+\[
+ \Pi-\Pi_0=
+ \big(\Pi_0(1+\tau^\sharp)|_{\mathfrak hz}\big)^{-1}
+ \Pi_0\tau^\sharp P_0.
+\]
+It follows that $|\Pi-\Pi_0|\le C\rho$ and
+$|\partial(\Pi-\Pi_0)|\le C$. Every derivative of $\Pi_0$
+is multiplied by a normal block of size $O(\rho)$.
+
+The basic lift of the quotient metric is
+$\widehat g(P\cdot,P\cdot)$, where $P=1-\Pi$.
+Subtracting the flat lift leaves its fixed-factor restriction
+plus $O(\rho)$; differentiating gives a bounded tensor by the
+projection estimates. Passing from ambient derivatives to
+derivatives on $Y_0$ introduces its second fundamental form,
+of size $O(1/\rho)$. Its values are normal, so it too multiplies
+an $O(\rho)$ block. Riemannian submersion then bounds the
+covariant derivative on the quotient. For complex structures
+use the lift $P_0\widehat I_aP$ and the same estimates.
+
+For the relative assertion interpolate the two metrics by
+$g_s=g_*+s\tau_*$. If $P_s$ is its horizontal projection,
+stationarity of the minimum over orbit directions gives
+\[
+ \frac{d}{ds}g_s(P_sv,P_sw)=\tau_*(P_sv,P_sw).
+\]
+The normal blocks of $\tau_*$ vanish on the fixed locus and
+are $O(t\rho)$; the preceding derivative estimates now all
+carry a factor $t$. For the complex structures use
+\[
+ \frac{d}{ds}\Pi_s=\Pi_sg_s^{-1}\tau_*P_s
+\]
+and split their lift difference into the change of complex
+structure and the change of projection. Each has the same
+factor $t$ and normal vanishing. This proves both estimates.
+\end{proof}
+
+Together, the two lemmas construct adapted charts for each complex
+structure, with model the actual stratum metric times the flat
+transverse cone. The quotient map is a homeomorphism for quotient
+topologies, smooth on regular loci. Its metric comparison also
+identifies completions. The smooth factor may be completed to a
+compact K\"ahler manifold as in Section \ref{sec:comparison}.
+
+\subsection{The link $Z_2$ and induction on depth}\label{ss:link-induction}
+Apply these charts first in finite dimensions to the rank-one
+stratum of $C_2$, using \eqref{eq:rank-one-slice}, and then in
+gauge theory to $\Sigma\setminus\Delta$. In both cases the
+normal circle action is free off zero and the local model is
+$B\times C_1$.
+
+\begin{proposition}\label{prop:models}
+The link $Z_2$ is admissible. The Stokes property holds on $M$,
+and the Gaffney domain is Weil invariant on $C_2$ and on
+$M\setminus\Delta$, for all three complex structures.
+The models $B\times C_2$ have bounded geometry at scale $\rho$
+and uniform edge charts.
+\end{proposition}
+\begin{proof}
+Stokes is invariant under quasi-isometry, since the minimal and
+maximal graph norms of $d$ are equivalent. It is local for forms
+supported away from the artificial boundary of a chart, and on a
+compact space these local statements combine by Lipschitz
+partitions of unity. The odd smooth link $Z_1$ gives Stokes on
+$C_1$; the product lemma gives it on $B\times C_1$. The adapted
+charts therefore give Stokes on $C_2\setminus\{0\}$ locally
+and on $M\setminus\Delta$ locally. Annular cone coordinates
+are quasi-isometric to interval products with $Z_2$. Applying
+local Stokes on a circle product and then to forms pulled back
+from $Z_2$ proves Stokes on $Z_2$.
+
+To prove compact resolvent, take a sequence bounded in $V(Z_2)$
+and pull it back to the cone, multiplying by a fixed radial cutoff
+in $1<r<2$. The cone differential formulas give a bounded
+sequence in $V(C_2)$ with fixed compact support. A finite cover
+by adapted $B\times C_1$ charts transfers its graph norm to
+product graph norms. Lemma \ref{thm:product} makes each local
+piece precompact. Its cone $L^2$ norm is a fixed positive
+multiple of its link norm, degree by degree. Thus
+$V(Z_2)\hookrightarrow L^2(Z_2)$ is compact. Oddness of
+$\dim Z_2$ now gives Stokes on $C_2$, proving admissibility.
+The imported quasi-isometry \eqref{eq:imported-metric} transfers
+Stokes from $B\times C_2$ to $M$ near $\Delta$; compactness
+of $M$ completes the global assertion.
+
+For Weil invariance, use the smooth-link cone theorem and the
+product lemma on $B\times C_1$, then Theorem
+\ref{thm:comparison} in the adapted charts. This treats
+$C_2\setminus\{0\}$ and $M\setminus\Delta$. Theorem
+\ref{thm:vertex} applies to the now admissible $Z_2$ and treats
+the vertex of $C_2$.
+
+Finally the distance $\rho$ on $C_2$ is homogeneous. On the
+unit annulus, finitely many adapted edge charts and smooth
+charts supply bounded geometry; dilations give it at all
+scales. For doubling, balls of radius comparable to their
+distance from the vertex have volume comparable to the
+appropriate power of their radius, by homogeneity and compactness
+of the link. Smaller balls reduce to the unit annulus and the
+doubling product charts. Edge charts on that annulus dilate to
+uniform edge charts at every radius. Taking products with
+small balls in $B$, extended to compact smooth factors, proves
+the assertion for $B\times C_2$.
+\end{proof}
