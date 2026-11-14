@@ -73,12 +73,12 @@ Earlier work on [equilibrium spectra](https://bwuebben.github.io/papers/small-do
 
 ## Build and reproduce
 
-Each paper has a source and reproduction guide in its directory. Papers 01–03 and 05–10 have assembled, self-contained `paper.tex` files apart from their supplied figures. Papers 11–19 directly include their supplied sections and bibliography. Compile with `latexmk -pdf paper.tex`. Papers 20–33 use `latexmk -pdf main.tex`. The earlier repeated-factor spectral paper uses `main.tex` and `sh scripts/build.sh`.
+Each paper has a source and reproduction guide in its directory. Papers 01–03 and 05–10 have assembled, self-contained `paper.tex` files apart from their supplied figures. Papers 11–19 directly include their supplied sections and bibliography. Compile with `latexmk -pdf paper.tex`. Papers 20–34 use `latexmk -pdf main.tex`. The earlier repeated-factor spectral paper uses `main.tex` and `sh scripts/build.sh`.
 
 Run `python3 reproduce.py` from the repository root to regenerate the finite computations and figures. Programs with third-party dependencies use `uv` and the paper's pinned `requirements.txt` or inline script dependency; the others use the Python standard library. The finite calculations establish the printed identities and examples, while the geometric, elliptic and parabolic assertions rely on the proofs. Released PDF hashes and archive identities are in `manuscripts.json`.
 
 The heterotic K3 application resolves three leading vector masses with ratio-independent relative geometric error. Its defined first-order tree vector pencil includes the leading metric and two-form towers. The scalar interaction is a leading large-volume coefficient taken before the degeneration at fixed positive amplitude ratio; it does not establish exact string poles or a uniform finite-string-scale curvature remainder.
 
-The Zenodo records preserve the released manuscripts. Papers 01–10 await arXiv submission. Papers 17–20 and 22–33 were released without an arXiv submission or queue entry. Paper 21 has a prepared source package; its arXiv submission remains pending.
+The Zenodo records preserve the released manuscripts. Papers 01–10 await arXiv submission. Papers 17–20 and 22–34 were released without an arXiv submission or queue entry. Paper 21 has a prepared source package; its arXiv submission remains pending.
 
 Copyright © 2026 Bernd Johannes Wuebben. All rights reserved; this repository applies no blanket code license to the manuscripts.
